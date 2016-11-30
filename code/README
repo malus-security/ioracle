@@ -1,0 +1,102 @@
+This document will act as a road map for the many different scripts, queries, and collections of facts that make up iOracle.
+
+Overview
+Our goal is to use static and/or dynamic analysis on raw data from iOS and refine this data into Prolog facts.
+Then we will create prolog rules and queries that help us answer questions about these Prolog facts.
+
+./iOracle/code : contains scripts used to refine raw data (e.g., Mach-O executables files) into Prolog facts
+//TODO ./iOracle/prolog : contains queries, rules, and scripts related to prolog that take Prolog fact collections as input.
+I have other directories for raw data and fact collections, but these are not under version control.
+I have been placing relevant fact collections onto Google drive, which should be accessible to collaborators at this link:
+https://drive.google.com/drive/u/0/folders/0BwHKGVoHlQcQU0hZU1BNalV1SDA
+
+Sandbox Profiles
+  smartPly.py
+  Usage: takes two arguments, where the first is the path to the sbpl file to process, and the second is the name of the profile.
+  For example: ./smartPly.py /some/file/path/container.sb container
+  smartPly.py uses the ply framework which provide lex and yacc for python.
+  It compiles sbpl profiles into prolog facts laid out in disjunctive normal form.
+  For now it outputs a different .pl file for each input sbpl profile.
+  Once bugs in sandblaster are fixed, we want to combine output into one .pl file.
+  processAllProfiles.sh is a bash script for running smartPly.py on all files in a directory.
+  Output is in the following format:
+  profileDefault(profile("keyboard"),decision("deny")).
+  profileRule(profile(...),decision(...),operation(...),filters([...])).
+  //TODO: consolidate the profileDefault facts together to make queries more efficient. Could just sort the output file.
+
+Entitlements
+  entitlementExtractor.sh
+  Usage: run it in the same directory as appleProgramList.out (this should be a list of filepaths to mach-o executables whose entitlements are to be extracted).
+  This script then uses the codesign utility to extract signature data from the mach-o executable.
+  The facts output by this script should be stored in systemEntitlementFacts.pl.
+  We call it this because we tried to extract only entitlements from the system programs signed by Apple.
+  This was in an effort to minimize noise from third party or jailbreak related programs.
+  The entitlement value might be an array, in which case value(...) will contain a list of entitlements values.
+  process(filePath(...),entitlement(key(...),value(...))).
+  //If entitlements are embedded in the signature, then they are output as facts with the following format:
+
+  thirdPartyEntitlementExtractor.sh
+  Script for extracting entitlement data from our collection of third party apps (collected summer 2015).
+  Output is stored in thirdPartyEntitlementFacts.pl
+  Otherwise same as entitlementExtractor.sh
+
+Bundle Identifier
+  signatureExtractor.sh
+  Works largely the same way that entitlementExtractor.sh does.   
+  I assumed that executables with identifiers starting with com.apple were signed by Apple.
+  Outputs facts to allProcessIdentifierFacts.pl in the following format:
+  process(filepath(...),identifier(...)).
+
+  thirdPartySignatureExtractor.sh
+  Script for extracting bundle identifier data from our collection of third party apps (collected summer 2015).
+  Output is stored in thirdPartySignatureIdentifiers.pl
+  Otherwise same as signatureExtractor.sh
+
+File Data
+  fileTypeExtractor.sh
+  This script uses the "file" utility to determine the file's type by analyzing the file's header.
+  I found that the results were better when using the "file" utility on OS X as opposed to using the one on the jailbroken device.
+  Therefore, I extracted all files from the jailbroken device and ported them to an iMac where I ran this script on the extracted files.
+  We are especially interested in Mach-O executable files since these are likely used by processes running on iOS.
+  Output of this script appears in fileTypeFacts.pl in the following format:
+  file(filePath(...),fileType(...)).
+
+  metaDataExtractor.sh
+  This script uses the "find" utility to collect metadata about each file on the iOS file system.
+  This script is designed to be run on a jailbroken iOS device, but it can be easily modified to process firmware images or an extracted file system.
+  This used to have a format of one fact for the filepath and each type of data, but this seemed to cause queries to take a very long time.
+  I changed the format to one fact per filepath, and this made the facts really long, but it seemed to help a lot with performance.
+  Output is stored in fileMetaDataFacts.pl in the following format:
+  file(filepath(...),size(...),ownerGroupName(...),lastModification(...),inode(...),symLinkObject(...),permissionBits(...),numHardLinks(...),ownerUserName(...),type(...)).
+      
+User Data
+  userFactExtractor.sh
+  Run this in the same directory as the passwd file extracted from an iOS firmware image or jailbroken device (/private/etc/passwd).
+  It parses the contents of passwd which uses colons to separate different columns of data similar to a csv.
+  It also ignores lines beginning with # which indicates comments.
+  It's interesting that between iOS 9.0.2 and 10.1.1 iOS has added 5 new users, some of which have unique home directories.
+  This may explain the use of the HOME variable in the container sandbox profile.
+  Output of this script appears in userFacts.pl in the following format:
+  user(userName(...),passwordHash(...),userID(...),groupID(...),comment(...),homeDirectory(...),shell(...)).
+
+  groupFactExtractor.sh
+  Very similar to userFactExtractor.sh except that it uses group (/private/etc/group) instead of passwd.
+  It's interesting that many of the groups only contain root as the only member.
+  I think these groups are legacy traits that made more sense on OS X.
+  I'm curious about the difference between the "admin" and "wheel" user groups which both have root as the only member.
+  Is there pattern associated with the files belonging to one group or the other?
+  The results are output to unixGroupFacts.pl with the following format:
+  group(groupName(...),passwordHash(...),id(...),members([...])).
+  //members contains a list of zero or more names of users that are members of the group
+
+Network Data
+  networkServiceFactExtractor.sh
+  Very similar to userFactExtractor.sh except that is uses (/private/etc/services).
+  I think that many of the services in the list are only relevant to OS X.
+  Can we connect these services to processes running on the device?
+  The results are output to serviceFacts.pl with the following format:
+  service(serviceName(...),portNumber(...),protocol(...),comment(...)).
+
+
+
+

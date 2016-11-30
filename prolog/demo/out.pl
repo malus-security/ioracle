@@ -1,0 +1,2 @@
+lover(juliet).
+lover(beauty).
