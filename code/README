@@ -10,6 +10,17 @@ I have other directories for raw data and fact collections, but these are not un
 I have been placing relevant fact collections onto Google drive, which should be accessible to collaborators at this link:
 https://drive.google.com/drive/u/0/folders/0BwHKGVoHlQcQU0hZU1BNalV1SDA
 
+Process Data
+  stringExtractor.sh
+  Usage: takes no arguments because it is currenlty hardcoded to a specific path, but I plan to fix this eventually.
+  Extracts strings from program's and stores them as Prolog facts.
+  This should make it easier to find our which programs mention certain objects or functions such as sandbox_init
+  This data was collected using the strings utility, so we might get better results from an IDA script.
+  Ouput is in the following format:
+  process(filePath(...),stringFromProgram(...)).
+  //TODO: I should generate similar string facts for the dyld_shared_cache and kernel.
+  //These could also include the segment name to indicate which library or kernel extension they were found in.
+
 Sandbox Profiles
   smartPly.py
   Usage: takes two arguments, where the first is the path to the sbpl file to process, and the second is the name of the profile.
