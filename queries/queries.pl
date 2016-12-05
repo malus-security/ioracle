@@ -80,6 +80,16 @@ processUsers:-
   writeln("))."),
   fail.
 
+findProgramsWithUnknownProfiles:-
+    [appleProcessIdentifierFacts],
+    [programToProfileFacts],
+    findall(A,usesSandbox(processPath(A),_),Known),
+    findall(B,process(filepath(B),_),All),
+    subtract(All,Known,Unknown),
+    member(U,Unknown),
+    writeln(U),
+    fail.
+
 %interesting negation example. Which apple processes are owned by groups other than wheel and admin?
 %file(X,ownerGroupName(Y)), process(X,_),not(Y = "wheel"),not(Y = "admin").
 
