@@ -33,17 +33,48 @@ uniqueRequiredEntitlements:-
   fail.
 
 containerEnt:-
-  [systemEntitlementFacts],
+  %[systemEntitlementFacts],
   process(filePath(Path),entitlement(key("com.apple.private.security.container-required"),_)),
-  write("usesSandbox(processPath(\""),write(Path),writeln("\"),profile(\"container\"))."),
+  write("usesSandbox(processPath(\""),write(Path),writeln("\"),profile(\"container\"),mechanism(entitlementKey(\"com.apple.private.security.container-required\")))."),
   fail.
 
 seatbeltEnt:-
-  [systemEntitlementFacts],
+  %[systemEntitlementFacts],
   process(filePath(Path),entitlement(key("seatbelt-profiles"),value([string(Value)]))),
-  write("usesSandbox(processPath(\""),write(Path),write("\"),profile(\""),write(Value),writeln("\"))."),
+  write("usesSandbox(processPath(\""),write(Path),write("\"),profile(\""),write(Value),writeln("\"),mechanism(entitlementKey(\"seatbelt-profiles\")))."),
   fail.
 
+pathBasedProfile:-
+  %[appleProcessIdentifierFacts],
+  %[systemEntitlementFacts],
+  process(filePath(X),_),
+  X =~ '.*/mobile/Containers/Bundle.*',
+  write("usesSandbox(processPath(\""),write(X),writeln("\"),profile(\"container\"),mechanism(pathBased(\".*/mobile/Containers/Bundle.*\")))."),
+  fail.
+
+%this one seems to produce duplicates. I should detect and remove them.
+selfAppliedProfile:-
+  [stringsFromPrograms],
+  (
+      processString(filePath(X),stringFromProgram("_sandbox_init")),
+      write("usesSandbox(processPath(\""),
+      write(X),
+      writeln("\"),profile(\"unknown\"),mechanism(selfApplied(\"_sandbox_init\"))).")
+    ;
+      processString(filePath(X),stringFromProgram("_sandbox_apply_container")),
+      write("usesSandbox(processPath(\""),
+      write(X),
+      writeln("\"),profile(\"unknown\"),mechanism(selfApplied(\"_sandbox_apply_container\"))).")
+  ),
+  fail.
+
+
+%getting the profiles this way seems to have gained one more fact. Maybe there is an executable with multiple mechanisms?
+getProfilesFromFacts:-
+  [systemEntitlementFacts],
+  %I should double check why this works, but it seems to give me what I expect by trying to satisfy both queries in every possible way.
+  %the ; represents an OR operation, but because we are pushing to failure, maybe this is what I want according to DeMorgen's law.
+  (seatbeltEnt; containerEnt; pathBasedProfile;selfAppliedProfile).
 
 
 
@@ -88,13 +119,6 @@ findProgramsWithUnknownProfiles:-
   subtract(All,Known,Unknown),
   member(U,Unknown),
   writeln(U),
-  fail.
-
-findProgramsWithAutoContainPath:-
-  [appleProcessIdentifierFacts],
-  process(filepath(X),_),
-  X =~ '.*/mobile/Containers/Bundle.*',
-  write("usesSandbox(processPath(\""),write(X),writeln("\"),profile(\"container\"))."),
   fail.
 
 %interesting negation example. Which apple processes are owned by groups other than wheel and admin?
