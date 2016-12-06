@@ -41,31 +41,43 @@ containerEnt:-
 seatbeltEnt:-
   %[systemEntitlementFacts],
   process(filePath(Path),entitlement(key("seatbelt-profiles"),value([string(Value)]))),
+  %the container2 profile does not exist and is always overridden by the container profile
+  Value \= "container2",
   write("usesSandbox(processPath(\""),write(Path),write("\"),profile(\""),write(Value),writeln("\"),mechanism(entitlementKey(\"seatbelt-profiles\")))."),
   fail.
 
+%I can't just use entitlement facts here because not all executables have entitlements.
 pathBasedProfile:-
-  %[appleProcessIdentifierFacts],
+  [appleProgramSignatures],
   %[systemEntitlementFacts],
-  process(filePath(X),_),
-  X =~ '.*/mobile/Containers/Bundle.*',
+  setof(Path,
+    (
+      processSignature(filePath(Path),_),
+      Path =~ '.*/mobile/Containers/Bundle.*'
+    ),Pathset),
+  member(X,Pathset),
   write("usesSandbox(processPath(\""),write(X),writeln("\"),profile(\"container\"),mechanism(pathBased(\".*/mobile/Containers/Bundle.*\")))."),
   fail.
 
 %this one seems to produce duplicates. I should detect and remove them.
 selfAppliedProfile:-
   [stringsFromPrograms],
+  setof(Path,
   (
-      processString(filePath(X),stringFromProgram("_sandbox_init")),
-      write("usesSandbox(processPath(\""),
-      write(X),
-      writeln("\"),profile(\"unknown\"),mechanism(selfApplied(\"_sandbox_init\"))).")
+      processString(filePath(Path),stringFromProgram("_sandbox_init"))
+      %write("usesSandbox(processPath(\""),
+      %write(X),
+      %writeln("\"),profile(\"unknown\"),mechanism(selfApplied(\"_sandbox_init\"))).")
     ;
-      processString(filePath(X),stringFromProgram("_sandbox_apply_container")),
-      write("usesSandbox(processPath(\""),
-      write(X),
-      writeln("\"),profile(\"unknown\"),mechanism(selfApplied(\"_sandbox_apply_container\"))).")
-  ),
+      processString(filePath(Path),stringFromProgram("_sandbox_apply_container"))
+      %write("usesSandbox(processPath(\""),
+      %write(X),
+      %writeln("\"),profile(\"unknown\"),mechanism(selfApplied(\"_sandbox_apply_container\"))).")
+  ),Out),
+  member(X,Out),
+  write("usesSandbox(processPath(\""),
+  write(X),
+  writeln("\"),profile(\"unknown\"),mechanism(selfApplied))."),
   fail.
 
 
