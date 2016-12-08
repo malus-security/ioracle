@@ -108,6 +108,11 @@ Network Data
   The results are output to serviceFacts.pl with the following format:
   service(serviceName(...),portNumber(...),protocol(...),comment(...)).
 
-
-
-
+Mach Services
+  machServicesExtractor.py
+  This script parses xml files or contents of multiple xml files printed one
+  after another in a single file, running, for example on the iPhone:
+  $ launchctl list | awk '{print $3}' | while read line ; do launchctl list -x $line ; done > services.txt
+  services.txt will be the file argument of our script.
+  The output is stored in machServicesFacts.pl with the following format:
+  mach(pId(...),machServices([...))
