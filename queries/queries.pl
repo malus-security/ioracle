@@ -123,6 +123,8 @@ processUsers:-
   writeln("))."),
   fail.
 
+%this finds programs that don't seem to have any of the sandbox initialization mechanisms we were looking for
+%I think that this query is obsolete since I'm not using programToProfileFacts anymore.
 findProgramsWithUnknownProfiles:-
   [appleProcessIdentifierFacts],
   [programToProfileFacts],
@@ -132,6 +134,13 @@ findProgramsWithUnknownProfiles:-
   member(U,Unknown),
   writeln(U),
   fail.
+
+pathsToSelfAppliedProfiles:-
+  [profilesWithMech],
+  usesSandbox(processPath(X),_,mechanism(selfApplied)),
+  writeln(X),
+  fail.
+
 
 %interesting negation example. Which apple processes are owned by groups other than wheel and admin?
 %file(X,ownerGroupName(Y)), process(X,_),not(Y = "wheel"),not(Y = "admin").
