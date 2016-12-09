@@ -105,10 +105,12 @@ def getValue(ea,minEa,targetReg):
 #bottom of getValue function
 ######################################################
 
+count = 0
 for nName in idautils.Names():
   #f.write(nName[1]+"\n")
   name = nName[1]
-  if "_sandbox_init" == name:
+  if "_sandbox_init" == name or "_sandbox_apply_container" == name:
+    count = count + 1
     #f.write(nName[1]+","+"%x" % nName[0] + "\n")
     nameAddress = nName[0]
     #now that we have the address of the name we can look for a cross reference.
@@ -137,12 +139,17 @@ for nName in idautils.Names():
       global errorMessage 
       errorMessage = ""
       profileAddress = getValue(ea,minEa,targetReg)
-      f.write(idc.ARGV[1]+","+idc.ARGV[2]+",")
+      f.write(name+","+idc.ARGV[1]+","+idc.ARGV[2]+",")
       if errorMessage != "":
 	f.write(errorMessage+"\n")
       else:	
 	profileString = idc.GetString(profileAddress)
 	f.write(profileString+"\n")
+
+if count == 0:
+  f.write("ERROR: no name,"+idc.ARGV[1]+","+idc.ARGV[2]+",ERROR: did not find any relevant names.\n")
+  
+
 
 f.close()
 

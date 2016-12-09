@@ -1,0 +1,12 @@
+sandboxInitAnalysis.py is an IDA script that does backtracing to determine the value of X0 or R0 when sandbox_init or sandbox_apply_container are called.
+This should tell us which sandbox profile an executable applies to itself.
+
+mapIdaScriptToTargets.sh
+This script maps an IDA script to a collection of ida databases representing disassembled executables.
+Example Usage:
+./mapIdaScriptToTargets.sh ./programsToAnalyze/hashedPathToFilePathMapping.csv ./sandboxInitAnalysis.py ./programsToAnalyze/
+
+idaBatchAnalysis.sh
+This script runs IDA's base analysis on several executables.
+Example Usage:
+./idaBatchAnalysis.sh pathsToSelfAppliedProfiles.out ~/iOracle/idaScripts/programsToAnalyze/
