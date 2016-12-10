@@ -9,7 +9,7 @@ echoerr()
 }
 echoerr $count
 
-for file in $(find /usr/libexec -type f); do
+for file in $(find / -type f); do
     count=$((count + 1))
     if ! (("$count" % 1000)); then
         echoerr "$count"
