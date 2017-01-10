@@ -53,7 +53,7 @@ Entitlements
 
 Bundle Identifier
   signatureExtractor.sh
-  Works largely the same way that entitlementExtractor.sh does.   
+  Works largely the same way that entitlementExtractor.sh does.
   I assumed that executables with identifiers starting with com.apple were signed by Apple.
   Outputs facts to allProcessIdentifierFacts.pl in the following format:
   process(filepath(...),identifier(...)).
@@ -79,7 +79,7 @@ File Data
   I changed the format to one fact per filepath, and this made the facts really long, but it seemed to help a lot with performance.
   Output is stored in fileMetaDataFacts.pl in the following format:
   file(filepath(...),size(...),ownerGroupName(...),lastModification(...),inode(...),symLinkObject(...),permissionBits(...),numHardLinks(...),ownerUserName(...),type(...)).
-      
+
 User Data
   userFactExtractor.sh
   Run this in the same directory as the passwd file extracted from an iOS firmware image or jailbroken device (/private/etc/passwd).
@@ -116,3 +116,11 @@ Mach Services
   services.txt will be the file argument of our script.
   The output is stored in machServicesFacts.pl with the following format:
   mach(pId(...),machServices([...))
+
+  machCommDirectionExtractor.py
+  This script parses the output of procexp tool in order to get the
+  unidirectionality(send to, receive from)
+  $ procexp all ports | grep $process\|$mach_service > services.txt
+  services.txt will be the input of our script.
+  The output is stored in machCommDirection.pl, with the following format:
+  machComm(machS(...),comm_direction("to"\|"from")),processes([...])).
