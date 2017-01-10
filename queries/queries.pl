@@ -80,6 +80,12 @@ selfAppliedProfile:-
   writeln("\"),profile(\"unknown\"),mechanism(selfApplied))."),
   fail.
 
+pathsToEntCheckers:-
+  [stringsFromPrograms],
+  setof(Path,processString(filePath(Path),stringFromProgram("_SecTaskCopyValueForEntitlement")),Out),
+  member(X,Out),
+  writeln(X),
+  fail.
 
 %getting the profiles this way seems to have gained one more fact. Maybe there is an executable with multiple mechanisms?
 getProfilesFromFacts:-
@@ -141,6 +147,20 @@ pathsToSelfAppliedProfiles:-
   writeln(X),
   fail.
 
+%ignore any profile with a parenthesis in it
+%consider running a bash script to remove duplicate rules.
+%I should write a bash script that automates the entire process of figuring out which sandboxes are selfApplied, finding the self-applied profiles used, and deduplicating.
+parseSelfAppliedProfiles:-
+  [selfApplySandbox],
+  functionCalled(filePath(X),_,parameter(Z)),
+  %we got at least one sandbox initialization that used a self defined profile.
+  %this is worth mentioning in the paper, but it needs to be removed from these results.
+  %manual analysis suggests that this self defined profile is not normally used.
+  Z =~ '^[^()]+$',
+  write("usesSandbox(processPath(\""),write(X),
+  write("\"),profile(\""),write(Z),
+  writeln("\"),mechanism(selfApplied))."),
+  fail.
 
 %interesting negation example. Which apple processes are owned by groups other than wheel and admin?
 %file(X,ownerGroupName(Y)), process(X,_),not(Y = "wheel"),not(Y = "admin").

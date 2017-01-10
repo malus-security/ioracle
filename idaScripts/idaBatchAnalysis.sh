@@ -3,7 +3,7 @@
 if [ "$1" == "-h" ] || [ "$#" -ne 3 ]; then
   echo "Error: Invalid Arguments"
   echo "This script takes 3 arguments and its purpose is to run an ida analysis on several executables saving the results in databases named after hashed file paths."
-  echo "Usage: ./$0 pathToExtractediOSFileSystem filePathsToExecutables directoryForResults"
+  echo "Usage: $0 pathToExtractediOSFileSystem filePathsToExecutables directoryForResults"
   exit 0
 fi
 

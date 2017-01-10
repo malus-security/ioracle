@@ -2,9 +2,11 @@
 #this should tell us which sandbox profile a process will apply to itself.
 import idaapi, idc, idautils,os
 
-full_path = os.path.realpath(__file__)
-directory = os.path.dirname(full_path)
-f = open(directory+"/output/sandboxInitCalls.csv",'a')
+#full_path = os.path.realpath(__file__)
+#directory = os.path.dirname(full_path)
+#f = open(directory+"/output/sandboxInitCalls.csv",'a')
+f = open(idc.ARGV[3],'a')
+
 errorMessage = ""
 #The header of the output file is functionName,callAddress
 
@@ -117,7 +119,7 @@ for nName in idautils.Names():
     for xref in idautils.XrefsTo(nameAddress, 0):
       #f.write("%x" % xref.frm + "\n")
       #this is a stupid loop. I need to find a function header or something to act as a minimum address
-      ea = xref.frm
+      ea = xref.frm 
       #try to set the minimum instruction to consider as the top of the current function.
       minEa = idc.GetFunctionAttr(ea, idc.FUNCATTR_START)
       #if minEa seems to be something ridiculous like a value larger than ea, then just define a dumb, constant backtracing limit.
@@ -153,4 +155,7 @@ if count == 0:
 
 f.close()
 
+print "hello world!"
+
 idc.Exit(0)
+

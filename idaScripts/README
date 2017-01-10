@@ -1,12 +1,41 @@
+strider.py is a generic backtracer IDA script designed to find the contents of a register when a given function is called.
+It works well for statically determining the value of a given parameter when a function is called (such as which profile was used for sandbox_init).
+Example Config File:
+register32bit=R0
+register64bit=X0
+functionName=_sandbox_apply_container
+resultIsClass=0
+classOffset=0x10
+
+
 sandboxInitAnalysis.py is an IDA script that does backtracing to determine the value of X0 or R0 when sandbox_init or sandbox_apply_container are called.
 This should tell us which sandbox profile an executable applies to itself.
+//TODO I need to make some assumptions to handle programs with more than one option for self applying sandboxes.
 
 mapIdaScriptToTargets.sh
 This script maps an IDA script to a collection of ida databases representing disassembled executables.
 Example Usage:
-./mapIdaScriptToTargets.sh ./programsToAnalyze/hashedPathToFilePathMapping.csv ./sandboxInitAnalysis.py ./programsToAnalyze/
+./mapIdaScriptToTargets.sh listOfprogramsToAnalyze IDAPythonScript directoryOfIDADatabases outputDestination configFile
+./mapIdaScriptToTargets.sh ./programsToAnalyze/hashedPathToFilePathMapping.csv ./strider.py ./programsToAnalyze/ ./output/testingSandboxInitConfig.pl sandboxInit.config
+//TODO I should make the config file optional since not all idaScripts will need one.
+
 
 idaBatchAnalysis.sh
 This script runs IDA's base analysis on several executables.
 Example Usage:
 ./idaBatchAnalysis.sh pathsToSelfAppliedProfiles.out ~/iOracle/idaScripts/programsToAnalyze/
+
+kernelStringExtractor.py
+This scrips extracts strings from a 32 bit iOS kernel and states which segment (kernel extension) it came from.
+Example Output:
+kernelString(segment("com.apple.iokit.IOMobileGraphicsFamily:__cstring"),stringFromProgram("com.apple.private.allow-explicit-graphics-priority")).
+Example Usage:
+idal -S"kernelStringExtractor.py" /media/bigdata/idaAnalyzedFiles/kernel/decryptedKernelCache902iPhone53.idb
+
+dyldStringExtractor.py
+This scrips extracts strings from a 32 bit iOS dyld_shared_cache and states which segment (library/framework) it came from.
+Example Output:
+dyldString(segment("AXSpeechImplementation:__cstring"),stringFromProgram("com.apple.voice.assets.loaded")).
+Example Usage:
+idal -S"dyldStringExtractor.py" /media/bigdata/idaAnalyzedFiles/dyldCache/dyld_shared_cache_armv7s.iOS9.0.2.idb
+

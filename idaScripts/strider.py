@@ -186,11 +186,12 @@ for nName in idautils.Names():
       global errorMessage 
       errorMessage = ""
       resultAddress = getValue(ea,minEa,targetReg)
-      f.write(name+","+idc.ARGV[1]+","+idc.ARGV[2]+",")
+      #f.write(name+","+idc.ARGV[1]+","+idc.ARGV[2]+",")
       resultString=None
       #If there are errors, then don't worry about the result and just output the errors
       if errorMessage != "":
-	f.write(errorMessage+"\n")
+	#f.write(name+","+idc.ARGV[1]+","+idc.ARGV[2]+",")
+	#f.write(errorMessage+"\n")
 	continue
 
       if resultIsClass:
@@ -208,13 +209,18 @@ for nName in idautils.Names():
 	resultString = idc.GetString(resultAddress)
 
       if resultString == None:
-	f.write("%x result string equalled None\n" % stringAddress)
+	#I guess just putting () here will do nothing, but without it, IDA freaks out about the else statement below.
+	()
+	#f.write(name+","+idc.ARGV[1]+","+idc.ARGV[2]+",")
+	#f.write("ERROR: %x result string equalled None\n" % stringAddress)
       else:
-	f.write(resultString+"\n")
+	#f.write(name+","+idc.ARGV[1]+","+idc.ARGV[2]+",")
+	#f.write(resultString+"\n")
+	f.write("functionCalled(filePath(\""+filePathOniOSDevice+"\"),function(\""+name+"\"),parameter(\""+resultString.replace('"',"'")+"\")).\n")
 	  
 
-if count == 0:
-  f.write("ERROR: no name,"+idc.ARGV[1]+","+idc.ARGV[2]+",ERROR: did not find any relevant names.\n")
+#if count == 0:
+  #f.write("ERROR: no name,"+idc.ARGV[1]+","+idc.ARGV[2]+",ERROR: did not find any relevant names.\n")
 
 f.close()
 

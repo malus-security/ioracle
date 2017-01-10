@@ -35,6 +35,15 @@ Sandbox Profiles
   profileRule(profile(...),decision(...),operation(...),filters([...])).
   //TODO: consolidate the profileDefault facts together to make queries more efficient. Could just sort the output file.
 
+  Which sandbox profile, if any, does each program use?
+  Figuring out which profile is used by each program is pretty complicated because some programs can call functions that apply sandboxes to themselves.
+  The process of generating facts showing which profile is used by each program goes something like this.
+  The getProfilesFromFacts prolog query looks through entitlements and strings present in programs to determine which profile is used.
+  Programs without entitlements specifying profiles, could use sandbox_init or sandbox_apply_container to apply a sandbox to themselves.
+  strider.py is used on these self applying programs to determine which profile is applied by inferring the parameters passed to sandbox_init or sandbox_apply_container.
+  The results of strider.py are then processed and merged with the facts for programs that do not use self applied profiles by using updateProfileUseFacts.sh
+  TODO: I need to eventually string together the steps involved in this process if we start to do them more often.
+
 Entitlements
   entitlementExtractor.sh
   Usage: run it in the same directory as appleProgramList.out (this should be a list of filepaths to mach-o executables whose entitlements are to be extracted).

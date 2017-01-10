@@ -23,5 +23,8 @@ do
   path=`echo $line | sed 's/.*,//g'`
 
   #run the ida script
+  #I should have another mode in case the binary is 32 bit
+  #however the only 32 bit binaries i need to handle now are the dyld_shared_cache and the kernel which can be handled individually.
+  #I could also reanalyze these using idaq64, but it would take too long, and I don't know if it would break anything...
   idal64 -S"$idapythonScript $name $path $pathToOutputFile $idaScriptConfigFile" $directoryHoldingIDADatabases$name.i64
 done
