@@ -170,3 +170,33 @@ parseSelfAppliedProfiles:-
 %:- ignore(uniqueEntitlements),halt.
 %:- ignore(processUsers),halt.
 %:- ignore(uniqueUsers),halt.
+
+%this just uses the graph path rules created below.
+testPath:-
+  [edges],
+  %path(start,end,maxLength,result)
+  path(1,3,4,Path),
+  writeln(Path),
+  fail.
+
+%this makes all edges bidirectional.
+%should edge direction matter for iOracle?
+connected(X,Y) :- edge(X,Y) ; edge(Y,X).
+
+%this code is based on the tutorial at
+% https://www.cpp.edu/~jrfisher/www/prolog_tutorial/2_15.html
+path(A,B,C,Path) :-
+    travel(A,B,[A],Q), 
+    %the next two lines limit the maximum size of the path
+    length(Q,L),
+    L =< C,
+    reverse(Q,Path).
+
+travel(A,B,P,[B|P]) :- 
+  connected(A,B).
+travel(A,B,Visited,Path) :-
+  connected(A,C),           
+  %the next two lines prevent cycles or infinite loops
+  C \== B,
+  \+member(C,Visited),
+  travel(C,B,[C|Visited],Path).

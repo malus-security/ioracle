@@ -1,0 +1,12 @@
+The runProlog.sh script will load the query.pl fact collection and invoke the specified rule/query passed as an argument.
+Example Usage:
+  ./runProlog.sh testPath
+
+To run the queries found in queries.pl you may need to download the relevant .pl files from Google Drive.
+These .pl files contain facts representing parts of the iOS access control architecture.
+
+For a simple prolog tutorial try this:
+https://www.youtube.com/watch?v=SykxWpFwMGs
+
+For a more advanced tutorial try this:
+https://www.cpp.edu/~jrfisher/www/prolog_tutorial/contents.html#2
