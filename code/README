@@ -133,3 +133,12 @@ Mach Services
   services.txt will be the input of our script.
   The output is stored in machCommDirection.pl, with the following format:
   machComm(machS(...),comm_direction("to"\|"from")),processes([...])).
+
+Sandbox Extensions
+  sbtool_ext.sh
+  This script runs sbtool inspect on each pid of all the running processes in
+  the system. It saves the output for each sandboxed process into a labelled
+  file.
+  sbtool has to be in the same directory with this script.
+  The output files have the following format:
+  ext.$PID
