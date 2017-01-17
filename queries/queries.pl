@@ -200,3 +200,19 @@ travel(A,B,Visited,Path) :-
   C \== B,
   \+member(C,Visited),
   travel(C,B,[C|Visited],Path).
+
+%find all references to known entitlements. These imply that a given process may check for a certain entitlement.
+%TODO This query doesn't consider kernel or dyld_shared_cache
+%later we should try to determine which entitlement values a process may check for.
+%ideally we could pair the entitlement keys and values together (e.g., this value is referenced and only appears alongside this key)
+%this is a task that could be assigned to a Master's student.
+entitlementReferences:-
+  [allEntitlementsFacts],
+  [stringsFromPrograms],
+  %I need to define a set of entitlements. The way I'm doing this now is creating a lot of duplicates and being very inefficient
+  %it won't work if you try a _ instead of using Z
+  setof(X,Y^Z^process(Z,entitlement(key(X),Y)),Out),
+  member(A,Out),
+  processString(filePath(B),stringFromProgram(A)),
+  write("entitlementReference(filePath(\""),write(B),write("\"),entitlementKey(\""),write(A),writeln("\"))."),
+  fail.
