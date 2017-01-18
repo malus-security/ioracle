@@ -216,3 +216,27 @@ entitlementReferences:-
   processString(filePath(B),stringFromProgram(A)),
   write("entitlementReference(filePath(\""),write(B),write("\"),entitlementKey(\""),write(A),writeln("\"))."),
   fail.
+
+%same as entitlement references but works on dyld_shared_cache segments
+dyldEntitlementReferences:-
+  [allEntitlementsFacts],
+  [dyldStrings],
+  %I need to define a set of entitlements. The way I'm doing this now is creating a lot of duplicates and being very inefficient
+  %it won't work if you try a _ instead of using Z
+  setof(X,Y^Z^process(Z,entitlement(key(X),Y)),Out),
+  member(A,Out),
+  dyldString(segment(B),stringFromProgram(A)),
+  write("dyldEntitlementReference(segment(\""),write(B),write("\"),entitlementKey(\""),write(A),writeln("\"))."),
+  fail.
+
+%same as entitlement references but works on kernel segments
+kernelEntitlementReferences:-
+  [allEntitlementsFacts],
+  [kernelStrings],
+  %I need to define a set of entitlements. The way I'm doing this now is creating a lot of duplicates and being very inefficient
+  %it won't work if you try a _ instead of using Z
+  setof(X,Y^Z^process(Z,entitlement(key(X),Y)),Out),
+  member(A,Out),
+  kernelString(segment(B),stringFromProgram(A)),
+  write("kernelEntitlementReference(segment(\""),write(B),write("\"),entitlementKey(\""),write(A),writeln("\"))."),
+  fail.
