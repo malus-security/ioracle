@@ -7,6 +7,11 @@ functionName=_sandbox_apply_container
 resultIsClass=0
 classOffset=0x10
 
+programNameExtractor.py is an IDA script that finds names within a program.
+It can be run with mapIdaScriptToTargets.sh to get names from several programs.
+It expects an argument for a config file, but it won't actually use it.
+Example Usage:
+./mapIdaScriptToTargets.sh /media/bigdata/idaAnalyzedFiles/systemPrograms/hashedPathToFilePathMapping.csv ./programNameExtractor.py /media/bigdata/idaAnalyzedFiles/systemPrograms/ ./output/stringsExtractedFromPrograms.pl sandboxInit.config
 
 sandboxInitAnalysis.py is an IDA script that does backtracing to determine the value of X0 or R0 when sandbox_init or sandbox_apply_container are called.
 This should tell us which sandbox profile an executable applies to itself.
