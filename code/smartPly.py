@@ -21,6 +21,7 @@ reserved = {
 'require-any' : 'TK_REQANY',
 'require-not' : 'TK_REQNOT',
 'vnode-type' : 'TK_VNODETYPE',
+'file-mode' : 'TK_FILEMODETYPE',
 'debug-mode' : 'TK_DEBUGMODE',
 'require-entitlement' : 'TK_REQENT'}
 
@@ -32,6 +33,7 @@ tokens = [
     'TK_OTHERTYPE',
     'TK_BOOL',
     'TK_REGEXPRESSION',
+    'TK_MODENUMBER',
 ] + list(reserved.values())
 
 # Regular expression rules for simple tokens
@@ -60,6 +62,13 @@ def t_TK_BOOL(t):
   r'\#[tf]'
   t.value = str(t.value)
   return t
+
+#attempting to match file-mode number such as #o0004
+def t_TK_MODENUMBER(t):
+  r'\#o[0-9][0-9][0-9][0-9]'
+  t.value = str(t.value)
+  return t
+
 
 
 #Taken from ply example in documentation
@@ -102,10 +111,10 @@ root = "root not set"
 
 def p_profile(p):
   'profile : version default ruleList'
+  #results now consider the default operation
   p[0] = p[2] + p[3]
   global root
-  root = p[0] 
-  
+  root = p[0]
 
 def p_version(p):
   'version : TK_LPAREN TK_VERSION TK_OTHERTYPE TK_RPAREN'
@@ -114,6 +123,7 @@ def p_version(p):
 def p_default(p):
   'default 	: TK_LPAREN decision TK_DEFAULT TK_RPAREN'
   #p[0] = p[2] + p[3]
+  #outputs a fact for the default
   p[0] = ["profileDefault(profile(\""+sys.argv[2]+"\"),decision(\""+p[2]+"\"))."]
 
 def p_decision(p):
@@ -144,6 +154,7 @@ def p_rule(p):
     for o in p[4]:	
       if type(o) is str:
 	#p[0].append(p[2]+"("+p[3] +", [" + o +"]).")
+	#changing format of facts to include profile name, which is apparently passed as a parameter to this program
 	p[0].append("profileRule(profile(\""+sys.argv[2]+"\"),decision(\""+p[2] +"\"),operation(\""+ p[3] +"\"),filters(["+ o +"])).")
       else:
 	#Some facts were not getting periods at the end. I suspect this is the code that needs to be fixed.
@@ -151,6 +162,7 @@ def p_rule(p):
 	  #p[0].append(p[2]+"("+p[3] +", [" + anyElement +"]).")
 	  p[0].append("profileRule(profile(\""+sys.argv[2]+"\"),decision(\""+p[2] +"\"),operation(\""+ p[3] +"\"),filters(["+ anyElement +"])).")
   if len(p) == 5:
+    #p[0] = [ p[2] +"("+ p[3] +", [])."  ]
     p[0] = ["profileRule(profile(\""+sys.argv[2]+"\"),decision(\""+p[2] +"\"),operation(\""+ p[3] +"\"),filters([]))."]
 
 def p_action(p):
@@ -259,6 +271,7 @@ def p_object(p):
 		| TK_REQNOT TK_LPAREN object TK_RPAREN
 		| TK_REQNOT TK_LPAREN simpleEntValObject TK_RPAREN
 		| TK_VNODETYPE otherType
+		| TK_FILEMODETYPE TK_MODENUMBER
 		| otherType TK_LPAREN otherType TK_FILTER otherType TK_RPAREN
 		| TK_DEBUGMODE'''
   if len(p) == 2:

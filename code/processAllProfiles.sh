@@ -1,5 +1,7 @@
 #!/bin/bash
-FILES=/Users/luke/oracle/allProfileSandScout/allProfileSBPL/*
+
+#TODO replace this hardcoded solution with something passes as an argument.
+FILES=/home/ladeshot/pocketsand/ply/allProfileSBPL/*
 for f in $FILES
 do
   echo "Processing $f file..."
