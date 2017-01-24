@@ -5,11 +5,9 @@ IFS=$'\n'
 
 echoerr() { echo "$@" 1>&2; }
 
-filename='programPaths.out'
-filelines=`cat $filename`
+filename="$1"
 
-for line in $filelines ; 
-do
+while read line; do
     #expects path to root of iOS file system as an argument.
     #todo add usage instructions as error output if argument is missing
     filePath="$1$line"
@@ -25,6 +23,4 @@ do
       #echo $line
     #else echo "process(filePath('$line'),identifier('no identifier detected'))."
     fi
-
 done
-
