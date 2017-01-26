@@ -1,17 +1,19 @@
 #!/bin/bash
 
+if test $# -ne 1; then
+	echo "Usage: $0 /path/to/root/filesystem/" 1>&2
+	exit 1
+fi
+
+rootfs_path="$1"
+
 #the find command also has a printf option and provides much of the same data as stat
 IFS=$'\n'
 
 echoerr() { echo "$@" 1>&2; }
 
-filename='appleProgramList.out'
-filelines=`cat $filename`
-
-for line in $filelines ; 
-do
-    #./FileSystem is hardcoded and should be changed for other systems.
-    filePath="./FileSystem$line"
+while read line; do
+    filePath="$rootfs_path$line"
 
     entitlements=`codesign -d --entitlements :- $filePath 2>&1`
     entitlements=`echo $entitlements | sed 's;^.*<dict>;;' | sed 's;</dict>.*$;;' | sed 's;<key>;\\\n<key>;g'`
@@ -37,6 +39,4 @@ do
 	fi
       done
     fi
-
 done
-
