@@ -1,7 +1,10 @@
 #!/bin/bash
 
-#the find command also has a printf option and provides much of the same data as stat
+if test $# -ne 1; then
+	echo "Usage: $0 /path/to/root/filesystem/" 1>&2
+	exit 1
+fi
 
-find / -printf 'file(filepath("%p"),size(%s)).\nfile(filepath("%p"),ownerGroupName("%g")).\nfile(filepath("%p"),lastModification(%T@)).\nfile(filepath("%p"),inode(%i)).\nfile(filepath("%p"),symLinkObject("%l")).\nfile(filepath("%p"),permissionBits(%m)).\nfile(filepath("%p"),numHardLinks(%n)).\nfile(filepath("%p"),ownerUserName("%u")).\nfile(filepath("%p"),type("%y")).\n'
+rootfs_path="$1"
 
-#I may need to remove part of the file path if I am running this extraction on firmware files.
+find "$rootfs_path" -printf 'file(filepath("%p"),size(%s)).\nfile(filepath("%p"),ownerGroupName("%g")).\nfile(filepath("%p"),lastModification(%T@)).\nfile(filepath("%p"),inode(%i)).\nfile(filepath("%p"),symLinkObject("%l")).\nfile(filepath("%p"),permissionBits(%m)).\nfile(filepath("%p"),numHardLinks(%n)).\nfile(filepath("%p"),ownerUserName("%u")).\nfile(filepath("%p"),type("%y")).\n'
