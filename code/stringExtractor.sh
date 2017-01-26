@@ -30,6 +30,6 @@ while read line; do
     #echo "about to iterate through strings"
     for stringEntry in $thisSetOfStrings; do
         #echo "about to output a prolog fact"
-        echo "process(filePath(\"$line\"),stringFromProgram(\"$stringEntry\"))."
+        echo "processString(filePath(\"$line\"),stringFromProgram(\"$stringEntry\"))."
     done
 done
