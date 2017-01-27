@@ -1,8 +1,17 @@
 #!/bin/bash
 
+if test $# -ne 1; then
+	echo "Usage: $0 /path/to/root/filesystem/" 1>&2
+	exit 1
+fi
+
+rootfs_path="$1"
+
+#the find command also has a printf option and provides much of the same data as stat
+IFS=$'\n'
+
 regex="([^:]*):([^:]*):([^:]*):([^:]*)"
-for groupEntry in `cat group | grep '^[^#]'`
-do
+for groupEntry in $(cat "$rootfs_path"/etc/group | grep '^[^#]'); do
   if [[ $groupEntry =~ $regex ]]
     then
       match1="${BASH_REMATCH[1]}"
