@@ -1,12 +1,19 @@
 #!/bin/bash
 
-#TODO replace this hardcoded solution with something passes as an argument.
-FILES=/home/ladeshot/pocketsand/ply/allProfileSBPL/*
-for f in $FILES
-do
-  echo "Processing $f file..."
-  fileName=`echo $f | sed 's;^.*/;;g' | sed 's;\.sb$;;'`
-  ./smartPly.py $f $fileName > ./allProfileFacts/$fileName.pl
-  # take action on each file. $f store current file name
-  #cat $f
+if test $# -gt 1; then
+    echo "Usage: $0 [/path/to/store/processed/profiles]" 1>&2
+    exit 1
+elif test $# -eq 1; then
+    rootfs_path="$1"
+else
+    rootfs_path="."
+fi
+
+IFS=$'\n'
+
+while read f; do
+    echo "Processing sandbox profile $f ..."
+    profile_name=$(basename "$f" .sb)
+    output_file="$rootfs_path"/"$profile_name".pl
+    ./smartPly.py "$f" "$profile_name" > "$output_file"
 done
