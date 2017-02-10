@@ -28,6 +28,7 @@ pathBasedProfile:-
 
 % Print `usesSandbox()` rules based on strings output information: `sandbox_init` is used to map a sandbox profile to a given executable file.
 % This one seems to produce duplicates. We should detect and remove them.
+% RD: I've used another script that removes duplicates.
 selfAppliedProfile:-
 	setof(Path, (
 		processString(filePath(Path),stringFromProgram("_sandbox_init")),
@@ -44,4 +45,4 @@ selfAppliedProfile:-
 getProfilesFromFacts:-
 	% We should double check why this works, but it seems to give me what I expect by trying to satisfy both queries in every possible way.
 	% the ; represents an OR operation, but because we are pushing to failure, maybe this is what I want according to DeMorgen's law.
-	(seatbeltEnt;containerEnt;pathBasedProfile;selfAppliedProfile).
+	(seatbeltEnt;containerEnt;pathBasedProfile).
