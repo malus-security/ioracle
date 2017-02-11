@@ -2,19 +2,6 @@
 
 prefix="iPhoneSE_13F69_iOS932"
 
-# Create symlinks. This is hard-coded. Ideally it should be part of a
-# config file.
-ln -sfn /mnt/sdb3/razvan/ios-security/iOracle-prolog-facts/iPhoneSE_13F69_iOS932/iPhoneSE_13F69_iOS932_executable_files.pl executable_files.pl
-ln -sfn /mnt/sdb3/razvan/ios-security/iOracle-prolog-facts/iPhoneSE_13F69_iOS932/iPhoneSE_13F69_iOS932_apple_executable_files.pl apple_executable_files.pl
-ln -sfn /mnt/sdb3/razvan/ios-security/iOracle-prolog-facts/iPhoneSE_13F69_iOS932/iPhoneSE_13F69_iOS932_apple_executable_files_entitlements.pl apple_executable_files_entitlements.pl
-ln -sfn /mnt/sdb3/razvan/ios-security/iOracle-prolog-facts/iPhoneSE_13F69_iOS932/iPhoneSE_13F69_iOS932_apple_executable_files_strings.pl apple_executable_files_strings.pl
-ln -sfn /mnt/sdb3/razvan/ios-security/iOracle-prolog-facts/iPhoneSE_13F69_iOS932/iPhoneSE_13F69_iOS932_file_metadata.pl file_metadata.pl
-ln -sfn /mnt/sdb3/razvan/ios-security/iOracle-prolog-facts/iPhoneSE_13F69_iOS932/iPhoneSE_13F69_iOS932_filetypes.pl filetypes.pl
-ln -sfn /mnt/sdb3/razvan/ios-security/iOracle-prolog-facts/iPhoneSE_13F69_iOS932/iPhoneSE_13F69_iOS932_groups.pl groups.pl
-ln -sfn /mnt/sdb3/razvan/ios-security/iOracle-prolog-facts/iPhoneSE_13F69_iOS932/iPhoneSE_13F69_iOS932_users.pl users.pl
-ln -sfn /mnt/sdb3/razvan/ios-security/iOracle-prolog-facts/iPhoneSE_13F69_iOS932/iPhoneSE_13F69_iOS932_sandbox_profile_mappings.pl sandbox_profile_mappings.pl
-ln -sfn /mnt/sdb3/razvan/ios-security/iOracle-prolog-facts/iPhoneSE_13F69_iOS932/iPhoneSE_13F69_iOS932_process_ownership.pl process_ownership.pl
-
 echo "print_apple_exec_no_sandbox." | swipl --quiet get_process_user_group_mappings.pl | grep -v '^[ \t]*$' | grep -v '^false\.$' > "$prefix"_no_sandbox_apple_exec_files.pl
 echo "print_apple_process_no_sandbox." | swipl --quiet get_process_user_group_mappings.pl | grep -v '^[ \t]*$' | grep -v '^false\.$' > "$prefix"_no_sandbox_apple_processes.pl
 echo "print_apple_exec_sandbox." | swipl --quiet get_process_user_group_mappings.pl | grep -v '^[ \t]*$' | grep -v '^false\.$' > "$prefix"_apple_exec_files_sandbox.pl
