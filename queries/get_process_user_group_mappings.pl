@@ -63,3 +63,33 @@ print_process_for_user(U) :- [process_mapping_queries, users, groups, process_ow
    member(P, L),
    write("process(\""),write(P),writeln("\"))."),
    fail.
+
+print_process_for_group(G) :- [process_mapping_queries, users, groups, process_ownership, apple_executable_files],
+   findall(Process, mapProcessUserGroup(Process, _, G), L),
+   member(P, L),
+   write("process(\""),write(P),writeln("\"))."),
+   fail.
+
+print_process_for_user_group(U,G) :- [process_mapping_queries, users, groups, process_ownership, apple_executable_files],
+   findall(Process, mapProcessUserGroup(Process, U, G), L),
+   member(P, L),
+   write("process(\""),write(P),writeln("\"))."),
+   fail.
+
+print_metadata_for_process(P) :- [process_mapping_queries, users, groups, process_ownership, apple_executable_files, sandbox_profile_mappings],
+   write("process: "),writeln(P),
+   (mapProcessUserGroup(P, U, G) -> (write("user: "),writeln(U),write("group: "),writeln(G)) ; (writeln("user: N/A"), writeln("group: N/A"))),
+   (mapProcessSandboxProfile(P,SP,_) -> (write("sandbox_profile: "),writeln(SP)) ; (write("sandbox_profile: N/A"))),
+   fail.
+
+print_apple_process_for_sandbox_profile(SandboxProfile) :- [process_mapping_queries, process_ownership, sandbox_profile_mappings, apple_executable_files],
+   findall((Process,SandboxProfile,SandboxMechanism), mapProcessSandboxProfile(Process,SandboxProfile,SandboxMechanism), L),
+   member((P,_,_),L),
+   write("process(\""),write(P),writeln("\"))."),
+   fail.
+
+print_apple_exec_for_sandbox_profile(SandboxProfile) :- [process_mapping_queries, sandbox_profile_mappings, apple_executable_files],
+   findall((Executable,SandboxProfile,SandboxMechanism), mapAppleExecSandboxProfile(Executable,SandboxProfile,SandboxMechanism), L),
+   member((E,_,_),L),
+   write("filePath(\""),write(E),writeln("\"))."),
+   fail.
