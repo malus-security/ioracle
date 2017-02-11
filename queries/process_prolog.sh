@@ -5,6 +5,8 @@ echo "print_apple_exec_no_sandbox." | swipl --quiet get_process_user_group_mappi
 echo "print_apple_process_no_sandbox." | swipl --quiet get_process_user_group_mappings.pl > "$prefix"_no_sandbox_apple_processes.pl
 echo "print_apple_exec_sandbox." | swipl --quiet get_process_user_group_mappings.pl > "$prefix"_apple_exec_files_sandbox.pl
 echo "print_apple_process_sandbox." | swipl --quiet get_process_user_group_mappings.pl > "$prefix"_apple_processes_sandbox.pl
+echo 'print_process_for_user("mobile").' | swipl --quiet new_get_process_user_group_mappings.pl > "$prefix"_mobile_processes.pl
+echo 'print_process_for_user("root").' | swipl --quiet new_get_process_user_group_mappings.pl > "$prefix"_root_processes.pl
 
 > "$prefix"_apple_processes_file_permissions.pl
 num_lines=$(wc -l < "$prefix"_file_metadata.pl)

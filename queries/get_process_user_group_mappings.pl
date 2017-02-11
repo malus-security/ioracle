@@ -57,3 +57,9 @@ print_apple_exec_no_sandbox :- [process_mapping_queries, iPhoneSE_13F69_iOS932_s
    member(E,L),
    write("noSandbox(filePath(\""),write(E),writeln("\"))."),
    fail.
+
+print_process_for_user(U) :- [process_mapping_queries, iPhoneSE_13F69_iOS932_users, iPhoneSE_13F69_iOS932_groups, iPhoneSE_13F69_iOS932_process_ownership, iPhoneSE_13F69_iOS932_apple_executable_files],
+   findall(Process, mapProcessUserGroup(Process, U, _), L),
+   member(P, L),
+   write("process(\""),write(P),writeln("\"))."),
+   fail.
