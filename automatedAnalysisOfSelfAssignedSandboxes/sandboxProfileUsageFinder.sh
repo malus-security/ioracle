@@ -7,8 +7,12 @@
 #location for results of IDA analysis
 
 #This script assumes the following files are present with the following fact conventions:
+#What we really need is the set of external symbols
+#sometimes this seems to appear in output from the strings utility. IDA can provide Names. nm -g can also provide external symbols
+#we need to agree on a single technique and fact naming convention and stick with it.
 #stringsFromPrograms.pl
 #	processString(filePath("/bin/df"),stringFromProgram("__PAGEZERO")).
+#
 #systemEntitlementFacts.pl
 #	process(filePath("/bin/launchctl"),entitlement(key("com.apple.private.xpc.launchd.userspace-reboot"),value(bool("true")))).
 #appleProgramSignatures.pl
@@ -19,7 +23,8 @@
 ##########################################################################################
 
 ./runProlog.sh getProfilesFromEntitlementsAndPaths > profileAssignmentFromEntAndPath.pl
-./runProlog.sh getSelfAssigningProcesses > pathsOfSelfAssigners.out
+#./runProlog.sh getSelfAssigningProcesses > pathsToSelfAssigners.out
+./runProlog.sh getSelfAssigningProcessesWithExternalSymbols > pathsToSelfAssigners.out
 
 ##########################################################################################
 #Basic IDA Analysis
@@ -28,11 +33,11 @@
 
 #I am assuming the program files to be analyzed are in the following directory or a symlink to the directory with the following filepath:
 #./phoneFileSystem/
+
 #Example:
 #ladeshot@cascades:~/iOracle/automatedSandboxAssignments$ ls -l phoneFileSystem
 #lrwxrwxrwx 1 ladeshot ladeshot 31 Feb 10 16:44 phoneFileSystem -> /home/ladeshot/FileSystem9.0.2/
 
-rm -rf ./resultsOfAnalyzingSelfAppliers
 mkdir ./resultsOfAnalyzingSelfAppliers
 ../idaScripts/idaBatchAnalysis.sh phoneFileSystem pathsToSelfAssigners.out resultsOfAnalyzingSelfAppliers/
 
@@ -41,7 +46,7 @@ mkdir ./resultsOfAnalyzingSelfAppliers
 #Strider uses a config file, so we made one for each function to look for
 ##########################################################################################
 
-mkdir striderOuput
+mkdir ./striderOuput
 ../idaScripts/mapIdaScriptToTargets.sh resultsOfAnalyzingSelfAppliers/hashedPathToFilePathMapping.csv ../idaScripts/strider.py resultsOfAnalyzingSelfAppliers/ ./striderOuput/sandboxInit.out ../idaScripts/sandboxInit.config
 
 ../idaScripts/mapIdaScriptToTargets.sh resultsOfAnalyzingSelfAppliers/hashedPathToFilePathMapping.csv ../idaScripts/strider.py resultsOfAnalyzingSelfAppliers/ ./striderOuput/applyContainer.out ../idaScripts/applyContainer.config
@@ -57,4 +62,10 @@ cat ./striderOuput/applyContainer.out striderOuput/sandboxInit.out > ./selfApply
 
 cat profileAssignmentFromEntAndPath.pl parsedFilteredSelfAppliers.pl > processToProfileMapping.pl
 
+##########################################################################################
+#Optional Cleanup Stage
+##########################################################################################
 
+rm -rf ./striderOutput
+rm -rf ./resultsOfAnalyzingSelfAppliers
+rm ./*.out

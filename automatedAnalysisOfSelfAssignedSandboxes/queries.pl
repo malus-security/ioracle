@@ -44,6 +44,19 @@ getSelfAssigningProcesses:-
   writeln(X),
   fail.
 
+getSelfAssigningProcessesWithExternalSymbols:-
+  [externalSymbols],
+  setof(Path,
+  (
+      externalSymbol(filePath(Path),symbol("_sandbox_init"))
+    ;
+      externalSymbol(filePath(Path),symbol("_sandbox_apply_container"))
+  ),Out),
+  member(X,Out),
+  writeln(X),
+  fail.
+
+
 
 %ignore any profile with a parenthesis in it
 %consider running a bash script to remove duplicate rules.
