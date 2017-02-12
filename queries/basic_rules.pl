@@ -8,15 +8,25 @@ process(P) :-
 path(F) :-
 	file(filepath(F),_).
 
-print_process :- [apple_executable_files, process_ownership],
+sandboxAssignment(P, S) :-
+	process(P),
+	(usesSandbox(processPath(P),profile(Sandbox),_) -> S = Sandbox ; S = "none").
+
+print_processes :- [apple_executable_files, process_ownership],
 	findall(P,process(P),L),
 	member(X,L),
 	write("process(\""),write(X),writeln("\")."),
 	fail.
 
 % This ends up in an "ERROR: Out of global stack" message.
-print_path :- [file_metadata],
+print_paths :- [file_metadata],
 	findall(P,path(P),L),
 	member(X,L),
 	write("path(\""),write(X),writeln("\")."),
+	fail.
+
+print_sandboxAssignments :- [apple_executable_files, process_ownership, sandbox_profile_mappings],
+	findall((P,S),sandboxAssignment(P,S),L),
+	member((X,Y),L),
+	write("sandboxAssignment(process(\""),write(X),write("\"),profile(\""),write(Y),writeln("\")."),
 	fail.
