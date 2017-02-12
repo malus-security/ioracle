@@ -10,3 +10,7 @@ extractionDirectory="$1"
 
 #get file types from the file system extracted to the local system
 ./scriptsToAutomate/fileTypeExtractor.sh $extractionDirectory/fileSystem > $extractionDirectory/prologFacts/file_types.pl
+
+cat $extractionDirectory/prologFacts/file_types.pl ./scriptsToAutomate/queries.pl > relevantFacts.tmp.pl
+./scriptsToAutomate/runProlog.sh getProgramFacts $extractionDirectory/fileSystem > $extractionDirectory/prologFacts/machO_executables.pl
+rm relevantFacts.tmp.pl
