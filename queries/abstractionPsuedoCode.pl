@@ -1,15 +1,89 @@
-%A subject can be either a file or a service (we can define more types if we want to)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%GENERIC TERMS 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%A subject can be either a file or a service (we can define more generic terms if we want to)
 subject(X):-
   file(X);
   service(X).
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%GRAPH RULES
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%if we make a graph, then we can define edges based on file access this way.
 edge(process(X),process(Y)):-
   access(process(X),operation("file-write"),file(File)),
   access(process(Y),operation("file-read"),file(File)).
 
+%if we make a graph, then we can define edges based on service access this way.
 edge(process(X),process(Y)):-
   access(process(X),operation("mach-lookup"),service(Service)),
   provides(process(Y),service(Service)).
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%FINDING NAME RESOLUTION ATTACKS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%we want to look for file paths where an attacker could attack high integrity processes that access those file paths.
+%It would also be helpful to know which processes could write to those files and who the victim high integrity process is.
+%The VictimBehavior represents the type of operation the victim performs on the compromised file path (e.g., read, exec, etc.)
+possibleNameTraversalAttack(file(File), process(Attacker), process(Victim), operation(VictimBehavior)):-
+  lowIntegrity(process(Attacker)),
+  highIntegrity(process(Victim)),
+
+  %does our behavior analysis record show the Victim accessing the file? 
+  %this will also bind the specific type of access we saw to the VictimBehavior
+  %we can make the end result of our filemon analysis produce facts like these
+  observedBehavior(file(File),process(Victim),operation(VictimBehavior)),
+
+  %does the Attacker process have write access to the file?
+  %we will need to defin and access rule that consider sandbox and unix permissions
+  access(process(Attacker),operation('file-write'),file(File)),
+
+  %determine if the attacker can predict the file path
+  %this requires that the path is either non random 
+  %or Attacker process is allowed to read the directory contents to learn the path
+  canPredictPath(process(Attacker),file(File)).
+
+
+%I'm planning to assume any sandboxed process is of low integrity
+lowIntegrity(process(Process)):-
+  usesSandbox(processPath(Process),_,_).
+
+%We want to say that a high integrity process is an unsandboxed process
+highIntegrity(process(Process)):-
+  %the \+ should represent negation. 
+  %prolog will try to find a matching fact through exhaustive search.
+  %if it can't, then it will return true.
+  %we should only use negation for small fact collections like this one because of the exhaustive search.
+  %otherwise we would need to create a fact collection listing unsandboxed processes.
+  \+ usesSandbox(processPath(Process),_,_). 
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%FILE PATH PREDICTION
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%we can determine which paths are consistent by running them on 2 identical devices 
+%and taking the intersection of the file paths observed in the file access behavior traces.
+%those paths that appear twice are not random and can be predicted by the attacker.
+canPredictPath(_,file(Path)):-
+  consistentPath(file(Path)).
+
+%if the attacker is able to read the parent directory of the file path,
+%they can learn the path of the file and write to it before the Victim does.
+%It's ok if this might require a race condition since jailbreakers can still exploit race conditions.
+canPredictPath(process(Process),file(Path)):-
+  %we need to define a rule that figures out a file's parent directory.
+  %this should be easy to do with a regular expression.
+  getParentDirectory(file(Path),file(ParentDir)),
+  %I'm assuming that there isn't a special sandbox operation for finding out the names of files in a directory.
+  access(process(Process),operation('file-read'),file(ParentDir)).
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%ACCESS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %access to file depends on sandbox and unix permissions
 access(process(Proc),operation(Op),file(File)):-
@@ -82,10 +156,14 @@ allow(policy(unixPerm),process(Proc),operation(Op),file(File)):-
   getRelevantPermissions(operation(Op),permissions(Permissions),relPerm(RelPerm)),
   %is the user an owner, part of the group that owns, or running as root (same as owner?)
   isUserAnOwner(user(User),userOwner(Uowner),groupOwner(Gowner),ownership(Ownership)),
-  hasPermission(ownership(Ownership),relPerm()).
+  hasPermission(ownership(Ownership),relPerm()),
+  %I think that we should also confirm that the user has execute permission on all directories in the path.
+  %This should be straightforward if we combine it with getParentDirectory and make it recursive.
+  parentDirectoriesExecutable(user(User),file(File)).
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %OPTIONAL DECENTRALIZED CONTROLS POLICY RULES
+%THESE ARE NOT NECESSARY FOR US TO FIND POTENTIAL NAME RESOLUTION ATTACKS
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %Decentralized controls will probably play a minimal role in our graphs since they are very hard to model.
