@@ -26,6 +26,7 @@ sudo tar -xzf $directoryForOutput/fileSystem.tar.gz -C $directoryForOutput/fileS
 #make the new file system owned by the current user to avoid needing sudo all the time.
 #We can get the unix permissions by extracting metadata from the device, so its ok if we lose them locally.
 sudo chown -R $USER $directoryForOutput
+chmod -R 777 $directoryForOutput
 
 #extract meta data. This asks for the password again, but it's not a big deal.
 ssh -p $port $user@$host 'bash -s' < ./scriptsToAutomate/metaDataExtractor.sh $downloadDirectory > $directoryForOutput/prologFacts/file_metadata.pl
