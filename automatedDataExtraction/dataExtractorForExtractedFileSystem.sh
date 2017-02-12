@@ -9,4 +9,4 @@ fi
 extractionDirectory="$1"
 
 #get file types from the file system extracted to the local system
-./scriptsToAutomate/fileTypeExtractor.sh $extractionDirectory/fileSystem > $extractionDirectory/prologFacts/fileType_facts.pl
+./scriptsToAutomate/fileTypeExtractor.sh $extractionDirectory/fileSystem > $extractionDirectory/prologFacts/file_types.pl

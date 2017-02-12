@@ -28,4 +28,8 @@ sudo tar -xzf $directoryForOutput/fileSystem.tar.gz -C $directoryForOutput/fileS
 sudo chown -R $USER $directoryForOutput
 
 #extract meta data. This asks for the password again, but it's not a big deal.
-ssh -p $port $user@$host 'bash -s' < ./scriptsToAutomate/metaDataExtractor.sh $downloadDirectory > $directoryForOutput/prologFacts/metadata_facts.pl
+ssh -p $port $user@$host 'bash -s' < ./scriptsToAutomate/metaDataExtractor.sh $downloadDirectory > $directoryForOutput/prologFacts/file_metadata.pl
+
+#get process ownership for processes currently running on the iOS device
+#we might want to set up the device such that certain devices are running, but running this naively is still useful.
+ssh -p $port $user@$host 'bash -s' < ./scriptsToAutomate/processOwnershipExtractor.sh > $directoryForOutput/prologFacts/process_ownership.pl
