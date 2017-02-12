@@ -21,3 +21,5 @@ mkdir $5
 #ssh -p $port $user@$host 
 ssh -p $port -n $user@$host "tar zcvf - $downloadDirectory" > $nameForOutput.tar.gz
 sudo tar -xzf $nameForOutput.tar.gz -C $nameForOutput
+
+ssh -p $port $user@$host 'bash -s' < metaDataExtractor.sh $downloadDirectory > "$nameForOutput"_metadata_facts.pl
