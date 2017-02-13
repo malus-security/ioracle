@@ -7,6 +7,8 @@ if test $# -ne 1; then
 fi
 
 extractionDirectory="$1"
+rm -rf ./temporaryFiles
+mkdir ./temporaryFiles
 
 #get file types from the file system extracted to the local system
 ./scriptsToAutomate/fileTypeExtractor.sh $extractionDirectory/fileSystem > $extractionDirectory/prologFacts/file_types.pl
@@ -17,6 +19,8 @@ extractionDirectory="$1"
 #extract data about groups from etc
 ./scriptsToAutomate/groupFactExtractor.sh $extractionDirectory/fileSystem > $extractionDirectory/prologFacts/groups.pl
 
-cat $extractionDirectory/prologFacts/file_types.pl ./scriptsToAutomate/queries.pl > relevantFacts.tmp.pl
-./scriptsToAutomate/runProlog.sh getProgramFacts $extractionDirectory/fileSystem > $extractionDirectory/prologFacts/machO_executables.pl
-rm relevantFacts.tmp.pl
+cat $extractionDirectory/prologFacts/file_types.pl ./scriptsToAutomate/queries.pl > ./temporaryFiles/relevantFacts.pl
+./scriptsToAutomate/runProlog.sh justPaths $extractionDirectory/fileSystem > ./temporaryFiles/filePaths.out
+rm ./temporaryFiles/relevantFacts.pl
+
+./scriptsToAutomate/signatureExtractor.sh $extractionDirectory/fileSystem < ./temporaryFiles/filePaths.out > $extractionDirectory/prologFacts/apple_executable_file_signatures.pl
