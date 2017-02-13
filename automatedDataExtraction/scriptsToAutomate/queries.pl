@@ -41,68 +41,12 @@ uniqueRequiredEntitlements:-
   writeln(B),
   fail.
 
-containerEnt:-
-  %[systemEntitlementFacts],
-  process(filePath(Path),entitlement(key("com.apple.private.security.container-required"),_)),
-  write("usesSandbox(processPath(\""),write(Path),writeln("\"),profile(\"container\"),mechanism(entitlementKey(\"com.apple.private.security.container-required\")))."),
-  fail.
-
-seatbeltEnt:-
-  %[systemEntitlementFacts],
-  process(filePath(Path),entitlement(key("seatbelt-profiles"),value([string(Value)]))),
-  %the container2 profile does not exist and is always overridden by the container profile
-  Value \= "container2",
-  write("usesSandbox(processPath(\""),write(Path),write("\"),profile(\""),write(Value),writeln("\"),mechanism(entitlementKey(\"seatbelt-profiles\")))."),
-  fail.
-
-%I can't just use entitlement facts here because not all executables have entitlements.
-pathBasedProfile:-
-  [appleProgramSignatures],
-  %[systemEntitlementFacts],
-  setof(Path,
-    (
-      processSignature(filePath(Path),_),
-      Path =~ '.*/mobile/Containers/Bundle.*'
-    ),Pathset),
-  member(X,Pathset),
-  write("usesSandbox(processPath(\""),write(X),writeln("\"),profile(\"container\"),mechanism(pathBased(\".*/mobile/Containers/Bundle.*\")))."),
-  fail.
-
-%this one seems to produce duplicates. I should detect and remove them.
-selfAppliedProfile:-
-  [stringsFromPrograms],
-  setof(Path,
-  (
-      processString(filePath(Path),stringFromProgram("_sandbox_init"))
-      %write("usesSandbox(processPath(\""),
-      %write(X),
-      %writeln("\"),profile(\"unknown\"),mechanism(selfApplied(\"_sandbox_init\"))).")
-    ;
-      processString(filePath(Path),stringFromProgram("_sandbox_apply_container"))
-      %write("usesSandbox(processPath(\""),
-      %write(X),
-      %writeln("\"),profile(\"unknown\"),mechanism(selfApplied(\"_sandbox_apply_container\"))).")
-  ),Out),
-  member(X,Out),
-  write("usesSandbox(processPath(\""),
-  write(X),
-  writeln("\"),profile(\"unknown\"),mechanism(selfApplied))."),
-  fail.
-
 pathsToEntCheckers:-
   [stringsFromPrograms],
   setof(Path,processString(filePath(Path),stringFromProgram("_SecTaskCopyValueForEntitlement")),Out),
   member(X,Out),
   writeln(X),
   fail.
-
-%getting the profiles this way seems to have gained one more fact. Maybe there is an executable with multiple mechanisms?
-getProfilesFromFacts:-
-  [systemEntitlementFacts],
-  %I should double check why this works, but it seems to give me what I expect by trying to satisfy both queries in every possible way.
-  %the ; represents an OR operation, but because we are pushing to failure, maybe this is what I want according to DeMorgen's law.
-  (seatbeltEnt; containerEnt; pathBasedProfile;selfAppliedProfile).
-
 
 
 %output csv for path and bundle id
@@ -136,39 +80,6 @@ processUsers:-
   write("\"),user(\""),write(B),
   write("\"),permissionBits("),write(A),
   writeln("))."),
-  fail.
-
-%this finds programs that don't seem to have any of the sandbox initialization mechanisms we were looking for
-%I think that this query is obsolete since I'm not using programToProfileFacts anymore.
-findProgramsWithUnknownProfiles:-
-  [appleProcessIdentifierFacts],
-  [programToProfileFacts],
-  findall(A,usesSandbox(processPath(A),_),Known),
-  findall(B,process(filepath(B),_),All),
-  subtract(All,Known,Unknown),
-  member(U,Unknown),
-  writeln(U),
-  fail.
-
-pathsToSelfAppliedProfiles:-
-  [profilesWithMech],
-  usesSandbox(processPath(X),_,mechanism(selfApplied)),
-  writeln(X),
-  fail.
-
-%ignore any profile with a parenthesis in it
-%consider running a bash script to remove duplicate rules.
-%I should write a bash script that automates the entire process of figuring out which sandboxes are selfApplied, finding the self-applied profiles used, and deduplicating.
-parseSelfAppliedProfiles:-
-  [selfApplySandbox],
-  functionCalled(filePath(X),_,parameter(Z)),
-  %we got at least one sandbox initialization that used a self defined profile.
-  %this is worth mentioning in the paper, but it needs to be removed from these results.
-  %manual analysis suggests that this self defined profile is not normally used.
-  Z =~ '^[^()]+$',
-  write("usesSandbox(processPath(\""),write(X),
-  write("\"),profile(\""),write(Z),
-  writeln("\"),mechanism(selfApplied))."),
   fail.
 
 %interesting negation example. Which apple processes are owned by groups other than wheel and admin?
@@ -250,11 +161,64 @@ kernelEntitlementReferences:-
   write("kernelEntitlementReference(segment(\""),write(B),write("\"),entitlementKey(\""),write(A),writeln("\"))."),
   fail.
 
-%get file paths for selfApplied profiles
-findPathsForSelfAppliedProfiles:-
-  [dataFor932/selfAppliedProfiles],
-  usesSandbox(processPath(X),_,_),
+containerEnt:-
+  process(filePath(Path),entitlement(key("com.apple.private.security.container-required"),_)),
+  write("usesSandbox(processPath(\""),write(Path),writeln("\"),profile(\"container\"),mechanism(entitlementKey(\"com.apple.private.security.container-required\")))."),
+  fail.
+
+seatbeltEnt:-
+  process(filePath(Path),entitlement(key("seatbelt-profiles"),value([string(Value)]))),
+  %the container2 profile does not exist and is always overridden by the container profile
+  Value \= "container2",
+  write("usesSandbox(processPath(\""),write(Path),write("\"),profile(\""),write(Value),writeln("\"),mechanism(entitlementKey(\"seatbelt-profiles\")))."),
+  fail.
+
+%this will change depending on the iOS version
+%I think it's the same for iOS 8 and 9, but for 7 this path won't be accurate.
+%TODO for now we don't care much about third party apps, but we may need to fix this later.
+pathBasedProfile:-
+  setof(Path,
+  (
+  processSignature(filePath(Path),_),
+  Path =~ '.*/mobile/Containers/Bundle.*'
+  ),Pathset),
+  member(X,Pathset),
+  write("usesSandbox(processPath(\""),write(X),writeln("\"),profile(\"container\"),mechanism(pathBased(\".*/mobile/Containers/Bundle.*\")))."),
+  fail.
+
+%getting the profiles this way seems to have gained one more fact. Maybe there is an executable with multiple mechanisms?
+getProfilesFromEntitlementsAndPaths:-
+  %[systemEntitlementFacts],
+  %[appleProgramSignatures],
+  %I should double check why this works, but it seems to give me what I expect by trying to satisfy both queries in every possible way.
+  %the ; represents an OR operation, but because we are pushing to failure, maybe this is what I want according to DeMorgen's law.
+  (seatbeltEnt; containerEnt; pathBasedProfile).
+
+getSelfAssigningProcessesWithSymbols:-
+  %[externalSymbols],
+  setof(Path,
+  (
+      processSymbol(filePath(Path),symbol("_sandbox_init"))
+    ;
+      processSymbol(filePath(Path),symbol("_sandbox_init_with_parameters"))
+    ;
+      processSymbol(filePath(Path),symbol("_sandbox_apply_container"))
+  ),Out),
+  member(X,Out),
   writeln(X),
   fail.
 
-
+%ignore any profile with a parenthesis in it
+%consider running a bash script to remove duplicate rules.
+%I should write a bash script that automates the entire process of figuring out which sandboxes are selfApplied, finding the self-applied profiles used, and deduplicating.
+parseSelfAppliedProfiles:-
+  %[selfApplySandbox],
+  functionCalled(filePath(X),_,parameter(Z)),
+  %we got at least one sandbox initialization that used a self defined profile.
+  %this is worth mentioning in the paper, but it needs to be removed from these results.
+  %manual analysis suggests that this self defined profile is not normally used.
+  Z =~ '^[^()]+$',
+  write("usesSandbox(processPath(\""),write(X),
+  write("\"),profile(\""),write(Z),
+  writeln("\"),mechanism(selfApplied))."),
+  fail.

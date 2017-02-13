@@ -10,7 +10,7 @@ extractionDirectory="$1"
 rm -rf ./temporaryFiles
 mkdir ./temporaryFiles
 
-#get file types from the file system extracted to the local system
+##get file types from the file system extracted to the local system
 ./scriptsToAutomate/fileTypeExtractor.sh $extractionDirectory/fileSystem > $extractionDirectory/prologFacts/file_types.pl
 
 #extract data about users from etc
@@ -36,3 +36,28 @@ rm ./temporaryFiles/relevantFacts.pl
 ./scriptsToAutomate/stringExtractor.sh $extractionDirectory/fileSystem < ./temporaryFiles/applefilePaths.out > $extractionDirectory/prologFacts/apple_executable_files_strings.pl
 
 ./scriptsToAutomate/symbolExtractor.sh $extractionDirectory/fileSystem < ./temporaryFiles/applefilePaths.out > $extractionDirectory/prologFacts/apple_executable_files_symbols.pl
+
+#TODO Why am I listing the file system as an argument to runProlog.sh?
+cat $extractionDirectory/prologFacts/apple_executable_files_signatures.pl $extractionDirectory/prologFacts/apple_executable_files_entitlements.pl ./scriptsToAutomate/queries.pl > ./temporaryFiles/relevantFacts.pl
+./scriptsToAutomate/runProlog.sh getProfilesFromEntitlementsAndPaths > ./temporaryFiles/profileAssignmentFromEntAndPath.pl
+rm ./temporaryFiles/relevantFacts.pl
+
+cat $extractionDirectory/prologFacts/apple_executable_files_symbols.pl ./scriptsToAutomate/queries.pl > ./temporaryFiles/relevantFacts.pl
+./scriptsToAutomate/runProlog.sh getSelfAssigningProcessesWithSymbols > ./temporaryFiles/pathsToSelfAssigners.out
+rm ./temporaryFiles/relevantFacts.pl
+
+./scriptsToAutomate/idaBatchAnalysis.sh $extractionDirectory/fileSystem ./temporaryFiles/pathsToSelfAssigners.out temporaryFiles/
+
+./scriptsToAutomate/mapIdaScriptToTargets.sh ./temporaryFiles/hashedPathToFilePathMapping.csv ./scriptsToAutomate/strider.py ./temporaryFiles/ ./temporaryFiles/sandboxInit.out ./configurationFiles/sandboxInit.config
+
+./scriptsToAutomate/mapIdaScriptToTargets.sh ./temporaryFiles/hashedPathToFilePathMapping.csv ./scriptsToAutomate/strider.py ./temporaryFiles/ ./temporaryFiles/sandboxInitWithParameters.out ./configurationFiles/sandboxInitWithParameters.config
+
+./scriptsToAutomate/mapIdaScriptToTargets.sh ./temporaryFiles/hashedPathToFilePathMapping.csv ./scriptsToAutomate/strider.py ./temporaryFiles/ ./temporaryFiles/applyContainer.out ./configurationFiles/applyContainer.config
+
+cat ./temporaryFiles/applyContainer.out temporaryFiles/sandboxInit.out temporaryFiles/sandboxInitWithParameters.out > ./temporaryFiles/selfApplySandbox.pl
+
+cat ./temporaryFiles/selfApplySandbox.pl ./scriptsToAutomate/queries.pl > ./temporaryFiles/relevantFacts.pl
+./scriptsToAutomate/runProlog.sh parseSelfAppliedProfiles > ./temporaryFiles/parsedFilteredSelfAppliers.pl
+rm ./temporaryFiles/relevantFacts.pl
+
+cat ./temporaryFiles/profileAssignmentFromEntAndPath.pl ./temporaryFiles/parsedFilteredSelfAppliers.pl > $extractionDirectory/prologFacts/processToProfileMapping.pl
