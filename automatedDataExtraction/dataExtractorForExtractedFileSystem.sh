@@ -23,4 +23,12 @@ cat $extractionDirectory/prologFacts/file_types.pl ./scriptsToAutomate/queries.p
 ./scriptsToAutomate/runProlog.sh justPaths $extractionDirectory/fileSystem > ./temporaryFiles/filePaths.out
 rm ./temporaryFiles/relevantFacts.pl
 
-./scriptsToAutomate/signatureExtractor.sh $extractionDirectory/fileSystem < ./temporaryFiles/filePaths.out > $extractionDirectory/prologFacts/apple_executable_file_signatures.pl
+./scriptsToAutomate/signatureExtractor.sh $extractionDirectory/fileSystem < ./temporaryFiles/filePaths.out > $extractionDirectory/prologFacts/apple_executable_files_signatures.pl
+
+#generate a list of file paths to Apple-signed mach-o executable files
+cat $extractionDirectory/prologFacts/apple_executable_files_signatures.pl ./scriptsToAutomate/queries.pl > ./temporaryFiles/relevantFacts.pl
+./scriptsToAutomate/runProlog.sh justApplePaths $extractionDirectory/fileSystem > ./temporaryFiles/applefilePaths.out
+rm ./temporaryFiles/relevantFacts.pl
+
+#extract entitlements from programs listed in the input 
+./scriptsToAutomate/entitlementExtractor.sh $extractionDirectory/fileSystem < ./temporaryFiles/applefilePaths.out > $extractionDirectory/prologFacts/apple_executable_files_entitlements.pl

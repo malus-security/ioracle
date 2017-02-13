@@ -17,6 +17,13 @@ justPaths:-
   writeln(X),
   fail.
 
+%show just the file paths
+justApplePaths:- 
+  processSignature(filePath(X),_),
+  writeln(X),
+  fail.
+
+
 %outputs all unique entitlement keys required by rules in the container profile.
 %TODO: this does not consider negated entitlements (e.g., require-not(require-entitlement(X)))
 %TODO: for now this works with container, but eventually it should work on a larger collection of sandbox rules
