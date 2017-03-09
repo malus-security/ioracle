@@ -180,10 +180,14 @@ pathBasedProfile:-
   setof(Path,
   (
   processSignature(filePath(Path),_),
-  Path =~ '.*/mobile/Containers/Bundle.*'
+  (
+      Path =~ '.*/mobile/Containers/Bundle.*'
+    ;
+      Path =~ '^/private/var/mobile/Applications/.*'
+  )
   ),Pathset),
   member(X,Pathset),
-  write("usesSandbox(processPath(\""),write(X),writeln("\"),profile(\"container\"),mechanism(pathBased(\".*/mobile/Containers/Bundle.*\")))."),
+  write("usesSandbox(processPath(\""),write(X),writeln("\"),profile(\"container\"),mechanism(pathBased))."),
   fail.
 
 %getting the profiles this way seems to have gained one more fact. Maybe there is an executable with multiple mechanisms?

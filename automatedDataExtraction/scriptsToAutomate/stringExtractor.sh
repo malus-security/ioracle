@@ -28,7 +28,10 @@ while read line; do
     thisSetOfStrings=`strings -n 7 $filePath | grep '[a-zA-Z0-9][a-zA-Z0-9][a-zA-Z0-9]' | grep -v '"' | grep -v '\\\\'`
 
     #echo "about to iterate through strings"
-    for stringEntry in $thisSetOfStrings; do
+    #I'm not sure why, but the while loop works, and the for loop causes the script to fail.
+    #It may have something to do with memory requirements and how for loops work in bash.
+    #for stringEntry in $thisSetOfStrings; do
+    strings -n 7 $filePath | grep '[a-zA-Z0-9][a-zA-Z0-9][a-zA-Z0-9]' | grep -v '"' | grep -v '\\\\' | while read stringEntry; do
         #echo "about to output a prolog fact"
         echo "processString(filePath(\"$line\"),stringFromProgram(\"$stringEntry\"))."
     done
