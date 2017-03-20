@@ -7,4 +7,4 @@ fi
 
 rootfs_path="$1"
 
-find "$rootfs_path" -printf 'file(filepath("%p"),size(%s)).\nfile(filepath("%p"),ownerGroupName("%g")).\nfile(filepath("%p"),lastModification(%T@)).\nfile(filepath("%p"),inode(%i)).\nfile(filepath("%p"),symLinkObject("%l")).\nfile(filepath("%p"),permissionBits(%m)).\nfile(filepath("%p"),numHardLinks(%n)).\nfile(filepath("%p"),ownerUserName("%u")).\nfile(filepath("%p"),type("%y")).\n'
+find "$rootfs_path" -printf 'fileSize(size(%s),filepath("%p")).\nfileOwnerGroupName(ownerGroupName("%g"),filepath("%p")).\nfileLastModification(lastModification(%T@),filepath("%p")).\nfileInode(inode(%i),filepath("%p")).\nfileSymLink(symLinkObject("%l"),filepath("%p")).\nfilePermissionBits(permissionBits(%m),filepath("%p")).\nfileNumHardLinks(numHardLinks(%n),filepath("%p")).\nfileOwnerUserName(ownerUserName("%u"),filepath("%p")).\nfileType(type("%y"),filepath("%p")).\n'
