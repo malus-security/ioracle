@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 import sys
 
-inputPath = sys.argv[1]+"/aclOutput.out"
+inputPath = sys.argv[1]
 f = open(inputPath, 'r')
 fileResults = f.read().strip().split("\n/")
 

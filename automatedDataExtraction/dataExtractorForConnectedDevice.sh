@@ -19,7 +19,7 @@ rm -rf ./$5
 mkdir $5
 mkdir $5/fileSystem
 mkdir $5/prologFacts
-#ssh -p $port $user@$host 
+
 ssh -p $port -n $user@$host "tar zcf - $downloadDirectory" > $directoryForOutput/fileSystem.tar.gz
 sudo tar -xzf $directoryForOutput/fileSystem.tar.gz -C $directoryForOutput/fileSystem
 
@@ -34,3 +34,14 @@ ssh -p $port $user@$host 'bash -s' < ./scriptsToAutomate/metaDataExtractor.sh $d
 #get process ownership for processes currently running on the iOS device
 #we might want to set up the device such that certain devices are running, but running this naively is still useful.
 ssh -p $port $user@$host 'bash -s' < ./scriptsToAutomate/processOwnershipExtractor.sh > $directoryForOutput/prologFacts/process_ownership.pl
+
+#Extract and format ACL data
+mkdir $5/temporaryFiles
+tempDir="/temporaryDirectoryForiOracleExtraction"
+ssh -p $port $user@$host "mkdir $tempDir"
+scp -q -P $port ./getfacl-master/getfacl_arm64 $user@$host:$tempDir/getfacl_arm64
+scp -q -P $port ./getfacl-master/getfacl_armv7 $user@$host:$tempDir/getfacl_armv7
+ssh -p $port $user@$host "ldid -S $tempDir/getfacl_arm64"
+ssh -p $port $user@$host "ldid -S $tempDir/getfacl_armv7"
+ssh -p $port $user@$host 'bash -s' < ./scriptsToAutomate/extractACL.sh $downloadDirectory > $directoryForOutput/temporaryFiles/aclOuput.out
+./scriptsToAutomate/parseACLs.py $directoryForOutput/temporaryFiles/aclOuput.out > $directoryForOutput/prologFacts/aclFacts.pl
