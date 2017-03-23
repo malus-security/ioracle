@@ -9,7 +9,7 @@ fi
 extractionDirectory="$1"
 rm -rf ./temporaryFiles
 mkdir ./temporaryFiles
-mkdir $extractionDirectory/prologFacts
+mkdir $extractionDirectory/prologFacts > /dev/null 2>&1
 
 echo 'getting file types'
 ##get file types from the file system extracted to the local system
