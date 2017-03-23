@@ -9,7 +9,7 @@ fi
 extractionDirectory="$1"
 rm -rf ./temporaryFiles
 mkdir ./temporaryFiles
-mkdir $extractionDirectory/prologFacts
+mkdir $extractionDirectory/prologFacts > /dev/null 2>&1
 
 #I think unpacking the extracted file system should be done in this script instead of the script for a connected device
 #make the new file system owned by the current user to avoid needing sudo all the time.

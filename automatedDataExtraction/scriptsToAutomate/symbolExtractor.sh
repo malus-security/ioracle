@@ -8,7 +8,8 @@ if test $# -ne 1; then
     exit 1
 fi
 
-rootfs_path="$1"
+rootfs_path="$1/"
+rootfs_path=${rootfs_path//\/\//\/}
 
 #the find command also has a printf option and provides much of the same data as stat
 IFS=$'\n'

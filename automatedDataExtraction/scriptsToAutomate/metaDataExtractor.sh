@@ -5,6 +5,7 @@ if test $# -ne 1; then
 	exit 1
 fi
 
-rootfs_path="$1"
+rootfs_path="$1/"
+rootfs_path=${rootfs_path//\/\//\/}
 
 find "$rootfs_path" -printf 'fileSize(size(%s),filepath("%p")).\nfileOwnerGroupName(ownerGroupName("%g"),filepath("%p")).\nfileLastModification(lastModification(%T@),filepath("%p")).\nfileInode(inode(%i),filepath("%p")).\nfileSymLink(symLinkObject("%l"),filepath("%p")).\nfilePermissionBits(permissionBits(%m),filepath("%p")).\nfileNumHardLinks(numHardLinks(%n),filepath("%p")).\nfileOwnerUserName(ownerUserName("%u"),filepath("%p")).\nfileType(type("%y"),filepath("%p")).\n'
