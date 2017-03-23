@@ -11,6 +11,13 @@ rm -rf ./temporaryFiles
 mkdir ./temporaryFiles
 mkdir $extractionDirectory/prologFacts
 
+#I think unpacking the extracted file system should be done in this script instead of the script for a connected device
+#make the new file system owned by the current user to avoid needing sudo all the time.
+#We can get the unix permissions by extracting metadata from the device, so its ok if we lose them locally.
+sudo tar -xzf $extractionDirectory/fileSystem.tar.gz -C $extractionDirectory/fileSystem
+sudo chown -R $USER $extractionDirectory
+chmod -R 777 $extractionDirectory
+
 echo 'getting file types'
 ##get file types from the file system extracted to the local system
 ./scriptsToAutomate/fileTypeExtractor.sh $extractionDirectory/fileSystem > $extractionDirectory/prologFacts/file_types.pl

@@ -8,6 +8,9 @@ fileResults = f.read().strip().split("\n/")
 for l in fileResults:
   lines = l.split('\n')
   object = lines[0]
+  #if the object doesn't begin with a / then add one in
+  if object[0] != "/":
+    object = "/" + object
   aclLines = lines[1:]
   count = 0
   for a in aclLines:
