@@ -1,0 +1,3 @@
+test: unixParsing
+purpose: check for correct parsing of unix permissions from integer format to prolog friendly output of one fact per permission.
+
