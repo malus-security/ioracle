@@ -8,21 +8,24 @@
 #it seems a bit like cheating, but it's hard to write prolog that doesn't produce duplicate results, 
 #so I'm just filtering out duplicates here with sort and uniq.
 
-if test $# -ne 1; then
-        echo "Usage: $0 queryToTest" 1>&2
-        echo "Example: $0 userRead " 1>&2
+if test $# -ne 3; then
+        echo "Usage: $0 queryFile queryToTest testToApply" 1>&2
+        echo "Example: $0 unixAllowRules.pl prologFriendlyPermissionFacts unixParsing" 1>&2
         exit 1
 fi
 
-queryFile=tests.pl
-queryToTest=$1
-testName=$1
-output=../outputs/"$1".out
-answer=../answers/"$1".answer
-sortedAnswer=../temp/"$1".answer
+queryFile=../prolog/$1
+queryToTest=$2
+testName=$3
+input=../inputs/"$3".pl
+output=../outputs/"$3".out
+answer=../answers/"$3".answer
+temp=../temp/"$3".pl
+sortedAnswer=../temp/"$3".answer
 rm ../temp/*
 
-swipl --quiet -t "ignore($queryToTest),halt(1)" --consult-file $queryFile | sort | uniq > $output
+cat $queryFile $input > $temp
+swipl --quiet -t "ignore($queryToTest),halt(1)" --consult-file $temp | sort | uniq > $output
 
 answerSize=`cat $answer | wc -l`
 cat $answer | sort | uniq > $sortedAnswer

@@ -3,33 +3,61 @@
 %  [process_ownership].
 
 %for now I can test by using the process with path "/usr/sbin/BTServer" which runs as mobile
-allow(policy(unixPerm),process(Proc),operation(Op),file(File)):-
-  hasUser(process(Proc),user(User)),
-  writeln(User),
-  getGroup(user(User),group(Group)),
-  writeln(Group),
-  unixFileData(file(File),userOwner(UOwner),groupOwner(Gowner),permissions(Permissions)),
-  %reference paper and model the 4 conditions that would satisfy the unix permission requirements.
-  %it might be easier to reformat our facts than to convert the octal strings into binary in Prolog.
-  getRelevantCoarseOp(coarseOp(Cop),operation(Op)),
-  getRelevantPermissions(coarseOp(Cop),permissions(Permissions),uownBit(Ubit),gownBit(Gbit),worldBit(Wbit)),
-  %is the user an owner, part of the group that owns, or running as root (same as owner?)
-  %There are four conditions under which the process can access the file
+unixAllow(puid(Puid),pgid(Pgid),coarseOp(Op),file(File)):-
+  fileOwnerUserName(ownerUserName(Uowner),filepath(File)),
+  fileOwnerGroupName(ownerGroupName(Gowner),filepath(File)),
+
+  getRelBits(coarseOp(Op),file(File),uownBit(Ubit),gownBit(Gbit),worldBit(Wbit)),
+
+  %expect user test to fail without following line
   (
-    User = "root";
-    %TODO what if the owner is denied access even though world or group bit is accessible?
-    %TODO what if members of the file's group are not allowed to access the file?
-    Wbit = 1;
-    (Gbit = 1, Gowner = Group);
-    %technically the process could chmod the permissions if it owns the file, but I don't think we are modelling this
-    %it's also possible that the sandbox is preventing the process from chmodding the file anyway.
-    %could a sandboxed process cause trouble by calling chgrp?
-    (Ubit = 1, User = UOwner)
+    %check user first
+    (Ubit = 1, Puid = Uowner);
+    %check group, but make sure user wasn't denied
+    ( 
+      \+ (Ubit=0,Puid=Uowner), 
+      (Gbit = 1, matchGroup(Puid,Pgid,Gowner))
+    );
+    %check group, but make sure user wasn't denied
+    ( 
+      \+ (Ubit=0,Puid=Uowner), 
+      \+ (Gbit=0,matchGroup(Puid,Pgid,Gowner)),
+      (Wbit = 1)
+    );
+
+    %will probably need this later
+    %(Gbit = 0, Pgid = Gowner, fail);
+    (Puid = "root")
   ),
   writeln(File).
   %I think that we should also confirm that the user has execute permission on all directories in the path.
   %This should be straightforward if we combine it with getParentDirectory and make it recursive.
   %parentDirectoriesExecutable(user(User),file(File)).
+
+matchGroup(Puid,Pgid,Gowner):-
+  (
+    (Pgid=Gowner);
+    (groupMembership(user(Puid),group(Gowner),_))
+  ).
+
+getRelBits(coarseOp("read"),file(File),uownBit(Ubit),gownBit(Gbit),worldBit(Wbit)):-
+  userread(Ubit,File),
+  groupread(Gbit,File),
+  otherread(Wbit,File).
+
+getRelBits(coarseOp("write"),file(File),uownBit(Ubit),gownBit(Gbit),worldBit(Wbit)):-
+  userwrite(Ubit,File),
+  groupwrite(Gbit,File),
+  otherwrite(Wbit,File).
+
+getRelBits(coarseOp("execute"),file(File),uownBit(Ubit),gownBit(Gbit),worldBit(Wbit)):-
+  userexecute(Ubit,File),
+  groupexecute(Gbit,File),
+  otherexecute(Wbit,File).
+
+
+
+  
 
 nonWorldExecutableDirectories(file(File)):-
   fileType(type("d"),filepath(File)),

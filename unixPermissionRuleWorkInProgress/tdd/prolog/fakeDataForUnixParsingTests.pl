@@ -1,3 +1,9 @@
+:-
+  ["../prolog/unixAllowRules"],
+  ["../prolog/groups"],
+  ["../prolog/users"],
+  ["../prolog/unixPermissionsForTests"].
+
 %no permissions
 filePermissionBits(permissionBits(0),filepath("/none")).
 %all permissions
