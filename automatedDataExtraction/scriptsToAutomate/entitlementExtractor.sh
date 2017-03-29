@@ -36,7 +36,7 @@ while read line; do
 	  entValWithBrackets=`echo $entValWithInts | sed 's;<array>;[;g' | sed 's;</array>;];g'`
 	  entValProcessBools=`echo $entValWithBrackets | sed 's;<true/>;bool("true");g' | sed 's;<false/>;bool("false");g'` 
 	  entVal=`echo $entValProcessBools`
-	  echo "process(filePath(\"$line\"),entitlement(key(\"$entKey\"),value($entVal)))."
+	  echo "process(filePath(\"$line\"),entitlement(key(\"$entKey\"),value(\"$entVal\")))."
 	fi
       done
     fi

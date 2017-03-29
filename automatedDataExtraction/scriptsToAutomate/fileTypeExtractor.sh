@@ -18,9 +18,9 @@ echoerr $count
 for file in $(find "$rootfs_path" -type f);
 do
 	adjustedFilePath=${file##"$rootfs_path"}
-	prefix=`echo file\(filePath\(\"$adjustedFilePath\"\)`
+	prefix=`echo file\(filePath\(\'$adjustedFilePath\'\)`
 	fileType=`file -b -p $file | sed 's/"//g' | sed 's/\`//g' | sed "s/'//g" `
-	echo $prefix,fileType\(\"$fileType\"\)\).
+	echo $prefix,fileType\(\'$fileType\'\)\).
 	count=$((count + 1))
 	if ! (($count % 1000)); then
 		echoerr $count
