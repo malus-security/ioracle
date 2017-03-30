@@ -17,3 +17,6 @@
 ./testQueries.sh otherRead 2> /dev/null
 ./testQueries.sh otherWrite 2> /dev/null
 ./testQueries.sh otherExecute 2> /dev/null
+
+#./testQueries.sh dirParent 2> /dev/null
+./testQueries.sh dirParent 
