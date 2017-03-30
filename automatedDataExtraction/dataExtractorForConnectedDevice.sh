@@ -55,3 +55,7 @@ echo extracting posix ACL data
 time ssh -p $port $user@$host 'bash -s' < ./scriptsToAutomate/extractACL.sh $downloadDirectory > $directoryForOutput/temporaryFiles/aclOuput.out
 echo parsing posix ACL data into prolog facts
 time ./scriptsToAutomate/parseACLs.py $directoryForOutput/temporaryFiles/aclOuput.out > $directoryForOutput/prologFacts/aclFacts.pl
+
+#Extract groups from all users
+scp -q -P $port ./scriptsToAutomate/groupFactExtractorFromUsers.sh $user@$host:$tempDir/groupFactExtractorFromUsers.sh
+time ssh -p $port $user@$host $tempDir/groupFactExtractorFromUsers.sh > $directoryForOutput/prologFacts/dynamicGroups.pl
