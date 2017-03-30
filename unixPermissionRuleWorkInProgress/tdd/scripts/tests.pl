@@ -52,3 +52,12 @@ otherExecute:-
   ["../prolog/fakeDataForGroupTests"],
   unixAllow(puid("nobody"),pgid("nogroup"),coarseOp("execute"),file(File)),
   fail.
+
+dirParent:-
+  ["../prolog/fakeDataForDirectoryTests"],
+  fileOwnerUserName(_,filepath(File)),
+  getParentDir(file(File),parent(Parent)),
+  %todo output in format that won't get clobbered by uniq
+  writeln(Parent),
+  fail.
+  
