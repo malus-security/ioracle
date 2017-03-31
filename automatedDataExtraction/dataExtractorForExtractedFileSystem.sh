@@ -14,14 +14,16 @@ mkdir $extractionDirectory/prologFacts > /dev/null 2>&1
 #I think unpacking the extracted file system should be done in this script instead of the script for a connected device
 #make the new file system owned by the current user to avoid needing sudo all the time.
 #We can get the unix permissions by extracting metadata from the device, so its ok if we lose them locally.
+
 echo 'extracting archived file system'
-time sudo tar -xzf $extractionDirectory/fileSystem.tar.gz -C $extractionDirectory/fileSystem
+#time sudo tar -xzf $extractionDirectory/fileSystem.tar.gz -C $extractionDirectory/fileSystem
 sudo chown -R $USER $extractionDirectory
 chmod -R 777 $extractionDirectory
 
 echo 'getting file types'
 #get file types from the file system extracted to the local system
-time ./scriptsToAutomate/fileTypeExtractor.sh $extractionDirectory/fileSystem > $extractionDirectory/prologFacts/file_types.pl
+time ./scriptsToAutomate/fileTypeExtractor.sh $extractionDirectory/fileSystem > $extractionDirectory/prologFacts/unsanitized_file_types.pl
+./sweepProblemsUnderRug.sh $extractionDirectory/prologFacts/unsanitized_file_types.pl > $extractionDirectory/prologFacts/file_types.pl
 
 echo 'getting user data'
 #extract data about users from etc
