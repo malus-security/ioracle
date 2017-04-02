@@ -18,13 +18,11 @@ echoerr $count
 for file in $(find "$rootfs_path" -type f);
 do
 	adjustedFilePath=${file##"$rootfs_path"}
-	#sanitizedFilePath=`echo $adjustedFilePath | sed 's/"//g' | sed 's/\`//g' | sed "s/'//g" | sed 's/\\\//g'`
-	#TODO I'm planning to filter out file paths with troublesome characters, but we can find a better solution later.
-	sanitizedFilePath=`echo $adjustedFilePath`
-	prefix=`echo file\(filePath\(\"$sanitizedFilePath\"\)`
 	#it should be ok to remove troublesome characters from file type output
 	fileType=`file -b -p $file | sed 's/"//g' | sed 's/\`//g' | sed "s/'//g" | sed 's/\\\//g'`
-	echo $prefix,fileType\(\"$fileType\"\)\).
+	#echo $prefix,fileType\(\"$fileType\"\)\).
+	prefix=`echo file\(fileType\(\"$fileType\"\)`
+	echo $prefix,filePath\(\"$adjustedFilePath\"\)\).
 	count=$((count + 1))
 	if ! (($count % 1000)); then
 		echoerr $count
