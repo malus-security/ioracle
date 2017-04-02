@@ -23,7 +23,7 @@ chmod -R 777 $extractionDirectory
 echo 'getting file types'
 #get file types from the file system extracted to the local system
 time ./scriptsToAutomate/fileTypeExtractor.sh $extractionDirectory/fileSystem > $extractionDirectory/prologFacts/unsanitized_file_types.pl
-./sweepProblemsUnderRug.sh $extractionDirectory/prologFacts/unsanitized_file_types.pl > $extractionDirectory/prologFacts/file_types.pl
+./sanitizeFilePaths.py $extractionDirectory/prologFacts/unsanitized_file_types.pl > $extractionDirectory/prologFacts/file_types.pl
 
 echo 'getting user data'
 #extract data about users from etc
@@ -39,6 +39,8 @@ time ./scriptsToAutomate/runProlog.sh justPaths $extractionDirectory/fileSystem 
 rm ./temporaryFiles/relevantFacts.pl
 
 echo 'getting signatures of Apple-Signed Mach-O executables'
+#Note that because of file path sanitization, if a mach-o executable's path was sanitized, the script won't be able to find the file.
+#I don't expect this to be a problem in practice, but we can keep an eye on it to see if it every happens. It should throw an error if it does.
 time ./scriptsToAutomate/signatureExtractor.sh $extractionDirectory/fileSystem < ./temporaryFiles/filePaths.out > $extractionDirectory/prologFacts/apple_executable_files_signatures.pl
 
 echo 'getting file paths for Apple-Signed Mach-O executables'

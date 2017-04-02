@@ -5,14 +5,15 @@
 
 %show all files that are Mach-O executables
 getProgramFacts :- 
-  file(filePath(X),fileType(Y)),
+  file(fileType(Y),filePath(X)),
   Y =~ 'Mach-O.*executable',
   write('process(filepath("'),write(X),write('")).\n'),
   fail.
 
 %show just the file paths
 justPaths:- 
-  file(filePath(X),fileType(Y)),
+  %file(filePath(X),fileType(Y)),
+  file(fileType(Y),filePath(X)),
   Y =~ 'Mach-O.*executable',
   writeln(X),
   fail.
