@@ -30,11 +30,14 @@ while read line; do
 	keyCheck=`echo $ent | grep '<key>'`
 	if [ ! -z "$keyCheck" ]; then
 	  entKey=`echo $ent | sed 's/^.*<key>\ *//' | sed 's;\ *</key>.*;;'`
+	  #the following code seems to be a series of sed operations with the output of the previous line flowing into the sed operations on the next line.
 	  entValRaw=`echo $ent | sed 's;.*</key>;;' | sed 's;[\ 	]*;;g'`
 	  entValWithStrings=`echo $entValRaw | sed 's;<string>;string(";g' | sed 's;</string>;");g' |  sed 's;")string;"),string;g'`
 	  entValWithInts=`echo $entValWithStrings | sed 's;<integer>;intValue(";g' | sed 's;</integer>;");g' |  sed 's;")intValue;"),intValue;g'`
 	  entValWithBrackets=`echo $entValWithInts | sed 's;<array>;[;g' | sed 's;</array>;];g'`
-	  entValProcessBools=`echo $entValWithBrackets | sed 's;<true/>;bool("true");g' | sed 's;<false/>;bool("false");g'` 
+	  #the syntax giving me trouble is <array/> which represents and empty list and can be represented in prolog as value([])
+	  entValWithEmptyBrackets=`echo $entValWithBrackets | sed 's;<array/>;[];g'`
+	  entValProcessBools=`echo $entValWithEmptyBrackets | sed 's;<true/>;bool("true");g' | sed 's;<false/>;bool("false");g'` 
 	  entVal=`echo $entValProcessBools`
 	  echo "process(filePath(\"$line\"),entitlement(key(\"$entKey\"),value($entVal)))."
 	fi

@@ -8,4 +8,4 @@ fi
 rootfs_path="$1/"
 rootfs_path=${rootfs_path//\/\//\/}
 
-find "$rootfs_path" -printf 'fileSize(size(%s),filepath("%p")).\nfileOwnerGroupName(ownerGroupName("%g"),filepath("%p")).\nfileLastModification(lastModification(%T@),filepath("%p")).\nfileInode(inode(%i),filepath("%p")).\nfileSymLink(symLinkObject("%l"),filepath("%p")).\nfilePermissionBits(permissionBits(%m),filepath("%p")).\nfileNumHardLinks(numHardLinks(%n),filepath("%p")).\nfileOwnerUserName(ownerUserName("%u"),filepath("%p")).\nfileType(type("%y"),filepath("%p")).\n'
+find "$rootfs_path" -printf 'fileSize(size(%s),filePath("%p")).\nfileOwnerGroupName(ownerGroupName("%g"),filePath("%p")).\nfileLastModification(lastModification(%T@),filePath("%p")).\nfileInode(inode(%i),filePath("%p")).\nfileSymLink(symLinkObject("%l"),filePath("%p")).\nfilePermissionBits(permissionBits(%m),filePath("%p")).\nfileNumHardLinks(numHardLinks(%n),filePath("%p")).\nfileOwnerUserName(ownerUserName("%u"),filePath("%p")).\nfileType(type("%y"),filePath("%p")).\n'

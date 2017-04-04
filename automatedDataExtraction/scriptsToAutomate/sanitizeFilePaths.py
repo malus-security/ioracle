@@ -9,7 +9,7 @@ facts = fdata.split("\n")
 for line in facts:
   #print line
   #pattern = re.compile(',filepath\(\"(.*)\"\)\)\.')
-  pattern = re.compile('(^.*,filepath\(\")(.*)(\"\)\)\.$)')
+  pattern = re.compile('(^.*,filePath\(\")(.*)(\"\)\)\.$)')
   #pattern = re.compile('^.*,filepath\(.*')
   match = pattern.match(line)
   filePath = match.group(2)
