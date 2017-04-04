@@ -21,18 +21,13 @@ mkdir $5/fileSystem
 mkdir $5/prologFacts
 
 echo extracting file system
-time ssh -p $port -n $user@$host "tar zcf - $downloadDirectory" > $directoryForOutput/fileSystem.tar.gz
-
-#NOTE: I am trying to avoid using sudo in this script since it requires asking for the password at an awkward time.
-#sudo tar -xzf $directoryForOutput/fileSystem.tar.gz -C $directoryForOutput/fileSystem
-#make the new file system owned by the current user to avoid needing sudo all the time.
-#We can get the unix permissions by extracting metadata from the device, so its ok if we lose them locally.
-#sudo chown -R $USER $directoryForOutput
-#chmod -R 777 $directoryForOutput
+#TODO uncomment this file before committing changes
+#time ssh -p $port -n $user@$host "tar zcf - $downloadDirectory" > $directoryForOutput/fileSystem.tar.gz
 
 #extract meta data. This asks for the password again, but it's not a big deal.
 echo extracting file metadata
 time ssh -p $port $user@$host 'bash -s' < ./scriptsToAutomate/metaDataExtractor.sh $downloadDirectory > $directoryForOutput/prologFacts/file_metadata.pl
+#TODO the sanitizer should run here
 
 #we can store binary files in this directory to reduce that chances of clobbering existing files
 mkdir $5/temporaryFiles
@@ -57,5 +52,6 @@ echo parsing posix ACL data into prolog facts
 time ./scriptsToAutomate/parseACLs.py $directoryForOutput/temporaryFiles/aclOuput.out > $directoryForOutput/prologFacts/aclFacts.pl
 
 #Extract groups from all users
+#TODO sanity check this new stuff
 scp -q -P $port ./scriptsToAutomate/groupFactExtractorFromUsers.sh $user@$host:$tempDir/groupFactExtractorFromUsers.sh
 time ssh -p $port $user@$host $tempDir/groupFactExtractorFromUsers.sh > $directoryForOutput/prologFacts/dynamicGroups.pl
