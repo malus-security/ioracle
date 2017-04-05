@@ -21,13 +21,12 @@ mkdir $5/fileSystem
 mkdir $5/prologFacts
 
 echo extracting file system
-#TODO uncomment this file before committing changes
-#time ssh -p $port -n $user@$host "tar zcf - $downloadDirectory" > $directoryForOutput/fileSystem.tar.gz
+time ssh -p $port -n $user@$host "tar zcf - $downloadDirectory" > $directoryForOutput/fileSystem.tar.gz
 
 #extract meta data. This asks for the password again, but it's not a big deal.
 echo extracting file metadata
-time ssh -p $port $user@$host 'bash -s' < ./scriptsToAutomate/metaDataExtractor.sh $downloadDirectory > $directoryForOutput/prologFacts/file_metadata.pl
-#TODO the sanitizer should run here
+time ssh -p $port $user@$host 'bash -s' < ./scriptsToAutomate/metaDataExtractor.sh $downloadDirectory | sort | uniq > $directoryForOutput/prologFacts/unsanitized_file_metadata.pl
+time ./scriptsToAutomate/sanitizeFilePaths.py $directoryForOutput/prologFacts/unsanitized_file_metadata.pl > $directoryForOutput/prologFacts/file_metadata.pl
 
 #we can store binary files in this directory to reduce that chances of clobbering existing files
 mkdir $5/temporaryFiles
@@ -47,9 +46,21 @@ scp -q -P $port ./getfacl-master/getfacl_armv7 $user@$host:$tempDir/getfacl_armv
 ssh -p $port $user@$host "ldid -S $tempDir/getfacl_arm64"
 ssh -p $port $user@$host "ldid -S $tempDir/getfacl_armv7"
 echo extracting posix ACL data
-time ssh -p $port $user@$host 'bash -s' < ./scriptsToAutomate/extractACL.sh $downloadDirectory > $directoryForOutput/temporaryFiles/aclOuput.out
+time ssh -p $port $user@$host 'bash -s' < ./scriptsToAutomate/extractACL.sh $downloadDirectory > $directoryForOutput/temporaryFiles/aclOutput.out
+#It's possible that there simply isn't any ACL data on the filesystem. This seems to be common for iOS versions prior to 9.
+#I should have a condition to state when this seems to happen instead of letting the python script freak out and throw an error.
+#For compatibility, I create a fact that always fails if matched. This should be semantically equivalent to having none of these facts.
+#However, prolog will still look for the facts, and we want it to fail to unify instead of crashing or throwing an error.
 echo parsing posix ACL data into prolog facts
-time ./scriptsToAutomate/parseACLs.py $directoryForOutput/temporaryFiles/aclOuput.out > $directoryForOutput/prologFacts/aclFacts.pl
+aclLineCount=`cat $directoryForOutput/temporaryFiles/aclOutput.out | wc -l`
+if [ "$aclLineCount" -eq 0 ]
+then
+  #since there are no ACL facts, any attempt to match one should fail.
+  fastFailFact='fileACL( _, _, _, _, _, _, _) :- fail.'
+  time echo $fastFailFact > $directoryForOutput/prologFacts/aclFacts.pl
+else
+  time ./scriptsToAutomate/parseACLs.py $directoryForOutput/temporaryFiles/aclOutput.out > $directoryForOutput/prologFacts/aclFacts.pl
+fi
 
 #Extract groups from all users
 #TODO sanity check this new stuff
