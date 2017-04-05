@@ -24,16 +24,4 @@ rm ../temp/*
 
 swipl --quiet -t "ignore($queryToTest),halt(1)" --consult-file $queryFile | sort | uniq > $output
 
-answerSize=`cat $answer | wc -l`
-cat $answer | sort | uniq > $sortedAnswer
-resultSize=`diff $output $sortedAnswer | wc -l`
-if [ $answerSize = "0" ]; then
-  echo "FAILED: $testName"
-  echo "Nothing in answer file." | sed 's/^/\t/'
-elif [ $resultSize = "0" ]; then
-  echo "PASSED: $testName"
-else
-  echo "FAILED: $testName"
-  diff $output $sortedAnswer | sed 's/^/\t/'
-fi
-
+./evaluateAnswer.sh $testName $output $answer

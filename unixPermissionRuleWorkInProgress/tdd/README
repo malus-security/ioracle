@@ -1,3 +1,13 @@
 test: unixParsing
-purpose: check for correct parsing of unix permissions from integer format to prolog friendly output of one fact per permission.
+Check for correct parsing of unix permissions from integer format to prolog friendly output of one fact per permission.
+
+test: unixRootNone
+Confirm that root user can still access files regardless of unix permissions.
+
+test: invertedPermissions
+purpose: Ask which files a process can access. Unix permissions assess user then group then other permissions. 
+If the user matches but the permission is 0 the operation is denied. The same is true for group. 
+This holds regardless of the other permissions. 
+A file with 007 permissions is not accessible to the user owner or members of the group owner.
+
 

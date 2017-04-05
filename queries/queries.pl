@@ -240,3 +240,12 @@ kernelEntitlementReferences:-
   kernelString(segment(B),stringFromProgram(A)),
   write("kernelEntitlementReference(segment(\""),write(B),write("\"),entitlementKey(\""),write(A),writeln("\"))."),
   fail.
+
+%get file paths for selfApplied profiles
+findPathsForSelfAppliedProfiles:-
+  [dataFor932/selfAppliedProfiles],
+  usesSandbox(processPath(X),_,_),
+  writeln(X),
+  fail.
+
+

@@ -13,6 +13,6 @@ mkdir $outputDir
 
 cat $input postProcessingQueries.pl > $plPost
 swipl --quiet -t "ignore(allFilePaths),halt(1)" --consult-file $plPost | sort | uniq > $outputDir/allFilePaths.out
-./findParents.py $outputDir/allFilePaths.out > $outputDir/dirParents.pl
+./findParents.py $outputDir/allFilePaths.out | sort | uniq > $outputDir/dirParents.pl
 
 swipl --quiet -t "ignore(prologFriendlyPermissionFacts),halt(1)" --consult-file $plPost | sort | uniq > $outputDir/prologFriendlyPermissions.pl

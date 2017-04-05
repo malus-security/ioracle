@@ -7,4 +7,4 @@
 
 #it seems a bit like cheating, but it's hard to write prolog that doesn't produce duplicate results, 
 #so I'm just filtering out duplicates here with sort and uniq.
-swipl --quiet -t "ignore($1),halt(1)" --consult-file unixAllowRules.pl | sort | uniq
+swipl --quiet -t "ignore($1),halt(1)" --consult-file ../prolog/utilities.pl | sort | uniq

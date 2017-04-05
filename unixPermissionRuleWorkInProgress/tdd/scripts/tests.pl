@@ -1,8 +1,3 @@
-unixParsing:-
-  ["../prolog/fakeDataForUnixParsingTests"],
-  prologFriendlyPermissionFacts,
-  fail.
-
 unixRunAsRoot:-
   ["../prolog/fakeDataForGroupTests"],
   unixAllow(puid("root"),pgid("wheel"),coarseOp("read"),file(File)),
