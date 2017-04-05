@@ -1,0 +1,17 @@
+# This functions executes a command for X seconds
+# @param1 command to execute
+# @param2 numer of seconds to execute
+#
+function execute_command_for() {
+  cmd=$1
+  seconds=$2
+  $cmd&
+
+  cmdpid=$!
+  sleep $seconds
+
+  if [ -d /proc/$cmdpid ]
+  then
+    kill $cmdpid
+  fi
+}
