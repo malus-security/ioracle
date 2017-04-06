@@ -1,14 +1,22 @@
+##############################################################################
+# Define functions that are used in other scripts
+#
+# Use: source /path/to/this/file/utils
+#
+#############################################################################
+
+
 # This functions executes a command for X seconds
 # @param1 command to execute
 # @param2 numer of seconds to execute
 #
-function execute_command_for() {
+function executeCommandUntilKeyPressed() {
   cmd=$1
-  seconds=$2
   $cmd&
 
   cmdpid=$!
-  sleep $seconds
+  sleep 5
+  read -rsp $'Please use device. Press any key to continue...\n' -n1 key
 
   if [ -d /proc/$cmdpid ]
   then
