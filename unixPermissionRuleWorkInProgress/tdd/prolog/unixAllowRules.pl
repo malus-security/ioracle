@@ -4,8 +4,8 @@
 
 %for now I can test by using the process with path "/usr/sbin/BTServer" which runs as mobile
 unixAllow(puid(Puid),pgid(Pgid),coarseOp(Op),file(File)):-
-  fileOwnerUserName(ownerUserName(Uowner),filepath(File)),
-  fileOwnerGroupName(ownerGroupName(Gowner),filepath(File)),
+  fileOwnerUserName(ownerUserName(Uowner),filePath(File)),
+  fileOwnerGroupName(ownerGroupName(Gowner),filePath(File)),
 
   getRelBits(coarseOp(Op),file(File),uownBit(Ubit),gownBit(Gbit),worldBit(Wbit)),
 
@@ -28,8 +28,8 @@ unixAllow(puid(Puid),pgid(Pgid),coarseOp(Op),file(File)):-
     %will probably need this later
     %(Gbit = 0, Pgid = Gowner, fail);
     (Puid = "root")
-  ),
-  writeln(File).
+  ).
+  %writeln(File).
   %I think that we should also confirm that the user has execute permission on all directories in the path.
   %This should be straightforward if we combine it with getParentDirectory and make it recursive.
   %parentDirectoriesExecutable(user(User),file(File)).
@@ -57,13 +57,13 @@ getRelBits(coarseOp("execute"),file(File),uownBit(Ubit),gownBit(Gbit),worldBit(W
   otherexecute(Wbit,File).
 
 nonWorldExecutableDirectories(file(File)):-
-  fileType(type("d"),filepath(File)),
-  filePermissionBits(permissionBits(Permissions),filepath(File)),
+  fileType(type("d"),filePath(File)),
+  filePermissionBits(permissionBits(Permissions),filePath(File)),
   getRelevantPermissions(coarseOp("execute"),permissions(Permissions),_,_,worldBit(0)),
   writeln(File).
 
 nonWorldExecutableDirectories2(file(File)):-
-  fileType(type("d"),filepath(File)),
+  fileType(type("d"),filePath(File)),
   otherexecute(0,File),
   writeln(File).
 
@@ -82,15 +82,28 @@ getGroup(user(User),group(Group)):-
     group(groupName(Group),_,id(Gid),_))
   ).
 
-%this rule will change if we change the format of our metadata facts.
-unixFileData(file(File),userOwner(UOwner),groupOwner(GOwner),permissions(Permissions)):-
-  file(filepath(File),ownerUserName(UOwner)),
-  file(filepath(File),ownerGroupName(GOwner)),
-  file(filepath(File),permissionBits(Permissions)).
-  
 getRelevantCoarseOp(coarseOp(Cop),operation(Op)):-
   (Op = "file-read", Cop = "read");
   (Op = "file-write", Cop = "write").
   %todo list other relevant sandbox operations
 
+%don't call the dirExecute in unixAllow, that might lead to nasty recursion.
+%base case, do I need to cut here?
+dirExecute(puid(Puid),pgid(Pgid),coarseOp(Op),file("/")):-
+  Op = "execute",
+  unixAllow(puid(Puid),pgid(Pgid),coarseOp(Op),file(File)).
 
+%normal case.
+dirExecute(puid(Puid),pgid(Pgid),coarseOp(Op),file(File)):-
+  File \= "/",
+  Op = "execute",
+  unixAllow(puid(Puid),pgid(Pgid),coarseOp(Op),file(File)),
+  dirParent(parent(Parent),child(File)),
+  dirExecute(puid(Puid),pgid(Pgid),coarseOp(Op),file(Parent)).
+
+
+  %is the current file accessible?
+
+  %what about it's parent?
+
+  %what about the root directory?

@@ -9,6 +9,7 @@ fi
 input=$1
 outputDir=$2
 plPost="../temp/postProcessing.pl"
+rm -rf $outputDir
 mkdir $outputDir
 
 cat $input postProcessingQueries.pl > $plPost
