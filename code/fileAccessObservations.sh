@@ -22,10 +22,6 @@ directoryForOutput="$4"
 timeSpent="$5"
 filemonPath="/var/root/filemon"
 
-
-read -rsp $'Press any key to continue...\n' -n1 key
-
 echo Starting filemon
 echo Please use device to generate file acesses
-execute_command_for "ssh -p $port -n $user@$host $filemonPath" $timeSpent > $directoryForOutput/filemonRawOutput.txt
-
+executeCommandUntilKeyPressed "ssh -p $port -n $user@$host $filemonPath" $timeSpent > $directoryForOutput/filemonRawOutput.txt
