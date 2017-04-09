@@ -5,25 +5,25 @@
   ["../prolog/unixAllowRules"].
 
 %file ownership
-fileOwnerUserName(ownerUserName("mobile"),filepath("/none")).
-fileOwnerGroupName(ownerGroupName("everyone"),filepath("/none")).
+fileOwnerUserName(ownerUserName("mobile"),filePath("/none")).
+fileOwnerGroupName(ownerGroupName("everyone"),filePath("/none")).
 
-fileOwnerUserName(ownerUserName("mobile"),filepath("/all")).
-fileOwnerGroupName(ownerGroupName("networkd"),filepath("/all")).
+fileOwnerUserName(ownerUserName("mobile"),filePath("/all")).
+fileOwnerGroupName(ownerGroupName("networkd"),filePath("/all")).
 
-fileOwnerUserName(ownerUserName("mobile"),filepath("/rainbow0123")).
+fileOwnerUserName(ownerUserName("mobile"),filePath("/rainbow0123")).
 %the effective gid should ignore membership requirements
-fileOwnerGroupName(ownerGroupName("effectiveGroup"),filepath("/rainbow0123")).
+fileOwnerGroupName(ownerGroupName("effectiveGroup"),filePath("/rainbow0123")).
 
-fileOwnerUserName(ownerUserName("mobile"),filepath("/rainbow4567")).
-fileOwnerGroupName(ownerGroupName("everyone"),filepath("/rainbow4567")).
+fileOwnerUserName(ownerUserName("mobile"),filePath("/rainbow4567")).
+fileOwnerGroupName(ownerGroupName("everyone"),filePath("/rainbow4567")).
 
-fileOwnerUserName(ownerUserName("mobile"),filepath("/rainbow3210")).
-fileOwnerGroupName(ownerGroupName("networkd"),filepath("/rainbow3210")).
+fileOwnerUserName(ownerUserName("mobile"),filePath("/rainbow3210")).
+fileOwnerGroupName(ownerGroupName("networkd"),filePath("/rainbow3210")).
 
-fileOwnerUserName(ownerUserName("mobile"),filepath("/rainbow7654")).
+fileOwnerUserName(ownerUserName("mobile"),filePath("/rainbow7654")).
 %the effective gid should ignore membership requirements
-fileOwnerGroupName(ownerGroupName("effectiveGroup"),filepath("/rainbow7654")).
+fileOwnerGroupName(ownerGroupName("effectiveGroup"),filePath("/rainbow7654")).
 
 %fake some group membership facts until we get the real thing
 groupMembership(user("root"),group("root"),id("1")).

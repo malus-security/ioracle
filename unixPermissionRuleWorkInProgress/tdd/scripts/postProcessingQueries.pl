@@ -1,10 +1,10 @@
 allFilePaths:-
-  filePermissionBits(_,filepath(File)),
+  filePermissionBits(_,filePath(File)),
   writeln(File),
   fail.
 
 prologFriendlyPermissionFacts:-
-  filePermissionBits(permissionBits(Permissions),filepath(File)),
+  filePermissionBits(permissionBits(Permissions),filePath(File)),
   getRelevantPermissions(coarseOp("read"),permissions(Permissions),uownBit(Ubitr),gownBit(Gbitr),worldBit(Wbitr)),
   prettyPrint(File,Ubitr,Gbitr,Wbitr,"read"),
   getRelevantPermissions(coarseOp("write"),permissions(Permissions),uownBit(Ubitw),gownBit(Gbitw),worldBit(Wbitw)),

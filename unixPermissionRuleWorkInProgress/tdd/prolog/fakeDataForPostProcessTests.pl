@@ -1,11 +1,11 @@
-filePermissionBits(permissionBits(0),filepath("/none")).
+filePermissionBits(permissionBits(0),filePath("/none")).
 %all permissions
-filePermissionBits(permissionBits(7777),filepath("/all")).
+filePermissionBits(permissionBits(7777),filePath("/all")).
 %one and two digits
-filePermissionBits(permissionBits(4),filepath("/onedigit")).
-filePermissionBits(permissionBits(35),filepath("/twodigit")).
+filePermissionBits(permissionBits(4),filePath("/onedigit")).
+filePermissionBits(permissionBits(35),filePath("/twodigit")).
 %rainbow pattern
-filePermissionBits(permissionBits(0123),filepath("/rainbow0123")).
-filePermissionBits(permissionBits(4567),filepath("/rainbow4567")).
-filePermissionBits(permissionBits(3210),filepath("/rainbow3210")).
-filePermissionBits(permissionBits(7654),filepath("/rainbow7654")).
+filePermissionBits(permissionBits(0123),filePath("/rainbow0123")).
+filePermissionBits(permissionBits(4567),filePath("/rainbow4567")).
+filePermissionBits(permissionBits(3210),filePath("/rainbow3210")).
+filePermissionBits(permissionBits(7654),filePath("/rainbow7654")).
