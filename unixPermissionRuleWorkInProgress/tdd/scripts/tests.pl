@@ -67,11 +67,28 @@ dirExecute:-
 
 processAttributes:-
   ["../prolog/sandboxTestInput/fakeDataForSandboxTests"],
-  %entitlements and extensions should return lists, since we don't know how many there will be or how many the rules will require
   Process = "/mobile/process",
+  %entitlements and extensions should return lists, since we don't know how many there will be or how many the rules will require
   getAttributes(process(Process),entitlements(Ent),extensions(Ext),user(User),home(Home),profile(Profile)),
   write("getAttributes(process("),write(Process),write("),entitlements("),write(Ent),write("),extensions("),write(Ext), write("),user("),write(User),write("),home("),
   write(Home),write("),profile("),write(Profile),writeln("))."),
   fail.
 
+noFilters:-
+  ["../prolog/sandboxTestInput/fakeDataForSandboxTests"],
+  ["../prolog/sandboxTestInput/noFilters"],
+  Process = "/mobile/process",
+  getAttributes(process(Process),entitlements(Ent),extensions(Ext),user(User),home(Home),profile(Profile)),
+  %should we be unifying subjects with some file access records?
+  relevantRule(entitlements(Ent),extensions(Ext),home(Home),profile(Profile),operation(Op),subject(Subject),decision(Decision),filters(Filters)),
+  write("profileRule(profile("),write(Profile),write("),decision("),write(Decision),write("),operation("),write(Op),write("),filters("),write(Filters),writeln("))."),
+  fail.
 
+extensionFilters:-
+  ["../prolog/sandboxTestInput/fakeDataForSandboxTests"],
+  ["../prolog/sandboxTestInput/extensionFilters"],
+  getAttributes(process(Process),entitlements(Ent),extensions(Ext),user(User),home(Home),profile(Profile)),
+  %should we be unifying subjects with some file access records?
+  relevantRule(entitlements(Ent),extensions(Ext),home(Home),profile(Profile),operation(Op),subject(Subject),decision(Decision),filters(Filters)),
+  write("profileRule(profile("),write(Profile),write("),decision("),write(Decision),write("),operation("),write(Op),write("),filters("),write(Filters),writeln("))."),
+  fail.
