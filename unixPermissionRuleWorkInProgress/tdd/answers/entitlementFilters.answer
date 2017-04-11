@@ -1,0 +1,2 @@
+profileRule(profile(mobileProcessProfile),decision(allow),operation(doTheThing),filters([require-entitlement(commonBool,[])])).
+profileRule(profile(rootProcessProfile),decision(allow),operation(doTheThing),filters([require-entitlement(commonBool,[]),require-entitlement(simpleString,[entitlement-value(keyForSimple)])])).

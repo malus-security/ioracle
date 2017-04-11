@@ -41,5 +41,6 @@ output="../outputs/$testName/dirParents.pl"
 #sandbox based tests
 ./testQueries.sh processAttributes 2> /dev/null
 ./testQueries.sh noFilters 2> /dev/null
-./testQueries.sh extensionFilters 
+./testQueries.sh extensionFilters 2> /dev/null
+./testQueries.sh entitlementFilters 
 
