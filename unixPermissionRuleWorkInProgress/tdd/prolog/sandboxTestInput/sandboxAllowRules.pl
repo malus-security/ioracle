@@ -34,6 +34,9 @@ satisfyFilters(filters(require-entitlement(Key,ValueList)),entitlements(Ent),ext
   ),
   member(entitlement(key(Key),value(Value)),Ent).
 
+satisfyFilters(filters(literal(Literal)),entitlements(Ent),extensions(Ext),home(Home),subject(Subject)):-
+  %since the filepath of the subject and the literal must match exactly, this should be sufficient.
+  Subject = file(Literal).
 
 
 satisfyFilters(filters([Head|Tail]),entitlements(Ent),extensions(Ext),home(Home),subject(Subject)):-

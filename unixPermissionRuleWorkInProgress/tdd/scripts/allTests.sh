@@ -42,5 +42,7 @@ output="../outputs/$testName/dirParents.pl"
 ./testQueries.sh processAttributes 2> /dev/null
 ./testQueries.sh noFilters 2> /dev/null
 ./testQueries.sh extensionFilters 2> /dev/null
-./testQueries.sh entitlementFilters 
+./testQueries.sh entitlementFilters 2> /dev/null
+./testQueries.sh literalFilters 2> /dev/null
+
 
