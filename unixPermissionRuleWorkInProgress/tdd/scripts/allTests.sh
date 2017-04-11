@@ -37,3 +37,6 @@ output="../outputs/$testName/dirParents.pl"
 #which directories are accessible to a process based on their execute permissions?
 #my understanding is that the current directory and all parents must be executable for the subject to access files in the directory
 ./testQueries.sh dirExecute 2> /dev/null
+
+#sandbox based tests
+./testQueries.sh processAttributes 2> /dev/null

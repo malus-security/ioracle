@@ -64,3 +64,14 @@ dirExecute:-
   dirExecute(puid("mobile"),pgid("mobile"),coarseOp("execute"),file(File)),
   writeln(File),
   fail.
+
+processAttributes:-
+  ["../prolog/sandboxTestInput/fakeDataForSandboxTests"],
+  %entitlements and extensions should return lists, since we don't know how many there will be or how many the rules will require
+  Process = "/mobile/process",
+  getAttributes(process(Process),entitlements(Ent),extensions(Ext),user(User),home(Home),profile(Profile)),
+  write("getAttributes(process("),write(Process),write("),entitlements("),write(Ent),write("),extensions("),write(Ext), write("),user("),write(User),write("),home("),
+  write(Home),write("),profile("),write(Profile),writeln("))."),
+  fail.
+
+

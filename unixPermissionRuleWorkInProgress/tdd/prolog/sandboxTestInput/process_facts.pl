@@ -1,0 +1,11 @@
+process(filePath("/mobile/process"),entitlement(key("commonBool"),value(bool("true")))).
+process(filePath("/mobile/process"),entitlement(key("arrayOfStrings"),value([string("string1"),string("string2")]))).
+process(filePath("/root/process"),entitlement(key("commonBool"),value(bool("true")))).
+process(filePath("/root/process"),entitlement(key("rootBool"),value(bool("true")))).
+process(filePath("/root/process"),entitlement(key("arrayOfStrings"),value([string("string1"),string("string2"),string("string3")]))).
+process(filePath("/mobile/process"),extension("commonExtension")).
+process(filePath("/mobile/process"),extension("mobileExtension")).
+process(filePath("/root/process"),extension("commonExtension")).
+process(filePath("/root/process"),extension("rootExtension")).
+process(filePath("/mobile/process"),profile("mobileProcessProfile")).
+process(filePath("/root/process"),profile("rootProcessProfile")).
