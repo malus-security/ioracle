@@ -34,10 +34,33 @@ satisfyFilters(filters(require-entitlement(Key,ValueList)),entitlements(Ent),ext
   ),
   member(entitlement(key(Key),value(Value)),Ent).
 
+%LITERALS
 satisfyFilters(filters(literal(Literal)),entitlements(Ent),extensions(Ext),home(Home),subject(Subject)):-
   %since the filepath of the subject and the literal must match exactly, this should be sufficient.
   Subject = file(Literal).
 
+%REGEX
+satisfyFilters(filters(regex(Regex)),entitlements(Ent),extensions(Ext),home(Home),subject(Subject)):-
+  %since the filepath of the subject and the literal must match exactly, this should be sufficient.
+  Subject = file(SubjectString),
+  SubjectString =~ Regex.
+
+%SUBPATH
+satisfyFilters(filters(subpath(Subpath)),entitlements(Ent),extensions(Ext),home(Home),subject(Subject)):-
+  %since the filepath of the subject and the literal must match exactly, this should be sufficient.
+  Subject = file(SubjectString),
+  stringSubPath(Subpath,SubjectString).
+
+stringSubPath(SubPathString,FilePathString):-
+  name(SubPathString,SBList),
+  name(FilePathString,FPList),
+  spath(SBList,FPList),!.
+
+spath([],_).
+
+spath([SPHead|SPTail],[FPHead|FPTail]):-
+  SPHead = FPHead,
+  spath(SPTail,FPTail).
 
 satisfyFilters(filters([Head|Tail]),entitlements(Ent),extensions(Ext),home(Home),subject(Subject)):-
   satisfyFilters(filters(Head),entitlements(Ent),extensions(Ext),home(Home),subject(Subject)),
