@@ -67,6 +67,12 @@ satisfyFilters(filters(prefix(preVar("HOME"),postPath(PostPath))),entitlements(E
   Subject = file(SubjectString),
   string_concat(Home, PostPath, SubjectString).
 
+%VNODE FILTER
+satisfyFilters(filters(vnode-type(Vnode)),entitlements(Ent),extensions(Ext),home(Home),subject(Subject)):-
+  %since the filepath of the subject and the literal must match exactly, this should be sufficient.
+  Subject = file(SubjectString),
+  vnodeType(file(SubjectString),type(Vnode)).
+
 
 satisfyFilters(filters([Head|Tail]),entitlements(Ent),extensions(Ext),home(Home),subject(Subject)):-
   satisfyFilters(filters(Head),entitlements(Ent),extensions(Ext),home(Home),subject(Subject)),

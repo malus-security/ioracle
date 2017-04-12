@@ -1,0 +1,8 @@
+/mobile/process,/a/reg
+/mobile/process,/b/reg
+/root/process,/a/sym
+/root/process,/b/sym
+/mobile/process,/a/dir
+/mobile/process,/b/dir
+/root/process,/a/tty
+/root/process,/b/tty
