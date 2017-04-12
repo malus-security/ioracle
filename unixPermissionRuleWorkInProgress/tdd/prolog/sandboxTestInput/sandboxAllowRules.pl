@@ -17,12 +17,12 @@ relevantRule(entitlements(Ent),extensions(Ext),home(Home),profile(Profile),opera
 
 satisfyFilters(filters([]),entitlements(Ent),extensions(Ext),home(Home),subject(Subject)).
 
-%EXTENSIONS
+%EXTENSIONS FILTER
 %the required sandbox extension must be among those possessed by the process.
 satisfyFilters(filters(extension(F_Ext)),entitlements(Ent),extensions(Ext),home(Home),subject(Subject)):-
   member(extension(F_Ext),Ext).
 
-%ENTITLEMENTS
+%ENTITLEMENTS FILTER
 %the required sandbox extension must be among those possessed by the process.
 satisfyFilters(filters(require-entitlement(Key,ValueList)),entitlements(Ent),extensions(Ext),home(Home),subject(Subject)):-
   %get the entitlement from the filter to match the format in our facts
@@ -34,26 +34,25 @@ satisfyFilters(filters(require-entitlement(Key,ValueList)),entitlements(Ent),ext
   ),
   member(entitlement(key(Key),value(Value)),Ent).
 
-%LITERALS
+%LITERALS FILTER
 satisfyFilters(filters(literal(Literal)),entitlements(Ent),extensions(Ext),home(Home),subject(Subject)):-
   %since the filepath of the subject and the literal must match exactly, this should be sufficient.
   Subject = file(Literal).
 
-%REGEX
+%REGEX FILTER
 satisfyFilters(filters(regex(Regex)),entitlements(Ent),extensions(Ext),home(Home),subject(Subject)):-
-  %since the filepath of the subject and the literal must match exactly, this should be sufficient.
   Subject = file(SubjectString),
   SubjectString =~ Regex.
 
-%SUBPATH
+%SUBPATH FILTER
 satisfyFilters(filters(subpath(Subpath)),entitlements(Ent),extensions(Ext),home(Home),subject(Subject)):-
-  %since the filepath of the subject and the literal must match exactly, this should be sufficient.
+  %There is probably a simpler solution, but I just reused this code from sandscout.
   Subject = file(SubjectString),
   stringSubPath(Subpath,SubjectString).
 
 stringSubPath(SubPathString,FilePathString):-
-  name(SubPathString,SBList),
-  name(FilePathString,FPList),
+  atom_codes(SubPathString,SBList),
+  atom_codes(FilePathString,FPList),
   spath(SBList,FPList),!.
 
 spath([],_).
@@ -62,6 +61,15 @@ spath([SPHead|SPTail],[FPHead|FPTail]):-
   SPHead = FPHead,
   spath(SPTail,FPTail).
 
+%PREFIX FILTER
+satisfyFilters(filters(prefix(preVar("HOME"),postPath(PostPath))),entitlements(Ent),extensions(Ext),home(Home),subject(Subject)):-
+  %since the filepath of the subject and the literal must match exactly, this should be sufficient.
+  Subject = file(SubjectString),
+  string_concat(Home, PostPath, SubjectString).
+
+
 satisfyFilters(filters([Head|Tail]),entitlements(Ent),extensions(Ext),home(Home),subject(Subject)):-
   satisfyFilters(filters(Head),entitlements(Ent),extensions(Ext),home(Home),subject(Subject)),
   satisfyFilters(filters(Tail),entitlements(Ent),extensions(Ext),home(Home),subject(Subject)).
+
+
