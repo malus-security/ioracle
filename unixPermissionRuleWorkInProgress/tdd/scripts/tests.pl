@@ -131,3 +131,35 @@ subpathFilters:-
   relevantRule(entitlements(Ent),extensions(Ext),home(Home),profile(Profile),operation(Op),subject(Subject),decision(Decision),filters(Filters)),
   write("profileRule(profile("),write(Profile),write("),decision("),write(Decision),write("),operation("),write(Op),write("),filters("),write(Filters),writeln("))."),
   fail.
+
+prefixFilters:-
+  ["../prolog/sandboxTestInput/fakeDataForSandboxTests"],
+  ["../prolog/sandboxTestInput/prefixFilters"],
+  getAttributes(process(Process),entitlements(Ent),extensions(Ext),user(User),home(Home),profile(Profile)),
+  %should we be unifying subjects with some file access records?
+  Subject = file("/mobile/home/fileForUser"),
+  relevantRule(entitlements(Ent),extensions(Ext),home(Home),profile(Profile),operation(Op),subject(Subject),decision(Decision),filters(Filters)),
+  write("profileRule(profile("),write(Profile),write("),decision("),write(Decision),write("),operation("),write(Op),write("),filters("),write(Filters),writeln("))."),
+  fail.
+
+wildSubject:-
+  ["../prolog/sandboxTestInput/fakeDataForSandboxTests"],
+  ["../prolog/sandboxTestInput/wildSubject"],
+  getAttributes(process(Process),entitlements(Ent),extensions(Ext),user(User),home(Home),profile(Profile)),
+  %should we be unifying subjects with some file access records?
+  existingFile(ExistingFile),
+  Subject = file(ExistingFile),
+  relevantRule(entitlements(Ent),extensions(Ext),home(Home),profile(Profile),operation(Op),subject(Subject),decision(Decision),filters(Filters)),
+  write(Process),write(","),writeln(ExistingFile),
+  fail.
+
+vnodeFilters:-
+  ["../prolog/sandboxTestInput/fakeDataForSandboxTests"],
+  ["../prolog/sandboxTestInput/vnodeFilters"],
+  getAttributes(process(Process),entitlements(Ent),extensions(Ext),user(User),home(Home),profile(Profile)),
+  %should we be unifying subjects with some file access records?
+  vnodeType(Subject,_),
+  Subject = file(SubjectString),
+  relevantRule(entitlements(Ent),extensions(Ext),home(Home),profile(Profile),operation(Op),subject(Subject),decision(Decision),filters(Filters)),
+  write(Process),write(","),writeln(SubjectString),
+  fail.

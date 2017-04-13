@@ -45,6 +45,9 @@ output="../outputs/$testName/dirParents.pl"
 ./testQueries.sh entitlementFilters 2> /dev/null
 ./testQueries.sh literalFilters 2> /dev/null
 ./testQueries.sh regexFilters 2> /dev/null
-./testQueries.sh subpathFilters
+./testQueries.sh subpathFilters 2> /dev/null
+./testQueries.sh prefixFilters 2> /dev/null
+./testQueries.sh wildSubject 2> /dev/null
+./testQueries.sh vnodeFilters 2> /dev/null
 
 
