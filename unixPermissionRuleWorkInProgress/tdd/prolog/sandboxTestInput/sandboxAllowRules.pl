@@ -70,6 +70,10 @@ satisfyFilters(filters(require-not(ReqNotFilter)),entitlements(Ent),extensions(E
 %MACH SERVICE FILTERS
 satisfyFilters(filters(global-name(MachName)),entitlements(Ent),extensions(Ext),home(Home),subject(machService(MachName))).
 satisfyFilters(filters(local-name(MachName)),entitlements(Ent),extensions(Ext),home(Home),subject(machService(MachName))).
+satisfyFilters(filters(global-name-regex(Regex)),entitlements(Ent),extensions(Ext),home(Home),subject(machService(SubjectString))):-
+  SubjectString =~ Regex.
+satisfyFilters(filters(local-name-regex(Regex)),entitlements(Ent),extensions(Ext),home(Home),subject(machService(SubjectString))):-
+  SubjectString =~ Regex.
  
   
 stringSubPath(SubPathString,FilePathString):-
