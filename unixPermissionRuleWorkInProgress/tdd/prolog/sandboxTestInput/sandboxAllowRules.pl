@@ -15,7 +15,12 @@ relevantRule(entitlements(Ent),extensions(Ext),home(Home),profile(Profile),opera
   profileRule(profile(Profile),decision(Decision),operation(Op),filters(Filters)),
   satisfyFilters(filters(Filters),entitlements(Ent),extensions(Ext),home(Home),subject(Subject)).
 
+%RECURSION FOR SATISFYING ALL FILTERS
 satisfyFilters(filters([]),entitlements(Ent),extensions(Ext),home(Home),subject(Subject)).
+
+satisfyFilters(filters([Head|Tail]),entitlements(Ent),extensions(Ext),home(Home),subject(Subject)):-
+  satisfyFilters(filters(Head),entitlements(Ent),extensions(Ext),home(Home),subject(Subject)),
+  satisfyFilters(filters(Tail),entitlements(Ent),extensions(Ext),home(Home),subject(Subject)).
 
 %EXTENSIONS FILTER
 %the required sandbox extension must be among those possessed by the process.
@@ -50,17 +55,6 @@ satisfyFilters(filters(subpath(Subpath)),entitlements(Ent),extensions(Ext),home(
   Subject = file(SubjectString),
   stringSubPath(Subpath,SubjectString).
 
-stringSubPath(SubPathString,FilePathString):-
-  atom_codes(SubPathString,SBList),
-  atom_codes(FilePathString,FPList),
-  spath(SBList,FPList),!.
-
-spath([],_).
-
-spath([SPHead|SPTail],[FPHead|FPTail]):-
-  SPHead = FPHead,
-  spath(SPTail,FPTail).
-
 %PREFIX FILTER
 satisfyFilters(filters(prefix(preVar("HOME"),postPath(PostPath))),entitlements(Ent),extensions(Ext),home(Home),subject(Subject)):-
   %since the filepath of the subject and the literal must match exactly, this should be sufficient.
@@ -73,9 +67,19 @@ satisfyFilters(filters(vnode-type(Vnode)),entitlements(Ent),extensions(Ext),home
   Subject = file(SubjectString),
   vnodeType(file(SubjectString),type(Vnode)).
 
+satisfyFilters(filters(require-not(ReqNotFilter)),entitlements(Ent),extensions(Ext),home(Home),subject(Subject)):-
+  %this should only be satisfied if the satisfyFilters goal cannot be proven.
+  %I need to make sure it is not satisfied by any single elements in the list that happen to not match.
+  \+ (satisfyFilters(filters(ReqNotFilter),entitlements(Ent),extensions(Ext),home(Home),subject(Subject))).
+  
+stringSubPath(SubPathString,FilePathString):-
+  atom_codes(SubPathString,SBList),
+  atom_codes(FilePathString,FPList),
+  spath(SBList,FPList),!.
 
-satisfyFilters(filters([Head|Tail]),entitlements(Ent),extensions(Ext),home(Home),subject(Subject)):-
-  satisfyFilters(filters(Head),entitlements(Ent),extensions(Ext),home(Home),subject(Subject)),
-  satisfyFilters(filters(Tail),entitlements(Ent),extensions(Ext),home(Home),subject(Subject)).
+spath([],_).
 
+spath([SPHead|SPTail],[FPHead|FPTail]):-
+  SPHead = FPHead,
+  spath(SPTail,FPTail).
 
