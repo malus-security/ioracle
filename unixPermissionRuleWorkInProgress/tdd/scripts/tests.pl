@@ -182,7 +182,19 @@ machLiteral:-
   %should we be unifying subjects with some file access records?
   mach(_,machServices(ServiceList)),
   member(MachName,ServiceList),
-  Subject=machService(MachName), 
+  Subject = machService(MachName),
+  relevantRule(entitlements(Ent),extensions(Ext),home(Home),profile(Profile),operation(Op),subject(Subject),decision(Decision),filters(Filters)),
+  write(Process),write(","),writeln(MachName),
+  fail.
+
+machRegex:-
+  ["../prolog/sandboxTestInput/fakeDataForSandboxTests"],
+  ["../prolog/sandboxTestInput/machRegex"],
+  getAttributes(process(Process),entitlements(Ent),extensions(Ext),user(User),home(Home),profile(Profile)),
+  %should we be unifying subjects with some file access records?
+  mach(_,machServices(ServiceList)),
+  member(MachName,ServiceList),
+  Subject = machService(MachName),
   relevantRule(entitlements(Ent),extensions(Ext),home(Home),profile(Profile),operation(Op),subject(Subject),decision(Decision),filters(Filters)),
   write(Process),write(","),writeln(MachName),
   fail.

@@ -51,3 +51,4 @@ output="../outputs/$testName/dirParents.pl"
 ./testQueries.sh vnodeFilters 2> /dev/null
 ./testQueries.sh requireNot 2> /dev/null
 ./testQueries.sh machLiteral 2> /dev/null
+./testQueries.sh machRegex 2> /dev/null
