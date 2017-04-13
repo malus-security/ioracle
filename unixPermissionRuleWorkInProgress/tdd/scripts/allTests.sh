@@ -50,3 +50,4 @@ output="../outputs/$testName/dirParents.pl"
 ./testQueries.sh wildSubject 2> /dev/null
 ./testQueries.sh vnodeFilters 2> /dev/null
 ./testQueries.sh requireNot 2> /dev/null
+./testQueries.sh machLiteral 2> /dev/null

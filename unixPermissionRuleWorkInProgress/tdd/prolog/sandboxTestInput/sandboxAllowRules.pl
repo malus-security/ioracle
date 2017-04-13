@@ -40,37 +40,37 @@ satisfyFilters(filters(require-entitlement(Key,ValueList)),entitlements(Ent),ext
   member(entitlement(key(Key),value(Value)),Ent).
 
 %LITERALS FILTER
-satisfyFilters(filters(literal(Literal)),entitlements(Ent),extensions(Ext),home(Home),subject(Subject)):-
-  %since the filepath of the subject and the literal must match exactly, this should be sufficient.
-  Subject = file(Literal).
+%since the filepath of the subject and the literal must match exactly, this should be sufficient.
+satisfyFilters(filters(literal(Literal)),entitlements(Ent),extensions(Ext),home(Home),subject(file(Literal))).
 
 %REGEX FILTER
-satisfyFilters(filters(regex(Regex)),entitlements(Ent),extensions(Ext),home(Home),subject(Subject)):-
-  Subject = file(SubjectString),
+satisfyFilters(filters(regex(Regex)),entitlements(Ent),extensions(Ext),home(Home),subject(file(SubjectString))):-
   SubjectString =~ Regex.
 
 %SUBPATH FILTER
-satisfyFilters(filters(subpath(Subpath)),entitlements(Ent),extensions(Ext),home(Home),subject(Subject)):-
+satisfyFilters(filters(subpath(Subpath)),entitlements(Ent),extensions(Ext),home(Home),subject(file(SubjectString))):-
   %There is probably a simpler solution, but I just reused this code from sandscout.
-  Subject = file(SubjectString),
   stringSubPath(Subpath,SubjectString).
 
 %PREFIX FILTER
-satisfyFilters(filters(prefix(preVar("HOME"),postPath(PostPath))),entitlements(Ent),extensions(Ext),home(Home),subject(Subject)):-
+satisfyFilters(filters(prefix(preVar("HOME"),postPath(PostPath))),entitlements(Ent),extensions(Ext),home(Home),subject(file(SubjectString))):-
   %since the filepath of the subject and the literal must match exactly, this should be sufficient.
-  Subject = file(SubjectString),
   string_concat(Home, PostPath, SubjectString).
 
 %VNODE FILTER
-satisfyFilters(filters(vnode-type(Vnode)),entitlements(Ent),extensions(Ext),home(Home),subject(Subject)):-
+satisfyFilters(filters(vnode-type(Vnode)),entitlements(Ent),extensions(Ext),home(Home),subject(file(SubjectString))):-
   %since the filepath of the subject and the literal must match exactly, this should be sufficient.
-  Subject = file(SubjectString),
   vnodeType(file(SubjectString),type(Vnode)).
 
 satisfyFilters(filters(require-not(ReqNotFilter)),entitlements(Ent),extensions(Ext),home(Home),subject(Subject)):-
   %this should only be satisfied if the satisfyFilters goal cannot be proven.
   %I need to make sure it is not satisfied by any single elements in the list that happen to not match.
   \+ (satisfyFilters(filters(ReqNotFilter),entitlements(Ent),extensions(Ext),home(Home),subject(Subject))).
+
+%MACH SERVICE FILTERS
+satisfyFilters(filters(global-name(MachName)),entitlements(Ent),extensions(Ext),home(Home),subject(machService(MachName))).
+satisfyFilters(filters(local-name(MachName)),entitlements(Ent),extensions(Ext),home(Home),subject(machService(MachName))).
+ 
   
 stringSubPath(SubPathString,FilePathString):-
   atom_codes(SubPathString,SBList),
