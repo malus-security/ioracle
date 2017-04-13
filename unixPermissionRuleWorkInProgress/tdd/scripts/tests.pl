@@ -163,3 +163,14 @@ vnodeFilters:-
   relevantRule(entitlements(Ent),extensions(Ext),home(Home),profile(Profile),operation(Op),subject(Subject),decision(Decision),filters(Filters)),
   write(Process),write(","),writeln(SubjectString),
   fail.
+
+requireNot:-
+  ["../prolog/sandboxTestInput/fakeDataForSandboxTests"],
+  ["../prolog/sandboxTestInput/requireNot"],
+  getAttributes(process(Process),entitlements(Ent),extensions(Ext),user(User),home(Home),profile(Profile)),
+  %should we be unifying subjects with some file access records?
+  vnodeType(Subject,_),
+  Subject = file(SubjectString),
+  relevantRule(entitlements(Ent),extensions(Ext),home(Home),profile(Profile),operation(Op),subject(Subject),decision(Decision),filters(Filters)),
+  write(Process),write(","),writeln(SubjectString),
+  fail.
