@@ -27,15 +27,15 @@ mkdir $extractionDirectory/prologFacts > /dev/null 2>&1
 echo 'extracting archived file system'
 echoerr 'extracting archived file system'
 #TODO I need to put this line back in after testing
-#time sudo tar -xzf $extractionDirectory/fileSystem.tar.gz -C $extractionDirectory/fileSystem
-#sudo chown -R $USER $extractionDirectory
-#chmod -R 777 $extractionDirectory
+time sudo tar -xzf $extractionDirectory/fileSystem.tar.gz -C $extractionDirectory/fileSystem
+sudo chown -R $USER $extractionDirectory
+chmod -R 777 $extractionDirectory
 
 echo 'getting file types'
 echoerr 'getting file types'
 #get file types from the file system extracted to the local system
-#time ./scriptsToAutomate/fileTypeExtractor.sh $extractionDirectory/fileSystem > $extractionDirectory/prologFacts/unsanitized_file_types.pl
-#time ./scriptsToAutomate/sanitizeFilePaths.py $extractionDirectory/prologFacts/unsanitized_file_types.pl > $extractionDirectory/prologFacts/file_types.pl
+time ./scriptsToAutomate/fileTypeExtractor.sh $extractionDirectory/fileSystem > $extractionDirectory/prologFacts/unsanitized_file_types.pl
+time ./scriptsToAutomate/sanitizeFilePaths.py $extractionDirectory/prologFacts/unsanitized_file_types.pl > $extractionDirectory/prologFacts/file_types.pl
 
 echo 'getting user data'
 echoerr 'getting user data'
