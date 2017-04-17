@@ -6,7 +6,8 @@ getAttributes(process(Process),entitlements(Ent),extensions(Ext),user(User),home
   processOwnership(uid(User),_,comm(Process)),
   findall(X,sandboxExtension(filePath(Process),X),Ext),
   findall(Y,processEntitlement(filePath(Process),Y),Ent),
-  home(user(User),filePath(Home)).
+  %home(user(User),filePath(Home)).
+  user(_,_,userID(User),_,_,homeDirectory(Home),_).
 
 getRequirements(profile(Profile)):-
   fail.
@@ -53,9 +54,10 @@ satisfyFilters(filters(subpath(Subpath)),entitlements(Ent),extensions(Ext),home(
   stringSubPath(Subpath,SubjectString).
 
 %PREFIX FILTER
-satisfyFilters(filters(prefix(preVar("HOME"),postPath(PostPath))),entitlements(Ent),extensions(Ext),home(Home),subject(file(SubjectString))):-
+satisfyFilters(filters(prefix(variable("HOME"),path(PostPath))),entitlements(Ent),extensions(Ext),home(Home),subject(file(SubjectString))):-
   %since the filepath of the subject and the literal must match exactly, this should be sufficient.
-  string_concat(Home, PostPath, SubjectString).
+  string_concat(Home, PostPath, SubPathString),
+  satisfyFilters(filters(subpath(SubPathString)),entitlements(Ent),extensions(Ext),home(Home),subject(file(SubjectString))).
 
 %VNODE FILTER
 satisfyFilters(filters(vnode-type(Vnode)),entitlements(Ent),extensions(Ext),home(Home),subject(file(SubjectString))):-
