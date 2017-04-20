@@ -13,6 +13,7 @@ import re
 
 reserved = {
 'subpath' : 'TK_SUBPATH',
+'prefix' : 'TK_PREFIX',
 'allow' : 'TK_ALLOW',
 'deny' : 'TK_DENY',
 'version' : 'TK_VERSION',
@@ -256,6 +257,7 @@ def p_object(p):
 		| otherType otherType
 		| otherType otherType TK_FILTER
 		| subpath
+		| prefix
 		| TK_REQNOT TK_LPAREN object TK_RPAREN
 		| TK_REQNOT TK_LPAREN simpleEntValObject TK_RPAREN
 		| TK_VNODETYPE otherType
@@ -290,6 +292,14 @@ def p_subpath(p):
   'subpath	: TK_SUBPATH TK_FILTER'
   p[2] = p[2][:-1] + '/"'
   p[0] = p[1] +"("+ p[2]+ ")"
+
+def p_prefix(p):
+  'prefix : TK_PREFIX TK_FILTER'
+  #do the ugly regex work here, and just rip out what I need from the filter. This is good enough.
+  pattern = re.compile('"\${([^}]*)}([^"]*)"')
+  matches = pattern.match(p[2])
+  p[0] = p[1] + "(variable(\"" + matches.group(1) + "\"),path(\"" + matches.group(2) + "\"))"
+
 
 #TODO: this is sort of a hack and I should evaluate it effects carefully
 #the issue is that requireNot can now accept entitlement requirements as parameters
