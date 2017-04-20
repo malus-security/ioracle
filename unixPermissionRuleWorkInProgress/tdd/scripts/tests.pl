@@ -67,11 +67,135 @@ dirExecute:-
 
 processAttributes:-
   ["../prolog/sandboxTestInput/fakeDataForSandboxTests"],
-  %entitlements and extensions should return lists, since we don't know how many there will be or how many the rules will require
   Process = "/mobile/process",
+  %entitlements and extensions should return lists, since we don't know how many there will be or how many the rules will require
   getAttributes(process(Process),entitlements(Ent),extensions(Ext),user(User),home(Home),profile(Profile)),
   write("getAttributes(process("),write(Process),write("),entitlements("),write(Ent),write("),extensions("),write(Ext), write("),user("),write(User),write("),home("),
   write(Home),write("),profile("),write(Profile),writeln("))."),
   fail.
 
+noFilters:-
+  ["../prolog/sandboxTestInput/fakeDataForSandboxTests"],
+  ["../prolog/sandboxTestInput/noFilters"],
+  Process = "/mobile/process",
+  getAttributes(process(Process),entitlements(Ent),extensions(Ext),user(User),home(Home),profile(Profile)),
+  %should we be unifying subjects with some file access records?
+  relevantRule(entitlements(Ent),extensions(Ext),home(Home),profile(Profile),operation(Op),subject(Subject),decision(Decision),filters(Filters)),
+  write("profileRule(profile("),write(Profile),write("),decision("),write(Decision),write("),operation("),write(Op),write("),filters("),write(Filters),writeln("))."),
+  fail.
+
+extensionFilters:-
+  ["../prolog/sandboxTestInput/fakeDataForSandboxTests"],
+  ["../prolog/sandboxTestInput/extensionFilters"],
+  getAttributes(process(Process),entitlements(Ent),extensions(Ext),user(User),home(Home),profile(Profile)),
+  %should we be unifying subjects with some file access records?
+  relevantRule(entitlements(Ent),extensions(Ext),home(Home),profile(Profile),operation(Op),subject(Subject),decision(Decision),filters(Filters)),
+  write("profileRule(profile("),write(Profile),write("),decision("),write(Decision),write("),operation("),write(Op),write("),filters("),write(Filters),writeln("))."),
+  fail.
+
+entitlementFilters:-
+  ["../prolog/sandboxTestInput/fakeDataForSandboxTests"],
+  ["../prolog/sandboxTestInput/entitlementFilters"],
+  getAttributes(process(Process),entitlements(Ent),extensions(Ext),user(User),home(Home),profile(Profile)),
+  %should we be unifying subjects with some file access records?
+  relevantRule(entitlements(Ent),extensions(Ext),home(Home),profile(Profile),operation(Op),subject(Subject),decision(Decision),filters(Filters)),
+  write("profileRule(profile("),write(Profile),write("),decision("),write(Decision),write("),operation("),write(Op),write("),filters("),write(Filters),writeln("))."),
+  fail.
+
+literalFilters:-
+  ["../prolog/sandboxTestInput/fakeDataForSandboxTests"],
+  ["../prolog/sandboxTestInput/literalFilters"],
+  getAttributes(process(Process),entitlements(Ent),extensions(Ext),user(User),home(Home),profile(Profile)),
+  %should we be unifying subjects with some file access records?
+  Subject = file("/subjectFile"),
+  relevantRule(entitlements(Ent),extensions(Ext),home(Home),profile(Profile),operation(Op),subject(Subject),decision(Decision),filters(Filters)),
+  write("profileRule(profile("),write(Profile),write("),decision("),write(Decision),write("),operation("),write(Op),write("),filters("),write(Filters),writeln("))."),
+  fail.
+
+regexFilters:-
+  ["../prolog/sandboxTestInput/fakeDataForSandboxTests"],
+  ["../prolog/sandboxTestInput/regexFilters"],
+  getAttributes(process(Process),entitlements(Ent),extensions(Ext),user(User),home(Home),profile(Profile)),
+  %should we be unifying subjects with some file access records?
+  Subject = file("/subjectFile"),
+  relevantRule(entitlements(Ent),extensions(Ext),home(Home),profile(Profile),operation(Op),subject(Subject),decision(Decision),filters(Filters)),
+  write("profileRule(profile("),write(Profile),write("),decision("),write(Decision),write("),operation("),write(Op),write("),filters("),write(Filters),writeln("))."),
+  fail.
+
+subpathFilters:-
+  ["../prolog/sandboxTestInput/fakeDataForSandboxTests"],
+  ["../prolog/sandboxTestInput/subpathFilters"],
+  getAttributes(process(Process),entitlements(Ent),extensions(Ext),user(User),home(Home),profile(Profile)),
+  %should we be unifying subjects with some file access records?
+  Subject = file("/subject/file/child/grandchild"),
+  relevantRule(entitlements(Ent),extensions(Ext),home(Home),profile(Profile),operation(Op),subject(Subject),decision(Decision),filters(Filters)),
+  write("profileRule(profile("),write(Profile),write("),decision("),write(Decision),write("),operation("),write(Op),write("),filters("),write(Filters),writeln("))."),
+  fail.
+
+prefixFilters:-
+  ["../prolog/sandboxTestInput/fakeDataForSandboxTests"],
+  ["../prolog/sandboxTestInput/prefixFilters"],
+  getAttributes(process(Process),entitlements(Ent),extensions(Ext),user(User),home(Home),profile(Profile)),
+  %should we be unifying subjects with some file access records?
+  Subject = file("/mobile/home/dirForUser/fileForUser"),
+  relevantRule(entitlements(Ent),extensions(Ext),home(Home),profile(Profile),operation(Op),subject(Subject),decision(Decision),filters(Filters)),
+  write("profileRule(profile("),write(Profile),write("),decision("),write(Decision),write("),operation("),write(Op),write("),filters("),write(Filters),writeln("))."),
+  fail.
+
+wildSubject:-
+  ["../prolog/sandboxTestInput/fakeDataForSandboxTests"],
+  ["../prolog/sandboxTestInput/wildSubject"],
+  getAttributes(process(Process),entitlements(Ent),extensions(Ext),user(User),home(Home),profile(Profile)),
+  %should we be unifying subjects with some file access records?
+  existingFile(ExistingFile),
+  Subject = file(ExistingFile),
+  relevantRule(entitlements(Ent),extensions(Ext),home(Home),profile(Profile),operation(Op),subject(Subject),decision(Decision),filters(Filters)),
+  write(Process),write(","),writeln(ExistingFile),
+  fail.
+
+vnodeFilters:-
+  ["../prolog/sandboxTestInput/fakeDataForSandboxTests"],
+  ["../prolog/sandboxTestInput/vnodeFilters"],
+  getAttributes(process(Process),entitlements(Ent),extensions(Ext),user(User),home(Home),profile(Profile)),
+  %should we be unifying subjects with some file access records?
+  vnodeType(Subject,_),
+  Subject = file(SubjectString),
+  relevantRule(entitlements(Ent),extensions(Ext),home(Home),profile(Profile),operation(Op),subject(Subject),decision(Decision),filters(Filters)),
+  write(Process),write(","),writeln(SubjectString),
+  fail.
+
+requireNot:-
+  ["../prolog/sandboxTestInput/fakeDataForSandboxTests"],
+  ["../prolog/sandboxTestInput/requireNot"],
+  getAttributes(process(Process),entitlements(Ent),extensions(Ext),user(User),home(Home),profile(Profile)),
+  %should we be unifying subjects with some file access records?
+  vnodeType(Subject,_),
+  Subject = file(SubjectString),
+  relevantRule(entitlements(Ent),extensions(Ext),home(Home),profile(Profile),operation(Op),subject(Subject),decision(Decision),filters(Filters)),
+  write(Process),write(","),writeln(SubjectString),
+  fail.
+
+machLiteral:-
+  ["../prolog/sandboxTestInput/fakeDataForSandboxTests"],
+  ["../prolog/sandboxTestInput/machLiteral"],
+  getAttributes(process(Process),entitlements(Ent),extensions(Ext),user(User),home(Home),profile(Profile)),
+  %should we be unifying subjects with some file access records?
+  mach(_,machServices(ServiceList)),
+  member(MachName,ServiceList),
+  Subject = machService(MachName),
+  relevantRule(entitlements(Ent),extensions(Ext),home(Home),profile(Profile),operation(Op),subject(Subject),decision(Decision),filters(Filters)),
+  write(Process),write(","),writeln(MachName),
+  fail.
+
+machRegex:-
+  ["../prolog/sandboxTestInput/fakeDataForSandboxTests"],
+  ["../prolog/sandboxTestInput/machRegex"],
+  getAttributes(process(Process),entitlements(Ent),extensions(Ext),user(User),home(Home),profile(Profile)),
+  %should we be unifying subjects with some file access records?
+  mach(_,machServices(ServiceList)),
+  member(MachName,ServiceList),
+  Subject = machService(MachName),
+  relevantRule(entitlements(Ent),extensions(Ext),home(Home),profile(Profile),operation(Op),subject(Subject),decision(Decision),filters(Filters)),
+  write(Process),write(","),writeln(MachName),
+  fail.
 

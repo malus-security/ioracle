@@ -1,0 +1,2 @@
+profileRule(profile(mobileProcessProfile),decision(allow),operation(doTheThing),filters([extension(commonExtension)])).
+profileRule(profile(rootProcessProfile),decision(allow),operation(doTheThing),filters([extension(rootExtension),extension(commonExtension)])).

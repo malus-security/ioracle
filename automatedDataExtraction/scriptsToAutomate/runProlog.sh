@@ -7,4 +7,6 @@
 
 #it seems a bit like cheating, but it's hard to write prolog that doesn't produce duplicate results, 
 #so I'm just filtering out duplicates here with sort and uniq.
-swipl --quiet -t "ignore($1),halt(1)" --consult-file ./temporaryFiles/relevantFacts.pl | sort | uniq
+queryToRun=$1
+temporaryFiles=$2
+swipl --quiet -t "ignore($queryToRun),halt(1)" --consult-file $temporaryFiles/relevantFacts.pl | sort | uniq
