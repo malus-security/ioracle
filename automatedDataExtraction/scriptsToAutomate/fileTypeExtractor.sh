@@ -22,6 +22,8 @@ do
 	fileType=`file -b -p $file | sed 's/"//g' | sed 's/\`//g' | sed "s/'//g" | sed 's/\\\//g'`
 	#echo $prefix,fileType\(\"$fileType\"\)\).
 	prefix=`echo file\(fileType\(\"$fileType\"\)`
+	#the following should add in the leading slash we want in the filepath
+	adjustedFilePath="/$adjustedFilePath"
 	echo $prefix,filePath\(\"$adjustedFilePath\"\)\).
 	count=$((count + 1))
 	if ! (($count % 1000)); then
