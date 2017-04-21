@@ -227,3 +227,46 @@ parseSelfAppliedProfiles:-
   write("\"),profile(\""),write(Z),
   writeln("\"),mechanism(selfApplied))."),
   fail.
+
+getMetaDataTypes:-
+  setof(X,Y^fileType(type(X),filePath(Y)),XList),
+  writeln(XList).
+
+getVnodeTypes:-
+  fileType(Type,filePath(File)),
+  processTypes(Type,File).
+
+processTypes(type("d"),File):-
+  write("vnodeType(file(\""),write(File),write("\"),type("),
+  write("directory"),
+  writeln(")).").
+
+processTypes(type("l"),File):-
+  write("vnodeType(file(\""),write(File),write("\"),type("),
+  write("symlink"),
+  writeln(")).").
+
+processTypes(type("b"),File):-
+  write("vnodeType(file(\""),write(File),write("\"),type("),
+  write("block-device"),
+  writeln(")).").
+
+processTypes(type("c"),File):-
+  write("vnodeType(file(\""),write(File),write("\"),type("),
+  write("character-device"),
+  writeln("))."),
+  %for now we will assume that all character devices are also tty devices
+  %tty doesn't seem to be an official vnode type anyway...
+  % https://www.freebsd.org/cgi/man.cgi?query=vnode
+  write("vnodeType(file(\""),write(File),write("\"),type("),
+  write("tty"),
+  writeln(")).").
+
+processTypes(type("f"),File):-
+  write("vnodeType(file(\""),write(File),write("\"),type("),
+  write("regular-file"),
+  writeln(")).").
+
+%is there a vnode type for sockets?
+%yes, there seems to be, but maybe Apple doesn't care about them, so we don't know how it would be called in SBPL.
+%how do we determine which files are tty types?
