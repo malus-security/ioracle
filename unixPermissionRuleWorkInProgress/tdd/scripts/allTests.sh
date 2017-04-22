@@ -41,7 +41,6 @@ output="../outputs/$testName/dirParents.pl"
 #sandbox based tests
 ./testQueries.sh processAttributes 2> /dev/null
 ./testQueries.sh noFilters 2> /dev/null
-./testQueries.sh extensionFilters 2> /dev/null
 ./testQueries.sh entitlementFilters 2> /dev/null
 ./testQueries.sh literalFilters 2> /dev/null
 ./testQueries.sh regexFilters 2> /dev/null
@@ -52,3 +51,7 @@ output="../outputs/$testName/dirParents.pl"
 ./testQueries.sh requireNot 2> /dev/null
 ./testQueries.sh machLiteral 2> /dev/null
 ./testQueries.sh machRegex 2> /dev/null
+# My understanding of extensions has changed, and this test now seems invalid. It will be replaced with a better one.
+#./testQueries.sh extensionFilters 2> /dev/null
+./testQueries.sh sandboxExtensions_files
+

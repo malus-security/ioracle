@@ -1,0 +1,4 @@
+file-readSTAR,/wildcard/readable/file
+file-readSTAR,/some/file
+file-writeSTAR,/wildcard/writable/file
+file-writeSTAR,/some/file

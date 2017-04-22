@@ -4,7 +4,7 @@
 getAttributes(process(Process),entitlements(Ent),extensions(Ext),user(User),home(Home),profile(Profile)):-
   processProfile(filePath(Process),profile(Profile)),
   processOwnership(uid(User),_,comm(Process)),
-  findall(X,sandboxExtension(filePath(Process),X),Ext),
+  findall(X,sandboxExtension(process(Process),X),Ext),
   findall(Y,processEntitlement(filePath(Process),Y),Ent),
   %home(user(User),filePath(Home)).
   user(_,_,userID(User),_,_,homeDirectory(Home),_).
@@ -23,10 +23,13 @@ satisfyFilters(filters([Head|Tail]),entitlements(Ent),extensions(Ext),home(Home)
   satisfyFilters(filters(Head),entitlements(Ent),extensions(Ext),home(Home),subject(Subject)),
   satisfyFilters(filters(Tail),entitlements(Ent),extensions(Ext),home(Home),subject(Subject)).
 
-%EXTENSIONS FILTER
-%the required sandbox extension must be among those possessed by the process.
-satisfyFilters(filters(extension(F_Ext)),entitlements(Ent),extensions(Ext),home(Home),subject(Subject)):-
-  member(extension(F_Ext),Ext).
+%EXTENSIONS FILE TYPE FILTER
+satisfyFilters(filters(extension(ExtClass)),entitlements(Ent),extensions(Ext),home(Home),subject(file(SubjectString))):-
+  member(extension(class(ExtClass),type("file"),value(ExtValue)),Ext),
+  satisfyFilters(filters(subpath(ExtValue)),entitlements(Ent),extensions(Ext),home(Home),subject(file(SubjectString))).
+
+
+%EXTENSIONS MACH TYPE FILTER
 
 %ENTITLEMENTS FILTER
 %the required sandbox extension must be among those possessed by the process.
