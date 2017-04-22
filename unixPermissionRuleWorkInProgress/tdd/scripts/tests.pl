@@ -199,3 +199,14 @@ machRegex:-
   write(Process),write(","),writeln(MachName),
   fail.
 
+sandboxExtensions_files:-
+  ["../prolog/sandboxTestInput/fakeDataForSandboxTests"],
+  ["../prolog/sandboxTestInput/sandboxExtensions_files"],
+  Process = "/mobile/process",
+  getAttributes(process(Process),entitlements(Ent),extensions(Ext),user(User),home(Home),profile(Profile)),
+  %should we be unifying subjects with some file access records?
+  existingFile(ExistingFile),
+  Subject = file(ExistingFile),
+  relevantRule(entitlements(Ent),extensions(Ext),home(Home),profile(Profile),operation(Op),subject(Subject),decision(Decision),filters(Filters)),
+  write(Op),write(","),writeln(ExistingFile),
+  fail.
