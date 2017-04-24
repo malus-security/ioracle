@@ -53,5 +53,8 @@ output="../outputs/$testName/dirParents.pl"
 ./testQueries.sh machRegex 2> /dev/null
 # My understanding of extensions has changed, and this test now seems invalid. It will be replaced with a better one.
 #./testQueries.sh extensionFilters 2> /dev/null
-./testQueries.sh sandboxExtensions_files
+./testQueries.sh sandboxExtensions_files 2> /dev/null
+./testQueries.sh sandboxExtensions_mach 2> /dev/null
+
+
 
