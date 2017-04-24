@@ -210,3 +210,16 @@ sandboxExtensions_files:-
   relevantRule(entitlements(Ent),extensions(Ext),home(Home),profile(Profile),operation(Op),subject(Subject),decision(Decision),filters(Filters)),
   write(Op),write(","),writeln(ExistingFile),
   fail.
+
+sandboxExtensions_mach:-
+  ["../prolog/sandboxTestInput/fakeDataForSandboxTests"],
+  ["../prolog/sandboxTestInput/sandboxExtensions_mach"],
+  Process = "/mobile/process",
+  getAttributes(process(Process),entitlements(Ent),extensions(Ext),user(User),home(Home),profile(Profile)),
+  %should we be unifying subjects with some file access records?
+  mach(_,machServices(ServiceList)),
+  member(MachName,ServiceList),
+  Subject = machService(MachName),
+  relevantRule(entitlements(Ent),extensions(Ext),home(Home),profile(Profile),operation(Op),subject(Subject),decision(Decision),filters(Filters)),
+  writeln(MachName),
+  fail.

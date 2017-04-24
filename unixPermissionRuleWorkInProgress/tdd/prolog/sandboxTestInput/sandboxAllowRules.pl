@@ -30,6 +30,9 @@ satisfyFilters(filters(extension(ExtClass)),entitlements(Ent),extensions(Ext),ho
 
 
 %EXTENSIONS MACH TYPE FILTER
+satisfyFilters(filters(extension(ExtClass)),entitlements(Ent),extensions(Ext),home(Home),subject(machService(MachName))):-
+  %the extension value must be literally the same as the name of the mach service in question
+  member(extension(class(ExtClass),type("mach"),value(MachName)),Ext).
 
 %ENTITLEMENTS FILTER
 %the required sandbox extension must be among those possessed by the process.
