@@ -7,5 +7,5 @@ process(filePath("/mobile/process"),extension("commonExtension")).
 process(filePath("/mobile/process"),extension("mobileExtension")).
 process(filePath("/root/process"),extension("commonExtension")).
 process(filePath("/root/process"),extension("rootExtension")).
-process(filePath("/mobile/process"),profile("mobileProcessProfile")).
-process(filePath("/root/process"),profile("rootProcessProfile")).
+usesSandbox(processPath("/mobile/process"),profile("mobileProcessProfile"),_).
+usesSandbox(processPath("/root/process"),profile("rootProcessProfile"),_).

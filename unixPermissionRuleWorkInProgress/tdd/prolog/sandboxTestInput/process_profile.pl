@@ -1,2 +1,2 @@
-processProfile(filePath("/mobile/process"),profile("mobileProcessProfile")).
-processProfile(filePath("/root/process"),profile("rootProcessProfile")).
+usesSandbox(processPath("/mobile/process"),profile("mobileProcessProfile"),_).
+usesSandbox(processPath("/root/process"),profile("rootProcessProfile"),_).

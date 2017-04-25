@@ -162,13 +162,14 @@ kernelEntitlementReferences:-
   write("kernelEntitlementReference(segment(\""),write(B),write("\"),entitlementKey(\""),write(A),writeln("\"))."),
   fail.
 
+%TODO the format of entitlements has changed, so some old queries might not work until we update them.
 containerEnt:-
-  process(filePath(Path),entitlement(key("com.apple.private.security.container-required"),_)),
+  processEntitlement(filePath(Path),entitlement(key("com.apple.private.security.container-required"),_)),
   write("usesSandbox(processPath(\""),write(Path),writeln("\"),profile(\"container\"),mechanism(entitlementKey(\"com.apple.private.security.container-required\")))."),
   fail.
 
 seatbeltEnt:-
-  process(filePath(Path),entitlement(key("seatbelt-profiles"),value([string(Value)]))),
+  processEntitlement(filePath(Path),entitlement(key("seatbelt-profiles"),value([string(Value)]))),
   %the container2 profile does not exist and is always overridden by the container profile
   Value \= "container2",
   write("usesSandbox(processPath(\""),write(Path),write("\"),profile(\""),write(Value),writeln("\"),mechanism(entitlementKey(\"seatbelt-profiles\")))."),
