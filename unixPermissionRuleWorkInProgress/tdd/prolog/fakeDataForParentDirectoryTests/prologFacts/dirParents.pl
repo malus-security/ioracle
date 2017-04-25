@@ -1,0 +1,9 @@
+dirParent(parent("/"),child("/complex_file+name.txt.whatever")).
+dirParent(parent("/"),child("/rootParent")).
+dirParent(parent("/a"),child("/a/one")).
+dirParent(parent("/a"),child("/a/two")).
+dirParent(parent("/a/one"),child("/a/one/alpha")).
+dirParent(parent("/a/one"),child("/a/one/beta")).
+dirParent(parent("/b"),child("/b/one")).
+dirParent(parent("/b/one"),child("/b/one/alpha")).
+dirParent(parent("rootDirectoryHasNoParent"),child("/")).
