@@ -34,6 +34,7 @@ tokens = [
     'TK_OTHERTYPE',
     'TK_BOOL',
     'TK_REGEXPRESSION',
+    'TK_MODENUMBER',
 ] + list(reserved.values())
 
 # Regular expression rules for simple tokens
