@@ -26,16 +26,16 @@ mkdir $extractionDirectory/prologFacts > /dev/null 2>&1
 
 echo 'extracting archived file system'
 echoerr 'extracting archived file system'
-#TODO I need to put this line back in after testing
-time sudo tar -xzf $extractionDirectory/fileSystem.tar.gz -C $extractionDirectory/fileSystem
-sudo chown -R $USER $extractionDirectory
-chmod -R 777 $extractionDirectory
+##TODO I need to put this line back in after testing
+#time sudo tar -xzf $extractionDirectory/fileSystem.tar.gz -C $extractionDirectory/fileSystem
+#sudo chown -R $USER $extractionDirectory
+#chmod -R 777 $extractionDirectory
 
 echo 'getting file types'
 echoerr 'getting file types'
-#get file types from the file system extracted to the local system
-time ./scriptsToAutomate/fileTypeExtractor.sh $extractionDirectory/fileSystem > $extractionDirectory/prologFacts/unsanitized_file_types.pl
-time ./scriptsToAutomate/sanitizeFilePaths.py $extractionDirectory/prologFacts/unsanitized_file_types.pl > $extractionDirectory/prologFacts/file_types.pl
+##get file types from the file system extracted to the local system
+#time ./scriptsToAutomate/fileTypeExtractor.sh $extractionDirectory/fileSystem > $extractionDirectory/prologFacts/unsanitized_file_types.pl
+#time ./scriptsToAutomate/sanitizeFilePaths.py $extractionDirectory/prologFacts/unsanitized_file_types.pl > $extractionDirectory/prologFacts/file_types.pl
 
 echo 'getting user data'
 echoerr 'getting user data'
@@ -111,6 +111,9 @@ time ./scriptsToAutomate/runProlog.sh parseSelfAppliedProfiles $temporaryFiles >
 rm $temporaryFiles/relevantFacts.pl
 
 cat $temporaryFiles/profileAssignmentFromEntAndPath.pl $temporaryFiles/parsedFilteredSelfAppliers.pl > $extractionDirectory/prologFacts/processToProfileMapping.pl
+
+#TODO the following is a place holder until we figure out how to extract sandbox extensions
+echo "sandboxExtension( _, _) :- fail." > $extractionDirectory/prologFacts/sandboxExtensionPlaceHolders.pl
 
 #the curly brackets have bundled the commands so the error output will be funneled into one file
 } 2> >(tee $extractionDirectory/error.log >&2)

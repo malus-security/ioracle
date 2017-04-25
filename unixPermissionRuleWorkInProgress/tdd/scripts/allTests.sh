@@ -3,17 +3,20 @@
 #this script should run all tests and report which pass and fail
 
 #test postProcessing script for transforming unix permissions into prolog friendly format.
-input="../prolog/fakeDataForUnixParsingTests.pl"
+input="../prolog/fakeDataForUnixParsingTests"
 testName="unixPermFormat"
 output="../outputs/$testName/prologFriendlyPermissions.pl"
-./postProcessing.sh $input ../outputs/$testName 2> /dev/null
+./postProcessing.sh $input 2> /dev/null
+cp $input/prologFacts/prologFriendlyPermissions.pl $output
 ./evaluateAnswer.sh $testName $output ../answers/"$testName".answer
 
 #test postProcessing script for representing parent child relationships for directories and their contents as prolog facts
-input="../prolog/fakeDataForParentDirectoryTests.pl"
+input="../prolog/fakeDataForParentDirectoryTests"
 testName="unixParentDir"
 output="../outputs/$testName/dirParents.pl"
-./postProcessing.sh $input ../outputs/$testName 2> /dev/null
+#I made big changes to the post processor, so this isn't going to work anymore...
+./postProcessing.sh $input 2> /dev/null
+cp $input/prologFacts/dirParents.pl $output
 ./evaluateAnswer.sh $testName $output ../answers/"$testName".answer
 
 #root seems to have access to all files regardless of their unix permissions
