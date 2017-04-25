@@ -22,6 +22,7 @@ reserved = {
 'require-any' : 'TK_REQANY',
 'require-not' : 'TK_REQNOT',
 'vnode-type' : 'TK_VNODETYPE',
+'file-mode' : 'TK_FILEMODETYPE',
 'debug-mode' : 'TK_DEBUGMODE',
 'require-entitlement' : 'TK_REQENT'}
 
@@ -61,6 +62,13 @@ def t_TK_BOOL(t):
   r'\#[tf]'
   t.value = str(t.value)
   return t
+
+#attempting to match file-mode number such as #o0004
+def t_TK_MODENUMBER(t):
+  r'\#o[0-9][0-9][0-9][0-9]'
+  t.value = str(t.value)
+  return t
+
 
 
 #Taken from ply example in documentation
@@ -261,6 +269,7 @@ def p_object(p):
 		| TK_REQNOT TK_LPAREN object TK_RPAREN
 		| TK_REQNOT TK_LPAREN simpleEntValObject TK_RPAREN
 		| TK_VNODETYPE otherType
+		| TK_FILEMODETYPE TK_MODENUMBER
 		| otherType TK_LPAREN otherType TK_FILTER otherType TK_RPAREN
 		| TK_DEBUGMODE'''
   if len(p) == 2:
