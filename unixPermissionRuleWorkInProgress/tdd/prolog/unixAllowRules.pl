@@ -1,7 +1,3 @@
-:-
-  use_module(library(regex)).
-%  [process_ownership].
-
 %for now I can test by using the process with path "/usr/sbin/BTServer" which runs as mobile
 unixAllow(puid(Puid),pgid(Pgid),coarseOp(Op),file(File)):-
   fileOwnerUserName(ownerUserName(Uowner),filePath(File)),

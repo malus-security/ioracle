@@ -60,4 +60,4 @@ cp $input/prologFacts/dirParents.pl $output
 ./testQueries.sh sandboxExtensions_mach 2> /dev/null
 
 
-
+./testQueries.sh freeRegexFilters 2> /dev/null

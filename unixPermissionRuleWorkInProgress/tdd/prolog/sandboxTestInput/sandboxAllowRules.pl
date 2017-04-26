@@ -53,12 +53,21 @@ satisfyFilters(filters(literal(Literal)),entitlements(Ent),extensions(Ext),home(
 
 %REGEX FILTER
 satisfyFilters(filters(regex(Regex)),entitlements(Ent),extensions(Ext),home(Home),subject(file(SubjectString))):-
-  SubjectString =~ Regex.
+  (
+    (var(SubjectString))
+    ;
+    (nonvar(SubjectString),SubjectString =~ Regex)
+  ).
 
 %SUBPATH FILTER
 satisfyFilters(filters(subpath(Subpath)),entitlements(Ent),extensions(Ext),home(Home),subject(file(SubjectString))):-
   %There is probably a simpler solution, but I just reused this code from sandscout.
-  stringSubPath(Subpath,SubjectString).
+  (
+    (var(SubjectString))
+    ;
+    (nonvar(SubjectString),stringSubPath(Subpath,SubjectString))
+  ).
+  %stringSubPath(Subpath,SubjectString).
 
 %PREFIX FILTER
 satisfyFilters(filters(prefix(variable("HOME"),path(PostPath))),entitlements(Ent),extensions(Ext),home(Home),subject(file(SubjectString))):-
@@ -80,9 +89,19 @@ satisfyFilters(filters(require-not(ReqNotFilter)),entitlements(Ent),extensions(E
 satisfyFilters(filters(global-name(MachName)),entitlements(Ent),extensions(Ext),home(Home),subject(machService(MachName))).
 satisfyFilters(filters(local-name(MachName)),entitlements(Ent),extensions(Ext),home(Home),subject(machService(MachName))).
 satisfyFilters(filters(global-name-regex(Regex)),entitlements(Ent),extensions(Ext),home(Home),subject(machService(SubjectString))):-
-  SubjectString =~ Regex.
+  (
+    (var(SubjectString))
+    ;
+    (nonvar(SubjectString),SubjectString =~ Regex)
+  ).
+  %SubjectString =~ Regex.
 satisfyFilters(filters(local-name-regex(Regex)),entitlements(Ent),extensions(Ext),home(Home),subject(machService(SubjectString))):-
-  SubjectString =~ Regex.
+  (
+    (var(SubjectString))
+    ;
+    (nonvar(SubjectString),SubjectString =~ Regex)
+  ).
+  %SubjectString =~ Regex.
  
   
 stringSubPath(SubPathString,FilePathString):-
