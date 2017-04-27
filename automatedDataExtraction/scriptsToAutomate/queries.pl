@@ -235,7 +235,8 @@ getMetaDataTypes:-
 
 getVnodeTypes:-
   fileType(Type,filePath(File)),
-  processTypes(Type,File).
+  processTypes(Type,File),
+  fail.
 
 processTypes(type("d"),File):-
   write("vnodeType(file(\""),write(File),write("\"),type("),
