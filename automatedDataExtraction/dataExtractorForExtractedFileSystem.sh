@@ -110,6 +110,10 @@ cat $temporaryFiles/selfApplySandbox.pl ./scriptsToAutomate/queries.pl > $tempor
 time ./scriptsToAutomate/runProlog.sh parseSelfAppliedProfiles $temporaryFiles > $temporaryFiles/parsedFilteredSelfAppliers.pl
 rm $temporaryFiles/relevantFacts.pl
 
+cat $extractionDirectory/prologFacts/file_metadata.pl ./scriptsToAutomate/queries.pl > $temporaryFiles/relevantFacts.pl
+time ./scriptsToAutomate/runProlog.sh getVnodeTypes $temporaryFiles > $extractionDirectory/prologFacts/vnodeTypes.pl
+rm $temporaryFiles/relevantFacts.pl
+
 cat $temporaryFiles/profileAssignmentFromEntAndPath.pl $temporaryFiles/parsedFilteredSelfAppliers.pl > $extractionDirectory/prologFacts/processToProfileMapping.pl
 
 #TODO the following is a place holder until we figure out how to extract sandbox extensions
