@@ -1,10 +1,10 @@
 #!/bin/bash
 
+#for each process id number
 for i in `ps -A -o pid=`; do
-	TMP=`./sbtool $i inspect`
-	echo $TMP | grep "Container:"
-	if [ $? == 0 ]; then
-		PID=`echo $TMP | head -1 | tr ' ' '\n' | sed -n -e 2p`
-		echo "$TMP" > ext.$PID
-	fi
+	#run sbtool inspect on it.
+	#suppress errors by sending them to /dev/null
+	#use echo to get all the output for one process onto one line
+	#grep "extensions" only keeps the output for processes that have sandbox extensions
+	echo $(./sbtool $i inspect 2> /dev/null) | grep "extensions ("
 done
