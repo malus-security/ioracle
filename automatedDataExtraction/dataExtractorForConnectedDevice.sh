@@ -20,6 +20,11 @@ mkdir $5
 mkdir $5/fileSystem
 mkdir $5/prologFacts
 
+#we can store binary files in this directory to reduce the chances of clobbering existing files
+mkdir $5/temporaryFiles
+tempDir="/temporaryDirectoryForiOracleExtraction"
+
+
 echo extracting file system
 time ssh -p $port -n $user@$host "tar zcf - $downloadDirectory" > $directoryForOutput/fileSystem.tar.gz
 
@@ -27,10 +32,6 @@ time ssh -p $port -n $user@$host "tar zcf - $downloadDirectory" > $directoryForO
 echo extracting file metadata
 time ssh -p $port $user@$host 'bash -s' < ./scriptsToAutomate/metaDataExtractor.sh $downloadDirectory | sort | uniq > $directoryForOutput/prologFacts/unsanitized_file_metadata.pl
 time ./scriptsToAutomate/sanitizeFilePaths.py $directoryForOutput/prologFacts/unsanitized_file_metadata.pl > $directoryForOutput/prologFacts/file_metadata.pl
-
-#we can store binary files in this directory to reduce that chances of clobbering existing files
-mkdir $5/temporaryFiles
-tempDir="/temporaryDirectoryForiOracleExtraction"
 
 #get process ownership for processes currently running on the iOS device
 #we might want to set up the device such that certain devices are running, but running this naively is still useful.
