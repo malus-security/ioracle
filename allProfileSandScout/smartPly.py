@@ -34,6 +34,7 @@ tokens = [
     'TK_OTHERTYPE',
     'TK_BOOL',
     'TK_REGEXPRESSION',
+    'TK_MODENUMBER',
 ] + list(reserved.values())
 
 # Regular expression rules for simple tokens
@@ -266,10 +267,10 @@ def p_object(p):
 		| otherType otherType TK_FILTER
 		| subpath
 		| prefix
+		| filemode
 		| TK_REQNOT TK_LPAREN object TK_RPAREN
 		| TK_REQNOT TK_LPAREN simpleEntValObject TK_RPAREN
 		| TK_VNODETYPE otherType
-		| TK_FILEMODETYPE TK_MODENUMBER
 		| otherType TK_LPAREN otherType TK_FILTER otherType TK_RPAREN
 		| TK_DEBUGMODE'''
   if len(p) == 2:
@@ -296,6 +297,10 @@ def p_object(p):
     temp = '"'+p[3]+'"'
     p[3] = temp
     p[0] = p[1] +"("+  p[3] +","+ p[4] +","+ p[5] +")"
+
+def p_filemode(p):
+  'filemode : TK_FILEMODETYPE TK_MODENUMBER'
+  p[0] = p[1] +"(\""+ p[2]+ "\")"
 
 def p_subpath(p):
   'subpath	: TK_SUBPATH TK_FILTER'
