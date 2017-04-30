@@ -30,7 +30,10 @@ for fileAccessEntry in $(cat /tmp/filemonRawOutput.txt); do
   if [[ -z $pathToDestinationFile ]]; then
     pathToDestinationFile=`echo No destination`
   fi
+  user=`ps -p $processId -o user | sed -n 2p`
+  groupId=`ps -p $processId -o gid | sed -n 2p | xargs`
+  group=`cat /etc/group | grep $groupId | cut -d ":" -f1`
 
   # Write the facts to file
-  echo "fileAccessObservation(process(\"$pathToProcessExecutable\"),sourceFile(\"$pathToSourceFile\"),destinationFile(\"$pathToDestinationFile\"),operation(\"$operationType\"))."
+  echo "fileAccessObservation(process(\"$pathToProcessExecutable\"),sourceFile(\"$pathToSourceFile\"),destinationFile(\"$pathToDestinationFile\"),operation(\"$operationType\"), user(\"$user\"), group(\"$group\"))."
 done
