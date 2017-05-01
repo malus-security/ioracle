@@ -3,6 +3,9 @@
 #include <unistd.h>
 #include <stdlib.h>
 
+extern int sandbox_extension_consume(const char *token);
+extern char *sandbox_extension_issue_file(const char *ext, const char *path, int reserved, int flags);
+
 int main(int argc, char *argv[]) {
   int rv;
   char *errbuff;
@@ -42,7 +45,8 @@ int main(int argc, char *argv[]) {
     char *token;
     char *token2;
     token = NULL;
-    const char *ext= "com.apple.afc.root";
+    //const char *ext= "com.apple.afc.root";
+    const char *ext= "com.apple.quicklook.readonly";
     //const char *ext= "com.SHOULDFAIL.apple.afc.root";
     //const char *path= "/shouldFail/";
     const char *path= "/";

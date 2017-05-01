@@ -1,0 +1,11 @@
+machFinder.cc is a small program that uses the mach API.
+It uses the function mach_port_names to list the ports a process is using.
+You have to pass in a process id number as an argument when running the program.
+
+The current makefile cross compiles for armv7.
+I don't know why, but if you try the program on an iOS device it segfaults.
+Maybe the mach API is not fully functional on iOS or I am doing something wrong.
+
+The program works on OS X.
+To compile for OS X you can run this on an OS X device:
+gcc machFinder.cc -o osXTest 

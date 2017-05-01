@@ -6,10 +6,10 @@ SDK=/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Devel
 #ARCH=armv7
 ARCH=arm64
 
-SOURCE=tcc.c
+SOURCE=oldschool.c
 
 
 sb1: $(SOURCE)
 
 
-	$(GCC) -arch $(ARCH) -isysroot $(SDK) $(SOURCE) -o tcc.executable
+	$(GCC) -arch $(ARCH) -isysroot $(SDK) $(SOURCE) -o oldschool.executable

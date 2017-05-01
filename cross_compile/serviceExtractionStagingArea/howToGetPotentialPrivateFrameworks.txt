@@ -1,0 +1,2 @@
+grep '/System/Library/PrivateFrameworks/' dyldSegmentsStrings.out | sed s/:.*,/,/ | sed s#,.*/System/Library/PrivateFrameworks/#,# | sed s/\.framework.*$// > frameworksLoadPrivateFrameworks.csv
+

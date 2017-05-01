@@ -1,0 +1,34 @@
+#!/bin/bash
+otool -L "$@" > usedFrameworks.output
+
+#echo "$@"
+
+#I need to be careful how I extract the frameworks here.
+cat usedFrameworks.output | grep '(' | sed s/\ .*// | sed s/.*[/]// > justFrameWorks.out
+
+#I also need to map to potential private frameworks and include them as additional frameworks
+while read p; do
+  grep ^$p, frameworksLoadPrivateFrameworks.csv | sed s/^$p,// >> plusPrivFrameworks.out
+done < justFrameWorks.out
+
+cat justFrameWorks.out >> plusPrivFrameworks.out
+#cat plusPrivFrameworks.out | sort | uniq
+
+while read p; do
+  sqlite3 apps_Frameworks_Services.db "insert into frameworks (app,framework) values ('$@','$p');"
+done < plusPrivFrameworks.out
+
+while read p; do
+  array=(${p//,/ })
+  for i in "${!array[@]}"
+  do
+    if grep -q ${array[i]} plusPrivFrameworks.out; then
+      sqlite3 apps_Frameworks_Services.db "insert into machServices (app,service) values ('$@','${array[0]}');"
+      echo ${array[0]}
+      break
+    fi
+  done
+done < machServicesInSections.csv
+rm usedFrameworks.output
+rm justFrameWorks.out
+rm plusPrivFrameworks.out

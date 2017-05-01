@@ -1,0 +1,11 @@
+(version 1)
+(deny default (with partial-symbolication))
+
+;; Access to ipc-posix-shm and file-read-metadata are only necessary on Mountain Lion.
+(allow ipc-posix-shm-read-data
+    (ipc-posix-name "com.apple.AppleDatabaseChanged")
+    (ipc-posix-name "FNetwork.defaultStorageSession"))
+(allow ipc-posix-shm-write-data
+    (ipc-posix-name "com.apple.AppleDatabaseChanged"))
+(allow system-audit file-read-metadata)
+

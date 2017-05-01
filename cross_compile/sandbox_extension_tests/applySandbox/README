@@ -1,0 +1,20 @@
+I have recorded my thought process the first time I did this in my journal.
+
+This readme is to remind me of how I did this and to help any collaborators.
+
+The first step is decrypting the application we want to sandbox.
+Next, the app is moved into the same directory as system apps where it is not bound by container.
+Then we rename the app and use a shim under the original name.
+This shim calls the sandbox_exec program which wraps the app in a sandbox of our choice.
+
+The Makefile will cross compile a c program to run on an iOS device.
+We may need to change the target architecture depending on the device used.
+The program created is called sandbox_exec.
+
+Each app has a different shim with the right names in it.
+I guess we could make this generic if we wanted to.
+
+The .sb sandbox profile must be placed inside /usr/share/sandbox/ for the system to find it.
+This directory may need to be created if it doesn't exist.
+
+

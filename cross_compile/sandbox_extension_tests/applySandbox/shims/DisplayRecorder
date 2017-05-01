@@ -1,0 +1,5 @@
+#!/bin/bash
+dir=$(dirname "$0")
+exec /sandbox_exec container "${dir}"/DisplayRecorder_ DisplayRecorder
+#exec "${dir}"/DisplayRecorder_
+

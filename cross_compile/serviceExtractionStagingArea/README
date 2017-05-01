@@ -1,0 +1,2 @@
+This is a collection of the scripts and lists I used for determining which mach-services were blocked by Container.
+I placed the lists of allowed, denied, unknown, and all mach-services in the machServiceLists/ directory.

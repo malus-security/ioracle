@@ -1,0 +1,38 @@
+
+#I think this file was being made in /Applications/Xcode.app/Contents/
+
+#I will try to use my own version of gcc, but this one could have been customized…
+GCC=/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc
+
+
+
+
+SDK=/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS5.0.sdk
+
+
+
+
+ARCH=armv6
+
+
+
+
+sb1: sb1.c
+
+
+	$(GCC) -arch $(ARCH) -isysroot $(SDK) sb1.c -o sb1
+
+
+
+
+
+
+	export CODESIGN_ALLOCATE=/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/codesign_allocate 
+
+
+
+
+
+
+
+	codesign -fs "dion" sb1
