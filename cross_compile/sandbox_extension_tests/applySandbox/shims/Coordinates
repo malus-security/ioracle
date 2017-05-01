@@ -1,0 +1,5 @@
+#!/bin/bash
+dir=$(dirname "$0")
+exec /sandbox_exec nointernet "${dir}"/Coordinates_ Coordinates
+#exec "${dir}"/Coordinates_
+
