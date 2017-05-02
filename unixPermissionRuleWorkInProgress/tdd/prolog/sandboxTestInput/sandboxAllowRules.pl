@@ -115,3 +115,23 @@ spath([SPHead|SPTail],[FPHead|FPTail]):-
   SPHead = FPHead,
   spath(SPTail,FPTail).
 
+self_grantable_extensions:-
+  profileRule(profile(Profile),decision("allow"),operation(Op),filters(Filters)),member(extension-class(Ext),Filters),profileRule(profile(Profile),decision("allow"),operation(Op2),filters(Filters2)),member(extension(Ext),Filters2),
+  write("Profile: "),writeln(Profile),
+  write("Extension: "),writeln(Ext),
+  write("Operation1: "),writeln(Op),
+  write("Filters1: "),writeln(Filters),
+  write("Operation2: "),writeln(Op2),
+  write("Filters2: "),writeln(Filters2),
+  writeln(""),
+  fail.
+
+self_grantable_unrestricted_extensions:-
+  profileRule(profile(Profile),decision("allow"),operation(Op),filters([extension-class(Ext)])),profileRule(profile(Profile),decision("allow"),operation(Op2),filters(Filters2)),member(extension(Ext),Filters2),
+  write("Profile: "),writeln(Profile),
+  write("Extension: "),writeln(Ext),
+  write("Operation1: "),writeln(Op),
+  write("Operation2: "),writeln(Op2),
+  write("Filters: "),writeln(Filters2),
+  writeln(""),
+  fail.
