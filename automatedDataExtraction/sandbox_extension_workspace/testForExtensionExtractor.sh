@@ -1,6 +1,5 @@
 #!/bin/bash
-#needs to run as root because file permissions on files extracted from iOS device will be preserved.
-#I'm assuming the person running this script has a jailbroken device that can be connected to over ssh.
+#I'm assuming the person running this script has a jailbroken device that is connected to over ssh.
 
 if test $# -ne 5; then
 	echo "Usage: $0 userOniOSDevice hostOfiOSdevice portForiOSDevice directoryToDownload directoryForOutput" 1>&2
@@ -17,15 +16,18 @@ directoryForOutput="$5"
 
 rm -rf ./$5
 mkdir $5
+#not all of these are relevant in this test.
+#it was copied from the dataExtractorForConnectedDevice.sh
 mkdir $5/fileSystem
 mkdir $5/prologFacts
 mkdir $5/temporaryFiles
 tempDir="/temporaryDirectoryForiOracleExtraction"
 
-
-#get process ownership for processes currently running on the iOS device
-#we might want to set up the device such that certain devices are running, but running this naively is still useful.
-scp -q -P $port ./utilities/sbtool64 $user@$host:$tempDir/sbtool64
+#load the sbtool executable onto the iOS device and store it in a temporary directory so it doesn't overwrite anything sensitive.
+scp -q -P $port sbtool64 $user@$host:$tempDir/sbtool64
 echo extracting sandbox extension data
-time ssh -p $port $user@$host 'bash -s' < ./scriptsToAutomate/sbtool_ext.sh > $directoryForOutput/temporaryFiles/raw_sandbox_extensions.out
+#run the sbtool_ext.sh which tells the iOS device to run sbtool on each process id number.
+#it will also do some filtering of the results, but the resulting data still needs to be converted to prolog facts by parse_sandbox_extensions.py.
+#results of sbtool_ext.sh are stored in raw_sandbox_extensions.out
+time ssh -p $port $user@$host 'bash -s' < sbtool_ext.sh > $directoryForOutput/temporaryFiles/raw_sandbox_extensions.out
 

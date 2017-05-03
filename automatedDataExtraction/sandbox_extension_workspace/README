@@ -1,0 +1,39 @@
+Summary of files:
+  sbtool64 
+    this is levin's sbtool executable. 
+    I named it sbtool64, but we could call it anything.
+    sbtool outputs sandbox extensions when it's run with the inspect option. For example:
+    ./sbtool 113 inspect
+    will output all the sandbox information (including sandbox extensions) for pid 113.
+    the inspect option only seems to work on iOS 9.3 and higher.
+
+  sbtool_ext.sh
+    runs sbtool on each pid and filters output
+
+  testForExtensionExtractor.sh
+    automates deploying sbtool to an iOS device and running sbtool_ext.sh
+    we may not need this anymore after integrating sbtool with costin's dynamic analysis scripts.
+    usage example:
+      ./testForExtensionExtractor.sh root localhost 2222 / output_directory_for_extensions
+
+  parse_sandbox_extensions.py
+    python script that parses output of sbtool_ext.sh into prolog facts
+    it currently uses pid numbers instead of executable file paths. We need to change this so the facts show executable paths instead of pid numbers.
+    usage example:
+      ./parse_sandbox_extensions.py output_directory_for_extensions/temporaryFiles/raw_sandbox_extensions.out
+            
+
+Remaining TODOs:
+  we need to run sbtool more often than just once.
+  Sandbox extensions change over time, and some processes might only run under certain conditions.
+  For example, neagent only seems to run if you have a vpn set up on the device (I recommend using the X-VPN app for testing), but it gets extensions when it runs.
+  We need to run this multiple times for all the same reasons we need to map running processes to their users multiple times.
+  Please run sbtool on processes as you check to see which user and group each process runs as.
+
+  sbtool outputs pid numbers instead of paths to process executables.
+  filemon seems to have a similar issue.
+  We will need to replace the pid numbers with paths to the respective process executables for iOracle to work properly.
+
+     
+    
+
