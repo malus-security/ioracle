@@ -13,6 +13,7 @@ port="$3"
 directoryForOutput="$4"
 
 tempDir="/temporaryDirectoryForiOracleExtraction"
+ssh -p $port $user@$host mkdir $tempDir 2> /dev/null
 
 #load the sbtool executable onto the iOS device and store it in a temporary directory so it doesn't overwrite anything sensitive.
 scp -q -P $port ./filemon/filemon $user@$host:$tempDir/filemon

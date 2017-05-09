@@ -4,4 +4,4 @@
 rm /tmp/filemon/iOracle.out
 
 #store data in tmp to protect ourselves from filling disk and breaking device.
-/temporaryDirectoryForiOracleExtraction/filemon > /tmp/filemon/iOracle.out
+/temporaryDirectoryForiOracleExtraction/filemon > /temporaryDirectoryForiOracleExtraction/iOracle.out
