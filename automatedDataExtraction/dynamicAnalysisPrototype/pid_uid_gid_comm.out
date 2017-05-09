@@ -1,0 +1,499 @@
+    1     0     0 /sbin/launchd
+   21     0     0 /usr/sbin/syslogd
+   42     0     0 /usr/libexec/logd
+   93     0     0 /System/Library/PrivateFrameworks/MobileInstallation.framework/XPCServices/com.apple.MobileInstallationHelperService.xpc/com.apple.MobileInstallationHelperService
+  111   501   501 /System/Library/PrivateFrameworks/IMDPersistence.framework/XPCServices/IMDPersistenceAgent.xpc/IMDPersistenceAgent
+  155   501   501 /System/Library/PrivateFrameworks/Accessibility.framework/Frameworks/AXHearingSupport.framework/XPCServices/heard.xpc/heard
+  231     0     0 /usr/local/bin/dropbear
+  232     0     0 ps
+  246     0     0 /usr/local/bin/dropbear
+  252   501   501 /usr/sbin/mediaserverd
+  253     0     0 /usr/libexec/fseventsd
+  254   501   501 /usr/sbin/fairplayd.O2
+  255   501   501 /System/Library/PrivateFrameworks/AssistantServices.framework/assistantd
+  256   501   501 /System/Library/PrivateFrameworks/FileProvider.framework/Support/fileproviderd
+  257   501   501 /usr/libexec/routined
+  259   501   501 /System/Library/PrivateFrameworks/MediaRemote.framework/Support/mediaremoted
+  260     0     0 /usr/libexec/misd
+  261   501   501 /System/Library/Frameworks/HealthKit.framework/healthd
+  262     0     0 /usr/libexec/configd
+  264     0     0 /System/Library/CoreServices/powerd.bundle/powerd
+  266   501   501 /usr/libexec/atc
+  268     0     0 /usr/sbin/wifid
+  270     0     0 /usr/libexec/keybagd
+  271   501   501 /System/Library/PrivateFrameworks/FamilyNotification.framework/familynotificationd
+  273    33    33 /usr/libexec/installd
+  275   501   501 /System/Library/PrivateFrameworks/IDS.framework/identityservicesd.app/identityservicesd
+  277   501   501 /System/Library/PrivateFrameworks/TouchRemote.framework/Support/touchsetupd
+  278     0     0 /System/Library/CoreServices/AppleIDAuthAgent
+  279   501   501 /System/Library/Frameworks/AssetsLibrary.framework/Support/assetsd
+  280   501   501 /System/Library/CoreServices/SpringBoard.app/SpringBoard
+  281   501   501 /usr/sbin/wirelessproxd
+  282   501   501 /usr/libexec/backboardd
+  283   501   501 /System/Library/PrivateFrameworks/AskPermission.framework/askpermissiond
+  284   501   501 /usr/libexec/timed
+  285   501   501 /usr/libexec/sharingd
+  286     0     0 /usr/libexec/locationd
+  287   501   501 /usr/sbin/BTServer
+  288   501   501 /System/Library/PrivateFrameworks/IMCore.framework/imagent.app/imagent
+  289     0     0 /usr/libexec/assertiond
+  290   501   501 /usr/libexec/tipsd
+  292     0     0 /usr/libexec/UserEventAgent
+  294     0     0 /usr/libexec/lockdownd
+  295   501   501 /System/Library/PrivateFrameworks/IAP.framework/Support/iaptransportd
+  300    25    25 /System/Library/Frameworks/CoreTelephony.framework/Support/CommCenter
+  301     0     0 /usr/sbin/notifyd
+  302     0     0 /usr/sbin/cfprefsd
+  303   501   501 /usr/libexec/lockbot
+  304   241   241 /usr/sbin/distnoted
+  305   501   501 /usr/libexec/lsd
+  306    25    25 /System/Library/PrivateFrameworks/WirelessDiagnostics.framework/Support/awdd
+  307     0     0 /System/Library/PrivateFrameworks/MobileContainerManager.framework/Support/containermanagerd
+  309    64    64 /usr/libexec/securityd
+  310   501   501 /System/Library/PrivateFrameworks/TCC.framework/tccd
+  311   501   501 /usr/libexec/coreduetd
+  312   501   501 /System/Library/PrivateFrameworks/TelephonyUtilities.framework/callservicesd
+  314     0     0 /usr/libexec/nehelper
+  315   501   501 /usr/sbin/WirelessRadioManagerd
+  316   501   501 /System/Library/Frameworks/Accounts.framework/accountsd
+  317   501   501 /System/Library/PrivateFrameworks/ApplePushService.framework/apsd
+  318     0     0 /System/Library/Frameworks/Security.framework/CloudKeychainProxy.bundle/CloudKeychainProxy
+  319     0     0 /usr/libexec/pfd
+  320    65    65 /usr/sbin/mDNSResponder
+  321   501   501 /usr/sbin/BlueTool
+  322   501   501 /usr/libexec/MobileGestaltHelper
+  324   501   501 /System/Library/PrivateFrameworks/MusicLibrary.framework/Support/medialibraryd
+  326   501   501 /usr/libexec/nsurlsessiond
+  328   501   501 /usr/libexec/DuetHeuristic-BM
+  329   501   501 /System/Library/CoreServices/EscrowSecurityAlert.app/EscrowSecurityAlert
+  330   501   501 /usr/libexec/mobileactivationd
+  331     0     0 /usr/libexec/OTATaskingAgent
+  332    24    24 /usr/libexec/symptomsd
+  333   501   501 /System/Library/PrivateFrameworks/iTunesStore.framework/Support/itunesstored
+  334   501   501 /System/Library/PrivateFrameworks/CoreParsec.framework/parsecd
+  336   501   501 /usr/libexec/nsurlstoraged
+  337     0     0 /usr/libexec/hangtracerd
+  338   501   501 /usr/libexec/misagent
+  340   501   501 /System/Library/PrivateFrameworks/AppStoreDaemon.framework/appstored.bundle/appstored
+  341   501   501 /System/Library/PrivateFrameworks/CalendarDaemon.framework/Support/calaccessd
+  342   501   501 /usr/libexec/fmflocatord
+  343   501   501 /usr/libexec/findmydeviced
+  344   501   501 /System/Library/PrivateFrameworks/AuthKit.framework/akd
+  345     0     0 /usr/libexec/pkd
+  346   501   501 /System/Library/PrivateFrameworks/GeoServices.framework/geod
+  347   501   501 /System/Library/PrivateFrameworks/MapsSupport.framework/mapspushd
+  348   501   501 /System/Library/PrivateFrameworks/StoreBookkeeperClient.framework/Support/storebookkeeperd
+  349   501   501 /System/Library/TextInput/kbd
+  350   501   501 /System/Library/PrivateFrameworks/DataAccess.framework/Support/dataaccessd
+  351   501   501 /usr/libexec/limitadtrackingd
+  352   501   501 /System/Library/PrivateFrameworks/CallHistory.framework/Support/CallHistorySyncHelper
+  353     0     0 /usr/sbin/mDNSResponderHelper
+  354   258   258 /usr/libexec/captiveagent
+  355   501   501 /System/Library/PrivateFrameworks/CloudKitDaemon.framework/Support/cloudd
+  356   501   501 /System/Library/PrivateFrameworks/HomeSharing.framework/Support/itunescloudd
+  357   501   501 /System/Library/PrivateFrameworks/HomeKitDaemon.framework/Support/homed
+  358   501   501 /System/Library/PrivateFrameworks/iCloudNotification.framework/ind
+  359   501   501 /System/Library/PrivateFrameworks/PassKitCore.framework/passd
+  360   501   501 /usr/libexec/fmfd
+  361   501   501 /System/Library/PrivateFrameworks/CloudDocsDaemon.framework/bird
+  362     0     0 /usr/libexec/pipelined
+  363   501   501 /usr/libexec/adid
+  364   501   501 /System/Library/PrivateFrameworks/ManagedConfiguration.framework/Support/profiled
+  365     0     0 /System/Library/Frameworks/Security.framework/IDSKeychainSyncingProxy.bundle/IDSKeychainSyncingProxy
+  367     0     0 /usr/libexec/mobileassetd
+  368   501   501 /System/Library/PrivateFrameworks/UserActivity.framework/Agents/useractivityd
+  369   501   501 /usr/libexec/duetexpertd
+  371   501   501 /System/Library/PrivateFrameworks/CommunicationsFilter.framework/CMFSyncAgent.app/CMFSyncAgent
+  373   501   501 /System/Library/PrivateFrameworks/Pasteboard.framework/Support/pasted
+  374     0     0 /usr/sbin/filecoordinationd
+  375   501   501 /System/Library/PrivateFrameworks/CoreFollowUp.framework/followupd
+  376   501   501 /usr/libexec/webbookmarksd
+  377   501   501 /System/Library/PrivateFrameworks/UIFoundation.framework/XPCServices/com.apple.uifoundation-bundle-helper.xpc/com.apple.uifoundation-bundle-helper
+  378   501   501 /System/Library/PrivateFrameworks/SoftwareUpdateServices.framework/Support/softwareupdateservicesd
+  379   501   501 /System/Library/PrivateFrameworks/CacheDelete.framework/deleted
+  380   501   501 /Applications/MobileMail.app/MobileMail
+  381   501   501 /System/Library/PrivateFrameworks/CloudDocsDaemon.framework/XPCServices/ContainerMetadataExtractor.xpc/ContainerMetadataExtractor
+  382   501   501 /System/Library/PrivateFrameworks/Search.framework/searchd
+  383   501   501 /Applications/News.app/PlugIns/NewsToday.appex/NewsToday
+  385   501   501 /System/Library/PrivateFrameworks/AssistantServices.framework/assistant_service
+  387   501   501 /System/Library/Frameworks/CallKit.framework/XPCServices/com.apple.CallKit.CallDirectory.xpc/com.apple.CallKit.CallDirectory
+  388   501   501 /System/Library/PrivateFrameworks/CoreSuggestions.framework/suggestd
+  389   501   501 /usr/sbin/absd
+  392   501   501 /Applications/ServerDocuments.app/PlugIns/ServerFileProvider.appex/ServerFileProvider
+  507   501   501 /System/Library/PrivateFrameworks/Accessibility.framework/Frameworks/AccessibilityUI.framework/XPCServices/com.apple.accessibility.AccessibilityUIServer.xpc/com.apple.accessibility.AccessibilityUIServer
+  512   501   501 /System/Library/PrivateFrameworks/AssistantServices.framework/XPCServices/com.apple.siri.ClientFlow.ClientScripter.xpc/com.apple.siri.ClientFlow.ClientScripter
+  515   501   501 /System/Library/PrivateFrameworks/PhotoAnalysis.framework/Support/photoanalysisd
+  516     0     0 /usr/libexec/online-auth-agent
+  519   501   501 /System/Library/PrivateFrameworks/AssetCacheServices.framework/XPCServices/AssetCacheLocatorService.xpc/AssetCacheLocatorService
+  523   501   501 /System/Library/Frameworks/Metal.framework/XPCServices/MTLCompilerService.xpc/MTLCompilerService
+  526     0     0 /usr/libexec/mmaintenanced
+  527   501   501 /Applications/Weather.app/PlugIns/WeatherAppTodayWidget.appex/WeatherAppTodayWidget
+  528   501   501 /System/Library/PrivateFrameworks/UpNextWidget.framework/PlugIns/UpNext.appex/UpNext
+  532   501   501 /usr/libexec/afcd
+  535   501   501 /usr/libexec/mobile_assertion_agent
+  537   501   501 /usr/libexec/mobile_installation_proxy
+  538   501   501 /usr/libexec/notification_proxy
+  540   501   501 /System/Library/CoreServices/CacheDeleteITunesStore
+  541     0     0 /System/Library/PrivateFrameworks/GenerationalStorage.framework/revisiond
+  542   501   501 /System/Library/PrivateFrameworks/QuickLookThumbnailing.framework/Support/com.apple.quicklook.ThumbnailsAgent
+  543     0     0 /System/Library/PrivateFrameworks/CoreSymbolication.framework/coresymbolicationd
+  544     0     0 aslmanager
+  545   501   501 /System/Library/CoreServices/CacheDeleteAppContainerCaches
+  546   501   501 /usr/libexec/replayd
+  564   501   501 /Applications/AppStore.app/AppStore
+  566   501   501 /System/Library/PrivateFrameworks/FamilyCircle.framework/familycircled
+  567   501   501 /System/Library/PrivateFrameworks/StreamingZip.framework/XPCServices/com.apple.StreamingUnzipService.xpc/com.apple.StreamingUnzipService
+  569   501   501 /usr/libexec/swcd
+  571     0     0 /usr/libexec/diagnosticd
+  575     0     0 /usr/libexec/nesessionmanager
+  581   501   501 /usr/sbin/BTLEServer
+  588   501   501 /usr/libexec/splashboardd
+  596   501   501 /System/Library/Frameworks/MediaAccessibility.framework/XPCServices/com.apple.accessibility.mediaaccessibilityd.xpc/com.apple.accessibility.mediaaccessibilityd
+  598     0     0 /System/Library/Frameworks/LocalAuthentication.framework/Support/coreauthd
+  599   501   501 /Developer/usr/libexec/neagent
+  611     0     0 /usr/sbin/spindump
+  613   501   501 /System/Library/PrivateFrameworks/CloudServices.framework/XPCServices/com.apple.sbd.xpc/com.apple.sbd
+  PID   UID   GID COMM
+ 1146     0     0 /usr/local/bin/dropbear
+ 1147     0     0 ps
+ 1915     0     0 /usr/local/bin/dropbear
+ 1916     0     0 ps
+ 2020   501   501 /System/Library/PrivateFrameworks/CoreRecents.framework/recentsd
+ 2022   501   501 /Applications/Preferences.app/Preferences
+ 2023   501   501 /System/Library/Frameworks/VideoSubscriberAccount.framework/XPCServices/com.apple.VideoSubscriberAccount.DeveloperService.xpc/com.apple.VideoSubscriberAccount.DeveloperService
+ 2030   501   501 /System/Library/CoreServices/CacheDeleteDaily
+ 2031   501   501 /Applications/Contacts.app/PlugIns/ContactsCoreSpotlightExtension.appex/ContactsCoreSpotlightExtension
+ 2050   501   501 /System/Library/PrivateFrameworks/ProtectedCloudStorage.framework/Helpers/ProtectedCloudKeySyncing
+ 2067     0     0 /usr/libexec/microstackshot
+ 2082    64    64 /usr/libexec/OTAPKIAssetTool
+ 2185   501   501 /usr/libexec/ptpd
+ 2190   501   501 /System/Library/PrivateFrameworks/VoiceServices.framework/Support/voiced
+ 2199   501   501 /Applications/Cydia.app/Cydia
+ 2211   501   501 /System/Library/Frameworks/Metal.framework/XPCServices/MTLCompilerService.xpc/MTLCompilerService
+ 2212   501   501 /System/Library/Frameworks/Metal.framework/XPCServices/MTLCompilerService.xpc/MTLCompilerService
+ 2238   501   501 /System/Library/PrivateFrameworks/AggregateDictionary.framework/Support/aggregated
+ 2250     0     0 /usr/local/bin/dropbear
+ 2251     0     0 -sh
+ 2277   501   501 /System/Library/PrivateFrameworks/AGXCompilerConnection.framework/XPCServices/AGXCompilerService.xpc/AGXCompilerService
+ 2278   501   501 /System/Library/PrivateFrameworks/CloudPhotoServices.framework/Support/CloudPhotoDerivativeGenerator
+ 2279   501   501 /System/Library/Frameworks/Metal.framework/XPCServices/MTLCompilerService.xpc/MTLCompilerService
+ 2280   501   501 /System/Library/Frameworks/Metal.framework/XPCServices/MTLCompilerService.xpc/MTLCompilerService
+ 2285   501   501 /Applications/InCallService.app/InCallService
+ 2297   501   501 /System/Library/PrivateFrameworks/AGXCompilerConnection.framework/XPCServices/AGXCompilerService.xpc/AGXCompilerService
+ 2298   501   501 /System/Library/PrivateFrameworks/StreamingZip.framework/XPCServices/com.apple.StreamingUnzipService.xpc/com.apple.StreamingUnzipService
+ 2320   501   501 /Applications/FaceTime.app/FaceTime
+ 2708     0     0 /usr/local/bin/dropbear
+ 2709     0     0 ps
+ 3477     0     0 /usr/local/bin/dropbear
+ 3478     0     0 ps
+ 3787     0     0 /usr/local/bin/dropbear
+ 3788     0     0 ps
+ 3791     0     0 /usr/local/bin/dropbear
+ 3792     0     0 ps
+ 3795     0     0 /usr/local/bin/dropbear
+ 3796     0     0 ps
+ 3799     0     0 /usr/local/bin/dropbear
+ 3800     0     0 ps
+ 3803     0     0 /usr/local/bin/dropbear
+ 3804     0     0 ps
+ 4246     0     0 /usr/local/bin/dropbear
+ 4247     0     0 ps
+ 4530     0     0 /usr/local/bin/dropbear
+ 4531     0     0 ps
+ 5015     0     0 /usr/local/bin/dropbear
+ 5016     0     0 ps
+ 5257     0     0 /usr/local/bin/dropbear
+ 5258     0     0 ps
+ 5784     0     0 /usr/local/bin/dropbear
+ 5785     0     0 ps
+ 5984     0     0 /usr/local/bin/dropbear
+ 5985     0     0 ps
+ 6553     0     0 /usr/local/bin/dropbear
+ 6554     0     0 ps
+ 6713     0     0 /usr/local/bin/dropbear
+ 6714     0     0 ps
+ 7322     0     0 /usr/local/bin/dropbear
+ 7323     0     0 ps
+ 7440     0     0 /usr/local/bin/dropbear
+ 7441     0     0 ps
+ 8091     0     0 /usr/local/bin/dropbear
+ 8092     0     0 ps
+ 8165     0     0 /usr/local/bin/dropbear
+ 8166     0     0 ps
+ 8860     0     0 /usr/local/bin/dropbear
+ 8861     0     0 ps
+ 8890     0     0 /usr/local/bin/dropbear
+ 8891     0     0 ps
+ 9615     0     0 /usr/local/bin/dropbear
+ 9616     0     0 ps
+ 9629     0     0 /usr/local/bin/dropbear
+ 9630     0     0 ps
+10340     0     0 /usr/local/bin/dropbear
+10341     0     0 ps
+10398     0     0 /usr/local/bin/dropbear
+10399     0     0 ps
+11065     0     0 /usr/local/bin/dropbear
+11066     0     0 ps
+11167     0     0 /usr/local/bin/dropbear
+11168     0     0 ps
+11790     0     0 /usr/local/bin/dropbear
+11791     0     0 ps
+11936     0     0 /usr/local/bin/dropbear
+11937     0     0 ps
+12515     0     0 /usr/local/bin/dropbear
+12516     0     0 ps
+12705     0     0 /usr/local/bin/dropbear
+12706     0     0 ps
+12708     0     0 bash
+13178     0     0 /usr/local/bin/dropbear
+13203     0     0 ps
+13208     0     0 (bash)
+13209     0     0 (bash)
+13210     0     0 (bash)
+13240     0     0 /usr/local/bin/dropbear
+13241     0     0 ps
+13965     0     0 /usr/local/bin/dropbear
+13966     0     0 ps
+14690     0     0 /usr/local/bin/dropbear
+14691     0     0 ps
+15415     0     0 /usr/local/bin/dropbear
+15416     0     0 ps
+16140     0     0 /usr/local/bin/dropbear
+16141     0     0 ps
+16865     0     0 /usr/local/bin/dropbear
+16866     0     0 ps
+17590     0     0 /usr/local/bin/dropbear
+17591     0     0 ps
+18315     0     0 /usr/local/bin/dropbear
+18316     0     0 ps
+19040     0     0 /usr/local/bin/dropbear
+19041     0     0 ps
+19765     0     0 /usr/local/bin/dropbear
+19766     0     0 ps
+20490     0     0 /usr/local/bin/dropbear
+20491     0     0 ps
+21215     0     0 /usr/local/bin/dropbear
+21216     0     0 ps
+21940     0     0 /usr/local/bin/dropbear
+21941     0     0 ps
+22665     0     0 /usr/local/bin/dropbear
+22666     0     0 ps
+23390     0     0 /usr/local/bin/dropbear
+23391     0     0 ps
+23921     0     0 /usr/local/bin/dropbear
+23950     0     0 bash
+23964     0     0 /temporaryDirectoryForiOracleExtraction/filemon
+24121     0     0 /usr/local/bin/dropbear
+24122     0     0 ps
+24231   501   501 OTACrashCopier
+24859     0     0 /usr/local/bin/dropbear
+24860     0     0 ps
+25600     0     0 /usr/local/bin/dropbear
+25601     0     0 ps
+26341     0     0 /usr/local/bin/dropbear
+26342     0     0 ps
+26344   501   501 /var/containers/Bundle/Application/25577A9B-A433-4758-A163-EEE650365119/Snaps Starbucks Keyboard.app/Snaps Starbucks Keyboard
+27083     0     0 /usr/local/bin/dropbear
+27084     0     0 ps
+27824     0     0 /usr/local/bin/dropbear
+27825     0     0 ps
+28565     0     0 /usr/local/bin/dropbear
+28566     0     0 ps
+29306     0     0 /usr/local/bin/dropbear
+29307     0     0 ps
+30047     0     0 /usr/local/bin/dropbear
+30048     0     0 ps
+30060   501   501 /Applications/MobileSlideShow.app/MobileSlideShow
+30101   501   501 /System/Library/PrivateFrameworks/MediaStream.framework/Support/mstreamd
+30498   501   501 /System/Library/PrivateFrameworks/AGXCompilerConnection.framework/XPCServices/AGXCompilerService.xpc/AGXCompilerService
+30791     0     0 /usr/local/bin/dropbear
+30792     0     0 ps
+31544     0     0 /usr/local/bin/dropbear
+31545     0     0 ps
+32297     0     0 /usr/local/bin/dropbear
+32298     0     0 ps
+32833   501   501 /Applications/News.app/News
+33051     0     0 /usr/local/bin/dropbear
+33052     0     0 ps
+33808     0     0 /usr/local/bin/dropbear
+33809     0     0 ps
+34565     0     0 /usr/local/bin/dropbear
+34566     0     0 ps
+35322     0     0 /usr/local/bin/dropbear
+35323     0     0 ps
+36079     0     0 /usr/local/bin/dropbear
+36080     0     0 ps
+36836     0     0 /usr/local/bin/dropbear
+36837     0     0 ps
+37593     0     0 /usr/local/bin/dropbear
+37594     0     0 ps
+38350     0     0 /usr/local/bin/dropbear
+38351     0     0 ps
+38743   501   501 /Applications/AdSheet.app/AdSheet
+38832   501   501 /System/Library/Frameworks/Metal.framework/XPCServices/MTLCompilerService.xpc/MTLCompilerService
+38833   501   501 /System/Library/Frameworks/Metal.framework/XPCServices/MTLCompilerService.xpc/MTLCompilerService
+39106     0     0 /usr/local/bin/dropbear
+39107     0     0 ps
+39871     0     0 /usr/local/bin/dropbear
+39872     0     0 ps
+40636     0     0 /usr/local/bin/dropbear
+40637     0     0 ps
+41401     0     0 /usr/local/bin/dropbear
+41402     0     0 ps
+42166     0     0 /usr/local/bin/dropbear
+42167     0     0 ps
+42931     0     0 /usr/local/bin/dropbear
+42932     0     0 ps
+43696     0     0 /usr/local/bin/dropbear
+43697     0     0 ps
+44461     0     0 /usr/local/bin/dropbear
+44462     0     0 ps
+45142   501   501 /Applications/Home.app/Home
+45144   501   501 /System/Library/Frameworks/Metal.framework/XPCServices/MTLCompilerService.xpc/MTLCompilerService
+45145   501   501 /System/Library/Frameworks/Metal.framework/XPCServices/MTLCompilerService.xpc/MTLCompilerService
+45147     0     0 /System/Library/CoreServices/ReportCrash
+45230     0     0 /usr/local/bin/dropbear
+45231     0     0 ps
+46007     0     0 /usr/local/bin/dropbear
+46008     0     0 ps
+46784     0     0 /usr/local/bin/dropbear
+46785     0     0 ps
+47561     0     0 /usr/local/bin/dropbear
+47562     0     0 ps
+48338     0     0 /usr/local/bin/dropbear
+48339     0     0 ps
+49115     0     0 /usr/local/bin/dropbear
+49116     0     0 ps
+49892     0     0 /usr/local/bin/dropbear
+49893     0     0 ps
+50669     0     0 /usr/local/bin/dropbear
+50670     0     0 ps
+51446     0     0 /usr/local/bin/dropbear
+51447     0     0 ps
+52223     0     0 /usr/local/bin/dropbear
+52224     0     0 ps
+53000     0     0 /usr/local/bin/dropbear
+53001     0     0 ps
+53778     0     0 /usr/local/bin/dropbear
+53779     0     0 ps
+53856     0     0 /usr/libexec/BackupAgent2
+53939     0     0 /System/Library/PrivateFrameworks/MobileBackup.framework/backupd
+54037   501   501 /usr/libexec/symptomsd-diag
+54559     0     0 /usr/local/bin/dropbear
+54560     0     0 ps
+55348     0     0 /usr/local/bin/dropbear
+55349     0     0 ps
+56125     0     0 /usr/local/bin/dropbear
+56126     0     0 ps
+56902     0     0 /usr/local/bin/dropbear
+56903     0     0 ps
+57679     0     0 /usr/local/bin/dropbear
+57680     0     0 ps
+58457     0     0 /usr/local/bin/dropbear
+58458     0     0 ps
+59234     0     0 /usr/local/bin/dropbear
+59235     0     0 ps
+60012     0     0 /usr/local/bin/dropbear
+60013     0     0 ps
+60790     0     0 /usr/local/bin/dropbear
+60791     0     0 ps
+61567     0     0 /usr/local/bin/dropbear
+61568     0     0 ps
+62345     0     0 /usr/local/bin/dropbear
+62346     0     0 ps
+63122     0     0 /usr/local/bin/dropbear
+63123     0     0 ps
+63905     0     0 /usr/local/bin/dropbear
+63906     0     0 ps
+64678     0     0 /usr/local/bin/dropbear
+64679     0     0 ps
+65451     0     0 /usr/local/bin/dropbear
+65452     0     0 ps
+66224     0     0 /usr/local/bin/dropbear
+66225     0     0 ps
+66997     0     0 /usr/local/bin/dropbear
+66998     0     0 ps
+67770     0     0 /usr/local/bin/dropbear
+67771     0     0 ps
+68543     0     0 /usr/local/bin/dropbear
+68544     0     0 ps
+69316     0     0 /usr/local/bin/dropbear
+69317     0     0 ps
+70089     0     0 /usr/local/bin/dropbear
+70090     0     0 ps
+70862     0     0 /usr/local/bin/dropbear
+70863     0     0 ps
+71635     0     0 /usr/local/bin/dropbear
+71636     0     0 ps
+72408     0     0 /usr/local/bin/dropbear
+72409     0     0 ps
+73181     0     0 /usr/local/bin/dropbear
+73182     0     0 ps
+73954     0     0 /usr/local/bin/dropbear
+73955     0     0 ps
+74727     0     0 /usr/local/bin/dropbear
+74728     0     0 ps
+75500     0     0 /usr/local/bin/dropbear
+75501     0     0 ps
+76273     0     0 /usr/local/bin/dropbear
+76274     0     0 ps
+77046     0     0 /usr/local/bin/dropbear
+77047     0     0 ps
+77819     0     0 /usr/local/bin/dropbear
+77820     0     0 ps
+78592     0     0 /usr/local/bin/dropbear
+78593     0     0 ps
+79365     0     0 /usr/local/bin/dropbear
+79366     0     0 ps
+80134     0     0 /usr/local/bin/dropbear
+80135     0     0 ps
+80903     0     0 /usr/local/bin/dropbear
+80904     0     0 ps
+81672     0     0 /usr/local/bin/dropbear
+81673     0     0 ps
+82441     0     0 /usr/local/bin/dropbear
+82442     0     0 ps
+83210     0     0 /usr/local/bin/dropbear
+83211     0     0 ps
+83979     0     0 /usr/local/bin/dropbear
+83980     0     0 ps
+84748     0     0 /usr/local/bin/dropbear
+84749     0     0 ps
+85517     0     0 /usr/local/bin/dropbear
+85518     0     0 ps
+86286     0     0 /usr/local/bin/dropbear
+86287     0     0 ps
+87055     0     0 /usr/local/bin/dropbear
+87056     0     0 ps
+87824     0     0 /usr/local/bin/dropbear
+87825     0     0 ps
+88593     0     0 /usr/local/bin/dropbear
+88594     0     0 ps
+89362     0     0 /usr/local/bin/dropbear
+89363     0     0 ps
+90131     0     0 /usr/local/bin/dropbear
+90132     0     0 ps
+90900     0     0 /usr/local/bin/dropbear
+90901     0     0 ps
+91669     0     0 /usr/local/bin/dropbear
+91670     0     0 ps
+92438     0     0 /usr/local/bin/dropbear
+92439     0     0 ps
+93207     0     0 /usr/local/bin/dropbear
+93208     0     0 ps
+93976     0     0 /usr/local/bin/dropbear
+93977     0     0 ps
+94745     0     0 /usr/local/bin/dropbear
+94746     0     0 ps
+95514     0     0 /usr/local/bin/dropbear
+95515     0     0 ps
+96283     0     0 /usr/local/bin/dropbear
+96284     0     0 ps
+97052     0     0 /usr/local/bin/dropbear
+97053     0     0 ps
+97821     0     0 /usr/local/bin/dropbear
+97822     0     0 ps
+98590     0     0 /usr/local/bin/dropbear
+98591     0     0 ps
+99359     0     0 /usr/local/bin/dropbear
+99360     0     0 ps
