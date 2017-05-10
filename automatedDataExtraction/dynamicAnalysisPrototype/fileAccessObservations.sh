@@ -55,9 +55,7 @@ for fileAccessEntry in $(cat iOracle.out); do
   if [[ -z $pathToDestinationFile ]]; then
     pathToDestinationFile=`echo No destination`
   fi
-  user=`cat pid_uid_gid_comm.out | grep -w $processId | awk '{print $2}'`
-  group=`cat pid_uid_gid_comm.out | grep -w $processId | awk '{print $3}'`
 
   # Write the facts to file
-  echo "fileAccessObservation(process(\"$pathToProcessExecutable\"),sourceFile(\"$pathToSourceFile\"),destinationFile(\"$pathToDestinationFile\"),operation(\"$operationType\"), user(\"$user\"), group(\"$group\"))."
+  echo "fileAccessObservation(process(\"$pathToProcessExecutable\"),sourceFile(\"$pathToSourceFile\"),destinationFile(\"$pathToDestinationFile\"),operation(\"$operationType\"))."
 done
