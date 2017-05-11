@@ -5,7 +5,7 @@ getAttributes(process(Process),entitlements(Ent),extensions(Ext),user(User),home
   %processProfile(filePath(Process),profile(Profile)),
   usesSandbox(processPath(Process),profile(Profile),_),
   processOwnership(uid(User),_,comm(Process)),
-  findall(X,sandboxExtension(process(Process),X),Ext),
+  findall(X,sandbox_extension(process(Process),X),Ext),
   findall(Y,processEntitlement(filePath(Process),Y),Ent),
   %home(user(User),filePath(Home)).
   user(_,_,userID(User),_,_,homeDirectory(Home),_).

@@ -58,6 +58,6 @@ cp $input/prologFacts/dirParents.pl $output
 #./testQueries.sh extensionFilters 2> /dev/null
 ./testQueries.sh sandboxExtensions_files 2> /dev/null
 ./testQueries.sh sandboxExtensions_mach 2> /dev/null
-
-
 ./testQueries.sh freeRegexFilters 2> /dev/null
+
+
