@@ -8,8 +8,17 @@ IFS=$'\n'
 
 for fileAccessEntry in $(cat iOracle.out); do
   processId=`echo $fileAccessEntry | awk '{print $1}'`
-  pathToProcessExecutable=`cat pid_uid_gid_comm.out | grep -w $processId | awk '{print $4}'`
+  pathToProcessExecutable=`cat pid_uid_gid_comm.out | grep -w $processId | awk '{print substr($0, index($0, $4))}'`
   processName=`echo $fileAccessEntry | cut -d$'\t' -f1 | awk '{print substr($0, index($0, $2))}'`
+
+  # Check if PID is a number
+  if [[ ! $processId == ?(-)+([0-9]) ]]; then
+    continue
+  fi
+  # Check if path is null
+  if [[ -z $pathToProcessExecutable ]]; then
+    continue
+  fi
 
   # Process name has two words
   if [[ `echo $processName | wc -w` == 2 ]]; then
@@ -58,4 +67,4 @@ for fileAccessEntry in $(cat iOracle.out); do
 
   # Write the facts to file
   echo "fileAccessObservation(process(\"$pathToProcessExecutable\"),sourceFile(\"$pathToSourceFile\"),destinationFile(\"$pathToDestinationFile\"),operation(\"$operationType\"))."
-done
+done 2> /dev/null
