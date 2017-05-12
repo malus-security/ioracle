@@ -1,0 +1,292 @@
+File Access Observations
+  Extracted By: 
+    filemon_host.sh
+  Parsed By: 
+    fileAccessObservations.sh
+  Stored In:
+    fileAccessObservations.pl
+  Note: 
+    Be sure to turn filemon off after starting it. Otherwise it could fill the disk and cause trouble.
+    Some facts are invalid due to bugs in parser.
+  Example fact:
+    fileAccessObservation(process("/Applications/News.app/News"),sourceFile("/private/var/mobile/Version"),destinationFile("No destination"),operation("Modified")).
+
+Process Ownership
+  Extracted By:
+    interval_probe.sh
+  Parsed By:
+    processOwnership.sh
+  Facts Stored In:
+    processOwnership.pl
+  Note: 
+    Some comm entries do not correspond to file paths (e.g., bash and ps).
+    We might be able to fix this with smarter use of ps or another program such as the one I cross compiled.
+  Example fact:
+    processOwnership(uid("0"),gid("0"),comm("/sbin/launchd")).
+
+Sandbox Extensions
+  Extracted By:
+    interval_probe.sh
+  Parsed By:
+    parse_sandbox_extensions.py
+  Facts Stored In:
+    sandbox_extension_facts.pl
+  Note:
+    Last I checked there is a bug creating extra generic type extensions.
+    This is harmless with our current implementation, but may cause trouble later.
+  Example fact:
+    sandbox_extension(process("/Applications/AdSheet.app/AdSheet"),extension(class("com.apple.sandbox.executable"),type("file"),value("/Applications/AdSheet.app"))).
+
+Sandbox Profile Rules
+  Extracted By:
+    SandBlaster
+  Parsed By:
+    SandScout
+  Facts Stored In:
+    allTheProfileFacts.8.1.3.pl
+  Note:
+    TODO: We need to run SandScout on all the decompiled profiles and store them in a more organized file structure.
+  Example fact:
+    profileRule(profile("wifiFirmwareLoader"),decision("allow"),operation("file-readSTAR"),filters([literal("/dev/random")])).
+
+Posix ACLs
+  Extracted By: 
+    dataExtractorForConnectedDevice.sh
+  Parsed By:
+    dataExtractorForConnectedDevice.sh
+  Facts Stored In: 
+    aclFacts.pl
+  Note: 
+    None of our rules know how to model these, but you can still make queries directly about the facts.
+    iOS versions prior to iOS 9 don't seem to use Posix ACLs.
+  Example Fact:
+    fileACL( ruleNumber(0), object("/private/var/mobile/aclTest/secret"), subjectType(user), subject(mobile), inheritance(notInherited), decision(deny), operations([ "read" ])).
+
+Entitlements Possessed by Process
+  Extracted By:
+    dataExtractorForExtractedFileSystem.sh
+  Parsed By:
+    dataExtractorForExtractedFileSystem.sh
+  Facts Stored In:
+    apple_executable_files_entitlements.pl
+  Note:
+    The argument for the value functor is sometimes a list.
+  Example Fact:  
+    processEntitlement(filePath("/usr/sbin/wifid"),entitlement(key("keychain-access-groups"),value([string("apple"),string("com.apple.identities"),string("com.apple.certificates")]))).
+    processEntitlement(filePath("/usr/sbin/wifid"),entitlement(key("keychain-cloud-circle"),value(bool("true")))).
+
+Executable Signatures
+  Extracted By:
+    dataExtractorForExtractedFileSystem.sh
+  Parsed By:
+    dataExtractorForExtractedFileSystem.sh
+  Facts Stored In:
+    apple_executable_files_signatures.pl
+  Note:
+    This is very helpful for removing executables that came from jailbreak
+  Example Fact:  
+    processSignature(filePath('/bin/launchctl'),identifier('com.apple.xpc.launchctl')).
+
+Executable Signatures
+  Extracted By:
+    dataExtractorForExtractedFileSystem.sh
+  Parsed By:
+    dataExtractorForExtractedFileSystem.sh
+  Facts Stored In:
+    apple_executable_files_signatures.pl
+  Note:
+    This is very helpful for removing executables that came from jailbreak
+  Example Fact:  
+    processSignature(filePath('/bin/launchctl'),identifier('com.apple.xpc.launchctl')).
+
+Executable Strings
+  Extracted By:
+    dataExtractorForExtractedFileSystem.sh
+  Parsed By:
+    dataExtractorForExtractedFileSystem.sh
+  Facts Stored In:
+    apple_executable_files_strings.pl
+  Note:
+    These probably consume the most space of all the facts.
+    Useful if you want to know which process references a certain entitlement or extension.
+    Many strings may only appear in dyld_shared_cache or kernel, and we have other ida scripts (not currently integrated to iOracle) that can do this.
+  Example Fact:  
+    processString(filePath("/bin/launchctl"),stringFromProgram("__PAGEZERO")).
+
+Executable Symbols
+  Extracted By:
+    dataExtractorForExtractedFileSystem.sh
+  Parsed By:
+    dataExtractorForExtractedFileSystem.sh
+  Facts Stored In:
+    apple_executable_files_symbols.pl
+  Note:
+    Useful if you want to know which process uses a certain function.
+    Many symbols may only appear in dyld_shared_cache or kernel, and we have other ida scripts (not currently integrated to iOracle) that can do this.
+  Example Fact:  
+    processSymbol(filePath("/bin/launchctl"),symbol("__mh_execute_header")).
+
+Directory Parents
+  Extracted By:
+    postProcessing.sh
+  Parsed By:
+    postProcessing.sh
+  Facts Stored In:
+    dirParents.pl
+  Note:
+    This helps prolog recursively analyze parent directories when modelling Unix permissions for directories (e.g., consider parent directory that is not executable).
+  Example Fact:  
+    dirParent(parent("/bin"),child("/bin/bash")).
+
+Unix Groups (Dynamic Analysis)
+  Extracted By:
+    dataExtractorForConnectedDevice.sh
+      groupFactExtractorFromUsers.sh
+  Parsed By:
+    dataExtractorForConnectedDevice.sh
+  Facts Stored In:
+    dynamicGroups.pl
+  Note:
+    The groups we detect on a live device do not seem to correspond with the groups observed in the configuration file.
+    TODO: I haven't done much testing here, and I'm a little suspicious of how few facts we have regarding group membership.
+    Would we get more group data by running this extraction more often?
+    The groupFactExtractor.sh should now be obsolete, so we should be careful not to use it.
+    In iOS it seems that many groups have no users in them despite being mentioned in the /etc/group file.
+  Example Fact:  
+    groupMembership(user("root"),group("wheel"),groupIDNumber("0")).
+
+File Metadata
+  Extracted By:
+    dataExtractorForConnectedDevice.sh
+  Parsed By:
+    dataExtractorForConnectedDevice.sh
+  Facts Stored In:
+    file_metadata.pl
+  Note:
+    We should probably store the following fact types in separate files to match how we handle other facts.
+    However, it is much easier to output these facts into one file because of how they are collected.
+    We then sorted the file to get similar facts together.
+    If we wanted to separate them, I guess the easiest way would be to use a series or greps and direct the output to different files.
+    TODO: The result of a symlink might not map directly to a file path (e.g., a symlink to "git" could resolve to "./git" which depends on where the other end of the link is.
+  Example Facts:  
+    fileInode(inode(100),filePath("/dev/ttypc")).
+    fileLastModification(lastModification(1070631973),filePath("/private/etc/screenrc")).
+    fileNumHardLinks(numHardLinks(1),filePath("/Applications")).
+    fileOwnerGroupName(ownerGroupName("1000"),filePath("/private/var/db/stash/_.MMpaib/share/man/fr")).
+    fileOwnerUserName(ownerUserName("1000"),filePath("/private/var/db/stash/_.MMpaib/share/man/fr")).
+    filePermissionBits(permissionBits(1333),filePath("/.Trashes")).
+    fileSize(size(0),filePath("/System/Library/TextInput/TextInput_ar.bundle/_CodeSignature/CodeSignature")).
+    fileSymLink(symLinkObject("/var/stash/_.943Uv1/Applications"),filePath("/Applications")).
+    fileType(type("b"),filePath("/dev/disk0")).
+
+File Types (Based on file header data)
+  Extracted By:
+    dataExtractorForExtractedFileSystem.sh
+  Parsed By:
+    dataExtractorForExtractedFileSystem.sh
+  Facts Stored In:
+    file_types.pl
+  Note:
+    Theses file types are not the same as the ones extracted with file metadata.
+    These are much more detailed in the labels, and help us identify mach-o executables to analyze farther.
+    We seem to get better results by extracting files off of the iOS device and then running our analysis of file types on the host device.
+      I'm not sure if there is a difference between the file types generated if analysis is done on Linux vs macOS.
+  Example Facts:  
+    file(fileType("Mach-O arm executable"),filePath("/bin/bash")).
+    
+(Obsolete) Groups
+  Extracted By:
+  Parsed By:
+  Facts Stored In:
+    groups.pl
+  Note:
+    This script extracts group information from the /etc/group file.
+    It is obsolete though, and our rules should not rely on it.
+  Example Facts:  
+    group(groupName("staff"),passwordHash("*"),id("20"),members(["root"])).
+
+Sandbox Profiles Assigned to Processes
+  Extracted By:
+    dataExtractorForExtractedFileSystem.sh
+  Parsed By:
+    dataExtractorForExtractedFileSystem.sh
+  Facts Stored In:
+    processToProfileMapping.pl
+  Note:
+    There may be some sandbox profiles that are not used by any of the processes we found on the device (e.g., Lowtide for AppleTV).
+  Example Facts:  
+    usesSandbox(processPath("/System/Library/Frameworks/CFNetwork.framework/CFNetworkAgent"),profile("CFNetworkAgent"),mechanism(entitlementKey("seatbelt-profiles"))).
+    usesSandbox(processPath("/usr/libexec/afc2d"),profile("afcd"),mechanism(selfApplied)).
+    usesSandbox(processPath("/private/var/mobile/Containers/Bundle/Application/7MinuteWorkout WatchKit App.app/_WatchKitStub/WK"),profile("container"),mechanism(pathBased)).
+ 
+(Obsolete) Process Ownership
+  Extracted By:
+    dataExtractorForConnectedDevice.sh
+  Parsed By:
+    dataExtractorForConnectedDevice.sh
+  Facts Stored In:
+    process_ownership.pl
+  Note:
+    This script is obsolete since we have opted to check for process ownership more often and at the same time as sandbox extensions.
+    I plan to comment it out of our connected device automation script so that we don't have redundant facts.
+  Example Facts:  
+    processOwnership(uid("501"),gid("501"),comm("/usr/libexec/mobile_installation_proxy")).
+ 
+Prolog Friendly Permissions
+  Extracted By:
+    postProcessing.sh
+  Parsed By:
+    postProcessing.sh
+  Facts Stored In:
+    prologFriendlyPermissions.pl
+  Note:
+    converts the unix permissions from strings of 4 characters into what I believe is a more prolog friendly format of 12 individual facts.
+    I believe these are also easier to write Prolog rules for.
+    They are produced using the facts from file_metadata.pl.
+  Example Facts:  
+    userread(0,"/dev/bpf1").
+    userwrite(0,"/dev/bpf1").
+    userexecute(0,"/dev/bpf1").
+    userspecial(0,"/dev/bpf1").
+    groupread(0,"/dev/bpf1").
+    groupwrite(0,"/dev/bpf1").
+    groupexecute(0,"/dev/bpf1").
+    groupspecial(0,"/dev/bpf1").
+    otherread(0,"/dev/bpf1").
+    otherwrite(0,"/dev/bpf1").
+    otherexecute(0,"/dev/bpf1").
+    otherspecial(0,"/dev/bpf1").
+
+Users
+  Extracted By:
+    dataExtractorForExtractedFileSystem.sh
+  Parsed By:
+    dataExtractorForExtractedFileSystem.sh
+  Facts Stored In:
+    users.pl
+  Note:
+    We don't use all of the information here.
+    We should be sure to use this when evaluating home directories for the sandbox HOME variable.
+  Example Facts:  
+    user(userName("mobile"),passwordHash("*"),userID("501"),groupID("501"),comment("Mobile User"),homeDirectory("/var/mobile"),shell("/bin/sh")).
+ 
+Vnode Types 
+  Extracted By:
+    dataExtractorForExtractedFileSystem.sh
+  Parsed By:
+    dataExtractorForExtractedFileSystem.sh
+  Facts Stored In:
+    vnodeTypes.pl
+  Note:
+    We get this data from the file types in file_metadata.pl.
+    For now, we are assuming that all character devices are also tty devices.
+    There is a function called isatty that should help us tell the difference, but we don't enough time to implement it.
+    The normal file metadata does not distinguish between character devices and tty devices.
+    My understanding is that all tty devices are a subset of character devices.
+    These facts are important for matching sandbox filters.
+    What is the difference between vnodes and inodes?
+      I think that on BSD they are all vnodes instead of inodes.
+  Example Facts:  
+    vnodeType(file("/bin/bzcat"),type(symlink)).
+    vnodeType(file("/bin/bzip2recover"),type(regular-file)).
+ 

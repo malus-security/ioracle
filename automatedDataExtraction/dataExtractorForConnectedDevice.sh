@@ -33,12 +33,14 @@ echo extracting file metadata
 time ssh -p $port $user@$host 'bash -s' < ./scriptsToAutomate/metaDataExtractor.sh $downloadDirectory | sort | uniq > $directoryForOutput/prologFacts/unsanitized_file_metadata.pl
 time ./scriptsToAutomate/sanitizeFilePaths.py $directoryForOutput/prologFacts/unsanitized_file_metadata.pl > $directoryForOutput/prologFacts/file_metadata.pl
 
+#we are now getting process ownership with dynamic analysis scripts that run while we interact with the device.
+#this allows us to get more processes and analyzed that if we run this once without exercising the device.
 #get process ownership for processes currently running on the iOS device
 #we might want to set up the device such that certain devices are running, but running this naively is still useful.
-scp -q -P $port ./utilities/tail $user@$host:$tempDir/tail
-scp -q -P $port ./utilities/tr $user@$host:$tempDir/tr
-echo extracting process ownership data
-time ssh -p $port $user@$host 'bash -s' < ./scriptsToAutomate/processOwnershipExtractor.sh > $directoryForOutput/prologFacts/process_ownership.pl
+#scp -q -P $port ./utilities/tail $user@$host:$tempDir/tail
+#scp -q -P $port ./utilities/tr $user@$host:$tempDir/tr
+#echo extracting process ownership data
+#time ssh -p $port $user@$host 'bash -s' < ./scriptsToAutomate/processOwnershipExtractor.sh > $directoryForOutput/prologFacts/process_ownership.pl
 
 #Extract and format ACL data
 ssh -p $port $user@$host "mkdir $tempDir"
