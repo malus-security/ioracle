@@ -1,0 +1,1 @@
+../prolog/sandboxTestInput/sandboxAllowRules.pl
