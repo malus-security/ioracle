@@ -49,6 +49,15 @@ for processLine in processResults:
 
       #split the values within each class
       class_values_list = class_values_string.split("flags=")
+      if class_values_list[0] == ' ':
+        sys.stdout.write('sandbox_extension(')
+        sys.stdout.write('process("' + process_path + '"),')
+        sys.stdout.write('extension(')
+        sys.stdout.write('class("' + class_string+ '"),')
+        sys.stdout.write('type("generic"),')
+        sys.stdout.write('value(""))).\n')
+        continue
+
 
       for class_value in class_values_list:
 	if ":" in class_value:
@@ -72,13 +81,3 @@ for processLine in processResults:
 	  sys.stdout.write('class("' + class_string + '"),')
 	  sys.stdout.write('type("' + type_string + '"),')
 	  sys.stdout.write('value("' + value_string +'"))).\n')
-
-	else:
-	  sys.stdout.write('sandbox_extension(')
-	  sys.stdout.write('process("' + process_path + '"),')
-	  sys.stdout.write('extension(')
-	  sys.stdout.write('class("' + class_string+ '"),')
-	  sys.stdout.write('type("generic"),')
-	  sys.stdout.write('value(""))).\n')
-
-
