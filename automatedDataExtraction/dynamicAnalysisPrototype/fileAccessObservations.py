@@ -26,6 +26,7 @@ inputPath = sys.argv[1]
 f = open(inputPath, 'r')
 #split each line into a list of results for each process
 fileAccessResults = f.read().strip().split("\n")
+fileAccessResults = fileAccessResults[:-1]
 
 #step through the results for each process id number
 for fileAccessLine in fileAccessResults:
