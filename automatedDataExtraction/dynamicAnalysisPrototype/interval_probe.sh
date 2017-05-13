@@ -1,7 +1,7 @@
 #!/bin/bash
 #I'm assuming the person running this script has a jailbroken device that is connected to over ssh.
 
-if test $# -ne 3; then
+if test $# -ne 4; then
 	echo "Usage: $0 userOniOSDevice hostOfiOSdevice portForiOSDevice" 1>&2
 	echo "Example: $0 root localhost 2270" 1>&2
 	exit 1
@@ -10,16 +10,15 @@ fi
 user="$1"
 host="$2"
 port="$3"
-downloadDirectory="$4"
-directoryForOutput="$5"
+directoryForOutput="$4"
 
-rm -rf ./$5
-mkdir $5
+rm -rf ./$4
+mkdir $4
 #not all of these are relevant in this test.
 #it was copied from the dataExtractorForConnectedDevice.sh
-mkdir $5/fileSystem
-mkdir $5/prologFacts
-mkdir $5/temporaryFiles
+mkdir $4/fileSystem
+mkdir $4/prologFacts
+mkdir $4/temporaryFiles
 tempDir="/temporaryDirectoryForiOracleExtraction"
 
 #load the sbtool executable onto the iOS device and store it in a temporary directory so it doesn't overwrite anything sensitive.
