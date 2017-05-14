@@ -1,9 +1,9 @@
 #!/bin/bash
 #I'm assuming the person running this script has a jailbroken device that is connected to over ssh.
 
-if test $# -ne 3; then
+if test $# -ne 4; then
 	echo "Usage: $0 userOniOSDevice hostOfiOSdevice portForiOSDevice" 1>&2
-	echo "Example: $0 root localhost 2270" 1>&2
+	echo "Example: $0 root localhost 2270 directoryForOutput" 1>&2
 	exit 1
 fi
 
