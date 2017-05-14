@@ -4,7 +4,7 @@
 
 if test $# -ne 5; then
 	echo "Usage: $0 userOniOSDevice hostOfiOSdevice portForiOSDevice directoryToDownload directoryForOutput" 1>&2
-	echo "Example: $0 root localhost 2270 / extractediOSFileSystem" 1>&2
+	echo "Example: $0 root localhost 2270 / iPod5_iOS812_12B440" 1>&2
 	echo "WARNING: This script will sudo rm -rf the directory at the path of directoryForOutput" 1>&2
 	exit 1
 fi
