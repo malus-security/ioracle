@@ -2,7 +2,7 @@
 
 if test $# -ne 1; then
   echo "Usage: $0 inputDirectoryUsedForExtraction" 1>&2
-  echo "Example: $0 iPodDataDirectory " 1>&2
+  echo "Example: $0 iPod5_iOS812_12B440" 1>&2
   exit 1
 fi
 
@@ -17,4 +17,4 @@ swipl --quiet -t "ignore(allFilePaths),halt(1)" --consult-file $plPost | sort | 
 swipl --quiet -t "ignore(prologFriendlyPermissionFacts),halt(1)" --consult-file $plPost | sort | uniq > $inputDirectory/prologFacts/prologFriendlyPermissions.pl
 
 mv $inputDirectory/prologFacts/unsanitized* $inputDirectory/temporaryFiles/
-cat $inputDirectory/prologFacts/* | sort | uniq > $inputDirectory/godfile.pl
+cat $inputDirectory/prologFacts/* | sort | uniq > $inputDirectory/all_facts.pl

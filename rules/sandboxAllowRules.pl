@@ -1,0 +1,1 @@
+../unixPermissionRuleWorkInProgress/tdd/prolog/sandboxTestInput/sandboxAllowRules.pl

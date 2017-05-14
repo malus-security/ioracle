@@ -1,0 +1,3 @@
+:-
+  [sandboxAllowRules],
+  [unixAllowRules].
