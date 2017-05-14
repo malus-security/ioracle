@@ -87,18 +87,6 @@ Executable Signatures
   Example Fact:  
     processSignature(filePath('/bin/launchctl'),identifier('com.apple.xpc.launchctl')).
 
-Executable Signatures
-  Extracted By:
-    dataExtractorForExtractedFileSystem.sh
-  Parsed By:
-    dataExtractorForExtractedFileSystem.sh
-  Facts Stored In:
-    apple_executable_files_signatures.pl
-  Note:
-    This is very helpful for removing executables that came from jailbreak
-  Example Fact:  
-    processSignature(filePath('/bin/launchctl'),identifier('com.apple.xpc.launchctl')).
-
 Executable Strings
   Extracted By:
     dataExtractorForExtractedFileSystem.sh

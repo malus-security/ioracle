@@ -17,4 +17,4 @@ swipl --quiet -t "ignore(allFilePaths),halt(1)" --consult-file $plPost | sort | 
 swipl --quiet -t "ignore(prologFriendlyPermissionFacts),halt(1)" --consult-file $plPost | sort | uniq > $inputDirectory/prologFacts/prologFriendlyPermissions.pl
 
 mv $inputDirectory/prologFacts/unsanitized* $inputDirectory/temporaryFiles/
-cat $inputDirectory/prologFacts/* | sort > $inputDirectory/godfile.pl
+cat $inputDirectory/prologFacts/* | sort | uniq > $inputDirectory/godfile.pl
