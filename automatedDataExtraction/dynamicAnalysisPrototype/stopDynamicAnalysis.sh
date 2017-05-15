@@ -38,6 +38,7 @@ then
                                  $outputPrologFacts/sandboxExtentsions.pl`
   `./fileAccessObservations.py $outputFileSystem/iOracle.out $outputFileSystem/pid_uid_gid_comm.out > \
                                $outputPrologFacts/dynamicFileAccess.pl`
+  `./processOwnership.sh $directoryForOutput`
 else
   echo "Raw output was not completly generated. Please try again..."
 fi
