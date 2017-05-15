@@ -12,6 +12,8 @@ host="$2"
 port="$3"
 directoryForOutput="$4"
 tempDir="/temporaryDirectoryForiOracleExtraction"
+outputFileSystem="$4/fileSystem"
+outputPrologFacts="$4/prologFacts"
 
 # stop interval_probe.sh
 get_pid_interval_probe_cmd=`ps aux | grep interval | grep $2 | awk '{ print $2 }'`
@@ -26,3 +28,16 @@ scp -q -P $port $user@$host:$tempDir/iOracle.out $4/fileSystem/iOracle.out
 ssh -p $port $user@$host 'killall filemon'
 ssh -p $port $user@$host 'killall sbtool64'
 ssh -p $port $user@$host "rm -rf $tempDir"
+
+echo "Generating prolog facts"
+if [[ -f "$outputFileSystem/pid_uid_gid_comm.out" &&
+      -f "$outputFileSystem/raw_sandbox_extensions.out" &&
+      -f "$outputFileSystem/iOracle.out" ]];
+then
+  `./parse_sandbox_extensions.py $outputFileSystem/raw_sandbox_extensions.out > \
+                                 $outputPrologFacts/sandboxExtentsions.pl`
+  `./fileAccessObservations.py $outputFileSystem/iOracle.out $outputFileSystem/pid_uid_gid_comm.out > \
+                               $outputPrologFacts/dynamicFileAccess.pl`
+else
+  echo "Raw output was not completly generated. Please try again..."
+fi

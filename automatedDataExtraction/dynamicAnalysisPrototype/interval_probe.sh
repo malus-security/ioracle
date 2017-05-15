@@ -11,14 +11,7 @@ user="$1"
 host="$2"
 port="$3"
 directoryForOutput="$4"
-
-rm -rf ./$4
-mkdir $4
-#not all of these are relevant in this test.
-#it was copied from the dataExtractorForConnectedDevice.sh
-mkdir $4/fileSystem
-mkdir $4/prologFacts
-mkdir $4/temporaryFiles
+outputFileSystem="$4/fileSystem"
 tempDir="/temporaryDirectoryForiOracleExtraction"
 
 #load the sbtool executable onto the iOS device and store it in a temporary directory so it doesn't overwrite anything sensitive.
@@ -30,16 +23,16 @@ scp -q -P $port sbtool64 $user@$host:$tempDir/sbtool64
 while true
 do
   echo extracting sandbox extension data
-  time ssh -p $port $user@$host 'bash -s' < sbtool_ext.sh >> raw_sandbox_extensions.out
+  time ssh -p $port $user@$host 'bash -s' < sbtool_ext.sh >> $outputFileSystem/raw_sandbox_extensions.out
 
   #output the data we need from ps
   echo extracting process ownership and pid to path data
-  time ssh -p $port $user@$host 'ps -e -o pid,uid,gid,comm' >> pid_uid_gid_comm.out
+  time ssh -p $port $user@$host 'ps -e -o pid,uid,gid,comm' >> $outputFileSystem/pid_uid_gid_comm.out
 
   #clean up the files so they don't get too big.
-  cat raw_sandbox_extensions.out | sort | uniq > sbext.uniq
-  mv sbext.uniq $4/fileSystem/raw_sandbox_extensions.out
+  cat $outputFileSystem/raw_sandbox_extensions.out | sort | uniq > sbext.uniq
+  mv sbext.uniq $outputFileSystem/raw_sandbox_extensions.out
 
-  cat pid_uid_gid_comm.out | sort | uniq > ps.uniq
-  mv ps.uniq $4/fileSystem/pid_uid_gid_comm.out
+  cat $outputFileSystem/pid_uid_gid_comm.out | sort | uniq > ps.uniq
+  mv ps.uniq $outputFileSystem/pid_uid_gid_comm.out
 done

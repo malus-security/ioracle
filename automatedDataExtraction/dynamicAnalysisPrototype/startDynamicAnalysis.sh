@@ -11,6 +11,15 @@ user="$1"
 host="$2"
 port="$3"
 directoryForOutput="$4"
+tempDir="/temporaryDirectoryForiOracleExtraction"
+
+rm -rf ./$4
+mkdir $4
+mkdir $4/fileSystem
+mkdir $4/prologFacts
+mkdir $4/temporaryFiles
+
+ssh -p $port $user@$host mkdir $tempDir
 
 # start interval_probe.sh in the background
 start_interval_probe_cmd="./interval_probe.sh $user $host $port $directoryForOutput"
@@ -20,17 +29,5 @@ $start_interval_probe_cmd > /dev/null 2>&1 &
 start_filemon_cmd="./filemon_host.sh $user $host $port $directoryForOutput"
 $start_filemon_cmd > /dev/null 2>&1 &
 
-<<COMM
-read -rsp $'Data is being generated. Press any key to finish...\n' -n1 key
-
-if [ -d /proc/$filemon_pid ]
-then
-  kill $filemon_pid
-  ssh -p $port $user@$host "killall filemon"
-fi
-
-if [ -d /proc/$interval_probe_pid ]
-then
-  kill $interval_probe_pid
-fi
-COMM
+echo "filemon and sbtool started in the background. You can start doing the scenarios."
+echo "Once you finish, please run stopDynamicAnalysis.sh"
