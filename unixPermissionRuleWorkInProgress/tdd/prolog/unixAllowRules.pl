@@ -26,10 +26,6 @@ unixAllow(puid(Puid),pgid(Pgid),coarseOp(Op),file(File)):-
     (Puid = "root")
   ).
   %writeln(File).
-  %I think that we should also confirm that the user has execute permission on all directories in the path.
-  %This should be straightforward if we combine it with getParentDirectory and make it recursive.
-  %parentDirectoriesExecutable(user(User),file(File)).
-
 
 matchGroup(Puid,Pgid,Gowner):-
   (
@@ -52,13 +48,8 @@ getRelBits(coarseOp("execute"),file(File),uownBit(Ubit),gownBit(Gbit),worldBit(W
   groupexecute(Gbit,File),
   otherexecute(Wbit,File).
 
+%this is more an example query than a useful rule.
 nonWorldExecutableDirectories(file(File)):-
-  fileType(type("d"),filePath(File)),
-  filePermissionBits(permissionBits(Permissions),filePath(File)),
-  getRelevantPermissions(coarseOp("execute"),permissions(Permissions),_,_,worldBit(0)),
-  writeln(File).
-
-nonWorldExecutableDirectories2(file(File)):-
   fileType(type("d"),filePath(File)),
   otherexecute(0,File),
   writeln(File).
@@ -67,24 +58,13 @@ hasUser(process(Proc),user(User)):-
   processOwnership(uid(Uid),_,comm(Proc)),
   user(userName(User),_,userID(Uid),_,_,_,_).
 
-getGroup(user(User),group(Group)):-
-  (
-    %group based on membership
-    (group(groupName(Group),_,_,members(MemberList)),
-    member(User,MemberList))
-    ;
-    %group based on default group
-    (user(userName(User),_,userID(Uid),groupID(Gid),_,_,_),
-    group(groupName(Group),_,id(Gid),_))
-  ).
-
 getRelevantCoarseOp(coarseOp(Cop),operation(Op)):-
   (Op = "file-read", Cop = "read");
   (Op = "file-write", Cop = "write").
   %todo list other relevant sandbox operations
 
 %don't call the dirExecute in unixAllow, that might lead to nasty recursion.
-%base case, do I need to cut here?
+%if we want to run them together, we should make a higher level rule that calls them both sequentially.
 dirExecute(puid(Puid),pgid(Pgid),coarseOp(Op),file("/")):-
   Op = "execute",
   unixAllow(puid(Puid),pgid(Pgid),coarseOp(Op),file(File)).
@@ -97,9 +77,3 @@ dirExecute(puid(Puid),pgid(Pgid),coarseOp(Op),file(File)):-
   dirParent(parent(Parent),child(File)),
   dirExecute(puid(Puid),pgid(Pgid),coarseOp(Op),file(Parent)).
 
-
-  %is the current file accessible?
-
-  %what about it's parent?
-
-  %what about the root directory?

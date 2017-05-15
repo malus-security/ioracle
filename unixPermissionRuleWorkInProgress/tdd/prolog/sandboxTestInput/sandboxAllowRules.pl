@@ -10,9 +10,6 @@ getAttributes(process(Process),entitlements(Ent),extensions(Ext),user(User),home
   %home(user(User),filePath(Home)).
   user(_,_,userID(User),_,_,homeDirectory(Home),_).
 
-getRequirements(profile(Profile)):-
-  fail.
-  
 relevantRule(entitlements(Ent),extensions(Ext),home(Home),profile(Profile),operation(Op),subject(Subject),decision(Decision),filters(Filters)):-
   profileRule(profile(Profile),decision(Decision),operation(Op),filters(Filters)),
   satisfyFilters(filters(Filters),entitlements(Ent),extensions(Ext),home(Home),subject(Subject)).
@@ -115,6 +112,8 @@ spath([SPHead|SPTail],[FPHead|FPTail]):-
   SPHead = FPHead,
   spath(SPTail,FPTail).
 
+%these are not necessarily abstraction supporting rules, but they are good example queries, and we might reference their results in the paper.
+%these are good for determining which privileges a sandboxed process could grant itself if under full control of the attacker.
 self_grantable_extensions:-
   profileRule(profile(Profile),decision("allow"),operation(Op),filters(Filters)),member(extension-class(Ext),Filters),profileRule(profile(Profile),decision("allow"),operation(Op2),filters(Filters2)),member(extension(Ext),Filters2),
   write("Profile: "),writeln(Profile),

@@ -1,1 +1,91 @@
-Luke will fill this file with documentation soon.
+####################################
+#Unix Rules
+####################################
+
+unixAllow(puid(Puid),pgid(Pgid),coarseOp(Op),file(File)))
+  Determines if the unix permissions allow a process running with the authority of Puid and Pgid to perform an Op on a File.
+  To call this rule, you may need to consult the process ownership facts to get the process's Unix authority.
+  This rule gets the ownership and relevant permission bits (based on Op) for File.
+  The rule then steps through the rules governing Unix permissions to resolve whether access is allowed.
+
+matchGroup(Puid,Pgid,Gowner)
+  Determines if the process should be considered a group owner of the file.
+  This is true if the process group id matches the file's owning group.
+  It is also true if the process user id is a member of the file's owning group.
+
+getRelBits(coarseOp("read"),file(File),uownBit(Ubit),gownBit(Gbit),worldBit(Wbit))
+getRelBits(coarseOp("write"),file(File),uownBit(Ubit),gownBit(Gbit),worldBit(Wbit))
+getRelBits(coarseOp("execute"),file(File),uownBit(Ubit),gownBit(Gbit),worldBit(Wbit))
+  These rules get the relevant bits for the operation being evaluated.
+  We have facts for special bits, but I don't think that we are modelling them yet.
+  TODO We should probably support the sticky bit for directories since it can restrict operations in that directory.
+  We could also make a query to see if it is ever used in the iOS file system.
+
+getRelevantCoarseOp(coarseOp(Cop),operation(Op)):-
+  This rule is optional and serves to help map a coarse unix operation (read, write, execute) to a sandbox operation.
+  The rule is incomplete, but has enough to show how it would be expanded.
+  For now, I think we should manually determine our coarse operations in queries, and we will usually be using "write" as our coarse operation.
+
+hasUser(process(Proc),user(User)):-
+  This is another helper function that matches a process to a user name instead of just the UID number listed in process ownership.
+
+dirExecute(puid(Puid),pgid(Pgid),coarseOp(Op),file("/")):-
+  Base case of recursive rule.
+  Treats the root directory differently because it does not have a parent directory.
+dirExecute(puid(Puid),pgid(Pgid),coarseOp(Op),file(File)):-
+  These rules determine recursively if a directory and all of its parents are executable.
+  A file cannot be accessed if the process's user authority does not grant execute rights to the current directory of the file and all its parent directories.
+  We should pair this rule with the unixAllow rule when making queries since they really both need to be satisfied to get access to a file.
+
+####################################
+#Sandbox Rules
+####################################
+
+use_module(library(regex)).
+  This library provides our support for regular expressions in Prolog.
+  It is documented a little here:
+    http://www.swi-prolog.org/pack/list?p=regex 
+  We need to be careful about the amount of regex comparisons involved in a query since this seems to be a performance bottleneck for us.
+  Will suggested precomputing regular expression matches and adding them as new facts.
+  I like this idea, but we don't have time to do it now.
+  We do not currently have a way to determine if two regular expressions have a common solution.
+    What I would do instead is go through each filepath in our data set and see if any satisfy both regular expressions.
+    As long as the file we are interested is in the set we should still find a match.
+
+getAttributes(process(Process),entitlements(Ent),extensions(Ext),user(User),home(Home),profile(Profile))
+  This rule fills the variables with relevant contextual data.
+  We will usually be calling it with the Process bound so we can get the rest of the context about the process.
+  This may fail when dealing with processes that are not sandboxed, so a different query should be used to get attributes for those.
+
+relevantRule(entitlements(Ent),extensions(Ext),home(Home),profile(Profile),operation(Op),subject(Subject),decision(Decision),filters(Filters))
+   This is probably the most important sandbox rule we have.
+   It steps through each rule in the relevant sandbox profile and determines which rules match the conditions set in the variables of this rule.
+   You can set the Subject variable to match a file("/filepath") and find rules that allow access to that file.
+    It's really best to set the subject to a file type since other subject types are not well supported in this version of the tool.
+    We have rules to deal with mach-services but not the facts to support them.
+  
+satisfyFilters(filters([]),entitlements(Ent),extensions(Ext),home(Home),subject(Subject)).
+  Base case of satisfying sandbox filters.
+  If there are no filters then the rule is matched.
+satisfyFilters(filters([Head|Tail]),entitlements(Ent),extensions(Ext),home(Home),subject(Subject))
+  This rule recursively tries to satisfy each filter in the sandbox rule until the list is empty.
+  If any of the rules fail to be satisfied the rule is not matched.
+  If all filters are satisfied then the base case is reached (list is emptied) and the rule is matched.
+  There is also a rule for each type of filter we have modeled since they are all satisfied by different conditions.
+  TODO we might need to implement more complex rules for "literal" type filters depending on the output produced by SandBlaster.
+  TODO as we model more filters (e.g., filemode), we will need to add more of these specialized satisfyFilters rules.
+
+stringSubPath(SubPathString,FilePathString)
+  Determines if FilePathString falls within a given SubPathString.
+  E.g., "/var/mobile/data.txt" is within the subpath "/var/mobile/"
+  I reuse this a lot since many filters seem to consider file subpaths (e.g., file-type sandbox extensions and prefix filters)
+
+spath([],_).
+  subpath base case
+spath([SPHead|SPTail],[FPHead|FPTail])
+  These rules support stringSubPath
+
+self_grantable_extensions
+self_grantable_unrestricted_extensions
+  These are not necessarily abstraction supporting rules, but they are good example queries, and we might reference their results in the paper.
+  These are good for determining which privileges a sandboxed process could grant itself if under full control of the attacker.
