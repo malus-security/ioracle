@@ -38,8 +38,8 @@ do
 
   #clean up the files so they don't get too big.
   cat raw_sandbox_extensions.out | sort | uniq > sbext.uniq
-  mv sbext.uniq raw_sandbox_extensions.out
+  mv sbext.uniq $4/fileSystem/raw_sandbox_extensions.out
 
   cat pid_uid_gid_comm.out | sort | uniq > ps.uniq
-  mv ps.uniq pid_uid_gid_comm.out
+  mv ps.uniq $4/fileSystem/pid_uid_gid_comm.out
 done
