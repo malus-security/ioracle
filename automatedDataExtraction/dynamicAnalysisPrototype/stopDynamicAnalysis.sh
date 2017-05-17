@@ -34,7 +34,7 @@ if [[ -f "$outputFileSystem/pid_uid_gid_comm.out" &&
       -f "$outputFileSystem/raw_sandbox_extensions.out" &&
       -f "$outputFileSystem/iOracle.out" ]];
 then
-  `./parse_sandbox_extensions.py $outputFileSystem/raw_sandbox_extensions.out > \
+  `./parse_sandbox_extensions.py $outputFileSystem/raw_sandbox_extensions.out $outputFileSystem/pid_uid_gid_comm.out > \
                                  $outputPrologFacts/sandboxExtensions.pl`
   `./fileAccessObservations.py $outputFileSystem/iOracle.out $outputFileSystem/pid_uid_gid_comm.out > \
                                $outputPrologFacts/dynamicFileAccess.pl`
