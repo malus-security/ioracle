@@ -1,3 +1,21 @@
+
+spit_out_paths_for_dynamic:-
+  (
+    (fileAccessObservation(process(Path),sourceFile(_),destinationFile(_),operation(_)))
+    ;
+    (fileAccessObservation(process(_),sourceFile(Path),destinationFile(_),operation(_)))
+    ;
+    (fileAccessObservation(process(_),sourceFile(_),destinationFile(Path),operation(_)))
+    ;
+    (processOwnership(uid(_),gid(_),comm(Path)))
+    ;
+    (sandbox_extension(process(Path),extension(class(_),type(_),value(_))))
+    ;
+    (sandbox_extension(process(_),extension(class(_),type("file"),value(Path))))
+  ),
+  writeln(Path),
+  fail.
+
 allFilePaths:-
   filePermissionBits(_,filePath(File)),
   writeln(File),

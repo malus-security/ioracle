@@ -1,3 +1,4 @@
 :-
   [sandboxAllowRules],
-  [unixAllowRules].
+  [unixAllowRules],
+  [helper_rules].
