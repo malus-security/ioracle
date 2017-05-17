@@ -26,5 +26,5 @@ for fileAccessLine in fileAccessResults:
     destinationFile = fileAccessMatches.group(2).strip()
     if sourceFile:
       print sourceFile
-    if destinationFile != "No destionation":
+    if destinationFile != "No destination":
       print destinationFile
