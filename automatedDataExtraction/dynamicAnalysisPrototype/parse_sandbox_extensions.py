@@ -8,8 +8,11 @@
 import sys
 import re
 
+fileAccessPath = sys.argv[1]
+processesInfoPath = sys.argv[2]
+
 def getProcessNameFromPid(pid):
-  f = open('pid_uid_gid_comm.out', 'r')
+  f = open(processesInfoPath, 'r')
   #split each line into a list of results for each process
   processResults = f.read().strip().split("\n")
 
@@ -22,8 +25,7 @@ def getProcessNameFromPid(pid):
 
 #you have to tell this script where the raw sandbox extension data is
 #pass that filepath as the first argument when launching this script
-inputPath = sys.argv[1]
-f = open(inputPath, 'r')
+f = open(fileAccessPath, 'r')
 #split each line into a list of results for each process
 processResults = f.read().strip().split("\n")
 

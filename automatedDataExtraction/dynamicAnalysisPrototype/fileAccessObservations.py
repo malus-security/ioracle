@@ -45,7 +45,7 @@ for fileAccessLine in fileAccessResults:
     sourceFile = fileAccessMatches.group(8).strip()
     destinationFile = fileAccessMatches.group(11).strip()
     if not destinationFile:
-      destinationFile = "No destionation"
+      destinationFile = "No destination"
     else:
       destinationFile = destinationFile.strip()
     if operation:
