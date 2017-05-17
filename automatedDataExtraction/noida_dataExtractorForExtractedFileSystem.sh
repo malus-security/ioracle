@@ -79,6 +79,11 @@ echo 'getting symbols for Apple-Signed Mach-O executables'
 echoerr 'getting symbols for Apple-Signed Mach-O executables'
 time ./scriptsToAutomate/symbolExtractor.sh $extractionDirectory/fileSystem < $temporaryFiles/applefilePaths.out > $extractionDirectory/prologFacts/apple_executable_files_symbols.pl
 
+echo 'getting vnode types. This should probably move to the connected device script later.'
+cat $extractionDirectory/prologFacts/file_metadata.pl ./scriptsToAutomate/queries.pl > $temporaryFiles/relevantFacts.pl
+time ./scriptsToAutomate/runProlog.sh getVnodeTypes $temporaryFiles > $extractionDirectory/prologFacts/vnodeTypes.pl
+rm $temporaryFiles/relevantFacts.pl
+
 #the curly brackets have bundled the commands so the error output will be funneled into one file
 } 2> >(tee $extractionDirectory/error.log >&2)
 

@@ -110,11 +110,12 @@ cat $temporaryFiles/selfApplySandbox.pl ./scriptsToAutomate/queries.pl > $tempor
 time ./scriptsToAutomate/runProlog.sh parseSelfAppliedProfiles $temporaryFiles > $temporaryFiles/parsedFilteredSelfAppliers.pl
 rm $temporaryFiles/relevantFacts.pl
 
+cat $temporaryFiles/profileAssignmentFromEntAndPath.pl $temporaryFiles/parsedFilteredSelfAppliers.pl > $extractionDirectory/prologFacts/processToProfileMapping.pl
+
+echo 'getting vnode types. This should probably move to the connected device script later.'
 cat $extractionDirectory/prologFacts/file_metadata.pl ./scriptsToAutomate/queries.pl > $temporaryFiles/relevantFacts.pl
 time ./scriptsToAutomate/runProlog.sh getVnodeTypes $temporaryFiles > $extractionDirectory/prologFacts/vnodeTypes.pl
 rm $temporaryFiles/relevantFacts.pl
-
-cat $temporaryFiles/profileAssignmentFromEntAndPath.pl $temporaryFiles/parsedFilteredSelfAppliers.pl > $extractionDirectory/prologFacts/processToProfileMapping.pl
 
 #Now that we have a way to collect sandbox extensions, we should not need this anymore.
 #It was a way to run queries assuming that no process had any sandbox extensions.
