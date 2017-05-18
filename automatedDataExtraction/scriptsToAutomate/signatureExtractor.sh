@@ -26,7 +26,7 @@ while read line; do
     #-z checks to see if the string is empty.
     #no identifier should indicate that the executable had no signature
     if [ ! -z "$identifier" ]; then
-      echo "processSignature(filePath('$line'),identifier('$identifier'))."
+      echo "processSignature(filePath(\"$line\"),identifier(\"$identifier\"))."
       #echo $line
     #else echo "process(filePath('$line'),identifier('no identifier detected'))."
     fi
