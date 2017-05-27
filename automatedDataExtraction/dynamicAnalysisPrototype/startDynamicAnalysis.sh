@@ -11,7 +11,7 @@ user="$1"
 host="$2"
 port="$3"
 directoryForOutput="$4"
-tempDir="/temporaryDirectoryForiOracleExtraction"
+tempDir="/private/var/mobile/temporaryDirectoryForiOracleExtraction"
 
 rm -rf ./$4
 mkdir $4

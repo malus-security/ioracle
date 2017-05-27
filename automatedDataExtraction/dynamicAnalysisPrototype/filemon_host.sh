@@ -12,7 +12,7 @@ host="$2"
 port="$3"
 directoryForOutput="$4"
 
-tempDir="/temporaryDirectoryForiOracleExtraction"
+tempDir="/private/var/mobile/temporaryDirectoryForiOracleExtraction"
 
 #load the filemon executable onto the iOS device and store it in a temporary directory so it doesn't overwrite anything sensitive.
 scp -q -P $port ./filemon/filemon $user@$host:$tempDir/filemon

@@ -11,7 +11,7 @@ user="$1"
 host="$2"
 port="$3"
 directoryForOutput="$4"
-tempDir="/temporaryDirectoryForiOracleExtraction"
+tempDir="/private/var/mobile/temporaryDirectoryForiOracleExtraction"
 outputFileSystem="$4/fileSystem"
 outputPrologFacts="$4/prologFacts"
 

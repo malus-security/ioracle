@@ -12,5 +12,5 @@ for i in `ps -A -o pid=`; do
 	#suppress errors by sending them to /dev/null
 	#use echo to get all the output for one process onto one line
 	#grep "extensions" only keeps the output for processes that have sandbox extensions
-	echo $(/temporaryDirectoryForiOracleExtraction/sbtool64 $i inspect 2> /dev/null) | grep "extensions ("
+	echo $(/private/var/mobile/temporaryDirectoryForiOracleExtraction/sbtool64 $i inspect 2> /dev/null) | grep "extensions ("
 done
