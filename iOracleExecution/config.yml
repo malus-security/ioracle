@@ -1,0 +1,14 @@
+deviceInfo:
+    host: 192.168.255.142
+    user: root
+    passwd: alpine
+emailCredentials:
+    user: malus.sec@gmail.com
+    passwd: Malus123/
+    recipient: costin.carabas@gmail.com
+outputFolders:
+    preprocessing_queue:
+        - preprocessing.scale_and_center
+        - preprocessing.dot_reduction
+        - preprocessing.connect_lines
+    use_anonymous: yes
