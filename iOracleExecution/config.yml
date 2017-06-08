@@ -1,14 +1,23 @@
+# Information about the device
 deviceInfo:
     host: 192.168.255.142
     user: root
     passwd: alpine
+    port: 22
+    rootFolder: /
+
+# Information regarding mail transmission
 emailCredentials:
     user: malus.sec@gmail.com
     passwd: Malus123/
     recipient: costin.carabas@gmail.com
+
+# The folders where the data is extracted
 outputFolders:
-    preprocessing_queue:
-        - preprocessing.scale_and_center
-        - preprocessing.dot_reduction
-        - preprocessing.connect_lines
-    use_anonymous: yes
+    extractFsFolder: iPod5_iOS812_12B440
+    dynamicOutputFolder: iPod5_iOS812_12B440_dynamic
+
+scripts:
+    startDynamicAnalysis: ../automatedDataExtraction/dynamicAnalysisPrototype/startDynamicAnalysis.sh
+    stopDynamicAnalysis: ../automatedDataExtraction/dynamicAnalysisPrototype/stopDynamicAnalysis.sh
+    staticAnalysis: ../automatedDataExtraction/dataExtractorForConnectedDevice.sh
