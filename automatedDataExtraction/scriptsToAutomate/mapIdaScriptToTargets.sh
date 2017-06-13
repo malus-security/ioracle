@@ -33,5 +33,11 @@ do
   #I could also reanalyze these using idaq64, but it would take too long, and I don't know if it would break anything...
   #spaces in the path variable were causing trouble since a file path with spaces might look like multiple arguments.
   #I dealt with this by putting escaped double quotes around the variable which seems to help.
-  idal64 -S"$idapythonScript $name \"$path\" $pathToOutputFile $idaScriptConfigFile" $directoryHoldingIDADatabases$name.i64
+
+  #error dialogs in ida are causing problems, so I want to ignore them for now.
+  #idal64 -S"$idapythonScript $name \"$path\" $pathToOutputFile $idaScriptConfigFile" $directoryHoldingIDADatabases$name.i64
+  # I think the -A option will do that for us.
+  #try to make ida parallel
+  TVHEADLESS=1 idal64 -A -S"$idapythonScript $name \"$path\" $pathToOutputFile $idaScriptConfigFile" $directoryHoldingIDADatabases$name.i64 2>&1 > /dev/null &
 done
+wait

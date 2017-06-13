@@ -36,6 +36,10 @@ do
     #the -B option is for batch analysis, so IDA will run its default analysis and close itself when finished.
     #the -o option lets us specify the file path of the database produced by analysis
     #In this case, $directoryForResults/$hashedPath is the path to the executable we want to run analysis on.
-    idal64 -B -o$directoryForResults/$hashedPath.i64 $directoryForResults/$hashedPath
+
+    #try to do in parallel
+    #idal64 -B -o$directoryForResults/$hashedPath.i64 $directoryForResults/$hashedPath
+    TVHEADLESS=1 idal64 -B -o$directoryForResults/$hashedPath.i64 $directoryForResults/$hashedPath 2>&1 > /dev/null &
 done
+wait
 
