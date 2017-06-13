@@ -214,6 +214,24 @@ getSelfAssigningProcessesWithSymbols:-
   writeln(X),
   fail.
 
+getDirectFileAccessCallersWithSymbols:-
+  %[externalSymbols],
+  setof(Path,
+  (
+      processSymbol(filePath(Path),symbol("_chmod"))
+    ;
+      processSymbol(filePath(Path),symbol("_chown"))
+    ;
+      processSymbol(filePath(Path),symbol("_rename"))
+    ;
+      processSymbol(filePath(Path),symbol("_open"))
+  ),Out),
+  member(X,Out),
+  writeln(X),
+  fail.
+
+
+
 %ignore any profile with a parenthesis in it
 %consider running a bash script to remove duplicate rules.
 %I should write a bash script that automates the entire process of figuring out which sandboxes are selfApplied, finding the self-applied profiles used, and deduplicating.
