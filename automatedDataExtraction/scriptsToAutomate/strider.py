@@ -32,8 +32,14 @@ def getValue(ea,minEa,targetReg):
 
   #give up if you hit the top of the function
   if ea <= minEa:
-    errorMessage+="ERROR: Hit top of function"
+    errorMessage+="ERROR: Hit top of function or hit top of basic block with multiple parents"
     return 0
+
+  count_far_code_references = len(list(idautils.XrefsTo(ea, 1)))
+  if count_far_code_references > 0:
+    #if this gets reached, then we seem to be at the top of a basic block with multiple parents.
+    #for now, we can't figure out which parent to follow, so we evaluate the current instruction, and if that doesn't allow us to finish, then we act like we hit top of function.
+    minEa = ea
 
   if idc.GetMnem(ea) in ['ADR']:
     dest_op = 0
