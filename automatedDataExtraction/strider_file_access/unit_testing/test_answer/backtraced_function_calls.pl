@@ -1,0 +1,12 @@
+functionCalled(filePath("/syslogd"),function("_chmod"),r0("/var/run/lockdown/syslog.sock"),r1("0x1B6"),r2(unknown),r3(unknown),address("0xB696")).
+functionCalled(filePath("/lockdownd"),function("_chmod"),r0("/var/run/lockdown.sock"),r1("0x1FF"),r2(unknown),r3(unknown),address("0x18B52")).
+functionCalled(filePath("/lockdownd"),function("_chmod"),r0("/private/var/db/timezone"),r1("0x1FF"),r2(unknown),r3(unknown),address("0xD930")).
+functionCalled(filePath("/CrashHousekeeping"),function("_chown"),r0("/private/var/mobile/Library/Logs"),r1(unknown),r2(unknown),r3(unknown),address("0x2D22")).
+functionCalled(filePath("/CrashHousekeeping"),function("_chown"),r0("/private/var/mobile/Library/Logs/CrashReporter"),r1(unknown),r2(unknown),r3(unknown),address("0x2D58")).
+functionCalled(filePath("/CrashHousekeeping"),function("_chown"),r0("/private/var/mobile/Library/Logs/AppleSupport"),r1(unknown),r2(unknown),r3(unknown),address("0x2D8E")).
+functionCalled(filePath("/CrashHousekeeping"),function("_chmod"),r0("/private/var/logs"),r1("0x1ED"),r2(unknown),r3(unknown),address("0x2BB0")).
+functionCalled(filePath("/CrashHousekeeping"),function("_chmod"),r0("/Library/Logs/CrashReporter"),r1("0x1ED"),r2(unknown),r3(unknown),address("0x2BEC")).
+functionCalled(filePath("/CrashHousekeeping"),function("_chmod"),r0("/Library/Logs/CrashReporter/Baseband"),r1("0x1ED"),r2(unknown),r3(unknown),address("0x2C28")).
+functionCalled(filePath("/CrashHousekeeping"),function("_chmod"),r0("/Library/Logs/CrashReporter/Panics"),r1("0x1ED"),r2(unknown),r3(unknown),address("0x2C64")).
+functionCalled(filePath("/CrashHousekeeping"),function("_chmod"),r0("/Library/Logs/AppleSupport"),r1("0x1ED"),r2(unknown),r3(unknown),address("0x2CA0")).
+functionCalled(filePath("/CrashHousekeeping"),function("_chmod"),r0("/Library/Logs/OTACrashCopier"),r1("0x1ED"),r2(unknown),r3(unknown),address("0x2CDC")).

@@ -1,1 +1,0 @@
-functionCalled(filePath("/syslogd"),function("_chmod"),parameters(["/var/run/lockdown/syslog.sock",438])).
