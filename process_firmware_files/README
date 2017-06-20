@@ -1,0 +1,25 @@
+We want to run static analysis on files extracted from firmware images instead of just on the files extracted from physical devices.
+This will allow us to analyze more iOS versions including versions we don't have devices for with jailbreaks we want to study (e.g. iOS 6.0, 7.0, 9.0).
+  It seems that the jailbreaks with more documentation are the ones used on early versions of a major iOS version.
+
+To process firmware files, we perform the following steps:
+  download iOS firmware (is it an archive?)
+  decrypt root file system
+  convert .dmg to .img (confirm)
+  mount the .img file (must be done on macOS)
+    Example:
+      hdiutil attach fs-img/iPad2,1_7.0.6_11B651.rootfs.img
+  make a copy of the filesystem while preserving links, unix permissions, and other attributes
+    Example:
+      sudo cp -a /Volumes/InnsbruckTaos11B651.K93OS processed_rootfs_filesystems/
+  (optional) 
+    At this point we can try to extract some data about the file system such as unix permissions and other metadata.
+    I'm not sure how helpful this will be, but there seems to be more data than I originally thought.
+  move the archived file system to cascades for processing
+    Example:
+      scp fileSystem.tar.gz ladeshot@cascades.csc.ncsu.edu:/media/bigdata/firmware_file_systems/iOS_7.0.6_Firmware/
+  extract the file system and perform initial analysis with a variant of the extracted file system extractor 
+    This variant skips some vnode analysis that relies on metadata we don't collect unless we run the optional step mentioned above.
+    Example:
+      ./dataExtractorForFirmwareRootFS.sh /media/bigdata/firmware_file_systems/iOS_7.0.6_Firmware
+   
