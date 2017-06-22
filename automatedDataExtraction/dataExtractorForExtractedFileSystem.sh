@@ -117,6 +117,19 @@ cat $extractionDirectory/prologFacts/file_metadata.pl ./scriptsToAutomate/querie
 time ./scriptsToAutomate/runProlog.sh getVnodeTypes $temporaryFiles > $extractionDirectory/prologFacts/vnodeTypes.pl
 rm $temporaryFiles/relevantFacts.pl
 
+#backtracer analysis for functions known to be used in jailbreak gadgets (e.g., chown and chmod)
+echo 'getting file paths to processes that use chmod or chown.'
+echoerr 'getting file paths to processes that use chmod or chown.'
+cat $extractionDirectory/prologFacts/apple_executable_files_symbols.pl ./scriptsToAutomate/queries.pl > $temporaryFiles/relevantFacts.pl
+time ./scriptsToAutomate/runProlog.sh getDirectFileAccessCallersWithSymbols $temporaryFiles > $temporaryFiles/pathsToDirectFileAccessCallers.out
+rm $temporaryFiles/relevantFacts.pl
+
+echoerr 'running batch ida analysis on direct file access call executables'
+time ./scriptsToAutomate/idaBatchAnalysis.sh $extractionDirectory/fileSystem/ $temporaryFiles/pathsToDirectFileAccessCallers.out $temporaryFiles/
+
+time ./scriptsToAutomate/mapIdaScriptToTargets.sh $extractionDirectory/ida_base_analysis/hashedPathToFilePathMapping.csv ./scriptsToAutomate/strider.py  $extractionDirectory/ida_base_analysis/ $extractionDirectory/prologFacts/chown_backtrace.pl ./configurationFiles/chown.config
+time ./scriptsToAutomate/mapIdaScriptToTargets.sh $extractionDirectory/ida_base_analysis/hashedPathToFilePathMapping.csv ./scriptsToAutomate/strider.py  $extractionDirectory/ida_base_analysis/ $extractionDirectory/prologFacts/chmod_backtrace.pl ./configurationFiles/chmod.config
+
 #Now that we have a way to collect sandbox extensions, we should not need this anymore.
 #It was a way to run queries assuming that no process had any sandbox extensions.
 #echo "sandbox_extension( _, _) :- fail." > $extractionDirectory/prologFacts/sandboxExtensionPlaceHolders.pl

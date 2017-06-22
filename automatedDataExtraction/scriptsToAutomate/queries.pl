@@ -221,10 +221,10 @@ getDirectFileAccessCallersWithSymbols:-
       processSymbol(filePath(Path),symbol("_chmod"))
     ;
       processSymbol(filePath(Path),symbol("_chown"))
-    ;
-      processSymbol(filePath(Path),symbol("_rename"))
-    ;
-      processSymbol(filePath(Path),symbol("_open"))
+    %;
+    %  processSymbol(filePath(Path),symbol("_rename"))
+    %;
+    %  processSymbol(filePath(Path),symbol("_open"))
   ),Out),
   member(X,Out),
   writeln(X),
