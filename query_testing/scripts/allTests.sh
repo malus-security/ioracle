@@ -61,6 +61,6 @@ cp $input/prologFacts/dirParents.pl $output
 #./testQueries.sh extensionFilters 2> /dev/null
 ./testQueries.sh sandboxExtensions_files 2> /dev/null
 ./testQueries.sh sandboxExtensions_mach 2> /dev/null
+#I believe this tests whether we can identify relevant sandbox rules with regex filters even if the subject is not bound to a specific file path.
 ./testQueries.sh freeRegexFilters 2> /dev/null
-
 
