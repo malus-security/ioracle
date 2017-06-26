@@ -1,11 +1,13 @@
 #!/bin/bash
 
 #this script should run all tests and report which pass and fail
+mkdir -p ../temp
 
 #test postProcessing script for transforming unix permissions into prolog friendly format.
 input="../prolog/fakeDataForUnixParsingTests"
 testName="unixPermFormat"
 output="../outputs/$testName/prologFriendlyPermissions.pl"
+mkdir -p ../outputs/$testName
 ./postProcessing.sh $input 2> /dev/null
 cp $input/prologFacts/prologFriendlyPermissions.pl $output
 ./evaluateAnswer.sh $testName $output ../answers/"$testName".answer
@@ -14,6 +16,7 @@ cp $input/prologFacts/prologFriendlyPermissions.pl $output
 input="../prolog/fakeDataForParentDirectoryTests"
 testName="unixParentDir"
 output="../outputs/$testName/dirParents.pl"
+mkdir -p ../outputs/$testName
 #I made big changes to the post processor, so this isn't going to work anymore...
 ./postProcessing.sh $input 2> /dev/null
 cp $input/prologFacts/dirParents.pl $output
