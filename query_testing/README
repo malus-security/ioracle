@@ -1,13 +1,18 @@
-test: unixParsing
-Check for correct parsing of unix permissions from integer format to prolog friendly output of one fact per permission.
+This directory contains a framework for testing our Prolog rules and some post processing scripts.
 
-test: unixRootNone
-Confirm that root user can still access files regardless of unix permissions.
+The rules and scripts here can be used by other scripts, but we should not copy them.
+I recommend making symbolic links rather than copies if you want to reference these rules or scripts in another directory.
 
-test: invertedPermissions
-purpose: Ask which files a process can access. Unix permissions assess user then group then other permissions. 
-If the user matches but the permission is 0 the operation is denied. The same is true for group. 
-This holds regardless of the other permissions. 
-A file with 007 permissions is not accessible to the user owner or members of the group owner.
+The general flow is as follows:
+  cd into the scripts directory
+  run ./allTests.sh
+  This will run a series of tests, most of which use the testQueries.sh script.
+  testQueries.sh then runs the respective test in tests.pl.
+  tests.pl imports input from the prolog directory and then tries to satisfy goals that should only work if we wrote our Prolog rules correctly.
+  The results of each test are then sorted and compared to the respective answer file in answers/
 
+Note that order and duplicates of facts should not matter for the queries we are making, so we always use "sort | uniq" on our output and answers.
 
+Before writing new tests, try to cd into scripts and run ./allTests.sh.
+All of the tests should pass without any errors.
+If there are errors, then Luke may have forgotten to push certain files to the git repo or your device is missing a dependency (e.g., swipl or the Prolog regex library).
