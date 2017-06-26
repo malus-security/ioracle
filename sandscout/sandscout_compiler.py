@@ -309,10 +309,17 @@ def p_subpath(p):
 
 def p_prefix(p):
   'prefix : TK_PREFIX TK_FILTER'
-  #do the ugly regex work here, and just rip out what I need from the filter. This is good enough.
-  pattern = re.compile('"\${([^}]*)}([^"]*)"')
-  matches = pattern.match(p[2])
-  p[0] = p[1] + "(variable(\"" + matches.group(1) + "\"),path(\"" + matches.group(2) + "\"))"
+
+  #if there is a variable in the prefix
+  if "{" in p[2]:
+    #do the ugly regex work here, and just rip out what I need from the filter. This is good enough.
+    pattern = re.compile('"\${([^}]*)}([^"]*)"')
+    matches = pattern.match(p[2])
+    p[0] = p[1] + "(variable(\"" + matches.group(1) + "\"),path(\"" + matches.group(2) + "\"))"
+  #if there is not a variable in the prefix then we just treat the filter like a subpath
+  else:
+    #I am not appending a / since prefixes might state literals in the filter argument.
+    p[0] = "subpath(" + p[2] + ")"
 
 
 #TODO: this is sort of a hack and I should evaluate it effects carefully
