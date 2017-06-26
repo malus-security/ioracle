@@ -1,5 +1,9 @@
 #!/bin/bash
 
+#this script compares the output of a query to the expected answer for a given test.
+#If the test passes, then the output is "PASSED: $testName"
+#If the test fails, then the output is "FAILED: $testName" followed by a diff of the respective output and answer files.
+
 if test $# -ne 3; then
   echo "Usage: $0 testName output answer" 1>&2
   echo "Example: $0 test1 outputs/test1.out answers/test1.answer/" 1>&2
