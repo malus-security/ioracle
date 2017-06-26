@@ -1,1 +1,1 @@
-../unixPermissionRuleWorkInProgress/tdd/prolog/unixAllowRules.pl
+../query_testing/prolog/unixAllowRules.pl
