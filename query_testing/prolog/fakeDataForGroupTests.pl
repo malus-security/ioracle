@@ -5,31 +5,31 @@
   ["../prolog/unixAllowRules"].
 
 %file ownership
-fileOwnerUserName(ownerUserName("mobile"),filePath("/none")).
-fileOwnerGroupName(ownerGroupName("everyone"),filePath("/none")).
+fileOwnerUserNumber(ownerUserNumber("501"),filePath("/none")).
+fileOwnerGroupNumber(ownerGroupNumber("12"),filePath("/none")).
 
-fileOwnerUserName(ownerUserName("mobile"),filePath("/all")).
-fileOwnerGroupName(ownerGroupName("networkd"),filePath("/all")).
+fileOwnerUserNumber(ownerUserNumber("501"),filePath("/all")).
+fileOwnerGroupNumber(ownerGroupNumber("24"),filePath("/all")).
 
-fileOwnerUserName(ownerUserName("mobile"),filePath("/rainbow0123")).
+fileOwnerUserNumber(ownerUserNumber("501"),filePath("/rainbow0123")).
 %the effective gid should ignore membership requirements
-fileOwnerGroupName(ownerGroupName("effectiveGroup"),filePath("/rainbow0123")).
+fileOwnerGroupNumber(ownerGroupNumber("999"),filePath("/rainbow0123")).
 
-fileOwnerUserName(ownerUserName("mobile"),filePath("/rainbow4567")).
-fileOwnerGroupName(ownerGroupName("everyone"),filePath("/rainbow4567")).
+fileOwnerUserNumber(ownerUserNumber("501"),filePath("/rainbow4567")).
+fileOwnerGroupNumber(ownerGroupNumber("12"),filePath("/rainbow4567")).
 
-fileOwnerUserName(ownerUserName("mobile"),filePath("/rainbow3210")).
-fileOwnerGroupName(ownerGroupName("networkd"),filePath("/rainbow3210")).
+fileOwnerUserNumber(ownerUserNumber("501"),filePath("/rainbow3210")).
+fileOwnerGroupNumber(ownerGroupNumber("24"),filePath("/rainbow3210")).
 
-fileOwnerUserName(ownerUserName("mobile"),filePath("/rainbow7654")).
+fileOwnerUserNumber(ownerUserNumber("501"),filePath("/rainbow7654")).
 %the effective gid should ignore membership requirements
-fileOwnerGroupName(ownerGroupName("effectiveGroup"),filePath("/rainbow7654")).
+fileOwnerGroupNumber(ownerGroupNumber("999"),filePath("/rainbow7654")).
 
 %fake some group membership facts until we get the real thing
-groupMembership(user("root"),group("root"),id("1")).
-groupMembership(user("root"),group("everyone"),id("2")).
-groupMembership(user("root"),group("wheel"),id("1")).
-groupMembership(user("mobile"),group("mobile"),id("2")).
-groupMembership(user("mobile"),group("everyone"),id("2")).
-groupMembership(user("networkd"),group("networkd"),id("3")).
-groupMembership(user("networkd"),group("everyone"),id("4")).
+groupMembership(user("root"),group("wheel"),groupIDNumber("0")).
+groupMembership(user("root"),group("everyone"),groupIDNumber("12")).
+groupMembership(user("root"),group("wheel"),groupIDNumber("0")).
+groupMembership(user("mobile"),group("mobile"),groupIDNumber("501")).
+groupMembership(user("mobile"),group("everyone"),groupIDNumber("12")).
+groupMembership(user("_networkd"),group("_networkd"),groupIDNumber("24")).
+groupMembership(user("_networkd"),group("everyone"),groupIDNumber("12")).
