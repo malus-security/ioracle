@@ -1,7 +1,9 @@
 %for now I can test by using the process with path "/usr/sbin/BTServer" which runs as mobile
+
+%I've modified this rule such that it now expects a uid and gid number as input
 unixAllow(puid(Puid),pgid(Pgid),coarseOp(Op),file(File)):-
-  fileOwnerUserName(ownerUserName(Uowner),filePath(File)),
-  fileOwnerGroupName(ownerGroupName(Gowner),filePath(File)),
+  fileOwnerUserNumber(ownerUserNumber(Uowner),filePath(File)),
+  fileOwnerGroupNumber(ownerGroupNumber(Gowner),filePath(File)),
 
   getRelBits(coarseOp(Op),file(File),uownBit(Ubit),gownBit(Gbit),worldBit(Wbit)),
 
@@ -23,14 +25,18 @@ unixAllow(puid(Puid),pgid(Pgid),coarseOp(Op),file(File)):-
 
     %will probably need this later
     %(Gbit = 0, Pgid = Gowner, fail);
-    (Puid = "root")
+    (Puid = "0")
   ).
   %writeln(File).
 
 matchGroup(Puid,Pgid,Gowner):-
   (
     (Pgid=Gowner);
-    (groupMembership(user(Puid),group(Gowner),_))
+    (
+      %I need to get the name for the group id number
+      user(userName(User_name),_,userID(Puid),_,_,_,_),
+      groupMembership(user(User_name),_,groupIDNumber(Gowner))
+    )
   ).
 
 getRelBits(coarseOp("read"),file(File),uownBit(Ubit),gownBit(Gbit),worldBit(Wbit)):-

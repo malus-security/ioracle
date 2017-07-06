@@ -6,6 +6,12 @@ if test $# -ne 1; then
 fi
 
 rootfs_path="$1/"
+#this removes an extra slash at the end of the file path if I end up with one.
 rootfs_path=${rootfs_path//\/\//\/}
 
-sudo gfind "$rootfs_path" -printf 'fileSize(size(%s),filePath("%p")).\nfileOwnerGroupNumber(ownerGroupNumber("%G"),filePath("%p")).\nfileLastModification(lastModification(%T@),filePath("%p")).\nfileInode(inode(%i),filePath("%p")).\nfileSymLink(symLinkObject("%l"),filePath("%p")).\nfilePermissionBits(permissionBits(%m),filePath("%p")).\nfileNumHardLinks(numHardLinks(%n),filePath("%p")).\nfileOwnerUserNumber(ownerUserNumber("%U"),filePath("%p")).\nfileType(type("%y"),filePath("%p")).\n'
+current_dir=`pwd`
+cd $rootfs_path
+
+sudo gfind . -printf 'fileSize(size(%s),filePath("%p")).\nfileOwnerGroupNumber(ownerGroupNumber("%G"),filePath("%p")).\nfileLastModification(lastModification(%T@),filePath("%p")).\nfileInode(inode(%i),filePath("%p")).\nfileSymLink(symLinkObject("%l"),filePath("%p")).\nfilePermissionBits(permissionBits(%m),filePath("%p")).\nfileNumHardLinks(numHardLinks(%n),filePath("%p")).\nfileOwnerUserNumber(ownerUserNumber("%U"),filePath("%p")).\nfileType(type("%y"),filePath("%p")).\n' 
+
+cd $current_dir
