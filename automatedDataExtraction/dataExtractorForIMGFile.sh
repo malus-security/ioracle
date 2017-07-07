@@ -41,7 +41,7 @@ do
   echo extracting file metadata
   #The filepaths for the mounted file system still include leading .'s representing the current directory, so we use sed to remove these.
   #This step was not necessary when running the metadata extractor on the iOS device because it was a completely isolated file system searched from its root.
-  ./scriptsToAutomate/firmware_metaDataExtractor.sh $mount_dir/$basepath | sed 's;),filePath("./;),filePath("/;' | sort | uniq > $out_dir/$basepath/prologFacts/unsanitized_file_metadata.pl
+  ./scriptsToAutomate/firmware_metaDataExtractor.sh $mount_dir/$basepath | sed 's;),filePath("./;),filePath("/;' | sed 's;filePath(".");filePath("/");' | sort | uniq > $out_dir/$basepath/prologFacts/unsanitized_file_metadata.pl
   ./scriptsToAutomate/sanitizeFilePaths.py $out_dir/$basepath/prologFacts/unsanitized_file_metadata.pl > $out_dir/$basepath/prologFacts/file_metadata.pl
 
   echo archiving files
