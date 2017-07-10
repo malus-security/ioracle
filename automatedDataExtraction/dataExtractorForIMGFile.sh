@@ -44,6 +44,9 @@ do
   ./scriptsToAutomate/firmware_metaDataExtractor.sh $mount_dir/$basepath | sed 's;),filePath("./;),filePath("/;' | sort | uniq > $out_dir/$basepath/prologFacts/unsanitized_file_metadata.pl
   ./scriptsToAutomate/sanitizeFilePaths.py $out_dir/$basepath/prologFacts/unsanitized_file_metadata.pl > $out_dir/$basepath/prologFacts/file_metadata.pl
 
+  #get group data
+  ./scriptsToAutomate/img_group_extractor.py $mount_dir/$basepath | sort | uniq > $out_dir/$basepath/prologFacts/group_membership_firmware.pl
+
   echo archiving files
   cd $mount_dir/$basepath && sudo tar -zcf ../../$out_dir/$basepath/fileSystem.tar.gz . && cd ../..
   #unmount by using the label we made and mounted with
