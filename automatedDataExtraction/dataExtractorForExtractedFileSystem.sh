@@ -19,6 +19,7 @@ echo "temp is $temporaryFiles"
 rm -rf $temporaryFiles
 mkdir $temporaryFiles
 mkdir $extractionDirectory/prologFacts > /dev/null 2>&1
+mkdir $extractionDirectory/ida_base_analysis > /dev/null 2>&1
 
 #I think unpacking the extracted file system should be done in this script instead of the script for a connected device
 #make the new file system owned by the current user to avoid needing sudo all the time.
@@ -121,11 +122,11 @@ rm $temporaryFiles/relevantFacts.pl
 echo 'getting file paths to processes that use chmod or chown.'
 echoerr 'getting file paths to processes that use chmod or chown.'
 cat $extractionDirectory/prologFacts/apple_executable_files_symbols.pl ./scriptsToAutomate/queries.pl > $temporaryFiles/relevantFacts.pl
-time ./scriptsToAutomate/runProlog.sh getDirectFileAccessCallersWithSymbols $temporaryFiles > $temporaryFiles/pathsToDirectFileAccessCallers.out
+time ./scriptsToAutomate/runProlog.sh getDirectFileAccessCallersWithSymbols $temporaryFiles > $extractionDirectory/ida_base_analysis/pathsToDirectFileAccessCallers.out
 rm $temporaryFiles/relevantFacts.pl
 
 echoerr 'running batch ida analysis on direct file access call executables'
-time ./scriptsToAutomate/idaBatchAnalysis.sh $extractionDirectory/fileSystem/ $temporaryFiles/pathsToDirectFileAccessCallers.out $temporaryFiles/
+time ./scriptsToAutomate/idaBatchAnalysis.sh $extractionDirectory/fileSystem/ $extractionDirectory/ida_base_analysis/pathsToDirectFileAccessCallers.out $extractionDirectory/ida_base_analysis/ 
 
 time ./scriptsToAutomate/mapIdaScriptToTargets.sh $extractionDirectory/ida_base_analysis/hashedPathToFilePathMapping.csv ./scriptsToAutomate/strider.py  $extractionDirectory/ida_base_analysis/ $extractionDirectory/prologFacts/chown_backtrace.pl ./configurationFiles/chown.config
 time ./scriptsToAutomate/mapIdaScriptToTargets.sh $extractionDirectory/ida_base_analysis/hashedPathToFilePathMapping.csv ./scriptsToAutomate/strider.py  $extractionDirectory/ida_base_analysis/ $extractionDirectory/prologFacts/chmod_backtrace.pl ./configurationFiles/chmod.config
