@@ -2,7 +2,8 @@
 
 #usage instructions
 if test $# -ne 3; then
-    echo "Usage: $0 input_directory_of_img_files directory_to_mount_img_in output_directory" 2>&1
+    echo "Usage: $0 input_directory_of_dmg_files directory_to_mount_dmg_in output_directory" 2>&1
+    echo "Note that file paths must be absolute for this script to run properly (e.g., use this: /Users/luke/iOracle/dmg_files not this: ../dmg_files)" 2>&1
     exit 1
 fi
 
@@ -19,10 +20,10 @@ mkdir $mount_dir
 mkdir $out_dir
 
 
-for filename in $in_dir/*.img; 
+for filename in $in_dir/*.dmg; 
 do
   #we need a label that will reprensent the iOS version throughout the process
-  basepath=`basename $filename .rootfs.img`
+  basepath=`basename $filename .dmg`
   mkdir $out_dir/$basepath
   mkdir $out_dir/$basepath/prologFacts
   mkdir $out_dir/$basepath/fileSystem
@@ -45,10 +46,13 @@ do
   ./scriptsToAutomate/sanitizeFilePaths.py $out_dir/$basepath/prologFacts/unsanitized_file_metadata.pl > $out_dir/$basepath/prologFacts/file_metadata.pl
 
   #get group data
-  ./scriptsToAutomate/img_group_extractor.py $mount_dir/$basepath | sort | uniq > $out_dir/$basepath/prologFacts/group_membership_firmware.pl
+  ./scriptsToAutomate/firmware_group_extractor.py $mount_dir/$basepath | sort | uniq > $out_dir/$basepath/prologFacts/group_membership_firmware.pl
 
   echo archiving files
-  cd $mount_dir/$basepath && sudo tar -zcf ../../$out_dir/$basepath/fileSystem.tar.gz . && cd ../..
+  current_dir=`pwd`
+  cd $mount_dir/$basepath 
+  sudo tar -zcf $out_dir/$basepath/fileSystem.tar.gz . 
+  cd $current_dir
   #unmount by using the label we made and mounted with
   echo unmounting
   hdiutil detach $mount_dir/$basepath
