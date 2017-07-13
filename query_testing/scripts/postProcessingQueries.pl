@@ -16,10 +16,31 @@ spit_out_paths_for_dynamic:-
   writeln(Path),
   fail.
 
-allFilePaths:-
-  filePermissionBits(_,filePath(File)),
-  writeln(File),
-  fail.
+allMetaDataFilePaths:-
+    filePermissionBits(_,filePath(Meta_data_file)),
+    writeln(Meta_data_file),
+    fail.
+
+allParameterFilePaths:-
+    functionCalled(_,_,parameter(Parameter_file)),
+    writeln(Parameter_file),
+    fail.
+
+allAccessedFilePaths:-
+    fileAccessObservation(_,sourceFile(Source_file),destinationFile(Destination_file),_),
+    %we need to ignore the Destination_file if it is "No destination"
+    (
+      (Destination_file\="No destination",writeln(Source_file),writeln(Destination_file))
+      ;
+      (writeln(Source_file))
+    ),
+    %it should be safe to skip over process ownership since those file paths should be included in paths for metadata
+    fail.
+
+allExtensionFilePaths:-
+    sandbox_extension(_,extension(_,type("file"),value(Extension_file))),
+    writeln(Extension_file),
+    fail.
 
 prologFriendlyPermissionFacts:-
   filePermissionBits(permissionBits(Permissions),filePath(File)),
