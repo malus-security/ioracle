@@ -21,7 +21,7 @@ while read line; do
 
     #this current version only outputs results for programs with com.apple as the start of their identifiers
     #identifier=`codesign --display --verbose=4 $filePath 2>&1 | grep -o '^Identifier=com.apple.*' | sed 's/Identifier=//'`
-    identifier=`./jtool/jtool.ELF64 --sig $filePath 2>&1 | grep -o '.*Identifier:[\ ]*com.apple.*' | sed 's/.*Identifier:[\ ]*//' | sed 's/\ .*//'`
+    identifier=`./jtool/jtool.ELF64 -arch armv7 --sig $filePath 2>&1 | grep -o '.*Identifier:[\ ]*com.apple.*' | sed 's/.*Identifier:[\ ]*//' | sed 's/\ .*//'`
 
     #-z checks to see if the string is empty.
     #no identifier should indicate that the executable had no signature

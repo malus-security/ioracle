@@ -16,7 +16,7 @@ echoerr() { echo "$@" 1>&2; }
 while read line; do
     filePath="$rootfs_path$line"
 
-    entitlements=`jtool/jtool.ELF64 --ent $filePath 2>&1`
+    entitlements=`jtool/jtool.ELF64 -arch armv7 --ent $filePath 2>&1`
     entitlements=`echo $entitlements | sed 's;^.*<dict>;;' | sed 's;</dict>.*$;;' | sed 's;<key>;\\\n<key>;g'`
     #-z checks to see if the string is empty.
     #no identifier should indicate that the executable had no signature
