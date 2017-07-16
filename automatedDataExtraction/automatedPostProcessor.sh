@@ -1,14 +1,18 @@
 #!/bin/bash
 
-if test $# -ne 3; then
-  echo "Usage: $0 directory_for_iOS_version_analysis directory_for_sandbox_extensions directory_for_other_dynamic_data" 1>&2
-  echo "Example: $0 iPod5_iOS812_12B440 ipod_6_ios_10.1.1 ipod_5_ios_8.1.2" 1>&2
+if test $# -ne 4; then
+  echo "Usage: $0 directory_for_iOS_version_analysis directory_for_sandbox_extensions directory_for_other_dynamic_data path_to_sandscout_facts" 1>&2
+  echo "Example: $0 iPod5_iOS812_12B440 ipod_6_ios_10.1.1 ipod_5_ios_8.1.2 ios-sandbox-profiles/8.1/allProfileFacts.pl" 1>&2
+  echo "Note: Run this script with iOracle/automatedDataExtraction/ as the current directory, otherwise relative paths may not work." 1>&2
   exit 1
 fi
 
 firmware_directory="$1"
 extension_directory="$2"
 other_dynamic_directory="$3"
+sandscout_facts="$4"
+
+cp $sandscout_facts $firmware_directory/prologFacts/
 
 #resolve symbolic links to their absolute paths
 cat $firmware_directory/prologFacts/file_metadata.pl | grep '^fileSymLink(' | grep -v '^fileSymLink(symLinkObject(""),filePath' > $firmware_directory/temporaryFiles/symlinks.pl
