@@ -19,7 +19,7 @@ echoerr() { echo "$@" 1>&2; }
 while read line; do
     filePath="$rootfs_path$line"
     #echo $filePath
-    for symbol in $(./jtool/jtool.ELF64 -S "$filePath" | sed 's/.*\ //g'); do
+    for symbol in $(./jtool/jtool.ELF64 -arch armv7 -S "$filePath" | sed 's/.*\ //g'); do
         echo "processSymbol(filePath(\"$line\"),symbol(\"$symbol\"))."
     done
 done
