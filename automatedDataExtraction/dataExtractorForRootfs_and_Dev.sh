@@ -4,6 +4,7 @@
 if test $# -ne 4; then
     echo "Usage: $0 input_directory_of_rootfs_dmg_files input_directory_of_dev_dmg_files directory_to_mount_in output_directory" 2>&1
     echo "Note that file paths must be absolute for this script to run properly (e.g., use this: /Users/luke/iOracle/dmg_files not this: ../dmg_files)" 2>&1
+    echo "WARNING!!! the directory_to_mount_in parameter will be deleted with sudo rm -rf when this script completes." 2>&1
     exit 1
 fi
 
@@ -17,15 +18,16 @@ rootfs_dir="$1"
 dev_dir="$2"
 mount_dir="$3"
 out_dir="$4"
-mkdir $mount_dir
-mkdir $mount_dir/rootfs
-mkdir $mount_dir/dev
-mkdir $mount_dir/temp
 mkdir $out_dir
 
 
 for rootfs in $rootfs_dir/*.dmg; 
 do
+  mkdir $mount_dir
+  mkdir $mount_dir/rootfs
+  mkdir $mount_dir/dev
+  mkdir $mount_dir/temp
+
   #we need a label that will reprensent the iOS version throughout the process
   basepath=`basename $rootfs .dmg`
   mkdir $out_dir/$basepath
@@ -33,9 +35,13 @@ do
   mkdir $out_dir/$basepath/fileSystem
 
   #mount the img using the label we created since we would otherwise have trouble predicting the resulting file path in /Volumes/
-  echo mounting
-  hdiutil attach -mountpoint $mount_dir/rootfs/$basepath $rootfs
-  hdiutil attach -mountpoint $mount_dir/dev/$basepath $dev_dir/$basepath.dmg
+  echo mounting at $mount_dir
+  echo provide a time delay to ensure that disks have enough time to be ejected and mounted sufficiently, otherwise we get resource busy error
+  sleep 10
+  hdiutil attach -nobrowse -mountpoint $mount_dir/rootfs/$basepath $rootfs
+  echo provide a time delay to ensure that disks have enough time to be ejected and mounted sufficiently, otherwise we get resource busy error
+  sleep 10
+  hdiutil attach -nobrowse -mountpoint $mount_dir/dev/$basepath $dev_dir/$basepath.dmg
 
   #copy the files while preserving all attributes including file ownership, permissions, and symlinks
   echo copying files 
@@ -62,7 +68,13 @@ do
   #unmount by using the label we made and mounted with
   echo unmounting
   hdiutil detach $mount_dir/rootfs/$basepath
+  echo provide a time delay to ensure that disks have enough time to be ejected and mounted sufficiently, otherwise we get resource busy error
+  sleep 10
   hdiutil detach $mount_dir/dev/$basepath
+  echo provide a time delay to ensure that disks have enough time to be ejected and mounted sufficiently, otherwise we get resource busy error
+  sleep 10
 
-  #TODO I should also delete the temp directory when we're done with it.
+  echo deleting temporary files in $mount_dir
+  sudo rm -rf $mount_dir
+
 done
