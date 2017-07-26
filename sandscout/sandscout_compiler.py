@@ -13,7 +13,9 @@ import re
 
 reserved = {
 'subpath' : 'TK_SUBPATH',
-'prefix' : 'TK_PREFIX',
+'literal-prefix' : 'TK_LPREFIX',
+'subpath-prefix' : 'TK_SPREFIX',
+'regex-prefix' : 'TK_RPREFIX',
 'allow' : 'TK_ALLOW',
 'deny' : 'TK_DENY',
 'version' : 'TK_VERSION',
@@ -308,7 +310,9 @@ def p_subpath(p):
   p[0] = p[1] +"("+ p[2]+ ")"
 
 def p_prefix(p):
-  'prefix : TK_PREFIX TK_FILTER'
+  '''prefix : TK_LPREFIX TK_FILTER
+	    | TK_SPREFIX TK_FILTER
+	    | TK_RPREFIX TK_FILTER'''
 
   #if there is a variable in the prefix
   if "{" in p[2]:
@@ -317,6 +321,7 @@ def p_prefix(p):
     matches = pattern.match(p[2])
     p[0] = p[1] + "(variable(\"" + matches.group(1) + "\"),path(\"" + matches.group(2) + "\"))"
   #if there is not a variable in the prefix then we just treat the filter like a subpath
+  #this might be too vague, but let's see what happens.
   else:
     #I am not appending a / since prefixes might state literals in the filter argument.
     p[0] = "subpath(" + p[2] + ")"
