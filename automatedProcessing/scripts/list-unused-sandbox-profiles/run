@@ -1,0 +1,3 @@
+#!/bin/bash
+
+swipl --quiet -t "ignore(list_unused_sandbox_profiles),halt(1)" --consult-file queries.pl | grep -v '^L.* ='
