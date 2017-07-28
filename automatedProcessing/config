@@ -1,8 +1,11 @@
 # Expect IORACLE_REPOSITORY to contain a `rules/` subfolder with `.pl` files. See README.
-IORACLE_REPOSITORY=/home/malus/iOracle.git
+IORACLE_REPOSITORY=/home/razvan/ios-security/iOracle.git
 
 # Expect PROLOG_FACTS_DIR to contain `static/` and `dynamic/` subfolders. See README.
-PROLOG_FACTS_DIR=/home/malus/prolog-data
+PROLOG_FACTS_DIR=/home/razvan/ios-security/prolog-data
 
 # Link facts and rules files in a subfolder of this directory. Run Prolog queries in the subfolder.
-TOPLEVEL_WORKING_DIR=/home/malus/prolog-query-work
+TOPLEVEL_WORKING_DIR=/home/razvan/ios-security/prolog-query-work
+
+# Add output files in a subfolder of this directory. Used by all_versions_make_query script.
+TOPLEVEL_OUTPUT_DIR=/home/razvan/ios-security/query-output
