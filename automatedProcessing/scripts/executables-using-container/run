@@ -1,0 +1,3 @@
+#!/bin/bash
+
+swipl --quiet -t "ignore(executables_using_sandbox_profile(\"container\")),halt(1)" --consult-file queries.pl

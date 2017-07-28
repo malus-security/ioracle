@@ -1,0 +1,3 @@
+#!/bin/bash
+
+swipl --quiet -t "ignore(list_groups),halt(1)" --consult-file queries.pl

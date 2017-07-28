@@ -1,0 +1,3 @@
+#!/bin/bash
+
+swipl --quiet -t "ignore(non_mobile_non_root),halt(1)" --consult-file queries.pl

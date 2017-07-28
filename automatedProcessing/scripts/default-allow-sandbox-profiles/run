@@ -1,0 +1,3 @@
+#!/bin/bash
+
+swipl --quiet -t "ignore(default_decision_sandbox_profiles(\"allow\")),halt(1)" --consult-file queries.pl
