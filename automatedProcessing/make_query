@@ -32,7 +32,7 @@ fi
 
 script_dir="$2"
 if ! test -d "$script_dir"; then
-    echo "Path $script is not a directory."
+    echo "Path $script_dir is not a directory."
     exit 1
 fi
 
