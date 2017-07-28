@@ -82,8 +82,39 @@ Running the `all_versions_make_query` script is going to take some time (tens of
 
 ## Query Scripts
 
-TODO
+Query scripts are located in the `scripts/` folder. For each query there is a subfolder named after the query containing the scripts (Bash, Prolog) and support files:
+
+```
+razvan@debian:~/ios-security/iOracle.git/automatedProcessing$ ls -F scripts/
+list-sandbox-profiles/         list-used-sandbox-profiles/  num-sandbox-profiles/         num-unused-sandbox-profiles/
+list-unused-sandbox-profiles/  num-sandboxed-executables/   num-unsandboxed-executables/  num-used-sandbox-profiles/
+```
+
+Files in each query subfolder are linked in the working directory together with facts and rules Prolog file.
+
+For each query script subfolder, a `run` executable (with execution permissions enabled) must exist. It is executed in the working directory and assumes all resource files (such as Prolog facts, rules and query scripts) are located there as well. As it is assumed you would do Prolog queries, there usually is a `queries.pl` file that defines the queries and support rules required:
+
+```
+razvan@debian:~/ios-security/iOracle.git/automatedProcessing$ ls -F scripts/list-sandbox-profiles/
+queries.pl  run*
+```
+
+`run` typically invokes the `swipl` to load the `queries.pl` file and run a given query; it will then post-process the output of the query. In order to use the Prolog facts and rules files, the `queries.pl` script loads them:
+
+```
+razvan@debian:~/ios-security/iOracle.git/automatedProcessing$ cat scripts/list-sandbox-profiles/queries.pl
+:- [all_facts,all_rules].
+[...]
+```
+
+When creating a Prolog query in the `queries.pl` file, take into account the output you want to provide. Most likely you will use `writeln` or some other Prolog printing function.
+
+In order to create and test a query (before placing it in the `queries.pl`) file, it is recommended you create a temporary folder and link the facts and rules Prolog files. Then you start the Prolog interpreter using the `swipl` command and load the facts and rules Prolog files by using `[all_facts,all_rules].` at the `swipl` command prompt.
 
 ## Setting Up
 
-TODO
+Once you've cloned the [iOracle repository](https://github.com/malus-security/iOracle/), you need to set up the Prolog facts. Create `PROLOG_FACTS_DIR`, create a subfolder for each version and then copy the `all_facts.pl` file in each subfolder.
+
+Fill the variables in the `config` file. Then create the `TOPLEVEL_WORKING_DIR` and `TOPLEVEL_OUTPUT_DIR`.
+
+That's it. Now you can use the `make_query` and, more likely, the `all_versions_make_query` scripts to process data.
