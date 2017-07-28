@@ -1,0 +1,8 @@
+# Expect IORACLE_REPOSITORY to contain a `rules/` subfolder with `.pl` files. See README.
+IORACLE_REPOSITORY=/home/malus/iOracle.git
+
+# Expect PROLOG_FACTS_DIR to contain `static/` and `dynamic/` subfolders. See README.
+PROLOG_FACTS_DIR=/home/malus/prolog-data
+
+# Link facts and rules files in a subfolder of this directory. Run Prolog queries in the subfolder.
+TOPLEVEL_WORKING_DIR=/home/malus/prolog-query-work

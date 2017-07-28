@@ -1,0 +1,35 @@
+#!/bin/bash
+
+source config
+
+print_supported_versions()
+{
+    echo -n "Supported versions:"
+    for v in "$PROLOG_FACTS_DIR"/static/*; do
+        echo -n " $(basename $v)"
+    done
+    echo
+}
+
+if test $# -ne 1; then
+    echo "$0 <version>" 1>&2
+    print_supported_versions 1>&2
+    exit 1
+fi
+
+version="$1"
+if ! test -d "$PROLOG_FACTS_DIR/static/$version"; then
+    echo "Version $version is not supported. Please provide correct version" 1>&2
+    print_supported_versions 1>&2
+    exit 1
+fi
+
+working_dir=$(mktemp --directory --tmpdir="$TOPLEVEL_WORKING_DIR" "$version"_$(date +"%Y-%m-%d_%H:%M")."XXXXX")
+echo "Using $working_dir as working directory."
+
+echo "Linking facts and rules files in $working_dir."
+ln -sfn "$PROLOG_FACTS_DIR"/static/"$version"/all_facts.pl "$working_dir"
+ln -sfn "$IORACLE_REPOSITORY"/rules/all_rules.pl "$working_dir"
+ln -sfn "$IORACLE_REPOSITORY"/rules/helper_rules.pl "$working_dir"
+ln -sfn "$IORACLE_REPOSITORY"/rules/sandboxAllowRules.pl "$working_dir"
+ln -sfn "$IORACLE_REPOSITORY"/rules/unixAllowRules.pl "$working_dir"
