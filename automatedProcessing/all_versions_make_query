@@ -1,0 +1,26 @@
+#!/bin/bash
+
+source config
+
+if test $# -ne 1; then
+    echo "$0 <path-to-script-directory>" 1>&2
+    exit 1
+fi
+
+script_dir="$1"
+if ! test -d "$script_dir"; then
+    echo "Path $script_dir is not a directory." 1>&2
+    exit 1
+fi
+
+# Create output folder as a subpath to `TOPLEVEL_OUTPUT_DIR`.
+output_dir=$(mktemp --directory --tmpdir="$TOPLEVEL_OUTPUT_DIR" "$(basename "$script_dir")"_"$(date +"%Y-%m-%d_%H:%M")"."XXXXX")
+echo "Using $output_dir as output directory."
+
+# Run `make_query` script for each version.
+for v in "$PROLOG_FACTS_DIR"/static/*; do
+    version=$(basename "$v")
+    echo "Running $script_dir for version $version."
+    ./make_query "$version" "$script_dir" > "$output_dir"/"$version.out"
+    echo "Output in $output_dir/$version.out"
+done
