@@ -1,0 +1,59 @@
+#!/bin/bash
+
+source config
+
+print_supported_versions()
+{
+    echo -n "Supported versions:"
+    for v in "$PROLOG_FACTS_DIR"/static/*; do
+        echo -n " $(basename $v)"
+    done
+    echo
+}
+
+# Save standard output descriptor to descriptor 3.
+exec 3>&1
+
+# Redirect standard output to standard error.
+exec 1>&2
+
+if test $# -ne 2; then
+    echo "$0 <version> <path-to-script-directory>" 1>&2
+    print_supported_versions 1>&2
+    exit 1
+fi
+
+version="$1"
+if ! test -d "$PROLOG_FACTS_DIR/static/$version"; then
+    echo "Version $version is not supported. Please provide correct version." 1>&2
+    print_supported_versions 1>&2
+    exit 1
+fi
+
+script_dir="$2"
+if ! test -d "$script_dir"; then
+    echo "Path $script_dir is not a directory."
+    exit 1
+fi
+
+working_dir=$(mktemp --directory --tmpdir="$TOPLEVEL_WORKING_DIR" "$version"_$(date +"%Y-%m-%d_%H:%M")."XXXXX")
+echo "Using $working_dir as working directory."
+
+echo "Linking facts and rules files in $working_dir."
+ln -sfn "$PROLOG_FACTS_DIR"/static/"$version"/all_facts.pl "$working_dir"
+ln -sfn "$IORACLE_REPOSITORY"/rules/all_rules.pl "$working_dir"
+ln -sfn "$IORACLE_REPOSITORY"/rules/helper_rules.pl "$working_dir"
+ln -sfn "$IORACLE_REPOSITORY"/rules/sandboxAllowRules.pl "$working_dir"
+ln -sfn "$IORACLE_REPOSITORY"/rules/unixAllowRules.pl "$working_dir"
+
+echo "Linking scripts, queries and support files from $script_dir in $working_dir."
+for f in "$script_dir"/*; do
+    ln -sfn "$(realpath "$f")" "$working_dir"
+done
+
+# Restore standard output descriptor and run script.
+pushd "$working_dir" > /dev/null 2>&1
+echo "Running script."
+exec 1>&3
+./run
+popd > /dev/null 2>&1

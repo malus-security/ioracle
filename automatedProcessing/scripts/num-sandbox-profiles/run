@@ -1,0 +1,3 @@
+#!/bin/bash
+
+swipl --quiet -t "ignore(num_sandbox_profiles),halt(1)" --consult-file queries.pl | grep -o '[0-9]\+'
