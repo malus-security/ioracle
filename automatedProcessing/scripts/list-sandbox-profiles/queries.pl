@@ -1,3 +1,3 @@
 :- [all_facts,all_rules].
 
-print_sandbox_profiles :- findall(P,usesSandbox(_,profile(P),_),L),sort(L,Lunique),maplist(writeln,Lunique).
+list_sandbox_profiles :- findall(P,profileRule(profile(P),_,_,_),L),sort(L,L2),maplist(writeln,L2).
