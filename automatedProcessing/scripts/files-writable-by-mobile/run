@@ -1,0 +1,3 @@
+#!/bin/bash
+
+swipl --quiet -t "ignore(files_writable_by_user(\"mobile\")),halt(1)" --consult-file queries.pl
