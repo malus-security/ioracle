@@ -1,0 +1,3 @@
+#!/bin/bash
+
+swipl --quiet -t "ignore(sandboxed_executables),halt(1)" --consult-file queries.pl
