@@ -1,0 +1,5 @@
+# Run one liner in the output subfolder in `TOPLEVEL_OUTPUT_DIR` to get a tab
+# separated list of numbers. A number is a line count of files for each version
+# between 7 and 10.
+# Adapt one liner for other uses.
+for i in firmware-ddi-files_2017-07-28_23\:52.rGhQF/{7,8,9,10}.*; do echo -n "$(basename "$i"): "; wc -l < "$i"; done | awk -F '[ :]+' '{print $2;}' | tr $'\n' $'\t'; echo

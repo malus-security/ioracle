@@ -44,7 +44,8 @@ Resource files in this folder are:
 * `config`: configuration file defining locations of input, intermediary and output data; variables in this file need to be updated to the proper values before using the scripts
 * `make_query`: the basic script to run a query for a given version
 * `all_versions_make_query`: the wrapper script around `make_query` that runs a query on all versions in `PROLOG_FACTS_DIR/static/`
-* `scripts`: this is where query scripts are located; there is a folder for each query and all files in that folder are linked in the working directory; a `run` script needs to be part of the folder for each query
+* `scripts/`: this is where query scripts are located; there is a folder for each query and all files in that folder are linked in the working directory; a `run` script needs to be part of the folder for each query
+* `helper_script`: this file store helper one liners, such as the one for postprocessing output files to extract the number of lines
 
 Assuming there are query subfolders in the `scripts` folder, the `make_query` script can be used for running the query for a given version. A working directory will be created in `TOPLEVEL_WORKING_DIR` and the output will be shown at standard output:
 
