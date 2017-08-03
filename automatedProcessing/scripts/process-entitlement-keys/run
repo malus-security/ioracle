@@ -1,0 +1,3 @@
+#!/bin/bash
+
+swipl --quiet -t "ignore(process_entitlement_keys),halt(1)" --consult-file queries.pl
