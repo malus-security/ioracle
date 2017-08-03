@@ -1,0 +1,3 @@
+#!/bin/bash
+
+swipl --quiet -t "ignore(files_owned_by_user(\"root\")),halt(1)" --consult-file queries.pl
