@@ -1,5 +1,34 @@
 %for now I can test by using the process with path "/usr/sbin/BTServer" which runs as mobile
 
+unixUserAllow(uid(Uid),coarseOp(Op),file(File)) :-
+  fileOwnerUserNumber(ownerUserNumber(Uowner),filePath(File)),
+  fileOwnerGroupNumber(ownerGroupNumber(Gowner),filePath(File)),
+
+  getRelBits(coarseOp(Op),file(File),uownBit(Ubit),gownBit(Gbit),worldBit(Wbit)),
+
+  % expect user test to fail without following line
+  (
+    % check user first
+    (Ubit = 1, Uid = Uowner);
+    % check group, but make sure user wasn't denied
+    (
+      \+ (Ubit = 0, Uid = Uowner),
+      (Gbit = 1, isUserNumberInGroupNumber(Uid,Gowner))
+    );
+    % check group, but make sure user wasn't denied
+    (
+      \+ (Ubit = 0, Uid = Uowner),
+      \+ (Gbit = 0, isUserNumberInGroupNumber(Uid,Gowner)),
+      (Wbit = 1)
+    );
+
+    (Uid = "0")
+  ).
+
+isUserNumberInGroupNumber(Uid,Gid) :-
+  user(userName(U),_,userID(Uid),_,_,_,_),
+  groupMembership(user(U),_,groupIDNumber(Gid)).
+
 %I've modified this rule such that it now expects a uid and gid number as input
 unixAllow(puid(Puid),pgid(Pgid),coarseOp(Op),file(File)):-
   fileOwnerUserNumber(ownerUserNumber(Uowner),filePath(File)),
