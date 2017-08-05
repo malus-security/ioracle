@@ -44,11 +44,70 @@ extension_name_resolution:-
 
 %might be easier to look for subject filters rather than trying all file paths.
 %we should also consider the default allow profiles.
-%writable_nonreadable:-
+simple_write_noreads:-
+  setof(WFilter,WF^(profileRule(profile(Profile),decision("allow"),operation("file-writeSTAR"),filters(WF)),member(WFilter,WF)),WFilterList),
+  setof(RFilter,RF^(profileRule(profile(Profile),decision("allow"),operation("file-readSTAR"),filters(RF)),member(RFilter,RF)),RFilterList),
+  member(Filter,WFilterList),
+  not(member(Filter,RFilterList)),
+  %this will only find the most obvious cases by using literal file path filters...
+  Filter=literal(Path);
+  getAttributes(process(Process),entitlements(Ent),extensions(Ext),user(User),home(Home),profile(Profile)),
+  relevantRule(entitlements(Ent),extensions(Ext),home(Home),profile(Profile),operation("file-writeSTAR"),subject(file(Path)),decision("allow"),filters(AWFilters)),
+  not(relevantRule(entitlements(Ent),extensions(Ext),home(Home),profile(Profile),operation("file-readSTAR"),subject(file(Path)),decision("allow"),filters(ARFilters))),
+  write("Profile: "),writeln(Profile),
+  write("Path : "),writeln(Path),
+  write("Target Filter: "),writeln(Filter),
+  write("Actual Write Filter: "),writeln(AWFilters),
+  writeln(""),
+  fail.
 
+write_noreads_manual_analysis_required:-
+  setof(WFilter,WF^(profileRule(profile(Profile),decision("allow"),operation("file-writeSTAR"),filters(WF)),member(WFilter,WF)),WFilterList),
+  setof(RFilter,RF^(profileRule(profile(Profile),decision("allow"),operation("file-readSTAR"),filters(RF)),member(RFilter,RF)),RFilterList),
+  member(Filter,WFilterList),
+  not(member(Filter,RFilterList)),
+  (
+    Filter=regex(_);
+    Filter=literal(Path);
+    Filter=subpath(Path);
+    Filter=regex-prefix(_,_);
+    Filter=literal-prefix(_,_);
+    Filter=subpath-prefix(_,_)
+  ),
+  write("Profile: "),writeln(Profile),
+  write("Target Filter: "),writeln(Filter),
+  write("Actual Write Filter: "),writeln(AWFilters),
+  writeln(""),
+  fail.
+
+default_deny_write_noreads_use_known_paths:-
+  getAttributes(process(Process),entitlements(Ent),extensions(Ext),user(User),home(Home),profile(Profile)),
+  relevantRule(entitlements(Ent),extensions(Ext),home(Home),profile(Profile),operation("file-writeSTAR"),subject(file(Path)),decision("allow"),filters(AWFilters)),
+  not(relevantRule(entitlements(Ent),extensions(Ext),home(Home),profile(Profile),operation("file-readSTAR"),subject(file(Path)),decision("allow"),filters(ARFilters))),
+  fileType(_,filePath(Path)),
+  write("Profile: "),writeln(Profile),
+  write("Process: "),writeln(Process),
+  write("Path: "),writeln(Path),
+  write("Write Filters: "),writeln(AWFilters),
+  writeln(""),
+  fail.
+
+%this query identifies the problems with MobileBackup profile very quickly.
+default_allow_write_noreads_use_known_paths:-
+  getAttributes(process(Process),entitlements(Ent),extensions(Ext),user(User),home(Home),profile(Profile)),
+  not(relevantRule(entitlements(Ent),extensions(Ext),home(Home),profile(Profile),operation("file-writeSTAR"),subject(file(Path)),decision("deny"),filters(AWFilters))),
+  relevantRule(entitlements(Ent),extensions(Ext),home(Home),profile(Profile),operation("file-readSTAR"),subject(file(Path)),decision("deny"),filters(ARFilters)),
+  fileType(_,filePath(Path)),
+  write("Profile: "),writeln(Profile),
+  write("Process: "),writeln(Process),
+  write("Path: "),writeln(Path),
+  write("Read Filters: "),writeln(ARFilters),
+  writeln(""),
+  fail.
 
 %symlink_bypass
 %won't work on iOS 10
+
 
 %keystroke_exfiltration
 
