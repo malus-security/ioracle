@@ -105,11 +105,53 @@ default_allow_write_noreads_use_known_paths:-
   writeln(""),
   fail.
 
-%symlink_bypass
-%won't work on iOS 10
-
-
 %keystroke_exfiltration
+%this query seems to work pretty well, but it generates a lot of duplicate output.
+%we can either make this query cleaner or we can use post processing to remove the duplicates
+%the results we're looking for are [vnode-type(tty),regex(/dev/ttyp[a-f0-9]/i)] and [vnode-type(tty),regex(/dev/ptyp[a-f0-9]/i)]
+%a few other dev files are returned as potential results, but I don't think these are suitable for passing messages.
+keystroke_exfiltration:-
+  setof(WFilter,WF^(profileRule(profile("keyboard"),decision("allow"),operation("file-writeSTAR"),filters(WF)),member(WFilter,WF)),WFilterList),
+  setof(WFilter,WF^(profileRule(profile("keyboard"),decision("allow"),operation("file-write-data"),filters(WF)),member(WFilter,WF)),WDFilterList),
+  setof(RFilter,RF^(profileRule(profile("container"),decision("allow"),operation("file-readSTAR"),filters(RF)),member(RFilter,RF)),RFilterList),
+  setof(RFilter,RF^(profileRule(profile("container"),decision("allow"),operation("file-read-data"),filters(RF)),member(RFilter,RF)),RDFilterList),
+
+  (member(Filter,WFilterList) ; member(Filter,WDFilterList)),
+  (member(Filter,RFilterList) ; member(Filter,RDFilterList)),
+
+  profileRule(profile("container"),decision("allow"),operation(Rop),filters(RFil)),
+  (Rop="file-readSTAR";Rop="file-read-data"),
+  member(Filter,RFil),
+  not(member(extension(_),RFil)),
+  not(member(require-entitlement(_,_),RFil)),
+
+  profileRule(profile("keyboard"),decision("allow"),operation(Wop),filters(WFil)),
+  (Wop="file-writeSTAR";Wop="file-write-data"),
+  member(Filter,WFil),
+  not(member(extension(_),WFil)),
+  not(member(require-entitlement(_,_),WFil)),
+  
+  write("Exfiltration Filter: "),writeln(Filter),
+  write("Write filters: "),writeln(WFil),
+  write("Read filters: "),writeln(RFil),
+  writeln(""),
+  fail.
 
 %afcd_dos_targets
+%I expect to see files in Recordings/ as suggested targets against Voice Memo app
+afcd_dos_targets:-
+  %get file paths from dynamic operations (focus on "Modified" operation)
+  fileAccessObservation(process(Process),sourceFile(FilePath),destinationFile("No destination"),operation("Modified")),
+  %filter out third party processes
+  processSignature(filePath(Process),_),
+  %filter out only file paths in Media/ 
+  stringSubPath("/private/var/mobile/Media/",FilePath),
+  write("FilePath: "),writeln(FilePath),
+  write("Process: "),writeln(Process),
+  writeln(""),
+  fail.
+
+%symlink_bypass
+%probably won't work on iOS 10, designed query for 9.3.5
+%we may need to fix the home directory symlink issue before this query will work...
 
