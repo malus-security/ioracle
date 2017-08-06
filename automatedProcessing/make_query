@@ -46,6 +46,7 @@ ln -sfn "$IORACLE_REPOSITORY"/rules/helper_rules.pl "$working_dir"
 ln -sfn "$IORACLE_REPOSITORY"/rules/sandboxAllowRules.pl "$working_dir"
 ln -sfn "$IORACLE_REPOSITORY"/rules/unixAllowRules.pl "$working_dir"
 ln -sfn "$IORACLE_REPOSITORY"/rules/automated_queries.pl "$working_dir"
+ln -sfn "$IORACLE_REPOSITORY"/rules/vul_discovery.pl "$working_dir"
 
 echo "Linking scripts, queries and support files from $script_dir in $working_dir."
 for f in "$script_dir"/*; do
