@@ -1,0 +1,13 @@
+#!/bin/bash
+
+if test $# -ne 1; then
+    echo "Usage: $0 /path/to/all_facts.pl" 2>&1
+    exit 1
+fi
+
+t=$(mktemp)
+cut -d '(' -f 1 < "$1" | sort -u > "$t"
+
+while read line; do
+    grep "^$line" "$1" | head -1
+done < "$t"
