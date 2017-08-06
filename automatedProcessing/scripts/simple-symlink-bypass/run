@@ -1,0 +1,3 @@
+#!/bin/bash
+
+swipl --quiet -t "ignore(simple_symlink_bypass),halt(1)" --consult-file queries.pl
