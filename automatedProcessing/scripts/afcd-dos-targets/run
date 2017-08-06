@@ -1,0 +1,3 @@
+#!/bin/bash
+
+swipl --quiet -t "ignore(afcd_dos_targets),halt(1)" --consult-file queries.pl

@@ -1,0 +1,3 @@
+#!/bin/bash
+
+swipl --quiet -t "ignore(simple_write_noreads),halt(1)" --consult-file queries.pl

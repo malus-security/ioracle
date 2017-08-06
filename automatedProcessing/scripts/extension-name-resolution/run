@@ -1,0 +1,3 @@
+#!/bin/bash
+
+swipl --quiet -t "ignore(extension_name_resolution),halt(1)" --consult-file queries.pl

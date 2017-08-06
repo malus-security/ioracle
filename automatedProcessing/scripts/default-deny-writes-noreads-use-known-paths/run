@@ -1,0 +1,3 @@
+#!/bin/bash
+
+swipl --quiet -t "ignore(default_deny_write_noreads_use_known_paths),halt(1)" --consult-file queries.pl

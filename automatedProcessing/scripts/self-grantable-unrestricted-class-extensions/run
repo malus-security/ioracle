@@ -1,0 +1,3 @@
+#!/bin/bash
+
+swipl --quiet -t "ignore(self_grantable_unrestricted_class_extensions),halt(1)" --consult-file queries.pl
