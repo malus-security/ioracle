@@ -6,24 +6,16 @@ unixUserAllow(uid(Uid),coarseOp(Op),file(File)) :-
 
   getRelBits(coarseOp(Op),file(File),uownBit(Ubit),gownBit(Gbit),worldBit(Wbit)),
 
-  % Expect user test to fail without following line.
-  (
-    % Check user first. If match found, do not go to other tests.
-    (Ubit = 1, Uid = Uowner),fail;
-    % Check group, but make sure user wasn't denied. If match found, do not go to other tests.
-    (
-      \+ (Ubit = 0, Uid = Uowner),
-      (Gbit = 1, isUserNumberInGroupNumber(Uid,Gowner))
-    ),fail;
-    % Check others, but make sure user and group weren't denied. If match found, do not go to other tests.
-    (
-      \+ (Ubit = 0, Uid = Uowner),
-      \+ (Gbit = 0, isUserNumberInGroupNumber(Uid,Gowner)),
-      (Wbit = 1)
-    ),fail;
+  checkPermBits(Uid,Uowner,Gowner,Ubit,Gbit,Wbit).
 
-    (Uid = "0")
-  ).
+% Root is always provided access.
+checkPermBits(Uid,Uowner,Gowner,Ubit,Gbit,Wbit) :- Uid = "0".
+% Check user first. If match found, do not go to other tests.
+checkPermBits(Uid,Uowner,Gowner,Ubit,Gbit,Wbit) :- Ubit = 1, Uid = Uowner, !.
+% Check group, but make sure user wasn't denied. If match found, do not go to other tests.
+checkPermBits(Uid,Uowner,Gowner,Ubit,Gbit,Wbit) :- \+ (Ubit = 0, Uid = Uowner), Gbit = 1, isUserNumberInGroupNumber(Uid,Gowner), !.
+% Check others, but make sure user and group weren't denied. If match found, do not go to other tests.
+checkPermBits(Uid,Uowner,Gowner,Ubit,Gbit,Wbit) :- \+ (Ubit = 0, Uid = Uowner), \+ (Gbit = 0, isUserNumberInGroupNumber(Uid,Gowner)), Wbit = 1, !.
 
 isUserNumberInGroupNumber(Uid,Gid) :-
   user(userName(U),_,userID(Uid),_,_,_,_),
