@@ -1,7 +1,16 @@
-
+%no sandbox profile assigned
 high_integrity_process(Process):-
   processSignature(filePath(Process),_),
   not(usesSandbox(processPath(Process),profile(_),mechanism(_))).
+
+%known to run with root authority
+high_integrity_process(Process):-
+  processOwnership(uid("0"),_,comm(Process)).
+
+%default allow sandbox profile
+high_integrity_process(Process):-
+  usesSandbox(processPath(Process),profile(Profile),mechanism(_)),
+  profileDefault(profile(Profile),decision("allow")).
 
 observed_high_integrity_process(Process):-
   high_integrity_process(Process),

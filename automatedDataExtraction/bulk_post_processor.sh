@@ -7,7 +7,7 @@
 #until then, just change them as necessary and treat this script like a config file.
 path_to_firm="/media/bigdata/from-ncsu-to-upb/firmware_processing_results_with_dev_after_post_process"
 path_to_dynamic="/media/bigdata/dynamic"
-path_to_profiles="/media/bigdata/all_profile_facts_7_31_17"
+path_to_profiles="/media/bigdata/all_profile_facts_8_6_17"
 
 function call_post_processor {
   firmware=$path_to_firm/$1
