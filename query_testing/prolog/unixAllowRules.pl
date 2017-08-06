@@ -6,21 +6,21 @@ unixUserAllow(uid(Uid),coarseOp(Op),file(File)) :-
 
   getRelBits(coarseOp(Op),file(File),uownBit(Ubit),gownBit(Gbit),worldBit(Wbit)),
 
-  % expect user test to fail without following line
+  % Expect user test to fail without following line.
   (
-    % check user first
-    (Ubit = 1, Uid = Uowner);
-    % check group, but make sure user wasn't denied
+    % Check user first. If match found, do not go to other tests.
+    (Ubit = 1, Uid = Uowner),fail;
+    % Check group, but make sure user wasn't denied. If match found, do not go to other tests.
     (
       \+ (Ubit = 0, Uid = Uowner),
       (Gbit = 1, isUserNumberInGroupNumber(Uid,Gowner))
-    );
-    % check group, but make sure user wasn't denied
+    ),fail;
+    % Check others, but make sure user and group weren't denied. If match found, do not go to other tests.
     (
       \+ (Ubit = 0, Uid = Uowner),
       \+ (Gbit = 0, isUserNumberInGroupNumber(Uid,Gowner)),
       (Wbit = 1)
-    );
+    ),fail;
 
     (Uid = "0")
   ).
@@ -39,18 +39,18 @@ unixAllow(puid(Puid),pgid(Pgid),coarseOp(Op),file(File)):-
   %expect user test to fail without following line
   (
     %check user first
-    (Ubit = 1, Puid = Uowner);
+    (Ubit = 1, Puid = Uowner),fail;
     %check group, but make sure user wasn't denied
     ( 
       \+ (Ubit=0,Puid=Uowner), 
       (Gbit = 1, matchGroup(Puid,Pgid,Gowner))
-    );
+    ),fail;
     %check group, but make sure user wasn't denied
     ( 
       \+ (Ubit=0,Puid=Uowner), 
       \+ (Gbit=0,matchGroup(Puid,Pgid,Gowner)),
       (Wbit = 1)
-    );
+    ),fail;
 
     %will probably need this later
     %(Gbit = 0, Pgid = Gowner, fail);
