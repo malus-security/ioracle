@@ -1,4 +1,4 @@
-%for now I can test by using the process with path "/usr/sbin/BTServer" which runs as mobile
+% For now I can test by using the process with path "/usr/sbin/BTServer" which runs as mobile.
 
 unixUserAllow(uid(Uid),coarseOp(Op),file(File)) :-
   fileOwnerUserNumber(ownerUserNumber(Uowner),filePath(File)),
@@ -29,30 +29,30 @@ isUserNumberInGroupNumber(Uid,Gid) :-
   user(userName(U),_,userID(Uid),_,_,_,_),
   groupMembership(user(U),_,groupIDNumber(Gid)).
 
-%I've modified this rule such that it now expects a uid and gid number as input
+% I've modified this rule such that it now expects a uid and gid number as input.
 unixAllow(puid(Puid),pgid(Pgid),coarseOp(Op),file(File)):-
   fileOwnerUserNumber(ownerUserNumber(Uowner),filePath(File)),
   fileOwnerGroupNumber(ownerGroupNumber(Gowner),filePath(File)),
 
   getRelBits(coarseOp(Op),file(File),uownBit(Ubit),gownBit(Gbit),worldBit(Wbit)),
 
-  %expect user test to fail without following line
+  % Expect user test to fail without following line.
   (
-    %check user first
+    % Check user first. If match found, do not go to other tests.
     (Ubit = 1, Puid = Uowner),fail;
-    %check group, but make sure user wasn't denied
-    ( 
-      \+ (Ubit=0,Puid=Uowner), 
+    % Check group, but make sure user wasn't denied. If match found, do not go to other tests.
+    (
+      \+ (Ubit=0,Puid=Uowner),
       (Gbit = 1, matchGroup(Puid,Pgid,Gowner))
     ),fail;
-    %check group, but make sure user wasn't denied
-    ( 
-      \+ (Ubit=0,Puid=Uowner), 
+    % Check others, but make sure user and group weren't denied. If match found, do not go to other tests.
+    (
+      \+ (Ubit=0,Puid=Uowner),
       \+ (Gbit=0,matchGroup(Puid,Pgid,Gowner)),
       (Wbit = 1)
     ),fail;
 
-    %will probably need this later
+    % Will probably need this later.
     %(Gbit = 0, Pgid = Gowner, fail);
     (Puid = "0")
   ).
@@ -83,7 +83,7 @@ getRelBits(coarseOp("execute"),file(File),uownBit(Ubit),gownBit(Gbit),worldBit(W
   groupexecute(Gbit,File),
   otherexecute(Wbit,File).
 
-%this is more an example query than a useful rule.
+% This is more an example query than a useful rule.
 nonWorldExecutableDirectories(file(File)):-
   fileType(type("d"),filePath(File)),
   otherexecute(0,File),
