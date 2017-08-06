@@ -90,6 +90,11 @@ sandbox_extension_entries = sdata.split("\n")
 symdata = open(sys.argv[5],"r").read().strip()
 symlink_lines = symdata.split("\n")
 
+#TODO add user facts as an input source
+#TODO update whatever script calls this one to specify the new file
+udata = open(sys.argv[6],"r").read().strip()
+user_entries = udata.split("\n")
+
 #start a dictionary of symlinks
 symlink_target_dictionary = {}
 for symlink in symlink_lines:
@@ -163,4 +168,18 @@ for sandbox_extension in sandbox_extension_entries:
     if "/" in path:
       absolute_path = get_absolute_path(path, symlink_target_dictionary)
       print prefix + absolute_path + postfix
+
+#TODO copy the process_ownership loop and do the same for user homes.
+#resolve links in Unix user results
+for user in user_entries:
+  pattern = re.compile('(^.*,homeDirectory\(")([^"]*)(.*$)')
+  match = pattern.match(user)
+  prefix = match.group(1)
+  path = match.group(2)
+  postfix = match.group(3)
+  #some of the process paths are invalid and I'd rather throw them out than leave them in the data set
+  if "/" in path:
+    absolute_path = get_absolute_path(path, symlink_target_dictionary)
+    print prefix + absolute_path + postfix
+
 

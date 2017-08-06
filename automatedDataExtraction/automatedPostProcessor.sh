@@ -21,10 +21,16 @@ cat $firmware_directory/prologFacts/chmod_backtrace.pl  $firmware_directory/prol
 mv $firmware_directory/prologFacts/chmod_backtrace.pl $firmware_directory/temporaryFiles/chmod_backtrace.pl
 mv $firmware_directory/prologFacts/chown_backtrace.pl $firmware_directory/temporaryFiles/chown_backtrace.pl
 
-./scriptsToAutomate/map_sym_to_absolute.py $firmware_directory/temporaryFiles/backtracer_results.pl $other_dynamic_directory/prologFacts/dynamicFileAccess.pl $other_dynamic_directory/prologFacts/processOwnershipFacts.pl $extension_directory/prologFacts/sandboxExtensions.pl $firmware_directory/temporaryFiles/symlinks.pl > $firmware_directory/prologFacts/symlinks_resolved_backtrace_results_and_dynamic_data.pl
+#./scriptsToAutomate/map_sym_to_absolute.py $firmware_directory/temporaryFiles/backtracer_results.pl $other_dynamic_directory/prologFacts/dynamicFileAccess.pl $other_dynamic_directory/prologFacts/processOwnershipFacts.pl $extension_directory/prologFacts/sandboxExtensions.pl $firmware_directory/temporaryFiles/symlinks.pl > $firmware_directory/prologFacts/symlinks_resolved_backtrace_results_and_dynamic_data.pl
+
+./scriptsToAutomate/map_sym_to_absolute.py $firmware_directory/temporaryFiles/backtracer_results.pl $other_dynamic_directory/prologFacts/dynamicFileAccess.pl $other_dynamic_directory/prologFacts/processOwnershipFacts.pl $extension_directory/prologFacts/sandboxExtensions.pl $firmware_directory/temporaryFiles/symlinks.pl $firmware_directory/prologFacts/users.pl  > $firmware_directory/prologFacts/symlinks_resolved_backtrace_results_and_dynamic_data.pl
+
+#TODO remove the original user data file so that it doesn't get confused with the one where we resolve the symlinks
+mv $firmware_directory/prologFacts/users.pl $firmware_directory/temporaryFiles/users.pl  
 
 #get directory parents, generate prolog friendly permissions, and consolidate, sort, and deduplicate facts
 current_dir=`pwd`
 cd ../query_testing/scripts
 ./postProcessing.sh $firmware_directory
 cd $current_dir
+
