@@ -31,21 +31,21 @@ unixAllow(puid(Puid),pgid(Pgid),coarseOp(Op),file(File)):-
   % Expect user test to fail without following line.
   (
     % Check user first. If match found, do not go to other tests.
-    (Ubit = 1, Puid = Uowner),fail;
+    (Ubit = 1, Puid = Uowner);
     % Check group, but make sure user wasn't denied. If match found, do not go to other tests.
     (
       \+ (Ubit=0,Puid=Uowner),
       (Gbit = 1, matchGroup(Puid,Pgid,Gowner))
-    ),fail;
+    );
     % Check others, but make sure user and group weren't denied. If match found, do not go to other tests.
     (
       \+ (Ubit=0,Puid=Uowner),
       \+ (Gbit=0,matchGroup(Puid,Pgid,Gowner)),
       (Wbit = 1)
-    ),fail;
+    );
 
     % Will probably need this later.
-    %(Gbit = 0, Pgid = Gowner, fail);
+    %(Gbit = 0, Pgid = Gowner);
     (Puid = "0")
   ).
   %writeln(File).
