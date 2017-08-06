@@ -4,7 +4,13 @@
 getAttributes(process(Process),entitlements(Ent),extensions(Ext),user(User),home(Home),profile(Profile)):-
   %processProfile(filePath(Process),profile(Profile)),
   usesSandbox(processPath(Process),profile(Profile),_),
-  processOwnership(uid(User),_,comm(Process)),
+  (
+    (processOwnership(uid(User),_,comm(Process)))
+    ;
+    %this is a hack, but it seems reasonable.
+    %if we don't know the process owner from dynamic analysis, just assume user mobile (501)
+    (not(processOwnership(uid(User),_,comm(Process))), User="501")
+  ),
   findall(X,sandbox_extension(process(Process),X),Ext),
   findall(Y,processEntitlement(filePath(Process),Y),Ent),
   %home(user(User),filePath(Home)).
@@ -67,11 +73,29 @@ satisfyFilters(filters(subpath(Subpath)),entitlements(Ent),extensions(Ext),home(
   %stringSubPath(Subpath,SubjectString).
 
 %PREFIX FILTER
-satisfyFilters(filters(prefix(variable("HOME"),path(PostPath))),entitlements(Ent),extensions(Ext),home(Home),subject(file(SubjectString))):-
-  %since the filepath of the subject and the literal must match exactly, this should be sufficient.
-  string_concat(Home, PostPath, SubPathString),
-  satisfyFilters(filters(subpath(SubPathString)),entitlements(Ent),extensions(Ext),home(Home),subject(file(SubjectString))).
+%satisfyFilters(filters(prefix(variable("HOME"),path(PostPath))),entitlements(Ent),extensions(Ext),home(Home),subject(file(SubjectString))):-
+%  %since the filepath of the subject and the literal must match exactly, this should be sufficient.
+%  string_concat(Home, PostPath, SubPathString),
+%  satisfyFilters(filters(subpath(SubPathString)),entitlements(Ent),extensions(Ext),home(Home),subject(file(SubjectString))).
 
+satisfyFilters(filters(literal-prefix(variable(Var),path(PostPath))),entitlements(Ent),extensions(Ext),home(Home),subject(file(SubjectString))):-
+  %since the filepath of the subject and the literal must match exactly, this should be sufficient.
+  (Var="HOME";Var="FRONT_USER_HOME"),
+  string_concat(Home, PostPath, ResultString),
+  satisfyFilters(filters(literal(ResultString)),entitlements(Ent),extensions(Ext),home(Home),subject(file(SubjectString))).
+
+satisfyFilters(filters(subpath-prefix(variable(Var),path(PostPath))),entitlements(Ent),extensions(Ext),home(Home),subject(file(SubjectString))):-
+  %since the filepath of the subject and the literal must match exactly, this should be sufficient.
+  (Var="HOME";Var="FRONT_USER_HOME"),
+  string_concat(Home, PostPath, ResultString),
+  satisfyFilters(filters(subpath(ResultString)),entitlements(Ent),extensions(Ext),home(Home),subject(file(SubjectString))).
+
+satisfyFilters(filters(regex-prefix(variable(Var),path(PostPath))),entitlements(Ent),extensions(Ext),home(Home),subject(file(SubjectString))):-
+  %since the filepath of the subject and the literal must match exactly, this should be sufficient.
+  (Var="HOME";Var="FRONT_USER_HOME"),
+  string_concat(Home, PostPath, ResultString),
+  satisfyFilters(filters(regex(ResultString)),entitlements(Ent),extensions(Ext),home(Home),subject(file(SubjectString))).
+ 
 %VNODE FILTER
 satisfyFilters(filters(vnode-type(Vnode)),entitlements(Ent),extensions(Ext),home(Home),subject(file(SubjectString))):-
   %since the filepath of the subject and the literal must match exactly, this should be sufficient.

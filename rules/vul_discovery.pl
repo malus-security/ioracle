@@ -50,7 +50,7 @@ simple_write_noreads:-
   member(Filter,WFilterList),
   not(member(Filter,RFilterList)),
   %this will only find the most obvious cases by using literal file path filters...
-  Filter=literal(Path);
+  Filter=literal(Path),
   getAttributes(process(Process),entitlements(Ent),extensions(Ext),user(User),home(Home),profile(Profile)),
   relevantRule(entitlements(Ent),extensions(Ext),home(Home),profile(Profile),operation("file-writeSTAR"),subject(file(Path)),decision("allow"),filters(AWFilters)),
   not(relevantRule(entitlements(Ent),extensions(Ext),home(Home),profile(Profile),operation("file-readSTAR"),subject(file(Path)),decision("allow"),filters(ARFilters))),
@@ -152,6 +152,22 @@ afcd_dos_targets:-
   fail.
 
 %symlink_bypass
-%probably won't work on iOS 10, designed query for 9.3.5
-%we may need to fix the home directory symlink issue before this query will work...
+%This query is a bit simplified, but it works for 9.3 and find lock_sync as expected.
+simple_symlink_bypass:-
+  profileRule(profile("container"),decision("allow"),operation("file-writeSTAR"),filters(WFil)),
+  Home="/private/var/mobile",
+  not(member(extension(_),WFil)),
+  not(member(require-entitlement(_,_),WFil)),
+  member(Filter,WFil),
+  (
+    Filter=literal(Path);
+    Filter=subpath(Path);
+    (Filter=literal-prefix(variable(_),path(PostPath)),string_concat(Home, PostPath, Path));
+    (Filter=subpath-prefix(variable(_),path(PostPath)),string_concat(Home, PostPath, Path))
+  ),
+  stringSubPath("/private/var/mobile/Media/",Path),
+  write("Filters: "),writeln(WFil),
+  write("Path: "),writeln(Path),
+  writeln(""),
+  fail.
 
