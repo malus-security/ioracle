@@ -1,3 +1,8 @@
+% A process is low integrity if it's not high integrity.
+low_integrity_process(Process):-
+  processSignature(filePath(Process),_),
+  not(high_integrity_process(Process)).
+
 %no sandbox profile assigned
 high_integrity_process(Process):-
   processSignature(filePath(Process),_),
@@ -83,4 +88,31 @@ integrity_violations_both:-
   writeln("\"))."),
   fail.
 
+% Check if process is allowed access to file both by inspecting its sandbox profile and Unix permissions.
 
+% Check if sandboxed process is allowed access by Unix permissions.
+process_file_access(process(Process),file(File),coarseOp(Op)):-
+  processSignature(filePath(Process),_),
+  processCanonicalOwnership(uid(Uid),gid(Gid),processPath(Process)),
+  mapCoarseOpToSandboxOp(Op,SandboxOp),
+  sandboxAllow(process(Process),file(File),operation(SandboxOp)),
+  string_length(File,L),string_codes("/",[Slash|_]), (string_code(L,File,Slash) -> (L1 is L-1,sub_string(File,0,L1,_,ActualFile)) ; ActualFile=File),
+  unixAllow(puid(Uid),pgid(Gid),coarseOp(Op),file(ActualFile)).
+
+% Check if unsandboxed process is allowed access by Unix permissions.
+process_file_access(process(Process),file(File),coarseOp(Op)):-
+  processSignature(filePath(Process),_),
+  not(usesSandbox(processPath(Process),profile(_),mechanism(_))),
+  processCanonicalOwnership(uid(Uid),gid(Gid),processPath(Process)),
+  string_length(File,L),string_codes("/",[Slash|_]), (string_code(L,File,Slash) -> (L1 is L-1,sub_string(File,0,L1,_,ActualFile)) ; ActualFile=File),
+  unixAllow(puid(Uid),pgid(Gid),coarseOp(Op),file(ActualFile)).
+
+mapCoarseOpToSandboxOp("read", "file-readSTAR").
+mapCoarseOpToSandboxOp("write", "file-writeSTAR").
+
+% Determine process ownership. Fallback to user mobile (UID 501) if no dynamic information from processOwnership predicate.
+processCanonicalOwnership(uid(Uid),gid(Gid),processPath(Process)):-
+  processOwnership(uid(Uid),gid(Gid),comm(Process)),!.
+
+processCanonicalOwnership(uid(Uid),gid(Gid),processPath(Process)):-
+  Uid = "501", Gid = "501",!.
