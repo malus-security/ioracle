@@ -158,3 +158,8 @@ self_grantable_unrestricted_extensions:-
   write("Filters: "),writeln(Filters2),
   writeln(""),
   fail.
+
+% Check if process is allowed by sandbox profile to access subject.
+sandboxAllow(process(Process),Subject,operation(Op)):-
+  getAttributes(process(Process),entitlements(Ent),extensions(Ext),user(User),home(Home),profile(Profile)),
+  relevantRule(entitlements(Ent),extensions(Ext),home(Home),profile(Profile),operation(Op),subject(Subject),decision("allow"),filters(Filters)).
