@@ -1,0 +1,3 @@
+#!/bin/bash
+
+swipl --quiet -t "ignore(high_integrity_access(\"/private/var/tmp/\",\"write\")),halt(1)" --consult-file queries.pl

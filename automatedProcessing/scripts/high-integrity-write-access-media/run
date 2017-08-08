@@ -1,0 +1,3 @@
+#!/bin/bash
+
+swipl --quiet -t "ignore(high_integrity_access(\"/private/var/mobile/Media/\",\"write\")),halt(1)" --consult-file queries.pl
