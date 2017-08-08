@@ -1,0 +1,3 @@
+#!/bin/bash
+
+swipl --quiet -t "ignore(processes_using_symbol(\"_mount\")),halt(1)" --consult-file queries.pl
