@@ -1,0 +1,3 @@
+#!/bin/bash
+
+swipl --quiet -t "ignore(processes_with_entitlement_not_in_container(\"com.apple.private.skip-library-validation\")),halt(1)" --consult-file queries.pl
