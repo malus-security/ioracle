@@ -9,4 +9,4 @@ process_works_in_observation(P,Root):-
   fileAccessObservation(process(P),_,destinationFile(F),_),stringSubPath(Root,F).
 
 process_works_in_static_media(P):-
-  processString(filePath(P),stringFromProgram(F)), F =~ "/Media/".
+  processString(filePath(P),stringFromProgram(F)), F =~ "Media/".
