@@ -2,4 +2,4 @@
 
 :- use_module(library(regex)).
 
-unsandboxed_executables :- findall(F,(file(fileType(T),filePath(F)),T =~ "Mach-O",not(usesSandbox(processPath(F),_,_))),L),sort(L,L2),maplist(writeln,L2).
+unsandboxed_executables :- findall(F,(processSignature(filePath(F),_),not(usesSandbox(processPath(F),_,_))),L),sort(L,L2),maplist(writeln,L2).

@@ -1,3 +1,0 @@
-#!/bin/bash
-
-swipl --quiet -t "ignore(executables_using_sandbox_profile2(\"container\")),halt(1)" --consult-file queries.pl | sort -u
