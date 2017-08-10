@@ -44,15 +44,10 @@ dynamic_permission_change_name_resolution_sandbox:-
 
 % Assuming the attacker has escaped the sandbox and is running as mobile, where
 % can it deploy a name resolution attack against a chown or chmod operation?
-static_permission_change_name_resolution:-
+static_permission_change_name_resolution(ConfusedDeputy,File,Function):-
   functionCalled(filePath(ConfusedDeputy),function(Function),parameter(File)),
   dirParent(parent(Parent),child(File)),
-  unixAllow(puid("501"),pgid("501"),coarseOp("write"),file(Parent)),
-  write("deputy(\""),write(ConfusedDeputy),write("\"),"),
-  write("file(\""),write(File),write("\"),"),
-  write("function(\""),write(Function),write("\"),"),
-  writeln(""),
-  fail.
+  unixAllow(puid("501"),pgid("501"),coarseOp("write"),file(Parent)).
 
 % Same as above but also considerring the sandbox.
 static_permission_change_name_resolution_sandbox:-
