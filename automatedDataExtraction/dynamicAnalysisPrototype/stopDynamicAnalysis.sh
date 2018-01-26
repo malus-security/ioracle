@@ -27,6 +27,18 @@ scp -q -P $port $user@$host:$tempDir/iOracle.out $4/fileSystem/iOracle.out
 
 ssh -p $port $user@$host 'killall filemon'
 ssh -p $port $user@$host 'killall sbtool64'
+
+#################################################
+#Begin Luke adding procexp automation code here
+#################################################
+echo "Extracting mach port usage for running processes. Could take about 1 minute."
+scp -q -P $port ./get_services/procexp.universal $user@$host:$tempDir/procexp.universal
+mkdir "$4/services"
+ssh -p $port $user@$host 'bash -s' < ./get_services/bulk_procexp.sh > "$4/services/bulk_procexp.txt"
+#################################################
+#End Luke adding procexp automation code here
+#################################################
+
 ssh -p $port $user@$host "rm -rf $tempDir"
 
 echo "Generating prolog facts"
@@ -42,3 +54,18 @@ then
 else
   echo "Raw output was not completly generated. Please try again..."
 fi
+
+#################################################
+#Begin Luke adding procexp parsing code here
+#################################################
+#It seems that the other parser's are taking $outputFileSystem/pid_uid_gid_comm.out as an input argument.
+#I should do the same for procexp output and study how the others map PID's to executable filepaths
+
+./get_services/strip_color.sh $4/services/bulk_procexp.txt > $4/services/bulk_procexp_no_color.txt
+`./get_services/parse_services.py $4/services/bulk_procexp_no_color.txt $outputFileSystem/pid_uid_gid_comm.out > \
+				$4/services/mach_services.pl`
+#################################################
+#End Luke adding procexp parsing code here
+#################################################
+
+

@@ -4,6 +4,7 @@
 if test $# -ne 4; then
 	echo "Usage: $0 userOniOSDevice hostOfiOSdevice portForiOSDevice directoryForOutput" 1>&2
 	echo "Example: $0 root localhost 2270 directoryForOutput" 1>&2
+	echo "WARNING: This script will rm -rf the directoryForOutput. Please be careful!" 1>&2
 	exit 1
 fi
 
@@ -13,7 +14,7 @@ port="$3"
 directoryForOutput="$4"
 tempDir="/private/var/mobile/temporaryDirectoryForiOracleExtraction"
 
-rm -rf ./$4
+rm -rf $4
 mkdir $4
 mkdir $4/fileSystem
 mkdir $4/prologFacts
