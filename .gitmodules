@@ -1,0 +1,3 @@
+[submodule "sigil"]
+	path = sigil
+	url = git@github.com:malus-security/Sigil.git
