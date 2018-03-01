@@ -1,0 +1,88 @@
+The iOS 10.1.1 ipod seemed to still trust the signature on the yalu app.
+This is odd but not necessarily bad, and made the jailbreak process a little easier.
+
+Set up itnl alias for ssh over usb. start_itnl should now launch itnl for us on port 2270.
+
+I need to try the dynamic analysis tools from iOracle on iOS 10.1.1.
+Here are the expected commands:
+	./startDynamicAnalysis.sh root localhost 2270 ~/organized_files/active_research/output_iOracle
+	./stopDynamicAnalysis.sh root localhost 2270 ~/organized_files/active_research/output_iOracle
+	
+The dynamic analysis scripts seem to work fine, but iTunes did fail to perform a backup.
+Perhaps this is due to some maliciously placed symlinks in Media.
+Disconnecting and reconnecting usb cord seems to have helped and backup is now working.
+Perhaps the issue was simply related to prompts for the computer and ipod to trust each other.
+This ipod #064369 has a lot of data on it, so it's a pain to backup to iTunes.
+I may need to remove extra data or test on another device.
+
+procexp has an extra feature that may be very helpful.
+Mach services can only have one provider, but they can have many clients.
+	RQ: What does it mean for a client to be listed as receiving a service? 
+	(could it still be denied access to IPC services and still connect to mach-port?)
+	(Assumption: The system processes would not connect to service if they expect to be rejected for entitlement requirements.)
+We can see which processes are currently using an offered service.
+This allows us to look for intersecting entitlements among these clients.
+It could be very helpful for services being used by several processes.
+
+RQ: How many services are used by multiple clients?
+RQ: Do the sending and receiving services listed by procexp balance out? E.g., are there any services being sent, but not shown as received?
+
+RQ: Do all mach-services go through launchd?
+	based on our results from procexp this seems to be the case.
+	The only exception might be HSP's, but our results show even this being associated with launchd.
+
+RQ: What does it mean for procexp to list a mach-service with no arrow?
+	Assumption: This could be a registered service with no active clients
+
+RQ: Why are mach_services with no connections only appearing when launchd is scanned.
+	-are these services registered by processes that are no longer running?
+
+The service facts are now being produced, but we do get some facts about third party or jailbreak processes (especially as connections)
+We should reference other fact collections to filter out anything that isn't present on firmware static analysis.
+This unfiltered data should be ok for tomorrow's meeting.
+*integrate parser into dynamic analysis stage and commit changes to repo
+Then we need to define some queries for the data.
+
+RQ: are there any mach_services that are not appearing in our list?
+	-those from pids without executable paths?
+	-those from processes that were not running at the time?
+
+RQ: would Beer's exploit have modified certain services?
+
+We might also miss some processes where the comm field from ps doesn't point us to a file path (e.g., aslmanager)
+
+not all mach services have com.apple. in the name (e.g., PurpleSystemAppPort)
+
+RQ: why are there services for weibo and vimeo? Are these related to semi-private entitlements or account management in privacy settings?
+
+RQ: Why are there fewer services listed as receiving than listed in total?
+	A big part of this discrepancy is the number of services linked to launchd that have no connections
+	There is also a small discrepancy between the services listed as "sending" and "receiving". I should run a diff and study the result.
+
+RQ: Which processes are responsible for the services with no connections?
+	Can we learn this through launchctl, dynamic hooks, or static analysis of property list files?
+
+RQ: HSP stands for Host Special Port. What is special about these, and should we note this in our facts?
+	-see page 348 of *OS Volume 1.
+	-these ports can be directly from kernel mode and they don't need to be accessed through normal bootstrap lookup with launchd.
+	-only root processes should be able to access these.
+	-it's probably worth having some kind of indicator in our
+
+Some of the process numbers are changing too quickly for me to catch with procexp.
+	mstreamd is one of them.
+	we can fix this by searching for these processes by name or by running the script more than once and ignoring pids we've already covered.
+	this is an optimization that I can delegate or address later.
+
+TODO: I need to start adding my updated queries to the larger iOracle project. They shouldn't hurt any of the old code as long as the Prolog is valid. None of the new queries should be called by old code.
+
+It looks like the sandbox rules already have logic for finding available mach services for some context.
+
+I just need to precompute a fake app or some other collection of entitlements available to a third party app.
+Have I done this already?
+
+3-01-18
+Goal is to do 10 pomodoros today, and then maybe see the movie with Sisi.
+
+I'm getting the result _21144 as a mach service. This seems to be a prolog problem due to an unbound variable. This is probably due to a regex with nothing compare to.
+
+
