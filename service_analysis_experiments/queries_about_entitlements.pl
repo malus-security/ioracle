@@ -28,6 +28,74 @@ listPublicEntitlements(EntList) :-
   %appStoreEntitlement(_,artistName("internal"),_,_,Ent),
   findall(Ent, appStoreEntitlement(_,artistName("internal"),_,_,Ent), EntList).
 
+listSemiPrivateKeys(SemiPrivateKeyList) :-
+  %appStoreEntitlement(_,artistName("internal"),_,_,Ent),
+  findall(ThirdPartyEntString,
+    (appStoreEntitlement(_,artistName("thirdPartyDeveloper"),_,_,entitlement(key(ThirdPartyEnt),_)),
+    %converting to a string seems to make set operations work better
+    atom_string(ThirdPartyEnt,ThirdPartyEntString)),
+    ThirdPartyEntList),
+
+  findall(InternalEntString,
+    (appStoreEntitlement(_,artistName("internal"),_,_,entitlement(key(InternalEnt),_)),
+    atom_string(InternalEnt,InternalEntString)),
+    InternalEntList),
+
+  list_to_set(ThirdPartyEntList,TPSet),
+  list_to_set(InternalEntList,IntSet),
+
+  subtract(TPSet, IntSet, SemiPrivateKeyList).
+  %length(SemiPrivateKeyList, LenSPKeys),
+  %writeln(LenSPKeys),
+  %writeln(SemiPrivateKeyList).
+
+%TODO: These findall and list_to_set operations should all be abstracted into smaller rules...
+
+listSemiPrivateEnts(SemiPrivateEntList) :-
+  listSemiPrivateKeys(SPKeys),
+  findall(SemiPrivateEnt,
+    (appStoreEntitlement(_,artistName("thirdPartyDeveloper"),_,_,SemiPrivateEnt),
+    SemiPrivateEnt = entitlement(key(Key),_),
+    member(Key, SPKeys)),
+    SemiPrivateEntList).
+  %write(SemiPrivateEntList),
+  %fail.
+
+
+servicesAccessibleWithSemiPrivateEntitlements :-
+  listSemiPrivateEnts(SPEntList),
+  findall(MachServiceSPEntString,
+    (relevantRule(entitlements(SPEntList),extensions([]),home("/private/var/mobile"),profile("container"),
+      operation("mach-lookup"),
+      %this should actually say object, but I used the wrong variable in the rule.
+      subject(machService(MachServiceSPEnt)),
+      %atoms and unbound variables cause trouble in set operations, so we convert atoms to strings and ignore unbound variables.
+      %one reason a variable might be unbound is a regular expression base filter without a set of services to compare to.
+      decision(Decision),filters(Filters)), nonvar(MachServiceSPEnt), atom_string(MachServiceSPEnt, MachServiceSPEntString)),
+    MachServicesSPEnt),
+
+  writeln(MachServicesSPEnt),
+    
+  findall(MachServiceZeroEntString,
+    (relevantRule(entitlements([]),extensions([]),home("/private/var/mobile"),profile("container"),
+      operation("mach-lookup"),
+      %this should actually say object, but I used the wrong variable in the rule.
+      subject(machService(MachServiceZeroEnt)),
+      decision(Decision),filters(Filters)), nonvar(MachServiceZeroEnt), atom_string(MachServiceZeroEnt, MachServiceZeroEntString)),
+    MachServicesZeroEnt),
+  
+    list_to_set(MachServicesSPEnt,SPSet),
+    list_to_set(MachServicesZeroEnt,ZeroSet),
+
+    length(SPSet,SPLen),
+    length(ZeroSet,ZeroLen),
+    writeln(ZeroLen),
+    writeln(SPLen),
+
+    findall(Differ, (member(Differ,SPSet),not(member(Differ,ZeroSet))),DiffList),
+    writeln(DiffList),
+    fail.
+
 servicesAccessibleWithPublicEntitlements :-
   listPublicEntitlements(EntList),
   findall(MachServicePublicEntString,
@@ -46,13 +114,8 @@ servicesAccessibleWithPublicEntitlements :-
       decision(Decision),filters(Filters)), nonvar(MachServiceZeroEnt), atom_string(MachServiceZeroEnt, MachServiceZeroEntString)),
     MachServicesZeroEnt),
   
-    
     list_to_set(MachServicesPublicEnt,PubSet),
-    length(PubSet, PubLen),
-    writeln(PubLen),
     list_to_set(MachServicesZeroEnt,ZeroSet),
-    length(ZeroSet, ZeroLen),
-    writeln(ZeroLen),
 
     findall(Differ, (member(Differ,PubSet),not(member(Differ,ZeroSet))),DiffList),
     writeln(DiffList),
