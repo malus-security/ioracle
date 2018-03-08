@@ -85,4 +85,9 @@ Goal is to do 10 pomodoros today, and then maybe see the movie with Sisi.
 
 I'm getting the result _21144 as a mach service. This seems to be a prolog problem due to an unbound variable. This is probably due to a regex with nothing compare to.
 
+I seem to have a few directories of interest from scattered preliminary experiments. I need to get all of this crap organized to avoid obsolete or redundant scripts.
+/Users/lukeadeshotels/organized_files/active_research/Sigil/
+/Users/lukeadeshotels/organized_files/active_research/entitlementSurvey/
+/Users/lukeadeshotels/Desktop/entitlementReferences_workiniOracleNotHere
+
 
