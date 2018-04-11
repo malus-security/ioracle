@@ -1,0 +1,12 @@
+mach_interface(type('MIG'),filePath('/sbin/launchd'),address('0x10003d040'),num_messages(39)).
+mach_interface(type('MIG'),filePath('/sbin/launchd'),address('0x10003d678'),num_messages(3)).
+mach_interface(type('MIG'),filePath('/System/Library/CoreServices/SpringBoard.app/SpringBoard'),address('0x100768668'),num_messages(109)).
+mach_interface(type('MIG'),filePath('/System/Library/CoreServices/SpringBoard.app/SpringBoard'),address('0x1007721a8'),num_messages(1)).
+mach_interface(type('MIG'),filePath('/System/Library/CoreServices/SpringBoard.app/SpringBoard'),address('0x1007754e8'),num_messages(10)).
+mach_interface(type('MIG'),filePath('/System/Library/CoreServices/SpringBoard.app/SpringBoard'),address('0x10077eab8'),num_messages(1)).
+mach_interface(type('MIG'),filePath('/usr/libexec/backboardd'),address('0x100071078'),num_messages(61)).
+mach_interface(type('MIG'),filePath('/usr/libexec/backboardd'),address('0x100071c48'),num_messages(21)).
+mach_interface(type('MIG'),filePath('/usr/libexec/backboardd'),address('0x100074da0'),num_messages(1)).
+mach_interface(type('MIG'),filePath('/usr/libexec/locationd'),address('0x101508aa8'),num_messages(44)).
+mach_interface(type('MIG'),filePath('/usr/libexec/locationd'),address('0x1015092b8'),num_messages(20)).
+mach_interface(type('MIG'),filePath('/usr/libexec/logd'),address('0x100021f68'),num_messages(3)).

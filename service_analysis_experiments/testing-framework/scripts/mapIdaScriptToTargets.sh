@@ -1,0 +1,1 @@
+../../../idaScripts/mapIdaScriptToTargets.sh

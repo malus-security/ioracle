@@ -1,0 +1,1 @@
+../../../idaScripts/idaBatchAnalysis.sh
