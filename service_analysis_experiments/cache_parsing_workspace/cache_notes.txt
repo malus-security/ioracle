@@ -1,0 +1,46 @@
+*OS Internals Vol 1, page 406, directed me to a dynamic library stored at:
+/System/Library/Caches/com.apple.xpcd/xpcd_cache.dylib
+This dylib file contains a plist, but it needs to be extracted.
+I used jtool to list each dynamic library (there should only be one) and then used jtool to extract that library.
+At this point, you should be able to open the file on macOS, but to parse the plist with the plist python library, you must convert the plist to xml format.
+I used plutil to perform the conversion from binary to xml format for the plist.
+http://osxdaily.com/2016/03/10/convert-plist-file-xml-binary-mac-os-x-plutil/
+
+Which plist elements do we want to extract into prolog facts?
+
+//Other data might be useful once we know more about app extensions.
+//It's possible that none of these service identifiers are accessible to third party apps anyway.
+AppExtensions
+  executable path
+  service identifier
+
+LaunchDaemons
+  MachServices
+  ProgramArguments
+    Item 0
+  Program (this seems to be used sometimes instead of ProgramArguments)
+  //Is this the user the daemon will run as? If so, it would be awesome for iOracle. I don't see BackupAgent listed... Why not? No mach services?
+  UserName
+  //What are LaunchEvents? Some documentation avaialable in 'man launchd.plist'. Suggests that these events can cause the daemon to be launched.
+  //Can the working directories of these daemons be replace by sym links?
+  WorkingDirectory
+  RootDirectory
+  //The Standard input and output paths look like predictable filepaths that might be good targets for symlinks. This is an iOracle style flaw though.
+  //We might be able to crash some services by violating their hardresourcelimits, but I'm not sure that this is really a big deal.
+
+SystemLibraryTreeState
+  _imagePathToInfo
+    some_file_path
+      _serviceBundles
+        Item 0
+          executablePath
+          _serviceIdentifier
+          _infoPlist
+            //Should be XPC!
+            CFBundlePackageType
+          _serviceDictionary
+            _RoleAccount
+            _AllowedClients
+
+//The information in the sdk plist seems redundant with respect to the AppExtensions dictionary in the xpcd_cache plist.
+
