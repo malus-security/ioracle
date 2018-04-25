@@ -20,11 +20,15 @@ def parseLaunchDaemons(launchDaemons_Dict):
   for plist_Dict in launchDaemons_Dict.values():
     #TODO figure out the executable path
     #this default value should be overridden if a valid path is found
-    execPath = "ERROR: no executable path found in plist"
     if 'Program' in plist_Dict:
       execPath_String = plist_Dict['Program']
     elif 'ProgramArguments' in plist_Dict:
       execPath_String = plist_Dict['ProgramArguments'][0]
+    else:
+      #The com.apple.jetsamproperties plist entries seem to be strange cases that don't seem to represent an executable hosting a service.
+      #Two of these non-standard plists appear. We can just ignore them for now. I don't think they are relevant to Sigil.
+      #print "ERROR: no executable path found in plist: "+str(plist_Dict)
+      continue
     if 'MachServices' in plist_Dict:
       for machService_String in plist_Dict['MachServices']:
         print "ipcConfig(type('LaunchDaemons'),executablePath('"+execPath_String+"'),serviceIdentifier('"+machService_String+"'),roleAccount(''),allowedClients([]))."
