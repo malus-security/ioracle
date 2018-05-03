@@ -12,12 +12,37 @@ import idautils
 import os
 
 ###########################################################################################
+#BEGIN DEFINITION OF predictReturnValueKnownMethod
+#we assume the target register is X0 or R0
+#this function will detect known methods and attempt to predict their return values
+#this function relies heavily on getRegisterValueAtAddress
+###########################################################################################
+def predictReturnValueKnownMethod(ea):
+  global errorMessage
+  targetReg = 130
+  minEa = idc.GetFunctionAttr(ea, idc.FUNCATTR_START)
+  result = getRegisterValueAtAddress(ea,minEa,targetReg)
+  stringAddress = Qword(result)
+  resultString = idc.GetString(stringAddress)
+  if resultString == "stringWithUTF8String:":
+    targetReg = 131
+    minEa = idc.GetFunctionAttr(ea, idc.FUNCATTR_START)
+    return getRegisterValueAtAddress(ea,minEa,targetReg)
+  else:
+    errorMessage+="ERROR: could not predict return value because this method has not been modeled"
+    return 0
+
+
+
+###########################################################################################
 #BEGIN DEFINITION OF getRegisterValueAtAddress
 #this function will return the value of a given register at a given address
 #it does this via backtracing
 #if it backtraces to the address set by minEa, it will give up and return an error
 ###########################################################################################
 def getRegisterValueAtAddress(ea,minEa,targetReg):
+  print "analyzing: " + str(hex(ea))[:-1]  
+  print "target is : " + str(targetReg)  
   global errorMessage
   #f.write("%x" % ea + "\n")
   #f.write("%x" % minEa + "\n")
@@ -33,6 +58,16 @@ def getRegisterValueAtAddress(ea,minEa,targetReg):
     #if this gets reached, then we seem to be at the top of a basic block with multiple parents.
     #for now, we can't figure out which parent to follow, so we evaluate the current instruction, and if that doesn't allow us to finish, then we act like we hit top of function.
     minEa = ea
+
+  #If a function is called, the ARM calling convention allows the called function to clobber the X0 or R0 register as a return value.
+  #Therefore, if our target register is value 0 (i.e., R0 or X0), we cannot ignore function calls.
+  #the targetReg value of 129 seems to be a fluke of 64 bit ARM. I think the value would need to change if we analyze 32 bit as well.
+  #TODO make a generic function that helps avoid register value confusion between 32 bit and 64 bit architectures.
+  if idc.GetMnem(ea) in ['BL'] and targetReg == 129:
+    print "found function call while tracking X0: " + str(hex(ea))[:-1]  
+    ea = idc.PrevHead(ea)
+    return predictReturnValueKnownMethod(ea)
+
 
   if idc.GetMnem(ea) in ['ADR','ADRP']:
     dest_op = 0
@@ -84,16 +119,25 @@ def getRegisterValueAtAddress(ea,minEa,targetReg):
   if idc.GetMnem(ea) in ['ADD']:
     dest_op = 0
     src_op = 1
+    imm_op = 2
     srcOpType = idc.GetOpType(ea, src_op)
     srcOpValue = idc.GetOperandValue(ea, src_op)
     destOpType = idc.GetOpType(ea, dest_op)
     destOpValue = idc.GetOperandValue(ea, dest_op)
-    #I'm assuming the source is the PC register with a 32 bit executable
+    immOpType = idc.GetOpType(ea, imm_op)
+    immOpValue = idc.GetOperandValue(ea, imm_op)
+
+    #This assumes the source register is PC in a 32 bit architecture
     if destOpType == idc.o_reg and destOpValue == targetReg and srcOpType == idc.o_reg and srcOpValue == 15:
       pcValue = ea + 4
       #f.write("%x" % pcValue + "\n")
       ea = idc.PrevHead(ea)
       return pcValue + getRegisterValueAtAddress(ea,minEa,targetReg)
+    if destOpType == idc.o_reg and destOpValue == targetReg and srcOpType == idc.o_reg and immOpType == idc.o_imm:
+      ea = idc.PrevHead(ea)
+      targetReg = srcOpValue
+      return getRegisterValueAtAddress(ea,minEa,targetReg) + immOpValue
+      
 
   #TODO include how to handle this if the src is an address that probably points to a string
   if idc.GetMnem(ea) in ['MOV']:
