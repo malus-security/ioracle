@@ -12,6 +12,53 @@ import idautils
 import os
 
 ###########################################################################################
+#BEGIN DEFINITION OF getRegisterNumber
+#Given some register as a string (e.g., "R0, "X2"),
+#return the integer IDA uses to represent that register.
+#This will make our scripts more architecture agnostic since the 64 bit
+#register to integer mapping is not intuitive (i.e., X0 maps to 129)
+#NOTE for this function R or X could be used interchangably since
+#the return result depends on the binary's architecture anyway.
+#However, we would have trouble if we track anything other than R or X registers.
+###########################################################################################
+
+def getRegisterNumber(regString):
+  regex = r"([A-Z])([0-9]+)"
+  info = idaapi.get_inf_structure()
+  if info.is_64bit():
+    return int(re.search(regex,regString).group(2)) + 129
+  else:
+    return int(re.search(regex,regString).group(2))
+
+
+
+###########################################################################################
+#BEGIN DEFINITION OF findStringAssociatedWithAddress
+#Given some address that directly or indirectly represents a string value,
+#find and return that string value.
+#For example, the address might point directly to a string, or it could point to a class
+#that contains the string as one of it's member values.
+###########################################################################################
+
+def findStringAssociatedWithAddress(ea):
+  global errorMessage
+  #check to see if the address points directly to a C type null terminated string
+  if get_str_type(ea) == STRTYPE_TERMCHR:
+    return idc.GetString(result)
+  #Otherwise, consider various Class types.
+  #selRef_
+  elif get_name(ea, 0).startswith('selRef_'):
+    return idc.GetString(Qword(ea))
+  #___CFConstantStringClassReference
+  elif get_name(Qword(result), 0) == "___CFConstantStringClassReference":
+    offset = 0x10
+    return idc.GetString(Qword(result+offset))
+  else:
+    errorMessage+="ERROR: unrecognized data type when searching for string value"
+    return ""
+    
+
+###########################################################################################
 #BEGIN DEFINITION OF predictReturnValueKnownMethod
 #we assume the target register is X0 or R0
 #this function will detect known methods and attempt to predict their return values
@@ -19,13 +66,11 @@ import os
 ###########################################################################################
 def predictReturnValueKnownMethod(ea):
   global errorMessage
-  targetReg = 130
+  targetReg = getRegisterNumber("X1")
   minEa = idc.GetFunctionAttr(ea, idc.FUNCATTR_START)
   result = getRegisterValueAtAddress(ea,minEa,targetReg)
-  stringAddress = Qword(result)
-  resultString = idc.GetString(stringAddress)
-  if resultString == "stringWithUTF8String:":
-    targetReg = 131
+  if findStringAssociatedWithAddress(result) == "stringWithUTF8String:":
+    targetReg = getRegisterNumber("X2")
     minEa = idc.GetFunctionAttr(ea, idc.FUNCATTR_START)
     return getRegisterValueAtAddress(ea,minEa,targetReg)
   else:
@@ -41,8 +86,8 @@ def predictReturnValueKnownMethod(ea):
 #if it backtraces to the address set by minEa, it will give up and return an error
 ###########################################################################################
 def getRegisterValueAtAddress(ea,minEa,targetReg):
-  print "analyzing: " + str(hex(ea))[:-1]  
-  print "target is : " + str(targetReg)  
+  #print "analyzing: " + str(hex(ea))[:-1]  
+  #print "target is : " + str(targetReg)  
   global errorMessage
   #f.write("%x" % ea + "\n")
   #f.write("%x" % minEa + "\n")
@@ -63,8 +108,8 @@ def getRegisterValueAtAddress(ea,minEa,targetReg):
   #Therefore, if our target register is value 0 (i.e., R0 or X0), we cannot ignore function calls.
   #the targetReg value of 129 seems to be a fluke of 64 bit ARM. I think the value would need to change if we analyze 32 bit as well.
   #TODO make a generic function that helps avoid register value confusion between 32 bit and 64 bit architectures.
-  if idc.GetMnem(ea) in ['BL'] and targetReg == 129:
-    print "found function call while tracking X0: " + str(hex(ea))[:-1]  
+  if idc.GetMnem(ea) in ['BL'] and targetReg == getRegisterNumber("X0"):
+    #print "found function call while tracking X0: " + str(hex(ea))[:-1]  
     ea = idc.PrevHead(ea)
     return predictReturnValueKnownMethod(ea)
 
@@ -109,8 +154,6 @@ def getRegisterValueAtAddress(ea,minEa,targetReg):
     if destOpType == idc.o_reg and destOpValue == targetReg and srcOpType == idc.o_reg and offsetOpType == idc.o_displ:
       targetReg = srcOpValue
       ea = idc.PrevHead(ea)
-      #print str(hex(ea))
-      #print str(hex(minEa))
       return offsetOpValue + getRegisterValueAtAddress(ea,minEa,targetReg)
     
 
@@ -127,7 +170,7 @@ def getRegisterValueAtAddress(ea,minEa,targetReg):
     immOpType = idc.GetOpType(ea, imm_op)
     immOpValue = idc.GetOperandValue(ea, imm_op)
 
-    #This assumes the source register is PC in a 32 bit architecture
+    #TODO This assumes the source register is PC in a 32 bit architecture
     if destOpType == idc.o_reg and destOpValue == targetReg and srcOpType == idc.o_reg and srcOpValue == 15:
       pcValue = ea + 4
       #f.write("%x" % pcValue + "\n")
