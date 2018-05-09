@@ -44,15 +44,15 @@ def findStringAssociatedWithAddress(ea):
   global errorMessage
   #check to see if the address points directly to a C type null terminated string
   if get_str_type(ea) == STRTYPE_TERMCHR:
-    return idc.GetString(result)
+    return idc.GetString(ea)
   #Otherwise, consider various Class types.
   #selRef_
   elif get_name(ea, 0).startswith('selRef_'):
     return idc.GetString(Qword(ea))
   #___CFConstantStringClassReference
-  elif get_name(Qword(result), 0) == "___CFConstantStringClassReference":
+  elif get_name(Qword(ea), 0) == "___CFConstantStringClassReference":
     offset = 0x10
-    return idc.GetString(Qword(result+offset))
+    return idc.GetString(Qword(ea+offset))
   else:
     errorMessage+="ERROR: unrecognized data type when searching for string value"
     return ""
