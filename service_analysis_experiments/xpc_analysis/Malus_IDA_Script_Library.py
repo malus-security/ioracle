@@ -30,8 +30,6 @@ def getRegisterNumber(regString):
   else:
     return int(re.search(regex,regString).group(2))
 
-
-
 ###########################################################################################
 #BEGIN DEFINITION OF findStringAssociatedWithAddress
 #Given some address that directly or indirectly represents a string value,
@@ -45,9 +43,9 @@ def findStringAssociatedWithAddress(ea):
   #check to see if the address points directly to a C type null terminated string
   if get_str_type(ea) == STRTYPE_TERMCHR:
     return idc.GetString(ea)
-  #Otherwise, consider various Class types.
-  #selRef_
-  elif get_name(ea, 0).startswith('selRef_'):
+  #Otherwise, consider various Class types or segments.
+  #elif get_name(ea, 0).startswith('selRef_'):
+  elif idc.get_segm_name(ea) == "__objc_selrefs":
     return idc.GetString(Qword(ea))
   #___CFConstantStringClassReference
   elif get_name(Qword(ea), 0) == "___CFConstantStringClassReference":
@@ -78,6 +76,23 @@ def predictReturnValueKnownMethod(ea):
     return 0
 
 
+###########################################################################################
+#BEGIN DEFINITION OF sanitize minEa
+#Detect a problematic minimum address and replace it with a more reasonable value
+#This function uses an arbitrary threshold.
+#We could do better, this will have to do for now.
+###########################################################################################
+def sanitizeMinEa(ea, minEa):
+  sizeOfInst = 4
+  numInstToTry = 100
+  arbitraryThreshold = sizeOfInst * numInstToTry
+
+  if ea <= minEa or (ea - minEa) > arbitraryThreshold:
+    #my arbitrary limit is 50 instruction
+    limitedMinEa = ea - arbitraryThreshold
+    return limitedMinEa
+  else:
+    return minEa
 
 ###########################################################################################
 #BEGIN DEFINITION OF getRegisterValueAtAddress
@@ -86,12 +101,13 @@ def predictReturnValueKnownMethod(ea):
 #if it backtraces to the address set by minEa, it will give up and return an error
 ###########################################################################################
 def getRegisterValueAtAddress(ea,minEa,targetReg):
-  #print "analyzing: " + str(hex(ea))[:-1]  
   #print "target is : " + str(targetReg)  
   global errorMessage
   #f.write("%x" % ea + "\n")
   #f.write("%x" % minEa + "\n")
   #f.write(str(targetReg) + "\n")
+
+
 
   #give up if you hit the top of the function
   if ea <= minEa:
@@ -151,6 +167,8 @@ def getRegisterValueAtAddress(ea,minEa,targetReg):
     print "offsetOpValue: " + str(offsetOpValue)
     """
 
+    if destOpType == idc.o_reg and destOpValue == targetReg and offsetOpType == idc.o_mem:
+      return offsetOpValue 
     if destOpType == idc.o_reg and destOpValue == targetReg and srcOpType == idc.o_reg and offsetOpType == idc.o_displ:
       targetReg = srcOpValue
       ea = idc.PrevHead(ea)
