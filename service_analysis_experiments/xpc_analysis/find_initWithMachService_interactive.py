@@ -5,6 +5,7 @@ errorMessage = ""
 
 functionName = "_objc_msgSend"
 for nName in idautils.Names():
+  
   name = nName[1]
   if functionName == name:
     nameAddress = nName[0]
@@ -12,9 +13,12 @@ for nName in idautils.Names():
     for xref in idautils.XrefsTo(nameAddress, 0):
       ea = xref.frm
       minEa = idc.GetFunctionAttr(ea, idc.FUNCATTR_START)
+      #We are definitely getting a lot of errors here, but I think we are still finding the selectors we need.
+
       selectorAddress = getRegisterValueAtAddress(ea,minEa,targetReg)
 
       if findStringAssociatedWithAddress(selectorAddress) == "initWithMachServiceName:":
+	errorMessage = ""
 	#there is an annoying L that appears at the end of the hex value.
 	#the [:-1] code just removes that L by dropping the last character.
 	print "Found target at: " + str(hex(ea))[:-1]
@@ -25,3 +29,5 @@ for nName in idautils.Names():
 	result = getRegisterValueAtAddress(ea,minEa,mach_service_targetReg)
 	resultString = findStringAssociatedWithAddress(result)
 	print resultString
+	if errorMessage != "":
+	  print errorMessage

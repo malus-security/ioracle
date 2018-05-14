@@ -51,6 +51,9 @@ def findStringAssociatedWithAddress(ea):
   elif get_name(Qword(ea), 0) == "___CFConstantStringClassReference":
     offset = 0x10
     return idc.GetString(Qword(ea+offset))
+  elif get_name(Qword(Qword(ea)), 0) == "___CFConstantStringClassReference":
+    offset = 0x10
+    return idc.GetString(Qword(Qword(ea)+offset))
   else:
     errorMessage+="ERROR: unrecognized data type when searching for string value"
     return ""
