@@ -40,18 +40,29 @@ def getRegisterNumber(regString):
 
 def findStringAssociatedWithAddress(ea):
   global errorMessage
+  """
+  print "segments"
+  print idc.get_segm_name(ea) 
+  print idc.get_segm_name(Qword(ea)) 
+  print "names"
+  print get_name(Qword(ea))
+  print get_name(Qword(Qword(ea)))
+  """
   #check to see if the address points directly to a C type null terminated string
   if get_str_type(ea) == STRTYPE_TERMCHR:
     return idc.GetString(ea)
   #Otherwise, consider various Class types or segments.
   #elif get_name(ea, 0).startswith('selRef_'):
-  elif idc.get_segm_name(ea) == "__objc_selrefs":
+  #elif idc.get_segm_name(ea) == "__objc_selrefs":
+  elif "__objc_selrefs" in idc.get_segm_name(ea):
     return idc.GetString(Qword(ea))
   #___CFConstantStringClassReference
-  elif get_name(Qword(ea), 0) == "___CFConstantStringClassReference":
+  #elif get_name(Qword(ea), 0) == "___CFConstantStringClassReference":
+  elif "__cfstring" in idc.get_segm_name(ea):
     offset = 0x10
     return idc.GetString(Qword(ea+offset))
-  elif get_name(Qword(Qword(ea)), 0) == "___CFConstantStringClassReference":
+  #elif get_name(Qword(Qword(ea)), 0) == "___CFConstantStringClassReference":
+  elif "__cfstring" in idc.get_segm_name(Qword(ea)):
     offset = 0x10
     return idc.GetString(Qword(Qword(ea)+offset))
   else:
