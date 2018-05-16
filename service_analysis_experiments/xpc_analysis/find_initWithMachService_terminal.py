@@ -4,7 +4,8 @@
 
 filePathOniOSDevice=idc.ARGV[1]
 outputFile=idc.ARGV[2]
-
+export_dict_file = idc.ARGV[3]
+export_dict = pickle.load(open(export_dict_file, "rb"))
 targetReg = getRegisterNumber("X1")
 errorMessage = ""
 f = open(outputFile,'a')

@@ -4,10 +4,10 @@ OIFS="$IFS"
 IFS=$'\n'
 set -f          # disable globbing
 
-if [ "$1" == "-h" ] || [ "$#" -ne 4 ]; then
+if [ "$1" == "-h" ] || [ "$#" -ne 5 ]; then
   echo "Error: Invalid Arguments"
-  echo "This script takes 4 arguments and its purpose is to run an idascript on several disassembled executables."
-  echo "Usage: ./$0 mappingOfNamesAndPaths idapythonScript directoryHoldingIDADatabases/ pathToOutputFile"
+  echo "This script takes 5 arguments and its purpose is to run an idascript on several disassembled executables."
+  echo "Usage: ./$0 mappingOfNamesAndPaths idapythonScript directoryHoldingIDADatabases/ pathToOutputFile pathToDyldExportDictionary"
   exit 0
 fi
 
@@ -15,6 +15,7 @@ mappingOfNamesAndPaths=$1
 idapythonScript=$2
 directoryHoldingIDADatabases=$3 
 pathToOutputFile=$4
+pathToExportDictionary=$5
 
 #deletes the file to be used as output in case it exists already and contains old results
 rm $pathToOutputFile
@@ -32,5 +33,5 @@ do
   #I could also reanalyze these using idaq64, but it would take too long, and I don't know if it would break anything...
   #spaces in the path variable were causing trouble since a file path with spaces might look like multiple arguments.
   #I dealt with this by putting escaped double quotes around the variable which seems to help.
-  idat64 -A -S"$idapythonScript $path $pathToOutputFile" $directoryHoldingIDADatabases$name.i64
+  idat64 -A -S"$idapythonScript $path $pathToOutputFile $pathToExportDictionary" $directoryHoldingIDADatabases$name.i64
 done

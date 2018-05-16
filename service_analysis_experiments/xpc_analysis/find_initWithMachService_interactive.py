@@ -1,5 +1,6 @@
 targetReg = getRegisterNumber("X1")
 errorMessage = ""
+export_dict = pickle.load( open( "/home/ladeshot/iOracle/service_analysis_experiments/xpc_analysis/output/exports.p", "rb" ) )
 #run this in a for loop and scan every objc_msgSend
 #also parse the result such that an actual string is output.
 
@@ -27,7 +28,7 @@ for nName in idautils.Names():
 	mach_service_targetReg = getRegisterNumber("X2")
 
 	result = getRegisterValueAtAddress(ea,minEa,mach_service_targetReg)
-	resultString = findStringAssociatedWithAddress(result)
+	resultString = findStringAssociatedWithAddress(result, verbose=True)
 	print resultString
 	if errorMessage != "":
 	  print errorMessage

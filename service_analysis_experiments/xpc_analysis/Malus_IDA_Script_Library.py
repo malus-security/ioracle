@@ -10,6 +10,7 @@ import idaapi
 import idc
 import idautils
 import os
+import pickle
 
 ###########################################################################################
 #BEGIN DEFINITION OF getRegisterNumber
@@ -38,16 +39,17 @@ def getRegisterNumber(regString):
 #that contains the string as one of it's member values.
 ###########################################################################################
 
-def findStringAssociatedWithAddress(ea):
+#playing with an optional verbose argument with a default value of False
+def findStringAssociatedWithAddress(ea, verbose=False):
   global errorMessage
-  """
-  print "segments"
-  print idc.get_segm_name(ea) 
-  print idc.get_segm_name(Qword(ea)) 
-  print "names"
-  print get_name(Qword(ea))
-  print get_name(Qword(Qword(ea)))
-  """
+  global export_dict
+  if verbose:
+    print "segments"
+    print idc.get_segm_name(ea) 
+    print idc.get_segm_name(Qword(ea)) 
+    print "names"
+    print get_name(Qword(ea))
+    print get_name(Qword(Qword(ea)))
   #check to see if the address points directly to a C type null terminated string
   if get_str_type(ea) == STRTYPE_TERMCHR:
     return idc.GetString(ea)
@@ -65,6 +67,8 @@ def findStringAssociatedWithAddress(ea):
   elif "__cfstring" in idc.get_segm_name(Qword(ea)):
     offset = 0x10
     return idc.GetString(Qword(Qword(ea)+offset))
+  elif get_name(Qword(ea)) in export_dict:
+    return export_dict[get_name(Qword(ea))]
   else:
     errorMessage+="ERROR: unrecognized data type when searching for string value"
     return ""
