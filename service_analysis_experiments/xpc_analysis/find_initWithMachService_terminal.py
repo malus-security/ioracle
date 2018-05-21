@@ -1,58 +1,38 @@
-#idat64 -S"find_initWithMachService_With_Library.py /some/dir/locationd ./output/initWithMachService.out" ./executables/locationd.i64
-
-#idaapi.autoWait()
-
+#It may be much simpler to get the mach port name, exported object, exported interface, and entitlements all with the same script.
+#all of this initialization code should probably be one or two functions
 filePathOniOSDevice=idc.ARGV[1]
 outputFile=idc.ARGV[2]
 export_dict_file = idc.ARGV[3]
 export_dict = pickle.load(open(export_dict_file, "rb"))
-targetReg = getRegisterNumber("X1")
-errorMessage = ""
+with open(idc.ARGV[4], "rb") as f:
+  executableDict = pickle.load(f)
 f = open(outputFile,'a')
-#run this in a for loop and scan every objc_msgSend
-#also parse the result such that an actual string is output.
+errorMessage = ""
+selectorMap = executableDict["selectorMap"]
+executableDict[filePathOniOSDevice] = {}
+thisExecDict = executableDict[filePathOniOSDevice]
 
-functionName = "_objc_msgSend"
-for nName in idautils.Names():
-  
-  name = nName[1]
-  if functionName == name:
-    nameAddress = nName[0]
-    #now that we have the address of the name we can look for a cross reference.
-    for xref in idautils.XrefsTo(nameAddress, 0):
-      ea = xref.frm
-      minEa = idc.GetFunctionAttr(ea, idc.FUNCATTR_START)
-      minEa = sanitizeMinEa(ea, minEa)
-      #We are definitely getting a lot of errors here, but I think we are still finding the selectors we need.
+#make a function that generates a list of addresses for a given address
+#for address in getSelectorInvocations(...)
 
 
-      try:
-	selectorAddress = getRegisterValueAtAddress(ea,minEa,targetReg)
-      except RuntimeError as runErr:
-	if runErr.args[0] != 'maximum recursion depth exceeded':
-	  # different type of runtime error
-	  raise
-	else: 
-	  print 'Recursion Explosion: ' + str(hex(ea))
+thisExecDict["machPortMap"] = {}
+machPortMapDict = thisExecDict["machPortMap"]
 
+#These 5 lines occur often enough that I could make them into a function.
+#Maybe I could pass the dictionary by reference too.
+for address in getSelectorInvocations(selectorMap,"initWithMachServiceName:"):
+  mach_service_targetReg = getRegisterNumber("X2")
+  minEa = idc.GetFunctionAttr(address, idc.FUNCATTR_START)
+  result = getRegisterValueAtAddress(address,minEa,mach_service_targetReg)
+  resultString = findStringAssociatedWithAddress(result)
 
-
-      #f.write(findStringAssociatedWithAddress(selectorAddress) + "\n")
-
-      selString = findStringAssociatedWithAddress(selectorAddress) 
-      if selString.startswith("initWithMachServiceName:"):
-	errorMessage = ""
-	#there is an annoying L that appears at the end of the hex value.
-	#the [:-1] code just removes that L by dropping the last character.
-
-	#TODO replace this with a smarter register mapping for 32 and 64 bit.
-	mach_service_targetReg = getRegisterNumber("X2")
-
-	result = getRegisterValueAtAddress(ea,minEa,mach_service_targetReg)
-	resultString = findStringAssociatedWithAddress(result)
-	f.write("initWithMachServiceName(filePath(\""+filePathOniOSDevice+"\"),callAddress(\""+str(hex(ea))[:-1]+"\"),machServiceName(\""+resultString.replace('"',"'")+"\")).\n")
-	if errorMessage != "":
-	  print errorMessage
+  if resultString != "":	
+    #map the mach port name to the address of the objc dispatch call that assigned it.
+    machPortMapDict[resultString] = address
+  #TODO consult the errorMessage log when we measure the accuracy of this tool.
 
 f.close()
+with open(idc.ARGV[4], "wb") as f:
+  pickle.dump(executableDict, f)
 idc.Exit(0)

@@ -11,6 +11,35 @@ import idc
 import idautils
 import os
 import pickle
+import re
+
+###########################################################################################
+#BEGIN DEFINITION OF getSelectorInvocations
+#Return list os addresses representing objc_msgSend calls that use passed selector string
+#This function also looks for any selector that starts with the passed selector string.
+###########################################################################################
+def getSelectorInvocations(thisExecSelectorMap, targetSelector):
+  addressList = []
+  for selector in selectorMap:
+    if selector.startswith(targetSelector):
+        for address in selectorMap[selector]:
+	  addressList.append(address)
+  return addressList
+
+
+###########################################################################################
+#BEGIN DEFINITION OF getFuncArgs
+#Note that this technique will not detect the selector predicted by IDA
+#To find the selector, I should get the function name and parse the selector from it
+###########################################################################################
+
+def getFuncArgs(ea):
+  functionStart = idc.GetFunctionAttr(ea, idc.FUNCATTR_START)
+  functionHeaderFromIDA = GetType(functionStart)
+  find_arguments = re.compile('^.*\(([^)]*).*$')
+  match = re.search(find_arguments, functionHeaderFromIDA)
+  arguments = match.group(1)
+  return str(arguments).split(",")
 
 ###########################################################################################
 #BEGIN DEFINITION OF getRegisterNumber
@@ -30,6 +59,43 @@ def getRegisterNumber(regString):
     return int(re.search(regex,regString).group(2)) + 129
   else:
     return int(re.search(regex,regString).group(2))
+
+###########################################################################################
+#BEGIN DEFINITION OF findMethodsOfProtocol
+#Given some address that represents a protocol,
+#find and return a list of that protocol's methods.
+###########################################################################################
+
+#playing with an optional verbose argument with a default value of False
+def findMethodsOfProtocol(ea, verbose=False):
+  global errorMessage
+  global export_dict
+  if verbose:
+    print "segments"
+    print idc.get_segm_name(ea) 
+    print idc.get_segm_name(Qword(ea)) 
+    print "names"
+    print get_name(Qword(ea))
+    print get_name(Qword(Qword(ea)))
+
+
+  classOffset = 0x18
+  objcMethodList = Qword(Qword(ea)+classOffset)
+  if "__objc_const" in idc.get_segm_name(objcMethodList):
+    numMethodsOffset = 0x4
+    numMethods = Dword(objcMethodList + numMethodsOffset)
+    selectorStringList = []
+    firstSelectorOffset = 0x8
+    currentSelectorAddress = objcMethodList + firstSelectorOffset
+    nextSelectorOffset = 0x18
+    for i in range(numMethods):
+      selectorStringList.append(findStringAssociatedWithAddress(Qword(currentSelectorAddress)))
+      currentSelectorAddress = currentSelectorAddress + nextSelectorOffset
+    return selectorStringList
+  else:
+    errorMessage+="ERROR: unrecognized data type when searching for protocol methods"
+    return []
+ 
 
 ###########################################################################################
 #BEGIN DEFINITION OF findStringAssociatedWithAddress
@@ -89,6 +155,11 @@ def predictReturnValueKnownMethod(ea):
     targetReg = getRegisterNumber("X2")
     minEa = idc.GetFunctionAttr(ea, idc.FUNCATTR_START)
     return getRegisterValueAtAddress(ea,minEa,targetReg)
+  if findStringAssociatedWithAddress(result) == "interfaceWithProtocol:":
+    targetReg = getRegisterNumber("X2")
+    minEa = idc.GetFunctionAttr(ea, idc.FUNCATTR_START)
+    return getRegisterValueAtAddress(ea,minEa,targetReg)
+
   else:
     errorMessage+="ERROR: could not predict return value because this method has not been modeled"
     return 0
@@ -129,13 +200,18 @@ def getRegisterValueAtAddress(ea,minEa,targetReg):
 
   #give up if you hit the top of the function
   if ea <= minEa:
+    #I should include some logic here to check for obvious parameter matches at the top of functions.
+    #For example, an X0 or X1 register must match the class or selector of the function respectively.
+    #Therefore, we need a good way to get the parameters of the function.
+
     errorMessage+="ERROR: Hit top of function or hit top of basic block with multiple parents"
     return 0
 
   count_far_code_references = len(list(idautils.XrefsTo(ea, 1)))
   if count_far_code_references > 0:
     #if this gets reached, then we seem to be at the top of a basic block with multiple parents.
-    #for now, we can't figure out which parent to follow, so we evaluate the current instruction, and if that doesn't allow us to finish, then we act like we hit top of function.
+    #for now, we can't figure out which parent to follow, so we evaluate the current instruction, 
+    #and if that doesn't allow us to finish, then we act like we hit top of function.
     minEa = ea
 
   #If a function is called, the ARM calling convention allows the called function to clobber the X0 or R0 register as a return value.

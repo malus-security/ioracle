@@ -33,5 +33,6 @@ do
   #I could also reanalyze these using idaq64, but it would take too long, and I don't know if it would break anything...
   #spaces in the path variable were causing trouble since a file path with spaces might look like multiple arguments.
   #I dealt with this by putting escaped double quotes around the variable which seems to help.
-  idat64 -A -S"$idapythonScript $path $pathToOutputFile $pathToExportDictionary" $directoryHoldingIDADatabases$name.i64
+  #idat64 -A -S"$idapythonScript $path $pathToOutputFile $pathToExportDictionary $directoryHoldingIDADatabases$name.p" $directoryHoldingIDADatabases$name.i64
+  idat64 -S"$idapythonScript $path $pathToOutputFile $pathToExportDictionary $directoryHoldingIDADatabases$name.p" $directoryHoldingIDADatabases$name.i64
 done
