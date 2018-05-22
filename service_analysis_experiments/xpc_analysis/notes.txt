@@ -1,0 +1,121 @@
+what if the executable paths listed in the cache use symbolic links?
+  ida should crash or not generate any output if this is the case.
+  cp: cannot stat ‘/media/bigdata/from-ncsu-to-upb/firmware_processing_results_with_dev_after_post_process/10.1/fileSystem/System/Library/CoreServices/AuthBrokerAgent’: No such file or directory
+  cp: cannot stat ‘/media/bigdata/from-ncsu-to-upb/firmware_processing_results_with_dev_after_post_process/10.1/fileSystem/usr/libexec/corercd’: No such file or directory
+  cp: cannot stat ‘/media/bigdata/from-ncsu-to-upb/firmware_processing_results_with_dev_after_post_process/10.1/fileSystem/usr/libexec/IOAccelMemoryInfoCollector’: No such file or directory
+  cp: cannot stat ‘/media/bigdata/from-ncsu-to-upb/firmware_processing_results_with_dev_after_post_process/10.1/fileSystem/usr/local/bin/abm-helper’: No such file or directory
+  cp: cannot stat ‘/media/bigdata/from-ncsu-to-upb/firmware_processing_results_with_dev_after_post_process/10.1/fileSystem/usr/local/bin/applebbproxy’: No such file or directory
+  cp: cannot stat ‘/media/bigdata/from-ncsu-to-upb/firmware_processing_results_with_dev_after_post_process/10.1/fileSystem/usr/local/bin/brtool’: No such file or directory
+
+I should try to find my old scripts for running IDA in parallel.
+
+What should I work on while large IDA scans are running? 
+  iOracle presentation
+  ideas for making IDA faster (run 4 at a time?)
+  ideas for organizing data and documentation?
+
+my script is failing on a lot of the executables... maybe we should target only launchdaemons.
+
+I ran into maximum recursion depth error. I should set some kind of limit to be more careful about the minimum address to track to. perhaps there is a batch mode for IDA that would ignore errors.
+
+The 1bbcdbc0 executable is causing a maximum recursion depth error. This would be a good test case for fixing the error. I should also test specifically with locationd to make sure the scripts are working well. I should cherry pick three or four good executables to test on.
+Hmm... the script is failing to produce output for even the small batch test...
+
+I think there is a problem with the way the programs were bulk disassembled... I get valid output for the locationd database I made interactively, but not for the database I got through batch disassembly. Perhaps IDA isn't running it's objective-c analysis on the bulk disassembly databases. This seems to be the problem... I will need a smarter way to run the batch analysis or I will need a way to automate the interactive analysis. Perhaps we can contact hexrays and explain the issue.
+
+it seems that several of the daemons I've been studying don't use the initWithMachService symbol. I should specifically search for those executables containing this symbol and then run IDA on those.
+
+***********************************************
+*** initWithMachServiceName_options_ seems to be another important selector we may want to backtrace for. 
+*** "initWithMachServiceName:options:" is the string I should look for.
+***********************************************
+
+I suspect that the findString function in our idascript is the one having the most trouble from the lack of IDA Objective-C analysis. If we get desperate, we might be able to make the scripts work around this.
+
+Max recursion is still an issue. I'm also seeing some error messages printed in IDA instead of being sent to the output file.
+
+The services I'm finding in executables are mentioned in the cache, but the executable paths are not lining up. I'm finding mach services that are being initialized by applications, but none of these applications are listed in the service cache.
+
+***I should run a query to see if my IDA scripts detect any services that aren't registered in the cache. I should also look for any services accessible through the sandbox that aren't registered in the cache.
+
+Several service names are being output as "". 
+I should investigate the cause of these. 
+I suspect that these situations come from the use of complex data structures to store the service names instead of just using strings.
+
+Several mach service names seem to come from values imported from frameworks. I think we can use the symbols detected to look into the dyld framework... Perhaps we can build a mapping of frameworks, to symbols, to strings that our IDA script can reference.
+_ANDaemonMachServiceName is a symbol in the AccountNotification framework from the dyld_shared_cache. The offsets in the extracted cache are messed up, but I can still connect _ANDaemonMachServiceName to com.apple.and.xpc
+
+The dyld symbol to string mapper will have the following requirements:
+  identify the symbols in the dyld_cache that seem to point to strings or data structures I can parse strings out of.
+    focus on the expoted symbols that are in string or cfstring segments or that point to these segments.
+    should be ok to just apply findStringAssociatedWithAddress to all of these symbols. 
+  map those symbols to strings
+  detect if any symbols are duplicated (same symbol used in multiple segments and pointing to different strings).
+
+I should have a disassemble iOS 10 dyld_shared_cache somewhere...
+
+I can run my symbol to string mapper on the dyld cache, but it is still failing to detect the ANDaemonMachServiceName symbol I'm interested in. This could be due to a flaw in my findString function...
+
+*I have made some changes to the findString function. I should test it again on the service provider executables and confirm that it can still find the same results. Better would also be ok, but I should still save the old results, run another test, and then compare the results.
+
+The symbol to string mapping seems to be working much better now. I should commit the new scripts to git soon.
+Try updating the findString function to use the new pickled Dictionary when it encounters Imported symbols.
+Test on AccountNotification Daemon.
+
+Are we sure we want to ignore initWithServiceName? We could scan for these anyway and see if any services accessible through the container sandbox show up.
+
+Should I break my analysis into two stages where stage one infers the selectors for all objc_msgSend calls and stage 2 investigates the parameters of certain calls? I could store all of the useful pickled files in the same directory to reduce the number of arguments required. I could also write scripts to automatically generate these dictionaries as a one time pass for others working with iOS filesystems. Another more invasive option would be to modify the ida databases such that imported strings are replaced with local strings or reconstruct call graphs based on dispatch parameters.
+
+What is initWithMachName? Should we be looking for it?
+
+One of my next tasks should be estimating how many initWithMachServiceName calls are happening in the dyld_shared_cache.
+Is it worth it for us to apply our scripts there too?
+There are definitely initWithMach calls in the dyld cache, and they look easy enough to backtrace.
+Maybe we could just treat the segments as if they're executables.
+See 0x19929867C
+
+Other than the dyld cache, what is the next step?
+Listing the methods that seem to be exposed for xpc?
+Mapping the protoype methods to a specific port name?
+
+It seems that we will need to use the dyld pickle trick for imported interfaces/protocols.
+
+Notes on finding exported interfaces:
+  setExportedInterface:
+    This selector seems to be consistently used to set the interface, but it gets its input from the return value of a preceeding call to various selectors.
+  XPCInterface
+    a selector that may return an interface to pass on to setExportedInterface:
+    I'm not sure what gets returned by this function. Probably whatever was in the X0 register when it was called.
+  interfaceWithProtocol:
+    a selector that may return an interface to pass on to setExportedInterface:
+    It seems that whatever goes into the X2 register here is what we want to predict as returned on X0
+    I should write an IDA script to track this one first and get it working interactively for locationd.
+  One of the values in the protocol data structure states how many methods it contains. This should make extracting them much easier.
+    
+I don't have a good way to connect exposed objects to exposed methods... Maybe I should just use the start address of the function I found them in. This seems like it would work anecdotally.
+
+It looks like my interactive scripts are missing the recursion depth error catching code. I should consider fixing this and releasing the basic block limits.
+
+Todo List
+  repeat the mach port name mapping scan
+    I should clear out the obsolete dictionary entries, but they aren't hurting anything right now.
+  refine iOracle presentation 
+  get a pickle file for the list of mach port names accessible to third party apps
+  figure out why so few of the mappings succeeded...
+    I suspect I need a better way to map mach port names to exposed interfaces.
+
+There seems to be something wrong with the way I check whether a mach port is accessible to third party apps or not.
+I should test this without filtering and then debug what might be breaking in the comparisons...
+
+I'm getting much fewer mapped results than expected... I think this may be related to trouble finding exposed objects.
+
+What if IDA is skipping analysis on certain executables because of previous buggy runs?
+I could try a fresh start with IDA or I can try deleting any non i64 databases that might be causing confusion.
+I can get a decent idea of what's going on by just grepping for "filePath" in the output file and counting the number of lines I find.
+Only 8 filePaths detected...
+I have tried removing .idX, .asm, .til, and .nam files from ida analysis.
+8 filePaths are still detected... I guess I should run without the -A flag and investigate the errors that come up.
+
+d93e124e is having trouble. The error seems related to my attempt to grab function arguments in order to infer the class used when the mach service is inferred.
+Similar issues are probably happening when I guess the object name when searching for an exposed object.
+It's possible that I can fix this by applying the suggested code from IDA support.
