@@ -7,13 +7,20 @@ https://drive.google.com/file/d/18v1EbcnAg5MCIRrXwI8kc8U0HbFlDP9f/view?usp=shari
 We also had to modify a header file in the Xcode libraries.
 `/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSXPCConnection.h`
 
-72c72
+`72c72`
+
 `< - (instancetype)initWithMachServiceName:(NSString *)name options:(NSXPCConnectionOptions)options;`
+
 `---`
+
 `> - (instancetype)initWithMachServiceName:(NSString *)name options:(NSXPCConnectionOptions)options __IOS_PROHIBITED __WATCHOS_PROHIBITED __TVOS_PROHIBITED;`
+
 `143c143`
+
 `< - (instancetype)initWithMachServiceName:(NSString *)name NS_DESIGNATED_INITIALIZER;`
+
 `---`
+
 `> - (instancetype)initWithMachServiceName:(NSString *)name NS_DESIGNATED_INITIALIZER __IOS_PROHIBITED __WATCHOS_PROHIBITED __TVOS_PROHIBITED;`
 
 Mostly I removed the tags prohibiting these methods on iOS.
