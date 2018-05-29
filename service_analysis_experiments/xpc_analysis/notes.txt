@@ -119,3 +119,5 @@ I have tried removing .idX, .asm, .til, and .nam files from ida analysis.
 d93e124e is having trouble. The error seems related to my attempt to grab function arguments in order to infer the class used when the mach service is inferred.
 Similar issues are probably happening when I guess the object name when searching for an exposed object.
 It's possible that I can fix this by applying the suggested code from IDA support.
+
+
