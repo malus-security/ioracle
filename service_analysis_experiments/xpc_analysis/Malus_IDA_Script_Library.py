@@ -71,22 +71,41 @@ def findMethodsOfProtocol(ea, verbose=False):
   global errorMessage
   global export_dict
   if verbose:
+    print "addresses"
+    print str(hex(ea))
+    print str(hex(Qword(ea)))
     print "segments"
     print idc.get_segm_name(ea) 
     print idc.get_segm_name(Qword(ea)) 
     print "names"
+    print get_name(ea)
     print get_name(Qword(ea))
     print get_name(Qword(Qword(ea)))
 
 
   classOffset = 0x18
+  altClassOffset = 0x28
+  #the alternative layout breaks on the next line.
+  #we should probably wrap this in an error handler...
   objcMethodList = Qword(Qword(ea)+classOffset)
+  altObjcMethodList = Qword(Qword(ea)+altClassOffset)
   if "__objc_const" in idc.get_segm_name(objcMethodList):
     numMethodsOffset = 0x4
     numMethods = Dword(objcMethodList + numMethodsOffset)
     selectorStringList = []
     firstSelectorOffset = 0x8
     currentSelectorAddress = objcMethodList + firstSelectorOffset
+    nextSelectorOffset = 0x18
+    for i in range(numMethods):
+      selectorStringList.append(findStringAssociatedWithAddress(Qword(currentSelectorAddress)))
+      currentSelectorAddress = currentSelectorAddress + nextSelectorOffset
+    return selectorStringList
+  elif "__objc_const" in idc.get_segm_name(altObjcMethodList):
+    numMethodsOffset = 0x4
+    numMethods = Dword(altObjcMethodList + numMethodsOffset)
+    selectorStringList = []
+    firstSelectorOffset = 0x8
+    currentSelectorAddress = altObjcMethodList + firstSelectorOffset
     nextSelectorOffset = 0x18
     for i in range(numMethods):
       selectorStringList.append(findStringAssociatedWithAddress(Qword(currentSelectorAddress)))
@@ -151,12 +170,19 @@ def predictReturnValueKnownMethod(ea):
   targetReg = getRegisterNumber("X1")
   minEa = idc.GetFunctionAttr(ea, idc.FUNCATTR_START)
   result = getRegisterValueAtAddress(ea,minEa,targetReg)
+
   if findStringAssociatedWithAddress(result) == "stringWithUTF8String:":
     targetReg = getRegisterNumber("X2")
     minEa = idc.GetFunctionAttr(ea, idc.FUNCATTR_START)
     return getRegisterValueAtAddress(ea,minEa,targetReg)
+
   if findStringAssociatedWithAddress(result) == "interfaceWithProtocol:":
     targetReg = getRegisterNumber("X2")
+    minEa = idc.GetFunctionAttr(ea, idc.FUNCATTR_START)
+    return getRegisterValueAtAddress(ea,minEa,targetReg)
+
+  if findStringAssociatedWithAddress(result) == "serverInterface":
+    targetReg = getRegisterNumber("X0")
     minEa = idc.GetFunctionAttr(ea, idc.FUNCATTR_START)
     return getRegisterValueAtAddress(ea,minEa,targetReg)
 
