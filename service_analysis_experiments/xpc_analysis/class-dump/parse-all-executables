@@ -1,5 +1,10 @@
 #!/bin/bash
 
+#
+# Sample run:
+#   ./parse-all-executables ~/Projects/store/out/iPhone_4.0_64bit_11.1.2_15B202/fs
+#
+
 if test $# -ne 1; then
     echo "Usage: $0 /path/to/root/filesystem" 1>&2
     exit 1
