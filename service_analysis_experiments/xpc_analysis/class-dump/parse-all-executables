@@ -1,0 +1,21 @@
+#!/bin/bash
+
+#
+# Sample run:
+#   ./parse-all-executables ~/Projects/store/out/iPhone_4.0_64bit_11.1.2_15B202/fs
+#
+
+if test $# -ne 1; then
+    echo "Usage: $0 /path/to/root/filesystem" 1>&2
+    exit 1
+fi
+
+path="$1"
+
+find "$path" -type f | while read f; do
+    file "$f" | grep ": Mach-O.*executable," > /dev/null 2>&1
+    if test $? -eq 0; then
+        exec_name="${f/$path/}"
+        ./class-dump "$f" | ./parse-protocol-names.py "$exec_name"
+    fi
+done
