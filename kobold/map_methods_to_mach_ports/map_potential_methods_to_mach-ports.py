@@ -3,6 +3,39 @@
 #bonus output, mapping of specific methods to try for each accessible mach-port
 
 import pickle
+import re
+
+def handleBlockArgument(blockParameter):
+  argsToReturn = []
+  pattern = re.compile("(.*)\ \(\^\)\((.*)\)")
+  match = pattern.match(blockParameter)
+  argsToReturn.append(match.group(1))
+  #print argsToReturn
+  if ", " in match.group(2):
+    argsToReturn += match.group(2).split(", ")
+  else:
+    argsToReturn.append(match.group(2))
+  return argsToReturn
+
+def getReturnType(declaration):
+  pattern = re.compile(".*?\(([^)]*)")
+  match = pattern.match(declaration)
+  return_type = match.group(1)
+  return return_type
+
+def getParameterTypes(method):
+  argsToReturn = []
+  raw_arguments = method.split(':')[1:]
+  for argument in raw_arguments:
+    pattern = re.compile("\((.*)\)")
+    match = pattern.match(argument)
+    arg_type = match.group(1)
+
+    if "(^)" in arg_type:
+      argsToReturn.append(handleBlockArgument(arg_type))
+    else:
+      argsToReturn.append(arg_type)
+  return argsToReturn
 
 def autoCodeThisMethod(method, machPort, id):
   objcCode = ""
@@ -18,10 +51,21 @@ def autoCodeThisMethod(method, machPort, id):
   objcCode += 'myConnection_'+id+'.interruptionHandler = ^{NSLog(@"Connection Terminated for id:'+id+'");};\n'
   objcCode += 'myConnection_'+id+'.invalidationHandler = ^{NSLog(@"Connection Invalidated for id:'+id+'");};\n'
 
+
   #extract return and argument types
-  #check for block parameters
-  #set up blocks if necessary
-  #initialize method parameters (blocks should be done already)
+  varTypes = []
+  varTypes.append(getReturnType(method))
+  varTypes += getParameterTypes(method)
+  print method
+  print varTypes 
+  for var in varTypes:
+    
+
+
+  #declare method parameters by iterating through argument type list.
+  #I don't think we actually need to initialize these parameters, I think they just need to be declared.
+    #check for block parameters
+    #set up blocks if necessary
   #invoke the method using initialized parameters
 
 
