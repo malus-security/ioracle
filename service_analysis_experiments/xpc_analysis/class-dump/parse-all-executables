@@ -12,7 +12,7 @@ fi
 
 path="$1"
 
-find "$path" -type f | while read f; do
+find "$path" -type f ! -name "lib*" | while read f; do
     file "$f" | grep ": Mach-O.*executable," > /dev/null 2>&1
     if test $? -eq 0; then
         exec_name="${f/$path/}"
