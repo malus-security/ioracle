@@ -58,8 +58,22 @@ def autoCodeThisMethod(method, machPort, id):
   varTypes += getParameterTypes(method)
   print method
   print varTypes 
+  var_id = 0
+  var_declarations = ""
+  var_names = []
   for var in varTypes:
-    
+    #for none block types, it should be sufficient to just declare a variable.
+    if "list" in str(type(var)):
+      #deal with block
+      #var_id += 1
+      pass
+    elif "void" not in var:
+      #declare simple variable
+      var_declarations += var+' var_'+id+'_'+str(var_id)+';\n'
+      var_names.append('var_'+id+'_'+str(var_id))
+      var_id += 1
+  print var_names
+  objcCode += var_declarations
 
 
   #declare method parameters by iterating through argument type list.
