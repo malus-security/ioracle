@@ -24,7 +24,6 @@ def generateMethodCall(method, variables, id):
     methodStripped = match.group(1)
 
     methodSlices = methodStripped.split(":")
-    print "!!!about to print slices!!!"
     #the first slice won't have any variables, so it's ok to just use it as is
     invocation += methodSlices[0] +':'
 
@@ -35,12 +34,11 @@ def generateMethodCall(method, variables, id):
       match = pattern.match(slice)
       spotForVarName = match.group(1)
       variableNameForSlice = variables[argument_count]["name"]
-      print "variableNameForSlice " + variableNameForSlice
       modifiedSlice = slice.replace(spotForVarName, variableNameForSlice, 1)
-      print "spotForVarName " + spotForVarName
-      print "modifiedSlice " + modifiedSlice
       argument_count += 1
       invocation += modifiedSlice
+      if argument_count < len(variables):
+        invocation += ":"
 
     #finish after the last slice
     invocation += '];\n'
@@ -81,10 +79,8 @@ def handleBlockDeclaration(var_type, id, var_id):
     this_block_arg["name"] = "var_"+id+"_"+str(var_id)
     var_id += 1
     block_arg_list.append(this_block_arg)
-  print "block_arg_list: "+str(block_arg_list)
 
   block_declaration = ""
-  print "Block Variable Type: "+str(var_type)
   #The first variable type in the var_type list should be the return type.
   #It will probably be void, but might not always be void...
   return_type = block_arg_list[0]["type"]
@@ -129,7 +125,6 @@ def handleBlockArgument(blockParameter):
   pattern = re.compile("(.*)\ \(\^\)\((.*)\)")
   match = pattern.match(blockParameter)
   argsToReturn.append(match.group(1))
-  #print argsToReturn
   if ", " in match.group(2):
     argsToReturn += match.group(2).split(", ")
   else:
@@ -164,7 +159,7 @@ def autoCodeThisMethod(method, machPort, id):
   objcCode += "NSXPCInterface *myInterface_"+id+" = [NSXPCInterface interfaceWithProtocol: @protocol("+fake_protocol_name+")];\n"
   #initialize connection
   objcCode += 'NSXPCConnection *myConnection_'+id+' = [[NSXPCConnection alloc] initWithMachServiceName:@"'+machPort+'"options:0];\n'
-  objcCode += 'myConnection'+id+'.remoteObjectInterface = myInterface_'+id+';\n'
+  objcCode += 'myConnection_'+id+'.remoteObjectInterface = myInterface_'+id+';\n'
   objcCode += '[myConnection_'+id+' resume];\n'
   #handle error messages
   objcCode += 'myConnection_'+id+'.interruptionHandler = ^{NSLog(@"Connection Terminated for id:'+id+'");};\n'
@@ -175,8 +170,6 @@ def autoCodeThisMethod(method, machPort, id):
   varTypes = []
   varTypes.append(getReturnType(method))
   varTypes += getParameterTypes(method)
-  print method
-  print varTypes 
   var_id = 0
   var_declarations = ""
   variables = []
@@ -195,7 +188,6 @@ def autoCodeThisMethod(method, machPort, id):
       thisVariable["name"] = 'var_'+id+'_'+str(var_id)
       var_id += 1
     variables.append(thisVariable)
-  print variables
   objcCode += var_declarations
 
   objcCode += generateMethodCall(method, variables, id)
@@ -205,7 +197,6 @@ def autoCodeThisMethod(method, machPort, id):
     #check for block parameters
     #set up blocks if necessary
   #invoke the method using initialized parameters
-  print "this is the method " + method
   return objcCode
   
 
@@ -240,8 +231,6 @@ for mapping in machPort_to_Exec_Mappings:
     #TODO it should be possible for an executable to map to more than one accessible mach-port
     executableDictionary[executable]["mach-ports"].append(machPort)
 
-prettyPrint(executableDictionary)
-
 #map protocols to executables
 with open('./input_data/mystery_pickle_file.pk', 'rb') as handle:
     class_dump_results = pickle.load(handle)
@@ -262,23 +251,26 @@ for executable in executableDictionary:
 #if any protocols are found, then add them to executable's dictionary.
 # executable {mach-port: ..., protocols: {protocol: [methodDeclarationStrings]}}
 
-prettyPrint(executableDictionary)
+#prettyPrint(executableDictionary)
 
 id = 1
 for executable in executableDictionary:
+#TODO put this loop back after testing
+#executable = "/System/Library/PrivateFrameworks/ManagedConfiguration.framework/Support/mdmd"
   if "protocols" in executableDictionary[executable]:
     protsDict = executableDictionary[executable]["protocols"] 
     for protocol in protsDict:
       for method in protsDict[protocol]:
         for machport in executableDictionary[executable]["mach-ports"]:
-          objcCode = autoCodeThisMethod(method, machPort, id)
-          id += 1
-          print "##################################################"
-          print "BEGIN OBJC CODE"
-          print "##################################################"
+          objcCode = autoCodeThisMethod(method, machport, id)
+          print "//////////////////////////////////////////////////"
+          print "//BEGIN OBJC CODE FOR ID NUMBER " +str(id)
+          print "//" + method 
+          print "//////////////////////////////////////////////////"
           print objcCode
-          print "##################################################"
-          print "END OBJC CODE"
-          print "##################################################"
+          print "//////////////////////////////////////////////////"
+          print "//END OBJC CODE FOR ID NUMBER " +str(id)
+          print "//////////////////////////////////////////////////"
+          id += 1
 
 
