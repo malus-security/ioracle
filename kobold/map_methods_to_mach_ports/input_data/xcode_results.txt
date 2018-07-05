@@ -1,0 +1,25 @@
+2018-07-05 15:03:42.300801-0400 test_autoCoder[1518:5651996] id 1: Invocation has a completion handler
+2018-07-05 15:03:42.301253-0400 test_autoCoder[1518:5651996] id 2: Invocation has a completion handler
+2018-07-05 15:03:42.301535-0400 test_autoCoder[1518:5651996] id 3: Invocation has a completion handler
+2018-07-05 15:03:42.301806-0400 test_autoCoder[1518:5651996] id 4: Invocation has a completion handler
+2018-07-05 15:03:42.302143-0400 test_autoCoder[1518:5651996] id 5: Invocation has a completion handler
+2018-07-05 15:03:42.302389-0400 test_autoCoder[1518:5651996] id 6: Invocation has a completion handler
+2018-07-05 15:03:42.318728-0400 test_autoCoder[1518:5651996] refreshPreferences: HangTracerEnabled: 0
+2018-07-05 15:03:42.318826-0400 test_autoCoder[1518:5651996] refreshPreferences: HangTracerDuration: 500
+2018-07-05 15:03:42.318860-0400 test_autoCoder[1518:5651996] refreshPreferences: ActivationLoggingEnabled: 0 ActivationLoggingTaskedOffByDA:0
+2018-07-05 15:03:42.426684-0400 test_autoCoder[1518:5652045] id 1: Connection Terminated
+2018-07-05 15:03:42.426758-0400 test_autoCoder[1518:5652044] id 2: Connection Terminated
+2018-07-05 15:03:42.482556-0400 test_autoCoder[1518:5652045] id 3: Completion message
+2018-07-05 15:03:42.482556-0400 test_autoCoder[1518:5652046] id 6: Completion message
+2018-07-05 15:03:42.483090-0400 test_autoCoder[1518:5652046] id 6: NSError * var_6_1: Error Domain=MCXPCErrorDomain Code=39000 "Calling process lacks “com.apple.managedconfiguration.mdmd-access” entitlement" UserInfo={USEnglishDescription=Calling process lacks “com.apple.managedconfiguration.mdmd-access” entitlement, descriptionParameters=(
+    "com.apple.managedconfiguration.mdmd-access"
+), MCErrorType=MCFatalError, NSLocalizedDescription=Calling process lacks “com.apple.managedconfiguration.mdmd-access” entitlement}
+2018-07-05 15:03:42.483904-0400 test_autoCoder[1518:5652045] id 3: NSError * var_3_2: Error Domain=MCXPCErrorDomain Code=39000 "Calling process lacks “com.apple.managedconfiguration.mdmd-access” entitlement" UserInfo={USEnglishDescription=Calling process lacks “com.apple.managedconfiguration.mdmd-access” entitlement, descriptionParameters=(
+    "com.apple.managedconfiguration.mdmd-access"
+), MCErrorType=MCFatalError, NSLocalizedDescription=Calling process lacks “com.apple.managedconfiguration.mdmd-access” entitlement}
+2018-07-05 15:03:42.484059-0400 test_autoCoder[1518:5652045] id 3: NSDictionary * var_3_3: (null)
+2018-07-05 15:03:44.679707-0400 test_autoCoder[1518:5652045] id 3: Connection Terminated
+2018-07-05 15:03:44.680011-0400 test_autoCoder[1518:5652046] id 6: Connection Terminated
+2018-07-05 15:03:52.839546-0400 test_autoCoder[1518:5652047] id 4: Connection Terminated
+2018-07-05 15:03:52.846646-0400 test_autoCoder[1518:5652047] id 5: Connection Terminated
+
