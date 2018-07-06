@@ -274,48 +274,48 @@ preamble = """
 print preamble
 
 invocationDictionary = {}
-
 id = 1
-#for executable in executableDictionary:
+
 ###################
 #BEGIN TEST CODE
 ###################
-executable = "/System/Library/PrivateFrameworks/ManagedConfiguration.framework/Support/mdmd"
+#executable = "/System/Library/PrivateFrameworks/ManagedConfiguration.framework/Support/mdmd"
 ###################
 #END TEST CODE
 ###################
-if "protocols" in executableDictionary[executable]:
-  protsDict = executableDictionary[executable]["protocols"] 
-  for protocol in protsDict:
-    for method in protsDict[protocol]:
-      ###################
-      #BEGIN TEST CODE
-      ###################
-      if id > 6:
-        break
-      ###################
-      #END TEST CODE
-      ###################
-      for machport in executableDictionary[executable]["mach-ports"]:
-        invocationDictionary[id] = {}
-        invocationDictionary[id]["protocol"] = protocol
-        invocationDictionary[id]["method"] = method
-        invocationDictionary[id]["mach-port"] = machport
-        objcCode = autoCodeThisMethod(method, machport, id)
-        print "//////////////////////////////////////////////////"
-        print "//BEGIN OBJC CODE FOR ID NUMBER " +str(id)
-        print "//" + method 
-        print "//////////////////////////////////////////////////"
-        print objcCode
-        print "//////////////////////////////////////////////////"
-        print "//END OBJC CODE FOR ID NUMBER " +str(id)
-        print "//////////////////////////////////////////////////"
-        id += 1
+for executable in executableDictionary:
+  if "protocols" in executableDictionary[executable]:
+    protsDict = executableDictionary[executable]["protocols"] 
+    for protocol in protsDict:
+      for method in protsDict[protocol]:
+        ###################
+        #BEGIN TEST CODE
+        ###################
+        #if id > 6:
+        #  break
+        ###################
+        #END TEST CODE
+        ###################
+        for machport in executableDictionary[executable]["mach-ports"]:
+          invocationDictionary[id] = {}
+          invocationDictionary[id]["protocol"] = protocol
+          invocationDictionary[id]["method"] = method
+          invocationDictionary[id]["mach-port"] = machport
+          objcCode = autoCodeThisMethod(method, machport, id)
+          print "//////////////////////////////////////////////////"
+          print "//BEGIN OBJC CODE FOR ID NUMBER " +str(id)
+          print "//" + method 
+          print "//////////////////////////////////////////////////"
+          print objcCode
+          print "//////////////////////////////////////////////////"
+          print "//END OBJC CODE FOR ID NUMBER " +str(id)
+          print "//////////////////////////////////////////////////"
+          id += 1
 
 with open('./input_data/invocationDictionary.pk', 'wb') as invDictHandle:
   pickle.dump(invocationDictionary, invDictHandle)
 
-epologue = """
+epoligue = """
     
 }
 
@@ -328,5 +328,5 @@ epologue = """
 
 @end
 """
-print epologue
+print epilogue
 
