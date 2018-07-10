@@ -1,7 +1,7 @@
 import pickle
 import re
 
-def parseMessyTypes(messyType,alreadyDeclaredTypeList):
+def parseMessyTypes(messyType,alreadyDeclaredTypeList, prot_types, inter_types):
   cleanTypes = []
   #remove pointer notation
   messyType = messyType.replace(' *','')
@@ -13,7 +13,10 @@ def parseMessyTypes(messyType,alreadyDeclaredTypeList):
     #This is probably why I've been having so much trouble with it lately.
     regexResult = re.match('^.*<(.*)>.*$',messyType)
     angleBracMatch = regexResult.group(1)
-    cleanTypes.append(angleBracMatch)
+    #TODO if a type appears as both a prototype and an interface, then we would override its assignment to one or the other.
+    #It would be better if we just worked with two lists.
+    prot_types.append(angleBracMatch)
+    #cleanTypes.append(angleBracMatch)
     messyType = messyType.replace('<'+angleBracMatch+'>','')
 
   #split based on spaces
@@ -21,17 +24,25 @@ def parseMessyTypes(messyType,alreadyDeclaredTypeList):
   if " " in messyType:
     for spaceSlice in messyType.split(" "):
       if spaceSlice[0].isupper():
-        cleanTypes.append(spaceSlice)
+        inter_types.append(spaceSlice)
+        #parsedTypes[spaceSlice] = "interface"
+        #cleanTypes.append(spaceSlice)
   else:
     if messyType[0].isupper():
-      cleanTypes.append(messyType)
+      inter_types.append(messyType)
+      #parsedTypes[messyType] = "interface"
+      #cleanTypes.append(messyType)
 
   #The NSSecureType Heuristic Doesn't seem to help since some types in that set still need to be faked
-  for type in cleanTypes:
+  #TODO fix the error here resulting from modifying the dictionary while iterating through it.
+  for type in inter_types:
     if type in alreadyDeclaredTypeList:
-      cleanTypes.remove(type)
+      inter_types.remove(type)
+  for type in prot_types:
+    if type in alreadyDeclaredTypeList:
+      prot_types.remove(type)
 
-  return cleanTypes
+  #return cleanTypes
 
 def filterNSSecureCodingTypes(parameterTypes, NSSecureTypeList):
   filteredTypes= set()
@@ -82,7 +93,8 @@ alreadyDeclaredTypeList = open('./input_data/alreadyDeclaredTypes.txt','rb').rea
 
 headerDict = {}
 headerDict["methods"] = set()
-headerDict["types"] = set()
+headerDict["interface_types"] = set()
+headerDict["protocol_types"] = set()
 
 for id in invocationDictionary:
   thisInvocation = invocationDictionary[id]
@@ -91,18 +103,27 @@ for id in invocationDictionary:
   parameterTypes = []
   parameterTypes.append(getReturnType(thisMethod))
   parameterTypes += getParameterTypes(thisMethod)
-  parsedTypes = []
+  #I can treat the parsedTypes as a dictionary.
+  #This dictionary would associate an attribute of either interface or protocol with each type to indicate how it should be declared.
+  prot_types = []
+  inter_types = []
   for messyType in parameterTypes:
-    parsedTypes += parseMessyTypes(messyType, alreadyDeclaredTypeList)
-  for type in parsedTypes:
-    headerDict["types"].add(type)
+    parseMessyTypes(messyType, alreadyDeclaredTypeList, prot_types, inter_types)
+  #TODO fix this to consider prototype vs interface
+  for type in prot_types:
+    headerDict["protocol_types"].add(type)
+  for type in inter_types:
+    headerDict["interface_types"].add(type)
   headerDict["methods"].add(thisMethod)
 
 #define types
 #@interface TIKeyboardActivityContext : NSObject
 #@end
-for type in headerDict["types"]:
+for type in headerDict["interface_types"]:
   print "@interface "+type+" : NSObject @end"
+
+for type in headerDict["protocol_types"]:
+  print "@protocol "+type+" <NSObject> @end"
 
 #auto-generate preamble
 preamble = """

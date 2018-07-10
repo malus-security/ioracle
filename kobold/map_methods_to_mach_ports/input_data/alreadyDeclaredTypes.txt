@@ -27,3 +27,4 @@ NSOutputStream
 NSURLCredential
 NSInvocation
 NSFileHandle
+NSFileProviderDomain
