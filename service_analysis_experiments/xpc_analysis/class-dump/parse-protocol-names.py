@@ -77,12 +77,11 @@ def main():
     content = ""
     current_protocol = None
     for line in inputText.split('\n'):
-        if re.match('^@protocol +.* +\<.*\>$', line):
+        if re.match('^@protocol +.*$', line) or re.match('^@protocol +.* +\<.*\>$', line):
             protocol = re.split(' +', line)[1]
             if protocol in nsxpc_protocols:
                 state = STATE_PROTOCOL
                 current_protocol = protocol
-                print "current_protocol: ", current_protocol
                 content = line + '\n'
             continue
         if re.match('^@end$', line):
