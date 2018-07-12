@@ -269,7 +269,7 @@ for mapping in machPort_to_Exec_Mappings:
     executableDictionary[executable]["mach-ports"].append(machPort)
 
 #map protocols to executables
-with open('./input_data/protocols_iPhone_4.0_64bit_11.1.2_15B202_2018-07-09.pk', 'rb') as handle:
+with open('./input_data/mystery_protocols_iPhone_4.0_64bit_11.1.2_15B202_2018-07-09.pk', 'rb') as handle:
     class_dump_results = pickle.load(handle)
 
 #at this point, only executable using sandbox accessible mach-ports should be in the dictionary
@@ -344,26 +344,29 @@ for executable in executableDictionary:
         #if id < 300 or id > 312 or id == 311:
         #  id += 1
         #  continue
+        if "itunesstored" not in executable:
+          continue
         ###################
         #END TEST CODE
         ###################
         for machport in executableDictionary[executable]["mach-ports"]:
-          invocationDictionary[id] = {}
-          invocationDictionary[id]["protocol"] = protocol
-          invocationDictionary[id]["method"] = method
-          invocationDictionary[id]["mach-port"] = machport
-          objcCode = autoCodeThisMethod(method, machport, id)
-          print "//////////////////////////////////////////////////"
-          print "//BEGIN OBJC CODE FOR ID NUMBER " +str(id)
-          print "//" + method 
-          print "//////////////////////////////////////////////////"
-          print 'NSLog(@"about to run id '+str(id)+'");'
-          print objcCode
-          #print "[NSThread sleepForTimeInterval:1.0f];"
-          print "//////////////////////////////////////////////////"
-          print "//END OBJC CODE FOR ID NUMBER " +str(id)
-          print "//////////////////////////////////////////////////"
-          id += 1
+          for i in range(1,30):
+            invocationDictionary[id] = {}
+            invocationDictionary[id]["protocol"] = protocol
+            invocationDictionary[id]["method"] = method
+            invocationDictionary[id]["mach-port"] = machport
+            objcCode = autoCodeThisMethod(method, machport, id)
+            print "//////////////////////////////////////////////////"
+            print "//BEGIN OBJC CODE FOR ID NUMBER " +str(id)
+            print "//" + method 
+            print "//////////////////////////////////////////////////"
+            print 'NSLog(@"about to run id '+str(id)+'");'
+            print objcCode
+            #print "[NSThread sleepForTimeInterval:1.0f];"
+            print "//////////////////////////////////////////////////"
+            print "//END OBJC CODE FOR ID NUMBER " +str(id)
+            print "//////////////////////////////////////////////////"
+            id += 1
 
 with open('./input_data/invocationDictionary.pk', 'wb') as invDictHandle:
   pickle.dump(invocationDictionary, invDictHandle)
