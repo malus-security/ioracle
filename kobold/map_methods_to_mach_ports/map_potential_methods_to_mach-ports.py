@@ -344,29 +344,28 @@ for executable in executableDictionary:
         #if id < 300 or id > 312 or id == 311:
         #  id += 1
         #  continue
-        if "itunesstored" not in executable:
-          continue
+        #if "itunesstored" not in executable:
+        #  continue
         ###################
         #END TEST CODE
         ###################
         for machport in executableDictionary[executable]["mach-ports"]:
-          for i in range(1,30):
-            invocationDictionary[id] = {}
-            invocationDictionary[id]["protocol"] = protocol
-            invocationDictionary[id]["method"] = method
-            invocationDictionary[id]["mach-port"] = machport
-            objcCode = autoCodeThisMethod(method, machport, id)
-            print "//////////////////////////////////////////////////"
-            print "//BEGIN OBJC CODE FOR ID NUMBER " +str(id)
-            print "//" + method 
-            print "//////////////////////////////////////////////////"
-            print 'NSLog(@"about to run id '+str(id)+'");'
-            print objcCode
-            #print "[NSThread sleepForTimeInterval:1.0f];"
-            print "//////////////////////////////////////////////////"
-            print "//END OBJC CODE FOR ID NUMBER " +str(id)
-            print "//////////////////////////////////////////////////"
-            id += 1
+          invocationDictionary[id] = {}
+          invocationDictionary[id]["protocol"] = protocol
+          invocationDictionary[id]["method"] = method
+          invocationDictionary[id]["mach-port"] = machport
+          objcCode = autoCodeThisMethod(method, machport, id)
+          print "//////////////////////////////////////////////////"
+          print "//BEGIN OBJC CODE FOR ID NUMBER " +str(id)
+          print "//" + method 
+          print "//////////////////////////////////////////////////"
+          print 'NSLog(@"about to run id '+str(id)+'");'
+          print objcCode
+          #print "[NSThread sleepForTimeInterval:1.0f];"
+          print "//////////////////////////////////////////////////"
+          print "//END OBJC CODE FOR ID NUMBER " +str(id)
+          print "//////////////////////////////////////////////////"
+          id += 1
 
 with open('./input_data/invocationDictionary.pk', 'wb') as invDictHandle:
   pickle.dump(invocationDictionary, invDictHandle)
