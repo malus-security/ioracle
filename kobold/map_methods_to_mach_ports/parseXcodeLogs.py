@@ -60,6 +60,7 @@ for log in raw_xcode_logs:
   else:
     sanitized_logs[-1] += " " + log
 
+
 #TODO I need to know how many invocations to search for.
 # Perhaps it would be easier to deal with this if I could import a pickle file with data from map_potential_methods_to_mach-ports.py
 with open('./input_data/invocationDictionary.pk', 'rb') as handle:
@@ -92,8 +93,8 @@ for id in invocationDictionary:
     lookForEntReqs(id, thisInvocation, knownEntKeyList)
 
   
-  if thisInvocation["valid"] and len(thisInvocation["entitlementRequirement"]) == 0:
-  #if thisInvocation["valid"]:
+  #if thisInvocation["valid"] and len(thisInvocation["entitlementRequirement"]) == 0:
+  if thisInvocation["valid"]:
     print id
     #print "  "+thisProtocol
     print "  "+thisMethod
@@ -102,5 +103,5 @@ for id in invocationDictionary:
     print "  "+str(thisInvocation["entitlementRequirement"])
     for line in thisInvocation["logLines"]:
       print "****"+line
-    #for line in thisInvocation["logLines"]:
-    #  print "  "+line
+      #for line in thisInvocation["logLines"]:
+      #  print "  "+line

@@ -130,13 +130,13 @@ def handleBlockDeclaration(var_type, id, var_id):
     #TODO we eventually want to print non-error results, but we are running into too many problems in early stages.
     #if this_block_arg["type"] != "void" and "Error" in this_block_arg["type"]:
     if this_block_arg["type"] == "_Bool":
-      block_declaration += 'NSLog(@"id '+id+': ' +this_block_arg["type"] + ' ' +this_block_arg["name"]+ ': %d",' +this_block_arg["name"]+ ');\n'
+      block_declaration += 'NSLog(@"id '+id+': COMPLETION HANDLER OUTPUT ' +this_block_arg["type"] + ' ' +this_block_arg["name"]+ ': %d",' +this_block_arg["name"]+ ');\n'
     elif this_block_arg["type"] == "long long":
-      block_declaration += 'NSLog(@"id '+id+': ' +this_block_arg["type"] + ' ' +this_block_arg["name"]+ ': %lld",' +this_block_arg["name"]+ ');\n'
+      block_declaration += 'NSLog(@"id '+id+': COMPLETION HANDLER OUTPUT ' +this_block_arg["type"] + ' ' +this_block_arg["name"]+ ': %lld",' +this_block_arg["name"]+ ');\n'
     elif this_block_arg["type"] == "unsigned long long":
-      block_declaration += 'NSLog(@"id '+id+': ' +this_block_arg["type"] + ' ' +this_block_arg["name"]+ ': %llu",' +this_block_arg["name"]+ ');\n'
+      block_declaration += 'NSLog(@"id '+id+': COMPLETION HANDLER OUTPUT ' +this_block_arg["type"] + ' ' +this_block_arg["name"]+ ': %llu",' +this_block_arg["name"]+ ');\n'
     elif this_block_arg["type"] != "void":
-      block_declaration += 'NSLog(@"id '+id+': ' +this_block_arg["type"] + ' ' +this_block_arg["name"]+ ': %@",' +this_block_arg["name"]+ ');\n'
+      block_declaration += 'NSLog(@"id '+id+': COMPLETION HANDLER OUTPUT ' +this_block_arg["type"] + ' ' +this_block_arg["name"]+ ': %@",' +this_block_arg["name"]+ ');\n'
   block_declaration += try_catch_epilogue
   block_declaration += '};\n'
 
