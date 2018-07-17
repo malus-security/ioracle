@@ -6,7 +6,7 @@ import sys
 """
 
 singleton=True
-with open('ViewController.m', 'rt') as sourceFile:
+with open('../utils/CallingMethodsApp/CallingMethodsApp/ViewController.m', 'rt') as sourceFile:
   for line in sourceFile:
     intVar = re.search('^(unsigned )?int var_.*_.*;$', line)
     longVar = re.search('^(unsigned )?(long )?long var_.*_.*;$', line)
