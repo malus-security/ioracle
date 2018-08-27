@@ -11,6 +11,10 @@ while IFS='' read -r line || [[ -n "$line" ]]; do
     value=`echo $line | cut -d "\"" -f12`
     type=`echo $line | cut -d "\"" -f11`
     echo "    <key>"$key"</key>"
+    # For cases value([])
+    if [[ $type = *"[]"* ]]; then
+        continue
+    fi
     # Handle Bool values
     if [[ $type = *"bool"* ]]; then
         echo "    <"$value"/>"
