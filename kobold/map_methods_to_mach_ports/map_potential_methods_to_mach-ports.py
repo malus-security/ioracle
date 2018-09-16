@@ -4,6 +4,7 @@
 
 import pickle
 import re
+import random
 
 def generateMethodCall(method, variables, id):
   #[myConnection.remoteObjectProxy enumerateInstalledAppsWithOptions:dictTest completion:completionHandler];
@@ -131,6 +132,12 @@ def handleBlockDeclaration(var_type, id, var_id):
     #if this_block_arg["type"] != "void" and "Error" in this_block_arg["type"]:
     if this_block_arg["type"] == "_Bool":
       block_declaration += 'NSLog(@"id '+id+': COMPLETION HANDLER OUTPUT ' +this_block_arg["type"] + ' ' +this_block_arg["name"]+ ': %d",' +this_block_arg["name"]+ ');\n'
+    elif this_block_arg["type"] == "int":
+      block_declaration += 'NSLog(@"id '+id+': COMPLETION HANDLER OUTPUT ' +this_block_arg["type"] + ' ' +this_block_arg["name"]+ ': %d",' +this_block_arg["name"]+ ');\n'
+    elif this_block_arg["type"] == "unsigned int":
+      block_declaration += 'NSLog(@"id '+id+': COMPLETION HANDLER OUTPUT ' +this_block_arg["type"] + ' ' +this_block_arg["name"]+ ': %d",' +this_block_arg["name"]+ ');\n'
+    elif this_block_arg["type"] == "double":
+      block_declaration += 'NSLog(@"id '+id+': COMPLETION HANDLER OUTPUT ' +this_block_arg["type"] + ' ' +this_block_arg["name"]+ ': %f",' +this_block_arg["name"]+ ');\n'
     elif this_block_arg["type"] == "long long":
       block_declaration += 'NSLog(@"id '+id+': COMPLETION HANDLER OUTPUT ' +this_block_arg["type"] + ' ' +this_block_arg["name"]+ ': %lld",' +this_block_arg["name"]+ ');\n'
     elif this_block_arg["type"] == "unsigned long long":
@@ -318,11 +325,15 @@ id = 1
 ###################
 #END TEST CODE
 ###################
+total_invocations_generated = 0
+total_methods = 0
+total_completion_handlers = 0
 for executable in executableDictionary:
   if "protocols" in executableDictionary[executable]:
     protsDict = executableDictionary[executable]["protocols"] 
     for protocol in protsDict:
       for method in protsDict[protocol]:
+                
         #TODO Deal with this hardcoding later...
         if method == "- (_Bool)listener:(NSXPCListener *)arg1 shouldAcceptNewConnection:(NSXPCConnection *)arg2;":
           continue
@@ -344,12 +355,30 @@ for executable in executableDictionary:
         #if id < 300 or id > 312 or id == 311:
         #  id += 1
         #  continue
-        #if "itunesstored" not in executable:
+        #if "key" not in executable:
         #  continue
         ###################
         #END TEST CODE
         ###################
+        total_methods += 1
+        if "(^)" in method:
+          total_completion_handlers += 1
         for machport in executableDictionary[executable]["mach-ports"]:
+          """
+          if "replay" not in machport:
+            id+=1
+            continue
+          if id in [572,574,576,578,963,1797,1807]:
+            id+=1
+            continue
+          #if id < 100 or ( id > 200 and id < 600) or (id > 700 and id < 800) or ( id > 1000 and id < 1700) or id > 1798:
+          if id < 100 or ( id > 200 and id < 600) or ( id > 1000 and id < 1700) or id > 1798:
+            id+=1
+            continue
+          if id != 1798:
+            id+=1
+            continue
+          """
           invocationDictionary[id] = {}
           invocationDictionary[id]["protocol"] = protocol
           invocationDictionary[id]["method"] = method
@@ -360,12 +389,13 @@ for executable in executableDictionary:
           print "//" + method 
           print "//////////////////////////////////////////////////"
           print 'NSLog(@"about to run id '+str(id)+'");'
+          #print '[NSThread sleepForTimeInterval:0.1f];'
           print objcCode
-          #print "[NSThread sleepForTimeInterval:1.0f];"
           print "//////////////////////////////////////////////////"
           print "//END OBJC CODE FOR ID NUMBER " +str(id)
           print "//////////////////////////////////////////////////"
           id += 1
+          total_invocations_generated += 1 
 
 with open('./input_data/invocationDictionary.pk', 'wb') as invDictHandle:
   pickle.dump(invocationDictionary, invDictHandle)
@@ -384,4 +414,6 @@ epilogue = """
 @end
 """
 print epilogue
-
+print "//total invocations generated: " + str(total_invocations_generated)
+print "//total methods generated: " + str(total_methods)
+print "//total completion handlers: " + str(total_completion_handlers)
