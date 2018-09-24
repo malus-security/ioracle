@@ -1,0 +1,12 @@
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>com.apple.developer.in-app-payments</key>
+    <array>
+        <string>com.apple.ASA_AOS</string>
+        <string>com.apple.ASA_EPC</string>
+        <string>com.apple.ASA_AOS_KRYPTON</string>
+        <string>com.apple.ASA_EPC_KRYPTON</string>
+    </array>
+</dict>
+</plist>
