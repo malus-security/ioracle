@@ -41,6 +41,8 @@ def create_tables():
     ent_file = open ("entitlementFactsWithPublic.pl", "r")
 
     for line in ent_file:
+        if 'artistName("Apple")' in line:
+            continue
         key = re.search('.*key\("(.*)"\),value.*',line).group(1)
         value = re.search('.*,value\((.*)\)\)\)\.',line).group(1)
         if value == "[]":
