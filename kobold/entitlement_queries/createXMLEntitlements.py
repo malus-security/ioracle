@@ -64,9 +64,6 @@ def generate_XML_for_one(key):
     return xml
 
 def generate_XML_for_all_ents():
-    if not os.path.exists(output_folder_name):
-        os.makedirs(output_folder_name)
-
     for key in get_keys():
         with open(os.path.join(output_folder_name, key+'.xml'), 'a') as the_file:
             the_file.write(generate_XML_for_one(key))
@@ -86,8 +83,30 @@ def generate_XML_with_all_ents():
     with open(os.path.join(output_folder_name, all_ents_xml), 'a') as the_file:
         the_file.write(xml)
 
+def generate_XML_with_partial_ents():
+    xml="""<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>"""
+
+    for key in get_keys():
+        value = transform_value_to_XML(get_first_value(key))
+        xml += """
+    <key>%s</key>
+    %s""" % (key, value)
+        xml_with_final = xml + """
+</dict>
+</plist>"""
+        with open(os.path.join(output_folder_name, key+'.xml'), 'a') as the_file:
+            the_file.write(xml_with_final)
+
+
 
 init()
-generate_XML_for_all_ents()
+if not os.path.exists(output_folder_name):
+    os.makedirs(output_folder_name)
+
+
+#generate_XML_for_all_ents()
 generate_XML_with_all_ents()
+#generate_XML_with_partial_ents()
 #clean()
