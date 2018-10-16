@@ -106,7 +106,7 @@ if not os.path.exists(output_folder_name):
     os.makedirs(output_folder_name)
 
 
-#generate_XML_for_all_ents()
+generate_XML_for_all_ents()
 generate_XML_with_all_ents()
 #generate_XML_with_partial_ents()
 #clean()
