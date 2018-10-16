@@ -3,7 +3,7 @@
 <dict>
     <key>com.apple.security.application-groups</key>
     <array>
-        <string>com.apple.supportapp.appgroup</string>
+        <string>group.1800contacts</string>
     </array>
 </dict>
 </plist>

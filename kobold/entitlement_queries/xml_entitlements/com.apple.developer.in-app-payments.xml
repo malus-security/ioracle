@@ -3,10 +3,11 @@
 <dict>
     <key>com.apple.developer.in-app-payments</key>
     <array>
-        <string>com.apple.ASA_AOS</string>
-        <string>com.apple.ASA_EPC</string>
-        <string>com.apple.ASA_AOS_KRYPTON</string>
-        <string>com.apple.ASA_EPC_KRYPTON</string>
+        <string>merchant.Yunshanfu308110075120121</string>
+        <string>merchant.Yunshanfu308110075120120</string>
+        <string>merchant.Yunshanfu308110075120123</string>
+        <string>merchant.Yunshanfu308110075120124</string>
+        <string>merchant.Yunshanfu308110075120122</string>
     </array>
 </dict>
 </plist>
