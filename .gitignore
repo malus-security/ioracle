@@ -20,3 +20,4 @@ TAGS
 *.pk
 *.out
 .DS_store
+*.xcuserdatad/
