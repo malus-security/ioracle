@@ -119,9 +119,9 @@ def handleBlockDeclaration(var_type, id, var_id):
   try_catch_epilogue = """
    }
     @catch (NSException * e) {
-        NSLog(@"Completion Handler Exception: %@", e);
+        NSLog(@"id %s: Completion Handler Exception: %%@", e);
    }
-  """
+  """ % id
   block_declaration += try_catch_preamble
 
   #I need to print each of the block variables (except for return type which I hope is void...)
@@ -228,9 +228,9 @@ def autoCodeThisMethod(method, machPort, id):
   try_catch_epilogue = """
    }
     @catch (NSException * e) {
-        NSLog(@"Invocation Exception: %@", e);
+        NSLog(@"id %s: Invocation Exception: %%@", e);
    }
-  """
+  """ % id
 
   objcCode += try_catch_preamble
   objcCode += generateMethodCall(method, variables, id)
@@ -388,7 +388,7 @@ for executable in executableDictionary:
           print "//BEGIN OBJC CODE FOR ID NUMBER " +str(id)
           print "//" + method 
           print "//////////////////////////////////////////////////"
-          print 'NSLog(@"about to run id '+str(id)+'");'
+          print 'NSLog(@"id ' + str(id) + ': about to run''");'
           #print '[NSThread sleepForTimeInterval:0.1f];'
           print objcCode
           print "//////////////////////////////////////////////////"

@@ -17,3 +17,7 @@ TAGS
 *.class
 *.jar
 *.pyc
+*.pk
+*.out
+.DS_store
+*.xcuserdatad/
