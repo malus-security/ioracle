@@ -15,9 +15,9 @@ def generateMethodCall(method, variables, id):
     invocation += variables[0]["name"] +' = '
 
   invocation += '[myConnection_' +id+ '.remoteObjectProxy '
-    
+
   #if there are colons, then there are parameters, and we need to use the right variable names
-  if ':' in method: 
+  if ':' in method:
     #strip away the irrelevant parts of the method declaration
     pattern = re.compile(".*?\)(.*);")
     match = pattern.match(method)
@@ -43,7 +43,7 @@ def generateMethodCall(method, variables, id):
     #finish after the last slice
     invocation += '];\n'
 
-   
+
 
   #if there are no colons, then there are not parameters, and no names need to be used
   else:
@@ -94,7 +94,7 @@ def handleBlockDeclaration(var_type, id, var_id):
   #fill in the argument types and finish the statement with semicolon
   block_args = ""
   #TODO I shouldn't assign names if ther argument types are void.
-  
+
   if block_arg_list[1]["type"] == "void":
     block_args += "("+block_arg_list[1]["type"]
   else:
@@ -108,7 +108,7 @@ def handleBlockDeclaration(var_type, id, var_id):
   #set up a name for the handler variable
   block_variable_name = "blockHandler_"+id+"_"+str(var_id)
   var_id += 1
-  
+
   #create the block's heading
   block_declaration += block_type +" "+ block_variable_name + " = ^"
   block_declaration += block_args + "){\n"
@@ -125,7 +125,7 @@ def handleBlockDeclaration(var_type, id, var_id):
   block_declaration += try_catch_preamble
 
   #I need to print each of the block variables (except for return type which I hope is void...)
-  #TODO we should probably wrap each of these in error catching code so that execution doesn't get 
+  #TODO we should probably wrap each of these in error catching code so that execution doesn't get
   #TODO interrupted when one of our fake objects explodes...
   for this_block_arg in block_arg_list[1:]:
     #TODO we eventually want to print non-error results, but we are running into too many problems in early stages.
@@ -242,7 +242,7 @@ def autoCodeThisMethod(method, machPort, id):
     #set up blocks if necessary
   #invoke the method using initialized parameters
   return objcCode
-  
+
 
 
 def prettyPrint(executableDict):
@@ -251,7 +251,7 @@ def prettyPrint(executableDict):
     for machport in executableDict[executable]["mach-ports"]:
       print "  mach-port: " + machport
     if "protocols" in executableDict[executable]:
-      protsDict = executableDict[executable]["protocols"] 
+      protsDict = executableDict[executable]["protocols"]
       if len(protsDict) == 1:
         print "GOOD FOR TESTING"
       for protocol in protsDict:
@@ -265,7 +265,7 @@ executableDictionary = {}
 machPort_to_Exec_Mappings = open("./input_data/sorted_uniq_mach-port_to_executable.txt", "rb").read().strip().split("\n")
 sandboxAccessibleMachPorts = open("./input_data/sandbox_accessible_services.txt", "rb").read().strip().split("\n")
 #print machPort_to_Exec_Mappings
-for mapping in machPort_to_Exec_Mappings: 
+for mapping in machPort_to_Exec_Mappings:
   machPort, executable = mapping.split(",")
   if machPort in sandboxAccessibleMachPorts:
     #initialize an entry for the executable if there isn't one already
@@ -283,7 +283,7 @@ with open('./input_data/mystery_protocols_iPhone_4.0_64bit_11.1.2_15B202_2018-07
 for executable in executableDictionary:
   if class_dump_results[executable] != {}:
     executableDictionary[executable]["protocols"] = {}
-    protsDict = executableDictionary[executable]["protocols"] 
+    protsDict = executableDictionary[executable]["protocols"]
     for protocol in class_dump_results[executable]:
       protsDict[protocol] = []
       raw_header = class_dump_results[executable][protocol]
@@ -330,10 +330,10 @@ total_methods = 0
 total_completion_handlers = 0
 for executable in executableDictionary:
   if "protocols" in executableDictionary[executable]:
-    protsDict = executableDictionary[executable]["protocols"] 
+    protsDict = executableDictionary[executable]["protocols"]
     for protocol in protsDict:
       for method in protsDict[protocol]:
-                
+
         #TODO Deal with this hardcoding later...
         if method == "- (_Bool)listener:(NSXPCListener *)arg1 shouldAcceptNewConnection:(NSXPCConnection *)arg2;":
           continue
@@ -386,22 +386,23 @@ for executable in executableDictionary:
           objcCode = autoCodeThisMethod(method, machport, id)
           print "//////////////////////////////////////////////////"
           print "//BEGIN OBJC CODE FOR ID NUMBER " +str(id)
-          print "//" + method 
+          print "//" + method
           print "//////////////////////////////////////////////////"
           print 'NSLog(@"id ' + str(id) + ': about to run''");'
+          print 'NSLog(@"id ' + str(id) + ': MachPort: ' + machport + ' Method: '+ method.split(":")[0].split(")")[1] + '");'
           #print '[NSThread sleepForTimeInterval:0.1f];'
           print objcCode
           print "//////////////////////////////////////////////////"
           print "//END OBJC CODE FOR ID NUMBER " +str(id)
           print "//////////////////////////////////////////////////"
           id += 1
-          total_invocations_generated += 1 
+          total_invocations_generated += 1
 
 with open('./input_data/invocationDictionary.pk', 'wb') as invDictHandle:
   pickle.dump(invocationDictionary, invDictHandle)
 
 epilogue = """
-    
+
 }
 
 
