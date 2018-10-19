@@ -1,3 +1,0 @@
-This directory represents a reorganization of the kobold project which has expanded to include many obsolete scripts.
-It should only include scripts the scripts we would include if we were to open source the project.
-Experimental efforts should be run in directories labelled "experiment_" and moved to proper directories when the code is stable.
