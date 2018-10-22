@@ -12,6 +12,7 @@ def parseAppExtensions(appExt_Dict):
     serviceId_String = str(appex_dict['_serviceIdentifier'])
     #TODO Do any of service identifiers match with mach port names that third party apps are allowed to access?
     #print "ipcConfig(type('AppExensions'),executablePath('"+execPath_String+"'),serviceIdentifier('"+serviceId_String+"'),roleAccount(''),allowedClients([]))."
+    print serviceId_String +','+ execPath_String[1:]
 
   
 def parseLaunchDaemons(launchDaemons_Dict):
@@ -32,7 +33,7 @@ def parseLaunchDaemons(launchDaemons_Dict):
     if 'MachServices' in plist_Dict:
       for machService_String in plist_Dict['MachServices']:
         #print "ipcConfig(type('LaunchDaemons'),executablePath('"+execPath_String+"'),serviceIdentifier('"+machService_String+"'),roleAccount(''),allowedClients([]))."
-        print machService_String + "," + execPath_String
+        print machService_String + "," + execPath_String[1:]
 
 
 def parseLibraryTree(libraryTree_Dict):
@@ -49,6 +50,7 @@ def parseLibraryTree(libraryTree_Dict):
       if '_AllowedClients' in XPC_Dict:
         allowedClients = XPC_Dict['_AllowedClients']
       #print "ipcConfig(type('SystemLibraryTreeState'),executablePath('"+execPath_String+"'),serviceIdentifier('"+serviceId_String+"'),roleAccount('"+roleAccount+"'),allowedClients("+str(allowedClients)+"))."
+    print serviceId_String +','+ execPath_String[1:]
 
 
 #Usage
