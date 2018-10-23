@@ -33,7 +33,7 @@ def clean():
     os.system('rm -rf ' + location)
 
 def insert_log(m_id, method, machPort, hasCompletion, connectionInvalidated, connectionTerminated):
-    sql = "insert into " + table_name + " (id, method, machPort, hasCompletion, connectionInvalidated, connectionTerminated)" % (m_id, method, machPort, hasCompletion, connectionInvalidated, connectionTerminated)
+    sql = "insert into " + table_name + " (id, method, machPort, hasCompletion, connectionInvalidated, connectionTerminated) values (%d, '%s', '%s', %d, %d, %d)" % (m_id, method, machPort, hasCompletion, connectionInvalidated, connectionTerminated)
     c.execute(sql)
     conn.commit()
 
@@ -43,22 +43,25 @@ def add_log(log_name):
     log_file = open(log, "r")
 
     for m_id in range(1,2020):
-        for line in log_file:
-            if "id " + str(m_id) not in line:
+        methodName, machPort, connectionTerminated, connectionInvalidated, hasCompletion = ["", "", 0, 0, 0]
+        for line in open(log, "r"):
+            if "id " + str(m_id) + ": " not in line:
                 continue
-            if "machPort" in line:
+            if "MachPort" in line:
                 search = re.search('.*MachPort: (.*) Method: (.*)', line)
                 machPort = search.group(1)
                 methodName = search.group(2)
-            if "Connection Terminated " in line:
+                continue
+            if "Connection Terminated" in line:
                 connectionTerminated = 1
+                continue
             if "Connection Invalidated" in line:
                 connectionInvalidated = 1
+                continue
             if "Invocation has a completion handler" in line:
                 hasCompletion = 1
-
-       # insert_log(m_id, methodName, machPort, hasCompletion, connectionInvalidated. connectionTerminated)
-
+                continue
+        insert_log(m_id, methodName, machPort, hasCompletion, connectionInvalidated, connectionTerminated)
 
 init()
 add_log("results/filemon/run.out")
