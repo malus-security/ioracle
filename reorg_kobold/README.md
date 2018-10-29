@@ -18,7 +18,7 @@ Unfortunately our SandScout automation scripts make a lot of assumptions about d
 For Example:
 
 ```
-gitHome=\`git rev-parse --show-toplevel\`
+gitHome=`git rev-parse --show-toplevel`
 cd $gitHome/sandscout
 myiOSData=$gitHome/reorg_kobold/data_from_iextractor/iPhone_4.0_64bit_11.1.2_15B202
 ./processAllProfiles.sh $myiOSData/reversed_profiles $myiOSData/individual_profiles_prolog $myiOSData/consolidated_sb_facts.pl

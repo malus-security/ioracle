@@ -28,7 +28,8 @@ def parseMessyTypes(messyType,alreadyDeclaredTypeList, prot_types, inter_types):
         #parsedTypes[spaceSlice] = "interface"
         #cleanTypes.append(spaceSlice)
   else:
-    if messyType[0].isupper():
+    #TODO maybe this is why some types aren't getting initialized, they start with underscores instead of capital letters.
+    if messyType[0].isupper() or messyType[0] == '_':
       inter_types.append(messyType)
       #parsedTypes[messyType] = "interface"
       #cleanTypes.append(messyType)
@@ -108,6 +109,7 @@ for id in invocationDictionary:
   prot_types = []
   inter_types = []
   for messyType in parameterTypes:
+    #print messyType
     parseMessyTypes(messyType, alreadyDeclaredTypeList, prot_types, inter_types)
   #TODO fix this to consider prototype vs interface
   for type in prot_types:

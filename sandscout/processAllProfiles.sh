@@ -26,4 +26,4 @@ do
 done
 
 #consolidate all output files into one convenient file for integrating into iOracle fact collection
-cat $outputDir/* > $consolidatedFacts
+cat $outputDir/* | sort | uniq > $consolidatedFacts

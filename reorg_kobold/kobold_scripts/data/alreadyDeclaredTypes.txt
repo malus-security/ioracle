@@ -28,3 +28,17 @@ NSURLCredential
 NSInvocation
 NSFileHandle
 NSFileProviderDomain
+CGPoint
+NSCoder
+UIWindow
+NSIndexSet
+UIApplication
+NSUserActivity
+UILocalNotification
+CGRect
+UIViewController
+UIUserNotificationSettings
+UIApplicationShortcutItem
+NSPredicate
+_Bool
+
