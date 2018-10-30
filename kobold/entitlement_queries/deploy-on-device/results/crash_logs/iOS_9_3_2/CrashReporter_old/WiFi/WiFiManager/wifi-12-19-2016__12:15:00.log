@@ -1,0 +1,9 @@
+12/19/2016 12:10:59.667 WiFiLocaleManagerCheckLocale: location service or wifi is off, set locale to default
+12/19/2016 12:10:59.667 new locale:  , locale: 
+12/19/2016 12:12:38.906 __WiFiManagerCellularTransmitCallback_block_invoke: Cellular Transmit Started = FALSE
+12/19/2016 12:12:40.323 __WiFiManagerCellularTransmitCallback_block_invoke: Cellular Transmit Started = TRUE
+12/19/2016 12:12:59.667 WiFiLocaleManagerCheckLocale: location service or wifi is off, set locale to default
+12/19/2016 12:12:59.667 new locale:  , locale: 
+12/19/2016 12:14:59.667 WiFiLocaleManagerCheckLocale: location service or wifi is off, set locale to default
+12/19/2016 12:14:59.667 new locale:  , locale: 
+12/19/2016 12:15:00.542 __WiFiDeviceProcessDumpLogsEvent: Dump logs event received, dumped wifid log buffer to file

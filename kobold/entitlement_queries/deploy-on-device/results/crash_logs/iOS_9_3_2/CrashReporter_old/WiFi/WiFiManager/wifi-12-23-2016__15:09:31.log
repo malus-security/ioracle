@@ -1,0 +1,315 @@
+12/23/2016 15:04:42.692 __WiFiManagerCellularTransmitCallback_block_invoke: Cellular Transmit Started = FALSE
+12/23/2016 15:04:44.668 WiFiLocaleManagerCheckLocale: trying to determine locale...
+12/23/2016 15:04:44.668 WiFiManagerCoreLocationGetCachedLocation: getting cached location...
+12/23/2016 15:04:44.681 __WiFiLocaleManagerGetLocaleFromMcc: finding iso country code for mcc 232 ....
+12/23/2016 15:04:44.681 WiFiLocationServiceManagerIsLocationValid: cachedLocationTimeout 120.000000 location age 186.893272secs, lifeSpan -1.000000 accuracy 65.000000(highAccReq 0), isValid 1
+12/23/2016 15:04:44.681 WiFiLocationServiceManagerStartLowAccuracyMonitoring: Cached low accuracy location is valid
+12/23/2016 15:04:44.681 WiFiLocationServiceManagerIsLocationValid: cachedLocationTimeout 120.000000 location age 186.893410secs, lifeSpan -1.000000 accuracy 65.000000(highAccReq 1), isValid 1
+12/23/2016 15:04:44.681 WiFiLocationServiceManagerIsLocationValid: cachedLocationTimeout 120.000000 location age 186.893463secs, lifeSpan -1.000000 accuracy 65.000000(highAccReq 0), isValid 1
+12/23/2016 15:04:44.681 __WiFiLocationServiceManagerProcessLocationAvailableEvent: isValidHighAccuracyLocation 1,  isValidLowAccuracyLocation 1
+12/23/2016 15:04:44.681 __WiFiLocationServiceManagerProcessLocationAvailableEvent: give low accuracy callback
+12/23/2016 15:04:44.682 __WiFiLocaleManagerGetLocaleFromLocation: <+47.97553510,+16.85185676> +/- 65.00m (speed -1.00 mps / course -1.00) @ 12/23/16, 3:01:37 PM Central European Standard Time
+12/23/2016 15:04:44.682 locale from bounding box 
+12/23/2016 15:04:44.682 new locale:  , locale: 
+12/23/2016 15:04:44.682 Stopping Low Accuracy Location Monitoring
+12/23/2016 15:04:44.682 CLMonitoring is already stopped
+12/23/2016 15:04:44.683 Stopping Low Accuracy Location Monitoring
+12/23/2016 15:04:44.683 CLMonitoring is already stopped
+12/23/2016 15:04:44.683 __WiFiLocationServiceManagerEventCallback, got cb dict {
+    eventType = 0;
+    location = "<+47.97553510,+16.85185676> +/- 65.00m (speed -1.00 mps / course -1.00) @ 12/23/16, 3:01:37 PM Central European Standard Time";
+}
+12/23/2016 15:04:44.683 WiFiLocationServiceManagerIsLocationValid: cachedLocationTimeout 120.000000 location age 186.895456secs, lifeSpan -1.000000 accuracy 65.000000(highAccReq 1), isValid 1
+12/23/2016 15:04:44.683 WiFiLocationServiceManagerIsLocationValid: cachedLocationTimeout 120.000000 location age 186.895509secs, lifeSpan -1.000000 accuracy 65.000000(highAccReq 0), isValid 1
+12/23/2016 15:04:44.683 __WiFiLocationServiceManagerProcessLocationAvailableEvent: isValidHighAccuracyLocation 1,  isValidLowAccuracyLocation 1
+12/23/2016 15:04:52.602 __WiFiManagerCellularTransmitCallback_block_invoke: Cellular Transmit Started = TRUE
+12/23/2016 15:05:10.852 __WiFiManagerCellularTransmitCallback_block_invoke: Cellular Transmit Started = FALSE
+12/23/2016 15:05:44.322 __WiFiManagerCellularTransmitCallback_block_invoke: Cellular Transmit Started = TRUE
+12/23/2016 15:06:11.655 __WiFiManagerCellularTransmitCallback_block_invoke: Cellular Transmit Started = FALSE
+12/23/2016 15:06:14.726 __WiFiManagerCellularTransmitCallback_block_invoke: Cellular Transmit Started = TRUE
+12/23/2016 15:06:41.813 __WiFiManagerCellularTransmitCallback_block_invoke: Cellular Transmit Started = FALSE
+12/23/2016 15:06:44.666 WiFiLocaleManagerCheckLocale: trying to determine locale...
+12/23/2016 15:06:44.666 WiFiManagerCoreLocationGetCachedLocation: getting cached location...
+12/23/2016 15:06:44.682 __WiFiLocaleManagerGetLocaleFromMcc: finding iso country code for mcc 232 ....
+12/23/2016 15:06:44.682 WiFiLocationServiceManagerIsLocationValid: cachedLocationTimeout 120.000000 location age 306.894054secs, lifeSpan -1.000000 accuracy 65.000000(highAccReq 0), isValid 1
+12/23/2016 15:06:44.682 WiFiLocationServiceManagerStartLowAccuracyMonitoring: Cached low accuracy location is valid
+12/23/2016 15:06:44.682 WiFiLocationServiceManagerIsLocationValid: cachedLocationTimeout 120.000000 location age 306.894193secs, lifeSpan -1.000000 accuracy 65.000000(highAccReq 1), isValid 1
+12/23/2016 15:06:44.682 WiFiLocationServiceManagerIsLocationValid: cachedLocationTimeout 120.000000 location age 306.894246secs, lifeSpan -1.000000 accuracy 65.000000(highAccReq 0), isValid 1
+12/23/2016 15:06:44.682 __WiFiLocationServiceManagerProcessLocationAvailableEvent: isValidHighAccuracyLocation 1,  isValidLowAccuracyLocation 1
+12/23/2016 15:06:44.682 __WiFiLocationServiceManagerProcessLocationAvailableEvent: give low accuracy callback
+12/23/2016 15:06:44.683 __WiFiLocaleManagerGetLocaleFromLocation: <+47.97553510,+16.85185676> +/- 65.00m (speed -1.00 mps / course -1.00) @ 12/23/16, 3:01:37 PM Central European Standard Time
+12/23/2016 15:06:44.683 locale from bounding box 
+12/23/2016 15:06:44.683 new locale:  , locale: 
+12/23/2016 15:06:44.683 Stopping Low Accuracy Location Monitoring
+12/23/2016 15:06:44.683 CLMonitoring is already stopped
+12/23/2016 15:06:44.683 Stopping Low Accuracy Location Monitoring
+12/23/2016 15:06:44.683 CLMonitoring is already stopped
+12/23/2016 15:06:44.683 __WiFiLocationServiceManagerEventCallback, got cb dict {
+    eventType = 0;
+    location = "<+47.97553510,+16.85185676> +/- 65.00m (speed -1.00 mps / course -1.00) @ 12/23/16, 3:01:37 PM Central European Standard Time";
+}
+12/23/2016 15:06:44.684 WiFiLocationServiceManagerIsLocationValid: cachedLocationTimeout 120.000000 location age 306.896570secs, lifeSpan -1.000000 accuracy 65.000000(highAccReq 1), isValid 1
+12/23/2016 15:06:44.684 WiFiLocationServiceManagerIsLocationValid: cachedLocationTimeout 120.000000 location age 306.896625secs, lifeSpan -1.000000 accuracy 65.000000(highAccReq 0), isValid 1
+12/23/2016 15:06:44.684 __WiFiLocationServiceManagerProcessLocationAvailableEvent: isValidHighAccuracyLocation 1,  isValidLowAccuracyLocation 1
+12/23/2016 15:06:50.471 Async scan requested by "locationd" for 1 iterations with maxage=0 priority normal on en0
+12/23/2016 15:06:50.471 Enqueuing command type: "Scan" pending commands: 0
+12/23/2016 15:06:50.471 Dequeuing command type: "Scan" pending commands: 0
+12/23/2016 15:06:50.471 Attempting Apple80211ScanAsync on en0
+12/23/2016 15:06:50.629 Completed Apple80211ScanAsync on en0 (0x0)
+12/23/2016 15:06:50.630 Async scan request completed for "locationd" (0)
+12/23/2016 15:06:50.630 Async scan requested by "locationd" for 1 iterations with maxage=0 priority normal on en0
+12/23/2016 15:06:50.630 Enqueuing command type: "Scan" pending commands: 0
+12/23/2016 15:06:50.630 Dequeuing command type: "Scan" pending commands: 0
+12/23/2016 15:06:50.630 Attempting Apple80211ScanAsync on en0
+12/23/2016 15:06:51.016 Completed Apple80211ScanAsync on en0 (0x0)
+12/23/2016 15:06:51.017 Async scan request completed for "locationd" (0)
+12/23/2016 15:06:51.022 Async scan requested by "locationd" for 1 iterations with maxage=0 priority low on en0
+12/23/2016 15:06:51.022 Enqueuing command type: "Scan" pending commands: 0
+12/23/2016 15:06:51.022 Dequeuing command type: "Scan" pending commands: 0
+12/23/2016 15:06:51.022 Attempting Apple80211ScanAsync on en0
+12/23/2016 15:06:52.568 Completed Apple80211ScanAsync on en0 (0x0)
+12/23/2016 15:06:52.569 Async scan request completed for "locationd" (0)
+12/23/2016 15:06:54.550 IPv4 Primary interface is pdp_ip0 and IPv6 Primary Interface is (null)
+12/23/2016 15:06:54.646 Client apsd set type to background application
+12/23/2016 15:06:54.646 __WiFiManagerSetEnableState: state TRUE, manager->enable.setting TRUE, manager->unlockedSinceBoot TRUE
+12/23/2016 15:06:54.646 BG Application: Not Present, BG Daemon: Present. Daemons: mediaserverd apsd 
+12/23/2016 15:06:54.646 Auto association attempt canceled because MIS is enabled. MIS client count: wifi=1 bt=0
+12/23/2016 15:06:54.648 Low bw cellular data available, so WiFi would stay connected under low signal quality
+12/23/2016 15:06:54.648 WiFiLQAMgrSetWiFiFallBackPref: LQAManager WiFiFallBackPreference enabled 
+12/23/2016 15:06:54.650 Enable WoW requested by "apsd"
+12/23/2016 15:06:54.651 WoW Capable = YES, Attempting to enable WoW and disable LPAS 
+12/23/2016 15:06:54.651 Setting WoW params to <CFBasicHash 0x14cf26740 [0x1a0950150]>{type = immutable dict, count = 3,
+entries =>
+	0 : <CFString 0x100175960 [0x1a0950150]>{contents = "IO80211InterfaceEnableLowPwrAssocMode"} = <CFBoolean 0x1a09506d8 [0x1a0950150]>{value = false}
+	1 : <CFString 0x100175940 [0x1a0950150]>{contents = "IO80211InterfaceEnableWoW"} = <CFBoolean 0x1a09506c8 [0x1a0950150]>{value = true}
+	2 : <CFString 0x100185ae0 [0x1a0950150]>{contents = "IO80211InterfaceEnableWoWOnCaptive"} = <CFBoolean 0x1a09506d8 [0x1a0950150]>{value = false}
+}
+
+12/23/2016 15:06:54.651 WiFiDeviceRequestAssociatedSleep: ActiveDuringSleepRequested is already removed ((null)).
+12/23/2016 15:06:54.651 WoW Enabled by 1 Clients, lpas is Disabled, WoW Override is Disabled, Captive Disabled
+12/23/2016 15:06:54.651 Unable to dispatch WowStateChanged message to client MobileMail (268435460)
+12/23/2016 15:06:54.651 Unable to dispatch WowStateChanged message to client dataaccessd (268435460)
+12/23/2016 15:06:54.652 Unable to dispatch WowStateChanged message to client itunesstored (268435460)
+12/23/2016 15:06:54.652 Unable to dispatch WowStateChanged message to client mediaserverd (268435460)
+12/23/2016 15:06:54.652 Client MobileMail set type to background application
+12/23/2016 15:06:54.652 __WiFiManagerSetEnableState: state TRUE, manager->enable.setting TRUE, manager->unlockedSinceBoot TRUE
+12/23/2016 15:06:54.652 BG Application: Not Present, BG Daemon: Present. Daemons: MobileMail mediaserverd apsd 
+12/23/2016 15:06:54.652 Auto association attempt canceled because MIS is enabled. MIS client count: wifi=1 bt=0
+12/23/2016 15:06:54.652 apsd[273] is a wow client
+12/23/2016 15:06:54.652 WoW is Enabled, 1 WoW Clients
+12/23/2016 15:06:54.653 apsd[273] is a wow client
+12/23/2016 15:06:54.653 WoW is Enabled, 1 WoW Clients
+12/23/2016 15:06:54.656 apsd[273] is a wow client
+12/23/2016 15:06:54.656 WoW is Enabled, 1 WoW Clients
+12/23/2016 15:07:00.094 __WiFiManagerCellularTransmitCallback_block_invoke: Cellular Transmit Started = TRUE
+12/23/2016 15:07:06.136 __WiFiManagerCellularTransmitCallback_block_invoke: Cellular Transmit Started = FALSE
+12/23/2016 15:07:06.147 __WiFiManagerCellularTransmitCallback_block_invoke: Cellular Transmit Started = FALSE
+12/23/2016 15:07:06.279 IPv4 Primary interface is (null) and IPv6 Primary Interface is (null)
+12/23/2016 15:07:06.294 MIS is already Enabled on ap1
+12/23/2016 15:07:06.295 MIS is already Enabled on ap1
+12/23/2016 15:07:06.295 MIS Discovery is Disabled
+12/23/2016 15:07:06.526 __WiFiManagerCellularTransmitCallback_block_invoke: Cellular Transmit Started = TRUE
+12/23/2016 15:07:06.574 scanCache: Purging scan cache
+12/23/2016 15:07:12.209 apsd[273] is a wow client
+12/23/2016 15:07:12.209 WoW is Enabled, 1 WoW Clients
+12/23/2016 15:07:13.186 High bw cellular data available, so WiFi would disconnect under low signal quality
+12/23/2016 15:07:13.187 WiFiLQAMgrSetWiFiFallBackPref: LQAManager WiFiFallBackPreference disabled 
+12/23/2016 15:07:13.284 IPv4 Primary interface is pdp_ip0 and IPv6 Primary Interface is (null)
+12/23/2016 15:07:13.286 MIS is already Enabled on ap1
+12/23/2016 15:07:13.287 MIS Discovery is Disabled
+12/23/2016 15:07:13.477 Background Network Application entered
+12/23/2016 15:07:13.477 BG Application: Present, BG Daemon: Present. Daemons: MobileMail mediaserverd apsd 
+12/23/2016 15:07:13.495 Background Network Application entered
+12/23/2016 15:07:13.495 BG Application: Not Present, BG Daemon: Present. Daemons: MobileMail mediaserverd apsd 
+12/23/2016 15:07:32.241 DeviceClient["WirelessRadioMan"] setCoexParameters["MWS_Coex_Enabled_Channels"] = <CFArray 0x14cd97250 [0x1a0950150]>{type = mutable-small, count = 1, values = (
+	0 : <CFBasicHash 0x14cf32ff0 [0x1a0950150]>{type = mutable dict, count = 1,
+entries =>
+	2 : <CFString 0x14cf10f60 [0x1a0950150]>{contents = "MWS_Channel_Number"} = <CFNumber 0xb000000000000003 [0x1a0950150]>{value = +0, type = kCFNumberSInt64Type}
+}
+
+)}
+12/23/2016 15:07:32.242 DeviceClient["WirelessRadioMan"] setCoexParameters["MWS_WLAN_RX_PRI_THRESHOLD"] = 0
+12/23/2016 15:08:13.282 Disable WoW requested by "apsd"
+12/23/2016 15:08:13.282 WoW Capable = YES, Attempting to disable WoW and enable LPAS 
+12/23/2016 15:08:13.283 Setting WoW params to <CFBasicHash 0x14cdf7ad0 [0x1a0950150]>{type = immutable dict, count = 3,
+entries =>
+	0 : <CFString 0x100175960 [0x1a0950150]>{contents = "IO80211InterfaceEnableLowPwrAssocMode"} = <CFBoolean 0x1a09506c8 [0x1a0950150]>{value = true}
+	1 : <CFString 0x100175940 [0x1a0950150]>{contents = "IO80211InterfaceEnableWoW"} = <CFBoolean 0x1a09506d8 [0x1a0950150]>{value = false}
+	2 : <CFString 0x100185ae0 [0x1a0950150]>{contents = "IO80211InterfaceEnableWoWOnCaptive"} = <CFBoolean 0x1a09506d8 [0x1a0950150]>{value = false}
+}
+
+12/23/2016 15:08:13.284 WiFiDeviceRequestAssociatedSleep: ActiveDuringSleepRequested is already removed ((null)).
+12/23/2016 15:08:13.284 WoW Disabled, 0 WoW Clients, lpas is Enabled, WoW Override is Disabled, Captive Disabled
+12/23/2016 15:08:13.285 Unable to dispatch WowStateChanged message to client MobileMail (268435460)
+12/23/2016 15:08:13.285 Unable to dispatch WowStateChanged message to client dataaccessd (268435460)
+12/23/2016 15:08:13.285 Unable to dispatch WowStateChanged message to client itunesstored (268435460)
+12/23/2016 15:08:13.286 Unable to dispatch WowStateChanged message to client mediaserverd (268435460)
+12/23/2016 15:08:13.286 WoW is Disabled, 0 WoW Clients
+12/23/2016 15:08:13.287 WoW is Disabled, 0 WoW Clients
+12/23/2016 15:08:13.291 WoW is Disabled, 0 WoW Clients
+12/23/2016 15:08:14.276 Client itunesstored set type to background application
+12/23/2016 15:08:14.276 __WiFiManagerSetEnableState: state TRUE, manager->enable.setting TRUE, manager->unlockedSinceBoot TRUE
+12/23/2016 15:08:14.276 BG Application: Not Present, BG Daemon: Present. Daemons: MobileMail mediaserverd itunesstored apsd 
+12/23/2016 15:08:14.276 Auto association attempt canceled because MIS is enabled. MIS client count: wifi=1 bt=0
+12/23/2016 15:08:14.991 __WiFiManagerCellularTransmitCallback_block_invoke: Cellular Transmit Started = FALSE
+12/23/2016 15:08:18.285 Client apsd set type to normal application
+12/23/2016 15:08:18.285 __WiFiManagerSetEnableState: state TRUE, manager->enable.setting TRUE, manager->unlockedSinceBoot TRUE
+12/23/2016 15:08:18.285 BG Application: Not Present, BG Daemon: Present. Daemons: MobileMail mediaserverd itunesstored 
+12/23/2016 15:08:18.293 Client MobileMail set type to normal application
+12/23/2016 15:08:18.293 __WiFiManagerSetEnableState: state TRUE, manager->enable.setting TRUE, manager->unlockedSinceBoot TRUE
+12/23/2016 15:08:18.293 BG Application: Not Present, BG Daemon: Present. Daemons: mediaserverd itunesstored 
+12/23/2016 15:08:19.085 Low bw cellular data available, so WiFi would stay connected under low signal quality
+12/23/2016 15:08:19.087 WiFiLQAMgrSetWiFiFallBackPref: LQAManager WiFiFallBackPreference enabled 
+12/23/2016 15:08:19.099 Client apsd set type to background application
+12/23/2016 15:08:19.099 __WiFiManagerSetEnableState: state TRUE, manager->enable.setting TRUE, manager->unlockedSinceBoot TRUE
+12/23/2016 15:08:19.101 BG Application: Not Present, BG Daemon: Present. Daemons: mediaserverd itunesstored apsd 
+12/23/2016 15:08:19.101 Auto association attempt canceled because MIS is enabled. MIS client count: wifi=1 bt=0
+12/23/2016 15:08:19.101 Enable WoW requested by "apsd"
+12/23/2016 15:08:19.102 WoW Capable = YES, Attempting to enable WoW and disable LPAS 
+12/23/2016 15:08:19.102 Setting WoW params to <CFBasicHash 0x14cf10e20 [0x1a0950150]>{type = immutable dict, count = 3,
+entries =>
+	0 : <CFString 0x100175960 [0x1a0950150]>{contents = "IO80211InterfaceEnableLowPwrAssocMode"} = <CFBoolean 0x1a09506d8 [0x1a0950150]>{value = false}
+	1 : <CFString 0x100175940 [0x1a0950150]>{contents = "IO80211InterfaceEnableWoW"} = <CFBoolean 0x1a09506c8 [0x1a0950150]>{value = true}
+	2 : <CFString 0x100185ae0 [0x1a0950150]>{contents = "IO80211InterfaceEnableWoWOnCaptive"} = <CFBoolean 0x1a09506d8 [0x1a0950150]>{value = false}
+}
+
+12/23/2016 15:08:19.105 WiFiDeviceRequestAssociatedSleep: ActiveDuringSleepRequested is already removed ((null)).
+12/23/2016 15:08:19.105 WoW Enabled by 1 Clients, lpas is Disabled, WoW Override is Disabled, Captive Disabled
+12/23/2016 15:08:19.105 Unable to dispatch WowStateChanged message to client MobileMail (268435460)
+12/23/2016 15:08:19.105 Unable to dispatch WowStateChanged message to client dataaccessd (268435460)
+12/23/2016 15:08:19.106 Unable to dispatch WowStateChanged message to client itunesstored (268435460)
+12/23/2016 15:08:19.106 Unable to dispatch WowStateChanged message to client mediaserverd (268435460)
+12/23/2016 15:08:19.106 Client MobileMail set type to background application
+12/23/2016 15:08:19.106 __WiFiManagerSetEnableState: state TRUE, manager->enable.setting TRUE, manager->unlockedSinceBoot TRUE
+12/23/2016 15:08:19.111 BG Application: Not Present, BG Daemon: Present. Daemons: MobileMail mediaserverd itunesstored apsd 
+12/23/2016 15:08:19.111 Auto association attempt canceled because MIS is enabled. MIS client count: wifi=1 bt=0
+12/23/2016 15:08:19.112 apsd[273] is a wow client
+12/23/2016 15:08:19.112 WoW is Enabled, 1 WoW Clients
+12/23/2016 15:08:19.112 apsd[273] is a wow client
+12/23/2016 15:08:19.113 WoW is Enabled, 1 WoW Clients
+12/23/2016 15:08:19.116 apsd[273] is a wow client
+12/23/2016 15:08:19.116 WoW is Enabled, 1 WoW Clients
+12/23/2016 15:08:19.154 IPv4 Primary interface is pdp_ip0 and IPv6 Primary Interface is (null)
+12/23/2016 15:08:19.162 IPv4 Primary interface is pdp_ip0 and IPv6 Primary Interface is (null)
+12/23/2016 15:08:19.590 __WiFiManagerCellularTransmitCallback_block_invoke: Cellular Transmit Started = TRUE
+12/23/2016 15:08:22.462 __WiFiManagerCellularTransmitCallback_block_invoke: Cellular Transmit Started = FALSE
+12/23/2016 15:08:37.540 __WiFiManagerCellularTransmitCallback_block_invoke: Cellular Transmit Started = TRUE
+12/23/2016 15:08:39.759 IPv4 Primary interface is (null) and IPv6 Primary Interface is (null)
+12/23/2016 15:08:39.767 MIS is already Enabled on ap1
+12/23/2016 15:08:39.770 MIS is already Enabled on ap1
+12/23/2016 15:08:39.771 MIS Discovery is Disabled
+12/23/2016 15:08:40.341 __WiFiManagerCellularTransmitCallback_block_invoke: Cellular Transmit Started = FALSE
+12/23/2016 15:08:44.661 WiFiLocaleManagerCheckLocale: trying to determine locale...
+12/23/2016 15:08:44.661 WiFiManagerCoreLocationGetCachedLocation: getting cached location...
+12/23/2016 15:08:44.664 __WiFiLocaleManagerGetLocaleFromMcc: finding iso country code for mcc 232 ....
+12/23/2016 15:08:44.676 WiFiLocationServiceManagerIsLocationValid: cachedLocationTimeout 120.000000 location age 426.887804secs, lifeSpan -1.000000 accuracy 65.000000(highAccReq 0), isValid 1
+12/23/2016 15:08:44.676 WiFiLocationServiceManagerStartLowAccuracyMonitoring: Cached low accuracy location is valid
+12/23/2016 15:08:44.676 WiFiLocationServiceManagerIsLocationValid: cachedLocationTimeout 120.000000 location age 426.887959secs, lifeSpan -1.000000 accuracy 65.000000(highAccReq 1), isValid 1
+12/23/2016 15:08:44.676 WiFiLocationServiceManagerIsLocationValid: cachedLocationTimeout 120.000000 location age 426.888015secs, lifeSpan -1.000000 accuracy 65.000000(highAccReq 0), isValid 1
+12/23/2016 15:08:44.676 __WiFiLocationServiceManagerProcessLocationAvailableEvent: isValidHighAccuracyLocation 1,  isValidLowAccuracyLocation 1
+12/23/2016 15:08:44.676 __WiFiLocationServiceManagerProcessLocationAvailableEvent: give low accuracy callback
+12/23/2016 15:08:44.677 __WiFiLocaleManagerGetLocaleFromLocation: <+47.97553510,+16.85185676> +/- 65.00m (speed -1.00 mps / course -1.00) @ 12/23/16, 3:01:37 PM Central European Standard Time
+12/23/2016 15:08:44.677 locale from bounding box 
+12/23/2016 15:08:44.677 new locale:  , locale: 
+12/23/2016 15:08:44.677 Stopping Low Accuracy Location Monitoring
+12/23/2016 15:08:44.677 CLMonitoring is already stopped
+12/23/2016 15:08:44.677 Stopping Low Accuracy Location Monitoring
+12/23/2016 15:08:44.677 CLMonitoring is already stopped
+12/23/2016 15:08:44.689 __WiFiLocationServiceManagerEventCallback, got cb dict {
+    eventType = 0;
+    location = "<+47.97504972,+16.85150023> +/- 1884.27m (speed -1.00 mps / course -1.00) @ 12/23/16, 3:08:44 PM Central European Standard Time";
+}
+12/23/2016 15:08:44.690 WiFiLocationServiceManagerIsLocationValid: cachedLocationTimeout 120.000000 location age 0.022954secs, lifeSpan -1.000000 accuracy 1884.274936(highAccReq 1), isValid 0
+12/23/2016 15:08:44.690 WiFiLocationServiceManagerIsLocationValid: cachedLocationTimeout 120.000000 location age 0.022994secs, lifeSpan -1.000000 accuracy 1884.274936(highAccReq 0), isValid 1
+12/23/2016 15:08:44.690 __WiFiLocationServiceManagerProcessLocationAvailableEvent: isValidHighAccuracyLocation 0,  isValidLowAccuracyLocation 1
+12/23/2016 15:08:45.519 Client itunesstored set type to normal application
+12/23/2016 15:08:45.519 __WiFiManagerSetEnableState: state TRUE, manager->enable.setting TRUE, manager->unlockedSinceBoot TRUE
+12/23/2016 15:08:45.519 BG Application: Not Present, BG Daemon: Present. Daemons: MobileMail mediaserverd apsd 
+12/23/2016 15:08:53.777 __WiFiManagerCellularTransmitCallback_block_invoke: Cellular Transmit Started = TRUE
+12/23/2016 15:08:56.367 __WiFiManagerCellularTransmitCallback_block_invoke: Cellular Transmit Started = FALSE
+12/23/2016 15:08:57.189 DeviceClient["WirelessRadioMan"] setCoexParameters["MWS_Blacklisted_Channels"] = <CFArray 0x14ce27210 [0x1a0950150]>{type = mutable-small, count = 3, values = (
+	0 : <CFBasicHash 0x14ce44e00 [0x1a0950150]>{type = mutable dict, count = 1,
+entries =>
+	2 : <CFString 0x14cee5c00 [0x1a0950150]>{contents = "MWS_Channel_Number"} = <CFNumber 0xb0000000000000b3 [0x1a0950150]>{value = +11, type = kCFNumberSInt64Type}
+}
+
+	1 : <CFBasicHash 0x14ce7ee50 [0x1a0950150]>{type = mutable dict, count = 1,
+entries =>
+	2 : <CFString 0x14cee5c00 [0x1a0950150]>{contents = "MWS_Channel_Number"} = <CFNumber 0xb0000000000000c3 [0x1a0950150]>{value = +12, type = kCFNumberSInt64Type}
+}
+
+	2 : <CFBasicHash 0x14ce39cc0 [0x1a0950150]>{type = mutable dict, count = 1,
+entries =>
+	2 : <CFString 0x14cee5c00 [0x1a0950150]>{contents = "MWS_Channel_Number"} = <CFNumber 0xb0000000000000d3 [0x1a0950150]>{value = +13, type = kCFNumberSInt64Type}
+}
+
+)}
+12/23/2016 15:08:57.419 __WiFiManagerCellularTransmitCallback_block_invoke: Cellular Transmit Started = TRUE
+12/23/2016 15:08:58.765 __WiFiManagerCellularTransmitCallback_block_invoke: Cellular Transmit Started = FALSE
+12/23/2016 15:09:12.100 DeviceClient["WirelessRadioMan"] setCoexParameters["MWS_Blacklisted_Channels"] = <CFArray 0x14cfc8d70 [0x1a0950150]>{type = mutable-small, count = 4, values = (
+	0 : <CFBasicHash 0x14cf50df0 [0x1a0950150]>{type = mutable dict, count = 1,
+entries =>
+	2 : <CFString 0x14cd7f260 [0x1a0950150]>{contents = "MWS_Channel_Number"} = <CFNumber 0xb0000000000000a3 [0x1a0950150]>{value = +10, type = kCFNumberSInt64Type}
+}
+
+	1 : <CFBasicHash 0x14cf33520 [0x1a0950150]>{type = mutable dict, count = 1,
+entries =>
+	2 : <CFString 0x14cd7f260 [0x1a0950150]>{contents = "MWS_Channel_Number"} = <CFNumber 0xb0000000000000b3 [0x1a0950150]>{value = +11, type = kCFNumberSInt64Type}
+}
+
+	2 : <CFBasicHash 0x14cd870b0 [0x1a0950150]>{type = mutable dict, count = 1,
+entries =>
+	2 : <CFString 0x14cd7f260 [0x1a0950150]>{contents = "MWS_Channel_Number"} = <CFNumber 0xb0000000000000c3 [0x1a0950150]>{value = +12, type = kCFNumberSInt64Type}
+}
+
+	3 : <CFBasicHash 0x14cdf7ad0 [0x1a0950150]>{type = mutable dict, count = 1,
+entries =>
+	2 : <CFString 0x14cd7f260 [0x1a0950150]>{contents = "MWS_Channel_Number"} = <CFNumber 0xb0000000000000d3 [0x1a0950150]>{value = +13, type = kCFNumberSInt64Type}
+}
+
+)}
+12/23/2016 15:09:12.535 __WiFiManagerCellularTransmitCallback_block_invoke: Cellular Transmit Started = TRUE
+12/23/2016 15:09:15.124 __WiFiManagerCellularTransmitCallback_block_invoke: Cellular Transmit Started = FALSE
+12/23/2016 15:09:15.501 DeviceClient["WirelessRadioMan"] setCoexParameters["MWS_Blacklisted_Channels"] = <CFArray 0x14cd97250 [0x1a0950150]>{type = mutable-small, count = 3, values = (
+	0 : <CFBasicHash 0x14cd8e0c0 [0x1a0950150]>{type = mutable dict, count = 1,
+entries =>
+	2 : <CFString 0x14cfa8270 [0x1a0950150]>{contents = "MWS_Channel_Number"} = <CFNumber 0xb0000000000000b3 [0x1a0950150]>{value = +11, type = kCFNumberSInt64Type}
+}
+
+	1 : <CFBasicHash 0x14cd82dc0 [0x1a0950150]>{type = mutable dict, count = 1,
+entries =>
+	2 : <CFString 0x14cfa8270 [0x1a0950150]>{contents = "MWS_Channel_Number"} = <CFNumber 0xb0000000000000c3 [0x1a0950150]>{value = +12, type = kCFNumberSInt64Type}
+}
+
+	2 : <CFBasicHash 0x14cdba640 [0x1a0950150]>{type = mutable dict, count = 1,
+entries =>
+	2 : <CFString 0x14cfa8270 [0x1a0950150]>{contents = "MWS_Channel_Number"} = <CFNumber 0xb0000000000000d3 [0x1a0950150]>{value = +13, type = kCFNumberSInt64Type}
+}
+
+)}
+12/23/2016 15:09:16.239 __WiFiManagerCellularTransmitCallback_block_invoke: Cellular Transmit Started = TRUE
+12/23/2016 15:09:19.244 __WiFiManagerCellularTransmitCallback_block_invoke: Cellular Transmit Started = FALSE
+12/23/2016 15:09:30.380 DeviceClient["WirelessRadioMan"] setCoexParameters["MWS_Blacklisted_Channels"] = <CFArray 0x14cd7f260 [0x1a0950150]>{type = mutable-small, count = 4, values = (
+	0 : <CFBasicHash 0x14cf32ff0 [0x1a0950150]>{type = mutable dict, count = 1,
+entries =>
+	2 : <CFString 0x14cfc8d70 [0x1a0950150]>{contents = "MWS_Channel_Number"} = <CFNumber 0xb0000000000000a3 [0x1a0950150]>{value = +10, type = kCFNumberSInt64Type}
+}
+
+	1 : <CFBasicHash 0x14cd870b0 [0x1a0950150]>{type = mutable dict, count = 1,
+entries =>
+	2 : <CFString 0x14cfc8d70 [0x1a0950150]>{contents = "MWS_Channel_Number"} = <CFNumber 0xb0000000000000b3 [0x1a0950150]>{value = +11, type = kCFNumberSInt64Type}
+}
+
+	2 : <CFBasicHash 0x14cf3fef0 [0x1a0950150]>{type = mutable dict, count = 1,
+entries =>
+	2 : <CFString 0x14cfc8d70 [0x1a0950150]>{contents = "MWS_Channel_Number"} = <CFNumber 0xb0000000000000c3 [0x1a0950150]>{value = +12, type = kCFNumberSInt64Type}
+}
+
+	3 : <CFBasicHash 0x14cdf7ad0 [0x1a0950150]>{type = mutable dict, count = 1,
+entries =>
+	2 : <CFString 0x14cfc8d70 [0x1a0950150]>{contents = "MWS_Channel_Number"} = <CFNumber 0xb0000000000000d3 [0x1a0950150]>{value = +13, type = kCFNumberSInt64Type}
+}
+
+)}
+12/23/2016 15:09:30.912 __WiFiManagerCellularTransmitCallback_block_invoke: Cellular Transmit Started = TRUE
+12/23/2016 15:09:31.608 __WiFiDeviceProcessDumpLogsEvent: Dump logs event received, dumped wifid log buffer to file

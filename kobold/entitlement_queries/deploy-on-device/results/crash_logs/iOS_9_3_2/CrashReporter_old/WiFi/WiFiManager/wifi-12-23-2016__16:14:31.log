@@ -1,0 +1,764 @@
+12/23/2016 16:09:41.300 DeviceClient["WirelessRadioMan"] setCoexParameters["MWS_Blacklisted_Channels"] = <CFArray 0x14cd6aba0 [0x1a0950150]>{type = mutable-small, count = 5, values = (
+	0 : <CFBasicHash 0x14cf07c20 [0x1a0950150]>{type = mutable dict, count = 1,
+entries =>
+	2 : <CFString 0x14cd94630 [0x1a0950150]>{contents = "MWS_Channel_Number"} = <CFNumber 0xb000000000000093 [0x1a0950150]>{value = +9, type = kCFNumberSInt64Type}
+}
+
+	1 : <CFBasicHash 0x14cd8aca0 [0x1a0950150]>{type = mutable dict, count = 1,
+entries =>
+	2 : <CFString 0x14cd94630 [0x1a0950150]>{contents = "MWS_Channel_Number"} = <CFNumber 0xb0000000000000a3 [0x1a0950150]>{value = +10, type = kCFNumberSInt64Type}
+}
+
+	2 : <CFBasicHash 0x14cf26740 [0x1a0950150]>{type = mutable dict, count = 1,
+entries =>
+	2 : <CFString 0x14cd94630 [0x1a0950150]>{contents = "MWS_Channel_Number"} = <CFNumber 0xb0000000000000b3 [0x1a0950150]>{value = +11, type = kCFNumberSInt64Type}
+}
+
+	3 : <CFBasicHash 0x14cd77410 [0x1a0950150]>{type = mutable dict, count = 1,
+entries =>
+	2 : <CFString 0x14cd94630 [0x1a0950150]>{contents = "MWS_Channel_Number"} = <CFNumber 0xb0000000000000c3 [0x1a0950150]>{value = +12, type = kCFNumberSInt64Type}
+}
+
+	4 : <CFBasicHash 0x14cfd72f0 [0x1a0950150]>{type = mutable dict, count = 1,
+entries =>
+	2 : <CFString 0x14cd94630 [0x1a0950150]>{contents = "MWS_Channel_Number"} = <CFNumber 0xb0000000000000d3 [0x1a0950150]>{value = +13, type = kCFNumberSInt64Type}
+}
+
+)}
+12/23/2016 16:09:51.629 __WiFiManagerCellularTransmitCallback_block_invoke: Cellular Transmit Started = TRUE
+12/23/2016 16:09:55.274 Low bw cellular data available, so WiFi would stay connected under low signal quality
+12/23/2016 16:09:55.274 WiFiLQAMgrSetWiFiFallBackPref: LQAManager WiFiFallBackPreference enabled 
+12/23/2016 16:09:58.654 __WiFiManagerCellularTransmitCallback_block_invoke: Cellular Transmit Started = FALSE
+12/23/2016 16:10:00.833 DeviceClient["WirelessRadioMan"] setCoexParameters["MWS_Blacklisted_Channels"] = <CFArray 0x14cdce830 [0x1a0950150]>{type = mutable-small, count = 6, values = (
+	0 : <CFBasicHash 0x14cd6edc0 [0x1a0950150]>{type = mutable dict, count = 1,
+entries =>
+	2 : <CFString 0x14cf07930 [0x1a0950150]>{contents = "MWS_Channel_Number"} = <CFNumber 0xb000000000000083 [0x1a0950150]>{value = +8, type = kCFNumberSInt64Type}
+}
+
+	1 : <CFBasicHash 0x14cf63c10 [0x1a0950150]>{type = mutable dict, count = 1,
+entries =>
+	2 : <CFString 0x14cf07930 [0x1a0950150]>{contents = "MWS_Channel_Number"} = <CFNumber 0xb000000000000093 [0x1a0950150]>{value = +9, type = kCFNumberSInt64Type}
+}
+
+	2 : <CFBasicHash 0x14cfa8530 [0x1a0950150]>{type = mutable dict, count = 1,
+entries =>
+	2 : <CFString 0x14cf07930 [0x1a0950150]>{contents = "MWS_Channel_Number"} = <CFNumber 0xb0000000000000a3 [0x1a0950150]>{value = +10, type = kCFNumberSInt64Type}
+}
+
+	3 : <CFBasicHash 0x14cf063a0 [0x1a0950150]>{type = mutable dict, count = 1,
+entries =>
+	2 : <CFString 0x14cf07930 [0x1a0950150]>{contents = "MWS_Channel_Number"} = <CFNumber 0xb0000000000000b3 [0x1a0950150]>{value = +11, type = kCFNumberSInt64Type}
+}
+
+	4 : <CFBasicHash 0x14cf63a80 [0x1a0950150]>{type = mutable dict, count = 1,
+entries =>
+	2 : <CFString 0x14cf07930 [0x1a0950150]>{contents = "MWS_Channel_Number"} = <CFNumber 0xb0000000000000c3 [0x1a0950150]>{value = +12, type = kCFNumberSInt64Type}
+}
+
+	5 : <CFBasicHash 0x14cdd3cd0 [0x1a0950150]>{type = mutable dict, count = 1,
+entries =>
+	2 : <CFString 0x14cf07930 [0x1a0950150]>{contents = "MWS_Channel_Number"} = <CFNumber 0xb0000000000000d3 [0x1a0950150]>{value = +13, type = kCFNumberSInt64Type}
+}
+
+)}
+12/23/2016 16:10:00.858 DeviceClient["WirelessRadioMan"] setCoexParameters["MWS_Blacklisted_Channels"] = <CFArray 0x14cd6aba0 [0x1a0950150]>{type = mutable-small, count = 5, values = (
+	0 : <CFBasicHash 0x14cf07c20 [0x1a0950150]>{type = mutable dict, count = 1,
+entries =>
+	2 : <CFString 0x14cd94630 [0x1a0950150]>{contents = "MWS_Channel_Number"} = <CFNumber 0xb000000000000093 [0x1a0950150]>{value = +9, type = kCFNumberSInt64Type}
+}
+
+	1 : <CFBasicHash 0x14cd77410 [0x1a0950150]>{type = mutable dict, count = 1,
+entries =>
+	2 : <CFString 0x14cd94630 [0x1a0950150]>{contents = "MWS_Channel_Number"} = <CFNumber 0xb0000000000000a3 [0x1a0950150]>{value = +10, type = kCFNumberSInt64Type}
+}
+
+	2 : <CFBasicHash 0x14cf26740 [0x1a0950150]>{type = mutable dict, count = 1,
+entries =>
+	2 : <CFString 0x14cd94630 [0x1a0950150]>{contents = "MWS_Channel_Number"} = <CFNumber 0xb0000000000000b3 [0x1a0950150]>{value = +11, type = kCFNumberSInt64Type}
+}
+
+	3 : <CFBasicHash 0x14cd8aca0 [0x1a0950150]>{type = mutable dict, count = 1,
+entries =>
+	2 : <CFString 0x14cd94630 [0x1a0950150]>{contents = "MWS_Channel_Number"} = <CFNumber 0xb0000000000000c3 [0x1a0950150]>{value = +12, type = kCFNumberSInt64Type}
+}
+
+	4 : <CFBasicHash 0x14cf916e0 [0x1a0950150]>{type = mutable dict, count = 1,
+entries =>
+	2 : <CFString 0x14cd94630 [0x1a0950150]>{contents = "MWS_Channel_Number"} = <CFNumber 0xb0000000000000d3 [0x1a0950150]>{value = +13, type = kCFNumberSInt64Type}
+}
+
+)}
+12/23/2016 16:10:00.868 __WiFiManagerCellularTransmitCallback_block_invoke: Cellular Transmit Started = TRUE
+12/23/2016 16:10:01.016 DeviceClient["WirelessRadioMan"] setCoexParameters["MWS_Blacklisted_Channels"] = <CFArray 0x14cdf4c60 [0x1a0950150]>{type = mutable-small, count = 6, values = (
+	0 : <CFBasicHash 0x14cdd3cd0 [0x1a0950150]>{type = mutable dict, count = 1,
+entries =>
+	2 : <CFString 0x14cdce830 [0x1a0950150]>{contents = "MWS_Channel_Number"} = <CFNumber 0xb000000000000083 [0x1a0950150]>{value = +8, type = kCFNumberSInt64Type}
+}
+
+	1 : <CFBasicHash 0x14cf63c10 [0x1a0950150]>{type = mutable dict, count = 1,
+entries =>
+	2 : <CFString 0x14cdce830 [0x1a0950150]>{contents = "MWS_Channel_Number"} = <CFNumber 0xb000000000000093 [0x1a0950150]>{value = +9, type = kCFNumberSInt64Type}
+}
+
+	2 : <CFBasicHash 0x14cf063a0 [0x1a0950150]>{type = mutable dict, count = 1,
+entries =>
+	2 : <CFString 0x14cdce830 [0x1a0950150]>{contents = "MWS_Channel_Number"} = <CFNumber 0xb0000000000000a3 [0x1a0950150]>{value = +10, type = kCFNumberSInt64Type}
+}
+
+	3 : <CFBasicHash 0x14cf63a80 [0x1a0950150]>{type = mutable dict, count = 1,
+entries =>
+	2 : <CFString 0x14cdce830 [0x1a0950150]>{contents = "MWS_Channel_Number"} = <CFNumber 0xb0000000000000b3 [0x1a0950150]>{value = +11, type = kCFNumberSInt64Type}
+}
+
+	4 : <CFBasicHash 0x14cd6edc0 [0x1a0950150]>{type = mutable dict, count = 1,
+entries =>
+	2 : <CFString 0x14cdce830 [0x1a0950150]>{contents = "MWS_Channel_Number"} = <CFNumber 0xb0000000000000c3 [0x1a0950150]>{value = +12, type = kCFNumberSInt64Type}
+}
+
+	5 : <CFBasicHash 0x14cfd72f0 [0x1a0950150]>{type = mutable dict, count = 1,
+entries =>
+	2 : <CFString 0x14cdce830 [0x1a0950150]>{contents = "MWS_Channel_Number"} = <CFNumber 0xb0000000000000d3 [0x1a0950150]>{value = +13, type = kCFNumberSInt64Type}
+}
+
+)}
+12/23/2016 16:10:04.372 __WiFiManagerCellularTransmitCallback_block_invoke: Cellular Transmit Started = FALSE
+12/23/2016 16:10:21.035 DeviceClient["WirelessRadioMan"] setCoexParameters["MWS_Blacklisted_Channels"] = <CFArray 0x14cd6aba0 [0x1a0950150]>{type = mutable-small, count = 5, values = (
+	0 : <CFBasicHash 0x14cf07c20 [0x1a0950150]>{type = mutable dict, count = 1,
+entries =>
+	2 : <CFString 0x14cd94630 [0x1a0950150]>{contents = "MWS_Channel_Number"} = <CFNumber 0xb000000000000093 [0x1a0950150]>{value = +9, type = kCFNumberSInt64Type}
+}
+
+	1 : <CFBasicHash 0x14cf916e0 [0x1a0950150]>{type = mutable dict, count = 1,
+entries =>
+	2 : <CFString 0x14cd94630 [0x1a0950150]>{contents = "MWS_Channel_Number"} = <CFNumber 0xb0000000000000a3 [0x1a0950150]>{value = +10, type = kCFNumberSInt64Type}
+}
+
+	2 : <CFBasicHash 0x14cd8aca0 [0x1a0950150]>{type = mutable dict, count = 1,
+entries =>
+	2 : <CFString 0x14cd94630 [0x1a0950150]>{contents = "MWS_Channel_Number"} = <CFNumber 0xb0000000000000b3 [0x1a0950150]>{value = +11, type = kCFNumberSInt64Type}
+}
+
+	3 : <CFBasicHash 0x14cd77410 [0x1a0950150]>{type = mutable dict, count = 1,
+entries =>
+	2 : <CFString 0x14cd94630 [0x1a0950150]>{contents = "MWS_Channel_Number"} = <CFNumber 0xb0000000000000c3 [0x1a0950150]>{value = +12, type = kCFNumberSInt64Type}
+}
+
+	4 : <CFBasicHash 0x14cfdcab0 [0x1a0950150]>{type = mutable dict, count = 1,
+entries =>
+	2 : <CFString 0x14cd94630 [0x1a0950150]>{contents = "MWS_Channel_Number"} = <CFNumber 0xb0000000000000d3 [0x1a0950150]>{value = +13, type = kCFNumberSInt64Type}
+}
+
+)}
+12/23/2016 16:10:21.046 __WiFiManagerCellularTransmitCallback_block_invoke: Cellular Transmit Started = TRUE
+12/23/2016 16:10:21.355 DeviceClient["WirelessRadioMan"] setCoexParameters["MWS_Blacklisted_Channels"] = <CFArray 0x14cdf4c60 [0x1a0950150]>{type = mutable-small, count = 6, values = (
+	0 : <CFBasicHash 0x14cfd72f0 [0x1a0950150]>{type = mutable dict, count = 1,
+entries =>
+	2 : <CFString 0x14cdce830 [0x1a0950150]>{contents = "MWS_Channel_Number"} = <CFNumber 0xb000000000000083 [0x1a0950150]>{value = +8, type = kCFNumberSInt64Type}
+}
+
+	1 : <CFBasicHash 0x14cf63c10 [0x1a0950150]>{type = mutable dict, count = 1,
+entries =>
+	2 : <CFString 0x14cdce830 [0x1a0950150]>{contents = "MWS_Channel_Number"} = <CFNumber 0xb000000000000093 [0x1a0950150]>{value = +9, type = kCFNumberSInt64Type}
+}
+
+	2 : <CFBasicHash 0x14cf63a80 [0x1a0950150]>{type = mutable dict, count = 1,
+entries =>
+	2 : <CFString 0x14cdce830 [0x1a0950150]>{contents = "MWS_Channel_Number"} = <CFNumber 0xb0000000000000a3 [0x1a0950150]>{value = +10, type = kCFNumberSInt64Type}
+}
+
+	3 : <CFBasicHash 0x14cd6edc0 [0x1a0950150]>{type = mutable dict, count = 1,
+entries =>
+	2 : <CFString 0x14cdce830 [0x1a0950150]>{contents = "MWS_Channel_Number"} = <CFNumber 0xb0000000000000b3 [0x1a0950150]>{value = +11, type = kCFNumberSInt64Type}
+}
+
+	4 : <CFBasicHash 0x14cdd3cd0 [0x1a0950150]>{type = mutable dict, count = 1,
+entries =>
+	2 : <CFString 0x14cdce830 [0x1a0950150]>{contents = "MWS_Channel_Number"} = <CFNumber 0xb0000000000000c3 [0x1a0950150]>{value = +12, type = kCFNumberSInt64Type}
+}
+
+	5 : <CFBasicHash 0x14cfa8530 [0x1a0950150]>{type = mutable dict, count = 1,
+entries =>
+	2 : <CFString 0x14cdce830 [0x1a0950150]>{contents = "MWS_Channel_Number"} = <CFNumber 0xb0000000000000d3 [0x1a0950150]>{value = +13, type = kCFNumberSInt64Type}
+}
+
+)}
+12/23/2016 16:10:25.012 __WiFiManagerCellularTransmitCallback_block_invoke: Cellular Transmit Started = FALSE
+12/23/2016 16:10:43.698 DeviceClient["WirelessRadioMan"] setCoexParameters["MWS_Blacklisted_Channels"] = <CFArray 0x14cd6aba0 [0x1a0950150]>{type = mutable-small, count = 5, values = (
+	0 : <CFBasicHash 0x14cf07c20 [0x1a0950150]>{type = mutable dict, count = 1,
+entries =>
+	2 : <CFString 0x14cd94630 [0x1a0950150]>{contents = "MWS_Channel_Number"} = <CFNumber 0xb000000000000093 [0x1a0950150]>{value = +9, type = kCFNumberSInt64Type}
+}
+
+	1 : <CFBasicHash 0x14cf916e0 [0x1a0950150]>{type = mutable dict, count = 1,
+entries =>
+	2 : <CFString 0x14cd94630 [0x1a0950150]>{contents = "MWS_Channel_Number"} = <CFNumber 0xb0000000000000a3 [0x1a0950150]>{value = +10, type = kCFNumberSInt64Type}
+}
+
+	2 : <CFBasicHash 0x14cfcf430 [0x1a0950150]>{type = mutable dict, count = 1,
+entries =>
+	2 : <CFString 0x14cd94630 [0x1a0950150]>{contents = "MWS_Channel_Number"} = <CFNumber 0xb0000000000000b3 [0x1a0950150]>{value = +11, type = kCFNumberSInt64Type}
+}
+
+	3 : <CFBasicHash 0x14cd9ae20 [0x1a0950150]>{type = mutable dict, count = 1,
+entries =>
+	2 : <CFString 0x14cd94630 [0x1a0950150]>{contents = "MWS_Channel_Number"} = <CFNumber 0xb0000000000000c3 [0x1a0950150]>{value = +12, type = kCFNumberSInt64Type}
+}
+
+	4 : <CFBasicHash 0x14cd77410 [0x1a0950150]>{type = mutable dict, count = 1,
+entries =>
+	2 : <CFString 0x14cd94630 [0x1a0950150]>{contents = "MWS_Channel_Number"} = <CFNumber 0xb0000000000000d3 [0x1a0950150]>{value = +13, type = kCFNumberSInt64Type}
+}
+
+)}
+12/23/2016 16:10:43.709 __WiFiManagerCellularTransmitCallback_block_invoke: Cellular Transmit Started = TRUE
+12/23/2016 16:10:44.653 WiFiLocaleManagerCheckLocale: trying to determine locale...
+12/23/2016 16:10:44.653 WiFiManagerCoreLocationGetCachedLocation: getting cached location...
+12/23/2016 16:10:44.675 __WiFiLocaleManagerGetLocaleFromMcc: finding iso country code for mcc 232 ....
+12/23/2016 16:10:44.675 WiFiLocationServiceManagerIsLocationValid: cachedLocationTimeout 120.000000 location age 406.124836secs, lifeSpan -1.000000 accuracy 65.000000(highAccReq 0), isValid 1
+12/23/2016 16:10:44.675 WiFiLocationServiceManagerStartLowAccuracyMonitoring: Cached low accuracy location is valid
+12/23/2016 16:10:44.675 WiFiLocationServiceManagerIsLocationValid: cachedLocationTimeout 120.000000 location age 406.124975secs, lifeSpan -1.000000 accuracy 65.000000(highAccReq 1), isValid 1
+12/23/2016 16:10:44.675 WiFiLocationServiceManagerIsLocationValid: cachedLocationTimeout 120.000000 location age 406.125029secs, lifeSpan -1.000000 accuracy 65.000000(highAccReq 0), isValid 1
+12/23/2016 16:10:44.675 __WiFiLocationServiceManagerProcessLocationAvailableEvent: isValidHighAccuracyLocation 1,  isValidLowAccuracyLocation 1
+12/23/2016 16:10:44.675 __WiFiLocationServiceManagerProcessLocationAvailableEvent: give low accuracy callback
+12/23/2016 16:10:44.676 __WiFiLocaleManagerGetLocaleFromLocation: <+47.97744699,+16.84795371> +/- 65.00m (speed -1.00 mps / course -1.00) @ 12/23/16, 4:03:58 PM Central European Standard Time
+12/23/2016 16:10:44.676 locale from bounding box 
+12/23/2016 16:10:44.676 new locale:  , locale: 
+12/23/2016 16:10:44.676 Stopping Low Accuracy Location Monitoring
+12/23/2016 16:10:44.676 CLMonitoring is already stopped
+12/23/2016 16:10:44.676 Stopping Low Accuracy Location Monitoring
+12/23/2016 16:10:44.676 CLMonitoring is already stopped
+12/23/2016 16:10:44.676 __WiFiLocationServiceManagerEventCallback, got cb dict {
+    eventType = 0;
+    location = "<+47.97744699,+16.84795371> +/- 65.00m (speed -1.00 mps / course -1.00) @ 12/23/16, 4:03:58 PM Central European Standard Time";
+}
+12/23/2016 16:10:44.677 WiFiLocationServiceManagerIsLocationValid: cachedLocationTimeout 120.000000 location age 406.127100secs, lifeSpan -1.000000 accuracy 65.000000(highAccReq 1), isValid 1
+12/23/2016 16:10:44.677 WiFiLocationServiceManagerIsLocationValid: cachedLocationTimeout 120.000000 location age 406.127154secs, lifeSpan -1.000000 accuracy 65.000000(highAccReq 0), isValid 1
+12/23/2016 16:10:44.677 __WiFiLocationServiceManagerProcessLocationAvailableEvent: isValidHighAccuracyLocation 1,  isValidLowAccuracyLocation 1
+12/23/2016 16:10:46.194 __WiFiManagerCellularTransmitCallback_block_invoke: Cellular Transmit Started = FALSE
+12/23/2016 16:10:49.323 DeviceClient["WirelessRadioMan"] setCoexParameters["MWS_Blacklisted_Channels"] = <CFArray 0x14cfa8600 [0x1a0950150]>{type = mutable-small, count = 6, values = (
+	0 : <CFBasicHash 0x14cd6edc0 [0x1a0950150]>{type = mutable dict, count = 1,
+entries =>
+	2 : <CFString 0x14cd68420 [0x1a0950150]>{contents = "MWS_Channel_Number"} = <CFNumber 0xb000000000000083 [0x1a0950150]>{value = +8, type = kCFNumberSInt64Type}
+}
+
+	1 : <CFBasicHash 0x14cfa8530 [0x1a0950150]>{type = mutable dict, count = 1,
+entries =>
+	2 : <CFString 0x14cd68420 [0x1a0950150]>{contents = "MWS_Channel_Number"} = <CFNumber 0xb000000000000093 [0x1a0950150]>{value = +9, type = kCFNumberSInt64Type}
+}
+
+	2 : <CFBasicHash 0x14cf63a80 [0x1a0950150]>{type = mutable dict, count = 1,
+entries =>
+	2 : <CFString 0x14cd68420 [0x1a0950150]>{contents = "MWS_Channel_Number"} = <CFNumber 0xb0000000000000a3 [0x1a0950150]>{value = +10, type = kCFNumberSInt64Type}
+}
+
+	3 : <CFBasicHash 0x14cf63c10 [0x1a0950150]>{type = mutable dict, count = 1,
+entries =>
+	2 : <CFString 0x14cd68420 [0x1a0950150]>{contents = "MWS_Channel_Number"} = <CFNumber 0xb0000000000000b3 [0x1a0950150]>{value = +11, type = kCFNumberSInt64Type}
+}
+
+	4 : <CFBasicHash 0x14cd8aca0 [0x1a0950150]>{type = mutable dict, count = 1,
+entries =>
+	2 : <CFString 0x14cd68420 [0x1a0950150]>{contents = "MWS_Channel_Number"} = <CFNumber 0xb0000000000000c3 [0x1a0950150]>{value = +12, type = kCFNumberSInt64Type}
+}
+
+	5 : <CFBasicHash 0x14cf26740 [0x1a0950150]>{type = mutable dict, count = 1,
+entries =>
+	2 : <CFString 0x14cd68420 [0x1a0950150]>{contents = "MWS_Channel_Number"} = <CFNumber 0xb0000000000000d3 [0x1a0950150]>{value = +13, type = kCFNumberSInt64Type}
+}
+
+)}
+12/23/2016 16:10:49.340 DeviceClient["WirelessRadioMan"] setCoexParameters["MWS_Blacklisted_Channels"] = <CFArray 0x14cd6aba0 [0x1a0950150]>{type = mutable-small, count = 5, values = (
+	0 : <CFBasicHash 0x14cd9ae20 [0x1a0950150]>{type = mutable dict, count = 1,
+entries =>
+	2 : <CFString 0x14cd94630 [0x1a0950150]>{contents = "MWS_Channel_Number"} = <CFNumber 0xb000000000000093 [0x1a0950150]>{value = +9, type = kCFNumberSInt64Type}
+}
+
+	1 : <CFBasicHash 0x14cfcf430 [0x1a0950150]>{type = mutable dict, count = 1,
+entries =>
+	2 : <CFString 0x14cd94630 [0x1a0950150]>{contents = "MWS_Channel_Number"} = <CFNumber 0xb0000000000000a3 [0x1a0950150]>{value = +10, type = kCFNumberSInt64Type}
+}
+
+	2 : <CFBasicHash 0x14cf916e0 [0x1a0950150]>{type = mutable dict, count = 1,
+entries =>
+	2 : <CFString 0x14cd94630 [0x1a0950150]>{contents = "MWS_Channel_Number"} = <CFNumber 0xb0000000000000b3 [0x1a0950150]>{value = +11, type = kCFNumberSInt64Type}
+}
+
+	3 : <CFBasicHash 0x14cf07c20 [0x1a0950150]>{type = mutable dict, count = 1,
+entries =>
+	2 : <CFString 0x14cd94630 [0x1a0950150]>{contents = "MWS_Channel_Number"} = <CFNumber 0xb0000000000000c3 [0x1a0950150]>{value = +12, type = kCFNumberSInt64Type}
+}
+
+	4 : <CFBasicHash 0x14cf0e340 [0x1a0950150]>{type = mutable dict, count = 1,
+entries =>
+	2 : <CFString 0x14cd94630 [0x1a0950150]>{contents = "MWS_Channel_Number"} = <CFNumber 0xb0000000000000d3 [0x1a0950150]>{value = +13, type = kCFNumberSInt64Type}
+}
+
+)}
+12/23/2016 16:10:49.349 __WiFiManagerCellularTransmitCallback_block_invoke: Cellular Transmit Started = TRUE
+12/23/2016 16:10:49.635 DeviceClient["WirelessRadioMan"] setCoexParameters["MWS_Blacklisted_Channels"] = <CFArray 0x14cd849b0 [0x1a0950150]>{type = mutable-small, count = 6, values = (
+	0 : <CFBasicHash 0x14cf26740 [0x1a0950150]>{type = mutable dict, count = 1,
+entries =>
+	2 : <CFString 0x14cfa8600 [0x1a0950150]>{contents = "MWS_Channel_Number"} = <CFNumber 0xb000000000000083 [0x1a0950150]>{value = +8, type = kCFNumberSInt64Type}
+}
+
+	1 : <CFBasicHash 0x14cfa8530 [0x1a0950150]>{type = mutable dict, count = 1,
+entries =>
+	2 : <CFString 0x14cfa8600 [0x1a0950150]>{contents = "MWS_Channel_Number"} = <CFNumber 0xb000000000000093 [0x1a0950150]>{value = +9, type = kCFNumberSInt64Type}
+}
+
+	2 : <CFBasicHash 0x14cf63c10 [0x1a0950150]>{type = mutable dict, count = 1,
+entries =>
+	2 : <CFString 0x14cfa8600 [0x1a0950150]>{contents = "MWS_Channel_Number"} = <CFNumber 0xb0000000000000a3 [0x1a0950150]>{value = +10, type = kCFNumberSInt64Type}
+}
+
+	3 : <CFBasicHash 0x14cd8aca0 [0x1a0950150]>{type = mutable dict, count = 1,
+entries =>
+	2 : <CFString 0x14cfa8600 [0x1a0950150]>{contents = "MWS_Channel_Number"} = <CFNumber 0xb0000000000000b3 [0x1a0950150]>{value = +11, type = kCFNumberSInt64Type}
+}
+
+	4 : <CFBasicHash 0x14cd6edc0 [0x1a0950150]>{type = mutable dict, count = 1,
+entries =>
+	2 : <CFString 0x14cfa8600 [0x1a0950150]>{contents = "MWS_Channel_Number"} = <CFNumber 0xb0000000000000c3 [0x1a0950150]>{value = +12, type = kCFNumberSInt64Type}
+}
+
+	5 : <CFBasicHash 0x14cd77410 [0x1a0950150]>{type = mutable dict, count = 1,
+entries =>
+	2 : <CFString 0x14cfa8600 [0x1a0950150]>{contents = "MWS_Channel_Number"} = <CFNumber 0xb0000000000000d3 [0x1a0950150]>{value = +13, type = kCFNumberSInt64Type}
+}
+
+)}
+12/23/2016 16:10:50.332 DeviceClient["WirelessRadioMan"] setCoexParameters["MWS_Blacklisted_Channels"] = <CFArray 0x14cd6aba0 [0x1a0950150]>{type = mutable-small, count = 5, values = (
+	0 : <CFBasicHash 0x14cf07c20 [0x1a0950150]>{type = mutable dict, count = 1,
+entries =>
+	2 : <CFString 0x14cd94630 [0x1a0950150]>{contents = "MWS_Channel_Number"} = <CFNumber 0xb000000000000093 [0x1a0950150]>{value = +9, type = kCFNumberSInt64Type}
+}
+
+	1 : <CFBasicHash 0x14cf916e0 [0x1a0950150]>{type = mutable dict, count = 1,
+entries =>
+	2 : <CFString 0x14cd94630 [0x1a0950150]>{contents = "MWS_Channel_Number"} = <CFNumber 0xb0000000000000a3 [0x1a0950150]>{value = +10, type = kCFNumberSInt64Type}
+}
+
+	2 : <CFBasicHash 0x14cfcf430 [0x1a0950150]>{type = mutable dict, count = 1,
+entries =>
+	2 : <CFString 0x14cd94630 [0x1a0950150]>{contents = "MWS_Channel_Number"} = <CFNumber 0xb0000000000000b3 [0x1a0950150]>{value = +11, type = kCFNumberSInt64Type}
+}
+
+	3 : <CFBasicHash 0x14cd9ae20 [0x1a0950150]>{type = mutable dict, count = 1,
+entries =>
+	2 : <CFString 0x14cd94630 [0x1a0950150]>{contents = "MWS_Channel_Number"} = <CFNumber 0xb0000000000000c3 [0x1a0950150]>{value = +12, type = kCFNumberSInt64Type}
+}
+
+	4 : <CFBasicHash 0x14cfd72f0 [0x1a0950150]>{type = mutable dict, count = 1,
+entries =>
+	2 : <CFString 0x14cd94630 [0x1a0950150]>{contents = "MWS_Channel_Number"} = <CFNumber 0xb0000000000000d3 [0x1a0950150]>{value = +13, type = kCFNumberSInt64Type}
+}
+
+)}
+12/23/2016 16:10:53.711 __WiFiManagerCellularTransmitCallback_block_invoke: Cellular Transmit Started = FALSE
+12/23/2016 16:11:12.112 __WiFiManagerCellularTransmitCallback_block_invoke: Cellular Transmit Started = TRUE
+12/23/2016 16:11:14.232 __WiFiManagerCellularTransmitCallback_block_invoke: Cellular Transmit Started = FALSE
+12/23/2016 16:11:29.258 __WiFiManagerCellularTransmitCallback_block_invoke: Cellular Transmit Started = TRUE
+12/23/2016 16:11:30.162 High bw cellular data available, so WiFi would disconnect under low signal quality
+12/23/2016 16:11:30.162 WiFiLQAMgrSetWiFiFallBackPref: LQAManager WiFiFallBackPreference disabled 
+12/23/2016 16:11:34.275 WoW is Disabled, 0 WoW Clients
+12/23/2016 16:11:56.847 __WiFiManagerCellularTransmitCallback_block_invoke: Cellular Transmit Started = FALSE
+12/23/2016 16:11:57.081 __WiFiManagerCellularTransmitCallback_block_invoke: Cellular Transmit Started = TRUE
+12/23/2016 16:11:57.332 __WiFiManagerCellularTransmitCallback_block_invoke: Cellular Transmit Started = FALSE
+12/23/2016 16:11:58.588 DeviceClient["WirelessRadioMan"] setCoexParameters["MWS_Coex_Enabled_Channels"] = <CFArray 0x14cdf7a10 [0x1a0950150]>{type = mutable-small, count = 3, values = (
+	0 : <CFBasicHash 0x14cfa8530 [0x1a0950150]>{type = mutable dict, count = 1,
+entries =>
+	2 : <CFString 0x14cdb9550 [0x1a0950150]>{contents = "MWS_Channel_Number"} = <CFNumber 0xb0000000000000b3 [0x1a0950150]>{value = +11, type = kCFNumberSInt64Type}
+}
+
+	1 : <CFBasicHash 0x14cf63c10 [0x1a0950150]>{type = mutable dict, count = 1,
+entries =>
+	2 : <CFString 0x14cdb9550 [0x1a0950150]>{contents = "MWS_Channel_Number"} = <CFNumber 0xb0000000000000c3 [0x1a0950150]>{value = +12, type = kCFNumberSInt64Type}
+}
+
+	2 : <CFBasicHash 0x14cd77410 [0x1a0950150]>{type = mutable dict, count = 1,
+entries =>
+	2 : <CFString 0x14cdb9550 [0x1a0950150]>{contents = "MWS_Channel_Number"} = <CFNumber 0xb0000000000000d3 [0x1a0950150]>{value = +13, type = kCFNumberSInt64Type}
+}
+
+)}
+12/23/2016 16:11:58.589 DeviceClient["WirelessRadioMan"] setCoexParameters["MWS_WLAN_RX_PRI_THRESHOLD"] = 2
+12/23/2016 16:11:58.614 DeviceClient["WirelessRadioMan"] setCoexParameters["MWS_Coex_Enabled_Channels"] = <CFArray 0x14cf72490 [0x1a0950150]>{type = mutable-small, count = 1, values = (
+	0 : <CFBasicHash 0x14cf63a80 [0x1a0950150]>{type = mutable dict, count = 1,
+entries =>
+	2 : <CFString 0x14cdf7a10 [0x1a0950150]>{contents = "MWS_Channel_Number"} = <CFNumber 0xb000000000000003 [0x1a0950150]>{value = +0, type = kCFNumberSInt64Type}
+}
+
+)}
+12/23/2016 16:11:58.615 DeviceClient["WirelessRadioMan"] setCoexParameters["MWS_WLAN_RX_PRI_THRESHOLD"] = 0
+12/23/2016 16:12:12.531 __WiFiManagerCellularTransmitCallback_block_invoke: Cellular Transmit Started = TRUE
+12/23/2016 16:12:14.720 __WiFiManagerCellularTransmitCallback_block_invoke: Cellular Transmit Started = FALSE
+12/23/2016 16:12:15.533 __WiFiManagerCellularTransmitCallback_block_invoke: Cellular Transmit Started = TRUE
+12/23/2016 16:12:16.275 DeviceClient["WirelessRadioMan"] setCoexParameters["MWS_Blacklisted_Channels"] = <CFArray 0x14cdb9550 [0x1a0950150]>{type = mutable-small, count = 6, values = (
+	0 : <CFBasicHash 0x14cf26740 [0x1a0950150]>{type = mutable dict, count = 1,
+entries =>
+	2 : <CFString 0x14cdb0390 [0x1a0950150]>{contents = "MWS_Channel_Number"} = <CFNumber 0xb000000000000083 [0x1a0950150]>{value = +8, type = kCFNumberSInt64Type}
+}
+
+	1 : <CFBasicHash 0x14cf63a80 [0x1a0950150]>{type = mutable dict, count = 1,
+entries =>
+	2 : <CFString 0x14cdb0390 [0x1a0950150]>{contents = "MWS_Channel_Number"} = <CFNumber 0xb000000000000093 [0x1a0950150]>{value = +9, type = kCFNumberSInt64Type}
+}
+
+	2 : <CFBasicHash 0x14cf63c10 [0x1a0950150]>{type = mutable dict, count = 1,
+entries =>
+	2 : <CFString 0x14cdb0390 [0x1a0950150]>{contents = "MWS_Channel_Number"} = <CFNumber 0xb0000000000000a3 [0x1a0950150]>{value = +10, type = kCFNumberSInt64Type}
+}
+
+	3 : <CFBasicHash 0x14cd77410 [0x1a0950150]>{type = mutable dict, count = 1,
+entries =>
+	2 : <CFString 0x14cdb0390 [0x1a0950150]>{contents = "MWS_Channel_Number"} = <CFNumber 0xb0000000000000b3 [0x1a0950150]>{value = +11, type = kCFNumberSInt64Type}
+}
+
+	4 : <CFBasicHash 0x14cd6edc0 [0x1a0950150]>{type = mutable dict, count = 1,
+entries =>
+	2 : <CFString 0x14cdb0390 [0x1a0950150]>{contents = "MWS_Channel_Number"} = <CFNumber 0xb0000000000000c3 [0x1a0950150]>{value = +12, type = kCFNumberSInt64Type}
+}
+
+	5 : <CFBasicHash 0x14cf0e340 [0x1a0950150]>{type = mutable dict, count = 1,
+entries =>
+	2 : <CFString 0x14cdb0390 [0x1a0950150]>{contents = "MWS_Channel_Number"} = <CFNumber 0xb0000000000000d3 [0x1a0950150]>{value = +13, type = kCFNumberSInt64Type}
+}
+
+)}
+12/23/2016 16:12:19.752 __WiFiManagerCellularTransmitCallback_block_invoke: Cellular Transmit Started = FALSE
+12/23/2016 16:12:22.098 DeviceClient["WirelessRadioMan"] setCoexParameters["MWS_Blacklisted_Channels"] = <CFArray 0x14cd6aba0 [0x1a0950150]>{type = mutable-small, count = 5, values = (
+	0 : <CFBasicHash 0x14cfd72f0 [0x1a0950150]>{type = mutable dict, count = 1,
+entries =>
+	2 : <CFString 0x14cd94630 [0x1a0950150]>{contents = "MWS_Channel_Number"} = <CFNumber 0xb000000000000093 [0x1a0950150]>{value = +9, type = kCFNumberSInt64Type}
+}
+
+	1 : <CFBasicHash 0x14cf07c20 [0x1a0950150]>{type = mutable dict, count = 1,
+entries =>
+	2 : <CFString 0x14cd94630 [0x1a0950150]>{contents = "MWS_Channel_Number"} = <CFNumber 0xb0000000000000a3 [0x1a0950150]>{value = +10, type = kCFNumberSInt64Type}
+}
+
+	2 : <CFBasicHash 0x14cfcf430 [0x1a0950150]>{type = mutable dict, count = 1,
+entries =>
+	2 : <CFString 0x14cd94630 [0x1a0950150]>{contents = "MWS_Channel_Number"} = <CFNumber 0xb0000000000000b3 [0x1a0950150]>{value = +11, type = kCFNumberSInt64Type}
+}
+
+	3 : <CFBasicHash 0x14cd9ae20 [0x1a0950150]>{type = mutable dict, count = 1,
+entries =>
+	2 : <CFString 0x14cd94630 [0x1a0950150]>{contents = "MWS_Channel_Number"} = <CFNumber 0xb0000000000000c3 [0x1a0950150]>{value = +12, type = kCFNumberSInt64Type}
+}
+
+	4 : <CFBasicHash 0x14cfa8530 [0x1a0950150]>{type = mutable dict, count = 1,
+entries =>
+	2 : <CFString 0x14cd94630 [0x1a0950150]>{contents = "MWS_Channel_Number"} = <CFNumber 0xb0000000000000d3 [0x1a0950150]>{value = +13, type = kCFNumberSInt64Type}
+}
+
+)}
+12/23/2016 16:12:22.109 __WiFiManagerCellularTransmitCallback_block_invoke: Cellular Transmit Started = TRUE
+12/23/2016 16:12:22.275 DeviceClient["WirelessRadioMan"] setCoexParameters["MWS_Blacklisted_Channels"] = <CFArray 0x14cdb9550 [0x1a0950150]>{type = mutable-small, count = 6, values = (
+	0 : <CFBasicHash 0x14cf0e340 [0x1a0950150]>{type = mutable dict, count = 1,
+entries =>
+	2 : <CFString 0x14cdb0390 [0x1a0950150]>{contents = "MWS_Channel_Number"} = <CFNumber 0xb000000000000083 [0x1a0950150]>{value = +8, type = kCFNumberSInt64Type}
+}
+
+	1 : <CFBasicHash 0x14cf63a80 [0x1a0950150]>{type = mutable dict, count = 1,
+entries =>
+	2 : <CFString 0x14cdb0390 [0x1a0950150]>{contents = "MWS_Channel_Number"} = <CFNumber 0xb000000000000093 [0x1a0950150]>{value = +9, type = kCFNumberSInt64Type}
+}
+
+	2 : <CFBasicHash 0x14cd77410 [0x1a0950150]>{type = mutable dict, count = 1,
+entries =>
+	2 : <CFString 0x14cdb0390 [0x1a0950150]>{contents = "MWS_Channel_Number"} = <CFNumber 0xb0000000000000a3 [0x1a0950150]>{value = +10, type = kCFNumberSInt64Type}
+}
+
+	3 : <CFBasicHash 0x14cd6edc0 [0x1a0950150]>{type = mutable dict, count = 1,
+entries =>
+	2 : <CFString 0x14cdb0390 [0x1a0950150]>{contents = "MWS_Channel_Number"} = <CFNumber 0xb0000000000000b3 [0x1a0950150]>{value = +11, type = kCFNumberSInt64Type}
+}
+
+	4 : <CFBasicHash 0x14cf26740 [0x1a0950150]>{type = mutable dict, count = 1,
+entries =>
+	2 : <CFString 0x14cdb0390 [0x1a0950150]>{contents = "MWS_Channel_Number"} = <CFNumber 0xb0000000000000c3 [0x1a0950150]>{value = +12, type = kCFNumberSInt64Type}
+}
+
+	5 : <CFBasicHash 0x14cd8aca0 [0x1a0950150]>{type = mutable dict, count = 1,
+entries =>
+	2 : <CFString 0x14cdb0390 [0x1a0950150]>{contents = "MWS_Channel_Number"} = <CFNumber 0xb0000000000000d3 [0x1a0950150]>{value = +13, type = kCFNumberSInt64Type}
+}
+
+)}
+12/23/2016 16:12:22.463 Low bw cellular data available, so WiFi would stay connected under low signal quality
+12/23/2016 16:12:22.464 WiFiLQAMgrSetWiFiFallBackPref: LQAManager WiFiFallBackPreference enabled 
+12/23/2016 16:12:35.917 __WiFiManagerCellularTransmitCallback_block_invoke: Cellular Transmit Started = FALSE
+12/23/2016 16:12:37.471 DeviceClient["WirelessRadioMan"] setCoexParameters["MWS_Blacklisted_Channels"] = <CFArray 0x14cf53a20 [0x1a0950150]>{type = mutable-small, count = 5, values = (
+	0 : <CFBasicHash 0x14cd9ae20 [0x1a0950150]>{type = mutable dict, count = 1,
+entries =>
+	2 : <CFString 0x14cd94630 [0x1a0950150]>{contents = "MWS_Channel_Number"} = <CFNumber 0xb000000000000093 [0x1a0950150]>{value = +9, type = kCFNumberSInt64Type}
+}
+
+	1 : <CFBasicHash 0x14cfd72f0 [0x1a0950150]>{type = mutable dict, count = 1,
+entries =>
+	2 : <CFString 0x14cd94630 [0x1a0950150]>{contents = "MWS_Channel_Number"} = <CFNumber 0xb0000000000000a3 [0x1a0950150]>{value = +10, type = kCFNumberSInt64Type}
+}
+
+	2 : <CFBasicHash 0x14cf07c20 [0x1a0950150]>{type = mutable dict, count = 1,
+entries =>
+	2 : <CFString 0x14cd94630 [0x1a0950150]>{contents = "MWS_Channel_Number"} = <CFNumber 0xb0000000000000b3 [0x1a0950150]>{value = +11, type = kCFNumberSInt64Type}
+}
+
+	3 : <CFBasicHash 0x14cf63c10 [0x1a0950150]>{type = mutable dict, count = 1,
+entries =>
+	2 : <CFString 0x14cd94630 [0x1a0950150]>{contents = "MWS_Channel_Number"} = <CFNumber 0xb0000000000000c3 [0x1a0950150]>{value = +12, type = kCFNumberSInt64Type}
+}
+
+	4 : <CFBasicHash 0x14cf916e0 [0x1a0950150]>{type = mutable dict, count = 1,
+entries =>
+	2 : <CFString 0x14cd94630 [0x1a0950150]>{contents = "MWS_Channel_Number"} = <CFNumber 0xb0000000000000d3 [0x1a0950150]>{value = +13, type = kCFNumberSInt64Type}
+}
+
+)}
+12/23/2016 16:12:38.668 __WiFiManagerCellularTransmitCallback_block_invoke: Cellular Transmit Started = TRUE
+12/23/2016 16:12:41.975 __WiFiManagerCellularTransmitCallback_block_invoke: Cellular Transmit Started = FALSE
+12/23/2016 16:12:44.309 __WiFiManagerCellularTransmitCallback_block_invoke: Cellular Transmit Started = TRUE
+12/23/2016 16:12:44.652 WiFiLocaleManagerCheckLocale: trying to determine locale...
+12/23/2016 16:12:44.653 WiFiManagerCoreLocationGetCachedLocation: getting cached location...
+12/23/2016 16:12:44.675 __WiFiLocaleManagerGetLocaleFromMcc: finding iso country code for mcc 232 ....
+12/23/2016 16:12:44.675 WiFiLocationServiceManagerIsLocationValid: cachedLocationTimeout 120.000000 location age 526.124836secs, lifeSpan -1.000000 accuracy 65.000000(highAccReq 0), isValid 1
+12/23/2016 16:12:44.675 WiFiLocationServiceManagerStartLowAccuracyMonitoring: Cached low accuracy location is valid
+12/23/2016 16:12:44.675 WiFiLocationServiceManagerIsLocationValid: cachedLocationTimeout 120.000000 location age 526.124972secs, lifeSpan -1.000000 accuracy 65.000000(highAccReq 1), isValid 1
+12/23/2016 16:12:44.675 WiFiLocationServiceManagerIsLocationValid: cachedLocationTimeout 120.000000 location age 526.125026secs, lifeSpan -1.000000 accuracy 65.000000(highAccReq 0), isValid 1
+12/23/2016 16:12:44.675 __WiFiLocationServiceManagerProcessLocationAvailableEvent: isValidHighAccuracyLocation 1,  isValidLowAccuracyLocation 1
+12/23/2016 16:12:44.675 __WiFiLocationServiceManagerProcessLocationAvailableEvent: give low accuracy callback
+12/23/2016 16:12:44.676 __WiFiLocaleManagerGetLocaleFromLocation: <+47.97744699,+16.84795371> +/- 65.00m (speed -1.00 mps / course -1.00) @ 12/23/16, 4:03:58 PM Central European Standard Time
+12/23/2016 16:12:44.676 locale from bounding box 
+12/23/2016 16:12:44.676 new locale:  , locale: 
+12/23/2016 16:12:44.676 Stopping Low Accuracy Location Monitoring
+12/23/2016 16:12:44.676 CLMonitoring is already stopped
+12/23/2016 16:12:44.676 Stopping Low Accuracy Location Monitoring
+12/23/2016 16:12:44.676 CLMonitoring is already stopped
+12/23/2016 16:12:44.676 __WiFiLocationServiceManagerEventCallback, got cb dict {
+    eventType = 0;
+    location = "<+47.97744699,+16.84795371> +/- 65.00m (speed -1.00 mps / course -1.00) @ 12/23/16, 4:03:58 PM Central European Standard Time";
+}
+12/23/2016 16:12:44.677 WiFiLocationServiceManagerIsLocationValid: cachedLocationTimeout 120.000000 location age 526.127086secs, lifeSpan -1.000000 accuracy 65.000000(highAccReq 1), isValid 1
+12/23/2016 16:12:44.677 WiFiLocationServiceManagerIsLocationValid: cachedLocationTimeout 120.000000 location age 526.127138secs, lifeSpan -1.000000 accuracy 65.000000(highAccReq 0), isValid 1
+12/23/2016 16:12:44.677 __WiFiLocationServiceManagerProcessLocationAvailableEvent: isValidHighAccuracyLocation 1,  isValidLowAccuracyLocation 1
+12/23/2016 16:12:46.094 DeviceClient["WirelessRadioMan"] setCoexParameters["MWS_Blacklisted_Channels"] = <CFArray 0x14ce5f2d0 [0x1a0950150]>{type = mutable-small, count = 6, values = (
+	0 : <CFBasicHash 0x14ceb2900 [0x1a0950150]>{type = mutable dict, count = 1,
+entries =>
+	2 : <CFString 0x14e0032f0 [0x1a0950150]>{contents = "MWS_Channel_Number"} = <CFNumber 0xb000000000000083 [0x1a0950150]>{value = +8, type = kCFNumberSInt64Type}
+}
+
+	1 : <CFBasicHash 0x14ce754f0 [0x1a0950150]>{type = mutable dict, count = 1,
+entries =>
+	2 : <CFString 0x14e0032f0 [0x1a0950150]>{contents = "MWS_Channel_Number"} = <CFNumber 0xb000000000000093 [0x1a0950150]>{value = +9, type = kCFNumberSInt64Type}
+}
+
+	2 : <CFBasicHash 0x14ce8cad0 [0x1a0950150]>{type = mutable dict, count = 1,
+entries =>
+	2 : <CFString 0x14e0032f0 [0x1a0950150]>{contents = "MWS_Channel_Number"} = <CFNumber 0xb0000000000000a3 [0x1a0950150]>{value = +10, type = kCFNumberSInt64Type}
+}
+
+	3 : <CFBasicHash 0x14ce8df00 [0x1a0950150]>{type = mutable dict, count = 1,
+entries =>
+	2 : <CFString 0x14e0032f0 [0x1a0950150]>{contents = "MWS_Channel_Number"} = <CFNumber 0xb0000000000000b3 [0x1a0950150]>{value = +11, type = kCFNumberSInt64Type}
+}
+
+	4 : <CFBasicHash 0x14ce44e00 [0x1a0950150]>{type = mutable dict, count = 1,
+entries =>
+	2 : <CFString 0x14e0032f0 [0x1a0950150]>{contents = "MWS_Channel_Number"} = <CFNumber 0xb0000000000000c3 [0x1a0950150]>{value = +12, type = kCFNumberSInt64Type}
+}
+
+	5 : <CFBasicHash 0x14e0032a0 [0x1a0950150]>{type = mutable dict, count = 1,
+entries =>
+	2 : <CFString 0x14e0032f0 [0x1a0950150]>{contents = "MWS_Channel_Number"} = <CFNumber 0xb0000000000000d3 [0x1a0950150]>{value = +13, type = kCFNumberSInt64Type}
+}
+
+)}
+12/23/2016 16:12:52.452 __WiFiManagerCellularTransmitCallback_block_invoke: Cellular Transmit Started = FALSE
+12/23/2016 16:13:05.329 DeviceClient["WirelessRadioMan"] setCoexParameters["MWS_Blacklisted_Channels"] = <CFArray 0x14cd75ce0 [0x1a0950150]>{type = mutable-small, count = 5, values = (
+	0 : <CFBasicHash 0x14cf63c10 [0x1a0950150]>{type = mutable dict, count = 1,
+entries =>
+	2 : <CFString 0x14cd94630 [0x1a0950150]>{contents = "MWS_Channel_Number"} = <CFNumber 0xb000000000000093 [0x1a0950150]>{value = +9, type = kCFNumberSInt64Type}
+}
+
+	1 : <CFBasicHash 0x14cdd3cd0 [0x1a0950150]>{type = mutable dict, count = 1,
+entries =>
+	2 : <CFString 0x14cd94630 [0x1a0950150]>{contents = "MWS_Channel_Number"} = <CFNumber 0xb0000000000000a3 [0x1a0950150]>{value = +10, type = kCFNumberSInt64Type}
+}
+
+	2 : <CFBasicHash 0x14cfd72f0 [0x1a0950150]>{type = mutable dict, count = 1,
+entries =>
+	2 : <CFString 0x14cd94630 [0x1a0950150]>{contents = "MWS_Channel_Number"} = <CFNumber 0xb0000000000000b3 [0x1a0950150]>{value = +11, type = kCFNumberSInt64Type}
+}
+
+	3 : <CFBasicHash 0x14cf07c20 [0x1a0950150]>{type = mutable dict, count = 1,
+entries =>
+	2 : <CFString 0x14cd94630 [0x1a0950150]>{contents = "MWS_Channel_Number"} = <CFNumber 0xb0000000000000c3 [0x1a0950150]>{value = +12, type = kCFNumberSInt64Type}
+}
+
+	4 : <CFBasicHash 0x14cf63a80 [0x1a0950150]>{type = mutable dict, count = 1,
+entries =>
+	2 : <CFString 0x14cd94630 [0x1a0950150]>{contents = "MWS_Channel_Number"} = <CFNumber 0xb0000000000000d3 [0x1a0950150]>{value = +13, type = kCFNumberSInt64Type}
+}
+
+)}
+12/23/2016 16:13:30.703 __WiFiManagerCellularTransmitCallback_block_invoke: Cellular Transmit Started = TRUE
+12/23/2016 16:13:36.455 __WiFiManagerCellularTransmitCallback_block_invoke: Cellular Transmit Started = FALSE
+12/23/2016 16:13:39.534 __WiFiManagerCellularTransmitCallback_block_invoke: Cellular Transmit Started = TRUE
+12/23/2016 16:13:42.792 __WiFiManagerCellularTransmitCallback_block_invoke: Cellular Transmit Started = FALSE
+12/23/2016 16:13:45.834 __WiFiManagerCellularTransmitCallback_block_invoke: Cellular Transmit Started = TRUE
+12/23/2016 16:14:01.094 DeviceClient["WirelessRadioMan"] setCoexParameters["MWS_Blacklisted_Channels"] = <CFArray 0x14cd97250 [0x1a0950150]>{type = mutable-small, count = 6, values = (
+	0 : <CFBasicHash 0x14cd9ae20 [0x1a0950150]>{type = mutable dict, count = 1,
+entries =>
+	2 : <CFString 0x14cf53a20 [0x1a0950150]>{contents = "MWS_Channel_Number"} = <CFNumber 0xb000000000000083 [0x1a0950150]>{value = +8, type = kCFNumberSInt64Type}
+}
+
+	1 : <CFBasicHash 0x14cf0e340 [0x1a0950150]>{type = mutable dict, count = 1,
+entries =>
+	2 : <CFString 0x14cf53a20 [0x1a0950150]>{contents = "MWS_Channel_Number"} = <CFNumber 0xb000000000000093 [0x1a0950150]>{value = +9, type = kCFNumberSInt64Type}
+}
+
+	2 : <CFBasicHash 0x14cf916e0 [0x1a0950150]>{type = mutable dict, count = 1,
+entries =>
+	2 : <CFString 0x14cf53a20 [0x1a0950150]>{contents = "MWS_Channel_Number"} = <CFNumber 0xb0000000000000a3 [0x1a0950150]>{value = +10, type = kCFNumberSInt64Type}
+}
+
+	3 : <CFBasicHash 0x14cfa8530 [0x1a0950150]>{type = mutable dict, count = 1,
+entries =>
+	2 : <CFString 0x14cf53a20 [0x1a0950150]>{contents = "MWS_Channel_Number"} = <CFNumber 0xb0000000000000b3 [0x1a0950150]>{value = +11, type = kCFNumberSInt64Type}
+}
+
+	4 : <CFBasicHash 0x14cf26740 [0x1a0950150]>{type = mutable dict, count = 1,
+entries =>
+	2 : <CFString 0x14cf53a20 [0x1a0950150]>{contents = "MWS_Channel_Number"} = <CFNumber 0xb0000000000000c3 [0x1a0950150]>{value = +12, type = kCFNumberSInt64Type}
+}
+
+	5 : <CFBasicHash 0x14cd6edc0 [0x1a0950150]>{type = mutable dict, count = 1,
+entries =>
+	2 : <CFString 0x14cf53a20 [0x1a0950150]>{contents = "MWS_Channel_Number"} = <CFNumber 0xb0000000000000d3 [0x1a0950150]>{value = +13, type = kCFNumberSInt64Type}
+}
+
+)}
+12/23/2016 16:14:03.173 __WiFiManagerCellularTransmitCallback_block_invoke: Cellular Transmit Started = FALSE
+12/23/2016 16:14:08.761 DeviceClient["WirelessRadioMan"] setCoexParameters["MWS_Blacklisted_Channels"] = <CFArray 0x14cd75ce0 [0x1a0950150]>{type = mutable-small, count = 5, values = (
+	0 : <CFBasicHash 0x14cf63a80 [0x1a0950150]>{type = mutable dict, count = 1,
+entries =>
+	2 : <CFString 0x14cd94630 [0x1a0950150]>{contents = "MWS_Channel_Number"} = <CFNumber 0xb000000000000093 [0x1a0950150]>{value = +9, type = kCFNumberSInt64Type}
+}
+
+	1 : <CFBasicHash 0x14cf63c10 [0x1a0950150]>{type = mutable dict, count = 1,
+entries =>
+	2 : <CFString 0x14cd94630 [0x1a0950150]>{contents = "MWS_Channel_Number"} = <CFNumber 0xb0000000000000a3 [0x1a0950150]>{value = +10, type = kCFNumberSInt64Type}
+}
+
+	2 : <CFBasicHash 0x14cfd72f0 [0x1a0950150]>{type = mutable dict, count = 1,
+entries =>
+	2 : <CFString 0x14cd94630 [0x1a0950150]>{contents = "MWS_Channel_Number"} = <CFNumber 0xb0000000000000b3 [0x1a0950150]>{value = +11, type = kCFNumberSInt64Type}
+}
+
+	3 : <CFBasicHash 0x14cf07c20 [0x1a0950150]>{type = mutable dict, count = 1,
+entries =>
+	2 : <CFString 0x14cd94630 [0x1a0950150]>{contents = "MWS_Channel_Number"} = <CFNumber 0xb0000000000000c3 [0x1a0950150]>{value = +12, type = kCFNumberSInt64Type}
+}
+
+	4 : <CFBasicHash 0x14cd8aca0 [0x1a0950150]>{type = mutable dict, count = 1,
+entries =>
+	2 : <CFString 0x14cd94630 [0x1a0950150]>{contents = "MWS_Channel_Number"} = <CFNumber 0xb0000000000000d3 [0x1a0950150]>{value = +13, type = kCFNumberSInt64Type}
+}
+
+)}
+12/23/2016 16:14:08.953 __WiFiManagerCellularTransmitCallback_block_invoke: Cellular Transmit Started = TRUE
+12/23/2016 16:14:10.233 DeviceClient["WirelessRadioMan"] setCoexParameters["MWS_Blacklisted_Channels"] = <CFArray 0x14cd97250 [0x1a0950150]>{type = mutable-small, count = 6, values = (
+	0 : <CFBasicHash 0x14cd6edc0 [0x1a0950150]>{type = mutable dict, count = 1,
+entries =>
+	2 : <CFString 0x14cf53a20 [0x1a0950150]>{contents = "MWS_Channel_Number"} = <CFNumber 0xb000000000000083 [0x1a0950150]>{value = +8, type = kCFNumberSInt64Type}
+}
+
+	1 : <CFBasicHash 0x14cf0e340 [0x1a0950150]>{type = mutable dict, count = 1,
+entries =>
+	2 : <CFString 0x14cf53a20 [0x1a0950150]>{contents = "MWS_Channel_Number"} = <CFNumber 0xb000000000000093 [0x1a0950150]>{value = +9, type = kCFNumberSInt64Type}
+}
+
+	2 : <CFBasicHash 0x14cfa8530 [0x1a0950150]>{type = mutable dict, count = 1,
+entries =>
+	2 : <CFString 0x14cf53a20 [0x1a0950150]>{contents = "MWS_Channel_Number"} = <CFNumber 0xb0000000000000a3 [0x1a0950150]>{value = +10, type = kCFNumberSInt64Type}
+}
+
+	3 : <CFBasicHash 0x14cf26740 [0x1a0950150]>{type = mutable dict, count = 1,
+entries =>
+	2 : <CFString 0x14cf53a20 [0x1a0950150]>{contents = "MWS_Channel_Number"} = <CFNumber 0xb0000000000000b3 [0x1a0950150]>{value = +11, type = kCFNumberSInt64Type}
+}
+
+	4 : <CFBasicHash 0x14cd9ae20 [0x1a0950150]>{type = mutable dict, count = 1,
+entries =>
+	2 : <CFString 0x14cf53a20 [0x1a0950150]>{contents = "MWS_Channel_Number"} = <CFNumber 0xb0000000000000c3 [0x1a0950150]>{value = +12, type = kCFNumberSInt64Type}
+}
+
+	5 : <CFBasicHash 0x14cd77410 [0x1a0950150]>{type = mutable dict, count = 1,
+entries =>
+	2 : <CFString 0x14cf53a20 [0x1a0950150]>{contents = "MWS_Channel_Number"} = <CFNumber 0xb0000000000000d3 [0x1a0950150]>{value = +13, type = kCFNumberSInt64Type}
+}
+
+)}
+12/23/2016 16:14:11.273 DeviceClient["WirelessRadioMan"] setCoexParameters["MWS_Blacklisted_Channels"] = <CFArray 0x14cd75ce0 [0x1a0950150]>{type = mutable-small, count = 5, values = (
+	0 : <CFBasicHash 0x14cf07c20 [0x1a0950150]>{type = mutable dict, count = 1,
+entries =>
+	2 : <CFString 0x14cd94630 [0x1a0950150]>{contents = "MWS_Channel_Number"} = <CFNumber 0xb000000000000093 [0x1a0950150]>{value = +9, type = kCFNumberSInt64Type}
+}
+
+	1 : <CFBasicHash 0x14cf63a80 [0x1a0950150]>{type = mutable dict, count = 1,
+entries =>
+	2 : <CFString 0x14cd94630 [0x1a0950150]>{contents = "MWS_Channel_Number"} = <CFNumber 0xb0000000000000a3 [0x1a0950150]>{value = +10, type = kCFNumberSInt64Type}
+}
+
+	2 : <CFBasicHash 0x14cf63c10 [0x1a0950150]>{type = mutable dict, count = 1,
+entries =>
+	2 : <CFString 0x14cd94630 [0x1a0950150]>{contents = "MWS_Channel_Number"} = <CFNumber 0xb0000000000000b3 [0x1a0950150]>{value = +11, type = kCFNumberSInt64Type}
+}
+
+	3 : <CFBasicHash 0x14cfd72f0 [0x1a0950150]>{type = mutable dict, count = 1,
+entries =>
+	2 : <CFString 0x14cd94630 [0x1a0950150]>{contents = "MWS_Channel_Number"} = <CFNumber 0xb0000000000000c3 [0x1a0950150]>{value = +12, type = kCFNumberSInt64Type}
+}
+
+	4 : <CFBasicHash 0x14cdd3cd0 [0x1a0950150]>{type = mutable dict, count = 1,
+entries =>
+	2 : <CFString 0x14cd94630 [0x1a0950150]>{contents = "MWS_Channel_Number"} = <CFNumber 0xb0000000000000d3 [0x1a0950150]>{value = +13, type = kCFNumberSInt64Type}
+}
+
+)}
+12/23/2016 16:14:27.853 __WiFiManagerCellularTransmitCallback_block_invoke: Cellular Transmit Started = FALSE
+12/23/2016 16:14:30.371 __WiFiManagerCellularTransmitCallback_block_invoke: Cellular Transmit Started = TRUE
+12/23/2016 16:14:31.555 DeviceClient["WirelessRadioMan"] setCoexParameters["MWS_Blacklisted_Channels"] = <CFArray 0x14cd5c2f0 [0x1a0950150]>{type = mutable-small, count = 6, values = (
+	0 : <CFBasicHash 0x14cf916e0 [0x1a0950150]>{type = mutable dict, count = 1,
+entries =>
+	2 : <CFString 0x14cd97250 [0x1a0950150]>{contents = "MWS_Channel_Number"} = <CFNumber 0xb000000000000083 [0x1a0950150]>{value = +8, type = kCFNumberSInt64Type}
+}
+
+	1 : <CFBasicHash 0x14cd9ae20 [0x1a0950150]>{type = mutable dict, count = 1,
+entries =>
+	2 : <CFString 0x14cd97250 [0x1a0950150]>{contents = "MWS_Channel_Number"} = <CFNumber 0xb000000000000093 [0x1a0950150]>{value = +9, type = kCFNumberSInt64Type}
+}
+
+	2 : <CFBasicHash 0x14cf0e340 [0x1a0950150]>{type = mutable dict, count = 1,
+entries =>
+	2 : <CFString 0x14cd97250 [0x1a0950150]>{contents = "MWS_Channel_Number"} = <CFNumber 0xb0000000000000a3 [0x1a0950150]>{value = +10, type = kCFNumberSInt64Type}
+}
+
+	3 : <CFBasicHash 0x14cd77410 [0x1a0950150]>{type = mutable dict, count = 1,
+entries =>
+	2 : <CFString 0x14cd97250 [0x1a0950150]>{contents = "MWS_Channel_Number"} = <CFNumber 0xb0000000000000b3 [0x1a0950150]>{value = +11, type = kCFNumberSInt64Type}
+}
+
+	4 : <CFBasicHash 0x14cd6edc0 [0x1a0950150]>{type = mutable dict, count = 1,
+entries =>
+	2 : <CFString 0x14cd97250 [0x1a0950150]>{contents = "MWS_Channel_Number"} = <CFNumber 0xb0000000000000c3 [0x1a0950150]>{value = +12, type = kCFNumberSInt64Type}
+}
+
+	5 : <CFBasicHash 0x14cd8aca0 [0x1a0950150]>{type = mutable dict, count = 1,
+entries =>
+	2 : <CFString 0x14cd97250 [0x1a0950150]>{contents = "MWS_Channel_Number"} = <CFNumber 0xb0000000000000d3 [0x1a0950150]>{value = +13, type = kCFNumberSInt64Type}
+}
+
+)}
+12/23/2016 16:14:31.633 __WiFiDeviceProcessDumpLogsEvent: Dump logs event received, dumped wifid log buffer to file

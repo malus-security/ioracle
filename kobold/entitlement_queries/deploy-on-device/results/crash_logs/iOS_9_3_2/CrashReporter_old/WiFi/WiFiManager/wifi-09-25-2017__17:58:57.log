@@ -1,0 +1,7 @@
+ 9/25/2017 17:58:57.869 Async scan requested by "locationd" for 1 iterations with maxage=0 priority normal on en0
+ 9/25/2017 17:58:57.869 Enqueuing command type: "Scan" pending commands: 0
+ 9/25/2017 17:58:57.869 Dequeuing command type: "Scan" pending commands: 0
+ 9/25/2017 17:58:57.869 Attempting Apple80211ScanAsync on en0
+ 9/25/2017 17:58:57.876 Completed Apple80211ScanAsync on en0 (0xe3ff8110)
+ 9/25/2017 17:58:57.876 Async scan request completed for "locationd" (-469794544)
+ 9/25/2017 17:58:57.876 __WiFiDeviceProcessDumpLogsEvent: Dump logs event received, dumped wifid log buffer to file

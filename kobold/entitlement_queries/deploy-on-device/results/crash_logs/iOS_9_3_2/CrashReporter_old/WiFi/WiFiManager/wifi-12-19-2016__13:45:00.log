@@ -1,0 +1,32 @@
+12/19/2016 13:40:59.507 WiFiLocaleManagerCheckLocale: location service or wifi is off, set locale to default
+12/19/2016 13:40:59.507 new locale:  , locale: 
+12/19/2016 13:42:06.000 __WiFiDeviceProcessSTAArriveEvent: staNum 4
+12/19/2016 13:42:06.000 WiFiAWDManagerSubmitMetric: metric container could not be generated for metric id <0x90006>
+12/19/2016 13:42:06.001 MIS STA Associated: 4 associated clients
+12/19/2016 13:42:06.012 WiFiDeviceManagerSetMISMaxStaNumber: Additional tethering clients allowed: 1
+12/19/2016 13:42:06.025 WiFiAWDManagerSubmitMetric: metric container could not be generated for metric id <0x90005>
+12/19/2016 13:42:06.026 MIS is already Enabled on ap1
+12/19/2016 13:42:06.028 MIS Discovery is Disabled
+12/19/2016 13:42:36.139 __WiFiDeviceProcessSTALeaveEvent: staNum 3
+12/19/2016 13:42:36.146 MIS STA Disassociated: 3 associated clients
+12/19/2016 13:42:36.161 WiFiDeviceManagerSetMISMaxStaNumber: Additional tethering clients allowed: 2
+12/19/2016 13:42:36.165 MIS is already Enabled on ap1
+12/19/2016 13:42:36.169 MIS Discovery is Disabled
+12/19/2016 13:42:42.790 __WiFiDeviceProcessSTAArriveEvent: staNum 4
+12/19/2016 13:42:42.790 WiFiAWDManagerSubmitMetric: metric container could not be generated for metric id <0x90006>
+12/19/2016 13:42:42.790 MIS STA Associated: 4 associated clients
+12/19/2016 13:42:42.803 WiFiDeviceManagerSetMISMaxStaNumber: Additional tethering clients allowed: 1
+12/19/2016 13:42:42.814 WiFiAWDManagerSubmitMetric: metric container could not be generated for metric id <0x90005>
+12/19/2016 13:42:42.814 MIS is already Enabled on ap1
+12/19/2016 13:42:42.817 MIS Discovery is Disabled
+12/19/2016 13:42:59.507 WiFiLocaleManagerCheckLocale: location service or wifi is off, set locale to default
+12/19/2016 13:42:59.507 new locale:  , locale: 
+12/19/2016 13:43:36.114 __WiFiDeviceProcessSTALeaveEvent: staNum 3
+12/19/2016 13:43:36.124 MIS STA Disassociated: 3 associated clients
+12/19/2016 13:43:36.129 WiFiDeviceManagerSetMISMaxStaNumber: Additional tethering clients allowed: 2
+12/19/2016 13:43:36.142 MIS is already Enabled on ap1
+12/19/2016 13:43:36.145 MIS Discovery is Disabled
+12/19/2016 13:43:54.799 WoW is Disabled, 0 WoW Clients
+12/19/2016 13:44:59.507 WiFiLocaleManagerCheckLocale: location service or wifi is off, set locale to default
+12/19/2016 13:44:59.507 new locale:  , locale: 
+12/19/2016 13:45:00.469 __WiFiDeviceProcessDumpLogsEvent: Dump logs event received, dumped wifid log buffer to file

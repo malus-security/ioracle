@@ -1,0 +1,146 @@
+12/19/2016  9:35:14.109 __WiFiManagerCellularTransmitCallback_block_invoke: Cellular Transmit Started = TRUE
+12/19/2016  9:35:33.177 Client apsd set type to background application
+12/19/2016  9:35:33.177 __WiFiManagerSetEnableState: state TRUE, manager->enable.setting TRUE, manager->unlockedSinceBoot TRUE
+12/19/2016  9:35:33.178 BG Application: Not Present, BG Daemon: Present. Daemons: mediaserverd apsd 
+12/19/2016  9:35:33.178 Auto association attempt canceled because MIS is enabled. MIS client count: wifi=3 bt=0
+12/19/2016  9:35:35.357 Device display is OFF
+12/19/2016  9:35:35.359 ATJManager: setting ask-to-join interaction mode to NonInteractive
+12/19/2016  9:35:35.359 ATJManager: no entries to purge
+12/19/2016  9:35:35.360 User interaction DISABLED
+12/19/2016  9:35:35.360 Ignoring lock state manager->wakeMode 1
+
+12/19/2016  9:35:47.873 __WiFiManagerCellularTransmitCallback_block_invoke: Cellular Transmit Started = FALSE
+12/19/2016  9:35:49.304 __WiFiManagerCellularTransmitCallback_block_invoke: Cellular Transmit Started = TRUE
+12/19/2016  9:35:57.641 Device display is ON
+12/19/2016  9:35:57.641 __WiFiManagerSetEnableState: state TRUE, manager->enable.setting TRUE, manager->unlockedSinceBoot TRUE
+12/19/2016  9:35:57.641 Auto association attempt canceled because MIS is enabled. MIS client count: wifi=3 bt=0
+12/19/2016  9:36:00.579 ATJManager: setting ask-to-join interaction mode to Interactive
+12/19/2016  9:36:00.580 ATJManager: no entries to purge
+12/19/2016  9:36:00.580 User interaction ENABLED
+12/19/2016  9:36:00.580 Ignoring lock state manager->wakeMode 1
+
+12/19/2016  9:36:00.580 problematic networks =  and potentially problematic networks = 
+12/19/2016  9:36:00.580 Unblacklisting
+12/19/2016  9:36:00.580 No Change in Background Scan Networks, Skip Re-Programming Background Scan
+
+12/19/2016  9:36:00.580 Auto association attempt canceled because MIS is enabled. MIS client count: wifi=3 bt=0
+12/19/2016  9:36:28.577 Device display is OFF
+12/19/2016  9:36:28.581 ATJManager: setting ask-to-join interaction mode to NonInteractive
+12/19/2016  9:36:28.581 ATJManager: no entries to purge
+12/19/2016  9:36:28.581 User interaction DISABLED
+12/19/2016  9:36:28.581 Ignoring lock state manager->wakeMode 1
+
+12/19/2016  9:36:30.179 Device display is ON
+12/19/2016  9:36:30.179 __WiFiManagerSetEnableState: state TRUE, manager->enable.setting TRUE, manager->unlockedSinceBoot TRUE
+12/19/2016  9:36:30.179 Auto association attempt canceled because MIS is enabled. MIS client count: wifi=3 bt=0
+12/19/2016  9:36:30.914 ATJManager: setting ask-to-join interaction mode to Interactive
+12/19/2016  9:36:30.914 ATJManager: no entries to purge
+12/19/2016  9:36:30.914 User interaction ENABLED
+12/19/2016  9:36:30.914 Ignoring lock state manager->wakeMode 1
+
+12/19/2016  9:36:30.914 problematic networks =  and potentially problematic networks = 
+12/19/2016  9:36:30.914 Unblacklisting
+12/19/2016  9:36:30.914 No Change in Background Scan Networks, Skip Re-Programming Background Scan
+
+12/19/2016  9:36:30.914 Auto association attempt canceled because MIS is enabled. MIS client count: wifi=3 bt=0
+12/19/2016  9:36:41.431 WoW is Disabled, 0 WoW Clients
+12/19/2016  9:36:59.793 WiFiLocaleManagerCheckLocale: location service or wifi is off, set locale to default
+12/19/2016  9:36:59.794 new locale:  , locale: 
+12/19/2016  9:37:00.598 Background Network Application entered
+12/19/2016  9:37:00.599 BG Application: Present, BG Daemon: Present. Daemons: mediaserverd apsd 
+12/19/2016  9:37:00.600 __WiFiManagerSetEnableState: state TRUE, manager->enable.setting TRUE, manager->unlockedSinceBoot TRUE
+12/19/2016  9:37:00.600 Auto association attempt canceled because MIS is enabled. MIS client count: wifi=3 bt=0
+12/19/2016  9:37:00.603 Background Network Application entered
+12/19/2016  9:37:00.603 BG Application: Not Present, BG Daemon: Present. Daemons: mediaserverd apsd 
+12/19/2016  9:37:00.603 __WiFiManagerSetEnableState: state TRUE, manager->enable.setting TRUE, manager->unlockedSinceBoot TRUE
+12/19/2016  9:37:00.603 Auto association attempt canceled because MIS is enabled. MIS client count: wifi=3 bt=0
+12/19/2016  9:37:41.367 BG Application: Not Present, BG Daemon: Present. Daemons: mediaserverd apsd 
+12/19/2016  9:37:41.367 __WiFiManagerSetEnableState: state TRUE, manager->enable.setting TRUE, manager->unlockedSinceBoot TRUE
+12/19/2016  9:37:41.367 Auto association attempt canceled because MIS is enabled. MIS client count: wifi=3 bt=0
+12/19/2016  9:37:42.548 ATJManager: setting ask-to-join interaction mode to NonInteractive
+12/19/2016  9:37:42.548 ATJManager: no entries to purge
+12/19/2016  9:37:42.549 User interaction DISABLED
+12/19/2016  9:37:42.549 Ignoring lock state manager->wakeMode 1
+
+12/19/2016  9:37:42.559 Device display is OFF
+12/19/2016  9:38:02.284 Device display is ON
+12/19/2016  9:38:02.284 __WiFiManagerSetEnableState: state TRUE, manager->enable.setting TRUE, manager->unlockedSinceBoot TRUE
+12/19/2016  9:38:02.284 Auto association attempt canceled because MIS is enabled. MIS client count: wifi=3 bt=0
+12/19/2016  9:38:02.747 ATJManager: setting ask-to-join interaction mode to Interactive
+12/19/2016  9:38:02.747 ATJManager: no entries to purge
+12/19/2016  9:38:02.747 User interaction ENABLED
+12/19/2016  9:38:02.747 Ignoring lock state manager->wakeMode 1
+
+12/19/2016  9:38:02.747 problematic networks =  and potentially problematic networks = 
+12/19/2016  9:38:02.747 Unblacklisting
+12/19/2016  9:38:02.748 No Change in Background Scan Networks, Skip Re-Programming Background Scan
+
+12/19/2016  9:38:02.748 Auto association attempt canceled because MIS is enabled. MIS client count: wifi=3 bt=0
+12/19/2016  9:38:06.600 ATJManager: setting ask-to-join interaction mode to NonInteractive
+12/19/2016  9:38:06.600 ATJManager: no entries to purge
+12/19/2016  9:38:06.600 User interaction DISABLED
+12/19/2016  9:38:06.600 Ignoring lock state manager->wakeMode 1
+
+12/19/2016  9:38:06.602 Device display is OFF
+12/19/2016  9:38:20.585 __WiFiDeviceProcessSTAArriveEvent: staNum 4
+12/19/2016  9:38:20.585 WiFiAWDManagerSubmitMetric: metric container could not be generated for metric id <0x90006>
+12/19/2016  9:38:20.585 MIS STA Associated: 4 associated clients
+12/19/2016  9:38:20.596 WiFiDeviceManagerSetMISMaxStaNumber: Additional tethering clients allowed: 1
+12/19/2016  9:38:20.607 WiFiAWDManagerSubmitMetric: metric container could not be generated for metric id <0x90005>
+12/19/2016  9:38:20.607 MIS is already Enabled on ap1
+12/19/2016  9:38:20.609 MIS Discovery is Disabled
+12/19/2016  9:38:38.859 __WiFiDeviceProcessSTALeaveEvent: staNum 3
+12/19/2016  9:38:38.867 MIS STA Disassociated: 3 associated clients
+12/19/2016  9:38:38.872 WiFiDeviceManagerSetMISMaxStaNumber: Additional tethering clients allowed: 2
+12/19/2016  9:38:38.883 MIS is already Enabled on ap1
+12/19/2016  9:38:38.886 MIS Discovery is Disabled
+12/19/2016  9:38:59.795 WiFiLocaleManagerCheckLocale: location service or wifi is off, set locale to default
+12/19/2016  9:38:59.795 new locale:  , locale: 
+12/19/2016  9:39:02.762 Background Network Application entered
+12/19/2016  9:39:02.763 BG Application: Present, BG Daemon: Present. Daemons: mediaserverd apsd 
+12/19/2016  9:39:02.763 __WiFiManagerSetEnableState: state TRUE, manager->enable.setting TRUE, manager->unlockedSinceBoot TRUE
+12/19/2016  9:39:02.763 Auto association attempt canceled because MIS is enabled. MIS client count: wifi=3 bt=0
+12/19/2016  9:39:02.777 Background Network Application entered
+12/19/2016  9:39:02.777 BG Application: Not Present, BG Daemon: Present. Daemons: mediaserverd apsd 
+12/19/2016  9:39:02.777 __WiFiManagerSetEnableState: state TRUE, manager->enable.setting TRUE, manager->unlockedSinceBoot TRUE
+12/19/2016  9:39:02.777 Auto association attempt canceled because MIS is enabled. MIS client count: wifi=3 bt=0
+12/19/2016  9:39:18.734 DeviceClient["WirelessRadioMan"] setCoexParameters["MWS_Blacklisted_Channels"] = <CFArray 0x14cd362a0 [0x1a0950150]>{type = mutable-small, count = 5, values = (
+	0 : <CFBasicHash 0x14cd5d760 [0x1a0950150]>{type = mutable dict, count = 1,
+entries =>
+	2 : <CFString 0x14cd718f0 [0x1a0950150]>{contents = "MWS_Channel_Number"} = <CFNumber 0xb000000000000093 [0x1a0950150]>{value = +9, type = kCFNumberSInt64Type}
+}
+
+	1 : <CFBasicHash 0x14cd37c60 [0x1a0950150]>{type = mutable dict, count = 1,
+entries =>
+	2 : <CFString 0x14cd718f0 [0x1a0950150]>{contents = "MWS_Channel_Number"} = <CFNumber 0xb0000000000000a3 [0x1a0950150]>{value = +10, type = kCFNumberSInt64Type}
+}
+
+	2 : <CFBasicHash 0x14cd78ee0 [0x1a0950150]>{type = mutable dict, count = 1,
+entries =>
+	2 : <CFString 0x14cd718f0 [0x1a0950150]>{contents = "MWS_Channel_Number"} = <CFNumber 0xb0000000000000b3 [0x1a0950150]>{value = +11, type = kCFNumberSInt64Type}
+}
+
+	3 : <CFBasicHash 0x14cd33a20 [0x1a0950150]>{type = mutable dict, count = 1,
+entries =>
+	2 : <CFString 0x14cd718f0 [0x1a0950150]>{contents = "MWS_Channel_Number"} = <CFNumber 0xb0000000000000c3 [0x1a0950150]>{value = +12, type = kCFNumberSInt64Type}
+}
+
+	4 : <CFBasicHash 0x14cd74870 [0x1a0950150]>{type = mutable dict, count = 1,
+entries =>
+	2 : <CFString 0x14cd718f0 [0x1a0950150]>{contents = "MWS_Channel_Number"} = <CFNumber 0xb0000000000000d3 [0x1a0950150]>{value = +13, type = kCFNumberSInt64Type}
+}
+
+)}
+12/19/2016  9:39:22.564 __WiFiManagerCellularTransmitCallback_block_invoke: Cellular Transmit Started = FALSE
+12/19/2016  9:39:24.427 Low bw cellular data available, so WiFi would stay connected under low signal quality
+12/19/2016  9:39:24.428 WiFiLQAMgrSetWiFiFallBackPref: LQAManager WiFiFallBackPreference enabled 
+12/19/2016  9:39:25.225 __WiFiManagerCellularTransmitCallback_block_invoke: Cellular Transmit Started = TRUE
+12/19/2016  9:39:32.488 __WiFiManagerCellularTransmitCallback_block_invoke: Cellular Transmit Started = FALSE
+12/19/2016  9:39:32.887 __WiFiManagerCellularTransmitCallback_block_invoke: Cellular Transmit Started = TRUE
+12/19/2016  9:39:38.152 __WiFiManagerCellularTransmitCallback_block_invoke: Cellular Transmit Started = FALSE
+12/19/2016  9:39:39.462 __WiFiManagerCellularTransmitCallback_block_invoke: Cellular Transmit Started = TRUE
+12/19/2016  9:39:44.529 __WiFiManagerCellularTransmitCallback_block_invoke: Cellular Transmit Started = FALSE
+12/19/2016  9:39:44.804 __WiFiManagerCellularTransmitCallback_block_invoke: Cellular Transmit Started = TRUE
+12/19/2016  9:39:49.192 __WiFiManagerCellularTransmitCallback_block_invoke: Cellular Transmit Started = FALSE
+12/19/2016  9:39:58.326 __WiFiManagerCellularTransmitCallback_block_invoke: Cellular Transmit Started = TRUE
+12/19/2016  9:40:00.579 __WiFiDeviceProcessDumpLogsEvent: Dump logs event received, dumped wifid log buffer to file

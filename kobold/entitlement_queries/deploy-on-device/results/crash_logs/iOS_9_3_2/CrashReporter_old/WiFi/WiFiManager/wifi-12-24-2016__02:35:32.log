@@ -1,0 +1,69 @@
+12/24/2016  2:30:32.442 Client itunesstored set type to normal application
+12/24/2016  2:30:32.442 __WiFiManagerSetEnableState: state TRUE, manager->enable.setting TRUE, manager->unlockedSinceBoot TRUE
+12/24/2016  2:30:32.442 BG Application: Not Present, BG Daemon: Present. Daemons: assistantd mediaserverd 
+12/24/2016  2:30:34.665 __WiFiManagerCellularTransmitCallback_block_invoke: Cellular Transmit Started = FALSE
+12/24/2016  2:30:43.064 __WiFiManagerCellularTransmitCallback_block_invoke: Cellular Transmit Started = TRUE
+12/24/2016  2:30:48.890 __WiFiManagerCellularTransmitCallback_block_invoke: Cellular Transmit Started = FALSE
+12/24/2016  2:30:50.135 __WiFiManagerCellularTransmitCallback_block_invoke: Cellular Transmit Started = TRUE
+12/24/2016  2:30:51.718 High bw cellular data available, so WiFi would disconnect under low signal quality
+12/24/2016  2:30:51.718 WiFiLQAMgrSetWiFiFallBackPref: LQAManager WiFiFallBackPreference disabled 
+12/24/2016  2:30:52.709 __WiFiManagerCellularTransmitCallback_block_invoke: Cellular Transmit Started = FALSE
+12/24/2016  2:31:08.959 __WiFiManagerCellularTransmitCallback_block_invoke: Cellular Transmit Started = TRUE
+12/24/2016  2:31:29.687 __WiFiManagerCellularTransmitCallback_block_invoke: Cellular Transmit Started = FALSE
+12/24/2016  2:31:40.166 __WiFiManagerCellularTransmitCallback_block_invoke: Cellular Transmit Started = TRUE
+12/24/2016  2:32:06.481 __WiFiManagerCellularTransmitCallback_block_invoke: Cellular Transmit Started = FALSE
+12/24/2016  2:32:08.210 WiFiLocaleManagerCheckLocale: trying to determine locale...
+12/24/2016  2:32:08.210 WiFiManagerCoreLocationGetCachedLocation: getting cached location...
+12/24/2016  2:32:08.232 __WiFiLocaleManagerGetLocaleFromMcc: finding iso country code for mcc 226 ....
+12/24/2016  2:32:08.232 WiFiLocationServiceManagerIsLocationValid: cachedLocationTimeout 120.000000 location age 444.834628secs, lifeSpan -1.000000 accuracy 65.000000(highAccReq 0), isValid 1
+12/24/2016  2:32:08.233 WiFiLocationServiceManagerStartLowAccuracyMonitoring: Cached low accuracy location is valid
+12/24/2016  2:32:08.233 WiFiLocationServiceManagerIsLocationValid: cachedLocationTimeout 120.000000 location age 444.834768secs, lifeSpan -1.000000 accuracy 65.000000(highAccReq 1), isValid 1
+12/24/2016  2:32:08.233 WiFiLocationServiceManagerIsLocationValid: cachedLocationTimeout 120.000000 location age 444.834822secs, lifeSpan -1.000000 accuracy 65.000000(highAccReq 0), isValid 1
+12/24/2016  2:32:08.233 __WiFiLocationServiceManagerProcessLocationAvailableEvent: isValidHighAccuracyLocation 1,  isValidLowAccuracyLocation 1
+12/24/2016  2:32:08.233 __WiFiLocationServiceManagerProcessLocationAvailableEvent: give low accuracy callback
+12/24/2016  2:32:08.234 __WiFiLocaleManagerGetLocaleFromLocation: <+45.92146491,+22.66961997> +/- 65.00m (speed -1.00 mps / course -1.00) @ 12/24/16, 2:24:43 AM Eastern European Standard Time
+12/24/2016  2:32:08.234 locale from bounding box 
+12/24/2016  2:32:08.234 new locale:  , locale: 
+12/24/2016  2:32:08.234 Stopping Low Accuracy Location Monitoring
+12/24/2016  2:32:08.234 CLMonitoring is already stopped
+12/24/2016  2:32:08.234 Stopping Low Accuracy Location Monitoring
+12/24/2016  2:32:08.234 CLMonitoring is already stopped
+12/24/2016  2:32:08.234 __WiFiLocationServiceManagerEventCallback, got cb dict {
+    eventType = 0;
+    location = "<+45.92146491,+22.66961997> +/- 65.00m (speed -1.00 mps / course -1.00) @ 12/24/16, 2:24:43 AM Eastern European Standard Time";
+}
+12/24/2016  2:32:08.235 WiFiLocationServiceManagerIsLocationValid: cachedLocationTimeout 120.000000 location age 444.836789secs, lifeSpan -1.000000 accuracy 65.000000(highAccReq 1), isValid 1
+12/24/2016  2:32:08.235 WiFiLocationServiceManagerIsLocationValid: cachedLocationTimeout 120.000000 location age 444.836843secs, lifeSpan -1.000000 accuracy 65.000000(highAccReq 0), isValid 1
+12/24/2016  2:32:08.235 __WiFiLocationServiceManagerProcessLocationAvailableEvent: isValidHighAccuracyLocation 1,  isValidLowAccuracyLocation 1
+12/24/2016  2:32:09.376 __WiFiManagerCellularTransmitCallback_block_invoke: Cellular Transmit Started = TRUE
+12/24/2016  2:33:07.268 __WiFiManagerCellularTransmitCallback_block_invoke: Cellular Transmit Started = FALSE
+12/24/2016  2:33:56.000 __WiFiManagerCellularTransmitCallback_block_invoke: Cellular Transmit Started = TRUE
+12/24/2016  2:34:08.210 WiFiLocaleManagerCheckLocale: trying to determine locale...
+12/24/2016  2:34:08.210 WiFiManagerCoreLocationGetCachedLocation: getting cached location...
+12/24/2016  2:34:08.234 __WiFiLocaleManagerGetLocaleFromMcc: finding iso country code for mcc 226 ....
+12/24/2016  2:34:08.234 WiFiLocationServiceManagerIsLocationValid: cachedLocationTimeout 120.000000 location age 564.836183secs, lifeSpan -1.000000 accuracy 65.000000(highAccReq 0), isValid 1
+12/24/2016  2:34:08.234 WiFiLocationServiceManagerStartLowAccuracyMonitoring: Cached low accuracy location is valid
+12/24/2016  2:34:08.234 WiFiLocationServiceManagerIsLocationValid: cachedLocationTimeout 120.000000 location age 564.836326secs, lifeSpan -1.000000 accuracy 65.000000(highAccReq 1), isValid 1
+12/24/2016  2:34:08.234 WiFiLocationServiceManagerIsLocationValid: cachedLocationTimeout 120.000000 location age 564.836382secs, lifeSpan -1.000000 accuracy 65.000000(highAccReq 0), isValid 1
+12/24/2016  2:34:08.234 __WiFiLocationServiceManagerProcessLocationAvailableEvent: isValidHighAccuracyLocation 1,  isValidLowAccuracyLocation 1
+12/24/2016  2:34:08.234 __WiFiLocationServiceManagerProcessLocationAvailableEvent: give low accuracy callback
+12/24/2016  2:34:08.235 __WiFiLocaleManagerGetLocaleFromLocation: <+45.92146491,+22.66961997> +/- 65.00m (speed -1.00 mps / course -1.00) @ 12/24/16, 2:24:43 AM Eastern European Standard Time
+12/24/2016  2:34:08.235 locale from bounding box 
+12/24/2016  2:34:08.235 new locale:  , locale: 
+12/24/2016  2:34:08.235 Stopping Low Accuracy Location Monitoring
+12/24/2016  2:34:08.235 CLMonitoring is already stopped
+12/24/2016  2:34:08.235 Stopping Low Accuracy Location Monitoring
+12/24/2016  2:34:08.235 CLMonitoring is already stopped
+12/24/2016  2:34:08.236 __WiFiLocationServiceManagerEventCallback, got cb dict {
+    eventType = 0;
+    location = "<+45.92146491,+22.66961997> +/- 65.00m (speed -1.00 mps / course -1.00) @ 12/24/16, 2:24:43 AM Eastern European Standard Time";
+}
+12/24/2016  2:34:08.236 WiFiLocationServiceManagerIsLocationValid: cachedLocationTimeout 120.000000 location age 564.838345secs, lifeSpan -1.000000 accuracy 65.000000(highAccReq 1), isValid 1
+12/24/2016  2:34:08.236 WiFiLocationServiceManagerIsLocationValid: cachedLocationTimeout 120.000000 location age 564.838399secs, lifeSpan -1.000000 accuracy 65.000000(highAccReq 0), isValid 1
+12/24/2016  2:34:08.236 __WiFiLocationServiceManagerProcessLocationAvailableEvent: isValidHighAccuracyLocation 1,  isValidLowAccuracyLocation 1
+12/24/2016  2:34:15.678 __WiFiManagerCellularTransmitCallback_block_invoke: Cellular Transmit Started = FALSE
+12/24/2016  2:34:24.808 __WiFiManagerCellularTransmitCallback_block_invoke: Cellular Transmit Started = TRUE
+12/24/2016  2:34:29.727 WoW is Disabled, 0 WoW Clients
+12/24/2016  2:35:03.658 __WiFiManagerCellularTransmitCallback_block_invoke: Cellular Transmit Started = FALSE
+12/24/2016  2:35:04.364 __WiFiManagerCellularTransmitCallback_block_invoke: Cellular Transmit Started = TRUE
+12/24/2016  2:35:32.239 __WiFiDeviceProcessDumpLogsEvent: Dump logs event received, dumped wifid log buffer to file

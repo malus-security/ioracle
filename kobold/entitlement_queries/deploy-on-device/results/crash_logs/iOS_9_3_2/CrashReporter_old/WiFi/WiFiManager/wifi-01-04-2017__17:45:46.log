@@ -1,0 +1,108 @@
+ 1/04/2017 17:35:47.118 Power stats update: Type 0x6 UnassociatedSleepDur 0 AssociatedSleepDur 194488 TotalDur 196108 RoamDur 0
+ 1/04/2017 17:35:47.118 WiFiAWDManagerSubmitMetric: metric container could not be generated for metric id <0x90010>
+ 1/04/2017 17:35:47.119 __WiFiLQAMgrLogStats: Rssi: -59 Cca: 28 TxPer: 0.0% (0) BcnPer: 0.0% (0) RxFrms 0 TxRate: 0 RxRate: 0
+ 1/04/2017 17:35:47.121 __WiFiDeviceCopyLinkChangedSubReasonString: Apple80211ReturnToString failed 1
+ 1/04/2017 17:35:47.121 __WiFiDeviceProcessDriverAvailableEvent: driver availability true, reason Initializing(0xe0821803), subreason (null)(0x0)
+ 1/04/2017 17:35:47.121 __WiFiManagerDispatchDeviceAvailable: driver availability true
+
+ 1/04/2017 17:35:47.122 __WiFiDeviceManagerAutoAssociate: Already connected to DIGI-146A.
+ 1/04/2017 17:35:47.122 WiFiAWDManagerSubmitMetric: metric container could not be generated for metric id <0x9000e>
+ 1/04/2017 17:35:47.125 __WiFiDeviceManagerAutoAssociate: Already connected to DIGI-146A.
+ 1/04/2017 17:35:47.126 No Change in Background Scan Networks, Skip Re-Programming Background Scan
+
+ 1/04/2017 17:35:47.176 __WiFiDeviceManagerAwdlAvailableCallback: AWDL availability changed to TRUE
+ 1/04/2017 17:35:47.303 __WiFiManagerCellularTransmitCallback_block_invoke: Cellular Transmit Started = FALSE
+ 1/04/2017 17:35:47.303 Disable WoW requested by "apsd"
+ 1/04/2017 17:35:47.303 WoW Capable = YES, Attempting to disable WoW and enable LPAS 
+ 1/04/2017 17:35:47.303 Setting WoW params to <CFBasicHash 0x14cfd9270 [0x1a0950150]>{type = immutable dict, count = 3,
+entries =>
+	0 : <CFString 0x100175960 [0x1a0950150]>{contents = "IO80211InterfaceEnableLowPwrAssocMode"} = <CFBoolean 0x1a09506c8 [0x1a0950150]>{value = true}
+	1 : <CFString 0x100175940 [0x1a0950150]>{contents = "IO80211InterfaceEnableWoW"} = <CFBoolean 0x1a09506d8 [0x1a0950150]>{value = false}
+	2 : <CFString 0x100185ae0 [0x1a0950150]>{contents = "IO80211InterfaceEnableWoWOnCaptive"} = <CFBoolean 0x1a09506d8 [0x1a0950150]>{value = false}
+}
+
+ 1/04/2017 17:35:47.306 WiFiDeviceRequestAssociatedSleep: ActiveDuringSleepRequested is already set (<CFBasicHash 0x14e003090 [0x1a0950150]>{type = immutable dict, count = 0,
+entries =>
+}
+).
+ 1/04/2017 17:35:47.306 WoW Disabled, 0 WoW Clients, lpas is Enabled, WoW Override is Disabled, Captive Disabled
+ 1/04/2017 17:35:47.307 Unable to dispatch WowStateChanged message to client dataaccessd (268435460)
+ 1/04/2017 17:35:47.307 Unable to dispatch WowStateChanged message to client itunesstored (268435460)
+ 1/04/2017 17:35:47.308 Unable to dispatch WowStateChanged message to client mediaserverd (268435460)
+ 1/04/2017 17:35:47.308 Unable to dispatch WowStateChanged message to client MobileMail (268435460)
+ 1/04/2017 17:35:47.308 Unable to dispatch WowStateChanged message to client profiled (268435460)
+ 1/04/2017 17:35:47.309 Unable to dispatch WowStateChanged message to client assistantd (268435460)
+ 1/04/2017 17:35:47.311 WoW is Disabled, 0 WoW Clients
+ 1/04/2017 17:35:47.311 WoW is Disabled, 0 WoW Clients
+ 1/04/2017 17:35:47.312 WoW is Disabled, 0 WoW Clients
+ 1/04/2017 17:35:47.319 WoW is Disabled, 0 WoW Clients
+ 1/04/2017 17:35:48.878 Device display is OFF
+ 1/04/2017 17:35:52.196 Client apsd set type to normal application
+ 1/04/2017 17:35:52.196 __WiFiManagerSetEnableState: state TRUE, manager->enable.setting TRUE, manager->unlockedSinceBoot TRUE
+ 1/04/2017 17:35:52.196 BG Application: Not Present, BG Daemon: Present. Daemons: mediaserverd 
+ 1/04/2017 17:35:54.386 Received kIOMessageSystemWillSleep
+ 1/04/2017 17:35:54.386 System Sleep notification, Disabling auto-join
+ 1/04/2017 17:35:54.390 __WiFiManagerSetEnableState: state FALSE, manager->enable.setting TRUE, manager->unlockedSinceBoot TRUE
+ 1/04/2017 17:35:54.390 Disabling automatic association
+ 1/04/2017 17:35:54.424 WoW is Disabled, 0 WoW Clients
+ 1/04/2017 17:35:54.506 __WiFiDeviceCopyLinkChangedSubReasonString: Apple80211ReturnToString failed 1
+ 1/04/2017 17:35:54.506 __WiFiDeviceProcessDriverAvailableEvent: driver availability false, reason PowerOff(0xe0821804), subreason (null)(0x0)
+ 1/04/2017 17:35:54.506 __WiFiManagerDispatchDeviceAvailable: driver availability false
+
+ 1/04/2017 17:35:54.507 WiFiAWDManagerSubmitMetric: metric container could not be generated for metric id <0x9000e>
+ 1/04/2017 17:35:54.511 __WiFiDeviceManagerAwdlAvailableCallback: AWDL availability changed to FALSE
+ 1/04/2017 17:35:54.525 WoW is Disabled, 0 WoW Clients
+ 1/04/2017 17:40:32.415 Received kIOMessageSystemWillPowerOn
+ 1/04/2017 17:40:32.424 System wake reason: AOP.ExternalReq hold
+ 1/04/2017 17:40:32.424 System Powered ON notification Re-enabling auto-join
+ 1/04/2017 17:40:32.424 __WiFiManagerSetEnableState: state TRUE, manager->enable.setting TRUE, manager->unlockedSinceBoot TRUE
+ 1/04/2017 17:40:32.425 Enabling automatic association
+ 1/04/2017 17:40:32.425 __WiFiDeviceManagerAutoAssociate: Already connected to DIGI-146A.
+ 1/04/2017 17:40:32.425 WiFiLocaleManagerCheckLocale: location service or wifi is off, set locale to default
+ 1/04/2017 17:40:32.425 new locale:  , locale: 
+ 1/04/2017 17:40:32.433 Device display is ON
+ 1/04/2017 17:40:32.433 __WiFiManagerSetEnableState: state TRUE, manager->enable.setting TRUE, manager->unlockedSinceBoot TRUE
+ 1/04/2017 17:40:32.433 __WiFiDeviceManagerAutoAssociate: Already connected to DIGI-146A.
+ 1/04/2017 17:40:32.433 Power stats update: Type 0x5 UnassociatedSleepDur 0 AssociatedSleepDur 173608 TotalDur 277897 RoamDur 0
+ 1/04/2017 17:40:32.433 WiFiAWDManagerSubmitMetric: metric container could not be generated for metric id <0x90010>
+ 1/04/2017 17:40:32.434 __WiFiLQAMgrLogStats: Rssi: -74 Cca: 28 TxPer: 0.0% (0) BcnPer: 0.0% (0) RxFrms 0 TxRate: 0 RxRate: 0
+ 1/04/2017 17:40:32.436 __WiFiDeviceCopyLinkChangedSubReasonString: Apple80211ReturnToString failed 1
+ 1/04/2017 17:40:32.436 __WiFiDeviceProcessDriverAvailableEvent: driver availability true, reason Initializing(0xe0821803), subreason (null)(0x0)
+ 1/04/2017 17:40:32.436 __WiFiManagerDispatchDeviceAvailable: driver availability true
+
+ 1/04/2017 17:40:32.438 __WiFiDeviceManagerAutoAssociate: Already connected to DIGI-146A.
+ 1/04/2017 17:40:32.438 WiFiAWDManagerSubmitMetric: metric container could not be generated for metric id <0x9000e>
+ 1/04/2017 17:40:32.445 __WiFiDeviceManagerAutoAssociate: Already connected to DIGI-146A.
+ 1/04/2017 17:40:32.445 No Change in Background Scan Networks, Skip Re-Programming Background Scan
+
+ 1/04/2017 17:40:32.481 __WiFiDeviceManagerAwdlAvailableCallback: AWDL availability changed to TRUE
+ 1/04/2017 17:40:32.528 __WiFiManagerCellularTransmitCallback_block_invoke: Cellular Transmit Started = FALSE
+ 1/04/2017 17:40:32.570 Device display is OFF
+ 1/04/2017 17:40:32.570 WoW is Disabled, 0 WoW Clients
+ 1/04/2017 17:40:32.584 Device display is ON
+ 1/04/2017 17:40:32.584 __WiFiManagerSetEnableState: state TRUE, manager->enable.setting TRUE, manager->unlockedSinceBoot TRUE
+ 1/04/2017 17:40:32.584 __WiFiDeviceManagerAutoAssociate: Already connected to DIGI-146A.
+ 1/04/2017 17:40:32.761 WoW is Disabled, 0 WoW Clients
+ 1/04/2017 17:40:39.361 Device display is OFF
+ 1/04/2017 17:40:42.376 __WiFiLQAMgrLogStats: Rssi: -77 Cca: 2 TxPer: 0.0% (1) BcnPer: 0.0% (35) RxFrms 2 TxRate: 39000 RxRate: 26000
+ 1/04/2017 17:40:44.868 Received kIOMessageSystemWillSleep
+ 1/04/2017 17:40:44.868 System Sleep notification, Disabling auto-join
+ 1/04/2017 17:40:44.868 __WiFiManagerSetEnableState: state FALSE, manager->enable.setting TRUE, manager->unlockedSinceBoot TRUE
+ 1/04/2017 17:40:44.868 Disabling automatic association
+ 1/04/2017 17:40:44.907 WoW is Disabled, 0 WoW Clients
+ 1/04/2017 17:40:45.011 __WiFiDeviceCopyLinkChangedSubReasonString: Apple80211ReturnToString failed 1
+ 1/04/2017 17:40:45.012 __WiFiDeviceProcessDriverAvailableEvent: driver availability false, reason PowerOff(0xe0821804), subreason (null)(0x0)
+ 1/04/2017 17:40:45.012 __WiFiManagerDispatchDeviceAvailable: driver availability false
+
+ 1/04/2017 17:40:45.013 WiFiAWDManagerSubmitMetric: metric container could not be generated for metric id <0x9000e>
+ 1/04/2017 17:40:45.026 __WiFiDeviceManagerAwdlAvailableCallback: AWDL availability changed to FALSE
+ 1/04/2017 17:40:45.033 WoW is Disabled, 0 WoW Clients
+ 1/04/2017 17:45:46.094 Received kIOMessageSystemWillPowerOn
+ 1/04/2017 17:45:46.095 System wake reason: AOP.ExternalReq wlan
+ 1/04/2017 17:45:46.095 System Powered ON notification Re-enabling auto-join
+ 1/04/2017 17:45:46.095 __WiFiManagerSetEnableState: state TRUE, manager->enable.setting TRUE, manager->unlockedSinceBoot TRUE
+ 1/04/2017 17:45:46.095 Enabling automatic association
+ 1/04/2017 17:45:46.103 __WiFiDeviceManagerAutoAssociate: Already connected to DIGI-146A.
+ 1/04/2017 17:45:46.104 WiFiLocaleManagerCheckLocale: location service or wifi is off, set locale to default
+ 1/04/2017 17:45:46.104 new locale:  , locale: 
+ 1/04/2017 17:45:46.104 __WiFiDeviceProcessDumpLogsEvent: Dump logs event received, dumped wifid log buffer to file

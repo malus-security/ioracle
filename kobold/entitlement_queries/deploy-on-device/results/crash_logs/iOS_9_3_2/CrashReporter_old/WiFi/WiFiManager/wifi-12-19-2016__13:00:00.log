@@ -1,0 +1,128 @@
+12/19/2016 12:56:26.072 Device display is ON
+12/19/2016 12:56:26.072 __WiFiManagerSetEnableState: state TRUE, manager->enable.setting TRUE, manager->unlockedSinceBoot TRUE
+12/19/2016 12:56:26.072 Auto association attempt canceled because MIS is enabled. MIS client count: wifi=4 bt=0
+12/19/2016 12:56:26.755 ATJManager: setting ask-to-join interaction mode to Interactive
+12/19/2016 12:56:26.755 ATJManager: no entries to purge
+12/19/2016 12:56:26.755 User interaction ENABLED
+12/19/2016 12:56:26.755 Ignoring lock state manager->wakeMode 1
+
+12/19/2016 12:56:26.755 problematic networks =  and potentially problematic networks = 
+12/19/2016 12:56:26.755 Unblacklisting
+12/19/2016 12:56:26.756 No Change in Background Scan Networks, Skip Re-Programming Background Scan
+
+12/19/2016 12:56:26.756 Auto association attempt canceled because MIS is enabled. MIS client count: wifi=4 bt=0
+12/19/2016 12:56:26.791 Foreground Network Application entered.
+12/19/2016 12:56:26.791 BG Application: Not Present, BG Daemon: Present. Daemons: mediaserverd 
+12/19/2016 12:56:26.791 problematic networks =  and potentially problematic networks = 
+12/19/2016 12:56:26.791 Unblacklisting
+12/19/2016 12:56:26.792 No Change in Background Scan Networks, Skip Re-Programming Background Scan
+
+12/19/2016 12:56:26.792 __WiFiManagerSetEnableState: state TRUE, manager->enable.setting TRUE, manager->unlockedSinceBoot TRUE
+12/19/2016 12:56:26.792 Auto association attempt canceled because MIS is enabled. MIS client count: wifi=4 bt=0
+12/19/2016 12:56:40.268 ATJManager: setting ask-to-join interaction mode to NonInteractive
+12/19/2016 12:56:40.268 ATJManager: no entries to purge
+12/19/2016 12:56:40.268 User interaction DISABLED
+12/19/2016 12:56:40.268 Ignoring lock state manager->wakeMode 1
+
+12/19/2016 12:56:40.269 Device display is OFF
+12/19/2016 12:56:40.407 Foreground Network Application exited.
+12/19/2016 12:56:40.407 BG Application: Not Present, BG Daemon: Present. Daemons: mediaserverd 
+12/19/2016 12:56:44.598 Device display is ON
+12/19/2016 12:56:44.598 __WiFiManagerSetEnableState: state TRUE, manager->enable.setting TRUE, manager->unlockedSinceBoot TRUE
+12/19/2016 12:56:44.598 Auto association attempt canceled because MIS is enabled. MIS client count: wifi=4 bt=0
+12/19/2016 12:56:45.342 ATJManager: setting ask-to-join interaction mode to Interactive
+12/19/2016 12:56:45.342 ATJManager: no entries to purge
+12/19/2016 12:56:45.342 User interaction ENABLED
+12/19/2016 12:56:45.342 Ignoring lock state manager->wakeMode 1
+
+12/19/2016 12:56:45.342 problematic networks =  and potentially problematic networks = 
+12/19/2016 12:56:45.342 Unblacklisting
+12/19/2016 12:56:45.342 No Change in Background Scan Networks, Skip Re-Programming Background Scan
+
+12/19/2016 12:56:45.342 Auto association attempt canceled because MIS is enabled. MIS client count: wifi=4 bt=0
+12/19/2016 12:56:45.399 Foreground Network Application entered.
+12/19/2016 12:56:45.399 BG Application: Not Present, BG Daemon: Present. Daemons: mediaserverd 
+12/19/2016 12:56:45.399 problematic networks =  and potentially problematic networks = 
+12/19/2016 12:56:45.399 Unblacklisting
+12/19/2016 12:56:45.400 No Change in Background Scan Networks, Skip Re-Programming Background Scan
+
+12/19/2016 12:56:45.400 __WiFiManagerSetEnableState: state TRUE, manager->enable.setting TRUE, manager->unlockedSinceBoot TRUE
+12/19/2016 12:56:45.400 Auto association attempt canceled because MIS is enabled. MIS client count: wifi=4 bt=0
+12/19/2016 12:56:54.912 ATJManager: setting ask-to-join interaction mode to NonInteractive
+12/19/2016 12:56:54.912 ATJManager: no entries to purge
+12/19/2016 12:56:54.912 User interaction DISABLED
+12/19/2016 12:56:54.912 Ignoring lock state manager->wakeMode 1
+
+12/19/2016 12:56:54.917 Device display is OFF
+12/19/2016 12:56:54.983 Foreground Network Application exited.
+12/19/2016 12:56:54.983 BG Application: Not Present, BG Daemon: Present. Daemons: mediaserverd 
+12/19/2016 12:56:59.611 WiFiLocaleManagerCheckLocale: location service or wifi is off, set locale to default
+12/19/2016 12:56:59.611 new locale:  , locale: 
+12/19/2016 12:57:26.759 Background Network Application entered
+12/19/2016 12:57:26.760 BG Application: Present, BG Daemon: Present. Daemons: mediaserverd 
+12/19/2016 12:57:26.760 __WiFiManagerSetEnableState: state TRUE, manager->enable.setting TRUE, manager->unlockedSinceBoot TRUE
+12/19/2016 12:57:26.760 Auto association attempt canceled because MIS is enabled. MIS client count: wifi=4 bt=0
+12/19/2016 12:57:26.779 Background Network Application entered
+12/19/2016 12:57:26.779 BG Application: Not Present, BG Daemon: Present. Daemons: mediaserverd 
+12/19/2016 12:57:26.779 __WiFiManagerSetEnableState: state TRUE, manager->enable.setting TRUE, manager->unlockedSinceBoot TRUE
+12/19/2016 12:57:26.779 Auto association attempt canceled because MIS is enabled. MIS client count: wifi=4 bt=0
+12/19/2016 12:58:59.130 Device display is ON
+12/19/2016 12:58:59.130 __WiFiManagerSetEnableState: state TRUE, manager->enable.setting TRUE, manager->unlockedSinceBoot TRUE
+12/19/2016 12:58:59.130 Auto association attempt canceled because MIS is enabled. MIS client count: wifi=4 bt=0
+12/19/2016 12:58:59.609 WiFiLocaleManagerCheckLocale: location service or wifi is off, set locale to default
+12/19/2016 12:58:59.609 new locale:  , locale: 
+12/19/2016 12:59:00.068 ATJManager: setting ask-to-join interaction mode to Interactive
+12/19/2016 12:59:00.068 ATJManager: no entries to purge
+12/19/2016 12:59:00.068 User interaction ENABLED
+12/19/2016 12:59:00.068 Ignoring lock state manager->wakeMode 1
+
+12/19/2016 12:59:00.068 problematic networks =  and potentially problematic networks = 
+12/19/2016 12:59:00.068 Unblacklisting
+12/19/2016 12:59:00.069 No Change in Background Scan Networks, Skip Re-Programming Background Scan
+
+12/19/2016 12:59:00.069 Auto association attempt canceled because MIS is enabled. MIS client count: wifi=4 bt=0
+12/19/2016 12:59:00.108 Foreground Network Application entered.
+12/19/2016 12:59:00.108 BG Application: Not Present, BG Daemon: Present. Daemons: mediaserverd 
+12/19/2016 12:59:00.108 problematic networks =  and potentially problematic networks = 
+12/19/2016 12:59:00.108 Unblacklisting
+12/19/2016 12:59:00.108 No Change in Background Scan Networks, Skip Re-Programming Background Scan
+
+12/19/2016 12:59:00.108 __WiFiManagerSetEnableState: state TRUE, manager->enable.setting TRUE, manager->unlockedSinceBoot TRUE
+12/19/2016 12:59:00.108 Auto association attempt canceled because MIS is enabled. MIS client count: wifi=4 bt=0
+12/19/2016 12:59:02.268 Foreground Network Application exited.
+12/19/2016 12:59:02.268 BG Application: Not Present, BG Daemon: Present. Daemons: mediaserverd 
+12/19/2016 12:59:02.269 __WiFiManagerSetEnableState: state TRUE, manager->enable.setting TRUE, manager->unlockedSinceBoot TRUE
+12/19/2016 12:59:02.269 Auto association attempt canceled because MIS is enabled. MIS client count: wifi=4 bt=0
+12/19/2016 12:59:02.288 BG Application: Not Present, BG Daemon: Present. Daemons: mediaserverd 
+12/19/2016 12:59:03.703 BG Application: Not Present, BG Daemon: Present. Daemons: mediaserverd 
+12/19/2016 12:59:06.148 WoW is Disabled, 0 WoW Clients
+12/19/2016 12:59:18.443 __WiFiManagerCellularTransmitCallback_block_invoke: Cellular Transmit Started = FALSE
+12/19/2016 12:59:19.909 __WiFiManagerCellularTransmitCallback_block_invoke: Cellular Transmit Started = TRUE
+12/19/2016 12:59:46.135 Client identityservices set type to background application
+12/19/2016 12:59:46.135 __WiFiManagerSetEnableState: state TRUE, manager->enable.setting TRUE, manager->unlockedSinceBoot TRUE
+12/19/2016 12:59:46.135 BG Application: Not Present, BG Daemon: Present. Daemons: identityservices mediaserverd 
+12/19/2016 12:59:46.135 Auto association attempt canceled because MIS is enabled. MIS client count: wifi=4 bt=0
+12/19/2016 12:59:46.196 Creating client for "IDSRemoteURLConn"
+12/19/2016 12:59:46.204 MIS state is Enabled
+12/19/2016 12:59:46.204 MIS state queried by "IDSRemoteURLConn" is Enable
+12/19/2016 12:59:46.205 Disable WoW requested by "IDSRemoteURLConn"
+12/19/2016 12:59:46.262 Creating client for "IMRemoteURLConne"
+12/19/2016 12:59:46.265 MIS state is Enabled
+12/19/2016 12:59:46.265 MIS state queried by "IMRemoteURLConne" is Enable
+12/19/2016 12:59:46.266 Disable WoW requested by "IMRemoteURLConne"
+12/19/2016 12:59:51.132 Client identityservices set type to normal application
+12/19/2016 12:59:51.132 __WiFiManagerSetEnableState: state TRUE, manager->enable.setting TRUE, manager->unlockedSinceBoot TRUE
+12/19/2016 12:59:51.132 BG Application: Not Present, BG Daemon: Present. Daemons: mediaserverd 
+12/19/2016 12:59:54.671 Client apsd set type to background application
+12/19/2016 12:59:54.672 __WiFiManagerSetEnableState: state TRUE, manager->enable.setting TRUE, manager->unlockedSinceBoot TRUE
+12/19/2016 12:59:54.672 BG Application: Not Present, BG Daemon: Present. Daemons: mediaserverd apsd 
+12/19/2016 12:59:54.672 Auto association attempt canceled because MIS is enabled. MIS client count: wifi=4 bt=0
+12/19/2016 13:00:00.068 Background Network Application entered
+12/19/2016 13:00:00.069 BG Application: Present, BG Daemon: Present. Daemons: mediaserverd apsd 
+12/19/2016 13:00:00.069 __WiFiManagerSetEnableState: state TRUE, manager->enable.setting TRUE, manager->unlockedSinceBoot TRUE
+12/19/2016 13:00:00.069 Auto association attempt canceled because MIS is enabled. MIS client count: wifi=4 bt=0
+12/19/2016 13:00:00.078 Background Network Application entered
+12/19/2016 13:00:00.078 BG Application: Not Present, BG Daemon: Present. Daemons: mediaserverd apsd 
+12/19/2016 13:00:00.078 __WiFiManagerSetEnableState: state TRUE, manager->enable.setting TRUE, manager->unlockedSinceBoot TRUE
+12/19/2016 13:00:00.078 Auto association attempt canceled because MIS is enabled. MIS client count: wifi=4 bt=0
+12/19/2016 13:00:00.514 __WiFiDeviceProcessDumpLogsEvent: Dump logs event received, dumped wifid log buffer to file

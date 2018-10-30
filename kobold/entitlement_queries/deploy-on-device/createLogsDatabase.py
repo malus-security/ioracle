@@ -23,17 +23,21 @@ def create_database():
             machPort TEXT NOT NULL, \
             hasCompletion INTEGER DEFAULT 0, \
             connectionInvalidated INTEGER DEFAULT 0, \
-            connectionTerminated INTEGER DEFAULT 0)'
+            connectionTerminated INTEGER DEFAULT 0, \
+            runID INTEGER NOT NULL)'
     c.execute(sql)
-    sql = 'create unique index ent_key_value on ' + table_name + ' (id, method, machPort, hasCompletion)'
+    sql = 'create unique index u_id on ' + table_name + ' (id, method, machPort, hasCompletion)'
     c.execute(sql)
     conn.commit()
 
 def clean():
     os.system('rm -rf ' + location)
 
-def insert_log(m_id, method, machPort, hasCompletion, connectionInvalidated, connectionTerminated):
-    sql = "insert into " + table_name + " (id, method, machPort, hasCompletion, connectionInvalidated, connectionTerminated) values (%d, '%s', '%s', %d, %d, %d)" % (m_id, method, machPort, hasCompletion, connectionInvalidated, connectionTerminated)
+def insert_log(m_id, method, machPort, hasCompletion, connectionInvalidated, connectionTerminated, runID):
+    sql = "insert into " + table_name + " \
+                (id, method, machPort, hasCompletion, connectionInvalidated, connectionTerminated, runID) values \
+                (%d, '%s', '%s', %d, %d, %d, %d)" % \
+                (m_id, method, machPort, hasCompletion, connectionInvalidated, connectionTerminated, runID)
     c.execute(sql)
     conn.commit()
 
@@ -61,7 +65,17 @@ def add_log(log_name):
             if "Invocation has a completion handler" in line:
                 hasCompletion = 1
                 continue
-        insert_log(m_id, methodName, machPort, hasCompletion, connectionInvalidated, connectionTerminated)
+        insert_log(m_id, methodName, machPort, hasCompletion,
+                connectionInvalidated, connectionTerminated, get_next_runID())
+
+def get_next_runID():
+    sql = "select MAX(runID) from appOutput;"
+    c.execute(sql)
+    runID = c.fetchall()[0][0]
+    if runID:
+            return int(runID)
+
+    return 0
 
 init()
-add_log("results/filemon/run.out")
+add_log("results/app_logs/filemon/run.out")

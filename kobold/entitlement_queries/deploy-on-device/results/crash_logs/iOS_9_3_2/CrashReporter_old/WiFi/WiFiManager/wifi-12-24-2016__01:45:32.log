@@ -1,0 +1,63 @@
+12/24/2016  1:40:43.261 __WiFiManagerCellularTransmitCallback_block_invoke: Cellular Transmit Started = TRUE
+12/24/2016  1:41:17.266 __WiFiManagerCellularTransmitCallback_block_invoke: Cellular Transmit Started = FALSE
+12/24/2016  1:42:08.224 WiFiLocaleManagerCheckLocale: trying to determine locale...
+12/24/2016  1:42:08.224 WiFiManagerCoreLocationGetCachedLocation: getting cached location...
+12/24/2016  1:42:08.246 __WiFiLocaleManagerGetLocaleFromMcc: finding iso country code for mcc 226 ....
+12/24/2016  1:42:08.247 WiFiLocationServiceManagerIsLocationValid: cachedLocationTimeout 120.000000 location age 727.246883secs, lifeSpan -1.000000 accuracy 5.000000(highAccReq 0), isValid 1
+12/24/2016  1:42:08.247 WiFiLocationServiceManagerStartLowAccuracyMonitoring: Cached low accuracy location is valid
+12/24/2016  1:42:08.247 WiFiLocationServiceManagerIsLocationValid: cachedLocationTimeout 120.000000 location age 727.247024secs, lifeSpan -1.000000 accuracy 5.000000(highAccReq 1), isValid 1
+12/24/2016  1:42:08.247 WiFiLocationServiceManagerIsLocationValid: cachedLocationTimeout 120.000000 location age 727.247077secs, lifeSpan -1.000000 accuracy 5.000000(highAccReq 0), isValid 1
+12/24/2016  1:42:08.247 __WiFiLocationServiceManagerProcessLocationAvailableEvent: isValidHighAccuracyLocation 1,  isValidLowAccuracyLocation 1
+12/24/2016  1:42:08.247 __WiFiLocationServiceManagerProcessLocationAvailableEvent: give low accuracy callback
+12/24/2016  1:42:08.248 __WiFiLocaleManagerGetLocaleFromLocation: <+45.82155107,+22.10762467> +/- 5.00m (speed 18.84 mps / course 48.87) @ 12/24/16, 1:30:01 AM Eastern European Standard Time
+12/24/2016  1:42:08.248 locale from bounding box 
+12/24/2016  1:42:08.248 new locale:  , locale: 
+12/24/2016  1:42:08.248 Stopping Low Accuracy Location Monitoring
+12/24/2016  1:42:08.248 CLMonitoring is already stopped
+12/24/2016  1:42:08.248 Stopping Low Accuracy Location Monitoring
+12/24/2016  1:42:08.248 CLMonitoring is already stopped
+12/24/2016  1:42:08.248 __WiFiLocationServiceManagerEventCallback, got cb dict {
+    eventType = 0;
+    location = "<+45.82155107,+22.10762467> +/- 5.00m (speed 18.84 mps / course 48.87) @ 12/24/16, 1:30:01 AM Eastern European Standard Time";
+}
+12/24/2016  1:42:08.249 WiFiLocationServiceManagerIsLocationValid: cachedLocationTimeout 120.000000 location age 727.249140secs, lifeSpan -1.000000 accuracy 5.000000(highAccReq 1), isValid 1
+12/24/2016  1:42:08.249 WiFiLocationServiceManagerIsLocationValid: cachedLocationTimeout 120.000000 location age 727.249195secs, lifeSpan -1.000000 accuracy 5.000000(highAccReq 0), isValid 1
+12/24/2016  1:42:08.249 __WiFiLocationServiceManagerProcessLocationAvailableEvent: isValidHighAccuracyLocation 1,  isValidLowAccuracyLocation 1
+12/24/2016  1:42:58.846 __WiFiManagerCellularTransmitCallback_block_invoke: Cellular Transmit Started = TRUE
+12/24/2016  1:43:02.663 __WiFiDeviceProcessSTAArriveEvent: staNum 3
+12/24/2016  1:43:02.664 WiFiAWDManagerSubmitMetric: metric container could not be generated for metric id <0x90006>
+12/24/2016  1:43:02.664 MIS STA Associated: 3 associated clients
+12/24/2016  1:43:02.675 WiFiDeviceManagerSetMISMaxStaNumber: Additional tethering clients allowed: 2
+12/24/2016  1:43:02.683 WiFiAWDManagerSubmitMetric: metric container could not be generated for metric id <0x90005>
+12/24/2016  1:43:02.683 MIS is already Enabled on ap1
+12/24/2016  1:43:02.685 MIS Discovery is Disabled
+12/24/2016  1:43:25.132 WoW is Disabled, 0 WoW Clients
+12/24/2016  1:44:08.218 WiFiLocaleManagerCheckLocale: trying to determine locale...
+12/24/2016  1:44:08.218 WiFiManagerCoreLocationGetCachedLocation: getting cached location...
+12/24/2016  1:44:08.231 __WiFiLocaleManagerGetLocaleFromMcc: finding iso country code for mcc 226 ....
+12/24/2016  1:44:08.231 WiFiLocationServiceManagerIsLocationValid: cachedLocationTimeout 120.000000 location age 847.230979secs, lifeSpan -1.000000 accuracy 5.000000(highAccReq 0), isValid 1
+12/24/2016  1:44:08.231 WiFiLocationServiceManagerStartLowAccuracyMonitoring: Cached low accuracy location is valid
+12/24/2016  1:44:08.231 WiFiLocationServiceManagerIsLocationValid: cachedLocationTimeout 120.000000 location age 847.231118secs, lifeSpan -1.000000 accuracy 5.000000(highAccReq 1), isValid 1
+12/24/2016  1:44:08.231 WiFiLocationServiceManagerIsLocationValid: cachedLocationTimeout 120.000000 location age 847.231171secs, lifeSpan -1.000000 accuracy 5.000000(highAccReq 0), isValid 1
+12/24/2016  1:44:08.231 __WiFiLocationServiceManagerProcessLocationAvailableEvent: isValidHighAccuracyLocation 1,  isValidLowAccuracyLocation 1
+12/24/2016  1:44:08.231 __WiFiLocationServiceManagerProcessLocationAvailableEvent: give low accuracy callback
+12/24/2016  1:44:08.232 __WiFiLocaleManagerGetLocaleFromLocation: <+45.82155107,+22.10762467> +/- 5.00m (speed 18.84 mps / course 48.87) @ 12/24/16, 1:30:01 AM Eastern European Standard Time
+12/24/2016  1:44:08.232 locale from bounding box 
+12/24/2016  1:44:08.232 new locale:  , locale: 
+12/24/2016  1:44:08.232 Stopping Low Accuracy Location Monitoring
+12/24/2016  1:44:08.232 CLMonitoring is already stopped
+12/24/2016  1:44:08.232 Stopping Low Accuracy Location Monitoring
+12/24/2016  1:44:08.232 CLMonitoring is already stopped
+12/24/2016  1:44:08.232 __WiFiLocationServiceManagerEventCallback, got cb dict {
+    eventType = 0;
+    location = "<+45.82155107,+22.10762467> +/- 5.00m (speed 18.84 mps / course 48.87) @ 12/24/16, 1:30:01 AM Eastern European Standard Time";
+}
+12/24/2016  1:44:08.233 WiFiLocationServiceManagerIsLocationValid: cachedLocationTimeout 120.000000 location age 847.233112secs, lifeSpan -1.000000 accuracy 5.000000(highAccReq 1), isValid 1
+12/24/2016  1:44:08.233 WiFiLocationServiceManagerIsLocationValid: cachedLocationTimeout 120.000000 location age 847.233164secs, lifeSpan -1.000000 accuracy 5.000000(highAccReq 0), isValid 1
+12/24/2016  1:44:08.233 __WiFiLocationServiceManagerProcessLocationAvailableEvent: isValidHighAccuracyLocation 1,  isValidLowAccuracyLocation 1
+12/24/2016  1:45:30.682 __WiFiDeviceProcessSTALeaveEvent: staNum 2
+12/24/2016  1:45:30.686 MIS STA Disassociated: 2 associated clients
+12/24/2016  1:45:30.691 WiFiDeviceManagerSetMISMaxStaNumber: Additional tethering clients allowed: 3
+12/24/2016  1:45:30.693 MIS is already Enabled on ap1
+12/24/2016  1:45:30.696 MIS Discovery is Disabled
+12/24/2016  1:45:32.222 __WiFiDeviceProcessDumpLogsEvent: Dump logs event received, dumped wifid log buffer to file

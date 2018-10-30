@@ -1,0 +1,8 @@
+12/26/2016 13:15:24.899 __WiFiLocationServiceManagerEventCallback, got cb dict {
+    eventType = 0;
+    location = "<+44.42589450,+26.13611506> +/- 65.00m (speed -1.00 mps / course -1.00) @ 12/26/16, 1:14:25 PM Eastern European Standard Time";
+}
+12/26/2016 13:15:24.902 WiFiLocationServiceManagerIsLocationValid: cachedLocationTimeout 120.000000 location age 59.175114secs, lifeSpan -1.000000 accuracy 65.000000(highAccReq 1), isValid 1
+12/26/2016 13:15:24.902 WiFiLocationServiceManagerIsLocationValid: cachedLocationTimeout 120.000000 location age 59.175163secs, lifeSpan -1.000000 accuracy 65.000000(highAccReq 0), isValid 1
+12/26/2016 13:15:24.902 __WiFiLocationServiceManagerProcessLocationAvailableEvent: isValidHighAccuracyLocation 1,  isValidLowAccuracyLocation 1
+12/26/2016 13:15:24.902 __WiFiDeviceProcessDumpLogsEvent: Dump logs event received, dumped wifid log buffer to file

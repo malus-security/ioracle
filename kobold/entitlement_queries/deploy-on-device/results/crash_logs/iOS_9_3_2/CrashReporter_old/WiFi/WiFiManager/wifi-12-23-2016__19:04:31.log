@@ -1,0 +1,146 @@
+12/23/2016 19:00:44.584 WiFiLocaleManagerCheckLocale: trying to determine locale...
+12/23/2016 19:00:44.584 WiFiManagerCoreLocationGetCachedLocation: getting cached location...
+12/23/2016 19:00:44.585 __WiFiLocaleManagerGetLocaleFromMcc: finding iso country code for mcc 232 ....
+12/23/2016 19:00:44.586 WiFiLocationServiceManagerIsLocationValid: cachedLocationTimeout 120.000000 location age 120.003759secs, lifeSpan -1.000000 accuracy 10.000000(highAccReq 0), isValid 1
+12/23/2016 19:00:44.586 WiFiLocationServiceManagerStartLowAccuracyMonitoring: Cached low accuracy location is valid
+12/23/2016 19:00:44.586 WiFiLocationServiceManagerIsLocationValid: cachedLocationTimeout 120.000000 location age 120.003880secs, lifeSpan -1.000000 accuracy 10.000000(highAccReq 1), isValid 1
+12/23/2016 19:00:44.586 WiFiLocationServiceManagerIsLocationValid: cachedLocationTimeout 120.000000 location age 120.003932secs, lifeSpan -1.000000 accuracy 10.000000(highAccReq 0), isValid 1
+12/23/2016 19:00:44.586 __WiFiLocationServiceManagerProcessLocationAvailableEvent: isValidHighAccuracyLocation 1,  isValidLowAccuracyLocation 1
+12/23/2016 19:00:44.586 __WiFiLocationServiceManagerProcessLocationAvailableEvent: give low accuracy callback
+12/23/2016 19:00:44.587 __WiFiLocaleManagerGetLocaleFromLocation: <+47.93827834,+16.97658808> +/- 10.00m (speed 35.86 mps / course 107.58) @ 12/23/16, 6:58:44 PM Central European Standard Time
+12/23/2016 19:00:44.587 locale from bounding box 
+12/23/2016 19:00:44.587 new locale:  , locale: 
+12/23/2016 19:00:44.587 Stopping Low Accuracy Location Monitoring
+12/23/2016 19:00:44.587 CLMonitoring is already stopped
+12/23/2016 19:00:44.587 Stopping Low Accuracy Location Monitoring
+12/23/2016 19:00:44.587 CLMonitoring is already stopped
+12/23/2016 19:00:44.587 __WiFiLocationServiceManagerEventCallback, got cb dict {
+    eventType = 0;
+    location = "<+47.92450259,+17.02483339> +/- 10.00m (speed 34.30 mps / course 91.05) @ 12/23/16, 7:00:44 PM Central European Standard Time";
+}
+12/23/2016 19:00:44.588 WiFiLocationServiceManagerIsLocationValid: cachedLocationTimeout 120.000000 location age 0.001242secs, lifeSpan -1.000000 accuracy 10.000000(highAccReq 1), isValid 1
+12/23/2016 19:00:44.588 WiFiLocationServiceManagerIsLocationValid: cachedLocationTimeout 120.000000 location age 0.001299secs, lifeSpan -1.000000 accuracy 10.000000(highAccReq 0), isValid 1
+12/23/2016 19:00:44.588 __WiFiLocationServiceManagerProcessLocationAvailableEvent: isValidHighAccuracyLocation 1,  isValidLowAccuracyLocation 1
+12/23/2016 19:01:21.458 __WiFiDeviceProcessSTAArriveEvent: staNum 4
+12/23/2016 19:01:21.458 WiFiAWDManagerSubmitMetric: metric container could not be generated for metric id <0x90006>
+12/23/2016 19:01:21.458 MIS STA Associated: 4 associated clients
+12/23/2016 19:01:21.466 WiFiDeviceManagerSetMISMaxStaNumber: Additional tethering clients allowed: 1
+12/23/2016 19:01:21.468 WiFiAWDManagerSubmitMetric: metric container could not be generated for metric id <0x90005>
+12/23/2016 19:01:21.468 MIS is already Enabled on ap1
+12/23/2016 19:01:21.472 MIS Discovery is Disabled
+12/23/2016 19:01:24.993 __WiFiDeviceProcessSTALeaveEvent: staNum 3
+12/23/2016 19:01:25.000 MIS STA Disassociated: 3 associated clients
+12/23/2016 19:01:25.014 WiFiDeviceManagerSetMISMaxStaNumber: Additional tethering clients allowed: 2
+12/23/2016 19:01:25.029 MIS is already Enabled on ap1
+12/23/2016 19:01:25.033 MIS Discovery is Disabled
+12/23/2016 19:01:26.967 WoW is Disabled, 0 WoW Clients
+12/23/2016 19:02:05.526 Async scan requested by "locationd" for 1 iterations with maxage=0 priority normal on en0
+12/23/2016 19:02:05.526 Enqueuing command type: "Scan" pending commands: 0
+12/23/2016 19:02:05.526 Dequeuing command type: "Scan" pending commands: 0
+12/23/2016 19:02:05.526 Attempting Apple80211ScanAsync on en0
+12/23/2016 19:02:05.684 Completed Apple80211ScanAsync on en0 (0x0)
+12/23/2016 19:02:05.684 Async scan request completed for "locationd" (0)
+12/23/2016 19:02:05.686 Async scan requested by "locationd" for 1 iterations with maxage=0 priority normal on en0
+12/23/2016 19:02:05.686 Enqueuing command type: "Scan" pending commands: 0
+12/23/2016 19:02:05.686 Dequeuing command type: "Scan" pending commands: 0
+12/23/2016 19:02:05.686 Attempting Apple80211ScanAsync on en0
+12/23/2016 19:02:06.069 Completed Apple80211ScanAsync on en0 (0x0)
+12/23/2016 19:02:06.070 Async scan request completed for "locationd" (0)
+12/23/2016 19:02:09.939 IPv4 Primary interface is pdp_ip0 and IPv6 Primary Interface is (null)
+12/23/2016 19:02:09.967 IPv4 Primary interface is pdp_ip0 and IPv6 Primary Interface is (null)
+12/23/2016 19:02:10.058 Low bw cellular data available, so WiFi would stay connected under low signal quality
+12/23/2016 19:02:10.058 WiFiLQAMgrSetWiFiFallBackPref: LQAManager WiFiFallBackPreference enabled 
+12/23/2016 19:02:10.062 Client apsd set type to background application
+12/23/2016 19:02:10.062 __WiFiManagerSetEnableState: state TRUE, manager->enable.setting TRUE, manager->unlockedSinceBoot TRUE
+12/23/2016 19:02:10.064 BG Application: Not Present, BG Daemon: Present. Daemons: assistantd mediaserverd apsd 
+12/23/2016 19:02:10.064 Auto association attempt canceled because MIS is enabled. MIS client count: wifi=3 bt=0
+12/23/2016 19:02:10.064 Enable WoW requested by "apsd"
+12/23/2016 19:02:10.065 WoW Capable = YES, Attempting to enable WoW and disable LPAS 
+12/23/2016 19:02:10.065 Setting WoW params to <CFBasicHash 0x14cd7edc0 [0x1a0950150]>{type = immutable dict, count = 3,
+entries =>
+	0 : <CFString 0x100175960 [0x1a0950150]>{contents = "IO80211InterfaceEnableLowPwrAssocMode"} = <CFBoolean 0x1a09506d8 [0x1a0950150]>{value = false}
+	1 : <CFString 0x100175940 [0x1a0950150]>{contents = "IO80211InterfaceEnableWoW"} = <CFBoolean 0x1a09506c8 [0x1a0950150]>{value = true}
+	2 : <CFString 0x100185ae0 [0x1a0950150]>{contents = "IO80211InterfaceEnableWoWOnCaptive"} = <CFBoolean 0x1a09506d8 [0x1a0950150]>{value = false}
+}
+
+12/23/2016 19:02:10.065 WiFiDeviceRequestAssociatedSleep: ActiveDuringSleepRequested is already removed ((null)).
+12/23/2016 19:02:10.065 WoW Enabled by 1 Clients, lpas is Disabled, WoW Override is Disabled, Captive Disabled
+12/23/2016 19:02:10.066 Unable to dispatch WowStateChanged message to client MobileMail (268435460)
+12/23/2016 19:02:10.066 Unable to dispatch WowStateChanged message to client dataaccessd (268435460)
+12/23/2016 19:02:10.066 Unable to dispatch WowStateChanged message to client itunesstored (268435460)
+12/23/2016 19:02:10.067 Unable to dispatch WowStateChanged message to client mediaserverd (268435460)
+12/23/2016 19:02:10.067 Client MobileMail set type to background application
+12/23/2016 19:02:10.067 __WiFiManagerSetEnableState: state TRUE, manager->enable.setting TRUE, manager->unlockedSinceBoot TRUE
+12/23/2016 19:02:10.068 BG Application: Not Present, BG Daemon: Present. Daemons: MobileMail assistantd mediaserverd apsd 
+12/23/2016 19:02:10.068 Auto association attempt canceled because MIS is enabled. MIS client count: wifi=3 bt=0
+12/23/2016 19:02:10.068 apsd[273] is a wow client
+12/23/2016 19:02:10.068 WoW is Enabled, 1 WoW Clients
+12/23/2016 19:02:10.068 apsd[273] is a wow client
+12/23/2016 19:02:10.068 WoW is Enabled, 1 WoW Clients
+12/23/2016 19:02:10.069 apsd[273] is a wow client
+12/23/2016 19:02:10.069 WoW is Enabled, 1 WoW Clients
+12/23/2016 19:02:11.607 High bw cellular data available, so WiFi would disconnect under low signal quality
+12/23/2016 19:02:11.607 WiFiLQAMgrSetWiFiFallBackPref: LQAManager WiFiFallBackPreference disabled 
+12/23/2016 19:02:11.695 IPv4 Primary interface is pdp_ip0 and IPv6 Primary Interface is (null)
+12/23/2016 19:02:11.718 IPv4 Primary interface is pdp_ip0 and IPv6 Primary Interface is (null)
+12/23/2016 19:02:20.075 scanCache: Purging scan cache
+12/23/2016 19:02:44.584 WiFiLocaleManagerCheckLocale: trying to determine locale...
+12/23/2016 19:02:44.584 WiFiManagerCoreLocationGetCachedLocation: getting cached location...
+12/23/2016 19:02:44.586 __WiFiLocaleManagerGetLocaleFromMcc: finding iso country code for mcc 232 ....
+12/23/2016 19:02:44.586 WiFiLocationServiceManagerIsLocationValid: cachedLocationTimeout 120.000000 location age 119.998952secs, lifeSpan -1.000000 accuracy 10.000000(highAccReq 0), isValid 1
+12/23/2016 19:02:44.586 WiFiLocationServiceManagerStartLowAccuracyMonitoring: Cached low accuracy location is valid
+12/23/2016 19:02:44.586 WiFiLocationServiceManagerIsLocationValid: cachedLocationTimeout 120.000000 location age 119.999068secs, lifeSpan -1.000000 accuracy 10.000000(highAccReq 1), isValid 1
+12/23/2016 19:02:44.586 WiFiLocationServiceManagerIsLocationValid: cachedLocationTimeout 120.000000 location age 119.999119secs, lifeSpan -1.000000 accuracy 10.000000(highAccReq 0), isValid 1
+12/23/2016 19:02:44.586 __WiFiLocationServiceManagerProcessLocationAvailableEvent: isValidHighAccuracyLocation 1,  isValidLowAccuracyLocation 1
+12/23/2016 19:02:44.586 __WiFiLocationServiceManagerProcessLocationAvailableEvent: give low accuracy callback
+12/23/2016 19:02:44.587 __WiFiLocaleManagerGetLocaleFromLocation: <+47.92450259,+17.02483339> +/- 10.00m (speed 34.30 mps / course 91.05) @ 12/23/16, 7:00:44 PM Central European Standard Time
+12/23/2016 19:02:44.587 locale from bounding box 
+12/23/2016 19:02:44.587 new locale:  , locale: 
+12/23/2016 19:02:44.587 Stopping Low Accuracy Location Monitoring
+12/23/2016 19:02:44.587 CLMonitoring is already stopped
+12/23/2016 19:02:44.587 Stopping Low Accuracy Location Monitoring
+12/23/2016 19:02:44.587 CLMonitoring is already stopped
+12/23/2016 19:02:44.587 __WiFiLocationServiceManagerEventCallback, got cb dict {
+    eventType = 0;
+    location = "<+47.92200789,+17.07635276> +/- 10.00m (speed 23.31 mps / course 60.47) @ 12/23/16, 7:02:44 PM Central European Standard Time";
+}
+12/23/2016 19:02:44.588 WiFiLocationServiceManagerIsLocationValid: cachedLocationTimeout 120.000000 location age 0.001214secs, lifeSpan -1.000000 accuracy 10.000000(highAccReq 1), isValid 1
+12/23/2016 19:02:44.588 WiFiLocationServiceManagerIsLocationValid: cachedLocationTimeout 120.000000 location age 0.001270secs, lifeSpan -1.000000 accuracy 10.000000(highAccReq 0), isValid 1
+12/23/2016 19:02:44.588 __WiFiLocationServiceManagerProcessLocationAvailableEvent: isValidHighAccuracyLocation 1,  isValidLowAccuracyLocation 1
+12/23/2016 19:02:55.770 __WiFiDeviceProcessSTAArriveEvent: staNum 4
+12/23/2016 19:02:55.770 WiFiAWDManagerSubmitMetric: metric container could not be generated for metric id <0x90006>
+12/23/2016 19:02:55.770 MIS STA Associated: 4 associated clients
+12/23/2016 19:02:55.782 WiFiDeviceManagerSetMISMaxStaNumber: Additional tethering clients allowed: 1
+12/23/2016 19:02:55.795 WiFiAWDManagerSubmitMetric: metric container could not be generated for metric id <0x90005>
+12/23/2016 19:02:55.795 MIS is already Enabled on ap1
+12/23/2016 19:02:55.797 MIS Discovery is Disabled
+12/23/2016 19:03:11.712 Disable WoW requested by "apsd"
+12/23/2016 19:03:11.713 WoW Capable = YES, Attempting to disable WoW and enable LPAS 
+12/23/2016 19:03:11.713 Setting WoW params to <CFBasicHash 0x14cd8a3f0 [0x1a0950150]>{type = immutable dict, count = 3,
+entries =>
+	0 : <CFString 0x100175960 [0x1a0950150]>{contents = "IO80211InterfaceEnableLowPwrAssocMode"} = <CFBoolean 0x1a09506c8 [0x1a0950150]>{value = true}
+	1 : <CFString 0x100175940 [0x1a0950150]>{contents = "IO80211InterfaceEnableWoW"} = <CFBoolean 0x1a09506d8 [0x1a0950150]>{value = false}
+	2 : <CFString 0x100185ae0 [0x1a0950150]>{contents = "IO80211InterfaceEnableWoWOnCaptive"} = <CFBoolean 0x1a09506d8 [0x1a0950150]>{value = false}
+}
+
+12/23/2016 19:03:11.715 WiFiDeviceRequestAssociatedSleep: ActiveDuringSleepRequested is already removed ((null)).
+12/23/2016 19:03:11.715 WoW Disabled, 0 WoW Clients, lpas is Enabled, WoW Override is Disabled, Captive Disabled
+12/23/2016 19:03:11.715 Unable to dispatch WowStateChanged message to client MobileMail (268435460)
+12/23/2016 19:03:11.715 Unable to dispatch WowStateChanged message to client dataaccessd (268435460)
+12/23/2016 19:03:11.716 Unable to dispatch WowStateChanged message to client itunesstored (268435460)
+12/23/2016 19:03:11.716 Unable to dispatch WowStateChanged message to client mediaserverd (268435460)
+12/23/2016 19:03:11.717 WoW is Disabled, 0 WoW Clients
+12/23/2016 19:03:11.717 WoW is Disabled, 0 WoW Clients
+12/23/2016 19:03:11.720 WoW is Disabled, 0 WoW Clients
+12/23/2016 19:03:15.189 __WiFiDeviceProcessSTALeaveEvent: staNum 3
+12/23/2016 19:03:15.196 MIS STA Disassociated: 3 associated clients
+12/23/2016 19:03:15.201 WiFiDeviceManagerSetMISMaxStaNumber: Additional tethering clients allowed: 2
+12/23/2016 19:03:15.204 MIS is already Enabled on ap1
+12/23/2016 19:03:15.206 MIS Discovery is Disabled
+12/23/2016 19:03:16.656 Client MobileMail set type to normal application
+12/23/2016 19:03:16.656 __WiFiManagerSetEnableState: state TRUE, manager->enable.setting TRUE, manager->unlockedSinceBoot TRUE
+12/23/2016 19:03:16.656 BG Application: Not Present, BG Daemon: Present. Daemons: assistantd mediaserverd apsd 
+12/23/2016 19:03:16.717 Client apsd set type to normal application
+12/23/2016 19:03:16.717 __WiFiManagerSetEnableState: state TRUE, manager->enable.setting TRUE, manager->unlockedSinceBoot TRUE
+12/23/2016 19:03:16.717 BG Application: Not Present, BG Daemon: Present. Daemons: assistantd mediaserverd 
+12/23/2016 19:04:31.663 __WiFiDeviceProcessDumpLogsEvent: Dump logs event received, dumped wifid log buffer to file

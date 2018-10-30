@@ -1,0 +1,2236 @@
+ 1/15/2017  1:04:53.030 Power stats update: Type 0x5 UnassociatedSleepDur 0 AssociatedSleepDur 161476 TotalDur 301096 RoamDur 0
+ 1/15/2017  1:04:53.031 WiFiAWDManagerSubmitMetric: metric container could not be generated for metric id <0x90010>
+ 1/15/2017  1:04:53.031 __WiFiLQAMgrLogStats: Rssi: -72 Cca: 0 TxPer: 0.0% (28) BcnPer: 0.8% (613) RxFrms 42 TxRate: 39000 RxRate: 58500
+ 1/15/2017  1:04:53.041 __WiFiDeviceCopyLinkChangedSubReasonString: Apple80211ReturnToString failed 1
+ 1/15/2017  1:04:53.041 __WiFiDeviceProcessDriverAvailableEvent: driver availability true, reason Initializing(0xe0821803), subreason (null)(0x0)
+ 1/15/2017  1:04:53.041 __WiFiManagerDispatchDeviceAvailable: driver availability true
+
+ 1/15/2017  1:04:53.042 Unable to dispatch message to client MessagesViewServ (268435460)
+ 1/15/2017  1:04:53.043 __WiFiDeviceManagerAutoAssociate: Already connected to DIGI-146A.
+ 1/15/2017  1:04:53.043 WiFiAWDManagerSubmitMetric: metric container could not be generated for metric id <0x9000e>
+ 1/15/2017  1:04:53.044 __WiFiDeviceManagerAutoAssociate: Already connected to DIGI-146A.
+ 1/15/2017  1:04:53.045 No Change in Background Scan Networks, Skip Re-Programming Background Scan
+
+ 1/15/2017  1:04:53.057 __WiFiDeviceManagerBlackListNetworkCallback: Processing BlackList Network Event
+ 1/15/2017  1:04:53.058 __WiFiDeviceManagerBlackListNetworkCallback: Blacklisting DIGI-146A for Background Scan
+ 1/15/2017  1:04:53.059 __CreateBGScanRequest Hotspot Orange Mobile Wi-Fi added to BGScan List 
+ 1/15/2017  1:04:53.059 Preparing background scan request for "eduroam" "PRECIS" "UPC5493113" "TP-LINK_Extender_2.4GHz" "UPC2300204" "G3_7030" "eg304" "eMAG" "Orange Mobile Wi-Fi" Background Scan Caching is Disabled
+ 1/15/2017  1:04:53.108 __WiFiManagerCellularTransmitCallback_block_invoke: Cellular Transmit Started = FALSE
+ 1/15/2017  1:04:53.124 __WiFiDeviceCheckForIPRenewalWakeupSupport: State:/Network/Interface/en0/ActiveDuringSleepSupported = FALSE
+ 1/15/2017  1:04:53.461 WoW is Disabled, 0 WoW Clients
+ 1/15/2017  1:04:58.150 Received kIOMessageSystemWillSleep
+ 1/15/2017  1:04:58.150 System Sleep notification, Disabling auto-join
+ 1/15/2017  1:04:58.150 __WiFiManagerSetEnableState: state FALSE, manager->enable.setting TRUE, manager->unlockedSinceBoot TRUE
+ 1/15/2017  1:04:58.150 Disabling automatic association
+ 1/15/2017  1:04:58.182 WoW is Disabled, 0 WoW Clients
+ 1/15/2017  1:04:58.300 __WiFiDeviceManagerAwdlAvailableCallback: AWDL availability changed to FALSE
+ 1/15/2017  1:04:58.300 Creating client for "configd"
+ 1/15/2017  1:04:58.301 __WiFiDeviceCopyLinkChangedSubReasonString: Apple80211ReturnToString failed 1
+ 1/15/2017  1:04:58.301 __WiFiDeviceProcessDriverAvailableEvent: driver availability false, reason PowerOff(0xe0821804), subreason (null)(0x0)
+ 1/15/2017  1:04:58.301 __WiFiManagerDispatchDeviceAvailable: driver availability false
+
+ 1/15/2017  1:04:58.302 Unable to dispatch message to client MessagesViewServ (268435460)
+ 1/15/2017  1:04:58.302 WiFiAWDManagerSubmitMetric: metric container could not be generated for metric id <0x9000e>
+ 1/15/2017  1:04:58.302 __WiFiDeviceProcessLinkEvent: isLinkDown 1
+ 1/15/2017  1:04:58.303 Unable to dispatch message to client MessagesViewServ (268435460)
+ 1/15/2017  1:04:58.304 -[WiFiIDSSyncEngine currentNetworkChanged]: <0x16e12f000>, role 1, currentNetwork (null)
+ 1/15/2017  1:04:58.304 -[WiFiIDSSyncEngine currentNetworkChanged]: adjusted waitForReAssociationTimer <CFRunLoopTimer 0x14ce6ecf0 [0x1a0950150]>{valid = Yes, firing = No, interval = 819052854, tolerance = 0, next fire date = 506127928 (29.999942 @ 10023108205924), callout = (NSTimer) [WiFiIDSSyncEngine companionReAssociationWaitTimerFired:] (0x18292cfe0 / 0x1000e1010) (/usr/sbin/wifid), context = <CFRunLoopTimer context 0x14ce5c520>}
+ 1/15/2017  1:35:13.248 Total connection time to DIGI-146A 1550352.768470
+ 1/15/2017  1:35:13.272 WiFiDeviceManagerSetNetworks: Adding HS20 Account: 
+Domain name orange.ro
+3GPP MCC&MNC 226F10 
+Friendly Operator Name Orange
+ 1/15/2017  1:35:13.272 __WiFiDeviceManagerPrepareHS20Queries: created queries <CFArray 0x14cef6190 [0x1a0950150]>{type = mutable-small, count = 3, values = (
+	0 : <CFNumber 0xb0000000000010c1 [0x1a0950150]>{value = +268, type = kCFNumberSInt16Type}
+	1 : <CFNumber 0xb000000000001081 [0x1a0950150]>{value = +264, type = kCFNumberSInt16Type}
+	2 : <CFNumber 0xb000000000000031 [0x1a0950150]>{value = +3, type = kCFNumberSInt16Type}
+)}
+ 1/15/2017  1:35:13.272 Auto association attempt canceled because auto join is disabled.
+ 1/15/2017  1:35:13.274 No Change in Background Scan Networks, Skip Re-Programming Background Scan
+
+ 1/15/2017  1:35:13.274 Auto association attempt canceled because auto join is disabled.
+ 1/15/2017  1:35:13.275 __WiFiDeviceManagerSetInterfaceRank: setting interface rank kSCNetworkServicePrimaryRankDefault
+ 1/15/2017  1:35:13.275 WiFiDeviceRequestAssociatedSleep: ActiveDuringSleepRequested is already removed ((null)).
+ 1/15/2017  1:35:13.280 WiFiAWDManagerSubmitMetric: metric container could not be generated for metric id <0x90009>
+ 1/15/2017  1:35:13.280 Link went down: isInVoluntary 0, reason Unknown(4), subreason 0, rssi -70
+ 1/15/2017  1:35:13.280 __WiFiDeviceResetCCAHistory
+ 1/15/2017  1:35:13.280 __WiFiDeviceResetRssiHistory
+ 1/15/2017  1:35:13.288 Received kIOMessageSystemWillPowerOn
+ 1/15/2017  1:35:13.288 System wake reason: AOP.ExternalReq rtc
+ 1/15/2017  1:35:13.288 System Powered ON notification Re-enabling auto-join
+ 1/15/2017  1:35:13.288 __WiFiManagerSetEnableState: state TRUE, manager->enable.setting TRUE, manager->unlockedSinceBoot TRUE
+ 1/15/2017  1:35:13.288 Enabling automatic association
+ 1/15/2017  1:35:13.291 __WiFiDeviceManagerStateMachineRun: current state: Idle
+ 1/15/2017  1:35:13.291 Attempting multi-stage auto join mStageAutoJoinAttempts=0
+ 1/15/2017  1:35:13.291 Starting multi-stage auto join sequence
+ 1/15/2017  1:35:13.291 multi-stage auto-join: Scanning for previous network DIGI-146A on channel 1
+ 1/15/2017  1:35:13.291 Performing auto-join broadcast scan with a modified dwell time of 110ms on channels: 1 
+ 1/15/2017  1:35:13.291 Enqueuing command type: "Scan" pending commands: 0
+ 1/15/2017  1:35:13.291 WiFiLocaleManagerCheckLocale: location service or wifi is off, set locale to default
+ 1/15/2017  1:35:13.291 new locale:  , locale: 
+ 1/15/2017  1:35:13.292 Dequeuing command type: "Scan" pending commands: 0
+ 1/15/2017  1:35:13.292 Attempting Apple80211ScanAsync on en0
+ 1/15/2017  1:35:13.350 WiFiDeviceManagerSetNetworks: Adding HS20 Account: 
+Domain name orange.ro
+3GPP MCC&MNC 226F10 
+Friendly Operator Name Orange
+ 1/15/2017  1:35:13.352 __WiFiDeviceManagerPrepareHS20Queries: created queries <CFArray 0x14cef6190 [0x1a0950150]>{type = mutable-small, count = 3, values = (
+	0 : <CFNumber 0xb0000000000010c1 [0x1a0950150]>{value = +268, type = kCFNumberSInt16Type}
+	1 : <CFNumber 0xb000000000001081 [0x1a0950150]>{value = +264, type = kCFNumberSInt16Type}
+	2 : <CFNumber 0xb000000000000031 [0x1a0950150]>{value = +3, type = kCFNumberSInt16Type}
+)}
+ 1/15/2017  1:35:13.354 Auto association attempt canceled because auto join state is Scanning Previous Network Channel.
+ 1/15/2017  1:35:13.355 No Change in Background Scan Networks, Skip Re-Programming Background Scan
+
+ 1/15/2017  1:35:13.358 __WiFiDeviceCopyLinkChangedSubReasonString: Apple80211ReturnToString failed 1
+ 1/15/2017  1:35:13.358 __WiFiDeviceProcessDriverAvailableEvent: driver availability true, reason Initializing(0xe0821803), subreason (null)(0x0)
+ 1/15/2017  1:35:13.358 __WiFiManagerDispatchDeviceAvailable: driver availability true
+
+ 1/15/2017  1:35:13.361 Unable to dispatch message to client MessagesViewServ (268435460)
+ 1/15/2017  1:35:13.362 Auto association attempt canceled because auto join state is Scanning Previous Network Channel.
+ 1/15/2017  1:35:13.362 WiFiAWDManagerSubmitMetric: metric container could not be generated for metric id <0x9000e>
+ 1/15/2017  1:35:13.370 __WiFiManagerCellularTransmitCallback_block_invoke: Cellular Transmit Started = FALSE
+ 1/15/2017  1:35:13.384 Auto association attempt canceled because auto join state is Scanning Previous Network Channel.
+ 1/15/2017  1:35:13.385 No Change in Background Scan Networks, Skip Re-Programming Background Scan
+
+ 1/15/2017  1:35:13.456 Completed Apple80211ScanAsync on en0 (0x0)
+ 1/15/2017  1:35:13.467 Auto join scan completed (0) with current state: Scanning Previous Network Channel
+ 1/15/2017  1:35:13.467 __WiFiDeviceManagerStateMachineRun: current state: Scanning Previous Network Channel
+ 1/15/2017  1:35:13.467 Scanning Previous Network Channel found: DIGI-146A
+ 1/15/2017  1:35:13.467 Attempting auto-join for networks in following order: DIGI-146A(W)
+ 1/15/2017  1:35:13.467 Autojoin is processing network 1 of 1 candidates
+ 1/15/2017  1:35:13.467 Attempting auto join association of DIGI-146A
+ 1/15/2017  1:35:13.503 Enqueuing command type: "Association" pending commands: 1
+ 1/15/2017  1:35:13.503 Dequeuing command type: "Association" pending commands: 0
+ 1/15/2017  1:35:13.503 Attempting Apple80211AssociateAsync
+ 1/15/2017  1:35:13.611 Attempting to join WPA network: DIGI-146A
+ 1/15/2017  1:35:13.968 __WiFiManagerCellularTransmitCallback_block_invoke: Cellular Transmit Started = TRUE
+ 1/15/2017  1:35:13.970 MIS state is Disabled
+ 1/15/2017  1:35:13.970 MIS state queried by "SpringBoard" is Disable
+ 1/15/2017  1:35:13.970 MIS state is Disabled
+ 1/15/2017  1:35:13.970 MIS state queried by "UserEventAgent" is Disable
+ 1/15/2017  1:35:13.971 MIS state is Disabled
+ 1/15/2017  1:35:13.971 MIS state queried by "locationd" is Disable
+ 1/15/2017  1:35:13.971 MIS state is Disabled
+ 1/15/2017  1:35:13.971 MIS state queried by "identityservices" is Disable
+ 1/15/2017  1:35:13.971 MIS state is Disabled
+ 1/15/2017  1:35:13.971 MIS state queried by "apsd" is Disable
+ 1/15/2017  1:35:13.971 MIS state is Disabled
+ 1/15/2017  1:35:13.972 MIS state queried by "imagent" is Disable
+ 1/15/2017  1:35:13.972 MIS state is Disabled
+ 1/15/2017  1:35:13.972 MIS state queried by "InCallService" is Disable
+ 1/15/2017  1:35:13.972 MIS state is Disabled
+ 1/15/2017  1:35:13.972 MIS state queried by "mediaserverd" is Disable
+ 1/15/2017  1:35:13.973 MIS state is Disabled
+ 1/15/2017  1:35:13.973 MIS state queried by "MobileMail" is Disable
+ 1/15/2017  1:35:13.973 configd requesting removal of BGScan networks
+ 1/15/2017  1:35:13.974 No Change in Background Scan Networks, Skip Re-Programming Background Scan
+
+ 1/15/2017  1:35:13.974 __WiFiManagerSetEnableState: state TRUE, manager->enable.setting TRUE, manager->unlockedSinceBoot TRUE
+ 1/15/2017  1:35:13.974 Removing client for "configd"
+ 1/15/2017  1:35:13.975 __WiFiDeviceManagerAwdlAvailableCallback: AWDL availability changed to TRUE
+ 1/15/2017  1:35:13.976 IPV4 State change for en0
+ 1/15/2017  1:35:14.041 IPV6 State change for en0
+ 1/15/2017  1:35:14.083 IPv4 Primary interface is pdp_ip0 and IPv6 Primary Interface is (null)
+ 1/15/2017  1:35:14.085 IPv4 Primary interface is pdp_ip0 and IPv6 Primary Interface is (null)
+ 1/15/2017  1:35:14.087 __WiFiDeviceProcessLinkEvent: isLinkDown 0
+ 1/15/2017  1:35:14.095 Unable to dispatch message to client MessagesViewServ (268435460)
+ 1/15/2017  1:35:14.097 __WiFiDeviceManagerSetInterfaceRank: setting interface rank kSCNetworkServicePrimaryRankDefault
+ 1/15/2017  1:35:14.098 __WiFiDeviceManagerEvaluateAPEnvironment: Getting AP environment for DIGI-146A. Learning period 259200 secs Expiry period 2592000 secs
+ 1/15/2017  1:35:14.098 __WiFiDeviceManagerEvaluateAPEnvironment: AP environment is 2 for DIGI-146A(4:bd:70:a4:e3:8)
+ 1/15/2017  1:35:14.098 WiFiDeviceSetRoamParams: setting roam profile to type 1
+ 1/15/2017  1:35:14.099 __WiFiDeviceManagerEvaluateAPEnvironment: Getting AP environment for DIGI-146A. Learning period 259200 secs Expiry period 2592000 secs
+ 1/15/2017  1:35:14.099 __WiFiDeviceManagerEvaluateAPEnvironment: AP environment is 2 for DIGI-146A(4:bd:70:a4:e3:8)
+ 1/15/2017  1:35:14.099 __WiFiLQAMgrSetCurrentNetwork: SSID: DIGI-146A BSSID: 4:bd:70:a4:e3:8 RSSI: -72 ApEnv: 2
+ 1/15/2017  1:35:14.101 WiFiDeviceRequestAssociatedSleep: ActiveDuringSleepRequested is already removed ((null)).
+ 1/15/2017  1:35:14.102 __WiFiDeviceResetCCAHistory
+ 1/15/2017  1:35:14.102 __WiFiDeviceResetRssiHistory
+ 1/15/2017  1:35:14.102 __WiFiLQAMgrLogStats: Rssi: -72 Cca: 0 TxPer: 0.0% (0) BcnPer: 0.0% (0) RxFrms 0 TxRate: 0 RxRate: 0
+ 1/15/2017  1:35:14.103 __WiFiDeviceProcessLinkEvent: Initializing lqm value: rawRssi -72, scaledRssi 0.625487, noise 0, snr 19
+ 1/15/2017  1:35:14.104 __WiFiMetricsManagerPrepareLinkChangeNetworkParams: OUI:04:bd:70 Channel:1(20MHz) Flags:0x8 PhyMode:0x10 Security:0x2 WPA:[Prot:0x2 McastCipher:0x4 UcastCipher:0xc AKM:0x2 Caps:0x0] HT:[Info:0x19fc AMPDU:0x1b TXBF:0x0 Ext:0x0 ASEL:0x0] VHT:[Info:0x0]
+ 1/15/2017  1:35:14.104 WiFiAWDManagerSubmitMetric: metric container could not be generated for metric id <0x90009>
+ 1/15/2017  1:35:14.120 
+Too frequent(0.017960 secs) rssi event from driver, ignoring
+
+ 1/15/2017  1:35:14.123 Completed Apple80211AssociateAsync (0 - 0x0)
+ 1/15/2017  1:35:14.123 Joined: DIGI-146A
+ 1/15/2017  1:35:14.123 Auto join association completed (0) with current state: Associating
+ 1/15/2017  1:35:14.123 __WiFiDeviceManagerStateMachineRun: current state: Associating
+ 1/15/2017  1:35:14.124 __WiFiDeviceManagerProcessAssociationResult: current state: Associating
+ 1/15/2017  1:35:14.124 WiFiNetworkSetKnownBssUsageData: BSS updated - current BSS: 4:bd:70:a4:e3:8 (1)
+ 1/15/2017  1:35:14.124 Removing problematic state for DIGI-146A, reason N/A reasonData=0
+ 1/15/2017  1:35:14.124 problematic networks =  and potentially problematic networks = 
+ 1/15/2017  1:35:14.125 No Change in Background Scan Networks, Skip Re-Programming Background Scan
+
+ 1/15/2017  1:35:14.125 __WiFiManagerDidAssociateCallback: network DIGI-146A, requestedInformation <CFBasicHash 0x14cf5d3d0 [0x1a0950150]>{type = mutable dict, count = 1,
+entries =>
+	2 : <CFString 0x10017e160 [0x1a0950150]>{contents = "reason"} = <CFString 0x100185180 [0x1a0950150]>{contents = "Associating"}
+}
+
+ 1/15/2017  1:35:14.146 WiFiDeviceManagerSetNetworks: Adding HS20 Account: 
+Domain name orange.ro
+3GPP MCC&MNC 226F10 
+Friendly Operator Name Orange
+ 1/15/2017  1:35:14.147 __WiFiDeviceManagerPrepareHS20Queries: created queries <CFArray 0x14cec8af0 [0x1a0950150]>{type = mutable-small, count = 3, values = (
+	0 : <CFNumber 0xb0000000000010c1 [0x1a0950150]>{value = +268, type = kCFNumberSInt16Type}
+	1 : <CFNumber 0xb000000000001081 [0x1a0950150]>{value = +264, type = kCFNumberSInt16Type}
+	2 : <CFNumber 0xb000000000000031 [0x1a0950150]>{value = +3, type = kCFNumberSInt16Type}
+)}
+ 1/15/2017  1:35:14.147 Auto association attempt canceled because auto join state is Associating.
+ 1/15/2017  1:35:14.149 No Change in Background Scan Networks, Skip Re-Programming Background Scan
+
+ 1/15/2017  1:35:14.158 Creating client for "configd"
+ 1/15/2017  1:35:14.230 WiFiDeviceManagerSetNetworks: Adding HS20 Account: 
+Domain name orange.ro
+3GPP MCC&MNC 226F10 
+Friendly Operator Name Orange
+ 1/15/2017  1:35:14.230 __WiFiDeviceManagerPrepareHS20Queries: created queries <CFArray 0x14ce39900 [0x1a0950150]>{type = mutable-small, count = 3, values = (
+	0 : <CFNumber 0xb0000000000010c1 [0x1a0950150]>{value = +268, type = kCFNumberSInt16Type}
+	1 : <CFNumber 0xb000000000001081 [0x1a0950150]>{value = +264, type = kCFNumberSInt16Type}
+	2 : <CFNumber 0xb000000000000031 [0x1a0950150]>{value = +3, type = kCFNumberSInt16Type}
+)}
+ 1/15/2017  1:35:14.231 __WiFiDeviceManagerAutoAssociate: Already connected to DIGI-146A.
+ 1/15/2017  1:35:14.233 No Change in Background Scan Networks, Skip Re-Programming Background Scan
+
+ 1/15/2017  1:35:14.240 MIS state is Disabled
+ 1/15/2017  1:35:14.240 MIS state queried by "nanoregistryd" is Disable
+ 1/15/2017  1:35:14.252 MIS state is Disabled
+ 1/15/2017  1:35:14.253 MIS state queried by "SpringBoard" is Disable
+ 1/15/2017  1:35:14.255 MIS state is Disabled
+ 1/15/2017  1:35:14.255 MIS state queried by "UserEventAgent" is Disable
+ 1/15/2017  1:35:14.259 MIS state is Disabled
+ 1/15/2017  1:35:14.259 MIS state queried by "locationd" is Disable
+ 1/15/2017  1:35:14.261 MIS state is Disabled
+ 1/15/2017  1:35:14.261 MIS state queried by "identityservices" is Disable
+ 1/15/2017  1:35:14.262 MIS state is Disabled
+ 1/15/2017  1:35:14.262 MIS state queried by "apsd" is Disable
+ 1/15/2017  1:35:14.265 MIS state is Disabled
+ 1/15/2017  1:35:14.265 MIS state queried by "imagent" is Disable
+ 1/15/2017  1:35:14.265 MIS state is Disabled
+ 1/15/2017  1:35:14.265 MIS state queried by "InCallService" is Disable
+ 1/15/2017  1:35:14.267 MIS state is Disabled
+ 1/15/2017  1:35:14.267 MIS state queried by "mediaserverd" is Disable
+ 1/15/2017  1:35:14.267 MIS state is Disabled
+ 1/15/2017  1:35:14.267 MIS state queried by "MobileMail" is Disable
+ 1/15/2017  1:35:14.278 WoW is Disabled, 0 WoW Clients
+ 1/15/2017  1:35:14.282 configd requesting removal of BGScan networks
+ 1/15/2017  1:35:14.293 No Change in Background Scan Networks, Skip Re-Programming Background Scan
+
+ 1/15/2017  1:35:14.293 __WiFiManagerSetEnableState: state TRUE, manager->enable.setting TRUE, manager->unlockedSinceBoot TRUE
+ 1/15/2017  1:35:14.293 Removing client for "configd"
+ 1/15/2017  1:35:14.307 IPV4 State change for en0
+ 1/15/2017  1:35:14.308 IP Address: 192.168.100.4
+ 1/15/2017  1:35:14.308 Router IP Address: 192.168.100.1
+ 1/15/2017  1:35:14.309 __WiFiDeviceCheckForIPV4ParamsChange: Setting power mode to kA11PowerProfileDefault
+ 1/15/2017  1:35:14.310 __WiFiManagerIPv4Callback: <en0> [DIGI-146A                               : isHidden=0, isEAP=0, isWPA=1, isWEP=0, type=0] isMainIf? 1, isRoutable? 1
+ 1/15/2017  1:35:14.310 -[WiFiIDSSyncEngine currentNetworkChanged]: <0x16e12f000>, role 1, currentNetwork DIGI-146A                               : isHidden=0, isEAP=0, isWPA=1, isWEP=0, type=0
+ 1/15/2017  1:35:14.310 -[WiFiIDSSyncEngine currentNetworkChanged]: reset waitForReAssociationTimer <CFRunLoopTimer 0x14ce6ecf0 [0x1a0950150]>{valid = Yes, firing = No, interval = 819052854, tolerance = 0, next fire date = 1.32761943e+09 (821489714 @ 12127891987234304), callout = (NSTimer) [WiFiIDSSyncEngine companionReAssociationWaitTimerFired:] (0x18292cfe0 / 0x1000e1010) (/usr/sbin/wifid), context = <CFRunLoopTimer context 0x14ce5c520>}
+ 1/15/2017  1:35:14.310 -[WiFiIDSSyncEngine sendCurrentCompanionNetwork]: autojoinAssistDict {
+    "SSID_STR" = "DIGI-146A";
+}
+ 1/15/2017  1:35:14.311 -[WiFiIDSSyncEngine sendToGizmoOfDataType:]: <0x16e0a3000> ID:(null), data type 1
+ 1/15/2017  1:35:14.311 WiFiLQAMgrSetRouterIpv4Addr: Router IP Address: 192.168.100.1 
+ 1/15/2017  1:35:14.313 __WiFiDeviceCheckForIPV4ParamsChange: configMethod DHCP, leaseExpiryDuration 4320 mins
+ 1/15/2017  1:35:14.313 WiFiAWDManagerSubmitMetric: metric container could not be generated for metric id <0x90007>
+ 1/15/2017  1:35:14.313 Router MAC Address: 04:bd:70:a4:e3:00
+ 1/15/2017  1:35:14.323 MIS state is Disabled
+ 1/15/2017  1:35:14.323 MIS state queried by "nanoregistryd" is Disable
+ 1/15/2017  1:35:14.365 IPv4 Primary interface is pdp_ip0 and IPv6 Primary Interface is (null)
+ 1/15/2017  1:35:14.390 IPv4 Primary interface is en0 and IPv6 Primary Interface is (null)
+ 1/15/2017  1:35:14.432 WoW is Disabled, 0 WoW Clients
+ 1/15/2017  1:35:14.446 WoW is Disabled, 0 WoW Clients
+ 1/15/2017  1:35:14.472 WoW is Disabled, 0 WoW Clients
+ 1/15/2017  1:35:14.636 WoW is Disabled, 0 WoW Clients
+ 1/15/2017  1:35:14.952 Creating client for "CommCenter"
+ 1/15/2017  1:35:14.957 CommCenter requesting removal of BGScan networks
+ 1/15/2017  1:35:14.958 No Change in Background Scan Networks, Skip Re-Programming Background Scan
+
+ 1/15/2017  1:35:14.958 __WiFiManagerSetEnableState: state TRUE, manager->enable.setting TRUE, manager->unlockedSinceBoot TRUE
+ 1/15/2017  1:35:14.958 Removing client for "CommCenter"
+ 1/15/2017  1:35:19.075 __WiFiManagerCellularTransmitCallback_block_invoke: Cellular Transmit Started = FALSE
+ 1/15/2017  1:35:19.250 IPV6 State change for en0
+ 1/15/2017  1:35:19.254 IP Address: 2a02:2f0a:c0a8:1a00:1cc0:d85b:4877:c957
+ 1/15/2017  1:35:19.254 IP Address: 2a02:2f0a:c0a8:1a00:3820:aa7b:e10a:f7fb
+ 1/15/2017  1:35:19.280 IPv4 Primary interface is en0 and IPv6 Primary Interface is en0
+ 1/15/2017  1:35:19.282 IPv4 Primary interface is en0 and IPv6 Primary Interface is en0
+ 1/15/2017  1:35:19.851 IPv4 Primary interface is en0 and IPv6 Primary Interface is en0
+ 1/15/2017  1:35:19.852 IPv4 Primary interface is en0 and IPv6 Primary Interface is en0
+ 1/15/2017  1:35:21.489 Received kIOMessageSystemWillSleep
+ 1/15/2017  1:35:21.489 System Sleep notification, Disabling auto-join
+ 1/15/2017  1:35:21.489 __WiFiManagerSetEnableState: state FALSE, manager->enable.setting TRUE, manager->unlockedSinceBoot TRUE
+ 1/15/2017  1:35:21.489 Disabling automatic association
+ 1/15/2017  1:35:21.528 WoW is Disabled, 0 WoW Clients
+ 1/15/2017  1:35:21.620 __WiFiDeviceManagerAwdlAvailableCallback: AWDL availability changed to FALSE
+ 1/15/2017  1:35:21.620 Creating client for "configd"
+ 1/15/2017  1:35:21.621 __WiFiDeviceCopyLinkChangedSubReasonString: Apple80211ReturnToString failed 1
+ 1/15/2017  1:35:21.621 __WiFiDeviceProcessDriverAvailableEvent: driver availability false, reason PowerOff(0xe0821804), subreason (null)(0x0)
+ 1/15/2017  1:35:21.621 __WiFiManagerDispatchDeviceAvailable: driver availability false
+
+ 1/15/2017  1:35:21.624 Unable to dispatch message to client MessagesViewServ (268435460)
+ 1/15/2017  1:35:21.624 WiFiAWDManagerSubmitMetric: metric container could not be generated for metric id <0x9000e>
+ 1/15/2017  1:35:21.625 __WiFiDeviceProcessLinkEvent: isLinkDown 1
+ 1/15/2017  1:35:21.626 Unable to dispatch message to client MessagesViewServ (268435460)
+ 1/15/2017  1:35:21.627 -[WiFiIDSSyncEngine currentNetworkChanged]: <0x16e12f000>, role 1, currentNetwork (null)
+ 1/15/2017  1:35:21.627 -[WiFiIDSSyncEngine currentNetworkChanged]: adjusted waitForReAssociationTimer <CFRunLoopTimer 0x14ce6ecf0 [0x1a0950150]>{valid = Yes, firing = No, interval = 819052854, tolerance = 0, next fire date = 506129752 (29.999916 @ 10023314835628), callout = (NSTimer) [WiFiIDSSyncEngine companionReAssociationWaitTimerFired:] (0x18292cfe0 / 0x1000e1010) (/usr/sbin/wifid), context = <CFRunLoopTimer context 0x14ce5c520>}
+ 1/15/2017  2:24:16.231 Total connection time to DIGI-146A 1553294.875994
+ 1/15/2017  2:24:16.367 WiFiDeviceManagerSetNetworks: Adding HS20 Account: 
+Domain name orange.ro
+3GPP MCC&MNC 226F10 
+Friendly Operator Name Orange
+ 1/15/2017  2:24:16.368 __WiFiDeviceManagerPrepareHS20Queries: created queries <CFArray 0x14cddacc0 [0x1a0950150]>{type = mutable-small, count = 3, values = (
+	0 : <CFNumber 0xb0000000000010c1 [0x1a0950150]>{value = +268, type = kCFNumberSInt16Type}
+	1 : <CFNumber 0xb000000000001081 [0x1a0950150]>{value = +264, type = kCFNumberSInt16Type}
+	2 : <CFNumber 0xb000000000000031 [0x1a0950150]>{value = +3, type = kCFNumberSInt16Type}
+)}
+ 1/15/2017  2:24:16.368 Auto association attempt canceled because auto join is disabled.
+ 1/15/2017  2:24:16.369 No Change in Background Scan Networks, Skip Re-Programming Background Scan
+
+ 1/15/2017  2:24:16.370 Auto association attempt canceled because auto join is disabled.
+ 1/15/2017  2:24:16.370 __WiFiDeviceManagerSetInterfaceRank: setting interface rank kSCNetworkServicePrimaryRankDefault
+ 1/15/2017  2:24:16.371 WiFiDeviceRequestAssociatedSleep: ActiveDuringSleepRequested is already removed ((null)).
+ 1/15/2017  2:24:16.377 WiFiAWDManagerSubmitMetric: metric container could not be generated for metric id <0x90009>
+ 1/15/2017  2:24:16.378 Link went down: isInVoluntary 0, reason Unknown(4), subreason 0, rssi -70
+ 1/15/2017  2:24:16.378 __WiFiDeviceResetCCAHistory
+ 1/15/2017  2:24:16.378 __WiFiDeviceResetRssiHistory
+ 1/15/2017  2:24:16.384 __WiFiDeviceCopyLinkChangedSubReasonString: Apple80211ReturnToString failed 1
+ 1/15/2017  2:24:16.384 __WiFiDeviceProcessDriverAvailableEvent: driver availability true, reason Initializing(0xe0821803), subreason (null)(0x0)
+ 1/15/2017  2:24:16.385 __WiFiManagerDispatchDeviceAvailable: driver availability true
+
+ 1/15/2017  2:24:16.388 Unable to dispatch message to client MessagesViewServ (268435460)
+ 1/15/2017  2:24:16.427 Auto association attempt canceled because auto join is disabled.
+ 1/15/2017  2:24:16.427 WiFiAWDManagerSubmitMetric: metric container could not be generated for metric id <0x9000e>
+ 1/15/2017  2:24:16.428 __WiFiManagerCellularTransmitCallback_block_invoke: Cellular Transmit Started = FALSE
+ 1/15/2017  2:24:16.428 Auto association attempt canceled because auto join is disabled.
+ 1/15/2017  2:24:16.430 No Change in Background Scan Networks, Skip Re-Programming Background Scan
+
+ 1/15/2017  2:24:16.448 Received kIOMessageSystemWillPowerOn
+ 1/15/2017  2:24:16.448 System wake reason: AOP.ExternalReq rtc
+ 1/15/2017  2:24:16.448 System Powered ON notification Re-enabling auto-join
+ 1/15/2017  2:24:16.449 __WiFiManagerSetEnableState: state TRUE, manager->enable.setting TRUE, manager->unlockedSinceBoot TRUE
+ 1/15/2017  2:24:16.449 Enabling automatic association
+ 1/15/2017  2:24:16.449 __WiFiDeviceManagerStateMachineRun: current state: Idle
+ 1/15/2017  2:24:16.449 Attempting multi-stage auto join mStageAutoJoinAttempts=0
+ 1/15/2017  2:24:16.450 Starting multi-stage auto join sequence
+ 1/15/2017  2:24:16.450 multi-stage auto-join: Scanning for previous network DIGI-146A on channel 1
+ 1/15/2017  2:24:16.452 Performing auto-join broadcast scan with a modified dwell time of 110ms on channels: 1 
+ 1/15/2017  2:24:16.452 Enqueuing command type: "Scan" pending commands: 0
+ 1/15/2017  2:24:16.453 WiFiLocaleManagerCheckLocale: location service or wifi is off, set locale to default
+ 1/15/2017  2:24:16.453 new locale:  , locale: 
+ 1/15/2017  2:24:16.454 Dequeuing command type: "Scan" pending commands: 0
+ 1/15/2017  2:24:16.454 Attempting Apple80211ScanAsync on en0
+ 1/15/2017  2:24:16.682 Completed Apple80211ScanAsync on en0 (0x0)
+ 1/15/2017  2:24:16.731 Auto join scan completed (0) with current state: Scanning Previous Network Channel
+ 1/15/2017  2:24:16.732 __WiFiDeviceManagerStateMachineRun: current state: Scanning Previous Network Channel
+ 1/15/2017  2:24:16.732 Scanning Previous Network Channel found: DIGI-146A
+ 1/15/2017  2:24:16.732 Attempting auto-join for networks in following order: DIGI-146A(W)
+ 1/15/2017  2:24:16.732 Autojoin is processing network 1 of 1 candidates
+ 1/15/2017  2:24:16.732 Attempting auto join association of DIGI-146A
+ 1/15/2017  2:24:16.768 Enqueuing command type: "Association" pending commands: 1
+ 1/15/2017  2:24:16.768 Dequeuing command type: "Association" pending commands: 0
+ 1/15/2017  2:24:16.768 Attempting Apple80211AssociateAsync
+ 1/15/2017  2:24:16.784 Attempting to join WPA network: DIGI-146A
+ 1/15/2017  2:24:16.904 __WiFiManagerCellularTransmitCallback_block_invoke: Cellular Transmit Started = TRUE
+ 1/15/2017  2:24:16.917 WiFiDeviceManagerSetNetworks: Adding HS20 Account: 
+Domain name orange.ro
+3GPP MCC&MNC 226F10 
+Friendly Operator Name Orange
+ 1/15/2017  2:24:16.958 __WiFiDeviceManagerPrepareHS20Queries: created queries <CFArray 0x14cdafef0 [0x1a0950150]>{type = mutable-small, count = 3, values = (
+	0 : <CFNumber 0xb0000000000010c1 [0x1a0950150]>{value = +268, type = kCFNumberSInt16Type}
+	1 : <CFNumber 0xb000000000001081 [0x1a0950150]>{value = +264, type = kCFNumberSInt16Type}
+	2 : <CFNumber 0xb000000000000031 [0x1a0950150]>{value = +3, type = kCFNumberSInt16Type}
+)}
+ 1/15/2017  2:24:16.958 Auto association attempt canceled because auto join state is Associating.
+ 1/15/2017  2:24:17.091 No Change in Background Scan Networks, Skip Re-Programming Background Scan
+
+ 1/15/2017  2:24:17.092 __WiFiDeviceProcessLinkEvent: isLinkDown 0
+ 1/15/2017  2:24:17.104 Unable to dispatch message to client MessagesViewServ (268435460)
+ 1/15/2017  2:24:17.108 __WiFiDeviceManagerSetInterfaceRank: setting interface rank kSCNetworkServicePrimaryRankDefault
+ 1/15/2017  2:24:17.108 __WiFiDeviceManagerEvaluateAPEnvironment: Getting AP environment for DIGI-146A. Learning period 259200 secs Expiry period 2592000 secs
+ 1/15/2017  2:24:17.109 __WiFiDeviceManagerEvaluateAPEnvironment: AP environment is 2 for DIGI-146A(4:bd:70:a4:e3:8)
+ 1/15/2017  2:24:17.109 WiFiDeviceSetRoamParams: setting roam profile to type 1
+ 1/15/2017  2:24:17.110 __WiFiDeviceManagerEvaluateAPEnvironment: Getting AP environment for DIGI-146A. Learning period 259200 secs Expiry period 2592000 secs
+ 1/15/2017  2:24:17.110 __WiFiDeviceManagerEvaluateAPEnvironment: AP environment is 2 for DIGI-146A(4:bd:70:a4:e3:8)
+ 1/15/2017  2:24:17.110 __WiFiLQAMgrSetCurrentNetwork: SSID: DIGI-146A BSSID: 4:bd:70:a4:e3:8 RSSI: -73 ApEnv: 2
+ 1/15/2017  2:24:17.113 WiFiDeviceRequestAssociatedSleep: ActiveDuringSleepRequested is already removed ((null)).
+ 1/15/2017  2:24:17.113 __WiFiDeviceResetCCAHistory
+ 1/15/2017  2:24:17.113 __WiFiDeviceResetRssiHistory
+ 1/15/2017  2:24:17.113 __WiFiLQAMgrLogStats: Rssi: -73 Cca: 0 TxPer: 0.0% (0) BcnPer: 0.0% (0) RxFrms 0 TxRate: 0 RxRate: 0
+ 1/15/2017  2:24:17.117 __WiFiDeviceProcessLinkEvent: Initializing lqm value: rawRssi -73, scaledRssi 0.603757, noise 0, snr 18
+ 1/15/2017  2:24:17.119 __WiFiMetricsManagerPrepareLinkChangeNetworkParams: OUI:04:bd:70 Channel:1(20MHz) Flags:0x8 PhyMode:0x10 Security:0x2 WPA:[Prot:0x2 McastCipher:0x4 UcastCipher:0xc AKM:0x2 Caps:0x0] HT:[Info:0x19fc AMPDU:0x1b TXBF:0x0 Ext:0x0 ASEL:0x0] VHT:[Info:0x0]
+ 1/15/2017  2:24:17.119 WiFiAWDManagerSubmitMetric: metric container could not be generated for metric id <0x90009>
+ 1/15/2017  2:24:17.137 configd requesting removal of BGScan networks
+ 1/15/2017  2:24:17.138 No Change in Background Scan Networks, Skip Re-Programming Background Scan
+
+ 1/15/2017  2:24:17.138 __WiFiManagerSetEnableState: state TRUE, manager->enable.setting TRUE, manager->unlockedSinceBoot TRUE
+ 1/15/2017  2:24:17.138 Removing client for "configd"
+ 1/15/2017  2:24:17.142 __WiFiDeviceManagerAwdlAvailableCallback: AWDL availability changed to TRUE
+ 1/15/2017  2:24:17.144 IPV4 State change for en0
+ 1/15/2017  2:24:17.147 IPV6 State change for en0
+ 1/15/2017  2:24:17.148 IPv4 Primary interface is pdp_ip0 and IPv6 Primary Interface is (null)
+ 1/15/2017  2:24:17.149 IPv4 Primary interface is pdp_ip0 and IPv6 Primary Interface is (null)
+ 1/15/2017  2:24:17.153 
+Too frequent(0.040420 secs) rssi event from driver, ignoring
+
+ 1/15/2017  2:24:17.164 Completed Apple80211AssociateAsync (0 - 0x0)
+ 1/15/2017  2:24:17.164 Joined: DIGI-146A
+ 1/15/2017  2:24:17.164 Auto join association completed (0) with current state: Associating
+ 1/15/2017  2:24:17.164 __WiFiDeviceManagerStateMachineRun: current state: Associating
+ 1/15/2017  2:24:17.164 __WiFiDeviceManagerProcessAssociationResult: current state: Associating
+ 1/15/2017  2:24:17.164 WiFiNetworkSetKnownBssUsageData: BSS updated - current BSS: 4:bd:70:a4:e3:8 (1)
+ 1/15/2017  2:24:17.165 Removing problematic state for DIGI-146A, reason N/A reasonData=0
+ 1/15/2017  2:24:17.165 problematic networks =  and potentially problematic networks = 
+ 1/15/2017  2:24:17.166 No Change in Background Scan Networks, Skip Re-Programming Background Scan
+
+ 1/15/2017  2:24:17.166 __WiFiManagerDidAssociateCallback: network DIGI-146A, requestedInformation <CFBasicHash 0x14cf33a40 [0x1a0950150]>{type = mutable dict, count = 1,
+entries =>
+	2 : <CFString 0x10017e160 [0x1a0950150]>{contents = "reason"} = <CFString 0x100185180 [0x1a0950150]>{contents = "Associating"}
+}
+
+ 1/15/2017  2:24:17.215 WiFiDeviceManagerSetNetworks: Adding HS20 Account: 
+Domain name orange.ro
+3GPP MCC&MNC 226F10 
+Friendly Operator Name Orange
+ 1/15/2017  2:24:17.216 __WiFiDeviceManagerPrepareHS20Queries: created queries <CFArray 0x14cf59950 [0x1a0950150]>{type = mutable-small, count = 3, values = (
+	0 : <CFNumber 0xb0000000000010c1 [0x1a0950150]>{value = +268, type = kCFNumberSInt16Type}
+	1 : <CFNumber 0xb000000000001081 [0x1a0950150]>{value = +264, type = kCFNumberSInt16Type}
+	2 : <CFNumber 0xb000000000000031 [0x1a0950150]>{value = +3, type = kCFNumberSInt16Type}
+)}
+ 1/15/2017  2:24:17.217 Auto association attempt canceled because auto join state is Associating.
+ 1/15/2017  2:24:17.218 No Change in Background Scan Networks, Skip Re-Programming Background Scan
+
+ 1/15/2017  2:24:17.232 Creating client for "configd"
+ 1/15/2017  2:24:17.236 MIS state is Disabled
+ 1/15/2017  2:24:17.236 MIS state queried by "locationd" is Disable
+ 1/15/2017  2:24:17.237 MIS state is Disabled
+ 1/15/2017  2:24:17.237 MIS state queried by "UserEventAgent" is Disable
+ 1/15/2017  2:24:17.237 MIS state is Disabled
+ 1/15/2017  2:24:17.237 MIS state queried by "identityservices" is Disable
+ 1/15/2017  2:24:17.238 MIS state is Disabled
+ 1/15/2017  2:24:17.238 MIS state queried by "SpringBoard" is Disable
+ 1/15/2017  2:24:17.238 MIS state is Disabled
+ 1/15/2017  2:24:17.238 MIS state queried by "apsd" is Disable
+ 1/15/2017  2:24:17.239 MIS state is Disabled
+ 1/15/2017  2:24:17.239 MIS state queried by "InCallService" is Disable
+ 1/15/2017  2:24:17.255 WiFiDeviceManagerSetNetworks: Adding HS20 Account: 
+Domain name orange.ro
+3GPP MCC&MNC 226F10 
+Friendly Operator Name Orange
+ 1/15/2017  2:24:17.256 __WiFiDeviceManagerPrepareHS20Queries: created queries <CFArray 0x14cfb76e0 [0x1a0950150]>{type = mutable-small, count = 3, values = (
+	0 : <CFNumber 0xb0000000000010c1 [0x1a0950150]>{value = +268, type = kCFNumberSInt16Type}
+	1 : <CFNumber 0xb000000000001081 [0x1a0950150]>{value = +264, type = kCFNumberSInt16Type}
+	2 : <CFNumber 0xb000000000000031 [0x1a0950150]>{value = +3, type = kCFNumberSInt16Type}
+)}
+ 1/15/2017  2:24:17.256 __WiFiDeviceManagerAutoAssociate: Already connected to DIGI-146A.
+ 1/15/2017  2:24:17.257 No Change in Background Scan Networks, Skip Re-Programming Background Scan
+
+ 1/15/2017  2:24:17.258 MIS state is Disabled
+ 1/15/2017  2:24:17.258 MIS state queried by "imagent" is Disable
+ 1/15/2017  2:24:17.259 MIS state is Disabled
+ 1/15/2017  2:24:17.260 MIS state queried by "mediaserverd" is Disable
+ 1/15/2017  2:24:17.261 MIS state is Disabled
+ 1/15/2017  2:24:17.261 MIS state queried by "MobileMail" is Disable
+ 1/15/2017  2:24:17.294 MIS state is Disabled
+ 1/15/2017  2:24:17.295 MIS state queried by "UserEventAgent" is Disable
+ 1/15/2017  2:24:17.306 MIS state is Disabled
+ 1/15/2017  2:24:17.306 MIS state queried by "InCallService" is Disable
+ 1/15/2017  2:24:17.322 MIS state is Disabled
+ 1/15/2017  2:24:17.322 MIS state queried by "imagent" is Disable
+ 1/15/2017  2:24:17.338 MIS state is Disabled
+ 1/15/2017  2:24:17.338 MIS state queried by "nanoregistryd" is Disable
+ 1/15/2017  2:24:17.344 configd requesting removal of BGScan networks
+ 1/15/2017  2:24:17.366 No Change in Background Scan Networks, Skip Re-Programming Background Scan
+
+ 1/15/2017  2:24:17.366 __WiFiManagerSetEnableState: state TRUE, manager->enable.setting TRUE, manager->unlockedSinceBoot TRUE
+ 1/15/2017  2:24:17.366 Removing client for "configd"
+ 1/15/2017  2:24:17.370 MIS state is Disabled
+ 1/15/2017  2:24:17.370 MIS state queried by "locationd" is Disable
+ 1/15/2017  2:24:17.373 MIS state is Disabled
+ 1/15/2017  2:24:17.373 MIS state queried by "identityservices" is Disable
+ 1/15/2017  2:24:17.378 MIS state is Disabled
+ 1/15/2017  2:24:17.378 MIS state queried by "SpringBoard" is Disable
+ 1/15/2017  2:24:17.380 MIS state is Disabled
+ 1/15/2017  2:24:17.380 MIS state queried by "apsd" is Disable
+ 1/15/2017  2:24:17.403 IPV4 State change for en0
+ 1/15/2017  2:24:17.404 IP Address: 192.168.100.4
+ 1/15/2017  2:24:17.404 Router IP Address: 192.168.100.1
+ 1/15/2017  2:24:17.404 __WiFiDeviceCheckForIPV4ParamsChange: Setting power mode to kA11PowerProfileDefault
+ 1/15/2017  2:24:17.405 __WiFiManagerIPv4Callback: <en0> [DIGI-146A                               : isHidden=0, isEAP=0, isWPA=1, isWEP=0, type=0] isMainIf? 1, isRoutable? 1
+ 1/15/2017  2:24:17.405 -[WiFiIDSSyncEngine currentNetworkChanged]: <0x16e12f000>, role 1, currentNetwork DIGI-146A                               : isHidden=0, isEAP=0, isWPA=1, isWEP=0, type=0
+ 1/15/2017  2:24:17.406 -[WiFiIDSSyncEngine currentNetworkChanged]: reset waitForReAssociationTimer <CFRunLoopTimer 0x14ce6ecf0 [0x1a0950150]>{valid = Yes, firing = No, interval = 819052854, tolerance = 0, next fire date = 1.32762531e+09 (821492657 @ 12127892195940587), callout = (NSTimer) [WiFiIDSSyncEngine companionReAssociationWaitTimerFired:] (0x18292cfe0 / 0x1000e1010) (/usr/sbin/wifid), context = <CFRunLoopTimer context 0x14ce5c520>}
+ 1/15/2017  2:24:17.406 -[WiFiIDSSyncEngine sendCurrentCompanionNetwork]: autojoinAssistDict {
+    "SSID_STR" = "DIGI-146A";
+}
+ 1/15/2017  2:24:17.407 -[WiFiIDSSyncEngine sendToGizmoOfDataType:]: <0x16e1bb000> ID:(null), data type 1
+ 1/15/2017  2:24:17.407 WiFiLQAMgrSetRouterIpv4Addr: Router IP Address: 192.168.100.1 
+ 1/15/2017  2:24:17.408 __WiFiDeviceCheckForIPV4ParamsChange: configMethod DHCP, leaseExpiryDuration 4320 mins
+ 1/15/2017  2:24:17.408 WiFiAWDManagerSubmitMetric: metric container could not be generated for metric id <0x90007>
+ 1/15/2017  2:24:17.408 Router MAC Address: 04:bd:70:a4:e3:00
+ 1/15/2017  2:24:17.430 IPv4 Primary interface is pdp_ip0 and IPv6 Primary Interface is (null)
+ 1/15/2017  2:24:17.431 IPV6 State change for en0
+ 1/15/2017  2:24:17.431 IP Address: 2a02:2f0a:c0a8:1a00:1cc0:d85b:4877:c957
+ 1/15/2017  2:24:17.432 IP Address: 2a02:2f0a:c0a8:1a00:7c58:873e:485e:f29a
+ 1/15/2017  2:24:17.434 IPv4 Primary interface is pdp_ip0 and IPv6 Primary Interface is (null)
+ 1/15/2017  2:24:17.437 MIS state is Disabled
+ 1/15/2017  2:24:17.437 MIS state queried by "mediaserverd" is Disable
+ 1/15/2017  2:24:17.444 MIS state is Disabled
+ 1/15/2017  2:24:17.444 MIS state queried by "MobileMail" is Disable
+ 1/15/2017  2:24:17.489 IPv4 Primary interface is en0 and IPv6 Primary Interface is en0
+ 1/15/2017  2:24:17.490 IPv4 Primary interface is en0 and IPv6 Primary Interface is en0
+ 1/15/2017  2:24:17.498 WoW is Disabled, 0 WoW Clients
+ 1/15/2017  2:24:17.519 MIS state is Disabled
+ 1/15/2017  2:24:17.519 MIS state queried by "nanoregistryd" is Disable
+ 1/15/2017  2:24:17.670 WoW is Disabled, 0 WoW Clients
+ 1/15/2017  2:24:17.694 WoW is Disabled, 0 WoW Clients
+ 1/15/2017  2:24:17.706 WoW is Disabled, 0 WoW Clients
+ 1/15/2017  2:24:17.721 WoW is Disabled, 0 WoW Clients
+ 1/15/2017  2:24:17.814 Creating client for "CommCenter"
+ 1/15/2017  2:24:17.820 CommCenter requesting removal of BGScan networks
+ 1/15/2017  2:24:17.822 No Change in Background Scan Networks, Skip Re-Programming Background Scan
+
+ 1/15/2017  2:24:17.822 __WiFiManagerSetEnableState: state TRUE, manager->enable.setting TRUE, manager->unlockedSinceBoot TRUE
+ 1/15/2017  2:24:17.822 Removing client for "CommCenter"
+ 1/15/2017  2:24:21.947 __WiFiManagerCellularTransmitCallback_block_invoke: Cellular Transmit Started = FALSE
+ 1/15/2017  2:24:26.949 __WiFiLQAMgrLogStats: Rssi: -71 Cca: 0 TxPer: 0.0% (1) BcnPer: 0.0% (0) RxFrms 0 TxRate: 26000 RxRate: 65000
+ 1/15/2017  2:24:27.568 Received kIOMessageSystemWillSleep
+ 1/15/2017  2:24:27.568 System Sleep notification, Disabling auto-join
+ 1/15/2017  2:24:27.568 __WiFiManagerSetEnableState: state FALSE, manager->enable.setting TRUE, manager->unlockedSinceBoot TRUE
+ 1/15/2017  2:24:27.568 Disabling automatic association
+ 1/15/2017  2:24:27.603 WoW is Disabled, 0 WoW Clients
+ 1/15/2017  2:24:27.753 __WiFiDeviceCopyLinkChangedSubReasonString: Apple80211ReturnToString failed 1
+ 1/15/2017  2:24:27.753 __WiFiDeviceProcessDriverAvailableEvent: driver availability false, reason PowerOff(0xe0821804), subreason (null)(0x0)
+ 1/15/2017  2:24:27.753 __WiFiManagerDispatchDeviceAvailable: driver availability false
+
+ 1/15/2017  2:24:27.753 Unable to dispatch message to client MessagesViewServ (268435460)
+ 1/15/2017  2:24:27.753 WiFiAWDManagerSubmitMetric: metric container could not be generated for metric id <0x9000e>
+ 1/15/2017  2:24:27.758 __WiFiDeviceManagerAwdlAvailableCallback: AWDL availability changed to FALSE
+ 1/15/2017  2:24:27.758 __WiFiDeviceProcessLinkEvent: isLinkDown 1
+ 1/15/2017  2:24:27.759 Unable to dispatch message to client MessagesViewServ (268435460)
+ 1/15/2017  2:24:27.759 -[WiFiIDSSyncEngine currentNetworkChanged]: <0x16e12f000>, role 1, currentNetwork (null)
+ 1/15/2017  2:24:27.759 -[WiFiIDSSyncEngine currentNetworkChanged]: adjusted waitForReAssociationTimer <CFRunLoopTimer 0x14ce6ecf0 [0x1a0950150]>{valid = Yes, firing = No, interval = 819052854, tolerance = 0, next fire date = 506132698 (29.999969 @ 10023596416468), callout = (NSTimer) [WiFiIDSSyncEngine companionReAssociationWaitTimerFired:] (0x18292cfe0 / 0x1000e1010) (/usr/sbin/wifid), context = <CFRunLoopTimer context 0x14ce5c520>}
+ 1/15/2017  3:17:59.213 Total connection time to DIGI-146A 1556516.923982
+ 1/15/2017  3:17:59.351 WiFiDeviceManagerSetNetworks: Adding HS20 Account: 
+Domain name orange.ro
+3GPP MCC&MNC 226F10 
+Friendly Operator Name Orange
+ 1/15/2017  3:17:59.352 __WiFiDeviceManagerPrepareHS20Queries: created queries <CFArray 0x14cf80e80 [0x1a0950150]>{type = mutable-small, count = 3, values = (
+	0 : <CFNumber 0xb0000000000010c1 [0x1a0950150]>{value = +268, type = kCFNumberSInt16Type}
+	1 : <CFNumber 0xb000000000001081 [0x1a0950150]>{value = +264, type = kCFNumberSInt16Type}
+	2 : <CFNumber 0xb000000000000031 [0x1a0950150]>{value = +3, type = kCFNumberSInt16Type}
+)}
+ 1/15/2017  3:17:59.352 Auto association attempt canceled because auto join is disabled.
+ 1/15/2017  3:17:59.353 No Change in Background Scan Networks, Skip Re-Programming Background Scan
+
+ 1/15/2017  3:17:59.353 Auto association attempt canceled because auto join is disabled.
+ 1/15/2017  3:17:59.354 __WiFiDeviceManagerSetInterfaceRank: setting interface rank kSCNetworkServicePrimaryRankDefault
+ 1/15/2017  3:17:59.354 WiFiDeviceRequestAssociatedSleep: ActiveDuringSleepRequested is already removed ((null)).
+ 1/15/2017  3:17:59.361 WiFiAWDManagerSubmitMetric: metric container could not be generated for metric id <0x90009>
+ 1/15/2017  3:17:59.361 Link went down: isInVoluntary 0, reason Unknown(4), subreason 0, rssi -71
+ 1/15/2017  3:17:59.361 __WiFiDeviceResetCCAHistory
+ 1/15/2017  3:17:59.361 __WiFiDeviceResetRssiHistory
+ 1/15/2017  3:17:59.361 __WiFiManagerCellularTransmitCallback_block_invoke: Cellular Transmit Started = FALSE
+ 1/15/2017  3:17:59.362 Creating client for "configd"
+ 1/15/2017  3:17:59.367 __WiFiDeviceCopyLinkChangedSubReasonString: Apple80211ReturnToString failed 1
+ 1/15/2017  3:17:59.367 __WiFiDeviceProcessDriverAvailableEvent: driver availability true, reason Initializing(0xe0821803), subreason (null)(0x0)
+ 1/15/2017  3:17:59.367 __WiFiManagerDispatchDeviceAvailable: driver availability true
+
+ 1/15/2017  3:17:59.369 Unable to dispatch message to client MessagesViewServ (268435460)
+ 1/15/2017  3:17:59.371 Auto association attempt canceled because auto join is disabled.
+ 1/15/2017  3:17:59.371 WiFiAWDManagerSubmitMetric: metric container could not be generated for metric id <0x9000e>
+ 1/15/2017  3:17:59.371 Auto association attempt canceled because auto join is disabled.
+ 1/15/2017  3:17:59.373 No Change in Background Scan Networks, Skip Re-Programming Background Scan
+
+ 1/15/2017  3:17:59.383 Received kIOMessageSystemWillPowerOn
+ 1/15/2017  3:17:59.383 System wake reason: AOP.ExternalReq rtc
+ 1/15/2017  3:17:59.383 System Powered ON notification Re-enabling auto-join
+ 1/15/2017  3:17:59.384 __WiFiManagerSetEnableState: state TRUE, manager->enable.setting TRUE, manager->unlockedSinceBoot TRUE
+ 1/15/2017  3:17:59.384 Enabling automatic association
+ 1/15/2017  3:17:59.384 __WiFiDeviceManagerStateMachineRun: current state: Idle
+ 1/15/2017  3:17:59.384 Attempting multi-stage auto join mStageAutoJoinAttempts=0
+ 1/15/2017  3:17:59.384 Starting multi-stage auto join sequence
+ 1/15/2017  3:17:59.384 multi-stage auto-join: Scanning for previous network DIGI-146A on channel 1
+ 1/15/2017  3:17:59.385 Performing auto-join broadcast scan with a modified dwell time of 110ms on channels: 1 
+ 1/15/2017  3:17:59.385 Enqueuing command type: "Scan" pending commands: 0
+ 1/15/2017  3:17:59.385 WiFiLocaleManagerCheckLocale: location service or wifi is off, set locale to default
+ 1/15/2017  3:17:59.385 new locale:  , locale: 
+ 1/15/2017  3:17:59.385 Dequeuing command type: "Scan" pending commands: 0
+ 1/15/2017  3:17:59.385 Attempting Apple80211ScanAsync on en0
+ 1/15/2017  3:17:59.445 WiFiDeviceManagerSetNetworks: Adding HS20 Account: 
+Domain name orange.ro
+3GPP MCC&MNC 226F10 
+Friendly Operator Name Orange
+ 1/15/2017  3:17:59.446 __WiFiDeviceManagerPrepareHS20Queries: created queries <CFArray 0x14ce90dc0 [0x1a0950150]>{type = mutable-small, count = 3, values = (
+	0 : <CFNumber 0xb0000000000010c1 [0x1a0950150]>{value = +268, type = kCFNumberSInt16Type}
+	1 : <CFNumber 0xb000000000001081 [0x1a0950150]>{value = +264, type = kCFNumberSInt16Type}
+	2 : <CFNumber 0xb000000000000031 [0x1a0950150]>{value = +3, type = kCFNumberSInt16Type}
+)}
+ 1/15/2017  3:17:59.446 Auto association attempt canceled because auto join state is Scanning Previous Network Channel.
+ 1/15/2017  3:17:59.447 No Change in Background Scan Networks, Skip Re-Programming Background Scan
+
+ 1/15/2017  3:17:59.577 Completed Apple80211ScanAsync on en0 (0x0)
+ 1/15/2017  3:17:59.581 Auto join scan completed (0) with current state: Scanning Previous Network Channel
+ 1/15/2017  3:17:59.581 __WiFiDeviceManagerStateMachineRun: current state: Scanning Previous Network Channel
+ 1/15/2017  3:17:59.584 Scanning Previous Network Channel found: DIGI-146A
+ 1/15/2017  3:17:59.584 Attempting auto-join for networks in following order: DIGI-146A(W)
+ 1/15/2017  3:17:59.584 Autojoin is processing network 1 of 1 candidates
+ 1/15/2017  3:17:59.584 Attempting auto join association of DIGI-146A
+ 1/15/2017  3:17:59.652 Enqueuing command type: "Association" pending commands: 1
+ 1/15/2017  3:17:59.653 Dequeuing command type: "Association" pending commands: 0
+ 1/15/2017  3:17:59.653 Attempting Apple80211AssociateAsync
+ 1/15/2017  3:17:59.656 Attempting to join WPA network: DIGI-146A
+ 1/15/2017  3:17:59.885 __WiFiDeviceProcessLinkEvent: isLinkDown 0
+ 1/15/2017  3:17:59.892 Unable to dispatch message to client MessagesViewServ (268435460)
+ 1/15/2017  3:17:59.895 __WiFiDeviceManagerSetInterfaceRank: setting interface rank kSCNetworkServicePrimaryRankDefault
+ 1/15/2017  3:17:59.895 __WiFiDeviceManagerEvaluateAPEnvironment: Getting AP environment for DIGI-146A. Learning period 259200 secs Expiry period 2592000 secs
+ 1/15/2017  3:17:59.896 __WiFiDeviceManagerEvaluateAPEnvironment: AP environment is 2 for DIGI-146A(4:bd:70:a4:e3:8)
+ 1/15/2017  3:17:59.896 WiFiDeviceSetRoamParams: setting roam profile to type 1
+ 1/15/2017  3:17:59.896 __WiFiDeviceManagerEvaluateAPEnvironment: Getting AP environment for DIGI-146A. Learning period 259200 secs Expiry period 2592000 secs
+ 1/15/2017  3:17:59.896 __WiFiDeviceManagerEvaluateAPEnvironment: AP environment is 2 for DIGI-146A(4:bd:70:a4:e3:8)
+ 1/15/2017  3:17:59.896 __WiFiLQAMgrSetCurrentNetwork: SSID: DIGI-146A BSSID: 4:bd:70:a4:e3:8 RSSI: -74 ApEnv: 2
+ 1/15/2017  3:17:59.898 WiFiDeviceRequestAssociatedSleep: ActiveDuringSleepRequested is already removed ((null)).
+ 1/15/2017  3:17:59.898 __WiFiDeviceResetCCAHistory
+ 1/15/2017  3:17:59.898 __WiFiDeviceResetRssiHistory
+ 1/15/2017  3:17:59.898 __WiFiLQAMgrLogStats: Rssi: -74 Cca: 0 TxPer: 0.0% (0) BcnPer: 0.0% (0) RxFrms 0 TxRate: 0 RxRate: 0
+ 1/15/2017  3:17:59.899 __WiFiDeviceProcessLinkEvent: Initializing lqm value: rawRssi -74, scaledRssi 0.581395, noise 0, snr 17
+ 1/15/2017  3:17:59.901 __WiFiMetricsManagerPrepareLinkChangeNetworkParams: OUI:04:bd:70 Channel:1(20MHz) Flags:0x8 PhyMode:0x10 Security:0x2 WPA:[Prot:0x2 McastCipher:0x4 UcastCipher:0xc AKM:0x2 Caps:0x0] HT:[Info:0x19fc AMPDU:0x1b TXBF:0x0 Ext:0x0 ASEL:0x0] VHT:[Info:0x0]
+ 1/15/2017  3:17:59.901 WiFiAWDManagerSubmitMetric: metric container could not be generated for metric id <0x90009>
+ 1/15/2017  3:17:59.919 MIS state is Disabled
+ 1/15/2017  3:17:59.919 MIS state queried by "SpringBoard" is Disable
+ 1/15/2017  3:17:59.961 MIS state is Disabled
+ 1/15/2017  3:17:59.961 MIS state queried by "UserEventAgent" is Disable
+ 1/15/2017  3:17:59.964 MIS state is Disabled
+ 1/15/2017  3:17:59.964 MIS state queried by "locationd" is Disable
+ 1/15/2017  3:17:59.966 MIS state is Disabled
+ 1/15/2017  3:17:59.966 MIS state queried by "identityservices" is Disable
+ 1/15/2017  3:17:59.970 MIS state is Disabled
+ 1/15/2017  3:17:59.970 MIS state queried by "imagent" is Disable
+ 1/15/2017  3:17:59.971 MIS state is Disabled
+ 1/15/2017  3:17:59.971 MIS state queried by "apsd" is Disable
+ 1/15/2017  3:17:59.974 MIS state is Disabled
+ 1/15/2017  3:17:59.974 MIS state queried by "InCallService" is Disable
+ 1/15/2017  3:17:59.981 MIS state is Disabled
+ 1/15/2017  3:17:59.982 MIS state queried by "mediaserverd" is Disable
+ 1/15/2017  3:17:59.982 MIS state is Disabled
+ 1/15/2017  3:17:59.982 MIS state queried by "MobileMail" is Disable
+ 1/15/2017  3:17:59.985 configd requesting removal of BGScan networks
+ 1/15/2017  3:17:59.986 No Change in Background Scan Networks, Skip Re-Programming Background Scan
+
+ 1/15/2017  3:17:59.986 __WiFiManagerSetEnableState: state TRUE, manager->enable.setting TRUE, manager->unlockedSinceBoot TRUE
+ 1/15/2017  3:17:59.986 Removing client for "configd"
+ 1/15/2017  3:17:59.989 __WiFiDeviceManagerAwdlAvailableCallback: AWDL availability changed to TRUE
+ 1/15/2017  3:17:59.989 Creating client for "configd"
+ 1/15/2017  3:18:00.131 __WiFiManagerCellularTransmitCallback_block_invoke: Cellular Transmit Started = TRUE
+ 1/15/2017  3:18:00.136 
+Too frequent(0.238091 secs) rssi event from driver, ignoring
+
+ 1/15/2017  3:18:00.203 MIS state is Disabled
+ 1/15/2017  3:18:00.203 MIS state queried by "SpringBoard" is Disable
+ 1/15/2017  3:18:00.222 Completed Apple80211AssociateAsync (0 - 0x0)
+ 1/15/2017  3:18:00.222 Joined: DIGI-146A
+ 1/15/2017  3:18:00.222 Auto join association completed (0) with current state: Associating
+ 1/15/2017  3:18:00.222 __WiFiDeviceManagerStateMachineRun: current state: Associating
+ 1/15/2017  3:18:00.222 __WiFiDeviceManagerProcessAssociationResult: current state: Associating
+ 1/15/2017  3:18:00.223 WiFiNetworkSetKnownBssUsageData: BSS updated - current BSS: 4:bd:70:a4:e3:8 (1)
+ 1/15/2017  3:18:00.223 Removing problematic state for DIGI-146A, reason N/A reasonData=0
+ 1/15/2017  3:18:00.223 problematic networks =  and potentially problematic networks = 
+ 1/15/2017  3:18:00.226 No Change in Background Scan Networks, Skip Re-Programming Background Scan
+
+ 1/15/2017  3:18:00.226 __WiFiManagerDidAssociateCallback: network DIGI-146A, requestedInformation <CFBasicHash 0x14ce48ac0 [0x1a0950150]>{type = mutable dict, count = 1,
+entries =>
+	2 : <CFString 0x10017e160 [0x1a0950150]>{contents = "reason"} = <CFString 0x100185180 [0x1a0950150]>{contents = "Associating"}
+}
+
+ 1/15/2017  3:18:00.246 WiFiDeviceManagerSetNetworks: Adding HS20 Account: 
+Domain name orange.ro
+3GPP MCC&MNC 226F10 
+Friendly Operator Name Orange
+ 1/15/2017  3:18:00.246 __WiFiDeviceManagerPrepareHS20Queries: created queries <CFArray 0x14cd69d30 [0x1a0950150]>{type = mutable-small, count = 3, values = (
+	0 : <CFNumber 0xb0000000000010c1 [0x1a0950150]>{value = +268, type = kCFNumberSInt16Type}
+	1 : <CFNumber 0xb000000000001081 [0x1a0950150]>{value = +264, type = kCFNumberSInt16Type}
+	2 : <CFNumber 0xb000000000000031 [0x1a0950150]>{value = +3, type = kCFNumberSInt16Type}
+)}
+ 1/15/2017  3:18:00.246 Auto association attempt canceled because auto join state is Associating.
+ 1/15/2017  3:18:00.248 No Change in Background Scan Networks, Skip Re-Programming Background Scan
+
+ 1/15/2017  3:18:00.249 MIS state is Disabled
+ 1/15/2017  3:18:00.249 MIS state queried by "UserEventAgent" is Disable
+ 1/15/2017  3:18:00.256 MIS state is Disabled
+ 1/15/2017  3:18:00.256 MIS state queried by "nanoregistryd" is Disable
+ 1/15/2017  3:18:00.256 MIS state is Disabled
+ 1/15/2017  3:18:00.259 MIS state queried by "locationd" is Disable
+ 1/15/2017  3:18:00.265 WoW is Disabled, 0 WoW Clients
+ 1/15/2017  3:18:00.266 MIS state is Disabled
+ 1/15/2017  3:18:00.266 MIS state queried by "identityservices" is Disable
+ 1/15/2017  3:18:00.266 MIS state is Disabled
+ 1/15/2017  3:18:00.266 MIS state queried by "imagent" is Disable
+ 1/15/2017  3:18:00.268 MIS state is Disabled
+ 1/15/2017  3:18:00.268 MIS state queried by "apsd" is Disable
+ 1/15/2017  3:18:00.269 MIS state is Disabled
+ 1/15/2017  3:18:00.270 MIS state queried by "InCallService" is Disable
+ 1/15/2017  3:18:00.271 MIS state is Disabled
+ 1/15/2017  3:18:00.271 MIS state queried by "mediaserverd" is Disable
+ 1/15/2017  3:18:00.272 MIS state is Disabled
+ 1/15/2017  3:18:00.272 MIS state queried by "MobileMail" is Disable
+ 1/15/2017  3:18:00.280 WiFiDeviceManagerSetNetworks: Adding HS20 Account: 
+Domain name orange.ro
+3GPP MCC&MNC 226F10 
+Friendly Operator Name Orange
+ 1/15/2017  3:18:00.281 __WiFiDeviceManagerPrepareHS20Queries: created queries <CFArray 0x14ce87460 [0x1a0950150]>{type = mutable-small, count = 3, values = (
+	0 : <CFNumber 0xb0000000000010c1 [0x1a0950150]>{value = +268, type = kCFNumberSInt16Type}
+	1 : <CFNumber 0xb000000000001081 [0x1a0950150]>{value = +264, type = kCFNumberSInt16Type}
+	2 : <CFNumber 0xb000000000000031 [0x1a0950150]>{value = +3, type = kCFNumberSInt16Type}
+)}
+ 1/15/2017  3:18:00.281 __WiFiDeviceManagerAutoAssociate: Already connected to DIGI-146A.
+ 1/15/2017  3:18:00.283 No Change in Background Scan Networks, Skip Re-Programming Background Scan
+
+ 1/15/2017  3:18:00.283 configd requesting removal of BGScan networks
+ 1/15/2017  3:18:00.285 No Change in Background Scan Networks, Skip Re-Programming Background Scan
+
+ 1/15/2017  3:18:00.285 __WiFiManagerSetEnableState: state TRUE, manager->enable.setting TRUE, manager->unlockedSinceBoot TRUE
+ 1/15/2017  3:18:00.285 Removing client for "configd"
+ 1/15/2017  3:18:00.320 MIS state is Disabled
+ 1/15/2017  3:18:00.320 MIS state queried by "nanoregistryd" is Disable
+ 1/15/2017  3:18:00.605 WoW is Disabled, 0 WoW Clients
+ 1/15/2017  3:18:00.620 WoW is Disabled, 0 WoW Clients
+ 1/15/2017  3:18:00.867 WoW is Disabled, 0 WoW Clients
+ 1/15/2017  3:18:00.880 WoW is Disabled, 0 WoW Clients
+ 1/15/2017  3:18:01.360 Background Network Application entered
+ 1/15/2017  3:18:01.360 BG Application: Present, BG Daemon: Present. Daemons: mediaserverd 
+ 1/15/2017  3:18:01.360 __WiFiManagerSetEnableState: state TRUE, manager->enable.setting TRUE, manager->unlockedSinceBoot TRUE
+ 1/15/2017  3:18:01.361 __WiFiDeviceManagerAutoAssociate: Already connected to DIGI-146A.
+ 1/15/2017  3:18:05.183 __WiFiManagerCellularTransmitCallback_block_invoke: Cellular Transmit Started = FALSE
+ 1/15/2017  3:18:05.464 IPv4 Primary interface is en0 and IPv6 Primary Interface is en0
+ 1/15/2017  3:18:05.466 IPv4 Primary interface is en0 and IPv6 Primary Interface is en0
+ 1/15/2017  3:18:08.176 Background Network Application entered
+ 1/15/2017  3:18:08.176 BG Application: Not Present, BG Daemon: Present. Daemons: mediaserverd 
+ 1/15/2017  3:18:08.176 __WiFiManagerSetEnableState: state TRUE, manager->enable.setting TRUE, manager->unlockedSinceBoot TRUE
+ 1/15/2017  3:18:08.177 __WiFiDeviceManagerAutoAssociate: Already connected to DIGI-146A.
+ 1/15/2017  3:18:09.885 __WiFiLQAMgrLogStats: Rssi: -71 Cca: 0 TxPer: 0.0% (4) BcnPer: 0.0% (0) RxFrms 23 TxRate: 39000 RxRate: 58500
+ 1/15/2017  3:18:13.586 scanCache: Purging scan cache
+ 1/15/2017  3:18:14.894 
+Too frequent(0.982860 secs) rssi event from driver, ignoring
+
+ 1/15/2017  3:18:16.213 Received kIOMessageSystemWillSleep
+ 1/15/2017  3:18:16.213 System Sleep notification, Disabling auto-join
+ 1/15/2017  3:18:16.213 __WiFiManagerSetEnableState: state FALSE, manager->enable.setting TRUE, manager->unlockedSinceBoot TRUE
+ 1/15/2017  3:18:16.213 Disabling automatic association
+ 1/15/2017  3:18:16.228 WoW is Disabled, 0 WoW Clients
+ 1/15/2017  3:18:16.307 __WiFiDeviceCopyLinkChangedSubReasonString: Apple80211ReturnToString failed 1
+ 1/15/2017  3:18:16.307 __WiFiDeviceProcessDriverAvailableEvent: driver availability false, reason PowerOff(0xe0821804), subreason (null)(0x0)
+ 1/15/2017  3:18:16.307 __WiFiManagerDispatchDeviceAvailable: driver availability false
+
+ 1/15/2017  3:18:16.308 Unable to dispatch message to client MessagesViewServ (268435460)
+ 1/15/2017  3:18:16.308 WiFiAWDManagerSubmitMetric: metric container could not be generated for metric id <0x9000e>
+ 1/15/2017  3:18:16.311 __WiFiDeviceManagerAwdlAvailableCallback: AWDL availability changed to FALSE
+ 1/15/2017  3:18:16.311 __WiFiDeviceProcessLinkEvent: isLinkDown 1
+ 1/15/2017  3:18:16.312 Unable to dispatch message to client MessagesViewServ (268435460)
+ 1/15/2017  3:18:16.312 -[WiFiIDSSyncEngine currentNetworkChanged]: <0x16e12f000>, role 1, currentNetwork (null)
+ 1/15/2017  3:18:16.312 -[WiFiIDSSyncEngine currentNetworkChanged]: adjusted waitForReAssociationTimer <CFRunLoopTimer 0x14ce6ecf0 [0x1a0950150]>{valid = Yes, firing = No, interval = 819052854, tolerance = 0, next fire date = 506135926 (29.999966 @ 10024010744034), callout = (NSTimer) [WiFiIDSSyncEngine companionReAssociationWaitTimerFired:] (0x18292cfe0 / 0x1000e1010) (/usr/sbin/wifid), context = <CFRunLoopTimer context 0x14ce5c520>}
+ 1/15/2017  3:43:16.778 Total connection time to DIGI-146A 1558033.478492
+ 1/15/2017  3:43:16.740 WiFiDeviceManagerSetNetworks: Adding HS20 Account: 
+Domain name orange.ro
+3GPP MCC&MNC 226F10 
+Friendly Operator Name Orange
+ 1/15/2017  3:43:16.741 __WiFiDeviceManagerPrepareHS20Queries: created queries <CFArray 0x14cfcda80 [0x1a0950150]>{type = mutable-small, count = 3, values = (
+	0 : <CFNumber 0xb0000000000010c1 [0x1a0950150]>{value = +268, type = kCFNumberSInt16Type}
+	1 : <CFNumber 0xb000000000001081 [0x1a0950150]>{value = +264, type = kCFNumberSInt16Type}
+	2 : <CFNumber 0xb000000000000031 [0x1a0950150]>{value = +3, type = kCFNumberSInt16Type}
+)}
+ 1/15/2017  3:43:16.741 Auto association attempt canceled because auto join is disabled.
+ 1/15/2017  3:43:16.804 No Change in Background Scan Networks, Skip Re-Programming Background Scan
+
+ 1/15/2017  3:43:16.807 Auto association attempt canceled because auto join is disabled.
+ 1/15/2017  3:43:16.807 __WiFiDeviceManagerSetInterfaceRank: setting interface rank kSCNetworkServicePrimaryRankDefault
+ 1/15/2017  3:43:16.809 WiFiDeviceRequestAssociatedSleep: ActiveDuringSleepRequested is already removed ((null)).
+ 1/15/2017  3:43:16.824 WiFiAWDManagerSubmitMetric: metric container could not be generated for metric id <0x90009>
+ 1/15/2017  3:43:16.824 Link went down: isInVoluntary 0, reason Unknown(4), subreason 0, rssi -72
+ 1/15/2017  3:43:16.827 __WiFiDeviceResetCCAHistory
+ 1/15/2017  3:43:16.827 __WiFiDeviceResetRssiHistory
+ 1/15/2017  3:43:16.831 __WiFiManagerCellularTransmitCallback_block_invoke: Cellular Transmit Started = TRUE
+ 1/15/2017  3:43:16.939 __WiFiDeviceCopyLinkChangedSubReasonString: Apple80211ReturnToString failed 1
+ 1/15/2017  3:43:16.939 __WiFiDeviceProcessDriverAvailableEvent: driver availability true, reason Initializing(0xe0821803), subreason (null)(0x0)
+ 1/15/2017  3:43:16.940 __WiFiManagerDispatchDeviceAvailable: driver availability true
+
+ 1/15/2017  3:43:16.954 Unable to dispatch message to client MessagesViewServ (268435460)
+ 1/15/2017  3:43:16.975 Auto association attempt canceled because auto join is disabled.
+ 1/15/2017  3:43:16.975 WiFiAWDManagerSubmitMetric: metric container could not be generated for metric id <0x9000e>
+ 1/15/2017  3:43:16.986 Auto association attempt canceled because auto join is disabled.
+ 1/15/2017  3:43:16.989 No Change in Background Scan Networks, Skip Re-Programming Background Scan
+
+ 1/15/2017  3:43:16.997 Creating client for "configd"
+ 1/15/2017  3:43:17.003 Received kIOMessageSystemWillPowerOn
+ 1/15/2017  3:43:17.003 System wake reason: AOP.ExternalReq baseband
+ 1/15/2017  3:43:17.003 System Powered ON notification Re-enabling auto-join
+ 1/15/2017  3:43:17.003 __WiFiManagerSetEnableState: state TRUE, manager->enable.setting TRUE, manager->unlockedSinceBoot TRUE
+ 1/15/2017  3:43:17.003 Enabling automatic association
+ 1/15/2017  3:43:17.004 __WiFiDeviceManagerStateMachineRun: current state: Idle
+ 1/15/2017  3:43:17.004 Attempting multi-stage auto join mStageAutoJoinAttempts=0
+ 1/15/2017  3:43:17.004 Starting multi-stage auto join sequence
+ 1/15/2017  3:43:17.004 multi-stage auto-join: Scanning for previous network DIGI-146A on channel 1
+ 1/15/2017  3:43:17.004 Performing auto-join broadcast scan with a modified dwell time of 110ms on channels: 1 
+ 1/15/2017  3:43:17.005 Enqueuing command type: "Scan" pending commands: 0
+ 1/15/2017  3:43:17.005 WiFiLocaleManagerCheckLocale: location service or wifi is off, set locale to default
+ 1/15/2017  3:43:17.005 new locale:  , locale: 
+ 1/15/2017  3:43:17.005 Dequeuing command type: "Scan" pending commands: 0
+ 1/15/2017  3:43:17.005 Attempting Apple80211ScanAsync on en0
+ 1/15/2017  3:43:17.055 WiFiDeviceManagerSetNetworks: Adding HS20 Account: 
+Domain name orange.ro
+3GPP MCC&MNC 226F10 
+Friendly Operator Name Orange
+ 1/15/2017  3:43:17.055 __WiFiDeviceManagerPrepareHS20Queries: created queries <CFArray 0x14cdaeb80 [0x1a0950150]>{type = mutable-small, count = 3, values = (
+	0 : <CFNumber 0xb0000000000010c1 [0x1a0950150]>{value = +268, type = kCFNumberSInt16Type}
+	1 : <CFNumber 0xb000000000001081 [0x1a0950150]>{value = +264, type = kCFNumberSInt16Type}
+	2 : <CFNumber 0xb000000000000031 [0x1a0950150]>{value = +3, type = kCFNumberSInt16Type}
+)}
+ 1/15/2017  3:43:17.056 Auto association attempt canceled because auto join state is Scanning Previous Network Channel.
+ 1/15/2017  3:43:17.057 No Change in Background Scan Networks, Skip Re-Programming Background Scan
+
+ 1/15/2017  3:43:17.057 WiFiLocaleManagerCheckLocale: location service or wifi is off, set locale to default
+ 1/15/2017  3:43:17.057 new locale:  , locale: 
+ 1/15/2017  3:43:17.198 Completed Apple80211ScanAsync on en0 (0x0)
+ 1/15/2017  3:43:17.201 Auto join scan completed (0) with current state: Scanning Previous Network Channel
+ 1/15/2017  3:43:17.201 __WiFiDeviceManagerStateMachineRun: current state: Scanning Previous Network Channel
+ 1/15/2017  3:43:17.201 Scanning Previous Network Channel found: DIGI-146A
+ 1/15/2017  3:43:17.201 Attempting auto-join for networks in following order: DIGI-146A(W)
+ 1/15/2017  3:43:17.201 Autojoin is processing network 1 of 1 candidates
+ 1/15/2017  3:43:17.201 Attempting auto join association of DIGI-146A
+ 1/15/2017  3:43:17.229 Enqueuing command type: "Association" pending commands: 1
+ 1/15/2017  3:43:17.229 Dequeuing command type: "Association" pending commands: 0
+ 1/15/2017  3:43:17.229 Attempting Apple80211AssociateAsync
+ 1/15/2017  3:43:17.232 Attempting to join WPA network: DIGI-146A
+ 1/15/2017  3:43:17.346 MIS state is Disabled
+ 1/15/2017  3:43:17.346 MIS state queried by "SpringBoard" is Disable
+ 1/15/2017  3:43:17.347 MIS state is Disabled
+ 1/15/2017  3:43:17.347 MIS state queried by "mediaserverd" is Disable
+ 1/15/2017  3:43:17.347 MIS state is Disabled
+ 1/15/2017  3:43:17.347 MIS state queried by "UserEventAgent" is Disable
+ 1/15/2017  3:43:17.347 MIS state is Disabled
+ 1/15/2017  3:43:17.347 MIS state queried by "locationd" is Disable
+ 1/15/2017  3:43:17.348 MIS state is Disabled
+ 1/15/2017  3:43:17.348 MIS state queried by "identityservices" is Disable
+ 1/15/2017  3:43:17.352 MIS state is Disabled
+ 1/15/2017  3:43:17.352 MIS state queried by "apsd" is Disable
+ 1/15/2017  3:43:17.352 MIS state is Disabled
+ 1/15/2017  3:43:17.352 MIS state queried by "imagent" is Disable
+ 1/15/2017  3:43:17.353 MIS state is Disabled
+ 1/15/2017  3:43:17.354 MIS state queried by "InCallService" is Disable
+ 1/15/2017  3:43:17.358 MIS state is Disabled
+ 1/15/2017  3:43:17.358 MIS state queried by "MobileMail" is Disable
+ 1/15/2017  3:43:17.417 __WiFiDeviceProcessLinkEvent: isLinkDown 0
+ 1/15/2017  3:43:17.431 Unable to dispatch message to client MessagesViewServ (268435460)
+ 1/15/2017  3:43:17.509 __WiFiDeviceManagerSetInterfaceRank: setting interface rank kSCNetworkServicePrimaryRankDefault
+ 1/15/2017  3:43:17.510 __WiFiDeviceManagerEvaluateAPEnvironment: Getting AP environment for DIGI-146A. Learning period 259200 secs Expiry period 2592000 secs
+ 1/15/2017  3:43:17.511 __WiFiDeviceManagerEvaluateAPEnvironment: AP environment is 2 for DIGI-146A(4:bd:70:a4:e3:8)
+ 1/15/2017  3:43:17.511 WiFiDeviceSetRoamParams: setting roam profile to type 1
+ 1/15/2017  3:43:17.514 __WiFiDeviceManagerEvaluateAPEnvironment: Getting AP environment for DIGI-146A. Learning period 259200 secs Expiry period 2592000 secs
+ 1/15/2017  3:43:17.515 __WiFiDeviceManagerEvaluateAPEnvironment: AP environment is 2 for DIGI-146A(4:bd:70:a4:e3:8)
+ 1/15/2017  3:43:17.515 __WiFiLQAMgrSetCurrentNetwork: SSID: DIGI-146A BSSID: 4:bd:70:a4:e3:8 RSSI: -73 ApEnv: 2
+ 1/15/2017  3:43:17.537 WiFiDeviceRequestAssociatedSleep: ActiveDuringSleepRequested is already removed ((null)).
+ 1/15/2017  3:43:17.537 __WiFiDeviceResetCCAHistory
+ 1/15/2017  3:43:17.537 __WiFiDeviceResetRssiHistory
+ 1/15/2017  3:43:17.537 __WiFiLQAMgrLogStats: Rssi: -73 Cca: 0 TxPer: 0.0% (0) BcnPer: 0.0% (0) RxFrms 0 TxRate: 0 RxRate: 0
+ 1/15/2017  3:43:17.538 __WiFiDeviceProcessLinkEvent: Initializing lqm value: rawRssi -73, scaledRssi 0.603757, noise 0, snr 18
+ 1/15/2017  3:43:17.539 __WiFiMetricsManagerPrepareLinkChangeNetworkParams: OUI:04:bd:70 Channel:1(20MHz) Flags:0x8 PhyMode:0x10 Security:0x2 WPA:[Prot:0x2 McastCipher:0x4 UcastCipher:0xc AKM:0x2 Caps:0x0] HT:[Info:0x19fc AMPDU:0x1b TXBF:0x0 Ext:0x0 ASEL:0x0] VHT:[Info:0x0]
+ 1/15/2017  3:43:17.539 WiFiAWDManagerSubmitMetric: metric container could not be generated for metric id <0x90009>
+ 1/15/2017  3:43:17.551 
+Too frequent(0.014296 secs) rssi event from driver, ignoring
+
+ 1/15/2017  3:43:17.553 Completed Apple80211AssociateAsync (0 - 0x0)
+ 1/15/2017  3:43:17.554 Joined: DIGI-146A
+ 1/15/2017  3:43:17.554 Auto join association completed (0) with current state: Associating
+ 1/15/2017  3:43:17.554 __WiFiDeviceManagerStateMachineRun: current state: Associating
+ 1/15/2017  3:43:17.554 __WiFiDeviceManagerProcessAssociationResult: current state: Associating
+ 1/15/2017  3:43:17.554 WiFiNetworkSetKnownBssUsageData: BSS updated - current BSS: 4:bd:70:a4:e3:8 (1)
+ 1/15/2017  3:43:17.554 Removing problematic state for DIGI-146A, reason N/A reasonData=0
+ 1/15/2017  3:43:17.554 problematic networks =  and potentially problematic networks = 
+ 1/15/2017  3:43:17.556 No Change in Background Scan Networks, Skip Re-Programming Background Scan
+
+ 1/15/2017  3:43:17.557 __WiFiManagerDidAssociateCallback: network DIGI-146A, requestedInformation <CFBasicHash 0x14cf33a40 [0x1a0950150]>{type = mutable dict, count = 1,
+entries =>
+	2 : <CFString 0x10017e160 [0x1a0950150]>{contents = "reason"} = <CFString 0x100185180 [0x1a0950150]>{contents = "Associating"}
+}
+
+ 1/15/2017  3:43:17.581 WiFiDeviceManagerSetNetworks: Adding HS20 Account: 
+Domain name orange.ro
+3GPP MCC&MNC 226F10 
+Friendly Operator Name Orange
+ 1/15/2017  3:43:17.582 __WiFiDeviceManagerPrepareHS20Queries: created queries <CFArray 0x14cf196a0 [0x1a0950150]>{type = mutable-small, count = 3, values = (
+	0 : <CFNumber 0xb0000000000010c1 [0x1a0950150]>{value = +268, type = kCFNumberSInt16Type}
+	1 : <CFNumber 0xb000000000001081 [0x1a0950150]>{value = +264, type = kCFNumberSInt16Type}
+	2 : <CFNumber 0xb000000000000031 [0x1a0950150]>{value = +3, type = kCFNumberSInt16Type}
+)}
+ 1/15/2017  3:43:17.582 Auto association attempt canceled because auto join state is Associating.
+ 1/15/2017  3:43:17.583 No Change in Background Scan Networks, Skip Re-Programming Background Scan
+
+ 1/15/2017  3:43:17.587 configd requesting removal of BGScan networks
+ 1/15/2017  3:43:17.588 No Change in Background Scan Networks, Skip Re-Programming Background Scan
+
+ 1/15/2017  3:43:17.588 __WiFiManagerSetEnableState: state TRUE, manager->enable.setting TRUE, manager->unlockedSinceBoot TRUE
+ 1/15/2017  3:43:17.588 Removing client for "configd"
+ 1/15/2017  3:43:17.591 __WiFiDeviceManagerAwdlAvailableCallback: AWDL availability changed to TRUE
+ 1/15/2017  3:43:17.591 IPV4 State change for en0
+ 1/15/2017  3:43:17.594 IPV6 State change for en0
+ 1/15/2017  3:43:17.595 IPv4 Primary interface is pdp_ip0 and IPv6 Primary Interface is (null)
+ 1/15/2017  3:43:17.596 IPv4 Primary interface is pdp_ip0 and IPv6 Primary Interface is (null)
+ 1/15/2017  3:43:17.598 Creating client for "configd"
+ 1/15/2017  3:43:17.608 MIS state is Disabled
+ 1/15/2017  3:43:17.609 MIS state queried by "nanoregistryd" is Disable
+ 1/15/2017  3:43:17.721 WiFiDeviceManagerSetNetworks: Adding HS20 Account: 
+Domain name orange.ro
+3GPP MCC&MNC 226F10 
+Friendly Operator Name Orange
+ 1/15/2017  3:43:17.722 __WiFiDeviceManagerPrepareHS20Queries: created queries <CFArray 0x14cfcda80 [0x1a0950150]>{type = mutable-small, count = 3, values = (
+	0 : <CFNumber 0xb0000000000010c1 [0x1a0950150]>{value = +268, type = kCFNumberSInt16Type}
+	1 : <CFNumber 0xb000000000001081 [0x1a0950150]>{value = +264, type = kCFNumberSInt16Type}
+	2 : <CFNumber 0xb000000000000031 [0x1a0950150]>{value = +3, type = kCFNumberSInt16Type}
+)}
+ 1/15/2017  3:43:17.722 __WiFiDeviceManagerAutoAssociate: Already connected to DIGI-146A.
+ 1/15/2017  3:43:17.724 No Change in Background Scan Networks, Skip Re-Programming Background Scan
+
+ 1/15/2017  3:43:17.758 MIS state is Disabled
+ 1/15/2017  3:43:17.758 MIS state queried by "mediaserverd" is Disable
+ 1/15/2017  3:43:17.758 MIS state is Disabled
+ 1/15/2017  3:43:17.758 MIS state queried by "UserEventAgent" is Disable
+ 1/15/2017  3:43:17.759 MIS state is Disabled
+ 1/15/2017  3:43:17.759 MIS state queried by "locationd" is Disable
+ 1/15/2017  3:43:17.759 MIS state is Disabled
+ 1/15/2017  3:43:17.759 MIS state queried by "identityservices" is Disable
+ 1/15/2017  3:43:17.760 MIS state is Disabled
+ 1/15/2017  3:43:17.760 MIS state queried by "apsd" is Disable
+ 1/15/2017  3:43:17.761 MIS state is Disabled
+ 1/15/2017  3:43:17.765 MIS state queried by "imagent" is Disable
+ 1/15/2017  3:43:17.765 MIS state is Disabled
+ 1/15/2017  3:43:17.765 MIS state queried by "InCallService" is Disable
+ 1/15/2017  3:43:17.765 MIS state is Disabled
+ 1/15/2017  3:43:17.765 MIS state queried by "MobileMail" is Disable
+ 1/15/2017  3:43:17.766 MIS state is Disabled
+ 1/15/2017  3:43:17.767 MIS state queried by "SpringBoard" is Disable
+ 1/15/2017  3:43:17.779 configd requesting removal of BGScan networks
+ 1/15/2017  3:43:17.780 No Change in Background Scan Networks, Skip Re-Programming Background Scan
+
+ 1/15/2017  3:43:17.781 __WiFiManagerSetEnableState: state TRUE, manager->enable.setting TRUE, manager->unlockedSinceBoot TRUE
+ 1/15/2017  3:43:17.783 Removing client for "configd"
+ 1/15/2017  3:43:17.809 IPV4 State change for en0
+ 1/15/2017  3:43:17.810 IP Address: 192.168.100.4
+ 1/15/2017  3:43:17.810 Router IP Address: 192.168.100.1
+ 1/15/2017  3:43:17.810 __WiFiDeviceCheckForIPV4ParamsChange: Setting power mode to kA11PowerProfileDefault
+ 1/15/2017  3:43:17.811 __WiFiManagerIPv4Callback: <en0> [DIGI-146A                               : isHidden=0, isEAP=0, isWPA=1, isWEP=0, type=0] isMainIf? 1, isRoutable? 1
+ 1/15/2017  3:43:17.811 -[WiFiIDSSyncEngine currentNetworkChanged]: <0x16e12f000>, role 1, currentNetwork DIGI-146A                               : isHidden=0, isEAP=0, isWPA=1, isWEP=0, type=0
+ 1/15/2017  3:43:17.811 -[WiFiIDSSyncEngine currentNetworkChanged]: reset waitForReAssociationTimer <CFRunLoopTimer 0x14ce6ecf0 [0x1a0950150]>{valid = Yes, firing = No, interval = 819052854, tolerance = 0, next fire date = 1.3276348e+09 (821497398 @ 12127892899690633), callout = (NSTimer) [WiFiIDSSyncEngine companionReAssociationWaitTimerFired:] (0x18292cfe0 / 0x1000e1010) (/usr/sbin/wifid), context = <CFRunLoopTimer context 0x14ce5c520>}
+ 1/15/2017  3:43:17.811 -[WiFiIDSSyncEngine sendCurrentCompanionNetwork]: autojoinAssistDict {
+    "SSID_STR" = "DIGI-146A";
+}
+ 1/15/2017  3:43:17.811 WiFiLQAMgrSetRouterIpv4Addr: Router IP Address: 192.168.100.1 
+ 1/15/2017  3:43:17.812 -[WiFiIDSSyncEngine sendToGizmoOfDataType:]: <0x16e247000> ID:(null), data type 1
+ 1/15/2017  3:43:17.816 __WiFiDeviceCheckForIPV4ParamsChange: configMethod DHCP, leaseExpiryDuration 4320 mins
+ 1/15/2017  3:43:17.816 WiFiAWDManagerSubmitMetric: metric container could not be generated for metric id <0x90007>
+ 1/15/2017  3:43:17.816 Router MAC Address: 04:bd:70:a4:e3:00
+ 1/15/2017  3:43:17.877 IPv4 Primary interface is pdp_ip0 and IPv6 Primary Interface is (null)
+ 1/15/2017  3:43:17.899 IPv4 Primary interface is en0 and IPv6 Primary Interface is (null)
+ 1/15/2017  3:43:17.925 IPV6 State change for en0
+ 1/15/2017  3:43:17.926 IP Address: 2a02:2f0a:c0a8:1a00:1cc0:d85b:4877:c957
+ 1/15/2017  3:43:17.926 IP Address: 2a02:2f0a:c0a8:1a00:6095:2491:283a:9af8
+ 1/15/2017  3:43:17.927 WoW is Disabled, 0 WoW Clients
+ 1/15/2017  3:43:17.943 IPv4 Primary interface is en0 and IPv6 Primary Interface is en0
+ 1/15/2017  3:43:17.944 IPv4 Primary interface is en0 and IPv6 Primary Interface is en0
+ 1/15/2017  3:43:17.946 MIS state is Disabled
+ 1/15/2017  3:43:17.946 MIS state queried by "nanoregistryd" is Disable
+ 1/15/2017  3:43:18.081 WoW is Disabled, 0 WoW Clients
+ 1/15/2017  3:43:18.101 WoW is Disabled, 0 WoW Clients
+ 1/15/2017  3:43:18.286 WoW is Disabled, 0 WoW Clients
+ 1/15/2017  3:43:18.381 Creating client for "CommCenter"
+ 1/15/2017  3:43:18.387 CommCenter requesting removal of BGScan networks
+ 1/15/2017  3:43:18.389 No Change in Background Scan Networks, Skip Re-Programming Background Scan
+
+ 1/15/2017  3:43:18.389 __WiFiManagerSetEnableState: state TRUE, manager->enable.setting TRUE, manager->unlockedSinceBoot TRUE
+ 1/15/2017  3:43:18.389 Removing client for "CommCenter"
+ 1/15/2017  3:43:19.816 IPv4 Primary interface is en0 and IPv6 Primary Interface is en0
+ 1/15/2017  3:43:19.817 IPv4 Primary interface is en0 and IPv6 Primary Interface is en0
+ 1/15/2017  3:43:25.230 __WiFiManagerCellularTransmitCallback_block_invoke: Cellular Transmit Started = FALSE
+ 1/15/2017  3:43:27.399 __WiFiLQAMgrLogStats: Rssi: -71 Cca: 0 TxPer: 0.0% (1) BcnPer: 0.0% (0) RxFrms 1 TxRate: 52000 RxRate: 58500
+ 1/15/2017  3:43:30.427 Received kIOMessageSystemWillSleep
+ 1/15/2017  3:43:30.428 System Sleep notification, Disabling auto-join
+ 1/15/2017  3:43:30.428 __WiFiManagerSetEnableState: state FALSE, manager->enable.setting TRUE, manager->unlockedSinceBoot TRUE
+ 1/15/2017  3:43:30.434 Disabling automatic association
+ 1/15/2017  3:43:30.478 WoW is Disabled, 0 WoW Clients
+ 1/15/2017  3:43:30.604 __WiFiDeviceCopyLinkChangedSubReasonString: Apple80211ReturnToString failed 1
+ 1/15/2017  3:43:30.604 __WiFiDeviceProcessDriverAvailableEvent: driver availability false, reason PowerOff(0xe0821804), subreason (null)(0x0)
+ 1/15/2017  3:43:30.604 __WiFiManagerDispatchDeviceAvailable: driver availability false
+
+ 1/15/2017  3:43:30.605 Unable to dispatch message to client MessagesViewServ (268435460)
+ 1/15/2017  3:43:30.605 WiFiAWDManagerSubmitMetric: metric container could not be generated for metric id <0x9000e>
+ 1/15/2017  3:43:30.610 __WiFiDeviceManagerAwdlAvailableCallback: AWDL availability changed to FALSE
+ 1/15/2017  3:43:30.610 __WiFiDeviceProcessLinkEvent: isLinkDown 1
+ 1/15/2017  3:43:30.611 Unable to dispatch message to client MessagesViewServ (268435460)
+ 1/15/2017  3:43:30.611 -[WiFiIDSSyncEngine currentNetworkChanged]: <0x16e12f000>, role 1, currentNetwork (null)
+ 1/15/2017  3:43:30.611 -[WiFiIDSSyncEngine currentNetworkChanged]: adjusted waitForReAssociationTimer <CFRunLoopTimer 0x14ce6ecf0 [0x1a0950150]>{valid = Yes, firing = No, interval = 819052854, tolerance = 0, next fire date = 506137441 (29.999967 @ 10024358891531), callout = (NSTimer) [WiFiIDSSyncEngine companionReAssociationWaitTimerFired:] (0x18292cfe0 / 0x1000e1010) (/usr/sbin/wifid), context = <CFRunLoopTimer context 0x14ce5c520>}
+ 1/15/2017  4:42:00.801 Total connection time to DIGI-146A 1561556.724950
+ 1/15/2017  4:42:00.861 WiFiDeviceManagerSetNetworks: Adding HS20 Account: 
+Domain name orange.ro
+3GPP MCC&MNC 226F10 
+Friendly Operator Name Orange
+ 1/15/2017  4:42:00.863 __WiFiDeviceManagerPrepareHS20Queries: created queries <CFArray 0x14cf8f710 [0x1a0950150]>{type = mutable-small, count = 3, values = (
+	0 : <CFNumber 0xb0000000000010c1 [0x1a0950150]>{value = +268, type = kCFNumberSInt16Type}
+	1 : <CFNumber 0xb000000000001081 [0x1a0950150]>{value = +264, type = kCFNumberSInt16Type}
+	2 : <CFNumber 0xb000000000000031 [0x1a0950150]>{value = +3, type = kCFNumberSInt16Type}
+)}
+ 1/15/2017  4:42:00.863 Auto association attempt canceled because auto join is disabled.
+ 1/15/2017  4:42:00.864 No Change in Background Scan Networks, Skip Re-Programming Background Scan
+
+ 1/15/2017  4:42:00.864 Auto association attempt canceled because auto join is disabled.
+ 1/15/2017  4:42:00.865 __WiFiDeviceManagerSetInterfaceRank: setting interface rank kSCNetworkServicePrimaryRankDefault
+ 1/15/2017  4:42:00.997 WiFiDeviceRequestAssociatedSleep: ActiveDuringSleepRequested is already removed ((null)).
+ 1/15/2017  4:42:01.013 WiFiAWDManagerSubmitMetric: metric container could not be generated for metric id <0x90009>
+ 1/15/2017  4:42:01.013 Link went down: isInVoluntary 0, reason Unknown(4), subreason 0, rssi -71
+ 1/15/2017  4:42:01.013 __WiFiDeviceResetCCAHistory
+ 1/15/2017  4:42:01.013 __WiFiDeviceResetRssiHistory
+ 1/15/2017  4:42:01.013 __WiFiManagerCellularTransmitCallback_block_invoke: Cellular Transmit Started = FALSE
+ 1/15/2017  4:42:01.016 Creating client for "configd"
+ 1/15/2017  4:42:01.021 __WiFiDeviceCopyLinkChangedSubReasonString: Apple80211ReturnToString failed 1
+ 1/15/2017  4:42:01.021 __WiFiDeviceProcessDriverAvailableEvent: driver availability true, reason Initializing(0xe0821803), subreason (null)(0x0)
+ 1/15/2017  4:42:01.021 __WiFiManagerDispatchDeviceAvailable: driver availability true
+
+ 1/15/2017  4:42:01.023 Unable to dispatch message to client MessagesViewServ (268435460)
+ 1/15/2017  4:42:01.024 Auto association attempt canceled because auto join is disabled.
+ 1/15/2017  4:42:01.024 WiFiAWDManagerSubmitMetric: metric container could not be generated for metric id <0x9000e>
+ 1/15/2017  4:42:01.025 Auto association attempt canceled because auto join is disabled.
+ 1/15/2017  4:42:01.026 No Change in Background Scan Networks, Skip Re-Programming Background Scan
+
+ 1/15/2017  4:42:01.043 Received kIOMessageSystemWillPowerOn
+ 1/15/2017  4:42:01.043 System wake reason: AOP.ExternalReq rtc
+ 1/15/2017  4:42:01.043 System Powered ON notification Re-enabling auto-join
+ 1/15/2017  4:42:01.043 __WiFiManagerSetEnableState: state TRUE, manager->enable.setting TRUE, manager->unlockedSinceBoot TRUE
+ 1/15/2017  4:42:01.045 Enabling automatic association
+ 1/15/2017  4:42:01.046 __WiFiDeviceManagerStateMachineRun: current state: Idle
+ 1/15/2017  4:42:01.046 Attempting multi-stage auto join mStageAutoJoinAttempts=0
+ 1/15/2017  4:42:01.046 Starting multi-stage auto join sequence
+ 1/15/2017  4:42:01.047 multi-stage auto-join: Scanning for previous network DIGI-146A on channel 1
+ 1/15/2017  4:42:01.047 Performing auto-join broadcast scan with a modified dwell time of 110ms on channels: 1 
+ 1/15/2017  4:42:01.047 Enqueuing command type: "Scan" pending commands: 0
+ 1/15/2017  4:42:01.047 WiFiLocaleManagerCheckLocale: location service or wifi is off, set locale to default
+ 1/15/2017  4:42:01.047 new locale:  , locale: 
+ 1/15/2017  4:42:01.047 Dequeuing command type: "Scan" pending commands: 0
+ 1/15/2017  4:42:01.047 Attempting Apple80211ScanAsync on en0
+ 1/15/2017  4:42:01.232 WiFiDeviceManagerSetNetworks: Adding HS20 Account: 
+Domain name orange.ro
+3GPP MCC&MNC 226F10 
+Friendly Operator Name Orange
+ 1/15/2017  4:42:01.234 __WiFiDeviceManagerPrepareHS20Queries: created queries <CFArray 0x14cdafef0 [0x1a0950150]>{type = mutable-small, count = 3, values = (
+	0 : <CFNumber 0xb0000000000010c1 [0x1a0950150]>{value = +268, type = kCFNumberSInt16Type}
+	1 : <CFNumber 0xb000000000001081 [0x1a0950150]>{value = +264, type = kCFNumberSInt16Type}
+	2 : <CFNumber 0xb000000000000031 [0x1a0950150]>{value = +3, type = kCFNumberSInt16Type}
+)}
+ 1/15/2017  4:42:01.234 Auto association attempt canceled because auto join state is Scanning Previous Network Channel.
+ 1/15/2017  4:42:01.237 No Change in Background Scan Networks, Skip Re-Programming Background Scan
+
+ 1/15/2017  4:42:01.240 Completed Apple80211ScanAsync on en0 (0x0)
+ 1/15/2017  4:42:01.246 Auto join scan completed (0) with current state: Scanning Previous Network Channel
+ 1/15/2017  4:42:01.246 __WiFiDeviceManagerStateMachineRun: current state: Scanning Previous Network Channel
+ 1/15/2017  4:42:01.246 Scanning Previous Network Channel found: DIGI-146A
+ 1/15/2017  4:42:01.248 Attempting auto-join for networks in following order: DIGI-146A(W)
+ 1/15/2017  4:42:01.248 Autojoin is processing network 1 of 1 candidates
+ 1/15/2017  4:42:01.248 Attempting auto join association of DIGI-146A
+ 1/15/2017  4:42:01.315 Enqueuing command type: "Association" pending commands: 1
+ 1/15/2017  4:42:01.316 Dequeuing command type: "Association" pending commands: 0
+ 1/15/2017  4:42:01.316 Attempting Apple80211AssociateAsync
+ 1/15/2017  4:42:01.320 Attempting to join WPA network: DIGI-146A
+ 1/15/2017  4:42:01.492 __WiFiDeviceProcessLinkEvent: isLinkDown 0
+ 1/15/2017  4:42:01.504 Unable to dispatch message to client MessagesViewServ (268435460)
+ 1/15/2017  4:42:01.507 __WiFiDeviceManagerSetInterfaceRank: setting interface rank kSCNetworkServicePrimaryRankDefault
+ 1/15/2017  4:42:01.508 __WiFiDeviceManagerEvaluateAPEnvironment: Getting AP environment for DIGI-146A. Learning period 259200 secs Expiry period 2592000 secs
+ 1/15/2017  4:42:01.508 __WiFiDeviceManagerEvaluateAPEnvironment: AP environment is 2 for DIGI-146A(4:bd:70:a4:e3:8)
+ 1/15/2017  4:42:01.508 WiFiDeviceSetRoamParams: setting roam profile to type 1
+ 1/15/2017  4:42:01.509 __WiFiDeviceManagerEvaluateAPEnvironment: Getting AP environment for DIGI-146A. Learning period 259200 secs Expiry period 2592000 secs
+ 1/15/2017  4:42:01.509 __WiFiDeviceManagerEvaluateAPEnvironment: AP environment is 2 for DIGI-146A(4:bd:70:a4:e3:8)
+ 1/15/2017  4:42:01.509 __WiFiLQAMgrSetCurrentNetwork: SSID: DIGI-146A BSSID: 4:bd:70:a4:e3:8 RSSI: -73 ApEnv: 2
+ 1/15/2017  4:42:01.513 WiFiDeviceRequestAssociatedSleep: ActiveDuringSleepRequested is already removed ((null)).
+ 1/15/2017  4:42:01.514 __WiFiDeviceResetCCAHistory
+ 1/15/2017  4:42:01.514 __WiFiDeviceResetRssiHistory
+ 1/15/2017  4:42:01.514 __WiFiLQAMgrLogStats: Rssi: -73 Cca: 0 TxPer: 0.0% (0) BcnPer: 0.0% (0) RxFrms 0 TxRate: 0 RxRate: 0
+ 1/15/2017  4:42:01.516 __WiFiDeviceProcessLinkEvent: Initializing lqm value: rawRssi -73, scaledRssi 0.603757, noise 0, snr 18
+ 1/15/2017  4:42:01.520 __WiFiMetricsManagerPrepareLinkChangeNetworkParams: OUI:04:bd:70 Channel:1(20MHz) Flags:0x8 PhyMode:0x10 Security:0x2 WPA:[Prot:0x2 McastCipher:0x4 UcastCipher:0xc AKM:0x2 Caps:0x0] HT:[Info:0x19fc AMPDU:0x1b TXBF:0x0 Ext:0x0 ASEL:0x0] VHT:[Info:0x0]
+ 1/15/2017  4:42:01.520 WiFiAWDManagerSubmitMetric: metric container could not be generated for metric id <0x90009>
+ 1/15/2017  4:42:01.555 
+Too frequent(0.041550 secs) rssi event from driver, ignoring
+
+ 1/15/2017  4:42:01.562 Completed Apple80211AssociateAsync (0 - 0x0)
+ 1/15/2017  4:42:01.562 Joined: DIGI-146A
+ 1/15/2017  4:42:01.563 Auto join association completed (0) with current state: Associating
+ 1/15/2017  4:42:01.563 __WiFiDeviceManagerStateMachineRun: current state: Associating
+ 1/15/2017  4:42:01.563 __WiFiDeviceManagerProcessAssociationResult: current state: Associating
+ 1/15/2017  4:42:01.563 WiFiNetworkSetKnownBssUsageData: BSS updated - current BSS: 4:bd:70:a4:e3:8 (1)
+ 1/15/2017  4:42:01.563 Removing problematic state for DIGI-146A, reason N/A reasonData=0
+ 1/15/2017  4:42:01.563 problematic networks =  and potentially problematic networks = 
+ 1/15/2017  4:42:01.564 No Change in Background Scan Networks, Skip Re-Programming Background Scan
+
+ 1/15/2017  4:42:01.565 __WiFiManagerDidAssociateCallback: network DIGI-146A, requestedInformation <CFBasicHash 0x14cf5f160 [0x1a0950150]>{type = mutable dict, count = 1,
+entries =>
+	2 : <CFString 0x10017e160 [0x1a0950150]>{contents = "reason"} = <CFString 0x100185180 [0x1a0950150]>{contents = "Associating"}
+}
+
+ 1/15/2017  4:42:01.602 WiFiDeviceManagerSetNetworks: Adding HS20 Account: 
+Domain name orange.ro
+3GPP MCC&MNC 226F10 
+Friendly Operator Name Orange
+ 1/15/2017  4:42:01.602 __WiFiDeviceManagerPrepareHS20Queries: created queries <CFArray 0x14cd74550 [0x1a0950150]>{type = mutable-small, count = 3, values = (
+	0 : <CFNumber 0xb0000000000010c1 [0x1a0950150]>{value = +268, type = kCFNumberSInt16Type}
+	1 : <CFNumber 0xb000000000001081 [0x1a0950150]>{value = +264, type = kCFNumberSInt16Type}
+	2 : <CFNumber 0xb000000000000031 [0x1a0950150]>{value = +3, type = kCFNumberSInt16Type}
+)}
+ 1/15/2017  4:42:01.603 Auto association attempt canceled because auto join state is Associating.
+ 1/15/2017  4:42:01.604 No Change in Background Scan Networks, Skip Re-Programming Background Scan
+
+ 1/15/2017  4:42:01.642 MIS state is Disabled
+ 1/15/2017  4:42:01.642 MIS state queried by "SpringBoard" is Disable
+ 1/15/2017  4:42:01.643 MIS state is Disabled
+ 1/15/2017  4:42:01.643 MIS state queried by "mediaserverd" is Disable
+ 1/15/2017  4:42:01.653 MIS state is Disabled
+ 1/15/2017  4:42:01.653 MIS state queried by "UserEventAgent" is Disable
+ 1/15/2017  4:42:01.654 MIS state is Disabled
+ 1/15/2017  4:42:01.654 MIS state queried by "locationd" is Disable
+ 1/15/2017  4:42:01.655 MIS state is Disabled
+ 1/15/2017  4:42:01.655 MIS state queried by "identityservices" is Disable
+ 1/15/2017  4:42:01.656 MIS state is Disabled
+ 1/15/2017  4:42:01.656 MIS state queried by "apsd" is Disable
+ 1/15/2017  4:42:01.660 MIS state is Disabled
+ 1/15/2017  4:42:01.660 MIS state queried by "imagent" is Disable
+ 1/15/2017  4:42:01.664 MIS state is Disabled
+ 1/15/2017  4:42:01.664 MIS state queried by "InCallService" is Disable
+ 1/15/2017  4:42:01.671 MIS state is Disabled
+ 1/15/2017  4:42:01.672 MIS state queried by "MobileMail" is Disable
+ 1/15/2017  4:42:01.685 WiFiDeviceManagerSetNetworks: Adding HS20 Account: 
+Domain name orange.ro
+3GPP MCC&MNC 226F10 
+Friendly Operator Name Orange
+ 1/15/2017  4:42:01.686 __WiFiDeviceManagerPrepareHS20Queries: created queries <CFArray 0x14cfc6b90 [0x1a0950150]>{type = mutable-small, count = 3, values = (
+	0 : <CFNumber 0xb0000000000010c1 [0x1a0950150]>{value = +268, type = kCFNumberSInt16Type}
+	1 : <CFNumber 0xb000000000001081 [0x1a0950150]>{value = +264, type = kCFNumberSInt16Type}
+	2 : <CFNumber 0xb000000000000031 [0x1a0950150]>{value = +3, type = kCFNumberSInt16Type}
+)}
+ 1/15/2017  4:42:01.687 __WiFiDeviceManagerAutoAssociate: Already connected to DIGI-146A.
+ 1/15/2017  4:42:01.688 No Change in Background Scan Networks, Skip Re-Programming Background Scan
+
+ 1/15/2017  4:42:01.689 MIS state is Disabled
+ 1/15/2017  4:42:01.689 MIS state queried by "nanoregistryd" is Disable
+ 1/15/2017  4:42:01.689 configd requesting removal of BGScan networks
+ 1/15/2017  4:42:01.690 No Change in Background Scan Networks, Skip Re-Programming Background Scan
+
+ 1/15/2017  4:42:01.690 __WiFiManagerSetEnableState: state TRUE, manager->enable.setting TRUE, manager->unlockedSinceBoot TRUE
+ 1/15/2017  4:42:01.691 Removing client for "configd"
+ 1/15/2017  4:42:01.692 __WiFiDeviceManagerAwdlAvailableCallback: AWDL availability changed to TRUE
+ 1/15/2017  4:42:01.694 Creating client for "configd"
+ 1/15/2017  4:42:01.779 __WiFiManagerCellularTransmitCallback_block_invoke: Cellular Transmit Started = TRUE
+ 1/15/2017  4:42:01.780 WoW is Disabled, 0 WoW Clients
+ 1/15/2017  4:42:01.781 MIS state is Disabled
+ 1/15/2017  4:42:01.781 MIS state queried by "locationd" is Disable
+ 1/15/2017  4:42:01.787 MIS state is Disabled
+ 1/15/2017  4:42:01.787 MIS state queried by "imagent" is Disable
+ 1/15/2017  4:42:01.822 MIS state is Disabled
+ 1/15/2017  4:42:01.822 MIS state queried by "SpringBoard" is Disable
+ 1/15/2017  4:42:01.826 MIS state is Disabled
+ 1/15/2017  4:42:01.826 MIS state queried by "mediaserverd" is Disable
+ 1/15/2017  4:42:01.838 MIS state is Disabled
+ 1/15/2017  4:42:01.838 MIS state queried by "UserEventAgent" is Disable
+ 1/15/2017  4:42:01.840 MIS state is Disabled
+ 1/15/2017  4:42:01.841 MIS state queried by "identityservices" is Disable
+ 1/15/2017  4:42:01.842 MIS state is Disabled
+ 1/15/2017  4:42:01.842 MIS state queried by "apsd" is Disable
+ 1/15/2017  4:42:01.842 MIS state is Disabled
+ 1/15/2017  4:42:01.842 MIS state queried by "InCallService" is Disable
+ 1/15/2017  4:42:01.843 MIS state is Disabled
+ 1/15/2017  4:42:01.843 MIS state queried by "MobileMail" is Disable
+ 1/15/2017  4:42:01.845 configd requesting removal of BGScan networks
+ 1/15/2017  4:42:01.847 No Change in Background Scan Networks, Skip Re-Programming Background Scan
+
+ 1/15/2017  4:42:01.847 __WiFiManagerSetEnableState: state TRUE, manager->enable.setting TRUE, manager->unlockedSinceBoot TRUE
+ 1/15/2017  4:42:01.847 Removing client for "configd"
+ 1/15/2017  4:42:01.854 MIS state is Disabled
+ 1/15/2017  4:42:01.854 MIS state queried by "nanoregistryd" is Disable
+ 1/15/2017  4:42:01.860 WoW is Disabled, 0 WoW Clients
+ 1/15/2017  4:42:01.960 WoW is Disabled, 0 WoW Clients
+ 1/15/2017  4:42:02.016 WoW is Disabled, 0 WoW Clients
+ 1/15/2017  4:42:02.346 WoW is Disabled, 0 WoW Clients
+ 1/15/2017  4:42:02.523 IPV6 State change for en0
+ 1/15/2017  4:42:02.523 IP Address: 2a02:2f0a:c0a8:1a00:1cc0:d85b:4877:c957
+ 1/15/2017  4:42:02.523 IP Address: 2a02:2f0a:c0a8:1a00:6095:2491:283a:9af8
+ 1/15/2017  4:42:02.545 IPv4 Primary interface is en0 and IPv6 Primary Interface is (null)
+ 1/15/2017  4:42:02.546 IPv4 Primary interface is en0 and IPv6 Primary Interface is (null)
+ 1/15/2017  4:42:05.523 IPV6 State change for en0
+ 1/15/2017  4:42:05.526 IP Address: 2a02:2f0a:c0a8:1a00:1cc0:d85b:4877:c957
+ 1/15/2017  4:42:05.526 IP Address: 2a02:2f0a:c0a8:1a00:6095:2491:283a:9af8
+ 1/15/2017  4:42:05.528 IPv4 Primary interface is en0 and IPv6 Primary Interface is en0
+ 1/15/2017  4:42:05.529 IPv4 Primary interface is en0 and IPv6 Primary Interface is en0
+ 1/15/2017  4:42:06.814 __WiFiManagerCellularTransmitCallback_block_invoke: Cellular Transmit Started = FALSE
+ 1/15/2017  4:42:11.494 __WiFiLQAMgrLogStats: Rssi: -73 Cca: 0 TxPer: 0.0% (3) BcnPer: 0.0% (0) RxFrms 3 TxRate: 39000 RxRate: 52000
+ 1/15/2017  4:42:11.999 Received kIOMessageSystemWillSleep
+ 1/15/2017  4:42:11.999 System Sleep notification, Disabling auto-join
+ 1/15/2017  4:42:11.999 __WiFiManagerSetEnableState: state FALSE, manager->enable.setting TRUE, manager->unlockedSinceBoot TRUE
+ 1/15/2017  4:42:11.999 Disabling automatic association
+ 1/15/2017  4:42:12.047 WoW is Disabled, 0 WoW Clients
+ 1/15/2017  4:42:12.165 __WiFiDeviceManagerAwdlAvailableCallback: AWDL availability changed to FALSE
+ 1/15/2017  4:42:12.166 __WiFiDeviceCopyLinkChangedSubReasonString: Apple80211ReturnToString failed 1
+ 1/15/2017  4:42:12.166 __WiFiDeviceProcessDriverAvailableEvent: driver availability false, reason PowerOff(0xe0821804), subreason (null)(0x0)
+ 1/15/2017  4:42:12.166 __WiFiManagerDispatchDeviceAvailable: driver availability false
+
+ 1/15/2017  4:42:12.167 Unable to dispatch message to client MessagesViewServ (268435460)
+ 1/15/2017  4:42:12.167 WiFiAWDManagerSubmitMetric: metric container could not be generated for metric id <0x9000e>
+ 1/15/2017  4:42:12.167 __WiFiDeviceProcessLinkEvent: isLinkDown 1
+ 1/15/2017  4:42:12.168 Unable to dispatch message to client MessagesViewServ (268435460)
+ 1/15/2017  4:42:12.168 -[WiFiIDSSyncEngine currentNetworkChanged]: <0x16e12f000>, role 1, currentNetwork (null)
+ 1/15/2017  4:42:12.168 -[WiFiIDSSyncEngine currentNetworkChanged]: adjusted waitForReAssociationTimer <CFRunLoopTimer 0x14ce6ecf0 [0x1a0950150]>{valid = Yes, firing = No, interval = 819052854, tolerance = 0, next fire date = 506140962 (29.999957 @ 10024635693579), callout = (NSTimer) [WiFiIDSSyncEngine companionReAssociationWaitTimerFired:] (0x18292cfe0 / 0x1000e1010) (/usr/sbin/wifid), context = <CFRunLoopTimer context 0x14ce5c520>}
+ 1/15/2017  5:38:20.910 Total connection time to DIGI-146A 1564936.071465
+ 1/15/2017  5:38:21.046 WiFiDeviceManagerSetNetworks: Adding HS20 Account: 
+Domain name orange.ro
+3GPP MCC&MNC 226F10 
+Friendly Operator Name Orange
+ 1/15/2017  5:38:21.046 __WiFiDeviceManagerPrepareHS20Queries: created queries <CFArray 0x14cfa1a00 [0x1a0950150]>{type = mutable-small, count = 3, values = (
+	0 : <CFNumber 0xb0000000000010c1 [0x1a0950150]>{value = +268, type = kCFNumberSInt16Type}
+	1 : <CFNumber 0xb000000000001081 [0x1a0950150]>{value = +264, type = kCFNumberSInt16Type}
+	2 : <CFNumber 0xb000000000000031 [0x1a0950150]>{value = +3, type = kCFNumberSInt16Type}
+)}
+ 1/15/2017  5:38:21.046 Auto association attempt canceled because auto join is disabled.
+ 1/15/2017  5:38:21.048 No Change in Background Scan Networks, Skip Re-Programming Background Scan
+
+ 1/15/2017  5:38:21.048 Auto association attempt canceled because auto join is disabled.
+ 1/15/2017  5:38:21.049 __WiFiDeviceManagerSetInterfaceRank: setting interface rank kSCNetworkServicePrimaryRankDefault
+ 1/15/2017  5:38:21.049 WiFiDeviceRequestAssociatedSleep: ActiveDuringSleepRequested is already removed ((null)).
+ 1/15/2017  5:38:21.055 WiFiAWDManagerSubmitMetric: metric container could not be generated for metric id <0x90009>
+ 1/15/2017  5:38:21.055 Link went down: isInVoluntary 0, reason Unknown(4), subreason 0, rssi -73
+ 1/15/2017  5:38:21.055 __WiFiDeviceResetCCAHistory
+ 1/15/2017  5:38:21.055 __WiFiDeviceResetRssiHistory
+ 1/15/2017  5:38:21.069 __WiFiDeviceCopyLinkChangedSubReasonString: Apple80211ReturnToString failed 1
+ 1/15/2017  5:38:21.069 __WiFiDeviceProcessDriverAvailableEvent: driver availability true, reason Initializing(0xe0821803), subreason (null)(0x0)
+ 1/15/2017  5:38:21.070 __WiFiManagerDispatchDeviceAvailable: driver availability true
+
+ 1/15/2017  5:38:21.071 Unable to dispatch message to client MessagesViewServ (268435460)
+ 1/15/2017  5:38:21.072 Auto association attempt canceled because auto join is disabled.
+ 1/15/2017  5:38:21.072 WiFiAWDManagerSubmitMetric: metric container could not be generated for metric id <0x9000e>
+ 1/15/2017  5:38:21.072 Auto association attempt canceled because auto join is disabled.
+ 1/15/2017  5:38:21.077 No Change in Background Scan Networks, Skip Re-Programming Background Scan
+
+ 1/15/2017  5:38:21.093 __WiFiManagerCellularTransmitCallback_block_invoke: Cellular Transmit Started = FALSE
+ 1/15/2017  5:38:21.204 Creating client for "configd"
+ 1/15/2017  5:38:21.214 Received kIOMessageSystemWillPowerOn
+ 1/15/2017  5:38:21.214 System wake reason: AOP.ExternalReq baseband
+ 1/15/2017  5:38:21.214 System Powered ON notification Re-enabling auto-join
+ 1/15/2017  5:38:21.214 __WiFiManagerSetEnableState: state TRUE, manager->enable.setting TRUE, manager->unlockedSinceBoot TRUE
+ 1/15/2017  5:38:21.215 Enabling automatic association
+ 1/15/2017  5:38:21.215 __WiFiDeviceManagerStateMachineRun: current state: Idle
+ 1/15/2017  5:38:21.216 Attempting multi-stage auto join mStageAutoJoinAttempts=0
+ 1/15/2017  5:38:21.218 Starting multi-stage auto join sequence
+ 1/15/2017  5:38:21.218 multi-stage auto-join: Scanning for previous network DIGI-146A on channel 1
+ 1/15/2017  5:38:21.218 Performing auto-join broadcast scan with a modified dwell time of 110ms on channels: 1 
+ 1/15/2017  5:38:21.218 Enqueuing command type: "Scan" pending commands: 0
+ 1/15/2017  5:38:21.218 WiFiLocaleManagerCheckLocale: location service or wifi is off, set locale to default
+ 1/15/2017  5:38:21.218 new locale:  , locale: 
+ 1/15/2017  5:38:21.218 Dequeuing command type: "Scan" pending commands: 0
+ 1/15/2017  5:38:21.218 Attempting Apple80211ScanAsync on en0
+ 1/15/2017  5:38:21.313 WiFiDeviceManagerSetNetworks: Adding HS20 Account: 
+Domain name orange.ro
+3GPP MCC&MNC 226F10 
+Friendly Operator Name Orange
+ 1/15/2017  5:38:21.317 __WiFiDeviceManagerPrepareHS20Queries: created queries <CFArray 0x14cfbfba0 [0x1a0950150]>{type = mutable-small, count = 3, values = (
+	0 : <CFNumber 0xb0000000000010c1 [0x1a0950150]>{value = +268, type = kCFNumberSInt16Type}
+	1 : <CFNumber 0xb000000000001081 [0x1a0950150]>{value = +264, type = kCFNumberSInt16Type}
+	2 : <CFNumber 0xb000000000000031 [0x1a0950150]>{value = +3, type = kCFNumberSInt16Type}
+)}
+ 1/15/2017  5:38:21.317 Auto association attempt canceled because auto join state is Scanning Previous Network Channel.
+ 1/15/2017  5:38:21.319 No Change in Background Scan Networks, Skip Re-Programming Background Scan
+
+ 1/15/2017  5:38:21.393 Completed Apple80211ScanAsync on en0 (0x0)
+ 1/15/2017  5:38:21.395 Auto join scan completed (0) with current state: Scanning Previous Network Channel
+ 1/15/2017  5:38:21.395 __WiFiDeviceManagerStateMachineRun: current state: Scanning Previous Network Channel
+ 1/15/2017  5:38:21.395 Scanning Previous Network Channel found: DIGI-146A
+ 1/15/2017  5:38:21.395 Attempting auto-join for networks in following order: DIGI-146A(W)
+ 1/15/2017  5:38:21.395 Autojoin is processing network 1 of 1 candidates
+ 1/15/2017  5:38:21.395 Attempting auto join association of DIGI-146A
+ 1/15/2017  5:38:21.413 Enqueuing command type: "Association" pending commands: 1
+ 1/15/2017  5:38:21.413 Dequeuing command type: "Association" pending commands: 0
+ 1/15/2017  5:38:21.414 Attempting Apple80211AssociateAsync
+ 1/15/2017  5:38:21.419 Attempting to join WPA network: DIGI-146A
+ 1/15/2017  5:38:21.628 __WiFiDeviceProcessLinkEvent: isLinkDown 0
+ 1/15/2017  5:38:21.637 Unable to dispatch message to client MessagesViewServ (268435460)
+ 1/15/2017  5:38:21.639 __WiFiDeviceManagerSetInterfaceRank: setting interface rank kSCNetworkServicePrimaryRankDefault
+ 1/15/2017  5:38:21.640 __WiFiDeviceManagerEvaluateAPEnvironment: Getting AP environment for DIGI-146A. Learning period 259200 secs Expiry period 2592000 secs
+ 1/15/2017  5:38:21.640 __WiFiDeviceManagerEvaluateAPEnvironment: AP environment is 2 for DIGI-146A(4:bd:70:a4:e3:8)
+ 1/15/2017  5:38:21.640 WiFiDeviceSetRoamParams: setting roam profile to type 1
+ 1/15/2017  5:38:21.642 __WiFiDeviceManagerEvaluateAPEnvironment: Getting AP environment for DIGI-146A. Learning period 259200 secs Expiry period 2592000 secs
+ 1/15/2017  5:38:21.643 __WiFiDeviceManagerEvaluateAPEnvironment: AP environment is 2 for DIGI-146A(4:bd:70:a4:e3:8)
+ 1/15/2017  5:38:21.643 __WiFiLQAMgrSetCurrentNetwork: SSID: DIGI-146A BSSID: 4:bd:70:a4:e3:8 RSSI: -73 ApEnv: 2
+ 1/15/2017  5:38:21.648 WiFiDeviceRequestAssociatedSleep: ActiveDuringSleepRequested is already removed ((null)).
+ 1/15/2017  5:38:21.648 __WiFiDeviceResetCCAHistory
+ 1/15/2017  5:38:21.648 __WiFiDeviceResetRssiHistory
+ 1/15/2017  5:38:21.648 __WiFiLQAMgrLogStats: Rssi: -73 Cca: 0 TxPer: 0.0% (0) BcnPer: 0.0% (0) RxFrms 0 TxRate: 0 RxRate: 0
+ 1/15/2017  5:38:21.650 __WiFiDeviceProcessLinkEvent: Initializing lqm value: rawRssi -73, scaledRssi 0.603757, noise 0, snr 18
+ 1/15/2017  5:38:21.651 __WiFiMetricsManagerPrepareLinkChangeNetworkParams: OUI:04:bd:70 Channel:1(20MHz) Flags:0x8 PhyMode:0x10 Security:0x2 WPA:[Prot:0x2 McastCipher:0x4 UcastCipher:0xc AKM:0x2 Caps:0x0] HT:[Info:0x19fc AMPDU:0x1b TXBF:0x0 Ext:0x0 ASEL:0x0] VHT:[Info:0x0]
+ 1/15/2017  5:38:21.651 WiFiAWDManagerSubmitMetric: metric container could not be generated for metric id <0x90009>
+ 1/15/2017  5:38:21.671 MIS state is Disabled
+ 1/15/2017  5:38:21.672 MIS state queried by "SpringBoard" is Disable
+ 1/15/2017  5:38:21.673 MIS state is Disabled
+ 1/15/2017  5:38:21.673 MIS state queried by "UserEventAgent" is Disable
+ 1/15/2017  5:38:21.673 
+Too frequent(0.025487 secs) rssi event from driver, ignoring
+
+ 1/15/2017  5:38:21.674 MIS state is Disabled
+ 1/15/2017  5:38:21.674 MIS state queried by "locationd" is Disable
+ 1/15/2017  5:38:21.675 MIS state is Disabled
+ 1/15/2017  5:38:21.675 MIS state queried by "identityservices" is Disable
+ 1/15/2017  5:38:21.675 Completed Apple80211AssociateAsync (0 - 0x0)
+ 1/15/2017  5:38:21.676 Joined: DIGI-146A
+ 1/15/2017  5:38:21.676 Auto join association completed (0) with current state: Associating
+ 1/15/2017  5:38:21.676 __WiFiDeviceManagerStateMachineRun: current state: Associating
+ 1/15/2017  5:38:21.676 __WiFiDeviceManagerProcessAssociationResult: current state: Associating
+ 1/15/2017  5:38:21.676 WiFiNetworkSetKnownBssUsageData: BSS updated - current BSS: 4:bd:70:a4:e3:8 (1)
+ 1/15/2017  5:38:21.676 Removing problematic state for DIGI-146A, reason N/A reasonData=0
+ 1/15/2017  5:38:21.676 problematic networks =  and potentially problematic networks = 
+ 1/15/2017  5:38:21.678 No Change in Background Scan Networks, Skip Re-Programming Background Scan
+
+ 1/15/2017  5:38:21.679 __WiFiManagerDidAssociateCallback: network DIGI-146A, requestedInformation <CFBasicHash 0x14cd94b00 [0x1a0950150]>{type = mutable dict, count = 1,
+entries =>
+	2 : <CFString 0x10017e160 [0x1a0950150]>{contents = "reason"} = <CFString 0x100185180 [0x1a0950150]>{contents = "Associating"}
+}
+
+ 1/15/2017  5:38:21.710 WiFiDeviceManagerSetNetworks: Adding HS20 Account: 
+Domain name orange.ro
+3GPP MCC&MNC 226F10 
+Friendly Operator Name Orange
+ 1/15/2017  5:38:21.714 __WiFiDeviceManagerPrepareHS20Queries: created queries <CFArray 0x14cfb76e0 [0x1a0950150]>{type = mutable-small, count = 3, values = (
+	0 : <CFNumber 0xb0000000000010c1 [0x1a0950150]>{value = +268, type = kCFNumberSInt16Type}
+	1 : <CFNumber 0xb000000000001081 [0x1a0950150]>{value = +264, type = kCFNumberSInt16Type}
+	2 : <CFNumber 0xb000000000000031 [0x1a0950150]>{value = +3, type = kCFNumberSInt16Type}
+)}
+ 1/15/2017  5:38:21.715 Auto association attempt canceled because auto join state is Associating.
+ 1/15/2017  5:38:21.716 No Change in Background Scan Networks, Skip Re-Programming Background Scan
+
+ 1/15/2017  5:38:21.716 MIS state is Disabled
+ 1/15/2017  5:38:21.716 MIS state queried by "apsd" is Disable
+ 1/15/2017  5:38:21.719 MIS state is Disabled
+ 1/15/2017  5:38:21.719 MIS state queried by "imagent" is Disable
+ 1/15/2017  5:38:21.720 MIS state is Disabled
+ 1/15/2017  5:38:21.720 MIS state queried by "InCallService" is Disable
+ 1/15/2017  5:38:21.721 MIS state is Disabled
+ 1/15/2017  5:38:21.721 MIS state queried by "MobileMail" is Disable
+ 1/15/2017  5:38:21.730 MIS state is Disabled
+ 1/15/2017  5:38:21.731 MIS state queried by "mediaserverd" is Disable
+ 1/15/2017  5:38:21.812 WiFiDeviceManagerSetNetworks: Adding HS20 Account: 
+Domain name orange.ro
+3GPP MCC&MNC 226F10 
+Friendly Operator Name Orange
+ 1/15/2017  5:38:21.813 __WiFiDeviceManagerPrepareHS20Queries: created queries <CFArray 0x14cf59950 [0x1a0950150]>{type = mutable-small, count = 3, values = (
+	0 : <CFNumber 0xb0000000000010c1 [0x1a0950150]>{value = +268, type = kCFNumberSInt16Type}
+	1 : <CFNumber 0xb000000000001081 [0x1a0950150]>{value = +264, type = kCFNumberSInt16Type}
+	2 : <CFNumber 0xb000000000000031 [0x1a0950150]>{value = +3, type = kCFNumberSInt16Type}
+)}
+ 1/15/2017  5:38:21.813 __WiFiDeviceManagerAutoAssociate: Already connected to DIGI-146A.
+ 1/15/2017  5:38:21.815 No Change in Background Scan Networks, Skip Re-Programming Background Scan
+
+ 1/15/2017  5:38:21.827 configd requesting removal of BGScan networks
+ 1/15/2017  5:38:21.828 No Change in Background Scan Networks, Skip Re-Programming Background Scan
+
+ 1/15/2017  5:38:21.829 __WiFiManagerSetEnableState: state TRUE, manager->enable.setting TRUE, manager->unlockedSinceBoot TRUE
+ 1/15/2017  5:38:21.829 Removing client for "configd"
+ 1/15/2017  5:38:21.834 __WiFiDeviceManagerAwdlAvailableCallback: AWDL availability changed to TRUE
+ 1/15/2017  5:38:21.835 Creating client for "configd"
+ 1/15/2017  5:38:21.951 __WiFiManagerCellularTransmitCallback_block_invoke: Cellular Transmit Started = TRUE
+ 1/15/2017  5:38:21.957 MIS state is Disabled
+ 1/15/2017  5:38:21.957 MIS state queried by "locationd" is Disable
+ 1/15/2017  5:38:21.972 MIS state is Disabled
+ 1/15/2017  5:38:21.972 MIS state queried by "MobileMail" is Disable
+ 1/15/2017  5:38:21.975 MIS state is Disabled
+ 1/15/2017  5:38:21.975 MIS state queried by "nanoregistryd" is Disable
+ 1/15/2017  5:38:21.975 MIS state is Disabled
+ 1/15/2017  5:38:21.975 MIS state queried by "mediaserverd" is Disable
+ 1/15/2017  5:38:21.978 MIS state is Disabled
+ 1/15/2017  5:38:21.978 MIS state queried by "SpringBoard" is Disable
+ 1/15/2017  5:38:21.980 MIS state is Disabled
+ 1/15/2017  5:38:21.980 MIS state queried by "UserEventAgent" is Disable
+ 1/15/2017  5:38:21.982 MIS state is Disabled
+ 1/15/2017  5:38:21.982 MIS state queried by "identityservices" is Disable
+ 1/15/2017  5:38:21.982 MIS state is Disabled
+ 1/15/2017  5:38:21.982 MIS state queried by "apsd" is Disable
+ 1/15/2017  5:38:21.983 MIS state is Disabled
+ 1/15/2017  5:38:21.983 MIS state queried by "imagent" is Disable
+ 1/15/2017  5:38:21.984 MIS state is Disabled
+ 1/15/2017  5:38:21.984 MIS state queried by "InCallService" is Disable
+ 1/15/2017  5:38:21.987 configd requesting removal of BGScan networks
+ 1/15/2017  5:38:22.002 No Change in Background Scan Networks, Skip Re-Programming Background Scan
+
+ 1/15/2017  5:38:22.003 __WiFiManagerSetEnableState: state TRUE, manager->enable.setting TRUE, manager->unlockedSinceBoot TRUE
+ 1/15/2017  5:38:22.003 Removing client for "configd"
+ 1/15/2017  5:38:22.063 WoW is Disabled, 0 WoW Clients
+ 1/15/2017  5:38:22.064 MIS state is Disabled
+ 1/15/2017  5:38:22.064 MIS state queried by "nanoregistryd" is Disable
+ 1/15/2017  5:38:23.066 WoW is Disabled, 0 WoW Clients
+ 1/15/2017  5:38:23.091 WoW is Disabled, 0 WoW Clients
+ 1/15/2017  5:38:23.112 WoW is Disabled, 0 WoW Clients
+ 1/15/2017  5:38:23.151 WoW is Disabled, 0 WoW Clients
+ 1/15/2017  5:38:26.911 __WiFiManagerCellularTransmitCallback_block_invoke: Cellular Transmit Started = FALSE
+ 1/15/2017  5:38:31.571 __WiFiLQAMgrLogStats: Rssi: -73 Cca: 0 TxPer: 0.0% (10) BcnPer: 0.0% (0) RxFrms 5 TxRate: 39000 RxRate: 58500
+ 1/15/2017  5:38:32.117 Received kIOMessageSystemWillSleep
+ 1/15/2017  5:38:32.117 System Sleep notification, Disabling auto-join
+ 1/15/2017  5:38:32.118 __WiFiManagerSetEnableState: state FALSE, manager->enable.setting TRUE, manager->unlockedSinceBoot TRUE
+ 1/15/2017  5:38:32.118 Disabling automatic association
+ 1/15/2017  5:38:32.149 WoW is Disabled, 0 WoW Clients
+ 1/15/2017  5:38:32.256 __WiFiDeviceCopyLinkChangedSubReasonString: Apple80211ReturnToString failed 1
+ 1/15/2017  5:38:32.256 __WiFiDeviceProcessDriverAvailableEvent: driver availability false, reason PowerOff(0xe0821804), subreason (null)(0x0)
+ 1/15/2017  5:38:32.256 __WiFiManagerDispatchDeviceAvailable: driver availability false
+
+ 1/15/2017  5:38:32.257 Unable to dispatch message to client MessagesViewServ (268435460)
+ 1/15/2017  5:38:32.257 WiFiAWDManagerSubmitMetric: metric container could not be generated for metric id <0x9000e>
+ 1/15/2017  5:38:32.265 __WiFiDeviceManagerAwdlAvailableCallback: AWDL availability changed to FALSE
+ 1/15/2017  5:38:32.266 __WiFiDeviceProcessLinkEvent: isLinkDown 1
+ 1/15/2017  5:38:32.272 Unable to dispatch message to client MessagesViewServ (268435460)
+ 1/15/2017  5:38:32.273 -[WiFiIDSSyncEngine currentNetworkChanged]: <0x16e12f000>, role 1, currentNetwork (null)
+ 1/15/2017  5:38:32.273 -[WiFiIDSSyncEngine currentNetworkChanged]: adjusted waitForReAssociationTimer <CFRunLoopTimer 0x14ce6ecf0 [0x1a0950150]>{valid = Yes, firing = No, interval = 819052854, tolerance = 0, next fire date = 506144342 (29.999935 @ 10024912830024), callout = (NSTimer) [WiFiIDSSyncEngine companionReAssociationWaitTimerFired:] (0x18292cfe0 / 0x1000e1010) (/usr/sbin/wifid), context = <CFRunLoopTimer context 0x14ce5c520>}
+ 1/15/2017  6:38:06.809 Total connection time to DIGI-146A 1568521.204230
+ 1/15/2017  6:38:06.910 WiFiDeviceManagerSetNetworks: Adding HS20 Account: 
+Domain name orange.ro
+3GPP MCC&MNC 226F10 
+Friendly Operator Name Orange
+ 1/15/2017  6:38:06.911 __WiFiDeviceManagerPrepareHS20Queries: created queries <CFArray 0x14cda7bd0 [0x1a0950150]>{type = mutable-small, count = 3, values = (
+	0 : <CFNumber 0xb0000000000010c1 [0x1a0950150]>{value = +268, type = kCFNumberSInt16Type}
+	1 : <CFNumber 0xb000000000001081 [0x1a0950150]>{value = +264, type = kCFNumberSInt16Type}
+	2 : <CFNumber 0xb000000000000031 [0x1a0950150]>{value = +3, type = kCFNumberSInt16Type}
+)}
+ 1/15/2017  6:38:06.911 Auto association attempt canceled because auto join is disabled.
+ 1/15/2017  6:38:06.929 No Change in Background Scan Networks, Skip Re-Programming Background Scan
+
+ 1/15/2017  6:38:06.930 Auto association attempt canceled because auto join is disabled.
+ 1/15/2017  6:38:06.930 __WiFiDeviceManagerSetInterfaceRank: setting interface rank kSCNetworkServicePrimaryRankDefault
+ 1/15/2017  6:38:06.931 WiFiDeviceRequestAssociatedSleep: ActiveDuringSleepRequested is already removed ((null)).
+ 1/15/2017  6:38:06.933 WiFiAWDManagerSubmitMetric: metric container could not be generated for metric id <0x90009>
+ 1/15/2017  6:38:06.933 Link went down: isInVoluntary 0, reason Unknown(4), subreason 0, rssi -73
+ 1/15/2017  6:38:06.933 __WiFiDeviceResetCCAHistory
+ 1/15/2017  6:38:06.933 __WiFiDeviceResetRssiHistory
+ 1/15/2017  6:38:06.938 __WiFiDeviceCopyLinkChangedSubReasonString: Apple80211ReturnToString failed 1
+ 1/15/2017  6:38:06.938 __WiFiDeviceProcessDriverAvailableEvent: driver availability true, reason Initializing(0xe0821803), subreason (null)(0x0)
+ 1/15/2017  6:38:06.938 __WiFiManagerDispatchDeviceAvailable: driver availability true
+
+ 1/15/2017  6:38:06.940 Unable to dispatch message to client MessagesViewServ (268435460)
+ 1/15/2017  6:38:06.943 Auto association attempt canceled because auto join is disabled.
+ 1/15/2017  6:38:06.943 WiFiAWDManagerSubmitMetric: metric container could not be generated for metric id <0x9000e>
+ 1/15/2017  6:38:06.944 Auto association attempt canceled because auto join is disabled.
+ 1/15/2017  6:38:06.945 No Change in Background Scan Networks, Skip Re-Programming Background Scan
+
+ 1/15/2017  6:38:06.950 Creating client for "configd"
+ 1/15/2017  6:38:06.958 Received kIOMessageSystemWillPowerOn
+ 1/15/2017  6:38:06.958 System wake reason: AOP.ExternalReq rtc
+ 1/15/2017  6:38:06.959 System Powered ON notification Re-enabling auto-join
+ 1/15/2017  6:38:06.959 __WiFiManagerSetEnableState: state TRUE, manager->enable.setting TRUE, manager->unlockedSinceBoot TRUE
+ 1/15/2017  6:38:06.959 Enabling automatic association
+ 1/15/2017  6:38:06.960 __WiFiDeviceManagerStateMachineRun: current state: Idle
+ 1/15/2017  6:38:06.965 Attempting multi-stage auto join mStageAutoJoinAttempts=0
+ 1/15/2017  6:38:06.965 Starting multi-stage auto join sequence
+ 1/15/2017  6:38:06.965 multi-stage auto-join: Scanning for previous network DIGI-146A on channel 1
+ 1/15/2017  6:38:06.966 Performing auto-join broadcast scan with a modified dwell time of 110ms on channels: 1 
+ 1/15/2017  6:38:06.966 Enqueuing command type: "Scan" pending commands: 0
+ 1/15/2017  6:38:06.967 WiFiLocaleManagerCheckLocale: location service or wifi is off, set locale to default
+ 1/15/2017  6:38:06.967 new locale:  , locale: 
+ 1/15/2017  6:38:06.967 __WiFiManagerCellularTransmitCallback_block_invoke: Cellular Transmit Started = FALSE
+ 1/15/2017  6:38:06.967 Dequeuing command type: "Scan" pending commands: 0
+ 1/15/2017  6:38:06.967 Attempting Apple80211ScanAsync on en0
+ 1/15/2017  6:38:07.016 WiFiDeviceManagerSetNetworks: Adding HS20 Account: 
+Domain name orange.ro
+3GPP MCC&MNC 226F10 
+Friendly Operator Name Orange
+ 1/15/2017  6:38:07.017 __WiFiDeviceManagerPrepareHS20Queries: created queries <CFArray 0x14cda80e0 [0x1a0950150]>{type = mutable-small, count = 3, values = (
+	0 : <CFNumber 0xb0000000000010c1 [0x1a0950150]>{value = +268, type = kCFNumberSInt16Type}
+	1 : <CFNumber 0xb000000000001081 [0x1a0950150]>{value = +264, type = kCFNumberSInt16Type}
+	2 : <CFNumber 0xb000000000000031 [0x1a0950150]>{value = +3, type = kCFNumberSInt16Type}
+)}
+ 1/15/2017  6:38:07.017 Auto association attempt canceled because auto join state is Scanning Previous Network Channel.
+ 1/15/2017  6:38:07.018 No Change in Background Scan Networks, Skip Re-Programming Background Scan
+
+ 1/15/2017  6:38:07.176 Completed Apple80211ScanAsync on en0 (0x0)
+ 1/15/2017  6:38:07.177 Auto join scan completed (0) with current state: Scanning Previous Network Channel
+ 1/15/2017  6:38:07.177 __WiFiDeviceManagerStateMachineRun: current state: Scanning Previous Network Channel
+ 1/15/2017  6:38:07.177 Scanning Previous Network Channel found: DIGI-146A
+ 1/15/2017  6:38:07.177 Attempting auto-join for networks in following order: DIGI-146A(W)
+ 1/15/2017  6:38:07.177 Autojoin is processing network 1 of 1 candidates
+ 1/15/2017  6:38:07.177 Attempting auto join association of DIGI-146A
+ 1/15/2017  6:38:07.199 Enqueuing command type: "Association" pending commands: 1
+ 1/15/2017  6:38:07.199 Dequeuing command type: "Association" pending commands: 0
+ 1/15/2017  6:38:07.199 Attempting Apple80211AssociateAsync
+ 1/15/2017  6:38:07.207 Attempting to join WPA network: DIGI-146A
+ 1/15/2017  6:38:07.519 __WiFiDeviceProcessLinkEvent: isLinkDown 0
+ 1/15/2017  6:38:07.528 Unable to dispatch message to client MessagesViewServ (268435460)
+ 1/15/2017  6:38:07.531 __WiFiDeviceManagerSetInterfaceRank: setting interface rank kSCNetworkServicePrimaryRankDefault
+ 1/15/2017  6:38:07.532 __WiFiDeviceManagerEvaluateAPEnvironment: Getting AP environment for DIGI-146A. Learning period 259200 secs Expiry period 2592000 secs
+ 1/15/2017  6:38:07.532 __WiFiDeviceManagerEvaluateAPEnvironment: AP environment is 2 for DIGI-146A(4:bd:70:a4:e3:8)
+ 1/15/2017  6:38:07.532 WiFiDeviceSetRoamParams: setting roam profile to type 1
+ 1/15/2017  6:38:07.534 __WiFiDeviceManagerEvaluateAPEnvironment: Getting AP environment for DIGI-146A. Learning period 259200 secs Expiry period 2592000 secs
+ 1/15/2017  6:38:07.534 __WiFiDeviceManagerEvaluateAPEnvironment: AP environment is 2 for DIGI-146A(4:bd:70:a4:e3:8)
+ 1/15/2017  6:38:07.534 __WiFiLQAMgrSetCurrentNetwork: SSID: DIGI-146A BSSID: 4:bd:70:a4:e3:8 RSSI: -73 ApEnv: 2
+ 1/15/2017  6:38:07.537 WiFiDeviceRequestAssociatedSleep: ActiveDuringSleepRequested is already removed ((null)).
+ 1/15/2017  6:38:07.537 __WiFiDeviceResetCCAHistory
+ 1/15/2017  6:38:07.537 __WiFiDeviceResetRssiHistory
+ 1/15/2017  6:38:07.537 __WiFiLQAMgrLogStats: Rssi: -73 Cca: 0 TxPer: 0.0% (0) BcnPer: 0.0% (0) RxFrms 0 TxRate: 0 RxRate: 0
+ 1/15/2017  6:38:07.539 __WiFiDeviceProcessLinkEvent: Initializing lqm value: rawRssi -73, scaledRssi 0.603757, noise 0, snr 18
+ 1/15/2017  6:38:07.540 __WiFiMetricsManagerPrepareLinkChangeNetworkParams: OUI:04:bd:70 Channel:1(20MHz) Flags:0x8 PhyMode:0x10 Security:0x2 WPA:[Prot:0x2 McastCipher:0x4 UcastCipher:0xc AKM:0x2 Caps:0x0] HT:[Info:0x19fc AMPDU:0x1b TXBF:0x0 Ext:0x0 ASEL:0x0] VHT:[Info:0x0]
+ 1/15/2017  6:38:07.540 WiFiAWDManagerSubmitMetric: metric container could not be generated for metric id <0x90009>
+ 1/15/2017  6:38:07.551 MIS state is Disabled
+ 1/15/2017  6:38:07.551 MIS state queried by "SpringBoard" is Disable
+ 1/15/2017  6:38:07.552 MIS state is Disabled
+ 1/15/2017  6:38:07.552 MIS state queried by "mediaserverd" is Disable
+ 1/15/2017  6:38:07.555 MIS state is Disabled
+ 1/15/2017  6:38:07.555 MIS state queried by "UserEventAgent" is Disable
+ 1/15/2017  6:38:07.556 MIS state is Disabled
+ 1/15/2017  6:38:07.556 MIS state queried by "locationd" is Disable
+ 1/15/2017  6:38:07.557 
+Too frequent(0.019185 secs) rssi event from driver, ignoring
+
+ 1/15/2017  6:38:07.557 MIS state is Disabled
+ 1/15/2017  6:38:07.558 MIS state queried by "identityservices" is Disable
+ 1/15/2017  6:38:07.558 MIS state is Disabled
+ 1/15/2017  6:38:07.559 MIS state queried by "apsd" is Disable
+ 1/15/2017  6:38:07.559 Completed Apple80211AssociateAsync (0 - 0x0)
+ 1/15/2017  6:38:07.559 Joined: DIGI-146A
+ 1/15/2017  6:38:07.559 Auto join association completed (0) with current state: Associating
+ 1/15/2017  6:38:07.559 __WiFiDeviceManagerStateMachineRun: current state: Associating
+ 1/15/2017  6:38:07.559 __WiFiDeviceManagerProcessAssociationResult: current state: Associating
+ 1/15/2017  6:38:07.559 WiFiNetworkSetKnownBssUsageData: BSS updated - current BSS: 4:bd:70:a4:e3:8 (1)
+ 1/15/2017  6:38:07.559 Removing problematic state for DIGI-146A, reason N/A reasonData=0
+ 1/15/2017  6:38:07.560 problematic networks =  and potentially problematic networks = 
+ 1/15/2017  6:38:07.565 No Change in Background Scan Networks, Skip Re-Programming Background Scan
+
+ 1/15/2017  6:38:07.565 __WiFiManagerDidAssociateCallback: network DIGI-146A, requestedInformation <CFBasicHash 0x14cd60600 [0x1a0950150]>{type = mutable dict, count = 1,
+entries =>
+	2 : <CFString 0x10017e160 [0x1a0950150]>{contents = "reason"} = <CFString 0x100185180 [0x1a0950150]>{contents = "Associating"}
+}
+
+ 1/15/2017  6:38:07.586 WiFiDeviceManagerSetNetworks: Adding HS20 Account: 
+Domain name orange.ro
+3GPP MCC&MNC 226F10 
+Friendly Operator Name Orange
+ 1/15/2017  6:38:07.586 __WiFiDeviceManagerPrepareHS20Queries: created queries <CFArray 0x14ced4530 [0x1a0950150]>{type = mutable-small, count = 3, values = (
+	0 : <CFNumber 0xb0000000000010c1 [0x1a0950150]>{value = +268, type = kCFNumberSInt16Type}
+	1 : <CFNumber 0xb000000000001081 [0x1a0950150]>{value = +264, type = kCFNumberSInt16Type}
+	2 : <CFNumber 0xb000000000000031 [0x1a0950150]>{value = +3, type = kCFNumberSInt16Type}
+)}
+ 1/15/2017  6:38:07.586 Auto association attempt canceled because auto join state is Associating.
+ 1/15/2017  6:38:07.588 No Change in Background Scan Networks, Skip Re-Programming Background Scan
+
+ 1/15/2017  6:38:07.589 MIS state is Disabled
+ 1/15/2017  6:38:07.589 MIS state queried by "imagent" is Disable
+ 1/15/2017  6:38:07.592 MIS state is Disabled
+ 1/15/2017  6:38:07.593 MIS state queried by "InCallService" is Disable
+ 1/15/2017  6:38:07.594 MIS state is Disabled
+ 1/15/2017  6:38:07.594 MIS state queried by "MobileMail" is Disable
+ 1/15/2017  6:38:07.674 WiFiDeviceManagerSetNetworks: Adding HS20 Account: 
+Domain name orange.ro
+3GPP MCC&MNC 226F10 
+Friendly Operator Name Orange
+ 1/15/2017  6:38:07.675 __WiFiDeviceManagerPrepareHS20Queries: created queries <CFArray 0x14cfc39a0 [0x1a0950150]>{type = mutable-small, count = 3, values = (
+	0 : <CFNumber 0xb0000000000010c1 [0x1a0950150]>{value = +268, type = kCFNumberSInt16Type}
+	1 : <CFNumber 0xb000000000001081 [0x1a0950150]>{value = +264, type = kCFNumberSInt16Type}
+	2 : <CFNumber 0xb000000000000031 [0x1a0950150]>{value = +3, type = kCFNumberSInt16Type}
+)}
+ 1/15/2017  6:38:07.675 __WiFiDeviceManagerAutoAssociate: Already connected to DIGI-146A.
+ 1/15/2017  6:38:07.678 No Change in Background Scan Networks, Skip Re-Programming Background Scan
+
+ 1/15/2017  6:38:07.693 configd requesting removal of BGScan networks
+ 1/15/2017  6:38:07.695 No Change in Background Scan Networks, Skip Re-Programming Background Scan
+
+ 1/15/2017  6:38:07.695 __WiFiManagerSetEnableState: state TRUE, manager->enable.setting TRUE, manager->unlockedSinceBoot TRUE
+ 1/15/2017  6:38:07.696 Removing client for "configd"
+ 1/15/2017  6:38:07.697 __WiFiDeviceManagerAwdlAvailableCallback: AWDL availability changed to TRUE
+ 1/15/2017  6:38:07.698 Creating client for "configd"
+ 1/15/2017  6:38:07.742 __WiFiManagerCellularTransmitCallback_block_invoke: Cellular Transmit Started = TRUE
+ 1/15/2017  6:38:07.817 MIS state is Disabled
+ 1/15/2017  6:38:07.817 MIS state queried by "nanoregistryd" is Disable
+ 1/15/2017  6:38:07.818 MIS state is Disabled
+ 1/15/2017  6:38:07.818 MIS state queried by "imagent" is Disable
+ 1/15/2017  6:38:07.824 MIS state is Disabled
+ 1/15/2017  6:38:07.825 MIS state queried by "SpringBoard" is Disable
+ 1/15/2017  6:38:07.827 MIS state is Disabled
+ 1/15/2017  6:38:07.827 MIS state queried by "mediaserverd" is Disable
+ 1/15/2017  6:38:07.829 MIS state is Disabled
+ 1/15/2017  6:38:07.829 MIS state queried by "UserEventAgent" is Disable
+ 1/15/2017  6:38:07.830 MIS state is Disabled
+ 1/15/2017  6:38:07.830 MIS state queried by "locationd" is Disable
+ 1/15/2017  6:38:07.830 MIS state is Disabled
+ 1/15/2017  6:38:07.831 MIS state queried by "identityservices" is Disable
+ 1/15/2017  6:38:07.835 MIS state is Disabled
+ 1/15/2017  6:38:07.835 MIS state queried by "apsd" is Disable
+ 1/15/2017  6:38:07.836 MIS state is Disabled
+ 1/15/2017  6:38:07.836 MIS state queried by "InCallService" is Disable
+ 1/15/2017  6:38:07.837 MIS state is Disabled
+ 1/15/2017  6:38:07.837 MIS state queried by "MobileMail" is Disable
+ 1/15/2017  6:38:07.840 configd requesting removal of BGScan networks
+ 1/15/2017  6:38:07.844 No Change in Background Scan Networks, Skip Re-Programming Background Scan
+
+ 1/15/2017  6:38:07.844 __WiFiManagerSetEnableState: state TRUE, manager->enable.setting TRUE, manager->unlockedSinceBoot TRUE
+ 1/15/2017  6:38:07.844 Removing client for "configd"
+ 1/15/2017  6:38:07.867 WoW is Disabled, 0 WoW Clients
+ 1/15/2017  6:38:07.869 MIS state is Disabled
+ 1/15/2017  6:38:07.869 MIS state queried by "nanoregistryd" is Disable
+ 1/15/2017  6:38:07.952 WoW is Disabled, 0 WoW Clients
+ 1/15/2017  6:38:07.984 WoW is Disabled, 0 WoW Clients
+ 1/15/2017  6:38:07.991 WoW is Disabled, 0 WoW Clients
+ 1/15/2017  6:38:08.005 WoW is Disabled, 0 WoW Clients
+ 1/15/2017  6:38:12.767 __WiFiManagerCellularTransmitCallback_block_invoke: Cellular Transmit Started = FALSE
+ 1/15/2017  6:38:17.448 __WiFiLQAMgrLogStats: Rssi: -73 Cca: 0 TxPer: 0.0% (5) BcnPer: 0.0% (0) RxFrms 1 TxRate: 39000 RxRate: 58500
+ 1/15/2017  6:38:17.965 Received kIOMessageSystemWillSleep
+ 1/15/2017  6:38:17.965 System Sleep notification, Disabling auto-join
+ 1/15/2017  6:38:17.965 __WiFiManagerSetEnableState: state FALSE, manager->enable.setting TRUE, manager->unlockedSinceBoot TRUE
+ 1/15/2017  6:38:17.965 Disabling automatic association
+ 1/15/2017  6:38:18.000 WoW is Disabled, 0 WoW Clients
+ 1/15/2017  6:38:18.118 __WiFiDeviceCopyLinkChangedSubReasonString: Apple80211ReturnToString failed 1
+ 1/15/2017  6:38:18.118 __WiFiDeviceProcessDriverAvailableEvent: driver availability false, reason PowerOff(0xe0821804), subreason (null)(0x0)
+ 1/15/2017  6:38:18.118 __WiFiManagerDispatchDeviceAvailable: driver availability false
+
+ 1/15/2017  6:38:18.118 Unable to dispatch message to client MessagesViewServ (268435460)
+ 1/15/2017  6:38:18.118 WiFiAWDManagerSubmitMetric: metric container could not be generated for metric id <0x9000e>
+ 1/15/2017  6:38:18.123 __WiFiDeviceManagerAwdlAvailableCallback: AWDL availability changed to FALSE
+ 1/15/2017  6:38:18.124 __WiFiDeviceProcessLinkEvent: isLinkDown 1
+ 1/15/2017  6:38:18.124 Unable to dispatch message to client MessagesViewServ (268435460)
+ 1/15/2017  6:38:18.124 -[WiFiIDSSyncEngine currentNetworkChanged]: <0x16e12f000>, role 1, currentNetwork (null)
+ 1/15/2017  6:38:18.124 -[WiFiIDSSyncEngine currentNetworkChanged]: adjusted waitForReAssociationTimer <CFRunLoopTimer 0x14ce6ecf0 [0x1a0950150]>{valid = Yes, firing = No, interval = 819052854, tolerance = 0, next fire date = 506147928 (29.999962 @ 10025189331468), callout = (NSTimer) [WiFiIDSSyncEngine companionReAssociationWaitTimerFired:] (0x18292cfe0 / 0x1000e1010) (/usr/sbin/wifid), context = <CFRunLoopTimer context 0x14ce5c520>}
+ 1/15/2017  7:37:51.902 Total connection time to DIGI-146A 1572105.546308
+ 1/15/2017  7:37:51.918 WiFiDeviceManagerSetNetworks: Adding HS20 Account: 
+Domain name orange.ro
+3GPP MCC&MNC 226F10 
+Friendly Operator Name Orange
+ 1/15/2017  7:37:51.919 __WiFiDeviceManagerPrepareHS20Queries: created queries <CFArray 0x14cfc5450 [0x1a0950150]>{type = mutable-small, count = 3, values = (
+	0 : <CFNumber 0xb0000000000010c1 [0x1a0950150]>{value = +268, type = kCFNumberSInt16Type}
+	1 : <CFNumber 0xb000000000001081 [0x1a0950150]>{value = +264, type = kCFNumberSInt16Type}
+	2 : <CFNumber 0xb000000000000031 [0x1a0950150]>{value = +3, type = kCFNumberSInt16Type}
+)}
+ 1/15/2017  7:37:51.919 Auto association attempt canceled because auto join is disabled.
+ 1/15/2017  7:37:51.920 No Change in Background Scan Networks, Skip Re-Programming Background Scan
+
+ 1/15/2017  7:37:51.921 Auto association attempt canceled because auto join is disabled.
+ 1/15/2017  7:37:51.921 __WiFiDeviceManagerSetInterfaceRank: setting interface rank kSCNetworkServicePrimaryRankDefault
+ 1/15/2017  7:37:51.922 WiFiDeviceRequestAssociatedSleep: ActiveDuringSleepRequested is already removed ((null)).
+ 1/15/2017  7:37:51.927 WiFiAWDManagerSubmitMetric: metric container could not be generated for metric id <0x90009>
+ 1/15/2017  7:37:51.927 Link went down: isInVoluntary 0, reason Unknown(4), subreason 0, rssi -73
+ 1/15/2017  7:37:51.927 __WiFiDeviceResetCCAHistory
+ 1/15/2017  7:37:51.927 __WiFiDeviceResetRssiHistory
+ 1/15/2017  7:37:51.936 Creating client for "configd"
+ 1/15/2017  7:37:51.942 Received kIOMessageSystemWillPowerOn
+ 1/15/2017  7:37:51.942 System wake reason: AOP.ExternalReq rtc
+ 1/15/2017  7:37:51.942 System Powered ON notification Re-enabling auto-join
+ 1/15/2017  7:37:51.942 __WiFiManagerSetEnableState: state TRUE, manager->enable.setting TRUE, manager->unlockedSinceBoot TRUE
+ 1/15/2017  7:37:51.942 Enabling automatic association
+ 1/15/2017  7:37:51.943 __WiFiDeviceManagerStateMachineRun: current state: Idle
+ 1/15/2017  7:37:51.943 Attempting multi-stage auto join mStageAutoJoinAttempts=0
+ 1/15/2017  7:37:51.944 Starting multi-stage auto join sequence
+ 1/15/2017  7:37:51.944 multi-stage auto-join: Scanning for previous network DIGI-146A on channel 1
+ 1/15/2017  7:37:51.944 Performing auto-join broadcast scan with a modified dwell time of 110ms on channels: 1 
+ 1/15/2017  7:37:51.944 Enqueuing command type: "Scan" pending commands: 0
+ 1/15/2017  7:37:51.944 WiFiLocaleManagerCheckLocale: location service or wifi is off, set locale to default
+ 1/15/2017  7:37:51.944 new locale:  , locale: 
+ 1/15/2017  7:37:51.944 Dequeuing command type: "Scan" pending commands: 0
+ 1/15/2017  7:37:51.944 Attempting Apple80211ScanAsync on en0
+ 1/15/2017  7:37:51.983 __WiFiDeviceCopyLinkChangedSubReasonString: Apple80211ReturnToString failed 1
+ 1/15/2017  7:37:51.983 __WiFiDeviceProcessDriverAvailableEvent: driver availability true, reason Initializing(0xe0821803), subreason (null)(0x0)
+ 1/15/2017  7:37:51.983 __WiFiManagerDispatchDeviceAvailable: driver availability true
+
+ 1/15/2017  7:37:51.985 Unable to dispatch message to client MessagesViewServ (268435460)
+ 1/15/2017  7:37:51.987 Auto association attempt canceled because auto join state is Scanning Previous Network Channel.
+ 1/15/2017  7:37:51.987 WiFiAWDManagerSubmitMetric: metric container could not be generated for metric id <0x9000e>
+ 1/15/2017  7:37:51.990 Auto association attempt canceled because auto join state is Scanning Previous Network Channel.
+ 1/15/2017  7:37:51.992 No Change in Background Scan Networks, Skip Re-Programming Background Scan
+
+ 1/15/2017  7:37:52.002 WiFiDeviceManagerSetNetworks: Adding HS20 Account: 
+Domain name orange.ro
+3GPP MCC&MNC 226F10 
+Friendly Operator Name Orange
+ 1/15/2017  7:37:52.002 __WiFiDeviceManagerPrepareHS20Queries: created queries <CFArray 0x14cdf7f90 [0x1a0950150]>{type = mutable-small, count = 3, values = (
+	0 : <CFNumber 0xb0000000000010c1 [0x1a0950150]>{value = +268, type = kCFNumberSInt16Type}
+	1 : <CFNumber 0xb000000000001081 [0x1a0950150]>{value = +264, type = kCFNumberSInt16Type}
+	2 : <CFNumber 0xb000000000000031 [0x1a0950150]>{value = +3, type = kCFNumberSInt16Type}
+)}
+ 1/15/2017  7:37:52.002 Auto association attempt canceled because auto join state is Scanning Previous Network Channel.
+ 1/15/2017  7:37:52.004 No Change in Background Scan Networks, Skip Re-Programming Background Scan
+
+ 1/15/2017  7:37:52.028 __WiFiManagerCellularTransmitCallback_block_invoke: Cellular Transmit Started = FALSE
+ 1/15/2017  7:37:52.042 MIS state is Disabled
+ 1/15/2017  7:37:52.042 MIS state queried by "SpringBoard" is Disable
+ 1/15/2017  7:37:52.042 MIS state is Disabled
+ 1/15/2017  7:37:52.042 MIS state queried by "UserEventAgent" is Disable
+ 1/15/2017  7:37:52.043 MIS state is Disabled
+ 1/15/2017  7:37:52.043 MIS state queried by "mediaserverd" is Disable
+ 1/15/2017  7:37:52.072 MIS state is Disabled
+ 1/15/2017  7:37:52.073 MIS state queried by "identityservices" is Disable
+ 1/15/2017  7:37:52.073 MIS state is Disabled
+ 1/15/2017  7:37:52.073 MIS state queried by "locationd" is Disable
+ 1/15/2017  7:37:52.073 MIS state is Disabled
+ 1/15/2017  7:37:52.073 MIS state queried by "apsd" is Disable
+ 1/15/2017  7:37:52.073 MIS state is Disabled
+ 1/15/2017  7:37:52.075 MIS state queried by "imagent" is Disable
+ 1/15/2017  7:37:52.080 MIS state is Disabled
+ 1/15/2017  7:37:52.081 MIS state queried by "InCallService" is Disable
+ 1/15/2017  7:37:52.082 MIS state is Disabled
+ 1/15/2017  7:37:52.082 MIS state queried by "MobileMail" is Disable
+ 1/15/2017  7:37:52.208 Completed Apple80211ScanAsync on en0 (0x0)
+ 1/15/2017  7:37:52.231 Auto join scan completed (0) with current state: Scanning Previous Network Channel
+ 1/15/2017  7:37:52.348 __WiFiDeviceManagerStateMachineRun: current state: Scanning Previous Network Channel
+ 1/15/2017  7:37:52.353 Scanning Previous Network Channel found: DIGI-146A
+ 1/15/2017  7:37:52.400 Attempting auto-join for networks in following order: DIGI-146A(W)
+ 1/15/2017  7:37:52.400 Autojoin is processing network 1 of 1 candidates
+ 1/15/2017  7:37:52.403 Attempting auto join association of DIGI-146A
+ 1/15/2017  7:37:52.426 Enqueuing command type: "Association" pending commands: 1
+ 1/15/2017  7:37:52.432 Dequeuing command type: "Association" pending commands: 0
+ 1/15/2017  7:37:52.432 Attempting Apple80211AssociateAsync
+ 1/15/2017  7:37:52.435 Attempting to join WPA network: DIGI-146A
+ 1/15/2017  7:37:52.573 __WiFiManagerCellularTransmitCallback_block_invoke: Cellular Transmit Started = TRUE
+ 1/15/2017  7:37:52.593 configd requesting removal of BGScan networks
+ 1/15/2017  7:37:52.604 No Change in Background Scan Networks, Skip Re-Programming Background Scan
+
+ 1/15/2017  7:37:52.604 __WiFiManagerSetEnableState: state TRUE, manager->enable.setting TRUE, manager->unlockedSinceBoot TRUE
+ 1/15/2017  7:37:52.604 Removing client for "configd"
+ 1/15/2017  7:37:52.607 __WiFiDeviceManagerAwdlAvailableCallback: AWDL availability changed to TRUE
+ 1/15/2017  7:37:52.608 IPV4 State change for en0
+ 1/15/2017  7:37:52.613 IPV6 State change for en0
+ 1/15/2017  7:37:52.635 IPv4 Primary interface is pdp_ip0 and IPv6 Primary Interface is (null)
+ 1/15/2017  7:37:52.636 IPv4 Primary interface is pdp_ip0 and IPv6 Primary Interface is (null)
+ 1/15/2017  7:37:52.639 __WiFiDeviceProcessLinkEvent: isLinkDown 0
+ 1/15/2017  7:37:52.653 Unable to dispatch message to client MessagesViewServ (268435460)
+ 1/15/2017  7:37:52.660 __WiFiDeviceManagerSetInterfaceRank: setting interface rank kSCNetworkServicePrimaryRankDefault
+ 1/15/2017  7:37:52.660 __WiFiDeviceManagerEvaluateAPEnvironment: Getting AP environment for DIGI-146A. Learning period 259200 secs Expiry period 2592000 secs
+ 1/15/2017  7:37:52.660 __WiFiDeviceManagerEvaluateAPEnvironment: AP environment is 2 for DIGI-146A(4:bd:70:a4:e3:8)
+ 1/15/2017  7:37:52.660 WiFiDeviceSetRoamParams: setting roam profile to type 1
+ 1/15/2017  7:37:52.661 __WiFiDeviceManagerEvaluateAPEnvironment: Getting AP environment for DIGI-146A. Learning period 259200 secs Expiry period 2592000 secs
+ 1/15/2017  7:37:52.661 __WiFiDeviceManagerEvaluateAPEnvironment: AP environment is 2 for DIGI-146A(4:bd:70:a4:e3:8)
+ 1/15/2017  7:37:52.663 __WiFiLQAMgrSetCurrentNetwork: SSID: DIGI-146A BSSID: 4:bd:70:a4:e3:8 RSSI: -73 ApEnv: 2
+ 1/15/2017  7:37:52.664 WiFiDeviceRequestAssociatedSleep: ActiveDuringSleepRequested is already removed ((null)).
+ 1/15/2017  7:37:52.664 __WiFiDeviceResetCCAHistory
+ 1/15/2017  7:37:52.664 __WiFiDeviceResetRssiHistory
+ 1/15/2017  7:37:52.665 __WiFiLQAMgrLogStats: Rssi: -73 Cca: 0 TxPer: 0.0% (0) BcnPer: 0.0% (0) RxFrms 0 TxRate: 0 RxRate: 0
+ 1/15/2017  7:37:52.666 __WiFiDeviceProcessLinkEvent: Initializing lqm value: rawRssi -73, scaledRssi 0.603757, noise 0, snr 18
+ 1/15/2017  7:37:52.668 __WiFiMetricsManagerPrepareLinkChangeNetworkParams: OUI:04:bd:70 Channel:1(20MHz) Flags:0x8 PhyMode:0x10 Security:0x2 WPA:[Prot:0x2 McastCipher:0x4 UcastCipher:0xc AKM:0x2 Caps:0x0] HT:[Info:0x19fc AMPDU:0x1b TXBF:0x0 Ext:0x0 ASEL:0x0] VHT:[Info:0x0]
+ 1/15/2017  7:37:52.668 WiFiAWDManagerSubmitMetric: metric container could not be generated for metric id <0x90009>
+ 1/15/2017  7:37:52.704 
+Too frequent(0.038969 secs) rssi event from driver, ignoring
+
+ 1/15/2017  7:37:52.707 Completed Apple80211AssociateAsync (0 - 0x0)
+ 1/15/2017  7:37:52.707 Joined: DIGI-146A
+ 1/15/2017  7:37:52.707 Auto join association completed (0) with current state: Associating
+ 1/15/2017  7:37:52.707 __WiFiDeviceManagerStateMachineRun: current state: Associating
+ 1/15/2017  7:37:52.707 __WiFiDeviceManagerProcessAssociationResult: current state: Associating
+ 1/15/2017  7:37:52.707 WiFiNetworkSetKnownBssUsageData: BSS updated - current BSS: 4:bd:70:a4:e3:8 (1)
+ 1/15/2017  7:37:52.708 Removing problematic state for DIGI-146A, reason N/A reasonData=0
+ 1/15/2017  7:37:52.708 problematic networks =  and potentially problematic networks = 
+ 1/15/2017  7:37:52.710 No Change in Background Scan Networks, Skip Re-Programming Background Scan
+
+ 1/15/2017  7:37:52.710 __WiFiManagerDidAssociateCallback: network DIGI-146A, requestedInformation <CFBasicHash 0x14cfc3e00 [0x1a0950150]>{type = mutable dict, count = 1,
+entries =>
+	2 : <CFString 0x10017e160 [0x1a0950150]>{contents = "reason"} = <CFString 0x100185180 [0x1a0950150]>{contents = "Associating"}
+}
+
+ 1/15/2017  7:37:52.729 WiFiDeviceManagerSetNetworks: Adding HS20 Account: 
+Domain name orange.ro
+3GPP MCC&MNC 226F10 
+Friendly Operator Name Orange
+ 1/15/2017  7:37:52.730 __WiFiDeviceManagerPrepareHS20Queries: created queries <CFArray 0x14ceb4d00 [0x1a0950150]>{type = mutable-small, count = 3, values = (
+	0 : <CFNumber 0xb0000000000010c1 [0x1a0950150]>{value = +268, type = kCFNumberSInt16Type}
+	1 : <CFNumber 0xb000000000001081 [0x1a0950150]>{value = +264, type = kCFNumberSInt16Type}
+	2 : <CFNumber 0xb000000000000031 [0x1a0950150]>{value = +3, type = kCFNumberSInt16Type}
+)}
+ 1/15/2017  7:37:52.730 Auto association attempt canceled because auto join state is Associating.
+ 1/15/2017  7:37:52.732 No Change in Background Scan Networks, Skip Re-Programming Background Scan
+
+ 1/15/2017  7:37:52.732 Creating client for "configd"
+ 1/15/2017  7:37:52.775 WiFiDeviceManagerSetNetworks: Adding HS20 Account: 
+Domain name orange.ro
+3GPP MCC&MNC 226F10 
+Friendly Operator Name Orange
+ 1/15/2017  7:37:52.775 __WiFiDeviceManagerPrepareHS20Queries: created queries <CFArray 0x14ce9cd50 [0x1a0950150]>{type = mutable-small, count = 3, values = (
+	0 : <CFNumber 0xb0000000000010c1 [0x1a0950150]>{value = +268, type = kCFNumberSInt16Type}
+	1 : <CFNumber 0xb000000000001081 [0x1a0950150]>{value = +264, type = kCFNumberSInt16Type}
+	2 : <CFNumber 0xb000000000000031 [0x1a0950150]>{value = +3, type = kCFNumberSInt16Type}
+)}
+ 1/15/2017  7:37:52.776 __WiFiDeviceManagerAutoAssociate: Already connected to DIGI-146A.
+ 1/15/2017  7:37:52.777 No Change in Background Scan Networks, Skip Re-Programming Background Scan
+
+ 1/15/2017  7:37:52.792 MIS state is Disabled
+ 1/15/2017  7:37:52.792 MIS state queried by "locationd" is Disable
+ 1/15/2017  7:37:52.792 MIS state is Disabled
+ 1/15/2017  7:37:52.792 MIS state queried by "apsd" is Disable
+ 1/15/2017  7:37:52.794 MIS state is Disabled
+ 1/15/2017  7:37:52.794 MIS state queried by "imagent" is Disable
+ 1/15/2017  7:37:52.795 MIS state is Disabled
+ 1/15/2017  7:37:52.795 MIS state queried by "InCallService" is Disable
+ 1/15/2017  7:37:52.797 MIS state is Disabled
+ 1/15/2017  7:37:52.797 MIS state queried by "MobileMail" is Disable
+ 1/15/2017  7:37:52.803 MIS state is Disabled
+ 1/15/2017  7:37:52.803 MIS state queried by "nanoregistryd" is Disable
+ 1/15/2017  7:37:52.805 MIS state is Disabled
+ 1/15/2017  7:37:52.805 MIS state queried by "SpringBoard" is Disable
+ 1/15/2017  7:37:52.810 MIS state is Disabled
+ 1/15/2017  7:37:52.810 MIS state queried by "UserEventAgent" is Disable
+ 1/15/2017  7:37:52.812 MIS state is Disabled
+ 1/15/2017  7:37:52.812 MIS state queried by "identityservices" is Disable
+ 1/15/2017  7:37:52.814 MIS state is Disabled
+ 1/15/2017  7:37:52.815 MIS state queried by "mediaserverd" is Disable
+ 1/15/2017  7:37:52.818 configd requesting removal of BGScan networks
+ 1/15/2017  7:37:52.844 No Change in Background Scan Networks, Skip Re-Programming Background Scan
+
+ 1/15/2017  7:37:52.844 __WiFiManagerSetEnableState: state TRUE, manager->enable.setting TRUE, manager->unlockedSinceBoot TRUE
+ 1/15/2017  7:37:52.844 Removing client for "configd"
+ 1/15/2017  7:37:52.845 IPV4 State change for en0
+ 1/15/2017  7:37:52.846 IP Address: 192.168.100.4
+ 1/15/2017  7:37:52.846 Router IP Address: 192.168.100.1
+ 1/15/2017  7:37:52.846 __WiFiDeviceCheckForIPV4ParamsChange: Setting power mode to kA11PowerProfileDefault
+ 1/15/2017  7:37:52.847 __WiFiManagerIPv4Callback: <en0> [DIGI-146A                               : isHidden=0, isEAP=0, isWPA=1, isWEP=0, type=0] isMainIf? 1, isRoutable? 1
+ 1/15/2017  7:37:52.847 -[WiFiIDSSyncEngine currentNetworkChanged]: <0x16e12f000>, role 1, currentNetwork DIGI-146A                               : isHidden=0, isEAP=0, isWPA=1, isWEP=0, type=0
+ 1/15/2017  7:37:52.848 -[WiFiIDSSyncEngine currentNetworkChanged]: reset waitForReAssociationTimer <CFRunLoopTimer 0x14ce6ecf0 [0x1a0950150]>{valid = Yes, firing = No, interval = 819052854, tolerance = 0, next fire date = 1.32766295e+09 (821511473 @ 12127894066845274), callout = (NSTimer) [WiFiIDSSyncEngine companionReAssociationWaitTimerFired:] (0x18292cfe0 / 0x1000e1010) (/usr/sbin/wifid), context = <CFRunLoopTimer context 0x14ce5c520>}
+ 1/15/2017  7:37:52.848 -[WiFiIDSSyncEngine sendCurrentCompanionNetwork]: autojoinAssistDict {
+    "SSID_STR" = "DIGI-146A";
+}
+ 1/15/2017  7:37:52.848 -[WiFiIDSSyncEngine sendToGizmoOfDataType:]: <0x16e0a3000> ID:(null), data type 1
+ 1/15/2017  7:37:52.848 WiFiLQAMgrSetRouterIpv4Addr: Router IP Address: 192.168.100.1 
+ 1/15/2017  7:37:52.850 __WiFiDeviceCheckForIPV4ParamsChange: configMethod DHCP, leaseExpiryDuration 4320 mins
+ 1/15/2017  7:37:52.850 WiFiAWDManagerSubmitMetric: metric container could not be generated for metric id <0x90007>
+ 1/15/2017  7:37:52.850 Router MAC Address: 04:bd:70:a4:e3:00
+ 1/15/2017  7:37:52.905 IPv4 Primary interface is pdp_ip0 and IPv6 Primary Interface is (null)
+ 1/15/2017  7:37:52.924 IPv4 Primary interface is en0 and IPv6 Primary Interface is (null)
+ 1/15/2017  7:37:52.962 WoW is Disabled, 0 WoW Clients
+ 1/15/2017  7:37:52.969 MIS state is Disabled
+ 1/15/2017  7:37:52.970 MIS state queried by "nanoregistryd" is Disable
+ 1/15/2017  7:37:53.016 WoW is Disabled, 0 WoW Clients
+ 1/15/2017  7:37:53.112 WoW is Disabled, 0 WoW Clients
+ 1/15/2017  7:37:53.125 WoW is Disabled, 0 WoW Clients
+ 1/15/2017  7:37:53.164 WoW is Disabled, 0 WoW Clients
+ 1/15/2017  7:37:57.334 __WiFiManagerCellularTransmitCallback_block_invoke: Cellular Transmit Started = FALSE
+ 1/15/2017  7:37:57.488 IPV6 State change for en0
+ 1/15/2017  7:37:57.493 IP Address: 2a02:2f0a:c0a8:1a00:1cc0:d85b:4877:c957
+ 1/15/2017  7:37:57.493 IP Address: 2a02:2f0a:c0a8:1a00:dc2:abb5:62cc:a151
+ 1/15/2017  7:37:57.497 IPv4 Primary interface is en0 and IPv6 Primary Interface is en0
+ 1/15/2017  7:37:57.498 IPv4 Primary interface is en0 and IPv6 Primary Interface is en0
+ 1/15/2017  7:37:57.622 IPv4 Primary interface is en0 and IPv6 Primary Interface is en0
+ 1/15/2017  7:37:57.624 IPv4 Primary interface is en0 and IPv6 Primary Interface is en0
+ 1/15/2017  7:38:02.548 Received kIOMessageSystemWillSleep
+ 1/15/2017  7:38:02.549 System Sleep notification, Disabling auto-join
+ 1/15/2017  7:38:02.549 __WiFiManagerSetEnableState: state FALSE, manager->enable.setting TRUE, manager->unlockedSinceBoot TRUE
+ 1/15/2017  7:38:02.549 Disabling automatic association
+ 1/15/2017  7:38:02.573 WoW is Disabled, 0 WoW Clients
+ 1/15/2017  7:38:02.626 __WiFiLQAMgrLogStats: Rssi: -72 Cca: 0 TxPer: 3.6% (28) BcnPer: 0.0% (0) RxFrms 17 TxRate: 39000 RxRate: 58500
+ 1/15/2017  7:38:02.671 __WiFiDeviceManagerAwdlAvailableCallback: AWDL availability changed to FALSE
+ 1/15/2017  7:38:02.671 __WiFiDeviceCopyLinkChangedSubReasonString: Apple80211ReturnToString failed 1
+ 1/15/2017  7:38:02.671 __WiFiDeviceProcessDriverAvailableEvent: driver availability false, reason PowerOff(0xe0821804), subreason (null)(0x0)
+ 1/15/2017  7:38:02.671 __WiFiManagerDispatchDeviceAvailable: driver availability false
+
+ 1/15/2017  7:38:02.671 Unable to dispatch message to client MessagesViewServ (268435460)
+ 1/15/2017  7:38:02.672 WiFiAWDManagerSubmitMetric: metric container could not be generated for metric id <0x9000e>
+ 1/15/2017  7:38:02.672 Creating client for "configd"
+ 1/15/2017  7:38:02.672 __WiFiDeviceProcessLinkEvent: isLinkDown 1
+ 1/15/2017  7:38:02.673 Unable to dispatch message to client MessagesViewServ (268435460)
+ 1/15/2017  7:38:02.673 -[WiFiIDSSyncEngine currentNetworkChanged]: <0x16e12f000>, role 1, currentNetwork (null)
+ 1/15/2017  7:38:02.673 -[WiFiIDSSyncEngine currentNetworkChanged]: adjusted waitForReAssociationTimer <CFRunLoopTimer 0x14ce6ecf0 [0x1a0950150]>{valid = Yes, firing = No, interval = 819052854, tolerance = 0, next fire date = 506151513 (29.99996 @ 10025454660373), callout = (NSTimer) [WiFiIDSSyncEngine companionReAssociationWaitTimerFired:] (0x18292cfe0 / 0x1000e1010) (/usr/sbin/wifid), context = <CFRunLoopTimer context 0x14ce5c520>}
+ 1/15/2017  8:37:36.859 Total connection time to DIGI-146A 1575689.698103
+ 1/15/2017  8:37:36.903 WiFiDeviceManagerSetNetworks: Adding HS20 Account: 
+Domain name orange.ro
+3GPP MCC&MNC 226F10 
+Friendly Operator Name Orange
+ 1/15/2017  8:37:36.903 __WiFiDeviceManagerPrepareHS20Queries: created queries <CFArray 0x14ce87d90 [0x1a0950150]>{type = mutable-small, count = 3, values = (
+	0 : <CFNumber 0xb0000000000010c1 [0x1a0950150]>{value = +268, type = kCFNumberSInt16Type}
+	1 : <CFNumber 0xb000000000001081 [0x1a0950150]>{value = +264, type = kCFNumberSInt16Type}
+	2 : <CFNumber 0xb000000000000031 [0x1a0950150]>{value = +3, type = kCFNumberSInt16Type}
+)}
+ 1/15/2017  8:37:36.903 Auto association attempt canceled because auto join is disabled.
+ 1/15/2017  8:37:36.906 No Change in Background Scan Networks, Skip Re-Programming Background Scan
+
+ 1/15/2017  8:37:36.906 Auto association attempt canceled because auto join is disabled.
+ 1/15/2017  8:37:36.907 __WiFiDeviceManagerSetInterfaceRank: setting interface rank kSCNetworkServicePrimaryRankDefault
+ 1/15/2017  8:37:36.908 WiFiDeviceRequestAssociatedSleep: ActiveDuringSleepRequested is already removed ((null)).
+ 1/15/2017  8:37:36.914 WiFiAWDManagerSubmitMetric: metric container could not be generated for metric id <0x90009>
+ 1/15/2017  8:37:36.914 Link went down: isInVoluntary 0, reason Unknown(4), subreason 0, rssi -72
+ 1/15/2017  8:37:36.914 __WiFiDeviceResetCCAHistory
+ 1/15/2017  8:37:36.914 __WiFiDeviceResetRssiHistory
+ 1/15/2017  8:37:36.918 __WiFiDeviceCopyLinkChangedSubReasonString: Apple80211ReturnToString failed 1
+ 1/15/2017  8:37:36.918 __WiFiDeviceProcessDriverAvailableEvent: driver availability true, reason Initializing(0xe0821803), subreason (null)(0x0)
+ 1/15/2017  8:37:36.919 __WiFiManagerDispatchDeviceAvailable: driver availability true
+
+ 1/15/2017  8:37:36.920 Unable to dispatch message to client MessagesViewServ (268435460)
+ 1/15/2017  8:37:36.921 Auto association attempt canceled because auto join is disabled.
+ 1/15/2017  8:37:36.921 WiFiAWDManagerSubmitMetric: metric container could not be generated for metric id <0x9000e>
+ 1/15/2017  8:37:36.922 Auto association attempt canceled because auto join is disabled.
+ 1/15/2017  8:37:36.925 No Change in Background Scan Networks, Skip Re-Programming Background Scan
+
+ 1/15/2017  8:37:36.939 __WiFiManagerCellularTransmitCallback_block_invoke: Cellular Transmit Started = FALSE
+ 1/15/2017  8:37:36.947 Received kIOMessageSystemWillPowerOn
+ 1/15/2017  8:37:36.947 System wake reason: AOP.ExternalReq rtc
+ 1/15/2017  8:37:36.947 System Powered ON notification Re-enabling auto-join
+ 1/15/2017  8:37:36.947 __WiFiManagerSetEnableState: state TRUE, manager->enable.setting TRUE, manager->unlockedSinceBoot TRUE
+ 1/15/2017  8:37:36.947 Enabling automatic association
+ 1/15/2017  8:37:36.948 __WiFiDeviceManagerStateMachineRun: current state: Idle
+ 1/15/2017  8:37:36.948 Attempting multi-stage auto join mStageAutoJoinAttempts=0
+ 1/15/2017  8:37:36.948 Starting multi-stage auto join sequence
+ 1/15/2017  8:37:36.948 multi-stage auto-join: Scanning for previous network DIGI-146A on channel 1
+ 1/15/2017  8:37:36.948 Performing auto-join broadcast scan with a modified dwell time of 110ms on channels: 1 
+ 1/15/2017  8:37:36.948 Enqueuing command type: "Scan" pending commands: 0
+ 1/15/2017  8:37:36.948 WiFiLocaleManagerCheckLocale: location service or wifi is off, set locale to default
+ 1/15/2017  8:37:36.948 new locale:  , locale: 
+ 1/15/2017  8:37:36.949 Dequeuing command type: "Scan" pending commands: 0
+ 1/15/2017  8:37:36.949 Attempting Apple80211ScanAsync on en0
+ 1/15/2017  8:37:36.996 WiFiDeviceManagerSetNetworks: Adding HS20 Account: 
+Domain name orange.ro
+3GPP MCC&MNC 226F10 
+Friendly Operator Name Orange
+ 1/15/2017  8:37:36.996 __WiFiDeviceManagerPrepareHS20Queries: created queries <CFArray 0x14cfb6070 [0x1a0950150]>{type = mutable-small, count = 3, values = (
+	0 : <CFNumber 0xb0000000000010c1 [0x1a0950150]>{value = +268, type = kCFNumberSInt16Type}
+	1 : <CFNumber 0xb000000000001081 [0x1a0950150]>{value = +264, type = kCFNumberSInt16Type}
+	2 : <CFNumber 0xb000000000000031 [0x1a0950150]>{value = +3, type = kCFNumberSInt16Type}
+)}
+ 1/15/2017  8:37:36.997 Auto association attempt canceled because auto join state is Scanning Previous Network Channel.
+ 1/15/2017  8:37:36.998 No Change in Background Scan Networks, Skip Re-Programming Background Scan
+
+ 1/15/2017  8:37:37.376 Completed Apple80211ScanAsync on en0 (0x0)
+ 1/15/2017  8:37:37.398 Auto join scan completed (0) with current state: Scanning Previous Network Channel
+ 1/15/2017  8:37:37.398 __WiFiDeviceManagerStateMachineRun: current state: Scanning Previous Network Channel
+ 1/15/2017  8:37:37.401 Scanning Previous Network Channel found: DIGI-146A
+ 1/15/2017  8:37:37.402 Attempting auto-join for networks in following order: DIGI-146A(W)
+ 1/15/2017  8:37:37.402 Autojoin is processing network 1 of 1 candidates
+ 1/15/2017  8:37:37.402 Attempting auto join association of DIGI-146A
+ 1/15/2017  8:37:37.449 Enqueuing command type: "Association" pending commands: 1
+ 1/15/2017  8:37:37.449 Dequeuing command type: "Association" pending commands: 0
+ 1/15/2017  8:37:37.449 Attempting Apple80211AssociateAsync
+ 1/15/2017  8:37:37.453 Attempting to join WPA network: DIGI-146A
+ 1/15/2017  8:37:37.626 __WiFiManagerCellularTransmitCallback_block_invoke: Cellular Transmit Started = TRUE
+ 1/15/2017  8:37:37.627 MIS state is Disabled
+ 1/15/2017  8:37:37.628 MIS state queried by "locationd" is Disable
+ 1/15/2017  8:37:37.628 MIS state is Disabled
+ 1/15/2017  8:37:37.628 MIS state queried by "identityservices" is Disable
+ 1/15/2017  8:37:37.629 MIS state is Disabled
+ 1/15/2017  8:37:37.629 MIS state queried by "apsd" is Disable
+ 1/15/2017  8:37:37.632 MIS state is Disabled
+ 1/15/2017  8:37:37.633 MIS state queried by "imagent" is Disable
+ 1/15/2017  8:37:37.636 MIS state is Disabled
+ 1/15/2017  8:37:37.636 MIS state queried by "InCallService" is Disable
+ 1/15/2017  8:37:37.636 MIS state is Disabled
+ 1/15/2017  8:37:37.636 MIS state queried by "mediaserverd" is Disable
+ 1/15/2017  8:37:37.637 MIS state is Disabled
+ 1/15/2017  8:37:37.637 MIS state queried by "MobileMail" is Disable
+ 1/15/2017  8:37:37.637 MIS state is Disabled
+ 1/15/2017  8:37:37.637 MIS state queried by "SpringBoard" is Disable
+ 1/15/2017  8:37:37.638 configd requesting removal of BGScan networks
+ 1/15/2017  8:37:37.639 No Change in Background Scan Networks, Skip Re-Programming Background Scan
+
+ 1/15/2017  8:37:37.639 __WiFiManagerSetEnableState: state TRUE, manager->enable.setting TRUE, manager->unlockedSinceBoot TRUE
+ 1/15/2017  8:37:37.639 Removing client for "configd"
+ 1/15/2017  8:37:37.640 __WiFiDeviceManagerAwdlAvailableCallback: AWDL availability changed to TRUE
+ 1/15/2017  8:37:37.641 IPV4 State change for en0
+ 1/15/2017  8:37:37.644 IPV6 State change for en0
+ 1/15/2017  8:37:37.645 IPv4 Primary interface is pdp_ip0 and IPv6 Primary Interface is (null)
+ 1/15/2017  8:37:37.646 IPv4 Primary interface is pdp_ip0 and IPv6 Primary Interface is (null)
+ 1/15/2017  8:37:37.647 MIS state is Disabled
+ 1/15/2017  8:37:37.647 MIS state queried by "UserEventAgent" is Disable
+ 1/15/2017  8:37:37.648 MIS state is Disabled
+ 1/15/2017  8:37:37.648 MIS state queried by "nanoregistryd" is Disable
+ 1/15/2017  8:37:37.659 WoW is Disabled, 0 WoW Clients
+ 1/15/2017  8:37:37.684 __WiFiDeviceProcessLinkEvent: isLinkDown 0
+ 1/15/2017  8:37:37.693 Unable to dispatch message to client MessagesViewServ (268435460)
+ 1/15/2017  8:37:37.695 __WiFiDeviceManagerSetInterfaceRank: setting interface rank kSCNetworkServicePrimaryRankDefault
+ 1/15/2017  8:37:37.695 __WiFiDeviceManagerEvaluateAPEnvironment: Getting AP environment for DIGI-146A. Learning period 259200 secs Expiry period 2592000 secs
+ 1/15/2017  8:37:37.696 __WiFiDeviceManagerEvaluateAPEnvironment: AP environment is 2 for DIGI-146A(4:bd:70:a4:e3:8)
+ 1/15/2017  8:37:37.696 WiFiDeviceSetRoamParams: setting roam profile to type 1
+ 1/15/2017  8:37:37.696 __WiFiDeviceManagerEvaluateAPEnvironment: Getting AP environment for DIGI-146A. Learning period 259200 secs Expiry period 2592000 secs
+ 1/15/2017  8:37:37.696 __WiFiDeviceManagerEvaluateAPEnvironment: AP environment is 2 for DIGI-146A(4:bd:70:a4:e3:8)
+ 1/15/2017  8:37:37.696 __WiFiLQAMgrSetCurrentNetwork: SSID: DIGI-146A BSSID: 4:bd:70:a4:e3:8 RSSI: -74 ApEnv: 2
+ 1/15/2017  8:37:37.699 WiFiDeviceRequestAssociatedSleep: ActiveDuringSleepRequested is already removed ((null)).
+ 1/15/2017  8:37:37.699 __WiFiDeviceResetCCAHistory
+ 1/15/2017  8:37:37.699 __WiFiDeviceResetRssiHistory
+ 1/15/2017  8:37:37.699 __WiFiLQAMgrLogStats: Rssi: -74 Cca: 0 TxPer: 0.0% (0) BcnPer: 0.0% (0) RxFrms 0 TxRate: 0 RxRate: 0
+ 1/15/2017  8:37:37.701 __WiFiDeviceProcessLinkEvent: Initializing lqm value: rawRssi -74, scaledRssi 0.581395, noise 0, snr 17
+ 1/15/2017  8:37:37.706 __WiFiMetricsManagerPrepareLinkChangeNetworkParams: OUI:04:bd:70 Channel:1(20MHz) Flags:0x8 PhyMode:0x10 Security:0x2 WPA:[Prot:0x2 McastCipher:0x4 UcastCipher:0xc AKM:0x2 Caps:0x0] HT:[Info:0x19fc AMPDU:0x1b TXBF:0x0 Ext:0x0 ASEL:0x0] VHT:[Info:0x0]
+ 1/15/2017  8:37:37.706 WiFiAWDManagerSubmitMetric: metric container could not be generated for metric id <0x90009>
+ 1/15/2017  8:37:37.708 Creating client for "configd"
+ 1/15/2017  8:37:37.717 
+Too frequent(0.017645 secs) rssi event from driver, ignoring
+
+ 1/15/2017  8:37:37.718 Completed Apple80211AssociateAsync (0 - 0x0)
+ 1/15/2017  8:37:37.719 Joined: DIGI-146A
+ 1/15/2017  8:37:37.719 Auto join association completed (0) with current state: Associating
+ 1/15/2017  8:37:37.719 __WiFiDeviceManagerStateMachineRun: current state: Associating
+ 1/15/2017  8:37:37.719 __WiFiDeviceManagerProcessAssociationResult: current state: Associating
+ 1/15/2017  8:37:37.719 WiFiNetworkSetKnownBssUsageData: BSS updated - current BSS: 4:bd:70:a4:e3:8 (1)
+ 1/15/2017  8:37:37.719 Removing problematic state for DIGI-146A, reason N/A reasonData=0
+ 1/15/2017  8:37:37.719 problematic networks =  and potentially problematic networks = 
+ 1/15/2017  8:37:37.720 No Change in Background Scan Networks, Skip Re-Programming Background Scan
+
+ 1/15/2017  8:37:37.721 __WiFiManagerDidAssociateCallback: network DIGI-146A, requestedInformation <CFBasicHash 0x14cee73c0 [0x1a0950150]>{type = mutable dict, count = 1,
+entries =>
+	2 : <CFString 0x10017e160 [0x1a0950150]>{contents = "reason"} = <CFString 0x100185180 [0x1a0950150]>{contents = "Associating"}
+}
+
+ 1/15/2017  8:37:37.781 WiFiDeviceManagerSetNetworks: Adding HS20 Account: 
+Domain name orange.ro
+3GPP MCC&MNC 226F10 
+Friendly Operator Name Orange
+ 1/15/2017  8:37:37.781 __WiFiDeviceManagerPrepareHS20Queries: created queries <CFArray 0x14ce87460 [0x1a0950150]>{type = mutable-small, count = 3, values = (
+	0 : <CFNumber 0xb0000000000010c1 [0x1a0950150]>{value = +268, type = kCFNumberSInt16Type}
+	1 : <CFNumber 0xb000000000001081 [0x1a0950150]>{value = +264, type = kCFNumberSInt16Type}
+	2 : <CFNumber 0xb000000000000031 [0x1a0950150]>{value = +3, type = kCFNumberSInt16Type}
+)}
+ 1/15/2017  8:37:37.781 Auto association attempt canceled because auto join state is Associating.
+ 1/15/2017  8:37:37.783 No Change in Background Scan Networks, Skip Re-Programming Background Scan
+
+ 1/15/2017  8:37:37.810 WiFiDeviceManagerSetNetworks: Adding HS20 Account: 
+Domain name orange.ro
+3GPP MCC&MNC 226F10 
+Friendly Operator Name Orange
+ 1/15/2017  8:37:37.810 __WiFiDeviceManagerPrepareHS20Queries: created queries <CFArray 0x14ce85690 [0x1a0950150]>{type = mutable-small, count = 3, values = (
+	0 : <CFNumber 0xb0000000000010c1 [0x1a0950150]>{value = +268, type = kCFNumberSInt16Type}
+	1 : <CFNumber 0xb000000000001081 [0x1a0950150]>{value = +264, type = kCFNumberSInt16Type}
+	2 : <CFNumber 0xb000000000000031 [0x1a0950150]>{value = +3, type = kCFNumberSInt16Type}
+)}
+ 1/15/2017  8:37:37.810 __WiFiDeviceManagerAutoAssociate: Already connected to DIGI-146A.
+ 1/15/2017  8:37:37.812 No Change in Background Scan Networks, Skip Re-Programming Background Scan
+
+ 1/15/2017  8:37:37.823 MIS state is Disabled
+ 1/15/2017  8:37:37.823 MIS state queried by "MobileMail" is Disable
+ 1/15/2017  8:37:37.824 MIS state is Disabled
+ 1/15/2017  8:37:37.824 MIS state queried by "SpringBoard" is Disable
+ 1/15/2017  8:37:37.824 MIS state is Disabled
+ 1/15/2017  8:37:37.824 MIS state queried by "UserEventAgent" is Disable
+ 1/15/2017  8:37:37.828 MIS state is Disabled
+ 1/15/2017  8:37:37.828 MIS state queried by "locationd" is Disable
+ 1/15/2017  8:37:37.828 MIS state is Disabled
+ 1/15/2017  8:37:37.828 MIS state queried by "identityservices" is Disable
+ 1/15/2017  8:37:37.830 MIS state is Disabled
+ 1/15/2017  8:37:37.830 MIS state queried by "apsd" is Disable
+ 1/15/2017  8:37:37.830 MIS state is Disabled
+ 1/15/2017  8:37:37.830 MIS state queried by "imagent" is Disable
+ 1/15/2017  8:37:37.830 MIS state is Disabled
+ 1/15/2017  8:37:37.831 MIS state queried by "InCallService" is Disable
+ 1/15/2017  8:37:37.831 MIS state is Disabled
+ 1/15/2017  8:37:37.831 MIS state queried by "mediaserverd" is Disable
+ 1/15/2017  8:37:37.831 configd requesting removal of BGScan networks
+ 1/15/2017  8:37:37.833 No Change in Background Scan Networks, Skip Re-Programming Background Scan
+
+ 1/15/2017  8:37:37.833 __WiFiManagerSetEnableState: state TRUE, manager->enable.setting TRUE, manager->unlockedSinceBoot TRUE
+ 1/15/2017  8:37:37.833 Removing client for "configd"
+ 1/15/2017  8:37:37.859 IPV4 State change for en0
+ 1/15/2017  8:37:37.861 IP Address: 192.168.100.4
+ 1/15/2017  8:37:37.861 Router IP Address: 192.168.100.1
+ 1/15/2017  8:37:37.861 __WiFiDeviceCheckForIPV4ParamsChange: Setting power mode to kA11PowerProfileDefault
+ 1/15/2017  8:37:37.862 __WiFiManagerIPv4Callback: <en0> [DIGI-146A                               : isHidden=0, isEAP=0, isWPA=1, isWEP=0, type=0] isMainIf? 1, isRoutable? 1
+ 1/15/2017  8:37:37.862 -[WiFiIDSSyncEngine currentNetworkChanged]: <0x16e12f000>, role 1, currentNetwork DIGI-146A                               : isHidden=0, isEAP=0, isWPA=1, isWEP=0, type=0
+ 1/15/2017  8:37:37.862 -[WiFiIDSSyncEngine currentNetworkChanged]: reset waitForReAssociationTimer <CFRunLoopTimer 0x14ce6ecf0 [0x1a0950150]>{valid = Yes, firing = No, interval = 819052854, tolerance = 0, next fire date = 1.32767012e+09 (821515058 @ 12127894332272309), callout = (NSTimer) [WiFiIDSSyncEngine companionReAssociationWaitTimerFired:] (0x18292cfe0 / 0x1000e1010) (/usr/sbin/wifid), context = <CFRunLoopTimer context 0x14ce5c520>}
+ 1/15/2017  8:37:37.862 -[WiFiIDSSyncEngine sendCurrentCompanionNetwork]: autojoinAssistDict {
+    "SSID_STR" = "DIGI-146A";
+}
+ 1/15/2017  8:37:37.862 WiFiLQAMgrSetRouterIpv4Addr: Router IP Address: 192.168.100.1 
+ 1/15/2017  8:37:37.863 -[WiFiIDSSyncEngine sendToGizmoOfDataType:]: <0x16e247000> ID:(null), data type 1
+ 1/15/2017  8:37:37.867 __WiFiDeviceCheckForIPV4ParamsChange: configMethod DHCP, leaseExpiryDuration 4320 mins
+ 1/15/2017  8:37:37.867 WiFiAWDManagerSubmitMetric: metric container could not be generated for metric id <0x90007>
+ 1/15/2017  8:37:37.867 Router MAC Address: 04:bd:70:a4:e3:00
+ 1/15/2017  8:37:37.875 MIS state is Disabled
+ 1/15/2017  8:37:37.876 MIS state queried by "nanoregistryd" is Disable
+ 1/15/2017  8:37:37.910 IPv4 Primary interface is pdp_ip0 and IPv6 Primary Interface is (null)
+ 1/15/2017  8:37:37.950 IPv4 Primary interface is en0 and IPv6 Primary Interface is (null)
+ 1/15/2017  8:37:37.970 IPV6 State change for en0
+ 1/15/2017  8:37:37.971 IP Address: 2a02:2f0a:c0a8:1a00:1cc0:d85b:4877:c957
+ 1/15/2017  8:37:37.971 IP Address: 2a02:2f0a:c0a8:1a00:8cfa:c6a0:fc75:405a
+ 1/15/2017  8:37:38.001 IPv4 Primary interface is en0 and IPv6 Primary Interface is en0
+ 1/15/2017  8:37:38.002 IPv4 Primary interface is en0 and IPv6 Primary Interface is en0
+ 1/15/2017  8:37:38.019 WoW is Disabled, 0 WoW Clients
+ 1/15/2017  8:37:38.273 WoW is Disabled, 0 WoW Clients
+ 1/15/2017  8:37:38.282 WoW is Disabled, 0 WoW Clients
+ 1/15/2017  8:37:38.291 WoW is Disabled, 0 WoW Clients
+ 1/15/2017  8:37:42.579 __WiFiManagerCellularTransmitCallback_block_invoke: Cellular Transmit Started = FALSE
+ 1/15/2017  8:37:47.687 __WiFiLQAMgrLogStats: Rssi: -70 Cca: 0 TxPer: 0.0% (3) BcnPer: 0.0% (0) RxFrms 2 TxRate: 52000 RxRate: 65000
+ 1/15/2017  8:37:48.082 Received kIOMessageSystemWillSleep
+ 1/15/2017  8:37:48.082 System Sleep notification, Disabling auto-join
+ 1/15/2017  8:37:48.082 __WiFiManagerSetEnableState: state FALSE, manager->enable.setting TRUE, manager->unlockedSinceBoot TRUE
+ 1/15/2017  8:37:48.082 Disabling automatic association
+ 1/15/2017  8:37:48.122 WoW is Disabled, 0 WoW Clients
+ 1/15/2017  8:37:48.251 __WiFiDeviceCopyLinkChangedSubReasonString: Apple80211ReturnToString failed 1
+ 1/15/2017  8:37:48.251 __WiFiDeviceProcessDriverAvailableEvent: driver availability false, reason PowerOff(0xe0821804), subreason (null)(0x0)
+ 1/15/2017  8:37:48.251 __WiFiManagerDispatchDeviceAvailable: driver availability false
+
+ 1/15/2017  8:37:48.251 Unable to dispatch message to client MessagesViewServ (268435460)
+ 1/15/2017  8:37:48.251 WiFiAWDManagerSubmitMetric: metric container could not be generated for metric id <0x9000e>
+ 1/15/2017  8:37:48.255 __WiFiDeviceManagerAwdlAvailableCallback: AWDL availability changed to FALSE
+ 1/15/2017  8:37:48.255 __WiFiDeviceProcessLinkEvent: isLinkDown 1
+ 1/15/2017  8:37:48.256 Unable to dispatch message to client MessagesViewServ (268435460)
+ 1/15/2017  8:37:48.256 -[WiFiIDSSyncEngine currentNetworkChanged]: <0x16e12f000>, role 1, currentNetwork (null)
+ 1/15/2017  8:37:48.256 -[WiFiIDSSyncEngine currentNetworkChanged]: adjusted waitForReAssociationTimer <CFRunLoopTimer 0x14ce6ecf0 [0x1a0950150]>{valid = Yes, firing = No, interval = 819052854, tolerance = 0, next fire date = 506155098 (29.999966 @ 10025733726096), callout = (NSTimer) [WiFiIDSSyncEngine companionReAssociationWaitTimerFired:] (0x18292cfe0 / 0x1000e1010) (/usr/sbin/wifid), context = <CFRunLoopTimer context 0x14ce5c520>}
+ 1/15/2017  8:49:45.811 Total connection time to DIGI-146A 1576417.789897
+ 1/15/2017  8:49:45.860 WiFiDeviceManagerSetNetworks: Adding HS20 Account: 
+Domain name orange.ro
+3GPP MCC&MNC 226F10 
+Friendly Operator Name Orange
+ 1/15/2017  8:49:45.860 __WiFiDeviceManagerPrepareHS20Queries: created queries <CFArray 0x14ce39900 [0x1a0950150]>{type = mutable-small, count = 3, values = (
+	0 : <CFNumber 0xb0000000000010c1 [0x1a0950150]>{value = +268, type = kCFNumberSInt16Type}
+	1 : <CFNumber 0xb000000000001081 [0x1a0950150]>{value = +264, type = kCFNumberSInt16Type}
+	2 : <CFNumber 0xb000000000000031 [0x1a0950150]>{value = +3, type = kCFNumberSInt16Type}
+)}
+ 1/15/2017  8:49:45.860 Auto association attempt canceled because auto join is disabled.
+ 1/15/2017  8:49:45.861 No Change in Background Scan Networks, Skip Re-Programming Background Scan
+
+ 1/15/2017  8:49:45.862 Auto association attempt canceled because auto join is disabled.
+ 1/15/2017  8:49:45.862 __WiFiDeviceManagerSetInterfaceRank: setting interface rank kSCNetworkServicePrimaryRankDefault
+ 1/15/2017  8:49:45.873 WiFiDeviceRequestAssociatedSleep: ActiveDuringSleepRequested is already removed ((null)).
+ 1/15/2017  8:49:45.877 WiFiAWDManagerSubmitMetric: metric container could not be generated for metric id <0x90009>
+ 1/15/2017  8:49:45.877 Link went down: isInVoluntary 0, reason Unknown(4), subreason 0, rssi -70
+ 1/15/2017  8:49:45.877 __WiFiDeviceResetCCAHistory
+ 1/15/2017  8:49:45.877 __WiFiDeviceResetRssiHistory
+ 1/15/2017  8:49:45.878 Creating client for "configd"
+ 1/15/2017  8:49:45.886 Received kIOMessageSystemWillPowerOn
+ 1/15/2017  8:49:45.886 System wake reason: AOP.ExternalReq rtc
+ 1/15/2017  8:49:45.886 System Powered ON notification Re-enabling auto-join
+ 1/15/2017  8:49:45.886 __WiFiManagerSetEnableState: state TRUE, manager->enable.setting TRUE, manager->unlockedSinceBoot TRUE
+ 1/15/2017  8:49:45.886 Enabling automatic association
+ 1/15/2017  8:49:45.886 __WiFiDeviceManagerStateMachineRun: current state: Idle
+ 1/15/2017  8:49:45.886 Attempting multi-stage auto join mStageAutoJoinAttempts=0
+ 1/15/2017  8:49:45.886 Starting multi-stage auto join sequence
+ 1/15/2017  8:49:45.886 multi-stage auto-join: Scanning for previous network DIGI-146A on channel 1
+ 1/15/2017  8:49:45.886 Performing auto-join broadcast scan with a modified dwell time of 110ms on channels: 1 
+ 1/15/2017  8:49:45.887 Enqueuing command type: "Scan" pending commands: 0
+ 1/15/2017  8:49:45.887 WiFiLocaleManagerCheckLocale: location service or wifi is off, set locale to default
+ 1/15/2017  8:49:45.887 new locale:  , locale: 
+ 1/15/2017  8:49:45.887 Dequeuing command type: "Scan" pending commands: 0
+ 1/15/2017  8:49:45.887 Attempting Apple80211ScanAsync on en0
+ 1/15/2017  8:49:45.940 WiFiDeviceManagerSetNetworks: Adding HS20 Account: 
+Domain name orange.ro
+3GPP MCC&MNC 226F10 
+Friendly Operator Name Orange
+ 1/15/2017  8:49:45.940 __WiFiDeviceManagerPrepareHS20Queries: created queries <CFArray 0x14cf347c0 [0x1a0950150]>{type = mutable-small, count = 3, values = (
+	0 : <CFNumber 0xb0000000000010c1 [0x1a0950150]>{value = +268, type = kCFNumberSInt16Type}
+	1 : <CFNumber 0xb000000000001081 [0x1a0950150]>{value = +264, type = kCFNumberSInt16Type}
+	2 : <CFNumber 0xb000000000000031 [0x1a0950150]>{value = +3, type = kCFNumberSInt16Type}
+)}
+ 1/15/2017  8:49:45.940 Auto association attempt canceled because auto join state is Scanning Previous Network Channel.
+ 1/15/2017  8:49:45.941 No Change in Background Scan Networks, Skip Re-Programming Background Scan
+
+ 1/15/2017  8:49:45.946 __WiFiDeviceCopyLinkChangedSubReasonString: Apple80211ReturnToString failed 1
+ 1/15/2017  8:49:45.946 __WiFiDeviceProcessDriverAvailableEvent: driver availability true, reason Initializing(0xe0821803), subreason (null)(0x0)
+ 1/15/2017  8:49:45.946 __WiFiManagerDispatchDeviceAvailable: driver availability true
+
+ 1/15/2017  8:49:45.947 Unable to dispatch message to client MessagesViewServ (268435460)
+ 1/15/2017  8:49:45.948 Auto association attempt canceled because auto join state is Scanning Previous Network Channel.
+ 1/15/2017  8:49:45.948 WiFiAWDManagerSubmitMetric: metric container could not be generated for metric id <0x9000e>
+ 1/15/2017  8:49:45.951 Auto association attempt canceled because auto join state is Scanning Previous Network Channel.
+ 1/15/2017  8:49:45.956 No Change in Background Scan Networks, Skip Re-Programming Background Scan
+
+ 1/15/2017  8:49:45.958 __WiFiManagerCellularTransmitCallback_block_invoke: Cellular Transmit Started = FALSE
+ 1/15/2017  8:49:46.035 MIS state is Disabled
+ 1/15/2017  8:49:46.035 MIS state queried by "SpringBoard" is Disable
+ 1/15/2017  8:49:46.035 MIS state is Disabled
+ 1/15/2017  8:49:46.035 MIS state queried by "UserEventAgent" is Disable
+ 1/15/2017  8:49:46.035 MIS state is Disabled
+ 1/15/2017  8:49:46.036 MIS state queried by "locationd" is Disable
+ 1/15/2017  8:49:46.036 MIS state is Disabled
+ 1/15/2017  8:49:46.036 MIS state queried by "identityservices" is Disable
+ 1/15/2017  8:49:46.036 MIS state is Disabled
+ 1/15/2017  8:49:46.036 MIS state queried by "apsd" is Disable
+ 1/15/2017  8:49:46.036 MIS state is Disabled
+ 1/15/2017  8:49:46.037 MIS state queried by "imagent" is Disable
+ 1/15/2017  8:49:46.037 MIS state is Disabled
+ 1/15/2017  8:49:46.038 MIS state queried by "InCallService" is Disable
+ 1/15/2017  8:49:46.038 MIS state is Disabled
+ 1/15/2017  8:49:46.038 MIS state queried by "mediaserverd" is Disable
+ 1/15/2017  8:49:46.038 MIS state is Disabled
+ 1/15/2017  8:49:46.039 MIS state queried by "MobileMail" is Disable
+ 1/15/2017  8:49:46.039 Completed Apple80211ScanAsync on en0 (0x0)
+ 1/15/2017  8:49:46.040 Auto join scan completed (0) with current state: Scanning Previous Network Channel
+ 1/15/2017  8:49:46.040 __WiFiDeviceManagerStateMachineRun: current state: Scanning Previous Network Channel
+ 1/15/2017  8:49:46.040 Scanning Previous Network Channel found: DIGI-146A
+ 1/15/2017  8:49:46.041 Attempting auto-join for networks in following order: DIGI-146A(W)
+ 1/15/2017  8:49:46.041 Autojoin is processing network 1 of 1 candidates
+ 1/15/2017  8:49:46.041 Attempting auto join association of DIGI-146A
+ 1/15/2017  8:49:46.049 Enqueuing command type: "Association" pending commands: 1
+ 1/15/2017  8:49:46.052 Dequeuing command type: "Association" pending commands: 0
+ 1/15/2017  8:49:46.052 Attempting Apple80211AssociateAsync
+ 1/15/2017  8:49:46.055 Attempting to join WPA network: DIGI-146A
+ 1/15/2017  8:49:46.327 __WiFiDeviceProcessLinkEvent: isLinkDown 0
+ 1/15/2017  8:49:46.331 Unable to dispatch message to client Preferences (268435460)
+ 1/15/2017  8:49:46.361 Unable to dispatch message to client MessagesViewServ (268435460)
+ 1/15/2017  8:49:46.365 __WiFiDeviceManagerSetInterfaceRank: setting interface rank kSCNetworkServicePrimaryRankDefault
+ 1/15/2017  8:49:46.366 __WiFiDeviceManagerEvaluateAPEnvironment: Getting AP environment for DIGI-146A. Learning period 259200 secs Expiry period 2592000 secs
+ 1/15/2017  8:49:46.366 __WiFiDeviceManagerEvaluateAPEnvironment: AP environment is 2 for DIGI-146A(4:bd:70:a4:e3:8)
+ 1/15/2017  8:49:46.366 WiFiDeviceSetRoamParams: setting roam profile to type 1
+ 1/15/2017  8:49:46.384 __WiFiDeviceManagerEvaluateAPEnvironment: Getting AP environment for DIGI-146A. Learning period 259200 secs Expiry period 2592000 secs
+ 1/15/2017  8:49:46.384 __WiFiDeviceManagerEvaluateAPEnvironment: AP environment is 2 for DIGI-146A(4:bd:70:a4:e3:8)
+ 1/15/2017  8:49:46.384 __WiFiLQAMgrSetCurrentNetwork: SSID: DIGI-146A BSSID: 4:bd:70:a4:e3:8 RSSI: -73 ApEnv: 2
+ 1/15/2017  8:49:46.389 WiFiDeviceRequestAssociatedSleep: ActiveDuringSleepRequested is already removed ((null)).
+ 1/15/2017  8:49:46.389 __WiFiDeviceResetCCAHistory
+ 1/15/2017  8:49:46.389 __WiFiDeviceResetRssiHistory
+ 1/15/2017  8:49:46.389 __WiFiLQAMgrLogStats: Rssi: -73 Cca: 0 TxPer: 0.0% (0) BcnPer: 0.0% (0) RxFrms 0 TxRate: 0 RxRate: 0
+ 1/15/2017  8:49:46.391 __WiFiDeviceProcessLinkEvent: Initializing lqm value: rawRssi -73, scaledRssi 0.603757, noise 0, snr 18
+ 1/15/2017  8:49:46.392 __WiFiMetricsManagerPrepareLinkChangeNetworkParams: OUI:04:bd:70 Channel:1(20MHz) Flags:0x8 PhyMode:0x10 Security:0x2 WPA:[Prot:0x2 McastCipher:0x4 UcastCipher:0xc AKM:0x2 Caps:0x0] HT:[Info:0x19fc AMPDU:0x1b TXBF:0x0 Ext:0x0 ASEL:0x0] VHT:[Info:0x0]
+ 1/15/2017  8:49:46.392 WiFiAWDManagerSubmitMetric: metric container could not be generated for metric id <0x90009>
+ 1/15/2017  8:49:46.404 
+Too frequent(0.014313 secs) rssi event from driver, ignoring
+
+ 1/15/2017  8:49:46.407 Completed Apple80211AssociateAsync (0 - 0x0)
+ 1/15/2017  8:49:46.407 Joined: DIGI-146A
+ 1/15/2017  8:49:46.407 Auto join association completed (0) with current state: Associating
+ 1/15/2017  8:49:46.407 __WiFiDeviceManagerStateMachineRun: current state: Associating
+ 1/15/2017  8:49:46.407 __WiFiDeviceManagerProcessAssociationResult: current state: Associating
+ 1/15/2017  8:49:46.408 WiFiNetworkSetKnownBssUsageData: BSS updated - current BSS: 4:bd:70:a4:e3:8 (1)
+ 1/15/2017  8:49:46.409 Removing problematic state for DIGI-146A, reason N/A reasonData=0
+ 1/15/2017  8:49:46.409 problematic networks =  and potentially problematic networks = 
+ 1/15/2017  8:49:46.410 No Change in Background Scan Networks, Skip Re-Programming Background Scan
+
+ 1/15/2017  8:49:46.410 __WiFiManagerDidAssociateCallback: network DIGI-146A, requestedInformation <CFBasicHash 0x14cebf380 [0x1a0950150]>{type = mutable dict, count = 1,
+entries =>
+	2 : <CFString 0x10017e160 [0x1a0950150]>{contents = "reason"} = <CFString 0x100185180 [0x1a0950150]>{contents = "Associating"}
+}
+
+ 1/15/2017  8:49:46.429 WiFiDeviceManagerSetNetworks: Adding HS20 Account: 
+Domain name orange.ro
+3GPP MCC&MNC 226F10 
+Friendly Operator Name Orange
+ 1/15/2017  8:49:46.429 __WiFiDeviceManagerPrepareHS20Queries: created queries <CFArray 0x14cf9a920 [0x1a0950150]>{type = mutable-small, count = 3, values = (
+	0 : <CFNumber 0xb0000000000010c1 [0x1a0950150]>{value = +268, type = kCFNumberSInt16Type}
+	1 : <CFNumber 0xb000000000001081 [0x1a0950150]>{value = +264, type = kCFNumberSInt16Type}
+	2 : <CFNumber 0xb000000000000031 [0x1a0950150]>{value = +3, type = kCFNumberSInt16Type}
+)}
+ 1/15/2017  8:49:46.430 Auto association attempt canceled because auto join state is Associating.
+ 1/15/2017  8:49:46.431 No Change in Background Scan Networks, Skip Re-Programming Background Scan
+
+ 1/15/2017  8:49:46.434 MIS state is Disabled
+ 1/15/2017  8:49:46.434 MIS state queried by "nanoregistryd" is Disable
+ 1/15/2017  8:49:46.440 configd requesting removal of BGScan networks
+ 1/15/2017  8:49:46.442 No Change in Background Scan Networks, Skip Re-Programming Background Scan
+
+ 1/15/2017  8:49:46.442 __WiFiManagerSetEnableState: state TRUE, manager->enable.setting TRUE, manager->unlockedSinceBoot TRUE
+ 1/15/2017  8:49:46.442 Removing client for "configd"
+ 1/15/2017  8:49:46.444 __WiFiDeviceManagerAwdlAvailableCallback: AWDL availability changed to TRUE
+ 1/15/2017  8:49:46.447 Creating client for "configd"
+ 1/15/2017  8:49:46.473 WiFiDeviceManagerSetNetworks: Adding HS20 Account: 
+Domain name orange.ro
+3GPP MCC&MNC 226F10 
+Friendly Operator Name Orange
+ 1/15/2017  8:49:46.473 __WiFiDeviceManagerPrepareHS20Queries: created queries <CFArray 0x14e0071f0 [0x1a0950150]>{type = mutable-small, count = 3, values = (
+	0 : <CFNumber 0xb0000000000010c1 [0x1a0950150]>{value = +268, type = kCFNumberSInt16Type}
+	1 : <CFNumber 0xb000000000001081 [0x1a0950150]>{value = +264, type = kCFNumberSInt16Type}
+	2 : <CFNumber 0xb000000000000031 [0x1a0950150]>{value = +3, type = kCFNumberSInt16Type}
+)}
+ 1/15/2017  8:49:46.474 __WiFiDeviceManagerAutoAssociate: Already connected to DIGI-146A.
+ 1/15/2017  8:49:46.475 No Change in Background Scan Networks, Skip Re-Programming Background Scan
+
+ 1/15/2017  8:49:46.483 WoW is Disabled, 0 WoW Clients
+ 1/15/2017  8:49:46.490 MIS state is Disabled
+ 1/15/2017  8:49:46.490 MIS state queried by "locationd" is Disable
+ 1/15/2017  8:49:46.492 MIS state is Disabled
+ 1/15/2017  8:49:46.492 MIS state queried by "apsd" is Disable
+ 1/15/2017  8:49:46.493 MIS state is Disabled
+ 1/15/2017  8:49:46.493 MIS state queried by "identityservices" is Disable
+ 1/15/2017  8:49:46.494 MIS state is Disabled
+ 1/15/2017  8:49:46.494 MIS state queried by "imagent" is Disable
+ 1/15/2017  8:49:46.494 MIS state is Disabled
+ 1/15/2017  8:49:46.494 MIS state queried by "InCallService" is Disable
+ 1/15/2017  8:49:46.495 MIS state is Disabled
+ 1/15/2017  8:49:46.495 MIS state queried by "mediaserverd" is Disable
+ 1/15/2017  8:49:46.496 MIS state is Disabled
+ 1/15/2017  8:49:46.496 MIS state queried by "MobileMail" is Disable
+ 1/15/2017  8:49:46.501 MIS state is Disabled
+ 1/15/2017  8:49:46.501 MIS state queried by "SpringBoard" is Disable
+ 1/15/2017  8:49:46.502 MIS state is Disabled
+ 1/15/2017  8:49:46.502 MIS state queried by "UserEventAgent" is Disable
+ 1/15/2017  8:49:46.505 configd requesting removal of BGScan networks
+ 1/15/2017  8:49:46.519 No Change in Background Scan Networks, Skip Re-Programming Background Scan
+
+ 1/15/2017  8:49:46.519 __WiFiManagerSetEnableState: state TRUE, manager->enable.setting TRUE, manager->unlockedSinceBoot TRUE
+ 1/15/2017  8:49:46.519 Removing client for "configd"
+ 1/15/2017  8:49:46.521 MIS state is Disabled
+ 1/15/2017  8:49:46.521 MIS state queried by "nanoregistryd" is Disable
+ 1/15/2017  8:49:46.534 WoW is Disabled, 0 WoW Clients
+ 1/15/2017  8:49:46.565 WoW is Disabled, 0 WoW Clients
+ 1/15/2017  8:49:46.573 WoW is Disabled, 0 WoW Clients
+ 1/15/2017  8:49:50.859 __WiFiDeviceManagerAwdlAvailableCallback: AWDL availability changed to FALSE
+ 1/15/2017  8:49:50.859 __WiFiDeviceProcessDumpLogsEvent: Dump logs event received, dumped wifid log buffer to file

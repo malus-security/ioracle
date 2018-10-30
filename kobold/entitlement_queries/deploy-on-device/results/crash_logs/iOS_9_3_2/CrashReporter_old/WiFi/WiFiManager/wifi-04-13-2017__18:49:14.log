@@ -1,0 +1,265 @@
+ 4/13/2017 18:31:18.751 Power stats update: Type 0x6 UnassociatedSleepDur 0 AssociatedSleepDur 514423 TotalDur 516580 RoamDur 0
+ 4/13/2017 18:31:18.751 WiFiAWDManagerSubmitMetric: metric container could not be generated for metric id <0x90010>
+ 4/13/2017 18:31:18.751 __WiFiLQAMgrLogStats: Rssi: -67 Cca: 2 TxPer: 0.0% (0) BcnPer: 0.0% (0) RxFrms 0 TxRate: 0 RxRate: 0
+ 4/13/2017 18:31:18.752 __WiFiDeviceCopyLinkChangedSubReasonString: Apple80211ReturnToString failed 1
+ 4/13/2017 18:31:18.752 __WiFiDeviceProcessDriverAvailableEvent: driver availability true, reason Initializing(0xe0821803), subreason (null)(0x0)
+ 4/13/2017 18:31:18.752 __WiFiManagerDispatchDeviceAvailable: driver availability true
+
+ 4/13/2017 18:31:18.754 __WiFiDeviceManagerAutoAssociate: Already connected to eduroam.
+ 4/13/2017 18:31:18.754 WiFiAWDManagerSubmitMetric: metric container could not be generated for metric id <0x9000e>
+ 4/13/2017 18:31:18.756 __WiFiDeviceManagerAutoAssociate: Already connected to eduroam.
+ 4/13/2017 18:31:18.757 No Change in Background Scan Networks, Skip Re-Programming Background Scan
+
+ 4/13/2017 18:31:18.804 __WiFiDeviceManagerAwdlAvailableCallback: AWDL availability changed to TRUE
+ 4/13/2017 18:31:18.885 __WiFiManagerCellularTransmitCallback_block_invoke: Cellular Transmit Started = FALSE
+ 4/13/2017 18:31:18.891 apsd[298] is a wow client
+ 4/13/2017 18:31:18.891 WoW is Enabled, 1 WoW Clients
+ 4/13/2017 18:31:26.047 Received kIOMessageSystemWillSleep
+ 4/13/2017 18:31:26.048 System Sleep notification, Disabling auto-join
+ 4/13/2017 18:31:26.048 __WiFiManagerSetEnableState: state FALSE, manager->enable.setting TRUE, manager->unlockedSinceBoot TRUE
+ 4/13/2017 18:31:26.048 Disabling automatic association
+ 4/13/2017 18:31:26.085 apsd[298] is a wow client
+ 4/13/2017 18:31:26.085 WoW is Enabled, 1 WoW Clients
+ 4/13/2017 18:31:26.202 __WiFiDeviceCopyLinkChangedSubReasonString: Apple80211ReturnToString failed 1
+ 4/13/2017 18:31:26.202 __WiFiDeviceProcessDriverAvailableEvent: driver availability false, reason PowerOff(0xe0821804), subreason (null)(0x0)
+ 4/13/2017 18:31:26.202 __WiFiManagerDispatchDeviceAvailable: driver availability false
+
+ 4/13/2017 18:31:26.202 WiFiAWDManagerSubmitMetric: metric container could not be generated for metric id <0x9000e>
+ 4/13/2017 18:31:26.204 __WiFiDeviceManagerAwdlAvailableCallback: AWDL availability changed to FALSE
+ 4/13/2017 18:31:26.206 apsd[298] is a wow client
+ 4/13/2017 18:31:26.206 WoW is Enabled, 1 WoW Clients
+ 4/13/2017 18:34:55.156 Received kIOMessageSystemWillPowerOn
+ 4/13/2017 18:34:55.156 System wake reason: AOP.ExternalReq wlan
+ 4/13/2017 18:34:55.156 System Powered ON notification Re-enabling auto-join
+ 4/13/2017 18:34:55.156 __WiFiManagerSetEnableState: state TRUE, manager->enable.setting TRUE, manager->unlockedSinceBoot TRUE
+ 4/13/2017 18:34:55.156 Enabling automatic association
+ 4/13/2017 18:34:55.156 __WiFiDeviceManagerAutoAssociate: Already connected to eduroam.
+ 4/13/2017 18:34:55.156 WiFiLocaleManagerCheckLocale: location service or wifi is off, set locale to default
+ 4/13/2017 18:34:55.156 new locale:  , locale: 
+ 4/13/2017 18:34:55.165 __WiFiDeviceManagerAwdlAvailableCallback: AWDL availability changed to TRUE
+ 4/13/2017 18:34:55.165 Power stats update: Type 0x6 UnassociatedSleepDur 0 AssociatedSleepDur 208110 TotalDur 208925 RoamDur 0
+ 4/13/2017 18:34:55.165 WiFiAWDManagerSubmitMetric: metric container could not be generated for metric id <0x90010>
+ 4/13/2017 18:34:55.165 __WiFiLQAMgrLogStats: Rssi: -65 Cca: 2 TxPer: 0.0% (0) BcnPer: 0.0% (0) RxFrms 0 TxRate: 0 RxRate: 0
+ 4/13/2017 18:34:55.166 __WiFiDeviceCopyLinkChangedSubReasonString: Apple80211ReturnToString failed 1
+ 4/13/2017 18:34:55.166 __WiFiDeviceProcessDriverAvailableEvent: driver availability true, reason Initializing(0xe0821803), subreason (null)(0x0)
+ 4/13/2017 18:34:55.166 __WiFiManagerDispatchDeviceAvailable: driver availability true
+
+ 4/13/2017 18:34:55.167 __WiFiDeviceManagerAutoAssociate: Already connected to eduroam.
+ 4/13/2017 18:34:55.167 WiFiAWDManagerSubmitMetric: metric container could not be generated for metric id <0x9000e>
+ 4/13/2017 18:34:55.168 __WiFiDeviceManagerAutoAssociate: Already connected to eduroam.
+ 4/13/2017 18:34:55.168 No Change in Background Scan Networks, Skip Re-Programming Background Scan
+
+ 4/13/2017 18:34:55.239 __WiFiManagerCellularTransmitCallback_block_invoke: Cellular Transmit Started = FALSE
+ 4/13/2017 18:34:55.246 apsd[298] is a wow client
+ 4/13/2017 18:34:55.246 WoW is Enabled, 1 WoW Clients
+ 4/13/2017 18:34:56.240 Device display is ON
+ 4/13/2017 18:34:56.240 __WiFiManagerSetEnableState: state TRUE, manager->enable.setting TRUE, manager->unlockedSinceBoot TRUE
+ 4/13/2017 18:34:56.241 __WiFiDeviceManagerAutoAssociate: Already connected to eduroam.
+ 4/13/2017 18:34:56.411 Bluetooth Inquiry Started.
+ 4/13/2017 18:34:56.412 __WiFiDeviceManagerAutoAssociate: Already connected to eduroam.
+ 4/13/2017 18:34:57.803 ATJManager: setting ask-to-join interaction mode to Interactive
+ 4/13/2017 18:34:57.803 ATJManager: no entries to purge
+ 4/13/2017 18:34:57.803 User interaction ENABLED
+ 4/13/2017 18:34:57.803 Ignoring lock state manager->wakeMode 1
+
+ 4/13/2017 18:34:57.803 problematic networks =  and potentially problematic networks = 
+ 4/13/2017 18:34:57.803 Unblacklisting
+ 4/13/2017 18:34:57.803 No Change in Background Scan Networks, Skip Re-Programming Background Scan
+
+ 4/13/2017 18:34:57.803 __WiFiDeviceManagerAutoAssociate: Already connected to eduroam.
+ 4/13/2017 18:34:58.389 Async scan requested by "Preferences" for 1 iterations with maxage=2 priority normal on en0
+ 4/13/2017 18:34:58.389 Enqueuing command type: "Scan" pending commands: 0
+ 4/13/2017 18:34:58.398 Dequeuing command type: "Scan" pending commands: 0
+ 4/13/2017 18:34:58.398 Attempting Apple80211ScanAsync on en0
+ 4/13/2017 18:34:58.852 Completed Apple80211ScanAsync on en0 (0x0)
+ 4/13/2017 18:34:58.854 Async scan request completed for "Preferences" (0)
+ 4/13/2017 18:34:58.855 Async scan requested by "configd" for 0 iterations with maxage=-1 priority normal on en0
+ 4/13/2017 18:34:58.856 Enqueuing command type: "Scan" pending commands: 0
+ 4/13/2017 18:34:58.856 Dequeuing command type: "Scan" pending commands: 0
+ 4/13/2017 18:34:58.856 Attempting Apple80211ScanAsync on en0
+ 4/13/2017 18:34:58.856 Completed Apple80211ScanAsync on en0 (0xfffff0c4)
+ 4/13/2017 18:34:58.856 Async scan request completed for "configd" (-3900)
+ 4/13/2017 18:34:58.876 Async scan requested by "Preferences" for 1 iterations with maxage=2 priority normal on en0
+ 4/13/2017 18:34:58.876 Enqueuing command type: "Scan" pending commands: 0
+ 4/13/2017 18:34:58.877 Dequeuing command type: "Scan" pending commands: 0
+ 4/13/2017 18:34:58.877 Attempting Apple80211ScanAsync on en0
+ 4/13/2017 18:35:02.391 Completed Apple80211ScanAsync on en0 (0x0)
+ 4/13/2017 18:35:02.395 Async scan request completed for "Preferences" (0)
+ 4/13/2017 18:35:02.408 Async scan requested by "configd" for 0 iterations with maxage=-1 priority normal on en0
+ 4/13/2017 18:35:02.408 Enqueuing command type: "Scan" pending commands: 0
+ 4/13/2017 18:35:02.409 Dequeuing command type: "Scan" pending commands: 0
+ 4/13/2017 18:35:02.409 Attempting Apple80211ScanAsync on en0
+ 4/13/2017 18:35:02.410 ScanCache: Successfully Retrieved Scan Results from Scan Cache.
+ 4/13/2017 18:35:02.412 Completed Apple80211ScanAsync on en0 (0x0)
+ 4/13/2017 18:35:02.412 Async scan request completed for "configd" (0)
+ 4/13/2017 18:35:07.090 __WiFiManagerSetEnableState: state TRUE, manager->enable.setting TRUE, manager->unlockedSinceBoot TRUE
+ 4/13/2017 18:35:07.090 __WiFiDeviceManagerAutoAssociate: Already connected to eduroam.
+ 4/13/2017 18:35:07.090 Auto join ENABLED by "Preferences"
+ 4/13/2017 18:35:07.599 BG Application: Not Present, BG Daemon: Present. Daemons: mediaserverd apsd MobileMail 
+ 4/13/2017 18:35:07.602 __WiFiManagerSetEnableState: state TRUE, manager->enable.setting TRUE, manager->unlockedSinceBoot TRUE
+ 4/13/2017 18:35:07.602 __WiFiDeviceManagerAutoAssociate: Already connected to eduroam.
+ 4/13/2017 18:35:10.122 __WiFiLQAMgrLogStats: Rssi: -68 Cca: 3 TxPer: 0.0% (14) BcnPer: 33.3% (36) RxFrms 12 TxRate: 86667 RxRate: 86667
+ 4/13/2017 18:35:15.128 __WiFiLQAMgrLogStats: Rssi: -67 Cca: 3 TxPer: 0.0% (17) BcnPer: 0.0% (0) RxFrms 12 TxRate: 86667 RxRate: 86667
+ 4/13/2017 18:35:16.400 scanCache: Purging scan cache
+ 4/13/2017 18:35:20.134 __WiFiLQAMgrLogStats: Rssi: -67 Cca: 3 TxPer: 0.0% (60) BcnPer: 1.0% (96) RxFrms 40 TxRate: 86667 RxRate: 86667
+ 4/13/2017 18:35:20.195 Foreground Network Application entered.
+ 4/13/2017 18:35:20.195 BG Application: Not Present, BG Daemon: Present. Daemons: mediaserverd apsd MobileMail 
+ 4/13/2017 18:35:20.195 problematic networks =  and potentially problematic networks = 
+ 4/13/2017 18:35:20.195 Unblacklisting
+ 4/13/2017 18:35:20.196 No Change in Background Scan Networks, Skip Re-Programming Background Scan
+
+ 4/13/2017 18:35:20.196 __WiFiManagerSetEnableState: state TRUE, manager->enable.setting TRUE, manager->unlockedSinceBoot TRUE
+ 4/13/2017 18:35:20.196 __WiFiDeviceManagerAutoAssociate: Already connected to eduroam.
+ 4/13/2017 18:35:20.197 BG Application: Not Present, BG Daemon: Present. Daemons: mediaserverd apsd MobileMail 
+ 4/13/2017 18:35:25.140 __WiFiLQAMgrLogStats: Rssi: -67 Cca: 3 TxPer: 0.0% (428) BcnPer: 0.0% (0) RxFrms 412 TxRate: 86667 RxRate: 86667
+ 4/13/2017 18:35:30.153 __WiFiLQAMgrLogStats: Rssi: -67 Cca: 3 TxPer: 0.0% (1) BcnPer: 3.1% (96) RxFrms 1 TxRate: 86667 RxRate: 86667
+ 4/13/2017 18:35:35.154 __WiFiLQAMgrLogStats: Rssi: -67 Cca: 3 TxPer: 0.0% (0) BcnPer: 0.0% (0) RxFrms 0 TxRate: 0 RxRate: 0
+ 4/13/2017 18:35:35.315 WiFiLocaleManagerCheckLocale: location service or wifi is off, set locale to default
+ 4/13/2017 18:35:35.315 new locale:  , locale: 
+ 4/13/2017 18:35:40.155 __WiFiLQAMgrLogStats: Rssi: -67 Cca: 3 TxPer: 0.0% (0) BcnPer: 0.0% (0) RxFrms 0 TxRate: 0 RxRate: 0
+ 4/13/2017 18:35:45.156 __WiFiLQAMgrLogStats: Rssi: -67 Cca: 3 TxPer: 0.0% (0) BcnPer: 0.0% (0) RxFrms 0 TxRate: 0 RxRate: 0
+ 4/13/2017 18:35:50.158 __WiFiLQAMgrLogStats: Rssi: -67 Cca: 3 TxPer: 0.0% (0) BcnPer: 0.0% (0) RxFrms 0 TxRate: 0 RxRate: 0
+ 4/13/2017 18:35:55.164 __WiFiLQAMgrLogStats: Rssi: -67 Cca: 3 TxPer: 0.0% (5) BcnPer: 1.0% (192) RxFrms 3 TxRate: 86667 RxRate: 86667
+ 4/13/2017 18:35:57.813 Background Network Application entered
+ 4/13/2017 18:35:57.814 BG Application: Present, BG Daemon: Present. Daemons: mediaserverd apsd MobileMail 
+ 4/13/2017 18:35:57.818 Background Network Application entered
+ 4/13/2017 18:35:57.819 BG Application: Not Present, BG Daemon: Present. Daemons: mediaserverd apsd MobileMail 
+ 4/13/2017 18:36:00.170 __WiFiLQAMgrLogStats: Rssi: -67 Cca: 3 TxPer: 0.0% (0) BcnPer: 0.0% (0) RxFrms 0 TxRate: 0 RxRate: 0
+ 4/13/2017 18:36:05.171 __WiFiLQAMgrLogStats: Rssi: -67 Cca: 3 TxPer: 0.0% (0) BcnPer: 0.0% (0) RxFrms 0 TxRate: 0 RxRate: 0
+ 4/13/2017 18:36:10.172 __WiFiLQAMgrLogStats: Rssi: -67 Cca: 3 TxPer: 0.0% (0) BcnPer: 0.0% (0) RxFrms 0 TxRate: 0 RxRate: 0
+ 4/13/2017 18:36:15.174 __WiFiLQAMgrLogStats: Rssi: -67 Cca: 3 TxPer: 0.0% (0) BcnPer: 0.0% (0) RxFrms 0 TxRate: 0 RxRate: 0
+ 4/13/2017 18:36:20.175 __WiFiLQAMgrLogStats: Rssi: -67 Cca: 3 TxPer: 0.0% (0) BcnPer: 0.0% (0) RxFrms 0 TxRate: 0 RxRate: 0
+ 4/13/2017 18:36:25.176 __WiFiLQAMgrLogStats: Rssi: -67 Cca: 3 TxPer: 0.0% (0) BcnPer: 0.0% (0) RxFrms 0 TxRate: 0 RxRate: 0
+ 4/13/2017 18:36:30.184 __WiFiLQAMgrLogStats: Rssi: -67 Cca: 3 TxPer: 0.0% (1) BcnPer: 1.7% (288) RxFrms 1 TxRate: 86667 RxRate: 86667
+ 4/13/2017 18:36:32.686 Foreground Network Application exited.
+ 4/13/2017 18:36:32.686 BG Application: Not Present, BG Daemon: Present. Daemons: mediaserverd apsd MobileMail 
+ 4/13/2017 18:36:32.686 __WiFiManagerSetEnableState: state TRUE, manager->enable.setting TRUE, manager->unlockedSinceBoot TRUE
+ 4/13/2017 18:36:32.687 __WiFiDeviceManagerAutoAssociate: Already connected to eduroam.
+ 4/13/2017 18:36:32.690 BG Application: Not Present, BG Daemon: Present. Daemons: mediaserverd apsd MobileMail 
+ 4/13/2017 18:36:35.192 __WiFiLQAMgrLogStats: Rssi: -66 Cca: 3 TxPer: 0.0% (45) BcnPer: 0.0% (96) RxFrms 34 TxRate: 86667 RxRate: 86667
+ 4/13/2017 18:36:40.204 __WiFiLQAMgrLogStats: Rssi: -66 Cca: 3 TxPer: 0.0% (1) BcnPer: 0.0% (0) RxFrms 1 TxRate: 86667 RxRate: 86667
+ 4/13/2017 18:36:45.205 __WiFiLQAMgrLogStats: Rssi: -66 Cca: 3 TxPer: 0.0% (0) BcnPer: 0.0% (0) RxFrms 0 TxRate: 0 RxRate: 0
+ 4/13/2017 18:36:50.206 __WiFiLQAMgrLogStats: Rssi: -66 Cca: 3 TxPer: 0.0% (0) BcnPer: 0.0% (0) RxFrms 0 TxRate: 0 RxRate: 0
+ 4/13/2017 18:36:55.214 __WiFiLQAMgrLogStats: Rssi: -68 Cca: 3 TxPer: 0.0% (10) BcnPer: 1.0% (192) RxFrms 8 TxRate: 86667 RxRate: 86667
+ 4/13/2017 18:36:58.607 apsd[298] is a wow client
+ 4/13/2017 18:36:58.607 WoW is Enabled, 1 WoW Clients
+ 4/13/2017 18:37:00.222 __WiFiLQAMgrLogStats: Rssi: -68 Cca: 3 TxPer: 0.0% (1) BcnPer: 0.0% (0) RxFrms 1 TxRate: 86667 RxRate: 86667
+ 4/13/2017 18:37:02.831 Client MobileMail set type to normal application
+ 4/13/2017 18:37:02.831 __WiFiManagerSetEnableState: state TRUE, manager->enable.setting TRUE, manager->unlockedSinceBoot TRUE
+ 4/13/2017 18:37:02.831 BG Application: Not Present, BG Daemon: Present. Daemons: mediaserverd apsd 
+ 4/13/2017 18:37:05.230 __WiFiLQAMgrLogStats: Rssi: -67 Cca: 3 TxPer: 0.0% (2) BcnPer: 2.1% (96) RxFrms 1 TxRate: 86667 RxRate: 86667
+ 4/13/2017 18:37:10.239 __WiFiLQAMgrLogStats: Rssi: -67 Cca: 3 TxPer: 0.0% (1) BcnPer: 0.0% (0) RxFrms 1 TxRate: 86667 RxRate: 86667
+ 4/13/2017 18:37:15.242 __WiFiLQAMgrLogStats: Rssi: -67 Cca: 3 TxPer: 0.0% (0) BcnPer: 0.0% (0) RxFrms 0 TxRate: 0 RxRate: 0
+ 4/13/2017 18:37:20.248 __WiFiLQAMgrLogStats: Rssi: -67 Cca: 3 TxPer: 0.0% (1) BcnPer: 2.1% (96) RxFrms 1 TxRate: 86667 RxRate: 86667
+ 4/13/2017 18:37:25.256 __WiFiLQAMgrLogStats: Rssi: -67 Cca: 3 TxPer: 0.0% (1) BcnPer: 2.1% (96) RxFrms 1 TxRate: 86667 RxRate: 86667
+ 4/13/2017 18:37:30.257 __WiFiLQAMgrLogStats: Rssi: -67 Cca: 3 TxPer: 0.0% (0) BcnPer: 0.0% (0) RxFrms 0 TxRate: 0 RxRate: 0
+ 4/13/2017 18:37:34.246 ATJManager: setting ask-to-join interaction mode to NonInteractive
+ 4/13/2017 18:37:34.246 ATJManager: no entries to purge
+ 4/13/2017 18:37:34.246 User interaction DISABLED
+ 4/13/2017 18:37:34.246 Ignoring lock state manager->wakeMode 1
+
+ 4/13/2017 18:37:34.252 Device display is OFF
+ 4/13/2017 18:37:34.276 Bluetooth Inquiry Stopped.
+ 4/13/2017 18:37:34.277 __WiFiDeviceManagerAutoAssociate: Already connected to eduroam.
+ 4/13/2017 18:37:35.265 __WiFiLQAMgrLogStats: Rssi: -68 Cca: 3 TxPer: 0.0% (1) BcnPer: 3.1% (96) RxFrms 1 TxRate: 86667 RxRate: 86667
+ 4/13/2017 18:37:35.314 WiFiLocaleManagerCheckLocale: location service or wifi is off, set locale to default
+ 4/13/2017 18:37:35.314 new locale:  , locale: 
+ 4/13/2017 18:37:39.701 Received kIOMessageSystemWillSleep
+ 4/13/2017 18:37:39.701 System Sleep notification, Disabling auto-join
+ 4/13/2017 18:37:39.701 __WiFiManagerSetEnableState: state FALSE, manager->enable.setting TRUE, manager->unlockedSinceBoot TRUE
+ 4/13/2017 18:37:39.701 Disabling automatic association
+ 4/13/2017 18:37:39.740 apsd[298] is a wow client
+ 4/13/2017 18:37:39.740 WoW is Enabled, 1 WoW Clients
+ 4/13/2017 18:37:39.850 __WiFiDeviceCopyLinkChangedSubReasonString: Apple80211ReturnToString failed 1
+ 4/13/2017 18:37:39.850 __WiFiDeviceProcessDriverAvailableEvent: driver availability false, reason PowerOff(0xe0821804), subreason (null)(0x0)
+ 4/13/2017 18:37:39.850 __WiFiManagerDispatchDeviceAvailable: driver availability false
+
+ 4/13/2017 18:37:39.850 WiFiAWDManagerSubmitMetric: metric container could not be generated for metric id <0x9000e>
+ 4/13/2017 18:37:39.853 __WiFiDeviceManagerAwdlAvailableCallback: AWDL availability changed to FALSE
+ 4/13/2017 18:37:39.856 apsd[298] is a wow client
+ 4/13/2017 18:37:39.856 WoW is Enabled, 1 WoW Clients
+ 4/13/2017 18:46:10.790 Received kIOMessageSystemWillPowerOn
+ 4/13/2017 18:46:10.790 System wake reason: AOP.ExternalReq rtc
+ 4/13/2017 18:46:10.790 System Powered ON notification Re-enabling auto-join
+ 4/13/2017 18:46:10.790 __WiFiManagerSetEnableState: state TRUE, manager->enable.setting TRUE, manager->unlockedSinceBoot TRUE
+ 4/13/2017 18:46:10.790 Enabling automatic association
+ 4/13/2017 18:46:10.790 __WiFiDeviceManagerAutoAssociate: Already connected to eduroam.
+ 4/13/2017 18:46:10.791 WiFiLocaleManagerCheckLocale: location service or wifi is off, set locale to default
+ 4/13/2017 18:46:10.791 new locale:  , locale: 
+ 4/13/2017 18:46:10.791 Power stats update: Type 0x6 UnassociatedSleepDur 0 AssociatedSleepDur 508843 TotalDur 510936 RoamDur 0
+ 4/13/2017 18:46:10.791 WiFiAWDManagerSubmitMetric: metric container could not be generated for metric id <0x90010>
+ 4/13/2017 18:46:10.794 __WiFiLQAMgrLogStats: Rssi: -63 Cca: 3 TxPer: 0.0% (0) BcnPer: 0.0% (0) RxFrms 0 TxRate: 0 RxRate: 0
+ 4/13/2017 18:46:10.796 __WiFiDeviceCopyLinkChangedSubReasonString: Apple80211ReturnToString failed 1
+ 4/13/2017 18:46:10.796 __WiFiDeviceProcessDriverAvailableEvent: driver availability true, reason Initializing(0xe0821803), subreason (null)(0x0)
+ 4/13/2017 18:46:10.796 __WiFiManagerDispatchDeviceAvailable: driver availability true
+
+ 4/13/2017 18:46:10.805 __WiFiDeviceManagerAutoAssociate: Already connected to eduroam.
+ 4/13/2017 18:46:10.806 WiFiAWDManagerSubmitMetric: metric container could not be generated for metric id <0x9000e>
+ 4/13/2017 18:46:10.807 __WiFiDeviceManagerAutoAssociate: Already connected to eduroam.
+ 4/13/2017 18:46:10.810 No Change in Background Scan Networks, Skip Re-Programming Background Scan
+
+ 4/13/2017 18:46:10.814 __WiFiDeviceManagerAwdlAvailableCallback: AWDL availability changed to TRUE
+ 4/13/2017 18:46:10.883 __WiFiManagerCellularTransmitCallback_block_invoke: Cellular Transmit Started = FALSE
+ 4/13/2017 18:46:10.920 apsd[298] is a wow client
+ 4/13/2017 18:46:10.920 WoW is Enabled, 1 WoW Clients
+ 4/13/2017 18:46:17.961 Received kIOMessageSystemWillSleep
+ 4/13/2017 18:46:17.961 System Sleep notification, Disabling auto-join
+ 4/13/2017 18:46:17.961 __WiFiManagerSetEnableState: state FALSE, manager->enable.setting TRUE, manager->unlockedSinceBoot TRUE
+ 4/13/2017 18:46:17.961 Disabling automatic association
+ 4/13/2017 18:46:17.997 apsd[298] is a wow client
+ 4/13/2017 18:46:17.997 WoW is Enabled, 1 WoW Clients
+ 4/13/2017 18:46:18.097 __WiFiDeviceCopyLinkChangedSubReasonString: Apple80211ReturnToString failed 1
+ 4/13/2017 18:46:18.097 __WiFiDeviceProcessDriverAvailableEvent: driver availability false, reason PowerOff(0xe0821804), subreason (null)(0x0)
+ 4/13/2017 18:46:18.097 __WiFiManagerDispatchDeviceAvailable: driver availability false
+
+ 4/13/2017 18:46:18.098 WiFiAWDManagerSubmitMetric: metric container could not be generated for metric id <0x9000e>
+ 4/13/2017 18:46:18.103 __WiFiDeviceManagerAwdlAvailableCallback: AWDL availability changed to FALSE
+ 4/13/2017 18:46:18.111 apsd[298] is a wow client
+ 4/13/2017 18:46:18.111 WoW is Enabled, 1 WoW Clients
+ 4/13/2017 18:47:08.152 Received kIOMessageSystemWillPowerOn
+ 4/13/2017 18:47:08.152 System wake reason: AOP.ExternalReq wlan
+ 4/13/2017 18:47:08.152 System Powered ON notification Re-enabling auto-join
+ 4/13/2017 18:47:08.152 __WiFiManagerSetEnableState: state TRUE, manager->enable.setting TRUE, manager->unlockedSinceBoot TRUE
+ 4/13/2017 18:47:08.153 Enabling automatic association
+ 4/13/2017 18:47:08.153 __WiFiDeviceManagerAutoAssociate: Already connected to eduroam.
+ 4/13/2017 18:47:08.154 WiFiLocaleManagerCheckLocale: location service or wifi is off, set locale to default
+ 4/13/2017 18:47:08.154 new locale:  , locale: 
+ 4/13/2017 18:47:08.164 __WiFiDeviceManagerAwdlAvailableCallback: AWDL availability changed to TRUE
+ 4/13/2017 18:47:08.164 Power stats update: Type 0x6 UnassociatedSleepDur 0 AssociatedSleepDur 49706 TotalDur 50014 RoamDur 0
+ 4/13/2017 18:47:08.164 WiFiAWDManagerSubmitMetric: metric container could not be generated for metric id <0x90010>
+ 4/13/2017 18:47:08.165 __WiFiLQAMgrLogStats: Rssi: -63 Cca: 3 TxPer: 0.0% (0) BcnPer: 0.0% (0) RxFrms 0 TxRate: 0 RxRate: 0
+ 4/13/2017 18:47:08.168 __WiFiDeviceCopyLinkChangedSubReasonString: Apple80211ReturnToString failed 1
+ 4/13/2017 18:47:08.168 __WiFiDeviceProcessDriverAvailableEvent: driver availability true, reason Initializing(0xe0821803), subreason (null)(0x0)
+ 4/13/2017 18:47:08.168 __WiFiManagerDispatchDeviceAvailable: driver availability true
+
+ 4/13/2017 18:47:08.170 __WiFiDeviceManagerAutoAssociate: Already connected to eduroam.
+ 4/13/2017 18:47:08.170 WiFiAWDManagerSubmitMetric: metric container could not be generated for metric id <0x9000e>
+ 4/13/2017 18:47:08.176 __WiFiDeviceManagerAutoAssociate: Already connected to eduroam.
+ 4/13/2017 18:47:08.177 No Change in Background Scan Networks, Skip Re-Programming Background Scan
+
+ 4/13/2017 18:47:08.234 __WiFiManagerCellularTransmitCallback_block_invoke: Cellular Transmit Started = FALSE
+ 4/13/2017 18:47:08.266 apsd[298] is a wow client
+ 4/13/2017 18:47:08.266 WoW is Enabled, 1 WoW Clients
+ 4/13/2017 18:47:13.300 Received kIOMessageSystemWillSleep
+ 4/13/2017 18:47:13.300 System Sleep notification, Disabling auto-join
+ 4/13/2017 18:47:13.301 __WiFiManagerSetEnableState: state FALSE, manager->enable.setting TRUE, manager->unlockedSinceBoot TRUE
+ 4/13/2017 18:47:13.301 Disabling automatic association
+ 4/13/2017 18:47:13.336 apsd[298] is a wow client
+ 4/13/2017 18:47:13.336 WoW is Enabled, 1 WoW Clients
+ 4/13/2017 18:47:13.446 __WiFiDeviceCopyLinkChangedSubReasonString: Apple80211ReturnToString failed 1
+ 4/13/2017 18:47:13.446 __WiFiDeviceProcessDriverAvailableEvent: driver availability false, reason PowerOff(0xe0821804), subreason (null)(0x0)
+ 4/13/2017 18:47:13.446 __WiFiManagerDispatchDeviceAvailable: driver availability false
+
+ 4/13/2017 18:47:13.448 WiFiAWDManagerSubmitMetric: metric container could not be generated for metric id <0x9000e>
+ 4/13/2017 18:47:13.452 __WiFiDeviceManagerAwdlAvailableCallback: AWDL availability changed to FALSE
+ 4/13/2017 18:47:13.463 apsd[298] is a wow client
+ 4/13/2017 18:47:13.463 WoW is Enabled, 1 WoW Clients
+ 4/13/2017 18:49:14.698 Received kIOMessageSystemWillPowerOn
+ 4/13/2017 18:49:14.767 System wake reason: AOP.ExternalReq wlan
+ 4/13/2017 18:49:14.767 System Powered ON notification Re-enabling auto-join
+ 4/13/2017 18:49:14.767 __WiFiManagerSetEnableState: state TRUE, manager->enable.setting TRUE, manager->unlockedSinceBoot TRUE
+ 4/13/2017 18:49:14.767 Enabling automatic association
+ 4/13/2017 18:49:14.768 __WiFiDeviceManagerAutoAssociate: Already connected to eduroam.
+ 4/13/2017 18:49:14.768 WiFiLocaleManagerCheckLocale: location service or wifi is off, set locale to default
+ 4/13/2017 18:49:14.768 new locale:  , locale: 
+ 4/13/2017 18:49:14.769 __WiFiDeviceProcessDumpLogsEvent: Dump logs event received, dumped wifid log buffer to file

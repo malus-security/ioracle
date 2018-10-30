@@ -1,0 +1,13 @@
+Oct 24 09:38:42 securityd[254] <Notice> [views{} ]: views with_label_and_number Action Code Raw is 3
+Oct 24 09:38:42 securityd[254] <Notice> [securityd{} ]: securityd SecErrorGetOSStatus unknown error domain: com.apple.security.sos.error for error: Error Domain=com.apple.security.sos.error Code=1032 "No Peer for Account" UserInfo={NSDescription=No Peer for Account}
+Oct 24 09:38:42 securityd[254] <Notice> [securityd{} ]: securityd SecErrorGetOSStatus unknown error domain: com.apple.security.sos.error for error: Error Domain=com.apple.security.sos.error Code=1032 "No Peer for Account" UserInfo={NSDescription=No Peer for Account}
+Oct 24 09:38:42 securityd[254] <Error> [SecLogging{} ]:  securityd_xpc_dictionary_handler Preferences[9412] View Error Domain=com.apple.security.sos.error Code=1032 "No Peer for Account" UserInfo={NSDescription=No Peer for Account}
+Oct 24 09:40:10 securityd[254] <Error> [SecLogging{} ]:  securityd_xpc_dictionary_handler cloudd[1280] copy_matching Error Domain=NSOSStatusErrorDomain Code=-50 "query missing class name" UserInfo={NSDescription=query missing class name}
+Oct 24 09:40:10 securityd[254] <Error> [SecLogging{} ]:  securityd_xpc_dictionary_handler cloudd[1280] copy_matching Error Domain=NSOSStatusErrorDomain Code=-50 "query missing class name" UserInfo={NSDescription=query missing class name}
+Oct 24 10:07:18 securityd[254] <Notice> [views{} ]: views with_label_and_number Action Code Raw is 3
+Oct 24 10:07:18 securityd[254] <Notice> [securityd{} ]: securityd SecErrorGetOSStatus unknown error domain: com.apple.security.sos.error for error: Error Domain=com.apple.security.sos.error Code=1032 "No Peer for Account" UserInfo={NSDescription=No Peer for Account}
+Oct 24 10:07:18 securityd[254] <Notice> [securityd{} ]: securityd SecErrorGetOSStatus unknown error domain: com.apple.security.sos.error for error: Error Domain=com.apple.security.sos.error Code=1032 "No Peer for Account" UserInfo={NSDescription=No Peer for Account}
+Oct 24 10:07:18 securityd[254] <Error> [SecLogging{} ]:  securityd_xpc_dictionary_handler Preferences[9412] View Error Domain=com.apple.security.sos.error Code=1032 "No Peer for Account" UserInfo={NSDescription=No Peer for Account}
+Oct 24 10:07:20 securityd[254] <Error> [user{} ]: CFReadStream posix: Connection refused
+Oct 24 10:07:20 securityd[254] <Error> [user{} ]: CFReadStream posix: Connection refused
+Oct 24 10:07:28 securityd[254] <Error> [user{} ]: CFReadStream posix: Connection refused

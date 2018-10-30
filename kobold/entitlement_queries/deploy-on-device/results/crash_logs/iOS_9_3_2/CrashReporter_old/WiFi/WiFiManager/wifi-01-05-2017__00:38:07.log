@@ -1,0 +1,44 @@
+ 1/05/2017  0:32:33.196 Power stats update: Type 0x5 UnassociatedSleepDur 0 AssociatedSleepDur 33947 TotalDur 57147 RoamDur 0
+ 1/05/2017  0:32:33.196 WiFiAWDManagerSubmitMetric: metric container could not be generated for metric id <0x90010>
+ 1/05/2017  0:32:33.196 __WiFiLQAMgrLogStats: Rssi: -65 Cca: 28 TxPer: 0.0% (0) BcnPer: 0.0% (0) RxFrms 0 TxRate: 0 RxRate: 0
+ 1/05/2017  0:32:33.198 __WiFiDeviceCopyLinkChangedSubReasonString: Apple80211ReturnToString failed 1
+ 1/05/2017  0:32:33.198 __WiFiDeviceProcessDriverAvailableEvent: driver availability true, reason Initializing(0xe0821803), subreason (null)(0x0)
+ 1/05/2017  0:32:33.198 __WiFiManagerDispatchDeviceAvailable: driver availability true
+
+ 1/05/2017  0:32:33.200 __WiFiDeviceManagerAutoAssociate: Already connected to DIGI-146A.
+ 1/05/2017  0:32:33.200 WiFiAWDManagerSubmitMetric: metric container could not be generated for metric id <0x9000e>
+ 1/05/2017  0:32:33.207 __WiFiDeviceManagerAutoAssociate: Already connected to DIGI-146A.
+ 1/05/2017  0:32:33.208 No Change in Background Scan Networks, Skip Re-Programming Background Scan
+
+ 1/05/2017  0:32:33.395 __WiFiManagerCellularTransmitCallback_block_invoke: Cellular Transmit Started = TRUE
+ 1/05/2017  0:32:33.595 WoW is Disabled, 0 WoW Clients
+ 1/05/2017  0:32:38.026 __WiFiManagerCellularTransmitCallback_block_invoke: Cellular Transmit Started = FALSE
+ 1/05/2017  0:32:48.154 
+Too frequent(0.723380 secs) rssi event from driver, ignoring
+
+ 1/05/2017  0:32:52.155 __WiFiManagerCellularTransmitCallback_block_invoke: Cellular Transmit Started = TRUE
+ 1/05/2017  0:32:53.168 __WiFiLQAMgrLogStats: Rssi: -75 Cca: 14 TxPer: 0.0% (1) BcnPer: 29.2% (24) RxFrms 1 TxRate: 39000 RxRate: 52000
+ 1/05/2017  0:32:57.545 __WiFiManagerCellularTransmitCallback_block_invoke: Cellular Transmit Started = FALSE
+ 1/05/2017  0:32:58.172 __WiFiLQAMgrLogStats: Rssi: -76 Cca: 35 TxPer: 0.0% (0) BcnPer: 6.1% (49) RxFrms 0 TxRate: 39000 RxRate: 52000
+ 1/05/2017  0:33:03.177 __WiFiLQAMgrLogStats: Rssi: -78 Cca: 21 TxPer: 0.0% (7) BcnPer: 6.0% (50) RxFrms 5 TxRate: 39000 RxRate: 52000
+ 1/05/2017  0:33:06.217 Received kIOMessageSystemWillSleep
+ 1/05/2017  0:33:06.217 System Sleep notification, Disabling auto-join
+ 1/05/2017  0:33:06.217 __WiFiManagerSetEnableState: state FALSE, manager->enable.setting TRUE, manager->unlockedSinceBoot TRUE
+ 1/05/2017  0:33:06.217 Disabling automatic association
+ 1/05/2017  0:33:06.260 WoW is Disabled, 0 WoW Clients
+ 1/05/2017  0:33:06.370 __WiFiDeviceManagerAwdlAvailableCallback: AWDL availability changed to FALSE
+ 1/05/2017  0:33:06.370 __WiFiDeviceCopyLinkChangedSubReasonString: Apple80211ReturnToString failed 1
+ 1/05/2017  0:33:06.370 __WiFiDeviceProcessDriverAvailableEvent: driver availability false, reason PowerOff(0xe0821804), subreason (null)(0x0)
+ 1/05/2017  0:33:06.370 __WiFiManagerDispatchDeviceAvailable: driver availability false
+
+ 1/05/2017  0:33:06.372 WiFiAWDManagerSubmitMetric: metric container could not be generated for metric id <0x9000e>
+ 1/05/2017  0:33:06.375 WoW is Disabled, 0 WoW Clients
+ 1/05/2017  0:38:07.475 Received kIOMessageSystemWillPowerOn
+ 1/05/2017  0:38:07.475 System wake reason: AOP.ExternalReq wlan
+ 1/05/2017  0:38:07.475 System Powered ON notification Re-enabling auto-join
+ 1/05/2017  0:38:07.475 __WiFiManagerSetEnableState: state TRUE, manager->enable.setting TRUE, manager->unlockedSinceBoot TRUE
+ 1/05/2017  0:38:07.475 Enabling automatic association
+ 1/05/2017  0:38:07.475 __WiFiDeviceManagerAutoAssociate: Already connected to DIGI-146A.
+ 1/05/2017  0:38:07.476 WiFiLocaleManagerCheckLocale: location service or wifi is off, set locale to default
+ 1/05/2017  0:38:07.476 new locale:  , locale: 
+ 1/05/2017  0:38:07.495 __WiFiDeviceProcessDumpLogsEvent: Dump logs event received, dumped wifid log buffer to file

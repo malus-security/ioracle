@@ -1,0 +1,8 @@
+ 1/12/2017 23:58:53.736 WiFiLocaleManagerCheckLocale: location service or wifi is off, set locale to default
+ 1/12/2017 23:58:53.736 new locale:  , locale: 
+ 1/13/2017  0:00:53.735 WiFiLocaleManagerCheckLocale: location service or wifi is off, set locale to default
+ 1/13/2017  0:00:53.735 new locale:  , locale: 
+ 1/13/2017  0:01:14.984 Client apsd set type to normal application
+ 1/13/2017  0:01:14.984 __WiFiManagerSetEnableState: state TRUE, manager->enable.setting TRUE, manager->unlockedSinceBoot TRUE
+ 1/13/2017  0:01:14.984 BG Application: Not Present, BG Daemon: Present. Daemons: mediaserverd 
+ 1/13/2017  0:02:22.994 __WiFiDeviceProcessDumpLogsEvent: Dump logs event received, dumped wifid log buffer to file

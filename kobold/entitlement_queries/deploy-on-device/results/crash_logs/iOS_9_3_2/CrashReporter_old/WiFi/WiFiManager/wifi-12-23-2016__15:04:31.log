@@ -1,0 +1,347 @@
+12/23/2016 14:59:31.810 Async scan requested by "locationd" for 1 iterations with maxage=0 priority normal on en0
+12/23/2016 14:59:31.810 Enqueuing command type: "Scan" pending commands: 0
+12/23/2016 14:59:31.810 Dequeuing command type: "Scan" pending commands: 0
+12/23/2016 14:59:31.810 Attempting Apple80211ScanAsync on en0
+12/23/2016 14:59:31.968 Completed Apple80211ScanAsync on en0 (0x0)
+12/23/2016 14:59:31.969 Async scan request completed for "locationd" (0)
+12/23/2016 14:59:31.970 Async scan requested by "locationd" for 1 iterations with maxage=0 priority normal on en0
+12/23/2016 14:59:31.970 Enqueuing command type: "Scan" pending commands: 0
+12/23/2016 14:59:31.970 Dequeuing command type: "Scan" pending commands: 0
+12/23/2016 14:59:31.970 Attempting Apple80211ScanAsync on en0
+12/23/2016 14:59:32.357 Completed Apple80211ScanAsync on en0 (0x0)
+12/23/2016 14:59:32.359 Async scan request completed for "locationd" (0)
+12/23/2016 14:59:32.364 Async scan requested by "locationd" for 1 iterations with maxage=0 priority low on en0
+12/23/2016 14:59:32.364 Enqueuing command type: "Scan" pending commands: 0
+12/23/2016 14:59:32.364 Dequeuing command type: "Scan" pending commands: 0
+12/23/2016 14:59:32.364 Attempting Apple80211ScanAsync on en0
+12/23/2016 14:59:32.427 BG Application: Not Present, BG Daemon: Present. Daemons: mediaserverd 
+12/23/2016 14:59:32.427 __WiFiManagerSetEnableState: state TRUE, manager->enable.setting TRUE, manager->unlockedSinceBoot TRUE
+12/23/2016 14:59:32.427 Auto association attempt canceled because MIS is enabled. MIS client count: wifi=3 bt=0
+12/23/2016 14:59:32.750 Completed Apple80211ScanAsync on en0 (0x0)
+12/23/2016 14:59:32.753 Async scan request completed for "locationd" (0)
+12/23/2016 14:59:33.872 Foreground Network Application entered.
+12/23/2016 14:59:33.872 BG Application: Not Present, BG Daemon: Present. Daemons: mediaserverd 
+12/23/2016 14:59:33.872 problematic networks =  and potentially problematic networks = 
+12/23/2016 14:59:33.872 Unblacklisting
+12/23/2016 14:59:33.872 No Change in Background Scan Networks, Skip Re-Programming Background Scan
+
+12/23/2016 14:59:33.872 __WiFiManagerSetEnableState: state TRUE, manager->enable.setting TRUE, manager->unlockedSinceBoot TRUE
+12/23/2016 14:59:33.872 Auto association attempt canceled because MIS is enabled. MIS client count: wifi=3 bt=0
+12/23/2016 14:59:33.872 BG Application: Not Present, BG Daemon: Present. Daemons: mediaserverd 
+12/23/2016 14:59:41.975 Client dataaccessd set type to background application
+12/23/2016 14:59:41.975 __WiFiManagerSetEnableState: state TRUE, manager->enable.setting TRUE, manager->unlockedSinceBoot TRUE
+12/23/2016 14:59:41.975 BG Application: Not Present, BG Daemon: Present. Daemons: mediaserverd dataaccessd 
+12/23/2016 14:59:41.975 Auto association attempt canceled because MIS is enabled. MIS client count: wifi=3 bt=0
+12/23/2016 14:59:42.391 Client dataaccessd set type to normal application
+12/23/2016 14:59:42.391 __WiFiManagerSetEnableState: state TRUE, manager->enable.setting TRUE, manager->unlockedSinceBoot TRUE
+12/23/2016 14:59:42.391 BG Application: Not Present, BG Daemon: Present. Daemons: mediaserverd 
+12/23/2016 14:59:42.398 Client dataaccessd set type to background application
+12/23/2016 14:59:42.398 __WiFiManagerSetEnableState: state TRUE, manager->enable.setting TRUE, manager->unlockedSinceBoot TRUE
+12/23/2016 14:59:42.398 BG Application: Not Present, BG Daemon: Present. Daemons: mediaserverd dataaccessd 
+12/23/2016 14:59:42.398 Auto association attempt canceled because MIS is enabled. MIS client count: wifi=3 bt=0
+12/23/2016 14:59:42.848 Client dataaccessd set type to background application
+12/23/2016 14:59:43.813 Client dataaccessd set type to background application
+12/23/2016 14:59:43.920 Client dataaccessd set type to normal application
+12/23/2016 14:59:43.920 __WiFiManagerSetEnableState: state TRUE, manager->enable.setting TRUE, manager->unlockedSinceBoot TRUE
+12/23/2016 14:59:43.921 BG Application: Not Present, BG Daemon: Present. Daemons: mediaserverd 
+12/23/2016 14:59:44.137 Client dataaccessd set type to background application
+12/23/2016 14:59:44.137 __WiFiManagerSetEnableState: state TRUE, manager->enable.setting TRUE, manager->unlockedSinceBoot TRUE
+12/23/2016 14:59:44.137 BG Application: Not Present, BG Daemon: Present. Daemons: mediaserverd dataaccessd 
+12/23/2016 14:59:44.137 Auto association attempt canceled because MIS is enabled. MIS client count: wifi=3 bt=0
+12/23/2016 14:59:44.913 Client dataaccessd set type to normal application
+12/23/2016 14:59:44.913 __WiFiManagerSetEnableState: state TRUE, manager->enable.setting TRUE, manager->unlockedSinceBoot TRUE
+12/23/2016 14:59:44.913 BG Application: Not Present, BG Daemon: Present. Daemons: mediaserverd 
+12/23/2016 14:59:45.228 Client dataaccessd set type to normal application
+12/23/2016 14:59:45.545 Client dataaccessd set type to normal application
+12/23/2016 14:59:46.756 scanCache: Purging scan cache
+12/23/2016 15:00:30.446 Background Network Application entered
+12/23/2016 15:00:30.447 BG Application: Present, BG Daemon: Present. Daemons: mediaserverd 
+12/23/2016 15:00:30.450 Background Network Application entered
+12/23/2016 15:00:30.451 BG Application: Not Present, BG Daemon: Present. Daemons: mediaserverd 
+12/23/2016 15:00:37.154 Device display is OFF
+12/23/2016 15:00:37.158 ATJManager: setting ask-to-join interaction mode to NonInteractive
+12/23/2016 15:00:37.158 ATJManager: no entries to purge
+12/23/2016 15:00:37.159 User interaction DISABLED
+12/23/2016 15:00:37.159 Ignoring lock state manager->wakeMode 1
+
+12/23/2016 15:00:37.653 Foreground Network Application exited.
+12/23/2016 15:00:37.653 BG Application: Not Present, BG Daemon: Present. Daemons: mediaserverd 
+12/23/2016 15:00:37.653 LPAS is Enabled
+12/23/2016 15:00:37.653 LPAS Enabled, Skip starting Disassocation timer
+12/23/2016 15:00:38.140 Client dataaccessd set type to background application
+12/23/2016 15:00:38.140 __WiFiManagerSetEnableState: state TRUE, manager->enable.setting TRUE, manager->unlockedSinceBoot TRUE
+12/23/2016 15:00:38.141 BG Application: Not Present, BG Daemon: Present. Daemons: mediaserverd dataaccessd 
+12/23/2016 15:00:38.141 Auto association attempt canceled because MIS is enabled. MIS client count: wifi=3 bt=0
+12/23/2016 15:00:38.776 Client dataaccessd set type to normal application
+12/23/2016 15:00:38.777 __WiFiManagerSetEnableState: state TRUE, manager->enable.setting TRUE, manager->unlockedSinceBoot TRUE
+12/23/2016 15:00:38.777 BG Application: Not Present, BG Daemon: Present. Daemons: mediaserverd 
+12/23/2016 15:00:38.789 Client dataaccessd set type to background application
+12/23/2016 15:00:38.789 __WiFiManagerSetEnableState: state TRUE, manager->enable.setting TRUE, manager->unlockedSinceBoot TRUE
+12/23/2016 15:00:38.790 BG Application: Not Present, BG Daemon: Present. Daemons: mediaserverd dataaccessd 
+12/23/2016 15:00:38.790 Auto association attempt canceled because MIS is enabled. MIS client count: wifi=3 bt=0
+12/23/2016 15:00:39.965 Client dataaccessd set type to background application
+12/23/2016 15:00:40.808 Client dataaccessd set type to background application
+12/23/2016 15:00:41.001 Client dataaccessd set type to normal application
+12/23/2016 15:00:41.001 __WiFiManagerSetEnableState: state TRUE, manager->enable.setting TRUE, manager->unlockedSinceBoot TRUE
+12/23/2016 15:00:41.001 BG Application: Not Present, BG Daemon: Present. Daemons: mediaserverd 
+12/23/2016 15:00:41.874 Client dataaccessd set type to normal application
+12/23/2016 15:00:44.668 WiFiLocaleManagerCheckLocale: trying to determine locale...
+12/23/2016 15:00:44.668 WiFiManagerCoreLocationGetCachedLocation: getting cached location...
+12/23/2016 15:00:44.680 __WiFiLocaleManagerGetLocaleFromMcc: finding iso country code for mcc 232 ....
+12/23/2016 15:00:44.680 WiFiLocationServiceManagerIsLocationValid: cachedLocationTimeout 120.000000 location age 119.942169secs, lifeSpan -1.000000 accuracy 5.000000(highAccReq 0), isValid 1
+12/23/2016 15:00:44.680 WiFiLocationServiceManagerStartLowAccuracyMonitoring: Cached low accuracy location is valid
+12/23/2016 15:00:44.680 WiFiLocationServiceManagerIsLocationValid: cachedLocationTimeout 120.000000 location age 119.942311secs, lifeSpan -1.000000 accuracy 5.000000(highAccReq 1), isValid 1
+12/23/2016 15:00:44.681 WiFiLocationServiceManagerIsLocationValid: cachedLocationTimeout 120.000000 location age 119.942363secs, lifeSpan -1.000000 accuracy 5.000000(highAccReq 0), isValid 1
+12/23/2016 15:00:44.681 __WiFiLocationServiceManagerProcessLocationAvailableEvent: isValidHighAccuracyLocation 1,  isValidLowAccuracyLocation 1
+12/23/2016 15:00:44.681 __WiFiLocationServiceManagerProcessLocationAvailableEvent: give low accuracy callback
+12/23/2016 15:00:44.681 __WiFiLocaleManagerGetLocaleFromLocation: <+47.97978632,+16.84751633> +/- 5.00m (speed 1.56 mps / course 298.48) @ 12/23/16, 2:58:44 PM Central European Standard Time
+12/23/2016 15:00:44.682 locale from bounding box 
+12/23/2016 15:00:44.682 new locale:  , locale: 
+12/23/2016 15:00:44.682 Stopping Low Accuracy Location Monitoring
+12/23/2016 15:00:44.682 CLMonitoring is already stopped
+12/23/2016 15:00:44.682 Stopping Low Accuracy Location Monitoring
+12/23/2016 15:00:44.682 CLMonitoring is already stopped
+12/23/2016 15:00:44.682 __WiFiLocationServiceManagerEventCallback, got cb dict {
+    eventType = 0;
+    location = "<+47.97847752,+16.84581178> +/- 5.00m (speed 5.14 mps / course 118.12) @ 12/23/16, 2:59:56 PM Central European Standard Time";
+}
+12/23/2016 15:00:44.682 WiFiLocationServiceManagerIsLocationValid: cachedLocationTimeout 120.000000 location age 48.682987secs, lifeSpan -1.000000 accuracy 5.000000(highAccReq 1), isValid 1
+12/23/2016 15:00:44.682 WiFiLocationServiceManagerIsLocationValid: cachedLocationTimeout 120.000000 location age 48.683040secs, lifeSpan -1.000000 accuracy 5.000000(highAccReq 0), isValid 1
+12/23/2016 15:00:44.683 __WiFiLocationServiceManagerProcessLocationAvailableEvent: isValidHighAccuracyLocation 1,  isValidLowAccuracyLocation 1
+12/23/2016 15:00:46.589 Client dataaccessd set type to background application
+12/23/2016 15:00:46.589 __WiFiManagerSetEnableState: state TRUE, manager->enable.setting TRUE, manager->unlockedSinceBoot TRUE
+12/23/2016 15:00:46.589 BG Application: Not Present, BG Daemon: Present. Daemons: mediaserverd dataaccessd 
+12/23/2016 15:00:46.589 Auto association attempt canceled because MIS is enabled. MIS client count: wifi=3 bt=0
+12/23/2016 15:00:47.618 Client dataaccessd set type to normal application
+12/23/2016 15:00:47.618 __WiFiManagerSetEnableState: state TRUE, manager->enable.setting TRUE, manager->unlockedSinceBoot TRUE
+12/23/2016 15:00:47.618 BG Application: Not Present, BG Daemon: Present. Daemons: mediaserverd 
+12/23/2016 15:00:48.338 Client dataaccessd set type to normal application
+12/23/2016 15:00:48.957 Device display is ON
+12/23/2016 15:00:48.957 __WiFiManagerSetEnableState: state TRUE, manager->enable.setting TRUE, manager->unlockedSinceBoot TRUE
+12/23/2016 15:00:48.957 Auto association attempt canceled because MIS is enabled. MIS client count: wifi=3 bt=0
+12/23/2016 15:00:49.142 Async scan requested by "locationd" for 1 iterations with maxage=0 priority normal on en0
+12/23/2016 15:00:49.142 Enqueuing command type: "Scan" pending commands: 0
+12/23/2016 15:00:49.142 Dequeuing command type: "Scan" pending commands: 0
+12/23/2016 15:00:49.142 Attempting Apple80211ScanAsync on en0
+12/23/2016 15:00:49.301 Completed Apple80211ScanAsync on en0 (0x0)
+12/23/2016 15:00:49.301 Async scan request completed for "locationd" (0)
+12/23/2016 15:00:49.303 Async scan requested by "locationd" for 1 iterations with maxage=0 priority normal on en0
+12/23/2016 15:00:49.303 Enqueuing command type: "Scan" pending commands: 0
+12/23/2016 15:00:49.303 Dequeuing command type: "Scan" pending commands: 0
+12/23/2016 15:00:49.303 Attempting Apple80211ScanAsync on en0
+12/23/2016 15:00:49.689 Completed Apple80211ScanAsync on en0 (0x0)
+12/23/2016 15:00:49.690 Async scan request completed for "locationd" (0)
+12/23/2016 15:00:49.807 ATJManager: setting ask-to-join interaction mode to Interactive
+12/23/2016 15:00:49.807 ATJManager: no entries to purge
+12/23/2016 15:00:49.807 User interaction ENABLED
+12/23/2016 15:00:49.807 Ignoring lock state manager->wakeMode 1
+
+12/23/2016 15:00:49.807 problematic networks =  and potentially problematic networks = 
+12/23/2016 15:00:49.807 Unblacklisting
+12/23/2016 15:00:49.808 No Change in Background Scan Networks, Skip Re-Programming Background Scan
+
+12/23/2016 15:00:49.808 Auto association attempt canceled because MIS is enabled. MIS client count: wifi=3 bt=0
+12/23/2016 15:00:49.973 Foreground Network Application entered.
+12/23/2016 15:00:49.973 BG Application: Not Present, BG Daemon: Present. Daemons: mediaserverd 
+12/23/2016 15:00:49.973 problematic networks =  and potentially problematic networks = 
+12/23/2016 15:00:49.973 Unblacklisting
+12/23/2016 15:00:49.975 No Change in Background Scan Networks, Skip Re-Programming Background Scan
+
+12/23/2016 15:00:49.975 __WiFiManagerSetEnableState: state TRUE, manager->enable.setting TRUE, manager->unlockedSinceBoot TRUE
+12/23/2016 15:00:49.975 Auto association attempt canceled because MIS is enabled. MIS client count: wifi=3 bt=0
+12/23/2016 15:00:55.306 Async scan requested by "locationd" for 1 iterations with maxage=0 priority normal on en0
+12/23/2016 15:00:55.307 Enqueuing command type: "Scan" pending commands: 0
+12/23/2016 15:00:55.307 Dequeuing command type: "Scan" pending commands: 0
+12/23/2016 15:00:55.307 Attempting Apple80211ScanAsync on en0
+12/23/2016 15:00:55.695 Completed Apple80211ScanAsync on en0 (0x0)
+12/23/2016 15:00:55.698 Async scan request completed for "locationd" (0)
+12/23/2016 15:00:55.726 Async scan requested by "locationd" for 1 iterations with maxage=0 priority normal on en0
+12/23/2016 15:00:55.726 Enqueuing command type: "Scan" pending commands: 0
+12/23/2016 15:00:55.726 Dequeuing command type: "Scan" pending commands: 0
+12/23/2016 15:00:55.726 Attempting Apple80211ScanAsync on en0
+12/23/2016 15:00:57.267 Completed Apple80211ScanAsync on en0 (0x0)
+12/23/2016 15:00:57.268 Async scan request completed for "locationd" (0)
+12/23/2016 15:01:06.020 Async scan requested by "locationd" for 1 iterations with maxage=0 priority normal on en0
+12/23/2016 15:01:06.021 Enqueuing command type: "Scan" pending commands: 0
+12/23/2016 15:01:06.021 Dequeuing command type: "Scan" pending commands: 0
+12/23/2016 15:01:06.021 Attempting Apple80211ScanAsync on en0
+12/23/2016 15:01:06.407 Completed Apple80211ScanAsync on en0 (0x0)
+12/23/2016 15:01:06.411 Async scan request completed for "locationd" (0)
+12/23/2016 15:01:12.445 Async scan requested by "locationd" for 1 iterations with maxage=0 priority normal on en0
+12/23/2016 15:01:12.445 Enqueuing command type: "Scan" pending commands: 0
+12/23/2016 15:01:12.445 Dequeuing command type: "Scan" pending commands: 0
+12/23/2016 15:01:12.445 Attempting Apple80211ScanAsync on en0
+12/23/2016 15:01:12.833 Completed Apple80211ScanAsync on en0 (0x0)
+12/23/2016 15:01:12.838 Async scan request completed for "locationd" (0)
+12/23/2016 15:01:18.861 Async scan requested by "locationd" for 1 iterations with maxage=0 priority normal on en0
+12/23/2016 15:01:18.861 Enqueuing command type: "Scan" pending commands: 0
+12/23/2016 15:01:18.861 Dequeuing command type: "Scan" pending commands: 0
+12/23/2016 15:01:18.861 Attempting Apple80211ScanAsync on en0
+12/23/2016 15:01:19.249 Completed Apple80211ScanAsync on en0 (0x0)
+12/23/2016 15:01:19.253 Async scan request completed for "locationd" (0)
+12/23/2016 15:01:19.263 Async scan requested by "locationd" for 1 iterations with maxage=0 priority normal on en0
+12/23/2016 15:01:19.263 Enqueuing command type: "Scan" pending commands: 0
+12/23/2016 15:01:19.263 Dequeuing command type: "Scan" pending commands: 0
+12/23/2016 15:01:19.263 Attempting Apple80211ScanAsync on en0
+12/23/2016 15:01:20.806 Completed Apple80211ScanAsync on en0 (0x0)
+12/23/2016 15:01:20.807 Async scan request completed for "locationd" (0)
+12/23/2016 15:01:25.288 Async scan requested by "locationd" for 1 iterations with maxage=0 priority normal on en0
+12/23/2016 15:01:25.289 Enqueuing command type: "Scan" pending commands: 0
+12/23/2016 15:01:25.289 Dequeuing command type: "Scan" pending commands: 0
+12/23/2016 15:01:25.289 Attempting Apple80211ScanAsync on en0
+12/23/2016 15:01:25.675 Completed Apple80211ScanAsync on en0 (0x0)
+12/23/2016 15:01:25.681 Async scan request completed for "locationd" (0)
+12/23/2016 15:01:25.697 Async scan requested by "locationd" for 1 iterations with maxage=0 priority normal on en0
+12/23/2016 15:01:25.697 Enqueuing command type: "Scan" pending commands: 0
+12/23/2016 15:01:25.697 Dequeuing command type: "Scan" pending commands: 0
+12/23/2016 15:01:25.697 Attempting Apple80211ScanAsync on en0
+12/23/2016 15:01:27.248 Completed Apple80211ScanAsync on en0 (0x0)
+12/23/2016 15:01:27.249 Async scan request completed for "locationd" (0)
+12/23/2016 15:01:41.252 scanCache: Purging scan cache
+12/23/2016 15:01:49.807 Background Network Application entered
+12/23/2016 15:01:49.808 BG Application: Present, BG Daemon: Present. Daemons: mediaserverd 
+12/23/2016 15:01:49.810 Background Network Application entered
+12/23/2016 15:01:49.811 BG Application: Not Present, BG Daemon: Present. Daemons: mediaserverd 
+12/23/2016 15:02:05.550 WoW is Disabled, 0 WoW Clients
+12/23/2016 15:02:18.475 __WiFiDeviceProcessSTALeaveEvent: staNum 2
+12/23/2016 15:02:18.480 MIS STA Disassociated: 2 associated clients
+12/23/2016 15:02:18.489 WiFiDeviceManagerSetMISMaxStaNumber: Additional tethering clients allowed: 3
+12/23/2016 15:02:18.500 MIS is already Enabled on ap1
+12/23/2016 15:02:18.502 MIS Discovery is Disabled
+12/23/2016 15:02:44.666 WiFiLocaleManagerCheckLocale: trying to determine locale...
+12/23/2016 15:02:44.666 WiFiManagerCoreLocationGetCachedLocation: getting cached location...
+12/23/2016 15:02:44.680 __WiFiLocaleManagerGetLocaleFromMcc: finding iso country code for mcc 232 ....
+12/23/2016 15:02:44.681 WiFiLocationServiceManagerIsLocationValid: cachedLocationTimeout 120.000000 location age 168.681140secs, lifeSpan -1.000000 accuracy 5.000000(highAccReq 0), isValid 1
+12/23/2016 15:02:44.681 WiFiLocationServiceManagerStartLowAccuracyMonitoring: Cached low accuracy location is valid
+12/23/2016 15:02:44.681 WiFiLocationServiceManagerIsLocationValid: cachedLocationTimeout 120.000000 location age 168.681283secs, lifeSpan -1.000000 accuracy 5.000000(highAccReq 1), isValid 1
+12/23/2016 15:02:44.681 WiFiLocationServiceManagerIsLocationValid: cachedLocationTimeout 120.000000 location age 168.681337secs, lifeSpan -1.000000 accuracy 5.000000(highAccReq 0), isValid 1
+12/23/2016 15:02:44.681 __WiFiLocationServiceManagerProcessLocationAvailableEvent: isValidHighAccuracyLocation 1,  isValidLowAccuracyLocation 1
+12/23/2016 15:02:44.681 __WiFiLocationServiceManagerProcessLocationAvailableEvent: give low accuracy callback
+12/23/2016 15:02:44.682 __WiFiLocaleManagerGetLocaleFromLocation: <+47.97847752,+16.84581178> +/- 5.00m (speed 5.14 mps / course 118.12) @ 12/23/16, 2:59:56 PM Central European Standard Time
+12/23/2016 15:02:44.682 locale from bounding box 
+12/23/2016 15:02:44.682 new locale:  , locale: 
+12/23/2016 15:02:44.682 Stopping Low Accuracy Location Monitoring
+12/23/2016 15:02:44.682 CLMonitoring is already stopped
+12/23/2016 15:02:44.682 Stopping Low Accuracy Location Monitoring
+12/23/2016 15:02:44.682 CLMonitoring is already stopped
+12/23/2016 15:02:44.682 __WiFiLocationServiceManagerEventCallback, got cb dict {
+    eventType = 0;
+    location = "<+47.97553510,+16.85185676> +/- 65.00m (speed -1.00 mps / course -1.00) @ 12/23/16, 3:01:37 PM Central European Standard Time";
+}
+12/23/2016 15:02:44.683 WiFiLocationServiceManagerIsLocationValid: cachedLocationTimeout 120.000000 location age 66.894954secs, lifeSpan -1.000000 accuracy 65.000000(highAccReq 1), isValid 1
+12/23/2016 15:02:44.683 WiFiLocationServiceManagerIsLocationValid: cachedLocationTimeout 120.000000 location age 66.895007secs, lifeSpan -1.000000 accuracy 65.000000(highAccReq 0), isValid 1
+12/23/2016 15:02:44.683 __WiFiLocationServiceManagerProcessLocationAvailableEvent: isValidHighAccuracyLocation 1,  isValidLowAccuracyLocation 1
+12/23/2016 15:02:52.149 __WiFiManagerCellularTransmitCallback_block_invoke: Cellular Transmit Started = FALSE
+12/23/2016 15:02:57.350 __WiFiManagerCellularTransmitCallback_block_invoke: Cellular Transmit Started = TRUE
+12/23/2016 15:02:57.595 __WiFiManagerCellularTransmitCallback_block_invoke: Cellular Transmit Started = FALSE
+12/23/2016 15:02:57.794 DeviceClient["WirelessRadioMan"] setCoexParameters["MWS_Coex_Enabled_Channels"] = <CFArray 0x14ce7ae10 [0x1a0950150]>{type = mutable-small, count = 3, values = (
+	0 : <CFBasicHash 0x14ce855e0 [0x1a0950150]>{type = mutable dict, count = 1,
+entries =>
+	2 : <CFString 0x14cea8d00 [0x1a0950150]>{contents = "MWS_Channel_Number"} = <CFNumber 0xb0000000000000b3 [0x1a0950150]>{value = +11, type = kCFNumberSInt64Type}
+}
+
+	1 : <CFBasicHash 0x14ce36130 [0x1a0950150]>{type = mutable dict, count = 1,
+entries =>
+	2 : <CFString 0x14cea8d00 [0x1a0950150]>{contents = "MWS_Channel_Number"} = <CFNumber 0xb0000000000000c3 [0x1a0950150]>{value = +12, type = kCFNumberSInt64Type}
+}
+
+	2 : <CFBasicHash 0x14ce8df00 [0x1a0950150]>{type = mutable dict, count = 1,
+entries =>
+	2 : <CFString 0x14cea8d00 [0x1a0950150]>{contents = "MWS_Channel_Number"} = <CFNumber 0xb0000000000000d3 [0x1a0950150]>{value = +13, type = kCFNumberSInt64Type}
+}
+
+)}
+12/23/2016 15:02:57.794 DeviceClient["WirelessRadioMan"] setCoexParameters["MWS_WLAN_RX_PRI_THRESHOLD"] = 2
+12/23/2016 15:02:57.847 __WiFiManagerCellularTransmitCallback_block_invoke: Cellular Transmit Started = TRUE
+12/23/2016 15:02:58.246 __WiFiManagerCellularTransmitCallback_block_invoke: Cellular Transmit Started = FALSE
+12/23/2016 15:02:58.315 IPv4 Primary interface is (null) and IPv6 Primary Interface is (null)
+12/23/2016 15:02:58.316 Client apsd set type to background application
+12/23/2016 15:02:58.316 __WiFiManagerSetEnableState: state TRUE, manager->enable.setting TRUE, manager->unlockedSinceBoot TRUE
+12/23/2016 15:02:58.316 BG Application: Not Present, BG Daemon: Present. Daemons: mediaserverd apsd 
+12/23/2016 15:02:58.316 Auto association attempt canceled because MIS is enabled. MIS client count: wifi=2 bt=0
+12/23/2016 15:02:58.316 Enable WoW requested by "apsd"
+12/23/2016 15:02:58.317 WoW Capable = YES, Attempting to enable WoW and disable LPAS 
+12/23/2016 15:02:58.317 Setting WoW params to <CFBasicHash 0x14cdba640 [0x1a0950150]>{type = immutable dict, count = 3,
+entries =>
+	0 : <CFString 0x100175960 [0x1a0950150]>{contents = "IO80211InterfaceEnableLowPwrAssocMode"} = <CFBoolean 0x1a09506d8 [0x1a0950150]>{value = false}
+	1 : <CFString 0x100175940 [0x1a0950150]>{contents = "IO80211InterfaceEnableWoW"} = <CFBoolean 0x1a09506c8 [0x1a0950150]>{value = true}
+	2 : <CFString 0x100185ae0 [0x1a0950150]>{contents = "IO80211InterfaceEnableWoWOnCaptive"} = <CFBoolean 0x1a09506d8 [0x1a0950150]>{value = false}
+}
+
+12/23/2016 15:02:58.317 WiFiDeviceRequestAssociatedSleep: ActiveDuringSleepRequested is already removed ((null)).
+12/23/2016 15:02:58.317 WoW Enabled by 1 Clients, lpas is Disabled, WoW Override is Disabled, Captive Disabled
+12/23/2016 15:02:58.317 Unable to dispatch WowStateChanged message to client MobileMail (268435460)
+12/23/2016 15:02:58.317 Unable to dispatch WowStateChanged message to client dataaccessd (268435460)
+12/23/2016 15:02:58.317 Unable to dispatch WowStateChanged message to client itunesstored (268435460)
+12/23/2016 15:02:58.318 Unable to dispatch WowStateChanged message to client mediaserverd (268435460)
+12/23/2016 15:02:58.325 MIS is already Enabled on ap1
+12/23/2016 15:02:58.325 apsd[273] is a wow client
+12/23/2016 15:02:58.325 WoW is Enabled, 1 WoW Clients
+12/23/2016 15:02:58.325 apsd[273] is a wow client
+12/23/2016 15:02:58.325 WoW is Enabled, 1 WoW Clients
+12/23/2016 15:02:58.327 MIS is already Enabled on ap1
+12/23/2016 15:02:58.327 apsd[273] is a wow client
+12/23/2016 15:02:58.327 WoW is Enabled, 1 WoW Clients
+12/23/2016 15:02:58.328 MIS Discovery is Disabled
+12/23/2016 15:02:58.331 Client MobileMail set type to background application
+12/23/2016 15:02:58.331 __WiFiManagerSetEnableState: state TRUE, manager->enable.setting TRUE, manager->unlockedSinceBoot TRUE
+12/23/2016 15:02:58.331 BG Application: Not Present, BG Daemon: Present. Daemons: MobileMail mediaserverd apsd 
+12/23/2016 15:02:58.331 Auto association attempt canceled because MIS is enabled. MIS client count: wifi=2 bt=0
+12/23/2016 15:02:59.256 __WiFiManagerCellularTransmitCallback_block_invoke: Cellular Transmit Started = TRUE
+12/23/2016 15:03:02.104 IPv4 Primary interface is pdp_ip0 and IPv6 Primary Interface is (null)
+12/23/2016 15:03:02.108 MIS is already Enabled on ap1
+12/23/2016 15:03:02.109 MIS Discovery is Disabled
+12/23/2016 15:03:16.066 __WiFiDeviceProcessSTALeaveEvent: staNum 1
+12/23/2016 15:03:16.076 MIS STA Disassociated: 1 associated clients
+12/23/2016 15:03:16.082 WiFiDeviceManagerSetMISMaxStaNumber: Additional tethering clients allowed: 4
+12/23/2016 15:03:16.087 MIS is already Enabled on ap1
+12/23/2016 15:03:16.089 MIS Discovery is Disabled
+12/23/2016 15:03:25.254 __WiFiManagerCellularTransmitCallback_block_invoke: Cellular Transmit Started = FALSE
+12/23/2016 15:03:26.704 __WiFiManagerCellularTransmitCallback_block_invoke: Cellular Transmit Started = TRUE
+12/23/2016 15:03:27.952 Client dataaccessd set type to background application
+12/23/2016 15:03:27.952 __WiFiManagerSetEnableState: state TRUE, manager->enable.setting TRUE, manager->unlockedSinceBoot TRUE
+12/23/2016 15:03:27.952 BG Application: Not Present, BG Daemon: Present. Daemons: MobileMail mediaserverd dataaccessd apsd 
+12/23/2016 15:03:27.952 Auto association attempt canceled because MIS is enabled. MIS client count: wifi=1 bt=0
+12/23/2016 15:03:28.560 Client dataaccessd set type to normal application
+12/23/2016 15:03:28.560 __WiFiManagerSetEnableState: state TRUE, manager->enable.setting TRUE, manager->unlockedSinceBoot TRUE
+12/23/2016 15:03:28.560 BG Application: Not Present, BG Daemon: Present. Daemons: MobileMail mediaserverd apsd 
+12/23/2016 15:03:28.576 Client dataaccessd set type to background application
+12/23/2016 15:03:28.576 __WiFiManagerSetEnableState: state TRUE, manager->enable.setting TRUE, manager->unlockedSinceBoot TRUE
+12/23/2016 15:03:28.576 BG Application: Not Present, BG Daemon: Present. Daemons: MobileMail mediaserverd dataaccessd apsd 
+12/23/2016 15:03:28.576 Auto association attempt canceled because MIS is enabled. MIS client count: wifi=1 bt=0
+12/23/2016 15:03:29.413 Client dataaccessd set type to background application
+12/23/2016 15:03:30.020 Client dataaccessd set type to background application
+12/23/2016 15:03:30.384 Client dataaccessd set type to background application
+12/23/2016 15:03:30.503 Client dataaccessd set type to normal application
+12/23/2016 15:03:30.503 __WiFiManagerSetEnableState: state TRUE, manager->enable.setting TRUE, manager->unlockedSinceBoot TRUE
+12/23/2016 15:03:30.503 BG Application: Not Present, BG Daemon: Present. Daemons: MobileMail mediaserverd apsd 
+12/23/2016 15:03:31.110 Client dataaccessd set type to normal application
+12/23/2016 15:03:31.467 Client dataaccessd set type to normal application
+12/23/2016 15:03:32.127 Client dataaccessd set type to normal application
+12/23/2016 15:04:02.090 Disable WoW requested by "apsd"
+12/23/2016 15:04:02.091 WoW Capable = YES, Attempting to disable WoW and enable LPAS 
+12/23/2016 15:04:02.091 Setting WoW params to <CFBasicHash 0x14cd81cb0 [0x1a0950150]>{type = immutable dict, count = 3,
+entries =>
+	0 : <CFString 0x100175960 [0x1a0950150]>{contents = "IO80211InterfaceEnableLowPwrAssocMode"} = <CFBoolean 0x1a09506c8 [0x1a0950150]>{value = true}
+	1 : <CFString 0x100175940 [0x1a0950150]>{contents = "IO80211InterfaceEnableWoW"} = <CFBoolean 0x1a09506d8 [0x1a0950150]>{value = false}
+	2 : <CFString 0x100185ae0 [0x1a0950150]>{contents = "IO80211InterfaceEnableWoWOnCaptive"} = <CFBoolean 0x1a09506d8 [0x1a0950150]>{value = false}
+}
+
+12/23/2016 15:04:02.093 WiFiDeviceRequestAssociatedSleep: ActiveDuringSleepRequested is already removed ((null)).
+12/23/2016 15:04:02.093 WoW Disabled, 0 WoW Clients, lpas is Enabled, WoW Override is Disabled, Captive Disabled
+12/23/2016 15:04:02.093 Unable to dispatch WowStateChanged message to client MobileMail (268435460)
+12/23/2016 15:04:02.094 Unable to dispatch WowStateChanged message to client dataaccessd (268435460)
+12/23/2016 15:04:02.094 Unable to dispatch WowStateChanged message to client itunesstored (268435460)
+12/23/2016 15:04:02.094 Unable to dispatch WowStateChanged message to client mediaserverd (268435460)
+12/23/2016 15:04:02.095 WoW is Disabled, 0 WoW Clients
+12/23/2016 15:04:02.095 WoW is Disabled, 0 WoW Clients
+12/23/2016 15:04:02.098 WoW is Disabled, 0 WoW Clients
+12/23/2016 15:04:03.653 __WiFiManagerCellularTransmitCallback_block_invoke: Cellular Transmit Started = FALSE
+12/23/2016 15:04:07.094 Client apsd set type to normal application
+12/23/2016 15:04:07.095 __WiFiManagerSetEnableState: state TRUE, manager->enable.setting TRUE, manager->unlockedSinceBoot TRUE
+12/23/2016 15:04:07.095 BG Application: Not Present, BG Daemon: Present. Daemons: MobileMail mediaserverd 
+12/23/2016 15:04:07.116 Client MobileMail set type to normal application
+12/23/2016 15:04:07.116 __WiFiManagerSetEnableState: state TRUE, manager->enable.setting TRUE, manager->unlockedSinceBoot TRUE
+12/23/2016 15:04:07.116 BG Application: Not Present, BG Daemon: Present. Daemons: mediaserverd 
+12/23/2016 15:04:15.304 __WiFiManagerCellularTransmitCallback_block_invoke: Cellular Transmit Started = TRUE
+12/23/2016 15:04:31.607 __WiFiDeviceProcessDumpLogsEvent: Dump logs event received, dumped wifid log buffer to file

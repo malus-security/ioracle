@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>SysInfoCrashReporterKey</key>
+	<string>5bed27ab7dc41a19da5c8dbddd8aa7b5db3e323e</string>
+	<key>bug_type</key>
+	<string>195</string>
+	<key>description</key>
+	<string>Version=4
+IncidentIdentifier=D8AAD115-9642-4B74-949C-5EB9C22A8546
+Date=2018-07-18;AP=13F69;BB=4.71.00;Model=N69AP;Machine=iPhone8,4
+</string>
+	<key>os_version</key>
+	<string>iOS 9.3.2 (13F69)</string>
+	<key>system_ID</key>
+	<string></string>
+</dict>
+</plist>

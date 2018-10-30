@@ -1,0 +1,1075 @@
+12/25/2016 20:07:06.700 Power stats update: Type 0x5 UnassociatedSleepDur 0 AssociatedSleepDur 167386 TotalDur 301100 RoamDur 4043
+12/25/2016 20:07:06.700 WiFiAWDManagerSubmitMetric: metric container could not be generated for metric id <0x90010>
+12/25/2016 20:07:06.700 __WiFiLQAMgrLogStats: Rssi: -79 Cca: 5 TxPer: 0.0% (0) BcnPer: 0.0% (0) RxFrms 0 TxRate: 0 RxRate: 0
+12/25/2016 20:07:06.700 __WiFiLQAMgrCheckTriggerDisconnect: Bypassed, System woke up before 0.01 secs
+12/25/2016 20:07:06.701 __WiFiDeviceCopyLinkChangedSubReasonString: Apple80211ReturnToString failed 1
+12/25/2016 20:07:06.701 __WiFiDeviceProcessDriverAvailableEvent: driver availability true, reason Initializing(0xe0821803), subreason (null)(0x0)
+12/25/2016 20:07:06.701 __WiFiManagerDispatchDeviceAvailable: driver availability true
+
+12/25/2016 20:07:06.704 __WiFiDeviceManagerAutoAssociate: Already connected to DIGI-146A.
+12/25/2016 20:07:06.704 WiFiAWDManagerSubmitMetric: metric container could not be generated for metric id <0x9000e>
+12/25/2016 20:07:06.736 __WiFiDeviceManagerAutoAssociate: Already connected to DIGI-146A.
+12/25/2016 20:07:06.738 No Change in Background Scan Networks, Skip Re-Programming Background Scan
+
+12/25/2016 20:07:06.751 __WiFiDeviceManagerBlackListNetworkCallback: Processing BlackList Network Event
+12/25/2016 20:07:06.751 __WiFiDeviceManagerBlackListNetworkCallback: Blacklisting DIGI-146A for Background Scan
+12/25/2016 20:07:06.753 __CreateBGScanRequest Hotspot Orange Mobile Wi-Fi added to BGScan List 
+12/25/2016 20:07:06.753 Preparing background scan request for "UPC5493113" "TP-LINK_Extender_2.4GHz" "UPC2300204" "PRECIS" "eduroam" "G3_7030" "eg304" "eMAG" "Orange Mobile Wi-Fi" Background Scan Caching is Enabled
+12/25/2016 20:07:06.809 WiFiLocaleManagerCheckLocale: trying to determine locale...
+12/25/2016 20:07:06.809 WiFiManagerCoreLocationGetCachedLocation: getting cached location...
+12/25/2016 20:07:06.817 __WiFiLocaleManagerGetLocaleFromMcc: finding iso country code for mcc 226 ....
+12/25/2016 20:07:06.817 WiFiLocationServiceManagerIsLocationValid: cachedLocationTimeout 120.000000 location age 409.299977secs, lifeSpan -1.000000 accuracy 65.000000(highAccReq 0), isValid 1
+12/25/2016 20:07:06.817 WiFiLocationServiceManagerStartLowAccuracyMonitoring: Cached low accuracy location is valid
+12/25/2016 20:07:06.822 WiFiLocationServiceManagerIsLocationValid: cachedLocationTimeout 120.000000 location age 409.300100secs, lifeSpan -1.000000 accuracy 65.000000(highAccReq 1), isValid 1
+12/25/2016 20:07:06.848 WiFiLocationServiceManagerIsLocationValid: cachedLocationTimeout 120.000000 location age 409.330715secs, lifeSpan -1.000000 accuracy 65.000000(highAccReq 0), isValid 1
+12/25/2016 20:07:06.848 __WiFiLocationServiceManagerProcessLocationAvailableEvent: isValidHighAccuracyLocation 1,  isValidLowAccuracyLocation 1
+12/25/2016 20:07:06.848 __WiFiLocationServiceManagerProcessLocationAvailableEvent: give low accuracy callback
+12/25/2016 20:07:06.849 __WiFiLocaleManagerGetLocaleFromLocation: <+44.42591014,+26.13607998> +/- 65.00m (speed -1.00 mps / course -1.00) @ 12/25/16, 8:00:17 PM Eastern European Standard Time
+12/25/2016 20:07:06.849 locale from bounding box 
+12/25/2016 20:07:06.849 new locale:  , locale: 
+12/25/2016 20:07:06.849 Stopping Low Accuracy Location Monitoring
+12/25/2016 20:07:06.849 CLMonitoring is already stopped
+12/25/2016 20:07:06.849 Stopping Low Accuracy Location Monitoring
+12/25/2016 20:07:06.849 CLMonitoring is already stopped
+12/25/2016 20:07:06.850 __WiFiDeviceCheckForIPRenewalWakeupSupport: State:/Network/Interface/en0/ActiveDuringSleepSupported = FALSE
+12/25/2016 20:07:06.863 __WiFiLocationServiceManagerEventCallback, got cb dict {
+    eventType = 0;
+    location = "<+44.42591014,+26.13607998> +/- 65.00m (speed -1.00 mps / course -1.00) @ 12/25/16, 8:00:17 PM Eastern European Standard Time";
+}
+12/25/2016 20:07:06.864 WiFiLocationServiceManagerIsLocationValid: cachedLocationTimeout 120.000000 location age 409.346576secs, lifeSpan -1.000000 accuracy 65.000000(highAccReq 1), isValid 1
+12/25/2016 20:07:06.864 WiFiLocationServiceManagerIsLocationValid: cachedLocationTimeout 120.000000 location age 409.346637secs, lifeSpan -1.000000 accuracy 65.000000(highAccReq 0), isValid 1
+12/25/2016 20:07:06.864 __WiFiLocationServiceManagerProcessLocationAvailableEvent: isValidHighAccuracyLocation 1,  isValidLowAccuracyLocation 1
+12/25/2016 20:07:07.089 __WiFiManagerCellularTransmitCallback_block_invoke: Cellular Transmit Started = FALSE
+12/25/2016 20:07:07.179 WoW is Disabled, 0 WoW Clients
+12/25/2016 20:07:09.600 __WiFiLQAMgrCheckTriggerDisconnect: Bypassed, System woke up before 2.91 secs
+12/25/2016 20:07:11.623 __WiFiLQAMgrCheckTriggerDisconnect: Bypassed, System woke up before 4.94 secs
+12/25/2016 20:07:11.848 Received kIOMessageSystemWillSleep
+12/25/2016 20:07:11.848 System Sleep notification, Disabling auto-join
+12/25/2016 20:07:11.848 __WiFiManagerSetEnableState: state FALSE, manager->enable.setting TRUE, manager->unlockedSinceBoot TRUE
+12/25/2016 20:07:11.849 Disabling automatic association
+12/25/2016 20:07:11.891 WoW is Disabled, 0 WoW Clients
+12/25/2016 20:07:12.028 __WiFiDeviceManagerAwdlAvailableCallback: AWDL availability changed to FALSE
+12/25/2016 20:07:12.028 __WiFiDeviceCopyLinkChangedSubReasonString: Apple80211ReturnToString failed 1
+12/25/2016 20:07:12.028 __WiFiDeviceProcessDriverAvailableEvent: driver availability false, reason PowerOff(0xe0821804), subreason (null)(0x0)
+12/25/2016 20:07:12.028 __WiFiManagerDispatchDeviceAvailable: driver availability false
+
+12/25/2016 20:07:12.030 WiFiAWDManagerSubmitMetric: metric container could not be generated for metric id <0x9000e>
+12/25/2016 20:07:12.030 Creating client for "configd"
+12/25/2016 20:07:12.030 __WiFiDeviceProcessLinkEvent: isLinkDown 1
+12/25/2016 20:07:12.031 -[WiFiIDSSyncEngine currentNetworkChanged]: <0x16e12f000>, role 1, currentNetwork (null)
+12/25/2016 20:07:12.031 -[WiFiIDSSyncEngine currentNetworkChanged]: adjusted waitForReAssociationTimer <CFRunLoopTimer 0x14ce6ecf0 [0x1a0950150]>{valid = Yes, firing = No, interval = 819052854, tolerance = 0, next fire date = 504382062 (29.999955 @ 5211666525552), callout = (NSTimer) [WiFiIDSSyncEngine companionReAssociationWaitTimerFired:] (0x18292cfe0 / 0x1000e1010) (/usr/sbin/wifid), context = <CFRunLoopTimer context 0x14ce5c520>}
+12/25/2016 20:12:06.377 Total connection time to DIGI-146A 486020.096749
+12/25/2016 20:12:06.525 WiFiDeviceManagerSetNetworks: Adding HS20 Account: 
+Domain name orange.ro
+3GPP MCC&MNC 226F10 
+Friendly Operator Name Orange
+12/25/2016 20:12:06.525 __WiFiDeviceManagerPrepareHS20Queries: created queries <CFArray 0x14cd77880 [0x1a0950150]>{type = mutable-small, count = 3, values = (
+	0 : <CFNumber 0xb0000000000010c1 [0x1a0950150]>{value = +268, type = kCFNumberSInt16Type}
+	1 : <CFNumber 0xb000000000001081 [0x1a0950150]>{value = +264, type = kCFNumberSInt16Type}
+	2 : <CFNumber 0xb000000000000031 [0x1a0950150]>{value = +3, type = kCFNumberSInt16Type}
+)}
+12/25/2016 20:12:06.525 Auto association attempt canceled because auto join is disabled.
+12/25/2016 20:12:06.526 No Change in Background Scan Networks, Skip Re-Programming Background Scan
+
+12/25/2016 20:12:06.526 Auto association attempt canceled because auto join is disabled.
+12/25/2016 20:12:06.526 __WiFiDeviceManagerSetInterfaceRank: setting interface rank kSCNetworkServicePrimaryRankDefault
+12/25/2016 20:12:06.526 WiFiDeviceRequestAssociatedSleep: ActiveDuringSleepRequested is already removed ((null)).
+12/25/2016 20:12:06.528 WiFiAWDManagerSubmitMetric: metric container could not be generated for metric id <0x90009>
+12/25/2016 20:12:06.528 Link went down: isInVoluntary 0, reason Unknown(4), subreason 0, rssi -80
+12/25/2016 20:12:06.528 __WiFiDeviceResetCCAHistory
+12/25/2016 20:12:06.528 __WiFiDeviceResetRssiHistory
+12/25/2016 20:12:06.530 __WiFiDeviceCopyLinkChangedSubReasonString: Apple80211ReturnToString failed 1
+12/25/2016 20:12:06.530 __WiFiDeviceProcessDriverAvailableEvent: driver availability true, reason Initializing(0xe0821803), subreason (null)(0x0)
+12/25/2016 20:12:06.530 __WiFiManagerDispatchDeviceAvailable: driver availability true
+
+12/25/2016 20:12:06.530 Auto association attempt canceled because auto join is disabled.
+12/25/2016 20:12:06.531 WiFiAWDManagerSubmitMetric: metric container could not be generated for metric id <0x9000e>
+12/25/2016 20:12:06.532 Auto association attempt canceled because auto join is disabled.
+12/25/2016 20:12:06.532 No Change in Background Scan Networks, Skip Re-Programming Background Scan
+
+12/25/2016 20:12:06.536 Received kIOMessageSystemWillPowerOn
+12/25/2016 20:12:06.536 System wake reason: AOP.ExternalReq hold
+12/25/2016 20:12:06.536 System Powered ON notification Re-enabling auto-join
+12/25/2016 20:12:06.536 __WiFiManagerSetEnableState: state TRUE, manager->enable.setting TRUE, manager->unlockedSinceBoot TRUE
+12/25/2016 20:12:06.536 Enabling automatic association
+12/25/2016 20:12:06.536 __WiFiDeviceManagerStateMachineRun: current state: Idle
+12/25/2016 20:12:06.536 Attempting multi-stage auto join mStageAutoJoinAttempts=0
+12/25/2016 20:12:06.536 Starting multi-stage auto join sequence
+12/25/2016 20:12:06.536 multi-stage auto-join: Scanning for previous network DIGI-146A on channel 11
+12/25/2016 20:12:06.536 Performing auto-join broadcast scan with a modified dwell time of 110ms on channels: 11 
+12/25/2016 20:12:06.536 Enqueuing command type: "Scan" pending commands: 0
+12/25/2016 20:12:06.536 WiFiLocaleManagerCheckLocale: trying to determine locale...
+12/25/2016 20:12:06.536 WiFiManagerCoreLocationGetCachedLocation: getting cached location...
+12/25/2016 20:12:06.539 __WiFiLocaleManagerGetLocaleFromMcc: finding iso country code for mcc 226 ....
+12/25/2016 20:12:06.539 WiFiLocationServiceManagerIsLocationValid: cachedLocationTimeout 120.000000 location age 709.021585secs, lifeSpan -1.000000 accuracy 65.000000(highAccReq 0), isValid 1
+12/25/2016 20:12:06.539 WiFiLocationServiceManagerStartLowAccuracyMonitoring: Cached low accuracy location is valid
+12/25/2016 20:12:06.540 WiFiLocationServiceManagerIsLocationValid: cachedLocationTimeout 120.000000 location age 709.022987secs, lifeSpan -1.000000 accuracy 65.000000(highAccReq 1), isValid 1
+12/25/2016 20:12:06.542 WiFiLocationServiceManagerIsLocationValid: cachedLocationTimeout 120.000000 location age 709.025201secs, lifeSpan -1.000000 accuracy 65.000000(highAccReq 0), isValid 1
+12/25/2016 20:12:06.542 __WiFiLocationServiceManagerProcessLocationAvailableEvent: isValidHighAccuracyLocation 1,  isValidLowAccuracyLocation 1
+12/25/2016 20:12:06.542 __WiFiLocationServiceManagerProcessLocationAvailableEvent: give low accuracy callback
+12/25/2016 20:12:06.544 __WiFiLocaleManagerGetLocaleFromLocation: <+44.42591014,+26.13607998> +/- 65.00m (speed -1.00 mps / course -1.00) @ 12/25/16, 8:00:17 PM Eastern European Standard Time
+12/25/2016 20:12:06.544 locale from bounding box 
+12/25/2016 20:12:06.545 new locale:  , locale: 
+12/25/2016 20:12:06.545 Stopping Low Accuracy Location Monitoring
+12/25/2016 20:12:06.545 CLMonitoring is already stopped
+12/25/2016 20:12:06.545 Stopping Low Accuracy Location Monitoring
+12/25/2016 20:12:06.545 CLMonitoring is already stopped
+12/25/2016 20:12:06.545 Dequeuing command type: "Scan" pending commands: 0
+12/25/2016 20:12:06.545 Attempting Apple80211ScanAsync on en0
+12/25/2016 20:12:06.582 __WiFiLocationServiceManagerEventCallback, got cb dict {
+    eventType = 0;
+    location = "<+44.42591014,+26.13607998> +/- 65.00m (speed -1.00 mps / course -1.00) @ 12/25/16, 8:00:17 PM Eastern European Standard Time";
+}
+12/25/2016 20:12:06.583 WiFiLocationServiceManagerIsLocationValid: cachedLocationTimeout 120.000000 location age 709.065818secs, lifeSpan -1.000000 accuracy 65.000000(highAccReq 1), isValid 1
+12/25/2016 20:12:06.583 WiFiLocationServiceManagerIsLocationValid: cachedLocationTimeout 120.000000 location age 709.065841secs, lifeSpan -1.000000 accuracy 65.000000(highAccReq 0), isValid 1
+12/25/2016 20:12:06.583 __WiFiLocationServiceManagerProcessLocationAvailableEvent: isValidHighAccuracyLocation 1,  isValidLowAccuracyLocation 1
+12/25/2016 20:12:06.584 Device display is ON
+12/25/2016 20:12:06.584 __WiFiManagerSetEnableState: state TRUE, manager->enable.setting TRUE, manager->unlockedSinceBoot TRUE
+12/25/2016 20:12:06.584 Auto association attempt canceled because auto join state is Scanning Previous Network Channel.
+12/25/2016 20:12:06.589 WiFiDeviceManagerSetNetworks: Adding HS20 Account: 
+Domain name orange.ro
+3GPP MCC&MNC 226F10 
+Friendly Operator Name Orange
+12/25/2016 20:12:06.589 __WiFiDeviceManagerPrepareHS20Queries: created queries <CFArray 0x14cd92b50 [0x1a0950150]>{type = mutable-small, count = 3, values = (
+	0 : <CFNumber 0xb0000000000010c1 [0x1a0950150]>{value = +268, type = kCFNumberSInt16Type}
+	1 : <CFNumber 0xb000000000001081 [0x1a0950150]>{value = +264, type = kCFNumberSInt16Type}
+	2 : <CFNumber 0xb000000000000031 [0x1a0950150]>{value = +3, type = kCFNumberSInt16Type}
+)}
+12/25/2016 20:12:06.589 Auto association attempt canceled because auto join state is Scanning Previous Network Channel.
+12/25/2016 20:12:06.589 No Change in Background Scan Networks, Skip Re-Programming Background Scan
+
+12/25/2016 20:12:06.592 Async scan requested by "locationd" for 1 iterations with maxage=0 priority normal on en0
+12/25/2016 20:12:06.592 Enqueuing command type: "Scan" pending commands: 1
+12/25/2016 20:12:06.617 __WiFiManagerCellularTransmitCallback_block_invoke: Cellular Transmit Started = FALSE
+12/25/2016 20:12:06.629 configd requesting removal of BGScan networks
+12/25/2016 20:12:06.629 No Change in Background Scan Networks, Skip Re-Programming Background Scan
+
+12/25/2016 20:12:06.629 __WiFiManagerSetEnableState: state TRUE, manager->enable.setting TRUE, manager->unlockedSinceBoot TRUE
+12/25/2016 20:12:06.629 Removing client for "configd"
+12/25/2016 20:12:06.629 MIS state is Disabled
+12/25/2016 20:12:06.629 MIS state queried by "UserEventAgent" is Disable
+12/25/2016 20:12:06.644 __WiFiDeviceManagerAwdlAvailableCallback: AWDL availability changed to TRUE
+12/25/2016 20:12:06.644 MIS state is Disabled
+12/25/2016 20:12:06.644 MIS state queried by "locationd" is Disable
+12/25/2016 20:12:06.644 MIS state is Disabled
+12/25/2016 20:12:06.644 MIS state queried by "identityservices" is Disable
+12/25/2016 20:12:06.644 MIS state is Disabled
+12/25/2016 20:12:06.644 MIS state queried by "SpringBoard" is Disable
+12/25/2016 20:12:06.644 MIS state is Disabled
+12/25/2016 20:12:06.644 MIS state queried by "apsd" is Disable
+12/25/2016 20:12:06.645 MIS state is Disabled
+12/25/2016 20:12:06.645 MIS state queried by "imagent" is Disable
+12/25/2016 20:12:06.645 MIS state is Disabled
+12/25/2016 20:12:06.645 MIS state queried by "mediaserverd" is Disable
+12/25/2016 20:12:06.645 MIS state is Disabled
+12/25/2016 20:12:06.646 MIS state queried by "MobileMail" is Disable
+12/25/2016 20:12:06.646 MIS state is Disabled
+12/25/2016 20:12:06.646 MIS state queried by "InCallService" is Disable
+12/25/2016 20:12:06.649 WoW is Disabled, 0 WoW Clients
+12/25/2016 20:12:06.656 WoW is Disabled, 0 WoW Clients
+12/25/2016 20:12:06.663 WoW is Disabled, 0 WoW Clients
+12/25/2016 20:12:06.676 MIS state is Disabled
+12/25/2016 20:12:06.676 MIS state queried by "nanoregistryd" is Disable
+12/25/2016 20:12:06.695 Completed Apple80211ScanAsync on en0 (0x0)
+12/25/2016 20:12:06.696 Auto join scan completed (0) with current state: Scanning Previous Network Channel
+12/25/2016 20:12:06.696 __WiFiDeviceManagerStateMachineRun: current state: Scanning Previous Network Channel
+12/25/2016 20:12:06.696 Scanning Previous Network Channel found: CucuruzNetwork, DIGI-146A
+12/25/2016 20:12:06.696 Attempting auto-join for networks in following order: DIGI-146A(W)
+12/25/2016 20:12:06.696 Autojoin is processing network 1 of 1 candidates
+12/25/2016 20:12:06.696 Attempting auto join association of DIGI-146A
+12/25/2016 20:12:06.750 Enqueuing command type: "Association" pending commands: 2
+12/25/2016 20:12:06.750 Dequeuing command type: "Scan" pending commands: 1
+12/25/2016 20:12:06.756 Attempting Apple80211ScanAsync on en0
+12/25/2016 20:12:06.796 IPV4 State change for en0
+12/25/2016 20:12:06.801 IPV6 State change for en0
+12/25/2016 20:12:06.801 IPv4 Primary interface is pdp_ip0 and IPv6 Primary Interface is (null)
+12/25/2016 20:12:06.801 IPv4 Primary interface is pdp_ip0 and IPv6 Primary Interface is (null)
+12/25/2016 20:12:06.868 __WiFiManagerCellularTransmitCallback_block_invoke: Cellular Transmit Started = TRUE
+12/25/2016 20:12:06.949 Completed Apple80211ScanAsync on en0 (0x0)
+12/25/2016 20:12:06.950 Async scan request completed for "locationd" (0)
+12/25/2016 20:12:06.950 Dequeuing command type: "Association" pending commands: 0
+12/25/2016 20:12:06.950 Attempting Apple80211AssociateAsync
+12/25/2016 20:12:06.951 Attempting to join WPA network: DIGI-146A
+12/25/2016 20:12:06.983 Async scan requested by "locationd" for 1 iterations with maxage=0 priority normal on en0
+12/25/2016 20:12:06.983 Enqueuing command type: "Scan" pending commands: 1
+12/25/2016 20:12:07.017 __WiFiDeviceProcessLinkEvent: isLinkDown 0
+12/25/2016 20:12:07.020 __WiFiDeviceManagerSetInterfaceRank: setting interface rank kSCNetworkServicePrimaryRankDefault
+12/25/2016 20:12:07.021 __WiFiDeviceManagerEvaluateAPEnvironment: Getting AP environment for DIGI-146A. Learning period 259200 secs Expiry period 2592000 secs
+12/25/2016 20:12:07.021 __WiFiDeviceManagerEvaluateAPEnvironment: AP environment is 2 for DIGI-146A(4:bd:70:a4:e3:8)
+12/25/2016 20:12:07.021 WiFiDeviceSetRoamParams: setting roam profile to type 1
+12/25/2016 20:12:07.022 __WiFiDeviceManagerEvaluateAPEnvironment: Getting AP environment for DIGI-146A. Learning period 259200 secs Expiry period 2592000 secs
+12/25/2016 20:12:07.022 __WiFiDeviceManagerEvaluateAPEnvironment: AP environment is 2 for DIGI-146A(4:bd:70:a4:e3:8)
+12/25/2016 20:12:07.022 __WiFiLQAMgrSetCurrentNetwork: SSID: DIGI-146A BSSID: 4:bd:70:a4:e3:8 RSSI: -52 ApEnv: 2
+12/25/2016 20:12:07.023 WiFiDeviceRequestAssociatedSleep: ActiveDuringSleepRequested is already removed ((null)).
+12/25/2016 20:12:07.023 __WiFiDeviceResetCCAHistory
+12/25/2016 20:12:07.023 __WiFiDeviceResetRssiHistory
+12/25/2016 20:12:07.023 __WiFiLQAMgrLogStats: Rssi: -52 Cca: 0 TxPer: 0.0% (0) BcnPer: 0.0% (0) RxFrms 0 TxRate: 0 RxRate: 0
+12/25/2016 20:12:07.023 __WiFiDeviceProcessLinkEvent: Initializing lqm value: rawRssi -52, scaledRssi 0.884383, noise 0, snr 35
+12/25/2016 20:12:07.035 __WiFiMetricsManagerPrepareLinkChangeNetworkParams: OUI:04:bd:70 Channel:11(20MHz) Flags:0x8 PhyMode:0x10 Security:0x2 WPA:[Prot:0x2 McastCipher:0x4 UcastCipher:0xc AKM:0x2 Caps:0x0] HT:[Info:0x19fc AMPDU:0x1b TXBF:0x0 Ext:0x0 ASEL:0x0] VHT:[Info:0x0]
+12/25/2016 20:12:07.036 WiFiAWDManagerSubmitMetric: metric container could not be generated for metric id <0x90009>
+12/25/2016 20:12:07.036 Creating client for "configd"
+12/25/2016 20:12:07.058 
+Too frequent(0.035534 secs) rssi event from driver, ignoring
+
+12/25/2016 20:12:07.062 Completed Apple80211AssociateAsync (0 - 0x0)
+12/25/2016 20:12:07.062 Joined: DIGI-146A
+12/25/2016 20:12:07.062 Auto join association completed (0) with current state: Associating
+12/25/2016 20:12:07.062 __WiFiDeviceManagerStateMachineRun: current state: Associating
+12/25/2016 20:12:07.062 __WiFiDeviceManagerProcessAssociationResult: current state: Associating
+12/25/2016 20:12:07.062 WiFiNetworkSetKnownBssUsageData: BSS updated - current BSS: 4:bd:70:a4:e3:8 (11)
+12/25/2016 20:12:07.062 Removing problematic state for DIGI-146A, reason N/A reasonData=0
+12/25/2016 20:12:07.062 problematic networks =  and potentially problematic networks = 
+12/25/2016 20:12:07.063 No Change in Background Scan Networks, Skip Re-Programming Background Scan
+
+12/25/2016 20:12:07.063 __WiFiManagerDidAssociateCallback: network DIGI-146A, requestedInformation <CFBasicHash 0x14cd72c40 [0x1a0950150]>{type = mutable dict, count = 1,
+entries =>
+	2 : <CFString 0x10017e160 [0x1a0950150]>{contents = "reason"} = <CFString 0x100185180 [0x1a0950150]>{contents = "Associating"}
+}
+
+12/25/2016 20:12:07.072 WiFiDeviceManagerSetNetworks: Adding HS20 Account: 
+Domain name orange.ro
+3GPP MCC&MNC 226F10 
+Friendly Operator Name Orange
+12/25/2016 20:12:07.072 __WiFiDeviceManagerPrepareHS20Queries: created queries <CFArray 0x14ced7cf0 [0x1a0950150]>{type = mutable-small, count = 3, values = (
+	0 : <CFNumber 0xb0000000000010c1 [0x1a0950150]>{value = +268, type = kCFNumberSInt16Type}
+	1 : <CFNumber 0xb000000000001081 [0x1a0950150]>{value = +264, type = kCFNumberSInt16Type}
+	2 : <CFNumber 0xb000000000000031 [0x1a0950150]>{value = +3, type = kCFNumberSInt16Type}
+)}
+12/25/2016 20:12:07.073 Auto association attempt canceled because auto join state is Associating.
+12/25/2016 20:12:07.075 No Change in Background Scan Networks, Skip Re-Programming Background Scan
+
+12/25/2016 20:12:07.075 Dequeuing command type: "Scan" pending commands: 0
+12/25/2016 20:12:07.075 Attempting Apple80211ScanAsync on en0
+12/25/2016 20:12:07.082 MIS state is Disabled
+12/25/2016 20:12:07.082 MIS state queried by "UserEventAgent" is Disable
+12/25/2016 20:12:07.082 MIS state is Disabled
+12/25/2016 20:12:07.082 MIS state queried by "MobileMail" is Disable
+12/25/2016 20:12:07.082 MIS state is Disabled
+12/25/2016 20:12:07.082 MIS state queried by "locationd" is Disable
+12/25/2016 20:12:07.082 MIS state is Disabled
+12/25/2016 20:12:07.082 MIS state queried by "mediaserverd" is Disable
+12/25/2016 20:12:07.082 MIS state is Disabled
+12/25/2016 20:12:07.082 MIS state queried by "SpringBoard" is Disable
+12/25/2016 20:12:07.082 MIS state is Disabled
+12/25/2016 20:12:07.082 MIS state queried by "identityservices" is Disable
+12/25/2016 20:12:07.083 MIS state is Disabled
+12/25/2016 20:12:07.083 MIS state queried by "apsd" is Disable
+12/25/2016 20:12:07.083 MIS state is Disabled
+12/25/2016 20:12:07.083 MIS state queried by "imagent" is Disable
+12/25/2016 20:12:07.083 MIS state is Disabled
+12/25/2016 20:12:07.083 MIS state queried by "InCallService" is Disable
+12/25/2016 20:12:07.091 WiFiDeviceManagerSetNetworks: Adding HS20 Account: 
+Domain name orange.ro
+3GPP MCC&MNC 226F10 
+Friendly Operator Name Orange
+12/25/2016 20:12:07.091 __WiFiDeviceManagerPrepareHS20Queries: created queries <CFArray 0x14cfc4e80 [0x1a0950150]>{type = mutable-small, count = 3, values = (
+	0 : <CFNumber 0xb0000000000010c1 [0x1a0950150]>{value = +268, type = kCFNumberSInt16Type}
+	1 : <CFNumber 0xb000000000001081 [0x1a0950150]>{value = +264, type = kCFNumberSInt16Type}
+	2 : <CFNumber 0xb000000000000031 [0x1a0950150]>{value = +3, type = kCFNumberSInt16Type}
+)}
+12/25/2016 20:12:07.091 __WiFiDeviceManagerAutoAssociate: Already connected to DIGI-146A.
+12/25/2016 20:12:07.091 No Change in Background Scan Networks, Skip Re-Programming Background Scan
+
+12/25/2016 20:12:07.092 configd requesting removal of BGScan networks
+12/25/2016 20:12:07.092 No Change in Background Scan Networks, Skip Re-Programming Background Scan
+
+12/25/2016 20:12:07.092 __WiFiManagerSetEnableState: state TRUE, manager->enable.setting TRUE, manager->unlockedSinceBoot TRUE
+12/25/2016 20:12:07.092 Removing client for "configd"
+12/25/2016 20:12:07.094 MIS state is Disabled
+12/25/2016 20:12:07.094 MIS state queried by "nanoregistryd" is Disable
+12/25/2016 20:12:07.097 WoW is Disabled, 0 WoW Clients
+12/25/2016 20:12:07.264 IPV6 State change for en0
+12/25/2016 20:12:07.264 IP Address: 2a02:2f0a:c0b4:3b00:407:feca:4bdd:1fe6
+12/25/2016 20:12:07.264 IP Address: 2a02:2f0a:c0b4:3b00:81ea:b044:6f9d:f660
+12/25/2016 20:12:07.268 IPv4 Primary interface is pdp_ip0 and IPv6 Primary Interface is (null)
+12/25/2016 20:12:07.530 Completed Apple80211ScanAsync on en0 (0x0)
+12/25/2016 20:12:07.531 Async scan request completed for "locationd" (0)
+12/25/2016 20:12:08.240 IPV4 State change for en0
+12/25/2016 20:12:08.243 IP Address: 192.168.100.11
+12/25/2016 20:12:08.243 Router IP Address: 192.168.100.1
+12/25/2016 20:12:08.243 __WiFiDeviceCheckForIPV4ParamsChange: Setting power mode to kA11PowerProfileDefault
+12/25/2016 20:12:08.244 __WiFiManagerIPv4Callback: <en0> [DIGI-146A                               : isHidden=0, isEAP=0, isWPA=1, isWEP=0, type=0] isMainIf? 1, isRoutable? 1
+12/25/2016 20:12:08.244 -[WiFiIDSSyncEngine currentNetworkChanged]: <0x16e12f000>, role 1, currentNetwork DIGI-146A                               : isHidden=0, isEAP=0, isWPA=1, isWEP=0, type=0
+12/25/2016 20:12:08.244 -[WiFiIDSSyncEngine currentNetworkChanged]: reset waitForReAssociationTimer <CFRunLoopTimer 0x14ce6ecf0 [0x1a0950150]>{valid = Yes, firing = No, interval = 819052854, tolerance = 0, next fire date = 1.32412466e+09 (819742328 @ 12123080564391360), callout = (NSTimer) [WiFiIDSSyncEngine companionReAssociationWaitTimerFired:] (0x18292cfe0 / 0x1000e1010) (/usr/sbin/wifid), context = <CFRunLoopTimer context 0x14ce5c520>}
+12/25/2016 20:12:08.244 -[WiFiIDSSyncEngine sendCurrentCompanionNetwork]: autojoinAssistDict {
+    "SSID_STR" = "DIGI-146A";
+}
+12/25/2016 20:12:08.244 WiFiLQAMgrSetRouterIpv4Addr: Router IP Address: 192.168.100.1 
+12/25/2016 20:12:08.247 -[WiFiIDSSyncEngine sendToGizmoOfDataType:]: <0x16e1bb000> ID:(null), data type 1
+12/25/2016 20:12:08.248 __WiFiDeviceCheckForIPV4ParamsChange: configMethod DHCP, leaseExpiryDuration 4320 mins
+12/25/2016 20:12:08.248 WiFiAWDManagerSubmitMetric: metric container could not be generated for metric id <0x90007>
+12/25/2016 20:12:08.248 Router MAC Address: 04:bd:70:a4:e3:00
+12/25/2016 20:12:08.261 IPv4 Primary interface is pdp_ip0 and IPv6 Primary Interface is (null)
+12/25/2016 20:12:08.275 IPv4 Primary interface is en0 and IPv6 Primary Interface is (null)
+12/25/2016 20:12:08.517 ATJManager: setting ask-to-join interaction mode to Interactive
+12/25/2016 20:12:08.517 ATJManager: no entries to purge
+12/25/2016 20:12:08.520 User interaction ENABLED
+12/25/2016 20:12:08.520 Ignoring lock state manager->wakeMode 1
+
+12/25/2016 20:12:08.520 problematic networks =  and potentially problematic networks = 
+12/25/2016 20:12:08.520 Unblacklisting
+12/25/2016 20:12:08.520 __CreateBGScanRequest Hotspot Orange Mobile Wi-Fi added to BGScan List 
+12/25/2016 20:12:08.521 Preparing background scan request for "DIGI-146A" "UPC5493113" "TP-LINK_Extender_2.4GHz" "UPC2300204" "PRECIS" "eduroam" "G3_7030" "eg304" "eMAG" "Orange Mobile Wi-Fi" Background Scan Caching is Enabled
+12/25/2016 20:12:08.536 __WiFiDeviceManagerAutoAssociate: Already connected to DIGI-146A.
+12/25/2016 20:12:08.545 __WiFiDeviceCheckForIPRenewalWakeupSupport: State:/Network/Interface/en0/ActiveDuringSleepSupported = TRUE
+12/25/2016 20:12:08.557 IPV6 State change for en0
+12/25/2016 20:12:08.557 IP Address: 2a02:2f0a:c0b4:3b00:407:feca:4bdd:1fe6
+12/25/2016 20:12:08.557 IP Address: 2a02:2f0a:c0b4:3b00:81ea:b044:6f9d:f660
+12/25/2016 20:12:08.570 IPv4 Primary interface is en0 and IPv6 Primary Interface is en0
+12/25/2016 20:12:08.570 IPv4 Primary interface is en0 and IPv6 Primary Interface is en0
+12/25/2016 20:12:08.634 Async scan requested by "locationd" for 1 iterations with maxage=0 priority low on en0
+12/25/2016 20:12:08.634 Enqueuing command type: "Scan" pending commands: 0
+12/25/2016 20:12:08.634 Dequeuing command type: "Scan" pending commands: 0
+12/25/2016 20:12:08.634 Attempting Apple80211ScanAsync on en0
+12/25/2016 20:12:08.634 Completed Apple80211ScanAsync on en0 (0xe0820457)
+12/25/2016 20:12:08.634 Async scan request completed for "locationd" (-528350121)
+12/25/2016 20:12:08.761 Creating client for "CommCenter"
+12/25/2016 20:12:08.763 CommCenter requesting removal of BGScan networks
+12/25/2016 20:12:08.763 No Change in Background Scan Networks, Skip Re-Programming Background Scan
+
+12/25/2016 20:12:08.763 __WiFiManagerSetEnableState: state TRUE, manager->enable.setting TRUE, manager->unlockedSinceBoot TRUE
+12/25/2016 20:12:08.763 Removing client for "CommCenter"
+12/25/2016 20:12:09.260 IPv4 Primary interface is en0 and IPv6 Primary Interface is en0
+12/25/2016 20:12:09.260 IPv4 Primary interface is en0 and IPv6 Primary Interface is en0
+12/25/2016 20:12:10.758 BG Application: Not Present, BG Daemon: Present. Daemons: mediaserverd 
+12/25/2016 20:12:10.758 __WiFiManagerSetEnableState: state TRUE, manager->enable.setting TRUE, manager->unlockedSinceBoot TRUE
+12/25/2016 20:12:10.759 __WiFiDeviceManagerAutoAssociate: Already connected to DIGI-146A.
+12/25/2016 20:12:11.473 Client itunesstored set type to background application
+12/25/2016 20:12:11.473 __WiFiManagerSetEnableState: state TRUE, manager->enable.setting TRUE, manager->unlockedSinceBoot TRUE
+12/25/2016 20:12:11.473 BG Application: Not Present, BG Daemon: Present. Daemons: mediaserverd itunesstored 
+12/25/2016 20:12:11.473 __WiFiDeviceManagerAutoAssociate: Already connected to DIGI-146A.
+12/25/2016 20:12:11.966 __WiFiManagerCellularTransmitCallback_block_invoke: Cellular Transmit Started = FALSE
+12/25/2016 20:12:13.960 BG Application: Not Present, BG Daemon: Present. Daemons: mediaserverd itunesstored 
+12/25/2016 20:12:13.960 LPAS is Enabled
+12/25/2016 20:12:13.960 LPAS Enabled, Skip starting Disassocation timer
+12/25/2016 20:12:13.963 Client apsd set type to background application
+12/25/2016 20:12:13.964 __WiFiManagerSetEnableState: state TRUE, manager->enable.setting TRUE, manager->unlockedSinceBoot TRUE
+12/25/2016 20:12:13.964 BG Application: Not Present, BG Daemon: Present. Daemons: mediaserverd itunesstored apsd 
+12/25/2016 20:12:13.964 __WiFiDeviceManagerAutoAssociate: Already connected to DIGI-146A.
+12/25/2016 20:12:13.964 Enable WoW requested by "apsd"
+12/25/2016 20:12:13.964 WoW Capable = YES, Attempting to enable WoW and disable LPAS 
+12/25/2016 20:12:13.964 Setting WoW params to <CFBasicHash 0x14ce7abb0 [0x1a0950150]>{type = immutable dict, count = 3,
+entries =>
+	0 : <CFString 0x100175960 [0x1a0950150]>{contents = "IO80211InterfaceEnableLowPwrAssocMode"} = <CFBoolean 0x1a09506d8 [0x1a0950150]>{value = false}
+	1 : <CFString 0x100175940 [0x1a0950150]>{contents = "IO80211InterfaceEnableWoW"} = <CFBoolean 0x1a09506c8 [0x1a0950150]>{value = true}
+	2 : <CFString 0x100185ae0 [0x1a0950150]>{contents = "IO80211InterfaceEnableWoWOnCaptive"} = <CFBoolean 0x1a09506d8 [0x1a0950150]>{value = false}
+}
+
+12/25/2016 20:12:13.965 WiFiDeviceRequestAssociatedSleep: ActiveDuringSleepRequested is already set (<CFBasicHash 0x14cfcf860 [0x1a0950150]>{type = immutable dict, count = 0,
+entries =>
+}
+).
+12/25/2016 20:12:13.965 WoW Enabled by 1 Clients, lpas is Disabled, WoW Override is Disabled, Captive Disabled
+12/25/2016 20:12:13.965 Unable to dispatch WowStateChanged message to client MobileMail (268435460)
+12/25/2016 20:12:13.965 Unable to dispatch WowStateChanged message to client dataaccessd (268435460)
+12/25/2016 20:12:13.966 Unable to dispatch WowStateChanged message to client itunesstored (268435460)
+12/25/2016 20:12:13.966 Unable to dispatch WowStateChanged message to client mediaserverd (268435460)
+12/25/2016 20:12:13.966 Unable to dispatch WowStateChanged message to client assistantd (268435460)
+12/25/2016 20:12:13.966 apsd[273] is a wow client
+12/25/2016 20:12:13.966 WoW is Enabled, 1 WoW Clients
+12/25/2016 20:12:13.967 apsd[273] is a wow client
+12/25/2016 20:12:13.967 WoW is Enabled, 1 WoW Clients
+12/25/2016 20:12:13.967 apsd[273] is a wow client
+12/25/2016 20:12:13.967 WoW is Enabled, 1 WoW Clients
+12/25/2016 20:12:14.385 Async scan requested by "locationd" for 1 iterations with maxage=0 priority low on en0
+12/25/2016 20:12:14.385 Enqueuing command type: "Scan" pending commands: 0
+12/25/2016 20:12:14.385 Dequeuing command type: "Scan" pending commands: 0
+12/25/2016 20:12:14.385 Attempting Apple80211ScanAsync on en0
+12/25/2016 20:12:14.385 Completed Apple80211ScanAsync on en0 (0xe0820457)
+12/25/2016 20:12:14.385 Async scan request completed for "locationd" (-528350121)
+12/25/2016 20:12:17.021 Async scan requested by "locationd" for 1 iterations with maxage=0 priority normal on en0
+12/25/2016 20:12:17.021 Enqueuing command type: "Scan" pending commands: 0
+12/25/2016 20:12:17.021 Dequeuing command type: "Scan" pending commands: 0
+12/25/2016 20:12:17.021 Attempting Apple80211ScanAsync on en0
+12/25/2016 20:12:17.031 __WiFiLQAMgrLogStats: Rssi: -68 Cca: 18 TxPer: 0.0% (295) BcnPer: 2.8% (36) RxFrms 246 TxRate: 52000 RxRate: 65000
+12/25/2016 20:12:17.469 Completed Apple80211ScanAsync on en0 (0x0)
+12/25/2016 20:12:17.471 Async scan request completed for "locationd" (0)
+12/25/2016 20:12:17.540 Client itunesstored set type to normal application
+12/25/2016 20:12:17.541 __WiFiManagerSetEnableState: state TRUE, manager->enable.setting TRUE, manager->unlockedSinceBoot TRUE
+12/25/2016 20:12:17.542 BG Application: Not Present, BG Daemon: Present. Daemons: mediaserverd apsd 
+12/25/2016 20:12:19.421 Async scan requested by "locationd" for 1 iterations with maxage=0 priority low on en0
+12/25/2016 20:12:19.421 Enqueuing command type: "Scan" pending commands: 0
+12/25/2016 20:12:19.421 Dequeuing command type: "Scan" pending commands: 0
+12/25/2016 20:12:19.421 Attempting Apple80211ScanAsync on en0
+12/25/2016 20:12:19.422 Completed Apple80211ScanAsync on en0 (0xe0820457)
+12/25/2016 20:12:19.422 Async scan request completed for "locationd" (-528350121)
+12/25/2016 20:12:20.231 ATJManager: setting ask-to-join interaction mode to NonInteractive
+12/25/2016 20:12:20.231 ATJManager: no entries to purge
+12/25/2016 20:12:20.231 User interaction DISABLED
+12/25/2016 20:12:20.231 Ignoring lock state manager->wakeMode 1
+
+12/25/2016 20:12:20.287 Device display is OFF
+12/25/2016 20:12:22.035 __WiFiLQAMgrLogStats: Rssi: -68 Cca: 18 TxPer: 0.0% (16) BcnPer: 4.3% (46) RxFrms 11 TxRate: 52000 RxRate: 65000
+12/25/2016 20:12:22.607 
+Too frequent(0.572360 secs) rssi event from driver, ignoring
+
+12/25/2016 20:12:23.418 Async scan requested by "locationd" for 1 iterations with maxage=0 priority low on en0
+12/25/2016 20:12:23.418 Enqueuing command type: "Scan" pending commands: 0
+12/25/2016 20:12:23.418 Dequeuing command type: "Scan" pending commands: 0
+12/25/2016 20:12:23.418 Attempting Apple80211ScanAsync on en0
+12/25/2016 20:12:23.418 Completed Apple80211ScanAsync on en0 (0xe0820457)
+12/25/2016 20:12:23.418 Async scan request completed for "locationd" (-528350121)
+12/25/2016 20:12:27.625 
+Too frequent(0.581788 secs) rssi event from driver, ignoring
+
+12/25/2016 20:12:31.476 scanCache: Purging scan cache
+12/25/2016 20:12:32.647 
+Too frequent(0.587196 secs) rssi event from driver, ignoring
+
+12/25/2016 20:12:37.330 Client itunesstored set type to background application
+12/25/2016 20:12:37.330 __WiFiManagerSetEnableState: state TRUE, manager->enable.setting TRUE, manager->unlockedSinceBoot TRUE
+12/25/2016 20:12:37.338 BG Application: Not Present, BG Daemon: Present. Daemons: mediaserverd itunesstored apsd 
+12/25/2016 20:12:37.338 __WiFiDeviceManagerAutoAssociate: Already connected to DIGI-146A.
+12/25/2016 20:12:42.688 Client itunesstored set type to normal application
+12/25/2016 20:12:42.688 __WiFiManagerSetEnableState: state TRUE, manager->enable.setting TRUE, manager->unlockedSinceBoot TRUE
+12/25/2016 20:12:42.689 BG Application: Not Present, BG Daemon: Present. Daemons: mediaserverd apsd 
+12/25/2016 20:12:57.091 __WiFiLQAMgrLogStats: Rssi: -67 Cca: 7 TxPer: 50.0% (2) BcnPer: 2.0% (50) RxFrms 2 TxRate: 52000 RxRate: 58500
+12/25/2016 20:13:08.536 Background Network Application entered
+12/25/2016 20:13:08.537 BG Application: Present, BG Daemon: Present. Daemons: mediaserverd apsd 
+12/25/2016 20:13:08.537 __WiFiManagerSetEnableState: state TRUE, manager->enable.setting TRUE, manager->unlockedSinceBoot TRUE
+12/25/2016 20:13:08.537 __WiFiDeviceManagerAutoAssociate: Already connected to DIGI-146A.
+12/25/2016 20:13:08.539 Background Network Application entered
+12/25/2016 20:13:08.539 BG Application: Not Present, BG Daemon: Present. Daemons: mediaserverd apsd 
+12/25/2016 20:13:08.540 __WiFiManagerSetEnableState: state TRUE, manager->enable.setting TRUE, manager->unlockedSinceBoot TRUE
+12/25/2016 20:13:08.540 __WiFiDeviceManagerAutoAssociate: Already connected to DIGI-146A.
+12/25/2016 20:13:25.182 Disable WoW requested by "apsd"
+12/25/2016 20:13:25.183 WoW Capable = YES, Attempting to disable WoW and enable LPAS 
+12/25/2016 20:13:25.183 Setting WoW params to <CFBasicHash 0x14cd5f040 [0x1a0950150]>{type = immutable dict, count = 3,
+entries =>
+	0 : <CFString 0x100175960 [0x1a0950150]>{contents = "IO80211InterfaceEnableLowPwrAssocMode"} = <CFBoolean 0x1a09506c8 [0x1a0950150]>{value = true}
+	1 : <CFString 0x100175940 [0x1a0950150]>{contents = "IO80211InterfaceEnableWoW"} = <CFBoolean 0x1a09506d8 [0x1a0950150]>{value = false}
+	2 : <CFString 0x100185ae0 [0x1a0950150]>{contents = "IO80211InterfaceEnableWoWOnCaptive"} = <CFBoolean 0x1a09506d8 [0x1a0950150]>{value = false}
+}
+
+12/25/2016 20:13:25.185 WiFiDeviceRequestAssociatedSleep: ActiveDuringSleepRequested is already set (<CFBasicHash 0x14cfa74c0 [0x1a0950150]>{type = immutable dict, count = 0,
+entries =>
+}
+).
+12/25/2016 20:13:25.185 WoW Disabled, 0 WoW Clients, lpas is Enabled, WoW Override is Disabled, Captive Disabled
+12/25/2016 20:13:25.185 Unable to dispatch WowStateChanged message to client MobileMail (268435460)
+12/25/2016 20:13:25.186 Unable to dispatch WowStateChanged message to client dataaccessd (268435460)
+12/25/2016 20:13:25.186 Unable to dispatch WowStateChanged message to client itunesstored (268435460)
+12/25/2016 20:13:25.187 Unable to dispatch WowStateChanged message to client mediaserverd (268435460)
+12/25/2016 20:13:25.187 Unable to dispatch WowStateChanged message to client assistantd (268435460)
+12/25/2016 20:13:25.187 WoW is Disabled, 0 WoW Clients
+12/25/2016 20:13:25.188 WoW is Disabled, 0 WoW Clients
+12/25/2016 20:13:25.191 WoW is Disabled, 0 WoW Clients
+12/25/2016 20:13:27.837 
+Too frequent(0.703284 secs) rssi event from driver, ignoring
+
+12/25/2016 20:13:30.187 Client apsd set type to normal application
+12/25/2016 20:13:30.187 __WiFiManagerSetEnableState: state TRUE, manager->enable.setting TRUE, manager->unlockedSinceBoot TRUE
+12/25/2016 20:13:30.187 BG Application: Not Present, BG Daemon: Present. Daemons: mediaserverd 
+12/25/2016 20:13:37.150 __WiFiLQAMgrLogStats: Rssi: -68 Cca: 53 TxPer: 0.0% (2) BcnPer: 4.0% (50) RxFrms 4 TxRate: 52000 RxRate: 1000
+12/25/2016 20:13:42.159 __WiFiLQAMgrLogStats: Rssi: -65 Cca: 30 TxPer: 0.0% (1) BcnPer: 0.0% (50) RxFrms 1 TxRate: 52000 RxRate: 65000
+12/25/2016 20:13:57.184 __WiFiLQAMgrLogStats: Rssi: -66 Cca: 4 TxPer: 0.0% (2) BcnPer: 2.0% (50) RxFrms 2 TxRate: 52000 RxRate: 65000
+12/25/2016 20:14:00.938 WiFiLocaleManagerCheckLocale: trying to determine locale...
+12/25/2016 20:14:00.938 WiFiManagerCoreLocationGetCachedLocation: getting cached location...
+12/25/2016 20:14:00.960 __WiFiLocaleManagerGetLocaleFromMcc: finding iso country code for mcc 226 ....
+12/25/2016 20:14:00.960 WiFiLocationServiceManagerIsLocationValid: cachedLocationTimeout 120.000000 location age 823.442919secs, lifeSpan -1.000000 accuracy 65.000000(highAccReq 0), isValid 1
+12/25/2016 20:14:00.960 WiFiLocationServiceManagerStartLowAccuracyMonitoring: Cached low accuracy location is valid
+12/25/2016 20:14:00.960 WiFiLocationServiceManagerIsLocationValid: cachedLocationTimeout 120.000000 location age 823.443057secs, lifeSpan -1.000000 accuracy 65.000000(highAccReq 1), isValid 1
+12/25/2016 20:14:00.960 WiFiLocationServiceManagerIsLocationValid: cachedLocationTimeout 120.000000 location age 823.443111secs, lifeSpan -1.000000 accuracy 65.000000(highAccReq 0), isValid 1
+12/25/2016 20:14:00.960 __WiFiLocationServiceManagerProcessLocationAvailableEvent: isValidHighAccuracyLocation 1,  isValidLowAccuracyLocation 1
+12/25/2016 20:14:00.960 __WiFiLocationServiceManagerProcessLocationAvailableEvent: give low accuracy callback
+12/25/2016 20:14:00.961 __WiFiLocaleManagerGetLocaleFromLocation: <+44.42591014,+26.13607998> +/- 65.00m (speed -1.00 mps / course -1.00) @ 12/25/16, 8:00:17 PM Eastern European Standard Time
+12/25/2016 20:14:00.961 locale from bounding box 
+12/25/2016 20:14:00.961 new locale:  , locale: 
+12/25/2016 20:14:00.961 Stopping Low Accuracy Location Monitoring
+12/25/2016 20:14:00.961 CLMonitoring is already stopped
+12/25/2016 20:14:00.961 Stopping Low Accuracy Location Monitoring
+12/25/2016 20:14:00.961 CLMonitoring is already stopped
+12/25/2016 20:14:00.962 __WiFiLocationServiceManagerEventCallback, got cb dict {
+    eventType = 0;
+    location = "<+44.42616565,+26.13629431> +/- 10.00m (speed 0.00 mps / course 187.38) @ 12/25/16, 8:12:34 PM Eastern European Standard Time";
+}
+12/25/2016 20:14:00.962 WiFiLocationServiceManagerIsLocationValid: cachedLocationTimeout 120.000000 location age 86.574299secs, lifeSpan -1.000000 accuracy 10.000000(highAccReq 1), isValid 1
+12/25/2016 20:14:00.962 WiFiLocationServiceManagerIsLocationValid: cachedLocationTimeout 120.000000 location age 86.574353secs, lifeSpan -1.000000 accuracy 10.000000(highAccReq 0), isValid 1
+12/25/2016 20:14:00.962 __WiFiLocationServiceManagerProcessLocationAvailableEvent: isValidHighAccuracyLocation 1,  isValidLowAccuracyLocation 1
+12/25/2016 20:14:02.192 __WiFiLQAMgrLogStats: Rssi: -66 Cca: 52 TxPer: 0.0% (12) BcnPer: 0.0% (50) RxFrms 14 TxRate: 58500 RxRate: 65000
+12/25/2016 20:14:07.201 __WiFiLQAMgrLogStats: Rssi: -65 Cca: 30 TxPer: 0.0% (1) BcnPer: 0.0% (50) RxFrms 2 TxRate: 58500 RxRate: 65000
+12/25/2016 20:14:12.209 __WiFiLQAMgrLogStats: Rssi: -67 Cca: 30 TxPer: 0.0% (6) BcnPer: 2.0% (50) RxFrms 4 TxRate: 58500 RxRate: 65000
+12/25/2016 20:14:15.901 Received kIOMessageSystemWillSleep
+12/25/2016 20:14:15.901 System Sleep notification, Disabling auto-join
+12/25/2016 20:14:15.901 __WiFiManagerSetEnableState: state FALSE, manager->enable.setting TRUE, manager->unlockedSinceBoot TRUE
+12/25/2016 20:14:15.901 Disabling automatic association
+12/25/2016 20:14:15.952 WoW is Disabled, 0 WoW Clients
+12/25/2016 20:14:16.046 __WiFiDeviceManagerAwdlAvailableCallback: AWDL availability changed to FALSE
+12/25/2016 20:14:16.046 __WiFiDeviceCopyLinkChangedSubReasonString: Apple80211ReturnToString failed 1
+12/25/2016 20:14:16.046 __WiFiDeviceProcessDriverAvailableEvent: driver availability false, reason PowerOff(0xe0821804), subreason (null)(0x0)
+12/25/2016 20:14:16.046 __WiFiManagerDispatchDeviceAvailable: driver availability false
+
+12/25/2016 20:14:16.047 WiFiAWDManagerSubmitMetric: metric container could not be generated for metric id <0x9000e>
+12/25/2016 20:14:16.051 WoW is Disabled, 0 WoW Clients
+12/25/2016 20:16:59.603 Received kIOMessageSystemWillPowerOn
+12/25/2016 20:16:59.612 System wake reason: AOP.ExternalReq menu
+12/25/2016 20:16:59.612 System Powered ON notification Re-enabling auto-join
+12/25/2016 20:16:59.612 __WiFiManagerSetEnableState: state TRUE, manager->enable.setting TRUE, manager->unlockedSinceBoot TRUE
+12/25/2016 20:16:59.612 Enabling automatic association
+12/25/2016 20:16:59.612 __WiFiDeviceManagerAutoAssociate: Already connected to DIGI-146A.
+12/25/2016 20:16:59.612 WiFiLocaleManagerCheckLocale: trying to determine locale...
+12/25/2016 20:16:59.612 WiFiManagerCoreLocationGetCachedLocation: getting cached location...
+12/25/2016 20:16:59.643 __WiFiLocaleManagerGetLocaleFromMcc: finding iso country code for mcc 226 ....
+12/25/2016 20:16:59.643 WiFiLocationServiceManagerIsLocationValid: cachedLocationTimeout 120.000000 location age 265.255431secs, lifeSpan -1.000000 accuracy 10.000000(highAccReq 0), isValid 1
+12/25/2016 20:16:59.643 WiFiLocationServiceManagerStartLowAccuracyMonitoring: Cached low accuracy location is valid
+12/25/2016 20:16:59.643 WiFiLocationServiceManagerIsLocationValid: cachedLocationTimeout 120.000000 location age 265.255558secs, lifeSpan -1.000000 accuracy 10.000000(highAccReq 1), isValid 1
+12/25/2016 20:16:59.644 WiFiLocationServiceManagerIsLocationValid: cachedLocationTimeout 120.000000 location age 265.255597secs, lifeSpan -1.000000 accuracy 10.000000(highAccReq 0), isValid 1
+12/25/2016 20:16:59.644 __WiFiLocationServiceManagerProcessLocationAvailableEvent: isValidHighAccuracyLocation 1,  isValidLowAccuracyLocation 1
+12/25/2016 20:16:59.644 __WiFiLocationServiceManagerProcessLocationAvailableEvent: give low accuracy callback
+12/25/2016 20:16:59.647 __WiFiLocaleManagerGetLocaleFromLocation: <+44.42616565,+26.13629431> +/- 10.00m (speed 0.00 mps / course 187.38) @ 12/25/16, 8:12:34 PM Eastern European Standard Time
+12/25/2016 20:16:59.647 locale from bounding box 
+12/25/2016 20:16:59.647 new locale:  , locale: 
+12/25/2016 20:16:59.647 Stopping Low Accuracy Location Monitoring
+12/25/2016 20:16:59.647 CLMonitoring is already stopped
+12/25/2016 20:16:59.647 Stopping Low Accuracy Location Monitoring
+12/25/2016 20:16:59.647 CLMonitoring is already stopped
+12/25/2016 20:16:59.647 __WiFiLocationServiceManagerEventCallback, got cb dict {
+    eventType = 0;
+    location = "<+44.42616565,+26.13629431> +/- 10.00m (speed 0.00 mps / course 187.38) @ 12/25/16, 8:12:34 PM Eastern European Standard Time";
+}
+12/25/2016 20:16:59.648 WiFiLocationServiceManagerIsLocationValid: cachedLocationTimeout 120.000000 location age 265.260099secs, lifeSpan -1.000000 accuracy 10.000000(highAccReq 1), isValid 1
+12/25/2016 20:16:59.648 WiFiLocationServiceManagerIsLocationValid: cachedLocationTimeout 120.000000 location age 265.260138secs, lifeSpan -1.000000 accuracy 10.000000(highAccReq 0), isValid 1
+12/25/2016 20:16:59.648 __WiFiLocationServiceManagerProcessLocationAvailableEvent: isValidHighAccuracyLocation 1,  isValidLowAccuracyLocation 1
+12/25/2016 20:16:59.648 Power stats update: Type 0x5 UnassociatedSleepDur 0 AssociatedSleepDur 95663 TotalDur 163510 RoamDur 0
+12/25/2016 20:16:59.648 WiFiAWDManagerSubmitMetric: metric container could not be generated for metric id <0x90010>
+12/25/2016 20:16:59.650 Device display is ON
+12/25/2016 20:16:59.650 __WiFiManagerSetEnableState: state TRUE, manager->enable.setting TRUE, manager->unlockedSinceBoot TRUE
+12/25/2016 20:16:59.650 __WiFiDeviceManagerAutoAssociate: Already connected to DIGI-146A.
+12/25/2016 20:16:59.650 __WiFiLQAMgrLogStats: Rssi: -72 Cca: 30 TxPer: 0.0% (0) BcnPer: 0.0% (0) RxFrms 0 TxRate: 0 RxRate: 0
+12/25/2016 20:16:59.651 __WiFiDeviceCopyLinkChangedSubReasonString: Apple80211ReturnToString failed 1
+12/25/2016 20:16:59.651 __WiFiDeviceProcessDriverAvailableEvent: driver availability true, reason Initializing(0xe0821803), subreason (null)(0x0)
+12/25/2016 20:16:59.651 __WiFiManagerDispatchDeviceAvailable: driver availability true
+
+12/25/2016 20:16:59.652 __WiFiDeviceManagerAutoAssociate: Already connected to DIGI-146A.
+12/25/2016 20:16:59.652 WiFiAWDManagerSubmitMetric: metric container could not be generated for metric id <0x9000e>
+12/25/2016 20:16:59.653 __WiFiDeviceManagerAutoAssociate: Already connected to DIGI-146A.
+12/25/2016 20:16:59.653 No Change in Background Scan Networks, Skip Re-Programming Background Scan
+
+12/25/2016 20:16:59.729 __WiFiDeviceManagerAwdlAvailableCallback: AWDL availability changed to TRUE
+12/25/2016 20:16:59.764 __WiFiManagerCellularTransmitCallback_block_invoke: Cellular Transmit Started = FALSE
+12/25/2016 20:16:59.823 WoW is Disabled, 0 WoW Clients
+12/25/2016 20:16:59.837 Async scan requested by "locationd" for 1 iterations with maxage=0 priority normal on en0
+12/25/2016 20:16:59.837 Enqueuing command type: "Scan" pending commands: 0
+12/25/2016 20:16:59.838 Dequeuing command type: "Scan" pending commands: 0
+12/25/2016 20:16:59.838 Attempting Apple80211ScanAsync on en0
+12/25/2016 20:17:00.071 Completed Apple80211ScanAsync on en0 (0x0)
+12/25/2016 20:17:00.072 Async scan request completed for "locationd" (0)
+12/25/2016 20:17:00.073 Async scan requested by "locationd" for 1 iterations with maxage=0 priority normal on en0
+12/25/2016 20:17:00.073 Enqueuing command type: "Scan" pending commands: 0
+12/25/2016 20:17:00.073 Dequeuing command type: "Scan" pending commands: 0
+12/25/2016 20:17:00.073 Attempting Apple80211ScanAsync on en0
+12/25/2016 20:17:00.532 Completed Apple80211ScanAsync on en0 (0x0)
+12/25/2016 20:17:00.534 Async scan request completed for "locationd" (0)
+12/25/2016 20:17:01.000 ATJManager: setting ask-to-join interaction mode to Interactive
+12/25/2016 20:17:01.000 ATJManager: no entries to purge
+12/25/2016 20:17:01.000 User interaction ENABLED
+12/25/2016 20:17:01.001 Ignoring lock state manager->wakeMode 1
+
+12/25/2016 20:17:01.001 problematic networks =  and potentially problematic networks = 
+12/25/2016 20:17:01.001 Unblacklisting
+12/25/2016 20:17:01.001 No Change in Background Scan Networks, Skip Re-Programming Background Scan
+
+12/25/2016 20:17:01.001 __WiFiDeviceManagerAutoAssociate: Already connected to DIGI-146A.
+12/25/2016 20:17:01.031 Client itunesstored set type to background application
+12/25/2016 20:17:01.031 __WiFiManagerSetEnableState: state TRUE, manager->enable.setting TRUE, manager->unlockedSinceBoot TRUE
+12/25/2016 20:17:01.034 BG Application: Not Present, BG Daemon: Present. Daemons: mediaserverd itunesstored 
+12/25/2016 20:17:01.034 __WiFiDeviceManagerAutoAssociate: Already connected to DIGI-146A.
+12/25/2016 20:17:03.018 BG Application: Not Present, BG Daemon: Present. Daemons: mediaserverd itunesstored 
+12/25/2016 20:17:03.018 __WiFiManagerSetEnableState: state TRUE, manager->enable.setting TRUE, manager->unlockedSinceBoot TRUE
+12/25/2016 20:17:03.018 __WiFiDeviceManagerAutoAssociate: Already connected to DIGI-146A.
+12/25/2016 20:17:06.355 Client apsd set type to background application
+12/25/2016 20:17:06.355 __WiFiManagerSetEnableState: state TRUE, manager->enable.setting TRUE, manager->unlockedSinceBoot TRUE
+12/25/2016 20:17:06.356 BG Application: Not Present, BG Daemon: Present. Daemons: mediaserverd itunesstored apsd 
+12/25/2016 20:17:06.356 __WiFiDeviceManagerAutoAssociate: Already connected to DIGI-146A.
+12/25/2016 20:17:06.356 Enable WoW requested by "apsd"
+12/25/2016 20:17:06.357 WoW Capable = YES, Attempting to enable WoW and disable LPAS 
+12/25/2016 20:17:06.357 Setting WoW params to <CFBasicHash 0x14cf7e920 [0x1a0950150]>{type = immutable dict, count = 3,
+entries =>
+	0 : <CFString 0x100175960 [0x1a0950150]>{contents = "IO80211InterfaceEnableLowPwrAssocMode"} = <CFBoolean 0x1a09506d8 [0x1a0950150]>{value = false}
+	1 : <CFString 0x100175940 [0x1a0950150]>{contents = "IO80211InterfaceEnableWoW"} = <CFBoolean 0x1a09506c8 [0x1a0950150]>{value = true}
+	2 : <CFString 0x100185ae0 [0x1a0950150]>{contents = "IO80211InterfaceEnableWoWOnCaptive"} = <CFBoolean 0x1a09506d8 [0x1a0950150]>{value = false}
+}
+
+12/25/2016 20:17:06.360 WiFiDeviceRequestAssociatedSleep: ActiveDuringSleepRequested is already set (<CFBasicHash 0x14cdc9c30 [0x1a0950150]>{type = immutable dict, count = 0,
+entries =>
+}
+).
+12/25/2016 20:17:06.360 WoW Enabled by 1 Clients, lpas is Disabled, WoW Override is Disabled, Captive Disabled
+12/25/2016 20:17:06.360 Unable to dispatch WowStateChanged message to client MobileMail (268435460)
+12/25/2016 20:17:06.361 Unable to dispatch WowStateChanged message to client dataaccessd (268435460)
+12/25/2016 20:17:06.361 Unable to dispatch WowStateChanged message to client itunesstored (268435460)
+12/25/2016 20:17:06.361 Unable to dispatch WowStateChanged message to client mediaserverd (268435460)
+12/25/2016 20:17:06.363 Unable to dispatch WowStateChanged message to client assistantd (268435460)
+12/25/2016 20:17:06.364 apsd[273] is a wow client
+12/25/2016 20:17:06.364 WoW is Enabled, 1 WoW Clients
+12/25/2016 20:17:06.365 apsd[273] is a wow client
+12/25/2016 20:17:06.365 WoW is Enabled, 1 WoW Clients
+12/25/2016 20:17:06.367 apsd[273] is a wow client
+12/25/2016 20:17:06.367 WoW is Enabled, 1 WoW Clients
+12/25/2016 20:17:06.867 Client itunesstored set type to normal application
+12/25/2016 20:17:06.867 __WiFiManagerSetEnableState: state TRUE, manager->enable.setting TRUE, manager->unlockedSinceBoot TRUE
+12/25/2016 20:17:06.868 BG Application: Not Present, BG Daemon: Present. Daemons: mediaserverd apsd 
+12/25/2016 20:17:09.565 __WiFiLQAMgrLogStats: Rssi: -64 Cca: 27 TxPer: 0.0% (18) BcnPer: 0.0% (50) RxFrms 16 TxRate: 52000 RxRate: 65000
+12/25/2016 20:17:09.636 Foreground Network Application entered.
+12/25/2016 20:17:09.636 BG Application: Not Present, BG Daemon: Present. Daemons: mediaserverd apsd 
+12/25/2016 20:17:09.636 problematic networks =  and potentially problematic networks = 
+12/25/2016 20:17:09.636 Unblacklisting
+12/25/2016 20:17:09.639 No Change in Background Scan Networks, Skip Re-Programming Background Scan
+
+12/25/2016 20:17:09.639 __WiFiManagerSetEnableState: state TRUE, manager->enable.setting TRUE, manager->unlockedSinceBoot TRUE
+12/25/2016 20:17:09.639 __WiFiDeviceManagerAutoAssociate: Already connected to DIGI-146A.
+12/25/2016 20:17:09.649 BG Application: Not Present, BG Daemon: Present. Daemons: mediaserverd apsd 
+12/25/2016 20:17:10.126 
+Too frequent(0.560976 secs) rssi event from driver, ignoring
+
+12/25/2016 20:17:14.535 scanCache: Purging scan cache
+12/25/2016 20:17:15.143 
+Too frequent(0.577808 secs) rssi event from driver, ignoring
+
+12/25/2016 20:17:16.845 Client dataaccessd set type to background application
+12/25/2016 20:17:16.845 __WiFiManagerSetEnableState: state TRUE, manager->enable.setting TRUE, manager->unlockedSinceBoot TRUE
+12/25/2016 20:17:16.845 BG Application: Not Present, BG Daemon: Present. Daemons: mediaserverd dataaccessd apsd 
+12/25/2016 20:17:16.846 __WiFiDeviceManagerAutoAssociate: Already connected to DIGI-146A.
+12/25/2016 20:17:16.997 Client dataaccessd set type to normal application
+12/25/2016 20:17:16.997 __WiFiManagerSetEnableState: state TRUE, manager->enable.setting TRUE, manager->unlockedSinceBoot TRUE
+12/25/2016 20:17:16.997 BG Application: Not Present, BG Daemon: Present. Daemons: mediaserverd apsd 
+12/25/2016 20:17:17.017 Client dataaccessd set type to background application
+12/25/2016 20:17:17.017 __WiFiManagerSetEnableState: state TRUE, manager->enable.setting TRUE, manager->unlockedSinceBoot TRUE
+12/25/2016 20:17:17.017 BG Application: Not Present, BG Daemon: Present. Daemons: mediaserverd dataaccessd apsd 
+12/25/2016 20:17:17.021 __WiFiDeviceManagerAutoAssociate: Already connected to DIGI-146A.
+12/25/2016 20:17:17.688 Client dataaccessd set type to background application
+12/25/2016 20:17:18.349 Client dataaccessd set type to background application
+12/25/2016 20:17:18.775 Client dataaccessd set type to normal application
+12/25/2016 20:17:18.776 __WiFiManagerSetEnableState: state TRUE, manager->enable.setting TRUE, manager->unlockedSinceBoot TRUE
+12/25/2016 20:17:18.776 BG Application: Not Present, BG Daemon: Present. Daemons: mediaserverd apsd 
+12/25/2016 20:17:19.022 Client dataaccessd set type to background application
+12/25/2016 20:17:19.022 __WiFiManagerSetEnableState: state TRUE, manager->enable.setting TRUE, manager->unlockedSinceBoot TRUE
+12/25/2016 20:17:19.023 BG Application: Not Present, BG Daemon: Present. Daemons: mediaserverd dataaccessd apsd 
+12/25/2016 20:17:19.023 __WiFiDeviceManagerAutoAssociate: Already connected to DIGI-146A.
+12/25/2016 20:17:19.447 Client dataaccessd set type to normal application
+12/25/2016 20:17:19.448 __WiFiManagerSetEnableState: state TRUE, manager->enable.setting TRUE, manager->unlockedSinceBoot TRUE
+12/25/2016 20:17:19.448 BG Application: Not Present, BG Daemon: Present. Daemons: mediaserverd apsd 
+12/25/2016 20:17:20.066 Client dataaccessd set type to normal application
+12/25/2016 20:17:20.281 Client dataaccessd set type to normal application
+12/25/2016 20:17:20.557 apsd[273] is a wow client
+12/25/2016 20:17:20.557 WoW is Enabled, 1 WoW Clients
+12/25/2016 20:17:24.573 __WiFiLQAMgrLogStats: Rssi: -59 Cca: 16 TxPer: 0.0% (50) BcnPer: 0.0% (49) RxFrms 52 TxRate: 52000 RxRate: 65000
+12/25/2016 20:17:29.584 __WiFiLQAMgrLogStats: Rssi: -59 Cca: 16 TxPer: 0.0% (36) BcnPer: 2.0% (50) RxFrms 36 TxRate: 58500 RxRate: 65000
+12/25/2016 20:17:34.584 __WiFiLQAMgrLogStats: Rssi: -63 Cca: 16 TxPer: 0.1% (704) BcnPer: 4.0% (50) RxFrms 776 TxRate: 39000 RxRate: 65000
+12/25/2016 20:17:39.595 __WiFiLQAMgrLogStats: Rssi: -67 Cca: 32 TxPer: 0.0% (354) BcnPer: 0.0% (50) RxFrms 488 TxRate: 39000 RxRate: 52000
+12/25/2016 20:17:44.610 __WiFiLQAMgrLogStats: Rssi: -68 Cca: 52 TxPer: 0.0% (5) BcnPer: 0.0% (0) RxFrms 3 TxRate: 52000 RxRate: 65000
+12/25/2016 20:17:44.949 
+Too frequent(0.338802 secs) rssi event from driver, ignoring
+
+12/25/2016 20:17:49.966 
+Too frequent(0.359937 secs) rssi event from driver, ignoring
+
+12/25/2016 20:17:59.626 __WiFiLQAMgrLogStats: Rssi: -65 Cca: 5 TxPer: 0.0% (15) BcnPer: 2.0% (50) RxFrms 14 TxRate: 26000 RxRate: 52000
+12/25/2016 20:18:00.986 Background Network Application entered
+12/25/2016 20:18:00.987 BG Application: Present, BG Daemon: Present. Daemons: mediaserverd apsd 
+12/25/2016 20:18:00.989 Background Network Application entered
+12/25/2016 20:18:00.989 BG Application: Not Present, BG Daemon: Present. Daemons: mediaserverd apsd 
+12/25/2016 20:18:04.630 
+Too frequent(0.212965 secs) rssi event from driver, ignoring
+
+12/25/2016 20:18:09.637 
+Too frequent(0.202210 secs) rssi event from driver, ignoring
+
+12/25/2016 20:18:14.646 __WiFiLQAMgrLogStats: Rssi: -63 Cca: 27 TxPer: 0.0% (0) BcnPer: 0.0% (50) RxFrms 2 TxRate: 39000 RxRate: 65000
+12/25/2016 20:18:19.652 __WiFiLQAMgrLogStats: Rssi: -63 Cca: 57 TxPer: 0.0% (0) BcnPer: 0.0% (0) RxFrms 0 TxRate: 0 RxRate: 0
+12/25/2016 20:18:24.659 __WiFiLQAMgrLogStats: Rssi: -63 Cca: 29 TxPer: 0.0% (1) BcnPer: 1.0% (100) RxFrms 1 TxRate: 39000 RxRate: 65000
+12/25/2016 20:18:29.668 __WiFiLQAMgrLogStats: Rssi: -62 Cca: 18 TxPer: 0.0% (4) BcnPer: 2.0% (50) RxFrms 3 TxRate: 39000 RxRate: 65000
+12/25/2016 20:18:34.676 __WiFiLQAMgrLogStats: Rssi: -62 Cca: 18 TxPer: 0.0% (15) BcnPer: 0.0% (50) RxFrms 10 TxRate: 39000 RxRate: 1000
+12/25/2016 20:18:39.680 __WiFiLQAMgrLogStats: Rssi: -60 Cca: 28 TxPer: 0.0% (7) BcnPer: 2.0% (50) RxFrms 5 TxRate: 39000 RxRate: 65000
+12/25/2016 20:18:44.280 WiFiLocaleManagerCheckLocale: trying to determine locale...
+12/25/2016 20:18:44.280 WiFiManagerCoreLocationGetCachedLocation: getting cached location...
+12/25/2016 20:18:44.293 __WiFiLocaleManagerGetLocaleFromMcc: finding iso country code for mcc 226 ....
+12/25/2016 20:18:44.293 WiFiLocationServiceManagerIsLocationValid: cachedLocationTimeout 120.000000 location age 369.905360secs, lifeSpan -1.000000 accuracy 10.000000(highAccReq 0), isValid 1
+12/25/2016 20:18:44.293 WiFiLocationServiceManagerStartLowAccuracyMonitoring: Cached low accuracy location is valid
+12/25/2016 20:18:44.293 WiFiLocationServiceManagerIsLocationValid: cachedLocationTimeout 120.000000 location age 369.905497secs, lifeSpan -1.000000 accuracy 10.000000(highAccReq 1), isValid 1
+12/25/2016 20:18:44.293 WiFiLocationServiceManagerIsLocationValid: cachedLocationTimeout 120.000000 location age 369.905551secs, lifeSpan -1.000000 accuracy 10.000000(highAccReq 0), isValid 1
+12/25/2016 20:18:44.294 __WiFiLocationServiceManagerProcessLocationAvailableEvent: isValidHighAccuracyLocation 1,  isValidLowAccuracyLocation 1
+12/25/2016 20:18:44.294 __WiFiLocationServiceManagerProcessLocationAvailableEvent: give low accuracy callback
+12/25/2016 20:18:44.294 __WiFiLocaleManagerGetLocaleFromLocation: <+44.42616565,+26.13629431> +/- 10.00m (speed 0.00 mps / course 187.38) @ 12/25/16, 8:12:34 PM Eastern European Standard Time
+12/25/2016 20:18:44.295 locale from bounding box 
+12/25/2016 20:18:44.295 new locale:  , locale: 
+12/25/2016 20:18:44.295 Stopping Low Accuracy Location Monitoring
+12/25/2016 20:18:44.295 CLMonitoring is already stopped
+12/25/2016 20:18:44.295 Stopping Low Accuracy Location Monitoring
+12/25/2016 20:18:44.295 CLMonitoring is already stopped
+12/25/2016 20:18:44.295 __WiFiLocationServiceManagerEventCallback, got cb dict {
+    eventType = 0;
+    location = "<+44.42624909,+26.13583056> +/- 65.00m (speed -1.00 mps / course -1.00) @ 12/25/16, 8:17:09 PM Eastern European Standard Time";
+}
+12/25/2016 20:18:44.296 WiFiLocationServiceManagerIsLocationValid: cachedLocationTimeout 120.000000 location age 95.216571secs, lifeSpan -1.000000 accuracy 65.000000(highAccReq 1), isValid 1
+12/25/2016 20:18:44.296 WiFiLocationServiceManagerIsLocationValid: cachedLocationTimeout 120.000000 location age 95.216625secs, lifeSpan -1.000000 accuracy 65.000000(highAccReq 0), isValid 1
+12/25/2016 20:18:44.296 __WiFiLocationServiceManagerProcessLocationAvailableEvent: isValidHighAccuracyLocation 1,  isValidLowAccuracyLocation 1
+12/25/2016 20:18:44.689 __WiFiLQAMgrLogStats: Rssi: -62 Cca: 15 TxPer: 0.0% (5) BcnPer: 0.0% (50) RxFrms 8 TxRate: 39000 RxRate: 65000
+12/25/2016 20:18:49.689 __WiFiLQAMgrLogStats: Rssi: -62 Cca: 45 TxPer: 0.0% (0) BcnPer: 0.0% (0) RxFrms 0 TxRate: 0 RxRate: 0
+12/25/2016 20:19:04.703 __WiFiLQAMgrLogStats: Rssi: -63 Cca: 53 TxPer: 0.0% (0) BcnPer: 0.0% (0) RxFrms 0 TxRate: 0 RxRate: 0
+12/25/2016 20:19:09.704 __WiFiLQAMgrLogStats: Rssi: -63 Cca: 47 TxPer: 0.0% (0) BcnPer: 0.0% (0) RxFrms 0 TxRate: 0 RxRate: 0
+12/25/2016 20:19:14.712 __WiFiLQAMgrLogStats: Rssi: -65 Cca: 47 TxPer: 0.0% (5) BcnPer: 1.3% (149) RxFrms 4 TxRate: 39000 RxRate: 65000
+12/25/2016 20:19:19.716 __WiFiLQAMgrLogStats: Rssi: -59 Cca: 47 TxPer: 50.0% (4) BcnPer: 2.0% (50) RxFrms 4 TxRate: 52000 RxRate: 65000
+12/25/2016 20:19:24.724 __WiFiLQAMgrLogStats: Rssi: -61 Cca: 47 TxPer: 0.0% (1) BcnPer: 0.0% (50) RxFrms 1 TxRate: 52000 RxRate: 65000
+12/25/2016 20:20:04.771 __WiFiLQAMgrLogStats: Rssi: -72 Cca: 3 TxPer: 0.0% (1) BcnPer: 2.1% (97) RxFrms 1 TxRate: 39000 RxRate: 52000
+12/25/2016 20:20:09.782 __WiFiLQAMgrLogStats: Rssi: -72 Cca: 28 TxPer: 0.0% (0) BcnPer: 0.0% (0) RxFrms 0 TxRate: 0 RxRate: 0
+12/25/2016 20:20:19.785 __WiFiLQAMgrLogStats: Rssi: -76 Cca: 52 TxPer: 0.0% (2) BcnPer: 2.0% (50) RxFrms 2 TxRate: 26000 RxRate: 39000
+12/25/2016 20:20:24.793 __WiFiLQAMgrLogStats: Rssi: -81 Cca: 45 TxPer: 0.0% (0) BcnPer: 0.0% (50) RxFrms 1 TxRate: 26000 RxRate: 39000
+12/25/2016 20:20:24.793 __WiFiLQAMgrIsLinkBad: LQAManager BadLinkRssi -81
+12/25/2016 20:20:29.801 __WiFiLQAMgrLogStats: Rssi: -73 Cca: 13 TxPer: 0.0% (16) BcnPer: 0.0% (50) RxFrms 14 TxRate: 19500 RxRate: 65000
+12/25/2016 20:20:29.802 __WiFiLQAMgrIsLinkGood: LQAManager: GoodLinkRssi -73
+12/25/2016 20:20:34.810 __WiFiLQAMgrLogStats: Rssi: -82 Cca: 34 TxPer: 0.0% (2) BcnPer: 2.0% (50) RxFrms 7 TxRate: 19500 RxRate: 1000
+12/25/2016 20:20:34.810 __WiFiLQAMgrIsLinkBad: LQAManager BadLinkRssi -82
+12/25/2016 20:20:35.349 
+Too frequent(0.539402 secs) rssi event from driver, ignoring
+
+12/25/2016 20:20:40.366 
+Too frequent(0.545679 secs) rssi event from driver, ignoring
+
+12/25/2016 20:20:44.280 WiFiLocaleManagerCheckLocale: trying to determine locale...
+12/25/2016 20:20:44.280 WiFiManagerCoreLocationGetCachedLocation: getting cached location...
+12/25/2016 20:20:44.310 __WiFiLocaleManagerGetLocaleFromMcc: finding iso country code for mcc 226 ....
+12/25/2016 20:20:44.311 WiFiLocationServiceManagerIsLocationValid: cachedLocationTimeout 120.000000 location age 215.231614secs, lifeSpan -1.000000 accuracy 65.000000(highAccReq 0), isValid 1
+12/25/2016 20:20:44.311 WiFiLocationServiceManagerStartLowAccuracyMonitoring: Cached low accuracy location is valid
+12/25/2016 20:20:44.311 WiFiLocationServiceManagerIsLocationValid: cachedLocationTimeout 120.000000 location age 215.231915secs, lifeSpan -1.000000 accuracy 65.000000(highAccReq 1), isValid 1
+12/25/2016 20:20:44.311 WiFiLocationServiceManagerIsLocationValid: cachedLocationTimeout 120.000000 location age 215.231977secs, lifeSpan -1.000000 accuracy 65.000000(highAccReq 0), isValid 1
+12/25/2016 20:20:44.311 __WiFiLocationServiceManagerProcessLocationAvailableEvent: isValidHighAccuracyLocation 1,  isValidLowAccuracyLocation 1
+12/25/2016 20:20:44.311 __WiFiLocationServiceManagerProcessLocationAvailableEvent: give low accuracy callback
+12/25/2016 20:20:44.312 __WiFiLocaleManagerGetLocaleFromLocation: <+44.42624909,+26.13583056> +/- 65.00m (speed -1.00 mps / course -1.00) @ 12/25/16, 8:17:09 PM Eastern European Standard Time
+12/25/2016 20:20:44.312 locale from bounding box 
+12/25/2016 20:20:44.312 new locale:  , locale: 
+12/25/2016 20:20:44.312 Stopping Low Accuracy Location Monitoring
+12/25/2016 20:20:44.312 CLMonitoring is already stopped
+12/25/2016 20:20:44.312 Stopping Low Accuracy Location Monitoring
+12/25/2016 20:20:44.312 CLMonitoring is already stopped
+12/25/2016 20:20:44.312 __WiFiLocationServiceManagerEventCallback, got cb dict {
+    eventType = 0;
+    location = "<+44.42624909,+26.13583056> +/- 65.00m (speed -1.00 mps / course -1.00) @ 12/25/16, 8:17:09 PM Eastern European Standard Time";
+}
+12/25/2016 20:20:44.313 WiFiLocationServiceManagerIsLocationValid: cachedLocationTimeout 120.000000 location age 215.233942secs, lifeSpan -1.000000 accuracy 65.000000(highAccReq 1), isValid 1
+12/25/2016 20:20:44.313 WiFiLocationServiceManagerIsLocationValid: cachedLocationTimeout 120.000000 location age 215.233996secs, lifeSpan -1.000000 accuracy 65.000000(highAccReq 0), isValid 1
+12/25/2016 20:20:44.313 __WiFiLocationServiceManagerProcessLocationAvailableEvent: isValidHighAccuracyLocation 1,  isValidLowAccuracyLocation 1
+12/25/2016 20:20:49.821 __WiFiLQAMgrLogStats: Rssi: -79 Cca: 10 TxPer: 0.0% (0) BcnPer: 0.0% (0) RxFrms 0 TxRate: 0 RxRate: 0
+12/25/2016 20:20:54.830 __WiFiLQAMgrLogStats: Rssi: -82 Cca: 41 TxPer: 0.0% (0) BcnPer: 11.2% (98) RxFrms 4 TxRate: 19500 RxRate: 65000
+12/25/2016 20:20:55.720 
+Too frequent(0.889664 secs) rssi event from driver, ignoring
+
+12/25/2016 20:21:00.738 
+Too frequent(0.904582 secs) rssi event from driver, ignoring
+
+12/25/2016 20:21:09.846 __WiFiLQAMgrLogStats: Rssi: -75 Cca: 5 TxPer: 0.0% (3) BcnPer: 0.0% (38) RxFrms 3 TxRate: 19500 RxRate: 39000
+12/25/2016 20:21:12.679 __WiFiLQAMgrIsLinkGood: LQAManager: GoodLinkRssi -69
+12/25/2016 20:21:34.887 __WiFiLQAMgrLogStats: Rssi: -71 Cca: 33 TxPer: 0.0% (3) BcnPer: 0.0% (50) RxFrms 4 TxRate: 19500 RxRate: 1000
+12/25/2016 20:21:39.892 __WiFiLQAMgrLogStats: Rssi: -82 Cca: 26 TxPer: 0.0% (1) BcnPer: 4.2% (24) RxFrms 1 TxRate: 19500 RxRate: 52000
+12/25/2016 20:21:39.892 __WiFiLQAMgrIsLinkBad: LQAManager BadLinkRssi -82
+12/25/2016 20:21:44.897 __WiFiLQAMgrLogStats: Rssi: -74 Cca: 50 TxPer: 0.0% (2) BcnPer: 0.0% (37) RxFrms 2 TxRate: 19500 RxRate: 58500
+12/25/2016 20:21:44.897 __WiFiLQAMgrIsLinkGood: LQAManager: GoodLinkRssi -74
+12/25/2016 20:21:49.898 __WiFiLQAMgrLogStats: Rssi: -74 Cca: 31 TxPer: 0.0% (0) BcnPer: 0.0% (0) RxFrms 0 TxRate: 0 RxRate: 0
+12/25/2016 20:21:54.907 __WiFiLQAMgrLogStats: Rssi: -75 Cca: 52 TxPer: 0.0% (1) BcnPer: 2.3% (87) RxFrms 4 TxRate: 19500 RxRate: 58500
+12/25/2016 20:21:59.915 __WiFiLQAMgrLogStats: Rssi: -75 Cca: 27 TxPer: 0.0% (1) BcnPer: 2.0% (50) RxFrms 1 TxRate: 19500 RxRate: 52000
+12/25/2016 20:22:09.917 __WiFiLQAMgrLogStats: Rssi: -69 Cca: 27 TxPer: 0.0% (0) BcnPer: 0.0% (0) RxFrms 0 TxRate: 0 RxRate: 0
+12/25/2016 20:22:14.922 __WiFiLQAMgrIsLinkBad: LQAManager BadLinkRssi -81
+12/25/2016 20:22:19.926 
+Too frequent(0.812156 secs) rssi event from driver, ignoring
+
+12/25/2016 20:22:24.931 
+Too frequent(0.198473 secs) rssi event from driver, ignoring
+
+12/25/2016 20:22:29.933 __WiFiLQAMgrLogStats: Rssi: -84 Cca: 2 TxPer: 0.0% (0) BcnPer: 0.0% (0) RxFrms 0 TxRate: 0 RxRate: 0
+12/25/2016 20:22:34.941 __WiFiLQAMgrLogStats: Rssi: -78 Cca: 30 TxPer: 0.0% (0) BcnPer: 3.6% (55) RxFrms 3 TxRate: 13000 RxRate: 1000
+12/25/2016 20:22:39.949 __WiFiLQAMgrLogStats: Rssi: -75 Cca: 30 TxPer: 0.0% (1) BcnPer: 0.0% (50) RxFrms 1 TxRate: 13000 RxRate: 26000
+12/25/2016 20:22:44.280 WiFiLocaleManagerCheckLocale: trying to determine locale...
+12/25/2016 20:22:44.280 WiFiManagerCoreLocationGetCachedLocation: getting cached location...
+12/25/2016 20:22:44.292 __WiFiLocaleManagerGetLocaleFromMcc: finding iso country code for mcc 226 ....
+12/25/2016 20:22:44.292 WiFiLocationServiceManagerIsLocationValid: cachedLocationTimeout 120.000000 location age 335.213198secs, lifeSpan -1.000000 accuracy 65.000000(highAccReq 0), isValid 1
+12/25/2016 20:22:44.292 WiFiLocationServiceManagerStartLowAccuracyMonitoring: Cached low accuracy location is valid
+12/25/2016 20:22:44.292 WiFiLocationServiceManagerIsLocationValid: cachedLocationTimeout 120.000000 location age 335.213332secs, lifeSpan -1.000000 accuracy 65.000000(highAccReq 1), isValid 1
+12/25/2016 20:22:44.292 WiFiLocationServiceManagerIsLocationValid: cachedLocationTimeout 120.000000 location age 335.213385secs, lifeSpan -1.000000 accuracy 65.000000(highAccReq 0), isValid 1
+12/25/2016 20:22:44.292 __WiFiLocationServiceManagerProcessLocationAvailableEvent: isValidHighAccuracyLocation 1,  isValidLowAccuracyLocation 1
+12/25/2016 20:22:44.292 __WiFiLocationServiceManagerProcessLocationAvailableEvent: give low accuracy callback
+12/25/2016 20:22:44.293 __WiFiLocaleManagerGetLocaleFromLocation: <+44.42624909,+26.13583056> +/- 65.00m (speed -1.00 mps / course -1.00) @ 12/25/16, 8:17:09 PM Eastern European Standard Time
+12/25/2016 20:22:44.293 locale from bounding box 
+12/25/2016 20:22:44.293 new locale:  , locale: 
+12/25/2016 20:22:44.293 Stopping Low Accuracy Location Monitoring
+12/25/2016 20:22:44.293 CLMonitoring is already stopped
+12/25/2016 20:22:44.294 Stopping Low Accuracy Location Monitoring
+12/25/2016 20:22:44.294 CLMonitoring is already stopped
+12/25/2016 20:22:44.294 __WiFiLocationServiceManagerEventCallback, got cb dict {
+    eventType = 0;
+    location = "<+44.42624909,+26.13583056> +/- 65.00m (speed -1.00 mps / course -1.00) @ 12/25/16, 8:17:09 PM Eastern European Standard Time";
+}
+12/25/2016 20:22:44.294 WiFiLocationServiceManagerIsLocationValid: cachedLocationTimeout 120.000000 location age 335.215329secs, lifeSpan -1.000000 accuracy 65.000000(highAccReq 1), isValid 1
+12/25/2016 20:22:44.294 WiFiLocationServiceManagerIsLocationValid: cachedLocationTimeout 120.000000 location age 335.215382secs, lifeSpan -1.000000 accuracy 65.000000(highAccReq 0), isValid 1
+12/25/2016 20:22:44.294 __WiFiLocationServiceManagerProcessLocationAvailableEvent: isValidHighAccuracyLocation 1,  isValidLowAccuracyLocation 1
+12/25/2016 20:22:44.950 __WiFiLQAMgrLogStats: Rssi: -75 Cca: 54 TxPer: 0.0% (0) BcnPer: 0.0% (0) RxFrms 0 TxRate: 0 RxRate: 0
+12/25/2016 20:22:49.951 __WiFiLQAMgrLogStats: Rssi: -75 Cca: 54 TxPer: 0.0% (0) BcnPer: 0.0% (0) RxFrms 0 TxRate: 0 RxRate: 0
+12/25/2016 20:23:04.956 __WiFiLQAMgrLogStats: Rssi: -84 Cca: 28 TxPer: 0.0% (0) BcnPer: 0.0% (0) RxFrms 0 TxRate: 0 RxRate: 0
+12/25/2016 20:23:09.957 __WiFiLQAMgrLogStats: Rssi: -84 Cca: 5 TxPer: 0.0% (0) BcnPer: 0.0% (0) RxFrms 0 TxRate: 0 RxRate: 0
+12/25/2016 20:23:14.966 __WiFiLQAMgrLogStats: Rssi: -76 Cca: 47 TxPer: 0.0% (0) BcnPer: 22.2% (108) RxFrms 4 TxRate: 13000 RxRate: 13000
+12/25/2016 20:23:19.974 __WiFiLQAMgrLogStats: Rssi: -76 Cca: 47 TxPer: 0.0% (0) BcnPer: 2.0% (50) RxFrms 1 TxRate: 13000 RxRate: 13000
+12/25/2016 20:23:24.975 __WiFiLQAMgrLogStats: Rssi: -76 Cca: 3 TxPer: 0.0% (0) BcnPer: 0.0% (0) RxFrms 0 TxRate: 0 RxRate: 0
+12/25/2016 20:23:27.355 __WiFiLQAMgrIsLinkGood: LQAManager: GoodLinkRssi -69
+12/25/2016 20:23:45.000 __WiFiLQAMgrLogStats: Rssi: -66 Cca: 52 TxPer: 0.0% (0) BcnPer: 0.0% (0) RxFrms 0 TxRate: 0 RxRate: 0
+12/25/2016 20:24:05.009 
+Too frequent(0.625476 secs) rssi event from driver, ignoring
+
+12/25/2016 20:24:10.017 __WiFiLQAMgrLogStats: Rssi: -69 Cca: 3 TxPer: 0.0% (1) BcnPer: 0.0% (100) RxFrms 1 TxRate: 13000 RxRate: 52000
+12/25/2016 20:24:10.706 
+Too frequent(0.688277 secs) rssi event from driver, ignoring
+
+12/25/2016 20:24:15.723 
+Too frequent(0.700784 secs) rssi event from driver, ignoring
+
+12/25/2016 20:24:20.741 
+Too frequent(0.710461 secs) rssi event from driver, ignoring
+
+12/25/2016 20:24:25.759 
+Too frequent(0.726981 secs) rssi event from driver, ignoring
+
+12/25/2016 20:24:30.878 
+Too frequent(0.844922 secs) rssi event from driver, ignoring
+
+12/25/2016 20:24:40.049 __WiFiLQAMgrLogStats: Rssi: -72 Cca: 30 TxPer: 0.0% (0) BcnPer: 0.0% (45) RxFrms 1 TxRate: 13000 RxRate: 1000
+12/25/2016 20:24:40.912 
+Too frequent(0.863616 secs) rssi event from driver, ignoring
+
+12/25/2016 20:24:44.280 WiFiLocaleManagerCheckLocale: trying to determine locale...
+12/25/2016 20:24:44.280 WiFiManagerCoreLocationGetCachedLocation: getting cached location...
+12/25/2016 20:24:44.300 __WiFiLocaleManagerGetLocaleFromMcc: finding iso country code for mcc 226 ....
+12/25/2016 20:24:44.301 WiFiLocationServiceManagerIsLocationValid: cachedLocationTimeout 120.000000 location age 455.221658secs, lifeSpan -1.000000 accuracy 65.000000(highAccReq 0), isValid 1
+12/25/2016 20:24:44.301 WiFiLocationServiceManagerStartLowAccuracyMonitoring: Cached low accuracy location is valid
+12/25/2016 20:24:44.301 WiFiLocationServiceManagerIsLocationValid: cachedLocationTimeout 120.000000 location age 455.221799secs, lifeSpan -1.000000 accuracy 65.000000(highAccReq 1), isValid 1
+12/25/2016 20:24:44.301 WiFiLocationServiceManagerIsLocationValid: cachedLocationTimeout 120.000000 location age 455.221853secs, lifeSpan -1.000000 accuracy 65.000000(highAccReq 0), isValid 1
+12/25/2016 20:24:44.301 __WiFiLocationServiceManagerProcessLocationAvailableEvent: isValidHighAccuracyLocation 1,  isValidLowAccuracyLocation 1
+12/25/2016 20:24:44.301 __WiFiLocationServiceManagerProcessLocationAvailableEvent: give low accuracy callback
+12/25/2016 20:24:44.302 __WiFiLocaleManagerGetLocaleFromLocation: <+44.42624909,+26.13583056> +/- 65.00m (speed -1.00 mps / course -1.00) @ 12/25/16, 8:17:09 PM Eastern European Standard Time
+12/25/2016 20:24:44.302 locale from bounding box 
+12/25/2016 20:24:44.302 new locale:  , locale: 
+12/25/2016 20:24:44.302 Stopping Low Accuracy Location Monitoring
+12/25/2016 20:24:44.302 CLMonitoring is already stopped
+12/25/2016 20:24:44.302 Stopping Low Accuracy Location Monitoring
+12/25/2016 20:24:44.302 CLMonitoring is already stopped
+12/25/2016 20:24:44.302 __WiFiLocationServiceManagerEventCallback, got cb dict {
+    eventType = 0;
+    location = "<+44.42624909,+26.13583056> +/- 65.00m (speed -1.00 mps / course -1.00) @ 12/25/16, 8:17:09 PM Eastern European Standard Time";
+}
+12/25/2016 20:24:44.303 WiFiLocationServiceManagerIsLocationValid: cachedLocationTimeout 120.000000 location age 455.223826secs, lifeSpan -1.000000 accuracy 65.000000(highAccReq 1), isValid 1
+12/25/2016 20:24:44.303 WiFiLocationServiceManagerIsLocationValid: cachedLocationTimeout 120.000000 location age 455.223879secs, lifeSpan -1.000000 accuracy 65.000000(highAccReq 0), isValid 1
+12/25/2016 20:24:44.303 __WiFiLocationServiceManagerProcessLocationAvailableEvent: isValidHighAccuracyLocation 1,  isValidLowAccuracyLocation 1
+12/25/2016 20:24:45.930 
+Too frequent(0.880103 secs) rssi event from driver, ignoring
+
+12/25/2016 20:24:52.744 Device display is OFF
+12/25/2016 20:24:52.745 ATJManager: setting ask-to-join interaction mode to NonInteractive
+12/25/2016 20:24:52.745 ATJManager: no entries to purge
+12/25/2016 20:24:52.745 User interaction DISABLED
+12/25/2016 20:24:52.745 Ignoring lock state manager->wakeMode 1
+
+12/25/2016 20:24:52.959 Foreground Network Application exited.
+12/25/2016 20:24:52.959 BG Application: Not Present, BG Daemon: Present. Daemons: mediaserverd apsd 
+12/25/2016 20:24:52.959 WoW Enabled, Skip starting Disassocation timer
+12/25/2016 20:24:53.030 Client dataaccessd set type to background application
+12/25/2016 20:24:53.030 __WiFiManagerSetEnableState: state TRUE, manager->enable.setting TRUE, manager->unlockedSinceBoot TRUE
+12/25/2016 20:24:53.031 BG Application: Not Present, BG Daemon: Present. Daemons: mediaserverd dataaccessd apsd 
+12/25/2016 20:24:53.031 __WiFiDeviceManagerAutoAssociate: Already connected to DIGI-146A.
+12/25/2016 20:24:53.183 Client dataaccessd set type to normal application
+12/25/2016 20:24:53.183 __WiFiManagerSetEnableState: state TRUE, manager->enable.setting TRUE, manager->unlockedSinceBoot TRUE
+12/25/2016 20:24:53.183 BG Application: Not Present, BG Daemon: Present. Daemons: mediaserverd apsd 
+12/25/2016 20:24:53.187 Client dataaccessd set type to background application
+12/25/2016 20:24:53.187 __WiFiManagerSetEnableState: state TRUE, manager->enable.setting TRUE, manager->unlockedSinceBoot TRUE
+12/25/2016 20:24:53.187 BG Application: Not Present, BG Daemon: Present. Daemons: mediaserverd dataaccessd apsd 
+12/25/2016 20:24:53.187 __WiFiDeviceManagerAutoAssociate: Already connected to DIGI-146A.
+12/25/2016 20:24:53.868 Client dataaccessd set type to background application
+12/25/2016 20:24:54.165 Client dataaccessd set type to background application
+12/25/2016 20:24:54.726 Client dataaccessd set type to background application
+12/25/2016 20:24:54.967 Client dataaccessd set type to normal application
+12/25/2016 20:24:54.967 __WiFiManagerSetEnableState: state TRUE, manager->enable.setting TRUE, manager->unlockedSinceBoot TRUE
+12/25/2016 20:24:54.968 BG Application: Not Present, BG Daemon: Present. Daemons: mediaserverd apsd 
+12/25/2016 20:24:55.058 __WiFiLQAMgrIsLinkBad: LQAManager BadLinkRssi -81
+12/25/2016 20:24:55.222 Client dataaccessd set type to normal application
+12/25/2016 20:24:55.738 Client dataaccessd set type to normal application
+12/25/2016 20:24:56.010 Client dataaccessd set type to normal application
+12/25/2016 20:25:00.066 __WiFiLQAMgrLogStats: Rssi: -72 Cca: 12 TxPer: 0.0% (49) BcnPer: 4.3% (46) RxFrms 42 TxRate: 13000 RxRate: 52000
+12/25/2016 20:25:00.066 __WiFiLQAMgrIsLinkGood: LQAManager: GoodLinkRssi -72
+12/25/2016 20:25:05.067 __WiFiLQAMgrLogStats: Rssi: -72 Cca: 12 TxPer: 0.0% (0) BcnPer: 0.0% (0) RxFrms 0 TxRate: 0 RxRate: 0
+12/25/2016 20:25:10.075 __WiFiLQAMgrLogStats: Rssi: -76 Cca: 12 TxPer: 0.0% (0) BcnPer: 9.1% (11) RxFrms 1 TxRate: 13000 RxRate: 52000
+12/25/2016 20:25:15.083 __WiFiLQAMgrLogStats: Rssi: -71 Cca: 67 TxPer: 0.0% (0) BcnPer: 63.9% (36) RxFrms 4 TxRate: 13000 RxRate: 52000
+12/25/2016 20:25:20.092 __WiFiLQAMgrLogStats: Rssi: -72 Cca: 67 TxPer: 0.0% (0) BcnPer: 0.0% (50) RxFrms 2 TxRate: 13000 RxRate: 52000
+12/25/2016 20:25:24.968 WiFiLQAMgrSetGatewayARPState: GatewayARPState Expired
+12/25/2016 20:25:25.100 __WiFiLQAMgrLogStats: Rssi: -72 Cca: 31 TxPer: 0.0% (2) BcnPer: 0.0% (50) RxFrms 5 TxRate: 13000 RxRate: 65000
+12/25/2016 20:25:25.801 WiFiLQAMgrSetGatewayARPState: GatewayARPState Alive
+12/25/2016 20:25:28.221 Received kIOMessageSystemWillSleep
+12/25/2016 20:25:28.222 System Sleep notification, Disabling auto-join
+12/25/2016 20:25:28.222 __WiFiManagerSetEnableState: state FALSE, manager->enable.setting TRUE, manager->unlockedSinceBoot TRUE
+12/25/2016 20:25:28.222 Disabling automatic association
+12/25/2016 20:25:28.253 apsd[273] is a wow client
+12/25/2016 20:25:28.253 WoW is Enabled, 1 WoW Clients
+12/25/2016 20:25:28.343 __WiFiDeviceCopyLinkChangedSubReasonString: Apple80211ReturnToString failed 1
+12/25/2016 20:25:28.343 __WiFiDeviceProcessDriverAvailableEvent: driver availability false, reason PowerOff(0xe0821804), subreason (null)(0x0)
+12/25/2016 20:25:28.343 __WiFiManagerDispatchDeviceAvailable: driver availability false
+
+12/25/2016 20:25:28.344 WiFiAWDManagerSubmitMetric: metric container could not be generated for metric id <0x9000e>
+12/25/2016 20:25:28.358 __WiFiDeviceManagerAwdlAvailableCallback: AWDL availability changed to FALSE
+12/25/2016 20:25:28.365 apsd[273] is a wow client
+12/25/2016 20:25:28.365 WoW is Enabled, 1 WoW Clients
+12/25/2016 20:33:31.516 Received kIOMessageSystemWillPowerOn
+12/25/2016 20:33:31.528 System wake reason: AOP.ExternalReq hold
+12/25/2016 20:33:31.554 System Powered ON notification Re-enabling auto-join
+12/25/2016 20:33:31.554 __WiFiManagerSetEnableState: state TRUE, manager->enable.setting TRUE, manager->unlockedSinceBoot TRUE
+12/25/2016 20:33:31.554 Enabling automatic association
+12/25/2016 20:33:31.555 __WiFiDeviceManagerAutoAssociate: Already connected to DIGI-146A.
+12/25/2016 20:33:31.555 WiFiLocaleManagerCheckLocale: trying to determine locale...
+12/25/2016 20:33:31.555 WiFiManagerCoreLocationGetCachedLocation: getting cached location...
+12/25/2016 20:33:31.555 __WiFiLocaleManagerGetLocaleFromMcc: finding iso country code for mcc 226 ....
+12/25/2016 20:33:31.555 WiFiLocationServiceManagerIsLocationValid: cachedLocationTimeout 120.000000 location age 982.476294secs, lifeSpan -1.000000 accuracy 65.000000(highAccReq 0), isValid 1
+12/25/2016 20:33:31.555 WiFiLocationServiceManagerStartLowAccuracyMonitoring: Cached low accuracy location is valid
+12/25/2016 20:33:31.555 WiFiLocationServiceManagerIsLocationValid: cachedLocationTimeout 120.000000 location age 982.476422secs, lifeSpan -1.000000 accuracy 65.000000(highAccReq 1), isValid 1
+12/25/2016 20:33:31.555 WiFiLocationServiceManagerIsLocationValid: cachedLocationTimeout 120.000000 location age 982.476461secs, lifeSpan -1.000000 accuracy 65.000000(highAccReq 0), isValid 1
+12/25/2016 20:33:31.555 __WiFiLocationServiceManagerProcessLocationAvailableEvent: isValidHighAccuracyLocation 1,  isValidLowAccuracyLocation 1
+12/25/2016 20:33:31.555 __WiFiLocationServiceManagerProcessLocationAvailableEvent: give low accuracy callback
+12/25/2016 20:33:31.556 __WiFiLocaleManagerGetLocaleFromLocation: <+44.42624909,+26.13583056> +/- 65.00m (speed -1.00 mps / course -1.00) @ 12/25/16, 8:17:09 PM Eastern European Standard Time
+12/25/2016 20:33:31.556 locale from bounding box 
+12/25/2016 20:33:31.556 new locale:  , locale: 
+12/25/2016 20:33:31.556 Stopping Low Accuracy Location Monitoring
+12/25/2016 20:33:31.556 CLMonitoring is already stopped
+12/25/2016 20:33:31.556 Stopping Low Accuracy Location Monitoring
+12/25/2016 20:33:31.556 CLMonitoring is already stopped
+12/25/2016 20:33:31.556 Power stats update: Type 0x6 UnassociatedSleepDur 0 AssociatedSleepDur 478979 TotalDur 483160 RoamDur 47
+12/25/2016 20:33:31.556 WiFiAWDManagerSubmitMetric: metric container could not be generated for metric id <0x90010>
+12/25/2016 20:33:31.558 __WiFiLQAMgrLogStats: Rssi: -68 Cca: 31 TxPer: 0.0% (0) BcnPer: 0.0% (0) RxFrms 0 TxRate: 0 RxRate: 0
+12/25/2016 20:33:31.566 Device display is ON
+12/25/2016 20:33:31.566 __WiFiManagerSetEnableState: state TRUE, manager->enable.setting TRUE, manager->unlockedSinceBoot TRUE
+12/25/2016 20:33:31.566 __WiFiDeviceManagerAutoAssociate: Already connected to DIGI-146A.
+12/25/2016 20:33:31.589 __WiFiDeviceCopyLinkChangedSubReasonString: Apple80211ReturnToString failed 1
+12/25/2016 20:33:31.589 __WiFiDeviceProcessDriverAvailableEvent: driver availability true, reason Initializing(0xe0821803), subreason (null)(0x0)
+12/25/2016 20:33:31.589 __WiFiManagerDispatchDeviceAvailable: driver availability true
+
+12/25/2016 20:33:31.589 __WiFiDeviceManagerAutoAssociate: Already connected to DIGI-146A.
+12/25/2016 20:33:31.589 WiFiAWDManagerSubmitMetric: metric container could not be generated for metric id <0x9000e>
+12/25/2016 20:33:31.650 __WiFiDeviceManagerAwdlAvailableCallback: AWDL availability changed to TRUE
+12/25/2016 20:33:31.653 __WiFiLocationServiceManagerEventCallback, got cb dict {
+    eventType = 0;
+    location = "<+44.42624909,+26.13583056> +/- 65.00m (speed -1.00 mps / course -1.00) @ 12/25/16, 8:17:09 PM Eastern European Standard Time";
+}
+12/25/2016 20:33:31.654 WiFiLocationServiceManagerIsLocationValid: cachedLocationTimeout 120.000000 location age 982.575356secs, lifeSpan -1.000000 accuracy 65.000000(highAccReq 1), isValid 1
+12/25/2016 20:33:31.654 WiFiLocationServiceManagerIsLocationValid: cachedLocationTimeout 120.000000 location age 982.575420secs, lifeSpan -1.000000 accuracy 65.000000(highAccReq 0), isValid 1
+12/25/2016 20:33:31.654 __WiFiLocationServiceManagerProcessLocationAvailableEvent: isValidHighAccuracyLocation 1,  isValidLowAccuracyLocation 1
+12/25/2016 20:33:31.655 __WiFiDeviceManagerAutoAssociate: Already connected to DIGI-146A.
+12/25/2016 20:33:31.657 No Change in Background Scan Networks, Skip Re-Programming Background Scan
+
+12/25/2016 20:33:31.721 Disable WoW requested by "apsd"
+12/25/2016 20:33:31.722 WoW Capable = YES, Attempting to disable WoW and enable LPAS 
+12/25/2016 20:33:31.722 Setting WoW params to <CFBasicHash 0x14cf80820 [0x1a0950150]>{type = immutable dict, count = 3,
+entries =>
+	0 : <CFString 0x100175960 [0x1a0950150]>{contents = "IO80211InterfaceEnableLowPwrAssocMode"} = <CFBoolean 0x1a09506c8 [0x1a0950150]>{value = true}
+	1 : <CFString 0x100175940 [0x1a0950150]>{contents = "IO80211InterfaceEnableWoW"} = <CFBoolean 0x1a09506d8 [0x1a0950150]>{value = false}
+	2 : <CFString 0x100185ae0 [0x1a0950150]>{contents = "IO80211InterfaceEnableWoWOnCaptive"} = <CFBoolean 0x1a09506d8 [0x1a0950150]>{value = false}
+}
+
+12/25/2016 20:33:31.723 WiFiDeviceRequestAssociatedSleep: ActiveDuringSleepRequested is already set (<CFBasicHash 0x14ce8f540 [0x1a0950150]>{type = immutable dict, count = 0,
+entries =>
+}
+).
+12/25/2016 20:33:31.723 WoW Disabled, 0 WoW Clients, lpas is Enabled, WoW Override is Disabled, Captive Disabled
+12/25/2016 20:33:31.723 Unable to dispatch WowStateChanged message to client MobileMail (268435460)
+12/25/2016 20:33:31.724 Unable to dispatch WowStateChanged message to client dataaccessd (268435460)
+12/25/2016 20:33:31.724 Unable to dispatch WowStateChanged message to client itunesstored (268435460)
+12/25/2016 20:33:31.725 Unable to dispatch WowStateChanged message to client mediaserverd (268435460)
+12/25/2016 20:33:31.726 Unable to dispatch WowStateChanged message to client assistantd (268435460)
+12/25/2016 20:33:31.742 WoW is Disabled, 0 WoW Clients
+12/25/2016 20:33:31.743 WoW is Disabled, 0 WoW Clients
+12/25/2016 20:33:31.743 WoW is Disabled, 0 WoW Clients
+12/25/2016 20:33:31.800 __WiFiManagerCellularTransmitCallback_block_invoke: Cellular Transmit Started = FALSE
+12/25/2016 20:33:31.828 WoW is Disabled, 0 WoW Clients
+12/25/2016 20:33:31.866 __WiFiManagerCellularTransmitCallback_block_invoke: Cellular Transmit Started = TRUE
+12/25/2016 20:33:31.898 Async scan requested by "locationd" for 1 iterations with maxage=0 priority normal on en0
+12/25/2016 20:33:31.898 Enqueuing command type: "Scan" pending commands: 0
+12/25/2016 20:33:31.898 Dequeuing command type: "Scan" pending commands: 0
+12/25/2016 20:33:31.898 Attempting Apple80211ScanAsync on en0
+12/25/2016 20:33:32.102 
+Too frequent(0.544451 secs) rssi event from driver, ignoring
+
+12/25/2016 20:33:32.114 Completed Apple80211ScanAsync on en0 (0x0)
+12/25/2016 20:33:32.115 Async scan request completed for "locationd" (0)
+12/25/2016 20:33:32.117 Async scan requested by "locationd" for 1 iterations with maxage=0 priority normal on en0
+12/25/2016 20:33:32.117 Enqueuing command type: "Scan" pending commands: 0
+12/25/2016 20:33:32.117 Dequeuing command type: "Scan" pending commands: 0
+12/25/2016 20:33:32.117 Attempting Apple80211ScanAsync on en0
+12/25/2016 20:33:32.575 Completed Apple80211ScanAsync on en0 (0x0)
+12/25/2016 20:33:32.583 Async scan request completed for "locationd" (0)
+12/25/2016 20:33:36.589 Client apsd set type to normal application
+12/25/2016 20:33:36.590 __WiFiManagerSetEnableState: state TRUE, manager->enable.setting TRUE, manager->unlockedSinceBoot TRUE
+12/25/2016 20:33:36.590 BG Application: Not Present, BG Daemon: Present. Daemons: mediaserverd 
+12/25/2016 20:33:37.706 ATJManager: setting ask-to-join interaction mode to Interactive
+12/25/2016 20:33:37.706 ATJManager: no entries to purge
+12/25/2016 20:33:37.706 User interaction ENABLED
+12/25/2016 20:33:37.706 Ignoring lock state manager->wakeMode 1
+
+12/25/2016 20:33:37.706 problematic networks =  and potentially problematic networks = 
+12/25/2016 20:33:37.706 Unblacklisting
+12/25/2016 20:33:37.707 No Change in Background Scan Networks, Skip Re-Programming Background Scan
+
+12/25/2016 20:33:37.707 __WiFiDeviceManagerAutoAssociate: Already connected to DIGI-146A.
+12/25/2016 20:33:37.740 Foreground Network Application entered.
+12/25/2016 20:33:37.740 BG Application: Not Present, BG Daemon: Present. Daemons: mediaserverd 
+12/25/2016 20:33:37.740 problematic networks =  and potentially problematic networks = 
+12/25/2016 20:33:37.740 Unblacklisting
+12/25/2016 20:33:37.741 No Change in Background Scan Networks, Skip Re-Programming Background Scan
+
+12/25/2016 20:33:37.741 __WiFiManagerSetEnableState: state TRUE, manager->enable.setting TRUE, manager->unlockedSinceBoot TRUE
+12/25/2016 20:33:37.741 __WiFiDeviceManagerAutoAssociate: Already connected to DIGI-146A.
+12/25/2016 20:33:38.061 __WiFiManagerCellularTransmitCallback_block_invoke: Cellular Transmit Started = FALSE
+12/25/2016 20:33:39.958 Foreground Network Application exited.
+12/25/2016 20:33:39.958 BG Application: Not Present, BG Daemon: Present. Daemons: mediaserverd 
+12/25/2016 20:33:39.958 __WiFiManagerSetEnableState: state TRUE, manager->enable.setting TRUE, manager->unlockedSinceBoot TRUE
+12/25/2016 20:33:39.962 __WiFiDeviceManagerAutoAssociate: Already connected to DIGI-146A.
+12/25/2016 20:33:39.970 BG Application: Not Present, BG Daemon: Present. Daemons: mediaserverd 
+12/25/2016 20:33:40.690 ATJManager: setting ask-to-join interaction mode to NonInteractive
+12/25/2016 20:33:40.708 ATJManager: no entries to purge
+12/25/2016 20:33:40.708 User interaction DISABLED
+12/25/2016 20:33:40.708 Ignoring lock state manager->wakeMode 1
+
+12/25/2016 20:33:40.710 Device display is OFF
+12/25/2016 20:33:41.460 __WiFiLQAMgrLogStats: Rssi: -79 Cca: 2 TxPer: 0.0% (5) BcnPer: 0.0% (32) RxFrms 8 TxRate: 19500 RxRate: 39000
+12/25/2016 20:33:46.468 __WiFiLQAMgrLogStats: Rssi: -72 Cca: 3 TxPer: 7.7% (13) BcnPer: 5.3% (38) RxFrms 12 TxRate: 19500 RxRate: 52000
+12/25/2016 20:33:46.589 scanCache: Purging scan cache
+12/25/2016 20:33:51.482 __WiFiLQAMgrLogStats: Rssi: -75 Cca: 29 TxPer: 0.0% (0) BcnPer: 0.0% (50) RxFrms 8 TxRate: 19500 RxRate: 52000
+12/25/2016 20:33:56.486 __WiFiLQAMgrLogStats: Rssi: -75 Cca: 8 TxPer: 2.3% (87) BcnPer: 0.0% (30) RxFrms 115 TxRate: 13000 RxRate: 52000
+12/25/2016 20:34:01.494 __WiFiLQAMgrLogStats: Rssi: -75 Cca: 39 TxPer: 0.0% (0) BcnPer: 0.0% (45) RxFrms 3 TxRate: 13000 RxRate: 52000
+12/25/2016 20:34:06.498 __WiFiLQAMgrLogStats: Rssi: -79 Cca: 39 TxPer: 0.0% (0) BcnPer: 2.0% (50) RxFrms 2 TxRate: 13000 RxRate: 52000
+12/25/2016 20:34:11.507 __WiFiLQAMgrLogStats: Rssi: -76 Cca: 52 TxPer: 0.0% (0) BcnPer: 0.0% (50) RxFrms 4 TxRate: 13000 RxRate: 52000
+12/25/2016 20:34:15.165 Received kIOMessageSystemWillSleep
+12/25/2016 20:34:15.165 System Sleep notification, Disabling auto-join
+12/25/2016 20:34:15.165 __WiFiManagerSetEnableState: state FALSE, manager->enable.setting TRUE, manager->unlockedSinceBoot TRUE
+12/25/2016 20:34:15.165 Disabling automatic association
+12/25/2016 20:34:15.198 WoW is Disabled, 0 WoW Clients
+12/25/2016 20:34:15.290 __WiFiDeviceCopyLinkChangedSubReasonString: Apple80211ReturnToString failed 1
+12/25/2016 20:34:15.292 __WiFiDeviceProcessDriverAvailableEvent: driver availability false, reason PowerOff(0xe0821804), subreason (null)(0x0)
+12/25/2016 20:34:15.292 __WiFiManagerDispatchDeviceAvailable: driver availability false
+
+12/25/2016 20:34:15.292 WiFiAWDManagerSubmitMetric: metric container could not be generated for metric id <0x9000e>
+12/25/2016 20:34:15.293 __WiFiDeviceManagerAwdlAvailableCallback: AWDL availability changed to FALSE
+12/25/2016 20:34:15.296 WoW is Disabled, 0 WoW Clients
+12/25/2016 20:39:16.371 Received kIOMessageSystemWillPowerOn
+12/25/2016 20:39:16.372 System wake reason: AOP.ExternalReq wlan
+12/25/2016 20:39:16.372 System Powered ON notification Re-enabling auto-join
+12/25/2016 20:39:16.372 __WiFiManagerSetEnableState: state TRUE, manager->enable.setting TRUE, manager->unlockedSinceBoot TRUE
+12/25/2016 20:39:16.372 Enabling automatic association
+12/25/2016 20:39:16.372 __WiFiDeviceManagerAutoAssociate: Already connected to DIGI-146A.
+12/25/2016 20:39:16.372 WiFiLocaleManagerCheckLocale: trying to determine locale...
+12/25/2016 20:39:16.374 WiFiManagerCoreLocationGetCachedLocation: getting cached location...
+12/25/2016 20:39:16.385 __WiFiLocaleManagerGetLocaleFromMcc: finding iso country code for mcc 226 ....
+12/25/2016 20:39:16.385 WiFiLocationServiceManagerIsLocationValid: cachedLocationTimeout 120.000000 location age 1327.305928secs, lifeSpan -1.000000 accuracy 65.000000(highAccReq 0), isValid 1
+12/25/2016 20:39:16.385 WiFiLocationServiceManagerStartLowAccuracyMonitoring: Cached low accuracy location is valid
+12/25/2016 20:39:16.385 WiFiLocationServiceManagerIsLocationValid: cachedLocationTimeout 120.000000 location age 1327.306093secs, lifeSpan -1.000000 accuracy 65.000000(highAccReq 1), isValid 1
+12/25/2016 20:39:16.385 WiFiLocationServiceManagerIsLocationValid: cachedLocationTimeout 120.000000 location age 1327.306151secs, lifeSpan -1.000000 accuracy 65.000000(highAccReq 0), isValid 1
+12/25/2016 20:39:16.385 __WiFiLocationServiceManagerProcessLocationAvailableEvent: isValidHighAccuracyLocation 1,  isValidLowAccuracyLocation 1
+12/25/2016 20:39:16.385 __WiFiLocationServiceManagerProcessLocationAvailableEvent: give low accuracy callback
+12/25/2016 20:39:16.386 __WiFiLocaleManagerGetLocaleFromLocation: <+44.42624909,+26.13583056> +/- 65.00m (speed -1.00 mps / course -1.00) @ 12/25/16, 8:17:09 PM Eastern European Standard Time
+12/25/2016 20:39:16.386 locale from bounding box 
+12/25/2016 20:39:16.386 new locale:  , locale: 
+12/25/2016 20:39:16.387 Stopping Low Accuracy Location Monitoring
+12/25/2016 20:39:16.387 CLMonitoring is already stopped
+12/25/2016 20:39:16.387 Stopping Low Accuracy Location Monitoring
+12/25/2016 20:39:16.387 CLMonitoring is already stopped
+12/25/2016 20:39:16.387 __WiFiDeviceProcessDumpLogsEvent: Dump logs event received, dumped wifid log buffer to file
