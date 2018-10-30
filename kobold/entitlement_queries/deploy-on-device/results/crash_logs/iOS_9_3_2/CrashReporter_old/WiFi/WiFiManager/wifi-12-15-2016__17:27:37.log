@@ -1,0 +1,22 @@
+12/15/2016 17:22:39.560 WiFiLocaleManagerCheckLocale: location service or wifi is off, set locale to default
+12/15/2016 17:22:39.560 new locale:  , locale: 
+12/15/2016 17:22:56.618 WoW is Disabled, 0 WoW Clients
+12/15/2016 17:23:13.635 __WiFiManagerCellularTransmitCallback_block_invoke: Cellular Transmit Started = FALSE
+12/15/2016 17:23:16.690 __WiFiManagerCellularTransmitCallback_block_invoke: Cellular Transmit Started = TRUE
+12/15/2016 17:24:39.509 WiFiLocaleManagerCheckLocale: location service or wifi is off, set locale to default
+12/15/2016 17:24:39.509 new locale:  , locale: 
+12/15/2016 17:25:04.319 __WiFiManagerCellularTransmitCallback_block_invoke: Cellular Transmit Started = FALSE
+12/15/2016 17:25:05.083 __WiFiManagerCellularTransmitCallback_block_invoke: Cellular Transmit Started = TRUE
+12/15/2016 17:25:12.347 __WiFiManagerCellularTransmitCallback_block_invoke: Cellular Transmit Started = FALSE
+12/15/2016 17:25:15.174 __WiFiManagerCellularTransmitCallback_block_invoke: Cellular Transmit Started = TRUE
+12/15/2016 17:26:39.513 WiFiLocaleManagerCheckLocale: location service or wifi is off, set locale to default
+12/15/2016 17:26:39.513 new locale:  , locale: 
+12/15/2016 17:26:58.418 __WiFiManagerCellularTransmitCallback_block_invoke: Cellular Transmit Started = FALSE
+12/15/2016 17:26:58.792 __WiFiManagerCellularTransmitCallback_block_invoke: Cellular Transmit Started = TRUE
+12/15/2016 17:27:11.852 __WiFiManagerCellularTransmitCallback_block_invoke: Cellular Transmit Started = FALSE
+12/15/2016 17:27:13.291 __WiFiManagerCellularTransmitCallback_block_invoke: Cellular Transmit Started = TRUE
+12/15/2016 17:27:22.363 __WiFiManagerCellularTransmitCallback_block_invoke: Cellular Transmit Started = FALSE
+12/15/2016 17:27:22.593 __WiFiManagerCellularTransmitCallback_block_invoke: Cellular Transmit Started = TRUE
+12/15/2016 17:27:27.676 __WiFiManagerCellularTransmitCallback_block_invoke: Cellular Transmit Started = FALSE
+12/15/2016 17:27:28.234 __WiFiManagerCellularTransmitCallback_block_invoke: Cellular Transmit Started = TRUE
+12/15/2016 17:27:37.671 __WiFiDeviceProcessDumpLogsEvent: Dump logs event received, dumped wifid log buffer to file

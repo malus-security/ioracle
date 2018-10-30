@@ -1,0 +1,9 @@
+{"bug_type":"115","timestamp":"2018-10-16 12:24:07.07 +0300","name":"Reset count","os_version":"iPhone OS 9.3.2 (13F69)"}
+Incident Identifier: 40E79A93-3A27-48DA-8A8B-57D596BA6529
+CrashReporter Key:   5bed27ab7dc41a19da5c8dbddd8aa7b5db3e323e
+Date: 2018-10-16 12:24:07.07 +0300
+Reset count: 1
+Boot failure count: 0
+Boot faults: 
+Boot stage: 0
+Boot app: 4260877722

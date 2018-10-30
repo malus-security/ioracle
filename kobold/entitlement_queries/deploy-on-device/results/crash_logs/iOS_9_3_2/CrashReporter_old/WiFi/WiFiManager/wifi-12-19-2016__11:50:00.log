@@ -1,0 +1,14 @@
+12/19/2016 11:46:59.718 WiFiLocaleManagerCheckLocale: location service or wifi is off, set locale to default
+12/19/2016 11:46:59.718 new locale:  , locale: 
+12/19/2016 11:47:48.740 __WiFiManagerCellularTransmitCallback_block_invoke: Cellular Transmit Started = FALSE
+12/19/2016 11:47:49.519 __WiFiManagerCellularTransmitCallback_block_invoke: Cellular Transmit Started = TRUE
+12/19/2016 11:48:30.312 __WiFiManagerCellularTransmitCallback_block_invoke: Cellular Transmit Started = FALSE
+12/19/2016 11:48:32.575 __WiFiManagerCellularTransmitCallback_block_invoke: Cellular Transmit Started = TRUE
+12/19/2016 11:48:59.718 WiFiLocaleManagerCheckLocale: location service or wifi is off, set locale to default
+12/19/2016 11:48:59.718 new locale:  , locale: 
+12/19/2016 11:49:07.617 __WiFiManagerCellularTransmitCallback_block_invoke: Cellular Transmit Started = FALSE
+12/19/2016 11:49:12.943 __WiFiManagerCellularTransmitCallback_block_invoke: Cellular Transmit Started = TRUE
+12/19/2016 11:49:13.538 __WiFiManagerCellularTransmitCallback_block_invoke: Cellular Transmit Started = FALSE
+12/19/2016 11:49:19.645 __WiFiManagerCellularTransmitCallback_block_invoke: Cellular Transmit Started = TRUE
+12/19/2016 11:49:31.974 WoW is Disabled, 0 WoW Clients
+12/19/2016 11:50:00.528 __WiFiDeviceProcessDumpLogsEvent: Dump logs event received, dumped wifid log buffer to file

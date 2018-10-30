@@ -1,0 +1,100 @@
+12/23/2016 14:20:44.676 WiFiLocaleManagerCheckLocale: trying to determine locale...
+12/23/2016 14:20:44.676 WiFiManagerCoreLocationGetCachedLocation: getting cached location...
+12/23/2016 14:20:44.689 __WiFiLocaleManagerGetLocaleFromMcc: finding iso country code for mcc 232 ....
+12/23/2016 14:20:44.689 WiFiLocationServiceManagerIsLocationValid: cachedLocationTimeout 120.000000 location age 316.181325secs, lifeSpan -1.000000 accuracy 65.000000(highAccReq 0), isValid 1
+12/23/2016 14:20:44.689 WiFiLocationServiceManagerStartLowAccuracyMonitoring: Cached low accuracy location is valid
+12/23/2016 14:20:44.689 WiFiLocationServiceManagerIsLocationValid: cachedLocationTimeout 120.000000 location age 316.181460secs, lifeSpan -1.000000 accuracy 65.000000(highAccReq 1), isValid 1
+12/23/2016 14:20:44.689 WiFiLocationServiceManagerIsLocationValid: cachedLocationTimeout 120.000000 location age 316.181513secs, lifeSpan -1.000000 accuracy 65.000000(highAccReq 0), isValid 1
+12/23/2016 14:20:44.690 __WiFiLocationServiceManagerProcessLocationAvailableEvent: isValidHighAccuracyLocation 1,  isValidLowAccuracyLocation 1
+12/23/2016 14:20:44.690 __WiFiLocationServiceManagerProcessLocationAvailableEvent: give low accuracy callback
+12/23/2016 14:20:44.691 __WiFiLocaleManagerGetLocaleFromLocation: <+48.05650359,+16.71138019> +/- 65.00m (speed -1.00 mps / course -1.00) @ 12/23/16, 2:15:28 PM Central European Standard Time
+12/23/2016 14:20:44.691 locale from bounding box 
+12/23/2016 14:20:44.691 new locale:  , locale: 
+12/23/2016 14:20:44.691 Stopping Low Accuracy Location Monitoring
+12/23/2016 14:20:44.691 CLMonitoring is already stopped
+12/23/2016 14:20:44.691 Stopping Low Accuracy Location Monitoring
+12/23/2016 14:20:44.691 CLMonitoring is already stopped
+12/23/2016 14:20:44.691 __WiFiLocationServiceManagerEventCallback, got cb dict {
+    eventType = 0;
+    location = "<+48.05650359,+16.71138019> +/- 65.00m (speed -1.00 mps / course -1.00) @ 12/23/16, 2:15:28 PM Central European Standard Time";
+}
+12/23/2016 14:20:44.691 WiFiLocationServiceManagerIsLocationValid: cachedLocationTimeout 120.000000 location age 316.183485secs, lifeSpan -1.000000 accuracy 65.000000(highAccReq 1), isValid 1
+12/23/2016 14:20:44.692 WiFiLocationServiceManagerIsLocationValid: cachedLocationTimeout 120.000000 location age 316.183538secs, lifeSpan -1.000000 accuracy 65.000000(highAccReq 0), isValid 1
+12/23/2016 14:20:44.692 __WiFiLocationServiceManagerProcessLocationAvailableEvent: isValidHighAccuracyLocation 1,  isValidLowAccuracyLocation 1
+12/23/2016 14:21:12.896 WoW is Disabled, 0 WoW Clients
+12/23/2016 14:22:44.674 WiFiLocaleManagerCheckLocale: trying to determine locale...
+12/23/2016 14:22:44.674 WiFiManagerCoreLocationGetCachedLocation: getting cached location...
+12/23/2016 14:22:44.698 __WiFiLocaleManagerGetLocaleFromMcc: finding iso country code for mcc 232 ....
+12/23/2016 14:22:44.698 WiFiLocationServiceManagerIsLocationValid: cachedLocationTimeout 120.000000 location age 436.189820secs, lifeSpan -1.000000 accuracy 65.000000(highAccReq 0), isValid 1
+12/23/2016 14:22:44.698 WiFiLocationServiceManagerStartLowAccuracyMonitoring: Cached low accuracy location is valid
+12/23/2016 14:22:44.698 WiFiLocationServiceManagerIsLocationValid: cachedLocationTimeout 120.000000 location age 436.189955secs, lifeSpan -1.000000 accuracy 65.000000(highAccReq 1), isValid 1
+12/23/2016 14:22:44.698 WiFiLocationServiceManagerIsLocationValid: cachedLocationTimeout 120.000000 location age 436.190008secs, lifeSpan -1.000000 accuracy 65.000000(highAccReq 0), isValid 1
+12/23/2016 14:22:44.698 __WiFiLocationServiceManagerProcessLocationAvailableEvent: isValidHighAccuracyLocation 1,  isValidLowAccuracyLocation 1
+12/23/2016 14:22:44.698 __WiFiLocationServiceManagerProcessLocationAvailableEvent: give low accuracy callback
+12/23/2016 14:22:44.699 __WiFiLocaleManagerGetLocaleFromLocation: <+48.05650359,+16.71138019> +/- 65.00m (speed -1.00 mps / course -1.00) @ 12/23/16, 2:15:28 PM Central European Standard Time
+12/23/2016 14:22:44.699 locale from bounding box 
+12/23/2016 14:22:44.699 new locale:  , locale: 
+12/23/2016 14:22:44.699 Stopping Low Accuracy Location Monitoring
+12/23/2016 14:22:44.699 CLMonitoring is already stopped
+12/23/2016 14:22:44.699 Stopping Low Accuracy Location Monitoring
+12/23/2016 14:22:44.699 CLMonitoring is already stopped
+12/23/2016 14:22:44.699 __WiFiLocationServiceManagerEventCallback, got cb dict {
+    eventType = 0;
+    location = "<+48.05650359,+16.71138019> +/- 65.00m (speed -1.00 mps / course -1.00) @ 12/23/16, 2:15:28 PM Central European Standard Time";
+}
+12/23/2016 14:22:44.700 WiFiLocationServiceManagerIsLocationValid: cachedLocationTimeout 120.000000 location age 436.191966secs, lifeSpan -1.000000 accuracy 65.000000(highAccReq 1), isValid 1
+12/23/2016 14:22:44.700 WiFiLocationServiceManagerIsLocationValid: cachedLocationTimeout 120.000000 location age 436.192018secs, lifeSpan -1.000000 accuracy 65.000000(highAccReq 0), isValid 1
+12/23/2016 14:22:44.700 __WiFiLocationServiceManagerProcessLocationAvailableEvent: isValidHighAccuracyLocation 1,  isValidLowAccuracyLocation 1
+12/23/2016 14:23:01.218 Device display is ON
+12/23/2016 14:23:01.219 __WiFiManagerSetEnableState: state TRUE, manager->enable.setting TRUE, manager->unlockedSinceBoot TRUE
+12/23/2016 14:23:01.219 Auto association attempt canceled because MIS is enabled. MIS client count: wifi=2 bt=0
+12/23/2016 14:23:01.412 Async scan requested by "locationd" for 1 iterations with maxage=0 priority normal on en0
+12/23/2016 14:23:01.412 Enqueuing command type: "Scan" pending commands: 0
+12/23/2016 14:23:01.413 Dequeuing command type: "Scan" pending commands: 0
+12/23/2016 14:23:01.413 Attempting Apple80211ScanAsync on en0
+12/23/2016 14:23:01.570 Completed Apple80211ScanAsync on en0 (0x0)
+12/23/2016 14:23:01.570 Async scan request completed for "locationd" (0)
+12/23/2016 14:23:01.571 Async scan requested by "locationd" for 1 iterations with maxage=0 priority normal on en0
+12/23/2016 14:23:01.571 Enqueuing command type: "Scan" pending commands: 0
+12/23/2016 14:23:01.571 Dequeuing command type: "Scan" pending commands: 0
+12/23/2016 14:23:01.571 Attempting Apple80211ScanAsync on en0
+12/23/2016 14:23:01.958 Completed Apple80211ScanAsync on en0 (0x0)
+12/23/2016 14:23:01.959 Async scan request completed for "locationd" (0)
+12/23/2016 14:23:04.023 ATJManager: setting ask-to-join interaction mode to Interactive
+12/23/2016 14:23:04.023 ATJManager: no entries to purge
+12/23/2016 14:23:04.023 User interaction ENABLED
+12/23/2016 14:23:04.023 Ignoring lock state manager->wakeMode 1
+
+12/23/2016 14:23:04.023 problematic networks =  and potentially problematic networks = 
+12/23/2016 14:23:04.023 Unblacklisting
+12/23/2016 14:23:04.024 No Change in Background Scan Networks, Skip Re-Programming Background Scan
+
+12/23/2016 14:23:04.024 Auto association attempt canceled because MIS is enabled. MIS client count: wifi=2 bt=0
+12/23/2016 14:23:07.574 Async scan requested by "locationd" for 1 iterations with maxage=0 priority normal on en0
+12/23/2016 14:23:07.574 Enqueuing command type: "Scan" pending commands: 0
+12/23/2016 14:23:07.574 Dequeuing command type: "Scan" pending commands: 0
+12/23/2016 14:23:07.574 Attempting Apple80211ScanAsync on en0
+12/23/2016 14:23:07.961 Completed Apple80211ScanAsync on en0 (0x0)
+12/23/2016 14:23:07.962 Async scan request completed for "locationd" (0)
+12/23/2016 14:23:07.993 Async scan requested by "locationd" for 1 iterations with maxage=0 priority low on en0
+12/23/2016 14:23:07.993 Enqueuing command type: "Scan" pending commands: 0
+12/23/2016 14:23:07.993 Dequeuing command type: "Scan" pending commands: 0
+12/23/2016 14:23:07.993 Attempting Apple80211ScanAsync on en0
+12/23/2016 14:23:08.379 Completed Apple80211ScanAsync on en0 (0x0)
+12/23/2016 14:23:08.380 Async scan request completed for "locationd" (0)
+12/23/2016 14:23:22.384 scanCache: Purging scan cache
+12/23/2016 14:23:47.310 ATJManager: setting ask-to-join interaction mode to NonInteractive
+12/23/2016 14:23:47.311 ATJManager: no entries to purge
+12/23/2016 14:23:47.311 User interaction DISABLED
+12/23/2016 14:23:47.311 Ignoring lock state manager->wakeMode 1
+
+12/23/2016 14:23:47.318 Device display is OFF
+12/23/2016 14:24:04.072 Background Network Application entered
+12/23/2016 14:24:04.073 BG Application: Present, BG Daemon: Present. Daemons: mediaserverd 
+12/23/2016 14:24:04.073 __WiFiManagerSetEnableState: state TRUE, manager->enable.setting TRUE, manager->unlockedSinceBoot TRUE
+12/23/2016 14:24:04.074 Auto association attempt canceled because MIS is enabled. MIS client count: wifi=2 bt=0
+12/23/2016 14:24:04.077 Background Network Application entered
+12/23/2016 14:24:04.077 BG Application: Not Present, BG Daemon: Present. Daemons: mediaserverd 
+12/23/2016 14:24:04.077 __WiFiManagerSetEnableState: state TRUE, manager->enable.setting TRUE, manager->unlockedSinceBoot TRUE
+12/23/2016 14:24:04.077 Auto association attempt canceled because MIS is enabled. MIS client count: wifi=2 bt=0
+12/23/2016 14:24:31.593 __WiFiDeviceProcessDumpLogsEvent: Dump logs event received, dumped wifid log buffer to file

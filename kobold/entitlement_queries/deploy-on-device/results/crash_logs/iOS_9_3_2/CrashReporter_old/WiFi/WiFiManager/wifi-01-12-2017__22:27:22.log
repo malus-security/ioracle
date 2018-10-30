@@ -1,0 +1,12 @@
+ 1/12/2017 22:22:53.770 WiFiLocaleManagerCheckLocale: location service or wifi is off, set locale to default
+ 1/12/2017 22:22:53.770 new locale:  , locale: 
+ 1/12/2017 22:24:53.770 WiFiLocaleManagerCheckLocale: location service or wifi is off, set locale to default
+ 1/12/2017 22:24:53.770 new locale:  , locale: 
+ 1/12/2017 22:25:22.226 WoW is Disabled, 0 WoW Clients
+ 1/12/2017 22:26:36.645 Device display is ON
+ 1/12/2017 22:26:36.645 __WiFiManagerSetEnableState: state TRUE, manager->enable.setting TRUE, manager->unlockedSinceBoot TRUE
+ 1/12/2017 22:26:36.645 Auto association attempt canceled because MIS is enabled. MIS client count: wifi=1 bt=0
+ 1/12/2017 22:26:51.246 Device display is OFF
+ 1/12/2017 22:26:53.770 WiFiLocaleManagerCheckLocale: location service or wifi is off, set locale to default
+ 1/12/2017 22:26:53.770 new locale:  , locale: 
+ 1/12/2017 22:27:22.972 __WiFiDeviceProcessDumpLogsEvent: Dump logs event received, dumped wifid log buffer to file

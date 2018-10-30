@@ -1,0 +1,276 @@
+12/23/2016 19:44:36.067 Async scan requested by "locationd" for 1 iterations with maxage=0 priority normal on en0
+12/23/2016 19:44:36.067 Enqueuing command type: "Scan" pending commands: 0
+12/23/2016 19:44:36.067 Dequeuing command type: "Scan" pending commands: 0
+12/23/2016 19:44:36.067 Attempting Apple80211ScanAsync on en0
+12/23/2016 19:44:36.452 Completed Apple80211ScanAsync on en0 (0x0)
+12/23/2016 19:44:36.454 Async scan request completed for "locationd" (0)
+12/23/2016 19:44:41.069 Async scan requested by "locationd" for 1 iterations with maxage=0 priority normal on en0
+12/23/2016 19:44:41.069 Enqueuing command type: "Scan" pending commands: 0
+12/23/2016 19:44:41.069 Dequeuing command type: "Scan" pending commands: 0
+12/23/2016 19:44:41.069 Attempting Apple80211ScanAsync on en0
+12/23/2016 19:44:41.455 Completed Apple80211ScanAsync on en0 (0x0)
+12/23/2016 19:44:41.456 Async scan request completed for "locationd" (0)
+12/23/2016 19:44:44.572 WiFiLocaleManagerCheckLocale: trying to determine locale...
+12/23/2016 19:44:44.572 WiFiManagerCoreLocationGetCachedLocation: getting cached location...
+12/23/2016 19:44:44.573 __WiFiLocaleManagerGetLocaleFromMcc: finding iso country code for mcc 216 ....
+12/23/2016 19:44:44.573 WiFiLocationServiceManagerIsLocationValid: cachedLocationTimeout 120.000000 location age 119.998225secs, lifeSpan -1.000000 accuracy 10.000000(highAccReq 0), isValid 1
+12/23/2016 19:44:44.573 WiFiLocationServiceManagerStartLowAccuracyMonitoring: Cached low accuracy location is valid
+12/23/2016 19:44:44.574 WiFiLocationServiceManagerIsLocationValid: cachedLocationTimeout 120.000000 location age 119.998350secs, lifeSpan -1.000000 accuracy 10.000000(highAccReq 1), isValid 1
+12/23/2016 19:44:44.574 WiFiLocationServiceManagerIsLocationValid: cachedLocationTimeout 120.000000 location age 119.998402secs, lifeSpan -1.000000 accuracy 10.000000(highAccReq 0), isValid 1
+12/23/2016 19:44:44.574 __WiFiLocationServiceManagerProcessLocationAvailableEvent: isValidHighAccuracyLocation 1,  isValidLowAccuracyLocation 1
+12/23/2016 19:44:44.574 __WiFiLocationServiceManagerProcessLocationAvailableEvent: give low accuracy callback
+12/23/2016 19:44:44.575 __WiFiLocaleManagerGetLocaleFromLocation: <+47.88279056,+17.19422093> +/- 10.00m (speed 6.51 mps / course 130.08) @ 12/23/16, 7:42:44 PM Central European Standard Time
+12/23/2016 19:44:44.575 locale from bounding box 
+12/23/2016 19:44:44.575 new locale:  , locale: 
+12/23/2016 19:44:44.575 Stopping Low Accuracy Location Monitoring
+12/23/2016 19:44:44.575 CLMonitoring is already stopped
+12/23/2016 19:44:44.575 Stopping Low Accuracy Location Monitoring
+12/23/2016 19:44:44.575 CLMonitoring is already stopped
+12/23/2016 19:44:44.575 __WiFiLocationServiceManagerEventCallback, got cb dict {
+    eventType = 0;
+    location = "<+47.88085375,+17.19776178> +/- 10.00m (speed 1.69 mps / course 126.56) @ 12/23/16, 7:44:44 PM Central European Standard Time";
+}
+12/23/2016 19:44:44.576 WiFiLocationServiceManagerIsLocationValid: cachedLocationTimeout 120.000000 location age 0.001357secs, lifeSpan -1.000000 accuracy 10.000000(highAccReq 1), isValid 1
+12/23/2016 19:44:44.576 WiFiLocationServiceManagerIsLocationValid: cachedLocationTimeout 120.000000 location age 0.001412secs, lifeSpan -1.000000 accuracy 10.000000(highAccReq 0), isValid 1
+12/23/2016 19:44:44.576 __WiFiLocationServiceManagerProcessLocationAvailableEvent: isValidHighAccuracyLocation 1,  isValidLowAccuracyLocation 1
+12/23/2016 19:44:47.063 __WiFiManagerCellularTransmitCallback_block_invoke: Cellular Transmit Started = FALSE
+12/23/2016 19:44:47.067 Async scan requested by "locationd" for 1 iterations with maxage=0 priority normal on en0
+12/23/2016 19:44:47.067 Enqueuing command type: "Scan" pending commands: 0
+12/23/2016 19:44:47.068 Dequeuing command type: "Scan" pending commands: 0
+12/23/2016 19:44:47.068 Attempting Apple80211ScanAsync on en0
+12/23/2016 19:44:47.453 Completed Apple80211ScanAsync on en0 (0x0)
+12/23/2016 19:44:47.454 Async scan request completed for "locationd" (0)
+12/23/2016 19:44:53.083 Async scan requested by "locationd" for 1 iterations with maxage=0 priority normal on en0
+12/23/2016 19:44:53.083 Enqueuing command type: "Scan" pending commands: 0
+12/23/2016 19:44:53.083 Dequeuing command type: "Scan" pending commands: 0
+12/23/2016 19:44:53.083 Attempting Apple80211ScanAsync on en0
+12/23/2016 19:44:53.469 Completed Apple80211ScanAsync on en0 (0x0)
+12/23/2016 19:44:53.470 Async scan request completed for "locationd" (0)
+12/23/2016 19:44:53.497 __WiFiManagerCellularTransmitCallback_block_invoke: Cellular Transmit Started = TRUE
+12/23/2016 19:44:59.074 Async scan requested by "locationd" for 1 iterations with maxage=0 priority normal on en0
+12/23/2016 19:44:59.074 Enqueuing command type: "Scan" pending commands: 0
+12/23/2016 19:44:59.074 Dequeuing command type: "Scan" pending commands: 0
+12/23/2016 19:44:59.074 Attempting Apple80211ScanAsync on en0
+12/23/2016 19:44:59.460 Completed Apple80211ScanAsync on en0 (0x0)
+12/23/2016 19:44:59.462 Async scan request completed for "locationd" (0)
+12/23/2016 19:45:04.749 __WiFiManagerCellularTransmitCallback_block_invoke: Cellular Transmit Started = FALSE
+12/23/2016 19:45:10.070 Async scan requested by "locationd" for 1 iterations with maxage=0 priority normal on en0
+12/23/2016 19:45:10.071 Enqueuing command type: "Scan" pending commands: 0
+12/23/2016 19:45:10.071 Dequeuing command type: "Scan" pending commands: 0
+12/23/2016 19:45:10.071 Attempting Apple80211ScanAsync on en0
+12/23/2016 19:45:10.455 Completed Apple80211ScanAsync on en0 (0x0)
+12/23/2016 19:45:10.456 Async scan request completed for "locationd" (0)
+12/23/2016 19:45:15.084 Async scan requested by "locationd" for 1 iterations with maxage=0 priority normal on en0
+12/23/2016 19:45:15.084 Enqueuing command type: "Scan" pending commands: 0
+12/23/2016 19:45:15.084 Dequeuing command type: "Scan" pending commands: 0
+12/23/2016 19:45:15.084 Attempting Apple80211ScanAsync on en0
+12/23/2016 19:45:15.470 Completed Apple80211ScanAsync on en0 (0x0)
+12/23/2016 19:45:15.471 Async scan request completed for "locationd" (0)
+12/23/2016 19:45:21.085 Async scan requested by "locationd" for 1 iterations with maxage=0 priority normal on en0
+12/23/2016 19:45:21.085 Enqueuing command type: "Scan" pending commands: 0
+12/23/2016 19:45:21.085 Dequeuing command type: "Scan" pending commands: 0
+12/23/2016 19:45:21.085 Attempting Apple80211ScanAsync on en0
+12/23/2016 19:45:21.470 Completed Apple80211ScanAsync on en0 (0x0)
+12/23/2016 19:45:21.470 Async scan request completed for "locationd" (0)
+12/23/2016 19:45:27.084 Async scan requested by "locationd" for 1 iterations with maxage=0 priority normal on en0
+12/23/2016 19:45:27.084 Enqueuing command type: "Scan" pending commands: 0
+12/23/2016 19:45:27.084 Dequeuing command type: "Scan" pending commands: 0
+12/23/2016 19:45:27.084 Attempting Apple80211ScanAsync on en0
+12/23/2016 19:45:27.470 Completed Apple80211ScanAsync on en0 (0x0)
+12/23/2016 19:45:27.471 Async scan request completed for "locationd" (0)
+12/23/2016 19:45:31.540 __WiFiManagerCellularTransmitCallback_block_invoke: Cellular Transmit Started = TRUE
+12/23/2016 19:45:32.076 Async scan requested by "locationd" for 1 iterations with maxage=0 priority normal on en0
+12/23/2016 19:45:32.076 Enqueuing command type: "Scan" pending commands: 0
+12/23/2016 19:45:32.076 Dequeuing command type: "Scan" pending commands: 0
+12/23/2016 19:45:32.076 Attempting Apple80211ScanAsync on en0
+12/23/2016 19:45:32.460 Completed Apple80211ScanAsync on en0 (0x0)
+12/23/2016 19:45:32.462 Async scan request completed for "locationd" (0)
+12/23/2016 19:45:38.064 Async scan requested by "locationd" for 1 iterations with maxage=0 priority normal on en0
+12/23/2016 19:45:38.065 Enqueuing command type: "Scan" pending commands: 0
+12/23/2016 19:45:38.065 Dequeuing command type: "Scan" pending commands: 0
+12/23/2016 19:45:38.065 Attempting Apple80211ScanAsync on en0
+12/23/2016 19:45:38.450 Completed Apple80211ScanAsync on en0 (0x0)
+12/23/2016 19:45:38.451 Async scan request completed for "locationd" (0)
+12/23/2016 19:45:44.063 Async scan requested by "locationd" for 1 iterations with maxage=0 priority normal on en0
+12/23/2016 19:45:44.063 Enqueuing command type: "Scan" pending commands: 0
+12/23/2016 19:45:44.063 Dequeuing command type: "Scan" pending commands: 0
+12/23/2016 19:45:44.063 Attempting Apple80211ScanAsync on en0
+12/23/2016 19:45:44.450 Completed Apple80211ScanAsync on en0 (0x0)
+12/23/2016 19:45:44.451 Async scan request completed for "locationd" (0)
+12/23/2016 19:45:49.074 Async scan requested by "locationd" for 1 iterations with maxage=0 priority normal on en0
+12/23/2016 19:45:49.074 Enqueuing command type: "Scan" pending commands: 0
+12/23/2016 19:45:49.075 Dequeuing command type: "Scan" pending commands: 0
+12/23/2016 19:45:49.075 Attempting Apple80211ScanAsync on en0
+12/23/2016 19:45:49.459 Completed Apple80211ScanAsync on en0 (0x0)
+12/23/2016 19:45:49.460 Async scan request completed for "locationd" (0)
+12/23/2016 19:45:55.073 Async scan requested by "locationd" for 1 iterations with maxage=0 priority normal on en0
+12/23/2016 19:45:55.073 Enqueuing command type: "Scan" pending commands: 0
+12/23/2016 19:45:55.073 Dequeuing command type: "Scan" pending commands: 0
+12/23/2016 19:45:55.073 Attempting Apple80211ScanAsync on en0
+12/23/2016 19:45:55.458 Completed Apple80211ScanAsync on en0 (0x0)
+12/23/2016 19:45:55.458 Async scan request completed for "locationd" (0)
+12/23/2016 19:46:00.060 Async scan requested by "locationd" for 1 iterations with maxage=0 priority normal on en0
+12/23/2016 19:46:00.060 Enqueuing command type: "Scan" pending commands: 0
+12/23/2016 19:46:00.061 Dequeuing command type: "Scan" pending commands: 0
+12/23/2016 19:46:00.061 Attempting Apple80211ScanAsync on en0
+12/23/2016 19:46:00.446 Completed Apple80211ScanAsync on en0 (0x0)
+12/23/2016 19:46:00.447 Async scan request completed for "locationd" (0)
+12/23/2016 19:46:04.785 __WiFiManagerCellularTransmitCallback_block_invoke: Cellular Transmit Started = FALSE
+12/23/2016 19:46:06.080 Async scan requested by "locationd" for 1 iterations with maxage=0 priority normal on en0
+12/23/2016 19:46:06.081 Enqueuing command type: "Scan" pending commands: 0
+12/23/2016 19:46:06.081 Dequeuing command type: "Scan" pending commands: 0
+12/23/2016 19:46:06.081 Attempting Apple80211ScanAsync on en0
+12/23/2016 19:46:06.466 Completed Apple80211ScanAsync on en0 (0x0)
+12/23/2016 19:46:06.467 Async scan request completed for "locationd" (0)
+12/23/2016 19:46:11.066 Async scan requested by "locationd" for 1 iterations with maxage=0 priority normal on en0
+12/23/2016 19:46:11.067 Enqueuing command type: "Scan" pending commands: 0
+12/23/2016 19:46:11.067 Dequeuing command type: "Scan" pending commands: 0
+12/23/2016 19:46:11.067 Attempting Apple80211ScanAsync on en0
+12/23/2016 19:46:11.452 Completed Apple80211ScanAsync on en0 (0x0)
+12/23/2016 19:46:11.453 Async scan request completed for "locationd" (0)
+12/23/2016 19:46:15.199 __WiFiManagerCellularTransmitCallback_block_invoke: Cellular Transmit Started = TRUE
+12/23/2016 19:46:16.073 Async scan requested by "locationd" for 1 iterations with maxage=0 priority normal on en0
+12/23/2016 19:46:16.073 Enqueuing command type: "Scan" pending commands: 0
+12/23/2016 19:46:16.074 Dequeuing command type: "Scan" pending commands: 0
+12/23/2016 19:46:16.074 Attempting Apple80211ScanAsync on en0
+12/23/2016 19:46:16.459 Completed Apple80211ScanAsync on en0 (0x0)
+12/23/2016 19:46:16.460 Async scan request completed for "locationd" (0)
+12/23/2016 19:46:22.064 Async scan requested by "locationd" for 1 iterations with maxage=0 priority normal on en0
+12/23/2016 19:46:22.064 Enqueuing command type: "Scan" pending commands: 0
+12/23/2016 19:46:22.064 Dequeuing command type: "Scan" pending commands: 0
+12/23/2016 19:46:22.064 Attempting Apple80211ScanAsync on en0
+12/23/2016 19:46:22.449 Completed Apple80211ScanAsync on en0 (0x0)
+12/23/2016 19:46:22.449 Async scan request completed for "locationd" (0)
+12/23/2016 19:46:28.063 Async scan requested by "locationd" for 1 iterations with maxage=0 priority normal on en0
+12/23/2016 19:46:28.063 Enqueuing command type: "Scan" pending commands: 0
+12/23/2016 19:46:28.063 Dequeuing command type: "Scan" pending commands: 0
+12/23/2016 19:46:28.063 Attempting Apple80211ScanAsync on en0
+12/23/2016 19:46:28.446 Completed Apple80211ScanAsync on en0 (0x0)
+12/23/2016 19:46:28.446 Async scan request completed for "locationd" (0)
+12/23/2016 19:46:34.073 Async scan requested by "locationd" for 1 iterations with maxage=0 priority normal on en0
+12/23/2016 19:46:34.073 Enqueuing command type: "Scan" pending commands: 0
+12/23/2016 19:46:34.073 Dequeuing command type: "Scan" pending commands: 0
+12/23/2016 19:46:34.073 Attempting Apple80211ScanAsync on en0
+12/23/2016 19:46:34.459 Completed Apple80211ScanAsync on en0 (0x0)
+12/23/2016 19:46:34.460 Async scan request completed for "locationd" (0)
+12/23/2016 19:46:39.065 Async scan requested by "locationd" for 1 iterations with maxage=0 priority normal on en0
+12/23/2016 19:46:39.065 Enqueuing command type: "Scan" pending commands: 0
+12/23/2016 19:46:39.065 Dequeuing command type: "Scan" pending commands: 0
+12/23/2016 19:46:39.065 Attempting Apple80211ScanAsync on en0
+12/23/2016 19:46:39.451 Completed Apple80211ScanAsync on en0 (0x0)
+12/23/2016 19:46:39.451 Async scan request completed for "locationd" (0)
+12/23/2016 19:46:44.570 WiFiLocaleManagerCheckLocale: trying to determine locale...
+12/23/2016 19:46:44.570 WiFiManagerCoreLocationGetCachedLocation: getting cached location...
+12/23/2016 19:46:44.571 __WiFiLocaleManagerGetLocaleFromMcc: finding iso country code for mcc 216 ....
+12/23/2016 19:46:44.571 WiFiLocationServiceManagerIsLocationValid: cachedLocationTimeout 120.000000 location age 119.996844secs, lifeSpan -1.000000 accuracy 10.000000(highAccReq 0), isValid 1
+12/23/2016 19:46:44.571 WiFiLocationServiceManagerStartLowAccuracyMonitoring: Cached low accuracy location is valid
+12/23/2016 19:46:44.571 WiFiLocationServiceManagerIsLocationValid: cachedLocationTimeout 120.000000 location age 119.996967secs, lifeSpan -1.000000 accuracy 10.000000(highAccReq 1), isValid 1
+12/23/2016 19:46:44.571 WiFiLocationServiceManagerIsLocationValid: cachedLocationTimeout 120.000000 location age 119.997018secs, lifeSpan -1.000000 accuracy 10.000000(highAccReq 0), isValid 1
+12/23/2016 19:46:44.571 __WiFiLocationServiceManagerProcessLocationAvailableEvent: isValidHighAccuracyLocation 1,  isValidLowAccuracyLocation 1
+12/23/2016 19:46:44.572 __WiFiLocationServiceManagerProcessLocationAvailableEvent: give low accuracy callback
+12/23/2016 19:46:44.572 __WiFiLocaleManagerGetLocaleFromLocation: <+47.88085375,+17.19776178> +/- 10.00m (speed 1.69 mps / course 126.56) @ 12/23/16, 7:44:44 PM Central European Standard Time
+12/23/2016 19:46:44.572 locale from bounding box 
+12/23/2016 19:46:44.573 new locale:  , locale: 
+12/23/2016 19:46:44.573 Stopping Low Accuracy Location Monitoring
+12/23/2016 19:46:44.573 CLMonitoring is already stopped
+12/23/2016 19:46:44.573 Stopping Low Accuracy Location Monitoring
+12/23/2016 19:46:44.573 CLMonitoring is already stopped
+12/23/2016 19:46:44.573 __WiFiLocationServiceManagerEventCallback, got cb dict {
+    eventType = 0;
+    location = "<+47.87717083,+17.20489243> +/- 10.00m (speed 6.01 mps / course 127.62) @ 12/23/16, 7:46:44 PM Central European Standard Time";
+}
+12/23/2016 19:46:44.574 WiFiLocationServiceManagerIsLocationValid: cachedLocationTimeout 120.000000 location age 0.001590secs, lifeSpan -1.000000 accuracy 10.000000(highAccReq 1), isValid 1
+12/23/2016 19:46:44.574 WiFiLocationServiceManagerIsLocationValid: cachedLocationTimeout 120.000000 location age 0.001646secs, lifeSpan -1.000000 accuracy 10.000000(highAccReq 0), isValid 1
+12/23/2016 19:46:44.574 __WiFiLocationServiceManagerProcessLocationAvailableEvent: isValidHighAccuracyLocation 1,  isValidLowAccuracyLocation 1
+12/23/2016 19:46:44.730 __WiFiManagerCellularTransmitCallback_block_invoke: Cellular Transmit Started = FALSE
+12/23/2016 19:46:45.049 Async scan requested by "locationd" for 1 iterations with maxage=0 priority normal on en0
+12/23/2016 19:46:45.050 Enqueuing command type: "Scan" pending commands: 0
+12/23/2016 19:46:45.050 Dequeuing command type: "Scan" pending commands: 0
+12/23/2016 19:46:45.050 Attempting Apple80211ScanAsync on en0
+12/23/2016 19:46:45.435 Completed Apple80211ScanAsync on en0 (0x0)
+12/23/2016 19:46:45.436 Async scan request completed for "locationd" (0)
+12/23/2016 19:46:49.978 __WiFiManagerCellularTransmitCallback_block_invoke: Cellular Transmit Started = TRUE
+12/23/2016 19:46:50.078 Async scan requested by "locationd" for 1 iterations with maxage=0 priority normal on en0
+12/23/2016 19:46:50.078 Enqueuing command type: "Scan" pending commands: 0
+12/23/2016 19:46:50.078 Dequeuing command type: "Scan" pending commands: 0
+12/23/2016 19:46:50.078 Attempting Apple80211ScanAsync on en0
+12/23/2016 19:46:50.463 Completed Apple80211ScanAsync on en0 (0x0)
+12/23/2016 19:46:50.463 Async scan request completed for "locationd" (0)
+12/23/2016 19:47:01.081 Async scan requested by "locationd" for 1 iterations with maxage=0 priority normal on en0
+12/23/2016 19:47:01.081 Enqueuing command type: "Scan" pending commands: 0
+12/23/2016 19:47:01.082 Dequeuing command type: "Scan" pending commands: 0
+12/23/2016 19:47:01.082 Attempting Apple80211ScanAsync on en0
+12/23/2016 19:47:01.467 Completed Apple80211ScanAsync on en0 (0x0)
+12/23/2016 19:47:01.468 Async scan request completed for "locationd" (0)
+12/23/2016 19:47:04.961 __WiFiManagerCellularTransmitCallback_block_invoke: Cellular Transmit Started = FALSE
+12/23/2016 19:47:06.071 Async scan requested by "locationd" for 1 iterations with maxage=0 priority normal on en0
+12/23/2016 19:47:06.071 Enqueuing command type: "Scan" pending commands: 0
+12/23/2016 19:47:06.072 Dequeuing command type: "Scan" pending commands: 0
+12/23/2016 19:47:06.072 Attempting Apple80211ScanAsync on en0
+12/23/2016 19:47:06.457 Completed Apple80211ScanAsync on en0 (0x0)
+12/23/2016 19:47:06.458 Async scan request completed for "locationd" (0)
+12/23/2016 19:47:12.077 Async scan requested by "locationd" for 1 iterations with maxage=0 priority normal on en0
+12/23/2016 19:47:12.078 Enqueuing command type: "Scan" pending commands: 0
+12/23/2016 19:47:12.078 Dequeuing command type: "Scan" pending commands: 0
+12/23/2016 19:47:12.078 Attempting Apple80211ScanAsync on en0
+12/23/2016 19:47:12.464 Completed Apple80211ScanAsync on en0 (0x0)
+12/23/2016 19:47:12.465 Async scan request completed for "locationd" (0)
+12/23/2016 19:47:17.087 Async scan requested by "locationd" for 1 iterations with maxage=0 priority normal on en0
+12/23/2016 19:47:17.087 Enqueuing command type: "Scan" pending commands: 0
+12/23/2016 19:47:17.087 Dequeuing command type: "Scan" pending commands: 0
+12/23/2016 19:47:17.087 Attempting Apple80211ScanAsync on en0
+12/23/2016 19:47:17.473 Completed Apple80211ScanAsync on en0 (0x0)
+12/23/2016 19:47:17.474 Async scan request completed for "locationd" (0)
+12/23/2016 19:47:23.086 Async scan requested by "locationd" for 1 iterations with maxage=0 priority normal on en0
+12/23/2016 19:47:23.086 Enqueuing command type: "Scan" pending commands: 0
+12/23/2016 19:47:23.086 Dequeuing command type: "Scan" pending commands: 0
+12/23/2016 19:47:23.086 Attempting Apple80211ScanAsync on en0
+12/23/2016 19:47:23.473 Completed Apple80211ScanAsync on en0 (0x0)
+12/23/2016 19:47:23.474 Async scan request completed for "locationd" (0)
+12/23/2016 19:47:24.246 __WiFiManagerCellularTransmitCallback_block_invoke: Cellular Transmit Started = TRUE
+12/23/2016 19:47:28.063 Async scan requested by "locationd" for 1 iterations with maxage=0 priority normal on en0
+12/23/2016 19:47:28.063 Enqueuing command type: "Scan" pending commands: 0
+12/23/2016 19:47:28.063 Dequeuing command type: "Scan" pending commands: 0
+12/23/2016 19:47:28.063 Attempting Apple80211ScanAsync on en0
+12/23/2016 19:47:28.448 Completed Apple80211ScanAsync on en0 (0x0)
+12/23/2016 19:47:28.450 Async scan request completed for "locationd" (0)
+12/23/2016 19:47:34.069 Async scan requested by "locationd" for 1 iterations with maxage=0 priority normal on en0
+12/23/2016 19:47:34.069 Enqueuing command type: "Scan" pending commands: 0
+12/23/2016 19:47:34.069 Dequeuing command type: "Scan" pending commands: 0
+12/23/2016 19:47:34.069 Attempting Apple80211ScanAsync on en0
+12/23/2016 19:47:34.455 Completed Apple80211ScanAsync on en0 (0x0)
+12/23/2016 19:47:34.455 Async scan request completed for "locationd" (0)
+12/23/2016 19:47:34.656 WoW is Disabled, 0 WoW Clients
+12/23/2016 19:47:39.060 Async scan requested by "locationd" for 1 iterations with maxage=0 priority normal on en0
+12/23/2016 19:47:39.061 Enqueuing command type: "Scan" pending commands: 0
+12/23/2016 19:47:39.061 Dequeuing command type: "Scan" pending commands: 0
+12/23/2016 19:47:39.061 Attempting Apple80211ScanAsync on en0
+12/23/2016 19:47:39.447 Completed Apple80211ScanAsync on en0 (0x0)
+12/23/2016 19:47:39.448 Async scan request completed for "locationd" (0)
+12/23/2016 19:47:53.450 scanCache: Purging scan cache
+12/23/2016 19:48:44.570 WiFiLocaleManagerCheckLocale: trying to determine locale...
+12/23/2016 19:48:44.570 WiFiManagerCoreLocationGetCachedLocation: getting cached location...
+12/23/2016 19:48:44.571 __WiFiLocaleManagerGetLocaleFromMcc: finding iso country code for mcc 216 ....
+12/23/2016 19:48:44.571 WiFiLocationServiceManagerIsLocationValid: cachedLocationTimeout 120.000000 location age 119.999207secs, lifeSpan -1.000000 accuracy 10.000000(highAccReq 0), isValid 1
+12/23/2016 19:48:44.571 WiFiLocationServiceManagerStartLowAccuracyMonitoring: Cached low accuracy location is valid
+12/23/2016 19:48:44.571 WiFiLocationServiceManagerIsLocationValid: cachedLocationTimeout 120.000000 location age 119.999324secs, lifeSpan -1.000000 accuracy 10.000000(highAccReq 1), isValid 1
+12/23/2016 19:48:44.571 WiFiLocationServiceManagerIsLocationValid: cachedLocationTimeout 120.000000 location age 119.999374secs, lifeSpan -1.000000 accuracy 10.000000(highAccReq 0), isValid 1
+12/23/2016 19:48:44.571 __WiFiLocationServiceManagerProcessLocationAvailableEvent: isValidHighAccuracyLocation 1,  isValidLowAccuracyLocation 1
+12/23/2016 19:48:44.571 __WiFiLocationServiceManagerProcessLocationAvailableEvent: give low accuracy callback
+12/23/2016 19:48:44.572 __WiFiLocaleManagerGetLocaleFromLocation: <+47.87717083,+17.20489243> +/- 10.00m (speed 6.01 mps / course 127.62) @ 12/23/16, 7:46:44 PM Central European Standard Time
+12/23/2016 19:48:44.572 locale from bounding box 
+12/23/2016 19:48:44.572 new locale:  , locale: 
+12/23/2016 19:48:44.572 Stopping Low Accuracy Location Monitoring
+12/23/2016 19:48:44.572 CLMonitoring is already stopped
+12/23/2016 19:48:44.573 Stopping Low Accuracy Location Monitoring
+12/23/2016 19:48:44.573 CLMonitoring is already stopped
+12/23/2016 19:48:44.573 __WiFiLocationServiceManagerEventCallback, got cb dict {
+    eventType = 0;
+    location = "<+47.86577047,+17.22704387> +/- 10.00m (speed 28.55 mps / course 127.97) @ 12/23/16, 7:48:44 PM Central European Standard Time";
+}
+12/23/2016 19:48:44.574 WiFiLocationServiceManagerIsLocationValid: cachedLocationTimeout 120.000000 location age 0.001490secs, lifeSpan -1.000000 accuracy 10.000000(highAccReq 1), isValid 1
+12/23/2016 19:48:44.574 WiFiLocationServiceManagerIsLocationValid: cachedLocationTimeout 120.000000 location age 0.001554secs, lifeSpan -1.000000 accuracy 10.000000(highAccReq 0), isValid 1
+12/23/2016 19:48:44.574 __WiFiLocationServiceManagerProcessLocationAvailableEvent: isValidHighAccuracyLocation 1,  isValidLowAccuracyLocation 1
+12/23/2016 19:49:04.710 __WiFiManagerCellularTransmitCallback_block_invoke: Cellular Transmit Started = FALSE
+12/23/2016 19:49:15.413 __WiFiManagerCellularTransmitCallback_block_invoke: Cellular Transmit Started = TRUE
+12/23/2016 19:49:31.678 __WiFiDeviceProcessDumpLogsEvent: Dump logs event received, dumped wifid log buffer to file

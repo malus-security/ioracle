@@ -1,0 +1,2 @@
+Oct 24 09:40:10 Razvans-iPhone mobileassetd[430]: mobileassetd - _MobileAssetDecryptAndVerifySignature: Could not verify signature using public key: -9809
+Oct 24 09:40:10 Razvans-iPhone mobileassetd[430]: mobileassetd - _MobileAssetVerifyAssetMapSignature: Could not validate asset map signature

@@ -1,0 +1,22 @@
+12/15/2016 17:02:39.563 WiFiLocaleManagerCheckLocale: location service or wifi is off, set locale to default
+12/15/2016 17:02:39.563 new locale:  , locale: 
+12/15/2016 17:02:40.564 __WiFiManagerCellularTransmitCallback_block_invoke: Cellular Transmit Started = FALSE
+12/15/2016 17:02:41.132 __WiFiManagerCellularTransmitCallback_block_invoke: Cellular Transmit Started = TRUE
+12/15/2016 17:03:07.192 __WiFiManagerCellularTransmitCallback_block_invoke: Cellular Transmit Started = FALSE
+12/15/2016 17:03:08.474 __WiFiManagerCellularTransmitCallback_block_invoke: Cellular Transmit Started = TRUE
+12/15/2016 17:04:00.533 __WiFiManagerCellularTransmitCallback_block_invoke: Cellular Transmit Started = FALSE
+12/15/2016 17:04:01.130 __WiFiManagerCellularTransmitCallback_block_invoke: Cellular Transmit Started = TRUE
+12/15/2016 17:04:39.561 WiFiLocaleManagerCheckLocale: location service or wifi is off, set locale to default
+12/15/2016 17:04:39.561 new locale:  , locale: 
+12/15/2016 17:05:32.487 __WiFiManagerCellularTransmitCallback_block_invoke: Cellular Transmit Started = FALSE
+12/15/2016 17:05:34.103 __WiFiManagerCellularTransmitCallback_block_invoke: Cellular Transmit Started = TRUE
+12/15/2016 17:05:40.487 __WiFiManagerCellularTransmitCallback_block_invoke: Cellular Transmit Started = FALSE
+12/15/2016 17:05:42.985 __WiFiManagerCellularTransmitCallback_block_invoke: Cellular Transmit Started = TRUE
+12/15/2016 17:06:39.561 WiFiLocaleManagerCheckLocale: location service or wifi is off, set locale to default
+12/15/2016 17:06:39.561 new locale:  , locale: 
+12/15/2016 17:06:49.408 __WiFiManagerCellularTransmitCallback_block_invoke: Cellular Transmit Started = FALSE
+12/15/2016 17:06:50.686 __WiFiManagerCellularTransmitCallback_block_invoke: Cellular Transmit Started = TRUE
+12/15/2016 17:07:33.792 __WiFiManagerCellularTransmitCallback_block_invoke: Cellular Transmit Started = FALSE
+12/15/2016 17:07:36.137 __WiFiManagerCellularTransmitCallback_block_invoke: Cellular Transmit Started = TRUE
+12/15/2016 17:07:37.361 WoW is Disabled, 0 WoW Clients
+12/15/2016 17:07:37.707 __WiFiDeviceProcessDumpLogsEvent: Dump logs event received, dumped wifid log buffer to file

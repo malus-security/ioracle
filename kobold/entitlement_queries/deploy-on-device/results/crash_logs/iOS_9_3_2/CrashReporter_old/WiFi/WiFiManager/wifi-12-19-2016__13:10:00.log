@@ -1,0 +1,50 @@
+12/19/2016 13:06:12.660 BG Application: Not Present, BG Daemon: Present. Daemons: mediaserverd apsd 
+12/19/2016 13:06:12.660 __WiFiManagerSetEnableState: state TRUE, manager->enable.setting TRUE, manager->unlockedSinceBoot TRUE
+12/19/2016 13:06:12.660 Auto association attempt canceled because MIS is enabled. MIS client count: wifi=3 bt=0
+12/19/2016 13:06:14.623 Device display is OFF
+12/19/2016 13:06:14.628 ATJManager: setting ask-to-join interaction mode to NonInteractive
+12/19/2016 13:06:14.628 ATJManager: no entries to purge
+12/19/2016 13:06:14.628 User interaction DISABLED
+12/19/2016 13:06:14.628 Ignoring lock state manager->wakeMode 1
+
+12/19/2016 13:06:58.020 __WiFiDeviceProcessSTAArriveEvent: staNum 4
+12/19/2016 13:06:58.020 WiFiAWDManagerSubmitMetric: metric container could not be generated for metric id <0x90006>
+12/19/2016 13:06:58.020 MIS STA Associated: 4 associated clients
+12/19/2016 13:06:58.038 WiFiDeviceManagerSetMISMaxStaNumber: Additional tethering clients allowed: 1
+12/19/2016 13:06:58.050 WiFiAWDManagerSubmitMetric: metric container could not be generated for metric id <0x90005>
+12/19/2016 13:06:58.050 MIS is already Enabled on ap1
+12/19/2016 13:06:58.055 MIS Discovery is Disabled
+12/19/2016 13:06:59.611 WiFiLocaleManagerCheckLocale: location service or wifi is off, set locale to default
+12/19/2016 13:06:59.611 new locale:  , locale: 
+12/19/2016 13:07:34.967 Device display is ON
+12/19/2016 13:07:34.967 __WiFiManagerSetEnableState: state TRUE, manager->enable.setting TRUE, manager->unlockedSinceBoot TRUE
+12/19/2016 13:07:34.967 Auto association attempt canceled because MIS is enabled. MIS client count: wifi=4 bt=0
+12/19/2016 13:07:39.650 ATJManager: setting ask-to-join interaction mode to Interactive
+12/19/2016 13:07:39.650 ATJManager: no entries to purge
+12/19/2016 13:07:39.651 User interaction ENABLED
+12/19/2016 13:07:39.651 Ignoring lock state manager->wakeMode 1
+
+12/19/2016 13:07:39.651 problematic networks =  and potentially problematic networks = 
+12/19/2016 13:07:39.651 Unblacklisting
+12/19/2016 13:07:39.651 No Change in Background Scan Networks, Skip Re-Programming Background Scan
+
+12/19/2016 13:07:39.651 Auto association attempt canceled because MIS is enabled. MIS client count: wifi=4 bt=0
+12/19/2016 13:07:41.071 BG Application: Not Present, BG Daemon: Present. Daemons: mediaserverd apsd 
+12/19/2016 13:08:15.801 ATJManager: setting ask-to-join interaction mode to NonInteractive
+12/19/2016 13:08:15.801 ATJManager: no entries to purge
+12/19/2016 13:08:15.802 User interaction DISABLED
+12/19/2016 13:08:15.802 Ignoring lock state manager->wakeMode 1
+
+12/19/2016 13:08:15.805 Device display is OFF
+12/19/2016 13:08:39.633 Background Network Application entered
+12/19/2016 13:08:39.634 BG Application: Present, BG Daemon: Present. Daemons: mediaserverd apsd 
+12/19/2016 13:08:39.634 __WiFiManagerSetEnableState: state TRUE, manager->enable.setting TRUE, manager->unlockedSinceBoot TRUE
+12/19/2016 13:08:39.634 Auto association attempt canceled because MIS is enabled. MIS client count: wifi=4 bt=0
+12/19/2016 13:08:39.647 Background Network Application entered
+12/19/2016 13:08:39.647 BG Application: Not Present, BG Daemon: Present. Daemons: mediaserverd apsd 
+12/19/2016 13:08:39.652 __WiFiManagerSetEnableState: state TRUE, manager->enable.setting TRUE, manager->unlockedSinceBoot TRUE
+12/19/2016 13:08:39.652 Auto association attempt canceled because MIS is enabled. MIS client count: wifi=4 bt=0
+12/19/2016 13:08:59.612 WiFiLocaleManagerCheckLocale: location service or wifi is off, set locale to default
+12/19/2016 13:08:59.613 new locale:  , locale: 
+12/19/2016 13:09:21.813 WoW is Disabled, 0 WoW Clients
+12/19/2016 13:10:00.520 __WiFiDeviceProcessDumpLogsEvent: Dump logs event received, dumped wifid log buffer to file

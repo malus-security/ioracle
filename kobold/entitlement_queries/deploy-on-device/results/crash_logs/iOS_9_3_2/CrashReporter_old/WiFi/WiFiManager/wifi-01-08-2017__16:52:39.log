@@ -1,0 +1,4 @@
+ 1/08/2017 16:52:39.904 Device display is ON
+ 1/08/2017 16:52:39.904 __WiFiManagerSetEnableState: state TRUE, manager->enable.setting TRUE, manager->unlockedSinceBoot TRUE
+ 1/08/2017 16:52:39.904 __WiFiDeviceManagerAutoAssociate: Already connected to DIGI-146A.
+ 1/08/2017 16:52:39.905 __WiFiDeviceProcessDumpLogsEvent: Dump logs event received, dumped wifid log buffer to file

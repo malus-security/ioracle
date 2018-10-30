@@ -1,0 +1,86 @@
+12/19/2016 14:30:01.600 __WiFiManagerCellularTransmitCallback_block_invoke: Cellular Transmit Started = TRUE
+12/19/2016 14:30:14.543 __WiFiManagerCellularTransmitCallback_block_invoke: Cellular Transmit Started = FALSE
+12/19/2016 14:30:30.794 __WiFiManagerCellularTransmitCallback_block_invoke: Cellular Transmit Started = TRUE
+12/19/2016 14:30:47.181 __WiFiManagerCellularTransmitCallback_block_invoke: Cellular Transmit Started = FALSE
+12/19/2016 14:30:54.702 WoW is Disabled, 0 WoW Clients
+12/19/2016 14:30:59.499 WiFiLocaleManagerCheckLocale: location service or wifi is off, set locale to default
+12/19/2016 14:30:59.499 new locale:  , locale: 
+12/19/2016 14:32:02.812 __WiFiManagerCellularTransmitCallback_block_invoke: Cellular Transmit Started = TRUE
+12/19/2016 14:32:14.224 __WiFiManagerCellularTransmitCallback_block_invoke: Cellular Transmit Started = FALSE
+12/19/2016 14:32:18.577 __WiFiManagerCellularTransmitCallback_block_invoke: Cellular Transmit Started = TRUE
+12/19/2016 14:32:18.887 __WiFiManagerCellularTransmitCallback_block_invoke: Cellular Transmit Started = FALSE
+12/19/2016 14:32:19.824 __WiFiManagerCellularTransmitCallback_block_invoke: Cellular Transmit Started = TRUE
+12/19/2016 14:32:20.191 __WiFiManagerCellularTransmitCallback_block_invoke: Cellular Transmit Started = FALSE
+12/19/2016 14:32:20.334 IPv4 Primary interface is (null) and IPv6 Primary Interface is (null)
+12/19/2016 14:32:20.338 Client apsd set type to background application
+12/19/2016 14:32:20.338 __WiFiManagerSetEnableState: state TRUE, manager->enable.setting TRUE, manager->unlockedSinceBoot TRUE
+12/19/2016 14:32:20.339 BG Application: Not Present, BG Daemon: Present. Daemons: mediaserverd apsd 
+12/19/2016 14:32:20.339 Auto association attempt canceled because MIS is enabled. MIS client count: wifi=1 bt=0
+12/19/2016 14:32:20.339 Enable WoW requested by "apsd"
+12/19/2016 14:32:20.339 WoW Capable = YES, Attempting to enable WoW and disable LPAS 
+12/19/2016 14:32:20.339 Setting WoW params to <CFBasicHash 0x14ce41a50 [0x1a0950150]>{type = immutable dict, count = 3,
+entries =>
+	0 : <CFString 0x100175960 [0x1a0950150]>{contents = "IO80211InterfaceEnableLowPwrAssocMode"} = <CFBoolean 0x1a09506d8 [0x1a0950150]>{value = false}
+	1 : <CFString 0x100175940 [0x1a0950150]>{contents = "IO80211InterfaceEnableWoW"} = <CFBoolean 0x1a09506c8 [0x1a0950150]>{value = true}
+	2 : <CFString 0x100185ae0 [0x1a0950150]>{contents = "IO80211InterfaceEnableWoWOnCaptive"} = <CFBoolean 0x1a09506d8 [0x1a0950150]>{value = false}
+}
+
+12/19/2016 14:32:20.345 WiFiDeviceRequestAssociatedSleep: ActiveDuringSleepRequested is already removed ((null)).
+12/19/2016 14:32:20.345 WoW Enabled by 1 Clients, lpas is Disabled, WoW Override is Disabled, Captive Disabled
+12/19/2016 14:32:20.346 Unable to dispatch WowStateChanged message to client mediaserverd (268435460)
+12/19/2016 14:32:20.347 Unable to dispatch WowStateChanged message to client itunesstored (268435460)
+12/19/2016 14:32:20.347 Unable to dispatch WowStateChanged message to client dataaccessd (268435460)
+12/19/2016 14:32:20.347 Unable to dispatch WowStateChanged message to client MobileMail (268435460)
+12/19/2016 14:32:20.370 MIS is already Enabled on ap1
+12/19/2016 14:32:20.371 apsd[273] is a wow client
+12/19/2016 14:32:20.371 WoW is Enabled, 1 WoW Clients
+12/19/2016 14:32:20.373 apsd[273] is a wow client
+12/19/2016 14:32:20.373 WoW is Enabled, 1 WoW Clients
+12/19/2016 14:32:20.379 MIS is already Enabled on ap1
+12/19/2016 14:32:20.380 apsd[273] is a wow client
+12/19/2016 14:32:20.380 WoW is Enabled, 1 WoW Clients
+12/19/2016 14:32:20.382 MIS Discovery is Disabled
+12/19/2016 14:32:20.396 Client MobileMail set type to background application
+12/19/2016 14:32:20.396 __WiFiManagerSetEnableState: state TRUE, manager->enable.setting TRUE, manager->unlockedSinceBoot TRUE
+12/19/2016 14:32:20.396 BG Application: Not Present, BG Daemon: Present. Daemons: MobileMail mediaserverd apsd 
+12/19/2016 14:32:20.396 Auto association attempt canceled because MIS is enabled. MIS client count: wifi=1 bt=0
+12/19/2016 14:32:21.174 __WiFiManagerCellularTransmitCallback_block_invoke: Cellular Transmit Started = TRUE
+12/19/2016 14:32:24.183 IPv4 Primary interface is pdp_ip0 and IPv6 Primary Interface is (null)
+12/19/2016 14:32:24.193 MIS is already Enabled on ap1
+12/19/2016 14:32:24.195 MIS Discovery is Disabled
+12/19/2016 14:32:36.626 __WiFiManagerCellularTransmitCallback_block_invoke: Cellular Transmit Started = FALSE
+12/19/2016 14:32:59.499 WiFiLocaleManagerCheckLocale: location service or wifi is off, set locale to default
+12/19/2016 14:32:59.499 new locale:  , locale: 
+12/19/2016 14:33:24.106 __WiFiManagerCellularTransmitCallback_block_invoke: Cellular Transmit Started = TRUE
+12/19/2016 14:33:24.155 Disable WoW requested by "apsd"
+12/19/2016 14:33:24.155 WoW Capable = YES, Attempting to disable WoW and enable LPAS 
+12/19/2016 14:33:24.155 Setting WoW params to <CFBasicHash 0x14ce41a50 [0x1a0950150]>{type = immutable dict, count = 3,
+entries =>
+	0 : <CFString 0x100175960 [0x1a0950150]>{contents = "IO80211InterfaceEnableLowPwrAssocMode"} = <CFBoolean 0x1a09506c8 [0x1a0950150]>{value = true}
+	1 : <CFString 0x100175940 [0x1a0950150]>{contents = "IO80211InterfaceEnableWoW"} = <CFBoolean 0x1a09506d8 [0x1a0950150]>{value = false}
+	2 : <CFString 0x100185ae0 [0x1a0950150]>{contents = "IO80211InterfaceEnableWoWOnCaptive"} = <CFBoolean 0x1a09506d8 [0x1a0950150]>{value = false}
+}
+
+12/19/2016 14:33:24.158 WiFiDeviceRequestAssociatedSleep: ActiveDuringSleepRequested is already removed ((null)).
+12/19/2016 14:33:24.158 WoW Disabled, 0 WoW Clients, lpas is Enabled, WoW Override is Disabled, Captive Disabled
+12/19/2016 14:33:24.159 Unable to dispatch WowStateChanged message to client mediaserverd (268435460)
+12/19/2016 14:33:24.160 Unable to dispatch WowStateChanged message to client itunesstored (268435460)
+12/19/2016 14:33:24.160 Unable to dispatch WowStateChanged message to client dataaccessd (268435460)
+12/19/2016 14:33:24.160 Unable to dispatch WowStateChanged message to client MobileMail (268435460)
+12/19/2016 14:33:24.161 WoW is Disabled, 0 WoW Clients
+12/19/2016 14:33:24.163 WoW is Disabled, 0 WoW Clients
+12/19/2016 14:33:24.163 WoW is Disabled, 0 WoW Clients
+12/19/2016 14:33:29.140 Client apsd set type to normal application
+12/19/2016 14:33:29.140 __WiFiManagerSetEnableState: state TRUE, manager->enable.setting TRUE, manager->unlockedSinceBoot TRUE
+12/19/2016 14:33:29.141 BG Application: Not Present, BG Daemon: Present. Daemons: MobileMail mediaserverd 
+12/19/2016 14:33:29.181 Client MobileMail set type to normal application
+12/19/2016 14:33:29.181 __WiFiManagerSetEnableState: state TRUE, manager->enable.setting TRUE, manager->unlockedSinceBoot TRUE
+12/19/2016 14:33:29.181 BG Application: Not Present, BG Daemon: Present. Daemons: mediaserverd 
+12/19/2016 14:33:35.186 __WiFiManagerCellularTransmitCallback_block_invoke: Cellular Transmit Started = FALSE
+12/19/2016 14:33:36.582 __WiFiManagerCellularTransmitCallback_block_invoke: Cellular Transmit Started = TRUE
+12/19/2016 14:33:46.386 __WiFiManagerCellularTransmitCallback_block_invoke: Cellular Transmit Started = FALSE
+12/19/2016 14:34:27.820 __WiFiManagerCellularTransmitCallback_block_invoke: Cellular Transmit Started = TRUE
+12/19/2016 14:34:47.831 __WiFiManagerCellularTransmitCallback_block_invoke: Cellular Transmit Started = FALSE
+12/19/2016 14:34:59.499 WiFiLocaleManagerCheckLocale: location service or wifi is off, set locale to default
+12/19/2016 14:34:59.499 new locale:  , locale: 
+12/19/2016 14:35:00.487 __WiFiDeviceProcessDumpLogsEvent: Dump logs event received, dumped wifid log buffer to file

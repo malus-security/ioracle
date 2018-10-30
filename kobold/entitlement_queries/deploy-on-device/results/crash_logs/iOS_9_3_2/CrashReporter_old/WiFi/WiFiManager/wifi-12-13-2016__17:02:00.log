@@ -1,0 +1,10 @@
+12/13/2016 17:02:00.147 Received kIOMessageSystemWillPowerOn
+12/13/2016 17:02:00.147 System wake reason: AOP.ExternalReq rtc
+12/13/2016 17:02:00.147 System Powered ON notification Re-enabling auto-join
+12/13/2016 17:02:00.147 __WiFiManagerSetEnableState: state TRUE, manager->enable.setting TRUE, manager->unlockedSinceBoot TRUE
+12/13/2016 17:02:00.147 Enabling automatic association
+12/13/2016 17:02:00.148 __WiFiDeviceManagerAutoAssociate: Already connected to eduroam.
+12/13/2016 17:02:00.148 WiFiLocaleManagerCheckLocale: location service or wifi is off, set locale to default
+12/13/2016 17:02:00.148 new locale:  , locale: 
+12/13/2016 17:02:00.151 __WiFiDeviceManagerAwdlAvailableCallback: AWDL availability changed to TRUE
+12/13/2016 17:02:00.151 __WiFiDeviceProcessDumpLogsEvent: Dump logs event received, dumped wifid log buffer to file

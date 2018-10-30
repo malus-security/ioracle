@@ -1,0 +1,154 @@
+12/23/2016 19:20:17.067 Async scan requested by "locationd" for 1 iterations with maxage=0 priority normal on en0
+12/23/2016 19:20:17.067 Enqueuing command type: "Scan" pending commands: 0
+12/23/2016 19:20:17.067 Dequeuing command type: "Scan" pending commands: 0
+12/23/2016 19:20:17.067 Attempting Apple80211ScanAsync on en0
+12/23/2016 19:20:17.454 Completed Apple80211ScanAsync on en0 (0x0)
+12/23/2016 19:20:17.454 Async scan request completed for "locationd" (0)
+12/23/2016 19:20:23.066 Async scan requested by "locationd" for 1 iterations with maxage=0 priority normal on en0
+12/23/2016 19:20:23.067 Enqueuing command type: "Scan" pending commands: 0
+12/23/2016 19:20:23.067 Dequeuing command type: "Scan" pending commands: 0
+12/23/2016 19:20:23.067 Attempting Apple80211ScanAsync on en0
+12/23/2016 19:20:23.451 Completed Apple80211ScanAsync on en0 (0x0)
+12/23/2016 19:20:23.451 Async scan request completed for "locationd" (0)
+12/23/2016 19:20:29.076 Async scan requested by "locationd" for 1 iterations with maxage=0 priority normal on en0
+12/23/2016 19:20:29.076 Enqueuing command type: "Scan" pending commands: 0
+12/23/2016 19:20:29.076 Dequeuing command type: "Scan" pending commands: 0
+12/23/2016 19:20:29.076 Attempting Apple80211ScanAsync on en0
+12/23/2016 19:20:29.460 Completed Apple80211ScanAsync on en0 (0x0)
+12/23/2016 19:20:29.460 Async scan request completed for "locationd" (0)
+12/23/2016 19:20:31.823 Device display is ON
+12/23/2016 19:20:31.823 __WiFiManagerSetEnableState: state TRUE, manager->enable.setting TRUE, manager->unlockedSinceBoot TRUE
+12/23/2016 19:20:31.823 Auto association attempt canceled because MIS is enabled. MIS client count: wifi=4 bt=0
+12/23/2016 19:20:31.987 Async scan requested by "locationd" for 1 iterations with maxage=0 priority normal on en0
+12/23/2016 19:20:31.987 Enqueuing command type: "Scan" pending commands: 0
+12/23/2016 19:20:31.987 Dequeuing command type: "Scan" pending commands: 0
+12/23/2016 19:20:31.987 Attempting Apple80211ScanAsync on en0
+12/23/2016 19:20:32.145 Completed Apple80211ScanAsync on en0 (0x0)
+12/23/2016 19:20:32.146 Async scan request completed for "locationd" (0)
+12/23/2016 19:20:32.146 Async scan requested by "locationd" for 1 iterations with maxage=0 priority normal on en0
+12/23/2016 19:20:32.146 Enqueuing command type: "Scan" pending commands: 0
+12/23/2016 19:20:32.146 Dequeuing command type: "Scan" pending commands: 0
+12/23/2016 19:20:32.146 Attempting Apple80211ScanAsync on en0
+12/23/2016 19:20:32.532 Completed Apple80211ScanAsync on en0 (0x0)
+12/23/2016 19:20:32.532 Async scan request completed for "locationd" (0)
+12/23/2016 19:20:43.434 Device display is OFF
+12/23/2016 19:20:44.576 WiFiLocaleManagerCheckLocale: trying to determine locale...
+12/23/2016 19:20:44.576 WiFiManagerCoreLocationGetCachedLocation: getting cached location...
+12/23/2016 19:20:44.588 __WiFiLocaleManagerGetLocaleFromMcc: finding iso country code for mcc 216 ....
+12/23/2016 19:20:44.589 WiFiLocationServiceManagerIsLocationValid: cachedLocationTimeout 120.000000 location age 120.005899secs, lifeSpan -1.000000 accuracy 10.000000(highAccReq 0), isValid 1
+12/23/2016 19:20:44.589 WiFiLocationServiceManagerStartLowAccuracyMonitoring: Cached low accuracy location is valid
+12/23/2016 19:20:44.589 WiFiLocationServiceManagerIsLocationValid: cachedLocationTimeout 120.000000 location age 120.006036secs, lifeSpan -1.000000 accuracy 10.000000(highAccReq 1), isValid 1
+12/23/2016 19:20:44.589 WiFiLocationServiceManagerIsLocationValid: cachedLocationTimeout 120.000000 location age 120.006090secs, lifeSpan -1.000000 accuracy 10.000000(highAccReq 0), isValid 1
+12/23/2016 19:20:44.589 __WiFiLocationServiceManagerProcessLocationAvailableEvent: isValidHighAccuracyLocation 1,  isValidLowAccuracyLocation 1
+12/23/2016 19:20:44.589 __WiFiLocationServiceManagerProcessLocationAvailableEvent: give low accuracy callback
+12/23/2016 19:20:44.590 __WiFiLocaleManagerGetLocaleFromLocation: <+47.89889538,+17.17074372> +/- 10.00m (speed 1.21 mps / course 129.02) @ 12/23/16, 7:18:44 PM Central European Standard Time
+12/23/2016 19:20:44.590 locale from bounding box 
+12/23/2016 19:20:44.590 new locale:  , locale: 
+12/23/2016 19:20:44.590 Stopping Low Accuracy Location Monitoring
+12/23/2016 19:20:44.590 CLMonitoring is already stopped
+12/23/2016 19:20:44.590 Stopping Low Accuracy Location Monitoring
+12/23/2016 19:20:44.590 CLMonitoring is already stopped
+12/23/2016 19:20:44.590 __WiFiLocationServiceManagerEventCallback, got cb dict {
+    eventType = 0;
+    location = "<+47.89637469,+17.17486083> +/- 10.00m (speed 3.89 mps / course 135.00) @ 12/23/16, 7:20:44 PM Central European Standard Time";
+}
+12/23/2016 19:20:44.591 WiFiLocationServiceManagerIsLocationValid: cachedLocationTimeout 120.000000 location age 0.011220secs, lifeSpan -1.000000 accuracy 10.000000(highAccReq 1), isValid 1
+12/23/2016 19:20:44.591 WiFiLocationServiceManagerIsLocationValid: cachedLocationTimeout 120.000000 location age 0.011273secs, lifeSpan -1.000000 accuracy 10.000000(highAccReq 0), isValid 1
+12/23/2016 19:20:44.591 __WiFiLocationServiceManagerProcessLocationAvailableEvent: isValidHighAccuracyLocation 1,  isValidLowAccuracyLocation 1
+12/23/2016 19:20:46.538 scanCache: Purging scan cache
+12/23/2016 19:20:56.830 __WiFiManagerCellularTransmitCallback_block_invoke: Cellular Transmit Started = FALSE
+12/23/2016 19:20:57.286 DeviceClient["WirelessRadioMan"] setCoexParameters["MWS_Blacklisted_Channels"] = <CFArray 0x14cf60a20 [0x1a0950150]>{type = mutable-small, count = 12, values = (
+	0 : <CFBasicHash 0x14cf74730 [0x1a0950150]>{type = mutable dict, count = 1,
+entries =>
+	2 : <CFString 0x14cd8af10 [0x1a0950150]>{contents = "MWS_Channel_Number"} = <CFNumber 0xb000000000000013 [0x1a0950150]>{value = +1, type = kCFNumberSInt64Type}
+}
+
+	1 : <CFBasicHash 0x14cdcfaa0 [0x1a0950150]>{type = mutable dict, count = 1,
+entries =>
+	2 : <CFString 0x14cd8af10 [0x1a0950150]>{contents = "MWS_Channel_Number"} = <CFNumber 0xb000000000000023 [0x1a0950150]>{value = +2, type = kCFNumberSInt64Type}
+}
+
+	2 : <CFBasicHash 0x14cd77410 [0x1a0950150]>{type = mutable dict, count = 1,
+entries =>
+	2 : <CFString 0x14cd8af10 [0x1a0950150]>{contents = "MWS_Channel_Number"} = <CFNumber 0xb000000000000033 [0x1a0950150]>{value = +3, type = kCFNumberSInt64Type}
+}
+
+	3 : <CFBasicHash 0x14cda1100 [0x1a0950150]>{type = mutable dict, count = 1,
+entries =>
+	2 : <CFString 0x14cd8af10 [0x1a0950150]>{contents = "MWS_Channel_Number"} = <CFNumber 0xb000000000000043 [0x1a0950150]>{value = +4, type = kCFNumberSInt64Type}
+}
+
+	4 : <CFBasicHash 0x14cd8aca0 [0x1a0950150]>{type = mutable dict, count = 1,
+entries =>
+	2 : <CFString 0x14cd8af10 [0x1a0950150]>{contents = "MWS_Channel_Number"} = <CFNumber 0xb000000000000053 [0x1a0950150]>{value = +5, type = kCFNumberSInt64Type}
+}
+
+	5 : <CFBasicHash 0x14cf33520 [0x1a0950150]>{type = mutable dict, count = 1,
+entries =>
+	2 : <CFString 0x14cd8af10 [0x1a0950150]>{contents = "MWS_Channel_Number"} = <CFNumber 0xb000000000000063 [0x1a0950150]>{value = +6, type = kCFNumberSInt64Type}
+}
+
+	6 : <CFBasicHash 0x14cd5f040 [0x1a0950150]>{type = mutable dict, count = 1,
+entries =>
+	2 : <CFString 0x14cd8af10 [0x1a0950150]>{contents = "MWS_Channel_Number"} = <CFNumber 0xb000000000000073 [0x1a0950150]>{value = +7, type = kCFNumberSInt64Type}
+}
+
+	7 : <CFBasicHash 0x14cf26740 [0x1a0950150]>{type = mutable dict, count = 1,
+entries =>
+	2 : <CFString 0x14cd8af10 [0x1a0950150]>{contents = "MWS_Channel_Number"} = <CFNumber 0xb000000000000083 [0x1a0950150]>{value = +8, type = kCFNumberSInt64Type}
+}
+
+	8 : <CFBasicHash 0x14cf62490 [0x1a0950150]>{type = mutable dict, count = 1,
+entries =>
+	2 : <CFString 0x14cd8af10 [0x1a0950150]>{contents = "MWS_Channel_Number"} = <CFNumber 0xb000000000000093 [0x1a0950150]>{value = +9, type = kCFNumberSInt64Type}
+}
+
+	9 : <CFBasicHash 0x14cfcf860 [0x1a0950150]>{type = mutable dict, count = 1,
+entries =>
+	2 : <CFString 0x14cd8af10 [0x1a0950150]>{contents = "MWS_Channel_Number"} = <CFNumber 0xb0000000000000a3 [0x1a0950150]>{value = +10, type = kCFNumberSInt64Type}
+}
+
+	10 : <CFBasicHash 0x14cda7980 [0x1a0950150]>{type = mutable dict, count = 1,
+entries =>
+	2 : <CFString 0x14cd8af10 [0x1a0950150]>{contents = "MWS_Channel_Number"} = <CFNumber 0xb0000000000000c3 [0x1a0950150]>{value = +12, type = kCFNumberSInt64Type}
+}
+
+	11 : <CFBasicHash 0x14cd7a9a0 [0x1a0950150]>{type = mutable dict, count = 1,
+entries =>
+	2 : <CFString 0x14cd8af10 [0x1a0950150]>{contents = "MWS_Channel_Number"} = <CFNumber 0xb0000000000000d3 [0x1a0950150]>{value = +13, type = kCFNumberSInt64Type}
+}
+
+)}
+12/23/2016 19:20:57.319 __WiFiManagerCellularTransmitCallback_block_invoke: Cellular Transmit Started = TRUE
+12/23/2016 19:20:57.904 __WiFiManagerCellularTransmitCallback_block_invoke: Cellular Transmit Started = FALSE
+12/23/2016 19:20:58.811 __WiFiManagerCellularTransmitCallback_block_invoke: Cellular Transmit Started = TRUE
+12/23/2016 19:21:56.832 WoW is Disabled, 0 WoW Clients
+12/23/2016 19:22:44.577 WiFiLocaleManagerCheckLocale: trying to determine locale...
+12/23/2016 19:22:44.577 WiFiManagerCoreLocationGetCachedLocation: getting cached location...
+12/23/2016 19:22:44.600 __WiFiLocaleManagerGetLocaleFromMcc: finding iso country code for mcc 216 ....
+12/23/2016 19:22:44.600 WiFiLocationServiceManagerIsLocationValid: cachedLocationTimeout 120.000000 location age 120.020986secs, lifeSpan -1.000000 accuracy 10.000000(highAccReq 0), isValid 1
+12/23/2016 19:22:44.600 WiFiLocationServiceManagerStartLowAccuracyMonitoring: Cached low accuracy location is valid
+12/23/2016 19:22:44.601 WiFiLocationServiceManagerIsLocationValid: cachedLocationTimeout 120.000000 location age 120.021125secs, lifeSpan -1.000000 accuracy 10.000000(highAccReq 1), isValid 1
+12/23/2016 19:22:44.601 WiFiLocationServiceManagerIsLocationValid: cachedLocationTimeout 120.000000 location age 120.021180secs, lifeSpan -1.000000 accuracy 10.000000(highAccReq 0), isValid 1
+12/23/2016 19:22:44.601 __WiFiLocationServiceManagerProcessLocationAvailableEvent: isValidHighAccuracyLocation 1,  isValidLowAccuracyLocation 1
+12/23/2016 19:22:44.601 __WiFiLocationServiceManagerProcessLocationAvailableEvent: give low accuracy callback
+12/23/2016 19:22:44.602 __WiFiLocaleManagerGetLocaleFromLocation: <+47.89637469,+17.17486083> +/- 10.00m (speed 3.89 mps / course 135.00) @ 12/23/16, 7:20:44 PM Central European Standard Time
+12/23/2016 19:22:44.602 locale from bounding box 
+12/23/2016 19:22:44.602 new locale:  , locale: 
+12/23/2016 19:22:44.602 Stopping Low Accuracy Location Monitoring
+12/23/2016 19:22:44.602 CLMonitoring is already stopped
+12/23/2016 19:22:44.602 Stopping Low Accuracy Location Monitoring
+12/23/2016 19:22:44.602 CLMonitoring is already stopped
+12/23/2016 19:22:44.602 __WiFiLocationServiceManagerEventCallback, got cb dict {
+    eventType = 0;
+    location = "<+47.89567719,+17.17572986> +/- 10.00m (speed 0.00 mps / course 139.92) @ 12/23/16, 7:22:44 PM Central European Standard Time";
+}
+12/23/2016 19:22:44.603 WiFiLocationServiceManagerIsLocationValid: cachedLocationTimeout 120.000000 location age 0.022290secs, lifeSpan -1.000000 accuracy 10.000000(highAccReq 1), isValid 1
+12/23/2016 19:22:44.603 WiFiLocationServiceManagerIsLocationValid: cachedLocationTimeout 120.000000 location age 0.022344secs, lifeSpan -1.000000 accuracy 10.000000(highAccReq 0), isValid 1
+12/23/2016 19:22:44.603 __WiFiLocationServiceManagerProcessLocationAvailableEvent: isValidHighAccuracyLocation 1,  isValidLowAccuracyLocation 1
+12/23/2016 19:23:09.994 __WiFiDeviceProcessSTALeaveEvent: staNum 3
+12/23/2016 19:23:10.001 MIS STA Disassociated: 3 associated clients
+12/23/2016 19:23:10.006 WiFiDeviceManagerSetMISMaxStaNumber: Additional tethering clients allowed: 2
+12/23/2016 19:23:10.019 MIS is already Enabled on ap1
+12/23/2016 19:23:10.021 MIS Discovery is Disabled
+12/23/2016 19:24:31.670 __WiFiDeviceProcessDumpLogsEvent: Dump logs event received, dumped wifid log buffer to file

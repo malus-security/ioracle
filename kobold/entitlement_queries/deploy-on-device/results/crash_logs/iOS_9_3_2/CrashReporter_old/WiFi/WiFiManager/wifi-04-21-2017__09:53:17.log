@@ -1,0 +1,20 @@
+ 4/21/2017  9:53:17.455 WiFiLocationServiceManagerIsLocationValid: cachedLocationTimeout 120.000000 location age 48.138144secs, lifeSpan -1.000000 accuracy 1414.000000(highAccReq 1), isValid 0
+ 4/21/2017  9:53:17.455 WiFiLocationServiceManagerIsLocationValid: cachedLocationTimeout 120.000000 location age 48.138207secs, lifeSpan -1.000000 accuracy 1414.000000(highAccReq 0), isValid 1
+ 4/21/2017  9:53:17.455 __WiFiLocationServiceManagerProcessLocationAvailableEvent: isValidHighAccuracyLocation 0,  isValidLowAccuracyLocation 1
+ 4/21/2017  9:53:17.455 __WiFiLocationServiceManagerProcessLocationAvailableEvent: give low accuracy callback
+ 4/21/2017  9:53:17.456 __WiFiLocaleManagerGetLocaleFromLocation: <+44.42310237,+26.07474871> +/- 1414.00m (speed -1.00 mps / course -1.00) @ 4/21/17, 9:52:29 AM Eastern European Summer Time
+ 4/21/2017  9:53:17.456 locale from bounding box 
+ 4/21/2017  9:53:17.456 new locale:  , locale: 
+ 4/21/2017  9:53:17.456 Stopping Low Accuracy Location Monitoring
+ 4/21/2017  9:53:17.456 CLMonitoring is already stopped
+ 4/21/2017  9:53:17.456 Stopping Low Accuracy Location Monitoring
+ 4/21/2017  9:53:17.456 CLMonitoring is already stopped
+ 4/21/2017  9:53:17.461 __WiFiDeviceManagerAwdlAvailableCallback: AWDL availability changed to TRUE
+ 4/21/2017  9:53:17.461 __WiFiLocationServiceManagerEventCallback, got cb dict {
+    eventType = 0;
+    location = "<+44.42187580,+26.07361776> +/- 65.00m (speed -1.00 mps / course -1.00) @ 4/21/17, 9:52:48 AM Eastern European Summer Time";
+}
+ 4/21/2017  9:53:17.465 WiFiLocationServiceManagerIsLocationValid: cachedLocationTimeout 120.000000 location age 28.712044secs, lifeSpan -1.000000 accuracy 65.000000(highAccReq 1), isValid 1
+ 4/21/2017  9:53:17.465 WiFiLocationServiceManagerIsLocationValid: cachedLocationTimeout 120.000000 location age 28.712112secs, lifeSpan -1.000000 accuracy 65.000000(highAccReq 0), isValid 1
+ 4/21/2017  9:53:17.465 __WiFiLocationServiceManagerProcessLocationAvailableEvent: isValidHighAccuracyLocation 1,  isValidLowAccuracyLocation 1
+ 4/21/2017  9:53:17.465 __WiFiDeviceProcessDumpLogsEvent: Dump logs event received, dumped wifid log buffer to file
