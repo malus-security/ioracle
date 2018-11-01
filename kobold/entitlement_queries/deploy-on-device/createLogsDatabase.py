@@ -70,11 +70,10 @@ def insert_run(model, os, jailbroken, ent_file, raw_file, runID):
     conn.commit()
 
 
-def add_log(log_name):
+def add_log(log_name, runID):
     curr_dir = os.path.dirname(__file__)
     log = os.path.join(curr_dir, log_name)
     log_file = open(log, "r")
-    runID = get_next_runID()
 
     for m_id in range(1,2020):
         methodName, machPort, connectionTerminated, connectionInvalidated, hasCompletion = ["", "", 0, 0, 0]
