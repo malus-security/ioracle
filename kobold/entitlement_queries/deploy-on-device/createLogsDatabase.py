@@ -44,8 +44,9 @@ def create_database():
 
     # Table for Device characteristics
     sql = 'create table if not exists ' + table_devices + ' ( \
-            id PRIMARY KEY, \
+            id INTEGER PRIMARY KEY AUTOINCREMENT, \
             name TEXT, \
+            jailbroken BOOL, \
             os TEXT, \
             device_version TEXT, \
             device_model TEXT, \

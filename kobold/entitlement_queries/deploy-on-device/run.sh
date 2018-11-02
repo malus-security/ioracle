@@ -16,7 +16,7 @@ function prepare_variables {
     runID=$(sqlite3 fuzzing.db 'select max(id) from runs')
     [[ $runID ]] || runID=0
     echo "runID = " $runID
-    deviceID=0
+    deviceID=$deviceID
 
     # Output file names+path
     filemon_file=$FILEMON_FOLDER/filemon_$runID
@@ -43,7 +43,7 @@ function prepare_host {
 }
 
 function prepare_device {
-    output=$(execute_on_device "filemon -h") || echo "filemon is not in PATH. No filemon support available!"
+    output=$(execute_on_device "/bin/bash -l -c 'which filemon'") || echo "filemon is not in PATH. No filemon support available!"
 
     # Clean device
     execute_on_device "rm -rf $DEVICE_CRASH_REPORTER_FOLDER/*"
