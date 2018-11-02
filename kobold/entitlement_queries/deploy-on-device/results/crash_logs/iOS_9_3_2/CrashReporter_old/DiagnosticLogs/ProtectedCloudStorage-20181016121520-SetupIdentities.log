@@ -1,8 +1,0 @@
-Oct 16 12:15:20  accountsd[93] <Warning>: SetupIdentities start
-Oct 16 12:15:20  accountsd[93] <Warning>:   running SetupIdentities step LogStatus
-Oct 16 12:15:20  accountsd[93] <Warning>: Master identity: <PCSIdentity@0x15eea3030  pubkey: 88Xg+PUJKRoVHgc3ZdNrzZHFlHvcaXVPACNUcP6N0DI= service: MasterKey> BAT: 20170419124136;iPhone OS;13F69 <>
-Oct 16 12:15:20  accountsd[93] <Warning>: Local iCDP status is 0
-Oct 16 12:15:20  accountsd[93] <Warning>:   running SetupIdentities step PreCheckKeychain
-Oct 16 12:15:20  accountsd[93] <Warning>:   running SetupIdentities step FixupKeychainItems
-Oct 16 12:15:20  accountsd[93] <Warning>:   running SetupIdentities step ValidateLocalStoreShortCut
-Oct 16 12:15:20  accountsd[93] <Warning>: SetupIdentities complete: success (error: (null))

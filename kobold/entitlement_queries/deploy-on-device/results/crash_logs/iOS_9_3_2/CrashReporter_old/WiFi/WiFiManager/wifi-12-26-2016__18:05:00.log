@@ -1,9 +1,0 @@
-12/26/2016 18:05:00.566 __WiFiManagerCellularTransmitCallback_block_invoke: Cellular Transmit Started = TRUE
-12/26/2016 18:05:00.593 __WiFiLocationServiceManagerEventCallback, got cb dict {
-    eventType = 0;
-    location = "<+44.42590474,+26.13609119> +/- 65.00m (speed -1.00 mps / course -1.00) @ 12/26/16, 5:42:52 PM Eastern European Standard Time";
-}
-12/26/2016 18:05:00.597 WiFiLocationServiceManagerIsLocationValid: cachedLocationTimeout 120.000000 location age 1328.101544secs, lifeSpan -1.000000 accuracy 65.000000(highAccReq 1), isValid 1
-12/26/2016 18:05:00.598 WiFiLocationServiceManagerIsLocationValid: cachedLocationTimeout 120.000000 location age 1328.101688secs, lifeSpan -1.000000 accuracy 65.000000(highAccReq 0), isValid 1
-12/26/2016 18:05:00.598 __WiFiLocationServiceManagerProcessLocationAvailableEvent: isValidHighAccuracyLocation 1,  isValidLowAccuracyLocation 1
-12/26/2016 18:05:00.598 __WiFiDeviceProcessDumpLogsEvent: Dump logs event received, dumped wifid log buffer to file
