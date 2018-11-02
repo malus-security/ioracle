@@ -1,6 +1,6 @@
 binary_app=../../../../ios-command-line-tool/build/Release-iphoneos/ios-command-line-tool
 ent_file=../xml_entitlements/get-task-allow.xml
-ip_addr=172.19.9.52
+ip_addr=172.19.10.155
 user=root
 loops=1
 model="iPhone6"

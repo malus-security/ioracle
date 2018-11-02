@@ -4,9 +4,10 @@ import sqlite3
 import re
 import os
 
-location = 'logs'
+location = 'fuzzing.db'
 table_appOutput = 'appOutput'
-table_run = 'run'
+table_runs = 'runs'
+table_devices = 'devices'
 
 def init():
     #clean()
@@ -17,6 +18,7 @@ def init():
     create_database()
 
 def create_database():
+    # Table for fuzzing app output
     sql = 'create table if not exists ' + table_appOutput + ' ( \
             id INTEGER NOT NULL, \
             method TEXT NOT NULL, \
@@ -29,19 +31,26 @@ def create_database():
     sql = 'create unique index if not exists u_id on ' + table_appOutput + ' (id, runID)'
     c.execute(sql)
 
-    # Table for Device characteristics
-    sql = 'create table if not exists ' + table_run + ' ( \
-            model TEXT, \
-            os TEXT, \
-            jailbroken TEXT, \
+    # Table for runs
+    sql = 'create table if not exists ' + table_runs + ' ( \
+            id INTEGER PRIMARY KEY AUTOINCREMENT, \
             ent_file TEXT, \
             app_output_file TEXT, \
             crash_reporter_file TEXT, \
             filemon_file TEXT, \
-            timestamp, TEXT, \
-            runID INTEGER)'
+            timestamp TEXT, \
+            deviceID INTEGER)'
     c.execute(sql)
-    sql = 'create unique index if not exists u_id on ' + table_run + ' (runID)'
+
+    # Table for Device characteristics
+    sql = 'create table if not exists ' + table_devices + ' ( \
+            id PRIMARY KEY, \
+            name TEXT, \
+            os TEXT, \
+            device_version TEXT, \
+            device_model TEXT, \
+            code TEXT, \
+            serial TEXT)'
     c.execute(sql)
     conn.commit()
 
@@ -56,18 +65,13 @@ def insert_log(m_id, method, machPort, hasCompletion, connectionInvalidated, con
     c.execute(sql)
     conn.commit()
 
-def insert_run(model, os, jailbroken, ent_file, app_output_file, \
-               crash_reporter_file, filemon_file, timestamp, runID):
-    sql = "insert into " + table_run + " \
-                (model, os, jailbroken, ent_file, app_output_file,\
-                 crash_reporter_file, filemon_file, timestamp, runID) values\
-                ('%s', '%s', '%s', '%s', '%s',\
-                 '%s', '%s', '%s', %d)" % \
-                (model, os, jailbroken, ent_file, app_output_file, \
-                 crash_reporter_file, filemon_file, timestamp, runID)
+def insert_run(ent_file, app_output_file, crash_reporter_file, filemon_file, timestamp, deviceID):
+    sql = "insert into " + table_runs + " \
+                (ent_file, app_output_file, crash_reporter_file, filemon_file, timestamp, deviceID) values\
+                ('%s', '%s', '%s', '%s', '%s', %d)" % \
+                (ent_file, app_output_file, crash_reporter_file, filemon_file, timestamp, deviceID)
     c.execute(sql)
     conn.commit()
-
 
 def add_log(log_name, runID):
     curr_dir = os.path.dirname(__file__)

@@ -3,15 +3,6 @@
 . run.config
 
 
-runID=$(sqlite3 logs 'select max(runID) from appOutput')
-[[ $runID ]] || runID=0
-# Output file names+path
-filemon_file=$FILEMON_FOLDER/filemon_$runID
-crash_reporter_local_folder=$CRASH_REPORTER_FOLDER/run_$runID
-app_output_file=$APP_OUTPUT_FOLDER/run_$runID.txt
-results_ent_file=$ENTS_FOLDER/ents_$runID.xml
-timestamp=`date +%d-%m-%Y_%H:%M`
-
 function error_exit {
     echo "$1"
     exit "${2:-1}"  ## Return a code specified by $2 or 1 by default.
@@ -19,6 +10,21 @@ function error_exit {
 
 function execute_on_device {
     ssh $user@$ip_addr $1
+}
+
+function prepare_variables {
+    runID=$(sqlite3 fuzzing.db 'select max(id) from runs')
+    [[ $runID ]] || runID=0
+    echo "runID = " $runID
+    deviceID=0
+
+    # Output file names+path
+    filemon_file=$FILEMON_FOLDER/filemon_$runID
+    crash_reporter_local_folder=$CRASH_REPORTER_FOLDER/run_$runID
+    app_output_file=$APP_OUTPUT_FOLDER/run_$runID.txt
+    results_ent_file=$ENTS_FOLDER/ents_$runID.xml
+    timestamp=`date +%d-%m-%Y_%H:%M`
+
 }
 
 function prepare_host {
@@ -60,13 +66,11 @@ function deploy_app {
 function post_process {
     echo "Adding logs to db"
     output=$(ls run.out) || error_exit "No output file"
+
     python -c 'import createLogsDatabase as db; db.add_log("run.out", '$runID')'
     python -c 'import createLogsDatabase as db; db.insert_run(
-                    "'$model'", "'$iOS'", "'$jailbroken'", "'$results_ent_file'",
-                    "'$app_output_file'", "'$crash_reporter_local_folder'",
-                    "'$filemon_file'", "'$timestamp'", '$runID')'
-
-
+                    "'$results_ent_file'","'$app_output_file'", "'$crash_reporter_local_folder'",
+                    "'$filemon_file'", "'$timestamp'", '$deviceID')'
 
     echo "Copying logs to results folder (CrashLogs & App Output)"
 
@@ -83,10 +87,8 @@ function post_process {
     cp $ent_file $results_ent_file
 }
 
-#prepare_host
-#prepare_device
-#deploy_app
+prepare_variables
+prepare_host
+prepare_device
+deploy_app
 post_process
-
-#python -c 'import createLogsDatabase as db; db.insert_run("'$model'", "'$iOS'", "'$jailbroken'", "'$ent_file'", "run.out", db.get_runID())'
-
