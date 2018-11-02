@@ -2,6 +2,16 @@
 
 . run.config
 
+
+runID=$(sqlite3 logs 'select max(runID) from appOutput')
+[[ $runID ]] || runID=0
+# Output file names+path
+filemon_file=$FILEMON_FOLDER/filemon_$runID
+crash_reporter_local_folder=$CRASH_REPORTER_FOLDER/run_$runID
+app_output_file=$APP_OUTPUT_FOLDER/run_$runID.txt
+results_ent_file=$ENTS_FOLDER/ents_$runID.xml
+timestamp=`date +%d-%m-%Y_%H:%M`
+
 function error_exit {
     echo "$1"
     exit "${2:-1}"  ## Return a code specified by $2 or 1 by default.
@@ -37,7 +47,7 @@ function prepare_device {
 }
 
 function deploy_app {
-    execute_on_device ./filemon > $FILEMON_FOLDER/filemon_$runID &
+    execute_on_device ./filemon > $filemon_file &
 
     echo "Start app"
     ./all.sh $binary_app $ent_file $user@$ip_addr
@@ -50,27 +60,32 @@ function deploy_app {
 function post_process {
     echo "Adding logs to db"
     output=$(ls run.out) || error_exit "No output file"
-    python -c 'import createLogsDatabase as db; db.add_log("run.out", $runID)'
+    python -c 'import createLogsDatabase as db; db.add_log("run.out", '$runID')'
+    python -c 'import createLogsDatabase as db; db.insert_run(
+                    "'$model'", "'$iOS'", "'$jailbroken'", "'$results_ent_file'",
+                    "'$app_output_file'", "'$crash_reporter_local_folder'",
+                    "'$filemon_file'", "'$timestamp'", '$runID')'
+
+
 
     echo "Copying logs to results folder (CrashLogs & App Output)"
 
     #Crash Logs
-    mkdir -p $CRASH_REPORTER_FOLDER/run_$runID
-    scp -r $user@$ip_addr:$DEVICE_CRASH_REPORTER_FOLDER/* $CRASH_REPORTER_FOLDER/run_$runID
+    mkdir -p $crash_reporter_local_folder
+    scp -r $user@$ip_addr:$DEVICE_CRASH_REPORTER_FOLDER/* $crash_reporter_local_folder
 
     #App Output
-    cp run.out $APP_OUTPUT_FOLDER/run_$runID.txt
+    cp run.out $app_output_file
 
     #Filemon output was redirected in *deploy_app*
 
     #Copy ent file
-    cp $ent_file $ENTS_FOLDER/ents_$runID.xml
+    cp $ent_file $results_ent_file
 }
 
-runID=$(sqlite3 logs 'select max(runID) from appOutput')
-prepare_host
-prepare_device
-deploy_app
+#prepare_host
+#prepare_device
+#deploy_app
 post_process
 
 #python -c 'import createLogsDatabase as db; db.insert_run("'$model'", "'$iOS'", "'$jailbroken'", "'$ent_file'", "run.out", db.get_runID())'

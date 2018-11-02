@@ -31,15 +31,17 @@ def create_database():
 
     # Table for Device characteristics
     sql = 'create table if not exists ' + table_run + ' ( \
-            id INTEGER PRIMARY KEY AUTOINCREMENT, \
             model TEXT, \
             os TEXT, \
             jailbroken TEXT, \
             ent_file TEXT, \
-            raw_file TEXT,\
+            app_output_file TEXT, \
+            crash_reporter_file TEXT, \
+            filemon_file TEXT, \
+            timestamp, TEXT, \
             runID INTEGER)'
     c.execute(sql)
-    sql = 'create unique index if not exists u_id on ' + table_run + ' (model, os, runID)'
+    sql = 'create unique index if not exists u_id on ' + table_run + ' (runID)'
     c.execute(sql)
     conn.commit()
 
@@ -54,18 +56,15 @@ def insert_log(m_id, method, machPort, hasCompletion, connectionInvalidated, con
     c.execute(sql)
     conn.commit()
 
-def insert_run(model, os, jailbroken, ent_file, raw_file, runID):
-    ent = open(ent_file, 'rb')
-    raw = open(raw_file, 'rb')
-
-    with ent:
-        ent_data = ent.read()
-    with raw:
-        raw_data = raw.read()
+def insert_run(model, os, jailbroken, ent_file, app_output_file, \
+               crash_reporter_file, filemon_file, timestamp, runID):
     sql = "insert into " + table_run + " \
-                (model, os, jailbroken, ent_file, raw_file, runID) values \
-                ('%s', '%s', '%s', '%s', '%s', %d)" % \
-                (model, os, jailbroken, sqlite3.Binary(ent_data), sqlite3.Binary(raw_data), runID)
+                (model, os, jailbroken, ent_file, app_output_file,\
+                 crash_reporter_file, filemon_file, timestamp, runID) values\
+                ('%s', '%s', '%s', '%s', '%s',\
+                 '%s', '%s', '%s', %d)" % \
+                (model, os, jailbroken, ent_file, app_output_file, \
+                 crash_reporter_file, filemon_file, timestamp, runID)
     c.execute(sql)
     conn.commit()
 
