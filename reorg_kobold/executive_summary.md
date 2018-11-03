@@ -5,9 +5,9 @@ A variant of the Kobold paper will also be used in Luke's dissertation with a si
 Luke can update this page after significant updates or upon request.
 
 ## Conference Details
--*Deadline:* Thursday, November 15, 2018, 5:00 pm PST
--*Page Limit:* 13 pages not counting references and appendix
--*Format:* New Usenix format for 2019
+- *Deadline:* Thursday, November 15, 2018, 5:00 pm PST
+- *Page Limit:* 13 pages not counting references and appendix
+- *Format:* New Usenix format for 2019
 
 ## Experiment Status
 Previously, we had a disorganized code base and poorly logged experiments.
@@ -49,10 +49,10 @@ This feature would remove some of the manual steps used to find certain vulnerab
 We would need to add a table to the paper listing the data types we tested and the initialization values for each.
 
 ## Paper Status
--The tables in the paper need to be updated with the latest results.
--The format needs to be updated for Usenix 2019
--Limitations need to be updated (add sandbox issue, remove adhoc mix of iOS versions)
--Disclosure process and Apple's responses should be added
+- The tables in the paper need to be updated with the latest results.
+- The format needs to be updated for Usenix 2019
+- Limitations need to be updated (add sandbox issue, remove adhoc mix of iOS versions)
+- Disclosure process and Apple's responses should be added
 
 ## Apple Disclosure Status
 Jordan has confirmed all vulnerabilities on iOS 12 and disclosed proof of concept applications to Apple.
