@@ -5,7 +5,7 @@ import random
 import os
 
 
-location = 'kobold'
+location = 'entitlements.db'
 ent_table_name = 'entitlements'
 key_table_name = 'keys'
 output_folder_name = 'xml_entitlements/'

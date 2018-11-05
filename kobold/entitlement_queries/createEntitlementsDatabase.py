@@ -3,7 +3,7 @@
 import sqlite3
 import re
 
-location = 'kobold'
+location = 'entitlements.db'
 ent_table_name = 'entitlements'
 key_table_name = 'keys'
 
