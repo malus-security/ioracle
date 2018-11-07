@@ -16,7 +16,10 @@ function prepare_variables {
     runID=$(sqlite3 fuzzing.db 'select max(id) from runs')
     [[ $runID ]] || runID=0
     echo "runID = " $runID
-    deviceID=$deviceID
+
+    if test -z "$deviceID"; then
+        exit 1
+    fi
 
     # Output file names+path
     filemon_file=$FILEMON_FOLDER/filemon_$runID
