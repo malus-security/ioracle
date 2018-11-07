@@ -3,9 +3,7 @@ ent_file=../xml_entitlements/get-task-allow.xml
 ip_addr=172.19.10.155
 user=root
 loops=1
-model="iPhone6"
-iOS="10.2"
-jailbroken="yes"
+deviceID=1
 START_TIME=`date +%d-%m-%Y_%H:%M`
 
 RESULTS_FOLDER=$PWD/results
