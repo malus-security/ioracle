@@ -33,7 +33,7 @@ do
 	  if ! (($count % 1000)); then
 		  echoerr $count
 	  fi
-	}&
+	}
 done
 #parallelization experiment
 wait
