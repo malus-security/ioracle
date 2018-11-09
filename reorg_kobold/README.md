@@ -7,10 +7,10 @@ I am assuming this process is being performed on a macOS device. Many steps can 
 
 ## Extract data for iOS firmware version.
 Use iExtractor to extract the file system, sandbox profiles, etc. from the iOS version you want to investigate.
-Take the output results of iExtractor and store them in `kobold_reorg/data_from_iextractor/`.
+Take the output results of iExtractor and store them in `kobold_reorg/data_from_iextractor/` by creating a symbolic link.
 For example:
 
-`mv iExtractor_Results/out/iPhone_4.0_64bit_11.1.2_15B202 kobold_reorg/data_from_iextractor/iPhone_4.0_64bit_11.1.2_15B202`
+`ln -sfn iExtractor_Results/out/iPhone_4.0_64bit_11.1.2_15B202 kobold_reorg/data_from_iextractor/`
 
 ## Compile SBPL Sandbox Profiles into Prolog Facts.
 Use SandScout to compile the sandbox profiles produced by iExtractor into Prolog facts that can be used by iOracle.
@@ -25,6 +25,12 @@ myiOSData=$gitHome/reorg_kobold/data_from_iextractor/iPhone_4.0_64bit_11.1.2_15B
 ```
 
 TODO: The cascades server is currently down, so I will need to wait before transplanting some other sandbox profiles. I can work on extracting mach ports from caches in the meantime.
+
+Profiles may have issues. Run the command below to fix profiles:
+
+```
+for i in *.sb; do sed -i '/([0-9a-f][0-9a-f] /d' "$i"; done
+```
 
 ## Unpack the filesystem extracted with iExtractor
 Make a directory to store the unpacked file system.
@@ -42,7 +48,7 @@ Copy the cached config files into a directory for processing:
 ```
 cd data_from_iextractor/iPhone_4.0_64bit_11.1.2_15B202/
 mkdir machport_to_exec_mapping_dir
-cp filesystem/System/Library/Caches/com.apple.xpcd/xpcd_cache.dylib ./machport_to_exec_mapping_dir/xpcd_cache.dylib
+ln filesystem/System/Library/Caches/com.apple.xpcd/xpcd_cache.dylib ./machport_to_exec_mapping_dir/
 ```
 
 Use jtool to list the libraries in the xpcd\_cache.dylib file (note the .dylib extension).
@@ -78,7 +84,7 @@ Then grep the results for files of the mach-o executable type.
 Then the script should search each mach-o executable file for the symbol *NSXPC*.
 
 ```
-ln -s ../data_from_iextractor/iPhone_4.0_64bit_11.1.2_15B202/filesystem/ filesystem
+ln -sfn ../data_from_iextractor/iPhone_4.0_64bit_11.1.2_15B202/filesystem/ .
 ./fileTypeExtractor.sh filesystem/ > ./data/file_types.out
 grep 'Mach-O.*executable' ./data/file_types.out | sed 's;^.*filePath("//;;' | sed 's;")).$;;' > ./data/executable_list.out
 ./symbolExtractor.sh filesystem < data/executable_list.out > nsxpc_executables_list.out
