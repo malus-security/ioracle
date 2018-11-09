@@ -5,6 +5,7 @@
 import pickle
 import re
 import random
+import sys
 
 def generateMethodCall(method, variables, id):
   #[myConnection.remoteObjectProxy enumerateInstalledAppsWithOptions:dictTest completion:completionHandler];
@@ -264,6 +265,7 @@ executableDictionary = {}
 #map sandbox accessible mach-ports to executables
 machPort_to_Exec_Mappings = open("./input_data/sorted_uniq_mach-port_to_executable.txt", "rb").read().strip().split("\n")
 sandboxAccessibleMachPorts = open("./input_data/sandbox_accessible_services.txt", "rb").read().strip().split("\n")
+
 #print machPort_to_Exec_Mappings
 for mapping in machPort_to_Exec_Mappings:
   machPort, executable = mapping.split(",")
@@ -328,7 +330,13 @@ id = 1
 total_invocations_generated = 0
 total_methods = 0
 total_completion_handlers = 0
-for executable in executableDictionary:
+
+# Shuffle methods
+keys=executableDictionary.keys()
+if len(sys.argv) > 1 and sys.argv[1] == "random":
+    random.shuffle(keys)
+
+for executable in keys:
   if "protocols" in executableDictionary[executable]:
     protsDict = executableDictionary[executable]["protocols"]
     for protocol in protsDict:
