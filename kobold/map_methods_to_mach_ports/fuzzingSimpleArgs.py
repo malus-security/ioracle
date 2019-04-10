@@ -6,7 +6,7 @@ import sys
 """
 
 singleton=True
-with open('../utils/CallingMethodsApp/CallingMethodsApp/ViewController.m', 'rt') as sourceFile:
+with open('/Users/costincarabas/facultate/doctorat/research/iOracle/kobold/my_experiments/luke/ViewController_first_half.m', 'rt') as sourceFile:
   for line in sourceFile:
     intVar = re.search('^(unsigned )?int var_.*_.*;$', line)
     longVar = re.search('^(unsigned )?(long )?long var_.*_.*;$', line)
@@ -22,20 +22,23 @@ with open('../utils/CallingMethodsApp/CallingMethodsApp/ViewController.m', 'rt')
     nsURLVar = re.search('^NSURL \* var_.*_.*;$', line)
     nsNumberVar = re.search('^NSNumber \* var_.*_.*;$', line)
     nsSetVar = re.search('^NSSet \* var_.*_.*;$', line)
+    nsFileHandle = re.search('^NSFileHandle \* var_.*_.*;$', line)
 
-# [[NSMutableOrderedSet alloc] initWithArray: @[@"a", @"b", @"c", @"d", @42]] 
+
+
+# [[NSMutableOrderedSet alloc] initWithArray: @[@"a", @"b", @"c", @"d", @42]]
     if intVar:
-      print "%s = -1;" % intVar.group()[:-1]
+      print "%s = 1;" % intVar.group()[:-1]
     elif longVar:
-      print "%s = -1;" % longVar.group()[:-1]
+      print "%s = 1;" % longVar.group()[:-1]
     elif doubleVar:
-      print "%s = -1;" % doubleVar.group()[:-1]
+      print "%s = 1;" % doubleVar.group()[:-1]
     elif stringVar:
       print '%s = @"Simple Var";' % stringVar.group()[:-1]
     elif arrayVar:
-      print '%s = [NSArray arrayWithObjects:@"key1",@"key2",@"key3",nil];' % arrayVar.group()[:-1]
+      print '%s = [NSArray arrayWithObjects:@"key1",@"key2",@"key3"];' % arrayVar.group()[:-1]
     elif boolVar:
-      print '%s = "False";' % boolVar.group()[:-1]
+      print '%s = "True";' % boolVar.group()[:-1]
     elif errorVar:
       print '%s = nil;' % errorVar.group()[:-1]
     elif dataVar:
@@ -58,5 +61,7 @@ with open('../utils/CallingMethodsApp/CallingMethodsApp/ViewController.m', 'rt')
       print '%s = @42LL;' % nsNumberVar.group()[:-1]
     elif nsSetVar:
       print '%s = [[NSSet alloc] initWithArray: @[@"a", @"b", @"c", @"d", @42]];' % nsSetVar.group()[:-1]
+    elif nsFileHandle:
+      print '%s = [NSFileHandle fileHandleForWritingAtPath: filePath];\n  NSLog(@"filePath: %%@", filePath);' % nsFileHandle.group()[:-1]
     else:
       sys.stdout.write(line)

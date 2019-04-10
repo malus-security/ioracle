@@ -13,6 +13,11 @@
 		1B9BBCC420F7A4EA0058E216 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1B9BBCC320F7A4EA0058E216 /* Assets.xcassets */; };
 		1B9BBCC720F7A4EA0058E216 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B9BBCC520F7A4EA0058E216 /* LaunchScreen.storyboard */; };
 		1B9BBCCA20F7A4EA0058E216 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B9BBCC920F7A4EA0058E216 /* main.m */; };
+		2C85E59B21960DDF00976356 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C85E59A21960DDF00976356 /* HealthKit.framework */; };
+		2C85E59D21960DE100976356 /* HomeKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C85E59C21960DE100976356 /* HomeKit.framework */; };
+		2C85E59F21960DE300976356 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C85E59E21960DE300976356 /* AudioToolbox.framework */; };
+		2C85E5A121960DF000976356 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C85E5A021960DF000976356 /* MapKit.framework */; };
+		2C85E5A321960DF200976356 /* ExternalAccessory.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C85E5A221960DF200976356 /* ExternalAccessory.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +32,12 @@
 		1B9BBCC820F7A4EA0058E216 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1B9BBCC920F7A4EA0058E216 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		1B9BBCD020F7AFA40058E216 /* fake_header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = fake_header.h; sourceTree = "<group>"; };
+		2C85E59821960DC700976356 /* CallingMethodsApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CallingMethodsApp.entitlements; sourceTree = "<group>"; };
+		2C85E59A21960DDF00976356 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
+		2C85E59C21960DE100976356 /* HomeKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HomeKit.framework; path = System/Library/Frameworks/HomeKit.framework; sourceTree = SDKROOT; };
+		2C85E59E21960DE300976356 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		2C85E5A021960DF000976356 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		2C85E5A221960DF200976356 /* ExternalAccessory.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ExternalAccessory.framework; path = System/Library/Frameworks/ExternalAccessory.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -34,6 +45,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C85E59D21960DE100976356 /* HomeKit.framework in Frameworks */,
+				2C85E5A321960DF200976356 /* ExternalAccessory.framework in Frameworks */,
+				2C85E59B21960DDF00976356 /* HealthKit.framework in Frameworks */,
+				2C85E5A121960DF000976356 /* MapKit.framework in Frameworks */,
+				2C85E59F21960DE300976356 /* AudioToolbox.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -45,6 +61,7 @@
 			children = (
 				1B9BBCB920F7A4E90058E216 /* CallingMethodsApp */,
 				1B9BBCB820F7A4E90058E216 /* Products */,
+				2C85E59921960DDF00976356 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -59,6 +76,7 @@
 		1B9BBCB920F7A4E90058E216 /* CallingMethodsApp */ = {
 			isa = PBXGroup;
 			children = (
+				2C85E59821960DC700976356 /* CallingMethodsApp.entitlements */,
 				1B9BBCD020F7AFA40058E216 /* fake_header.h */,
 				1B9BBCBA20F7A4E90058E216 /* AppDelegate.h */,
 				1B9BBCBB20F7A4E90058E216 /* AppDelegate.m */,
@@ -71,6 +89,18 @@
 				1B9BBCC920F7A4EA0058E216 /* main.m */,
 			);
 			path = CallingMethodsApp;
+			sourceTree = "<group>";
+		};
+		2C85E59921960DDF00976356 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2C85E5A221960DF200976356 /* ExternalAccessory.framework */,
+				2C85E5A021960DF000976356 /* MapKit.framework */,
+				2C85E59E21960DE300976356 /* AudioToolbox.framework */,
+				2C85E59C21960DE100976356 /* HomeKit.framework */,
+				2C85E59A21960DDF00976356 /* HealthKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -104,6 +134,35 @@
 				TargetAttributes = {
 					1B9BBCB620F7A4E90058E216 = {
 						CreatedOnToolsVersion = 9.4;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.DataProtection = {
+								enabled = 1;
+							};
+							com.apple.HealthKit = {
+								enabled = 1;
+							};
+							com.apple.HomeKit = {
+								enabled = 1;
+							};
+							com.apple.InterAppAudio = {
+								enabled = 1;
+							};
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+							com.apple.WAC = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -285,6 +344,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = CallingMethodsApp/CallingMethodsApp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8JV64D8TCJ;
 				INFOPLIST_FILE = CallingMethodsApp/Info.plist;
@@ -303,6 +363,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = CallingMethodsApp/CallingMethodsApp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8JV64D8TCJ;
 				INFOPLIST_FILE = CallingMethodsApp/Info.plist;

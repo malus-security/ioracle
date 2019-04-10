@@ -28,4 +28,4 @@ JTOOL="/Users/razvan/bin/jtool"
 #JDEBUG=1 $JTOOL -arch arm64 --sign --ent "$ent_file" --inplace "$in_exec_file".arch_arm64
 cp "$in_exec_file" "$out_exec_file"
 # XXX: Replace the parameter to the -fs option with the output from the `security find-identity` command.
-codesign -fs 8AE0658EE9349F3E8375D184BF4D3E160E82147E --entitlements "$ent_file" "$out_exec_file"
+codesign -fs 1DE40E91CD6E0B8F17834E3BDECCC7279C715324 --entitlements "$ent_file" "$out_exec_file"
