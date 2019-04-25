@@ -1,4 +1,0 @@
-:-
-	[no_hardcode_queries,iPhoneSE_13F69_iOS932_apple_executable_files,iPhoneSE_13F69_iOS932_apple_executable_files_entitlements,iPhoneSE_13F69_iOS932_apple_executable_files_strings],
-	getProfilesFromFacts;
-	halt.

@@ -1,8 +1,0 @@
-Prerequisites:
-sudo apt-get install python-pip
-sudo pip install PyYAML
-
-! Don't forget to complete the config file
-
-Run the script:
-python iOracle.py --help
