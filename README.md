@@ -2,6 +2,20 @@
 
 iOracle is a fairly complex framework that combines the output of multiple static and dynamic analysis tools into Prolog facts which are used along with Prolog rules to answer queries about various qualities of iOS access control and runtime context.
 
+The [iOracle paper](https://dl.acm.org/doi/10.1145/3196494.3196527) (`iOracle: Automated Evaluation of Access Control Policies in iOS`), presented at ASIACCS 2018, details the architecture and implementation of iOracle and our findings.
+
+iOracle is open source software released under the 3-clause BSD license.
+
+Authors:
+  * Luke Deshotels, North Carolina State University
+  * Răzvan Deaconescu, University POLITEHNICA of Bucharest
+  * Costin Carabaș, University POLITEHNICA of Bucharest
+  * Iulia Mandă University POLITEHNICA of Bucharest
+  * William Enck North Carolina State University
+  * Mihai Chiroiu University POLITEHNICA of Bucharest
+  * Ninghui Li, Purdue University
+  * Ahmad-Reza Sadeghi, Technische Universitat Darmstadt
+
 ## Usage
 
 You can skip some of the following steps if you only care about specific queries, but these steps attempt to demonstrate using all available analysis tools to create a comprehensive collection of facts and rules for querying.
