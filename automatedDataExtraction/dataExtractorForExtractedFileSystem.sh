@@ -27,8 +27,8 @@ temporaryFiles=$extractionDirectory/temporaryFiles
 echoerr() { echo "$@" 1>&2; }
 
 step_1_create_directories()
-{
-    echo "temp is $temporaryFiles"
+{   echo 'step 1: creating directories'
+    echo 'temp is $temporaryFiles'
     rm -rf $temporaryFiles
     mkdir $temporaryFiles
     mkdir $extractionDirectory/prologFacts > /dev/null 2>&1
@@ -41,8 +41,8 @@ step_2_unpack()
     #make the new file system owned by the current user to avoid needing sudo all the time.
     #We can get the unix permissions by extracting metadata from the device, so its ok if we lose them locally.
 
-    echo 'extracting archived file system'
-    echoerr 'extracting archived file system'
+    echo 'step 2: extracting archived file system'
+    echoerr 'step 2: extracting archived file system'
     #TODO I need to put this line back in after testing
     time sudo tar -xzf $extractionDirectory/fileSystem.tar.gz -C $extractionDirectory/fileSystem
     sudo chown -R $USER $extractionDirectory
@@ -52,8 +52,8 @@ step_2_unpack()
 
 step_3_get_file_types()
 {
-    echo 'getting file types'
-    echoerr 'getting file types'
+    echo 'step 3: getting file types'
+    echoerr 'step 3: getting file types'
     # Get file types from the file system extracted to the local system.
     time ./scriptsToAutomate/fileTypeExtractor.sh $extractionDirectory/fileSystem > $extractionDirectory/prologFacts/unsanitized_file_types.pl
     time ./scriptsToAutomate/sanitizeFilePaths.py $extractionDirectory/prologFacts/unsanitized_file_types.pl > $extractionDirectory/prologFacts/file_types.pl
@@ -61,24 +61,24 @@ step_3_get_file_types()
 
 step_4_get_user_data()
 {
-    echo 'getting user data'
-    echoerr 'getting user data'
+    echo 'step 4: getting user data'
+    echoerr 'step 4: getting user data'
     # Extract data about users from etc.
     time ./scriptsToAutomate/userFactExtractor.sh $extractionDirectory/fileSystem > $extractionDirectory/prologFacts/users.pl
 }
 
 step_5_get_group_data()
 {
-    echo 'getting group data'
-    echoerr 'getting group data'
+    echo 'step 5: getting group data'
+    echoerr 'step 5: getting group data'
     # Extract data about groups from etc.
     time ./scriptsToAutomate/groupFactExtractor.sh $extractionDirectory/fileSystem > $extractionDirectory/prologFacts/groups.pl
 }
 
 step_6_get_paths_execs()
 {
-    echo 'getting file paths of Mach-O executables'
-    echoerr 'getting file paths of Mach-O executables'
+    echo 'step 6: getting file paths of Mach-O executables'
+    echoerr 'step 6: getting file paths of Mach-O executables'
     cat $extractionDirectory/prologFacts/file_types.pl ./scriptsToAutomate/queries.pl > $temporaryFiles/relevantFacts.pl
     time ./scriptsToAutomate/runProlog.sh justPaths $temporaryFiles > $temporaryFiles/filePaths.out
     rm $temporaryFiles/relevantFacts.pl
@@ -86,8 +86,8 @@ step_6_get_paths_execs()
 
 step_7_get_signatures_apple_execs()
 {
-    echo 'getting signatures of Apple-Signed Mach-O executables'
-    echoerr 'getting signatures of Apple-Signed Mach-O executables'
+    echo 'step 7: getting signatures of Apple-Signed Mach-O executables'
+    echoerr 'step 7: getting signatures of Apple-Signed Mach-O executables'
     # Note that because of file path sanitization, if a mach-o executable's path was sanitized, the script won't be able to find the file.
     # I don't expect this to be a problem in practice, but we can keep an eye on it to see if it every happens. It should throw an error if it does.
     time ./scriptsToAutomate/signatureExtractor.sh $extractionDirectory/fileSystem < $temporaryFiles/filePaths.out > $extractionDirectory/prologFacts/apple_executable_files_signatures.pl
@@ -96,8 +96,8 @@ step_7_get_signatures_apple_execs()
 
 step_8_get_paths_apple_execs()
 {
-    echo 'getting file paths for Apple-Signed Mach-O executables'
-    echoerr 'getting file paths for Apple-Signed Mach-O executables'
+    echo 'step 8: getting file paths for Apple-Signed Mach-O executables'
+    echoerr 'step 8: getting file paths for Apple-Signed Mach-O executables'
     # Generate a list of file paths to Apple-signed mach-o executable files.
     cat $extractionDirectory/prologFacts/apple_executable_files_signatures.pl ./scriptsToAutomate/queries.pl > $temporaryFiles/relevantFacts.pl
     time ./scriptsToAutomate/runProlog.sh justApplePaths $temporaryFiles > $temporaryFiles/applefilePaths.out
@@ -107,8 +107,8 @@ step_8_get_paths_apple_execs()
 
 step_9_get_entitlements_apple_execs()
 {
-    echo 'getting entitlements for Apple-Signed Mach-O executables'
-    echoerr 'getting entitlements for Apple-Signed Mach-O executables'
+    echo 'step 9: getting entitlements for Apple-Signed Mach-O executables'
+    echoerr 'step 9: getting entitlements for Apple-Signed Mach-O executables'
     # Extract entitlements from programs listed in the input.
     time ./scriptsToAutomate/entitlementExtractor.sh $extractionDirectory/fileSystem < $temporaryFiles/applefilePaths.out > $extractionDirectory/prologFacts/apple_executable_files_entitlements.pl
     #cat $extractionDirectory/prologFacts/apple_executable_files_entitlements.pl
@@ -116,24 +116,24 @@ step_9_get_entitlements_apple_execs()
 
 step_10_get_strings_apple_execs()
 {
-    echo 'getting strings for Apple-Signed Mach-O executables'
-    echoerr 'getting strings for Apple-Signed Mach-O executables'
+    echo 'step 10: getting strings for Apple-Signed Mach-O executables'
+    echoerr 'step 10: getting strings for Apple-Signed Mach-O executables'
     time ./scriptsToAutomate/stringExtractor.sh $extractionDirectory/fileSystem < $temporaryFiles/applefilePaths.out > $extractionDirectory/prologFacts/apple_executable_files_strings.pl
     #cat $extractionDirectory/prologFacts/apple_executable_files_strings.pl
 }
 
 step_11_get_symbols_apple_execs()
 {
-    echo 'getting symbols for Apple-Signed Mach-O executables'
-    echoerr 'getting symbols for Apple-Signed Mach-O executables'
+    echo 'step 11: getting symbols for Apple-Signed Mach-O executables'
+    echoerr 'step 11: getting symbols for Apple-Signed Mach-O executables'
     time ./scriptsToAutomate/symbolExtractor.sh $extractionDirectory/fileSystem < $temporaryFiles/applefilePaths.out > $extractionDirectory/prologFacts/apple_executable_files_symbols.pl
     #cat $extractionDirectory/prologFacts/apple_executable_files_symbols.pl
 }
 
 step_12_get_sandbox_profiles()
 {
-    echo 'getting sandbox profile assignments based on entitlements and file paths'
-    echoerr 'getting sandbox profile assignments based on entitlements and file paths'
+    echo 'step 12: getting sandbox profile assignments based on entitlements and file paths'
+    echoerr 'step 12: getting sandbox profile assignments based on entitlements and file paths'
     cat $extractionDirectory/prologFacts/apple_executable_files_signatures.pl $extractionDirectory/prologFacts/apple_executable_files_entitlements.pl ./scriptsToAutomate/queries.pl > $temporaryFiles/relevantFacts.pl
     time ./scriptsToAutomate/runProlog.sh getProfilesFromEntitlementsAndPaths $temporaryFiles > $temporaryFiles/profileAssignmentFromEntAndPath.pl
     # cat $temporaryFiles/profileAssignmentFromEntAndPath.pl
@@ -142,8 +142,8 @@ step_12_get_sandbox_profiles()
 
 step_13_get_paths_self_assigned_sandbox()
 {
-    echo 'getting file paths to processes that assign sandboxes to themselves.'
-    echoerr 'getting file paths to processes that assign sandboxes to themselves.'
+    echo 'step 13: getting file paths to processes that assign sandboxes to themselves.'
+    echoerr 'step 13: getting file paths to processes that assign sandboxes to themselves.'
     cat $extractionDirectory/prologFacts/apple_executable_files_symbols.pl ./scriptsToAutomate/queries.pl > $temporaryFiles/relevantFacts.pl
     time ./scriptsToAutomate/runProlog.sh getSelfAssigningProcessesWithSymbols $temporaryFiles > $temporaryFiles/pathsToSelfAssigners.out
     # cat $temporaryFiles/pathsToSelfAssigners.out
@@ -152,16 +152,16 @@ step_13_get_paths_self_assigned_sandbox()
 
 step_14_run_ida_batch()
 {
-    echo 'running batch ida analysis on self assigning executables'
-    echoerr 'running batch ida analysis on self assigning executables'
+    echo 'step 14: running batch ida analysis on self assigning executables'
+    echoerr 'step 14: running batch ida analysis on self assigning executables'
     #TODO Need to mention that I fixed an important typo here where there should have been a / after $extractionDirectory/fileSystem
     time ./scriptsToAutomate/idaBatchAnalysis.sh $extractionDirectory/fileSystem/ $temporaryFiles/pathsToSelfAssigners.out $temporaryFiles/
 }
 
 step_15_run_id_backtrace()
 {
-    echo 'running backtracing ida scripts on self assigning executables'
-    echoerr 'running backtracing ida scripts on self assigning executables'
+    echo 'step 15: running backtracing ida scripts on self assigning executables'
+    echoerr 'step 15: running backtracing ida scripts on self assigning executables'
     time ./scriptsToAutomate/mapIdaScriptToTargets.sh $temporaryFiles/hashedPathToFilePathMapping.csv ./scriptsToAutomate/strider.py $temporaryFiles/ $temporaryFiles/sandboxInit.out ./configurationFiles/sandboxInit.config
     time ./scriptsToAutomate/mapIdaScriptToTargets.sh $temporaryFiles/hashedPathToFilePathMapping.csv ./scriptsToAutomate/strider.py $temporaryFiles/ $temporaryFiles/sandboxInitWithParameters.out ./configurationFiles/sandboxInitWithParameters.config
     time ./scriptsToAutomate/mapIdaScriptToTargets.sh $temporaryFiles/hashedPathToFilePathMapping.csv ./scriptsToAutomate/strider.py $temporaryFiles/ $temporaryFiles/applyContainer.out ./configurationFiles/applyContainer.config
@@ -169,8 +169,8 @@ step_15_run_id_backtrace()
 
 step_16_consolidate_ida()
 {
-    echo 'consolidating and parsing output of IDA analysis on sandbox self assigners with assignments based on entitlements and file paths.'
-    echoerr 'consolidating and parsing output of IDA analysis on sandbox self assigners with assignments based on entitlements and file paths.'
+    echo 'step 16: consolidating and parsing output of IDA analysis on sandbox self assigners with assignments based on entitlements and file paths.'
+    echoerr 'step 16: consolidating and parsing output of IDA analysis on sandbox self assigners with assignments based on entitlements and file paths.'
     cat $temporaryFiles/applyContainer.out $temporaryFiles/sandboxInit.out $temporaryFiles/sandboxInitWithParameters.out > $temporaryFiles/selfApplySandbox.pl
     cat $temporaryFiles/selfApplySandbox.pl ./scriptsToAutomate/queries.pl > $temporaryFiles/relevantFacts.pl
     time ./scriptsToAutomate/runProlog.sh parseSelfAppliedProfiles $temporaryFiles > $temporaryFiles/parsedFilteredSelfAppliers.pl
@@ -181,7 +181,8 @@ step_16_consolidate_ida()
 
 step_17_get_vnode_types()
 {
-    echo 'getting vnode types. This should probably move to the connected device script later.'
+    echo 'step 17: getting vnode types. This should probably move to the connected device script later'
+    echoerr 'step 17: getting vnode types. This should probably move to the connected device script later'
     cat $extractionDirectory/prologFacts/file_metadata.pl ./scriptsToAutomate/queries.pl > $temporaryFiles/relevantFacts.pl
     time ./scriptsToAutomate/runProlog.sh getVnodeTypes $temporaryFiles > $extractionDirectory/prologFacts/vnodeTypes.pl
     rm $temporaryFiles/relevantFacts.pl
@@ -190,8 +191,8 @@ step_17_get_vnode_types()
 step_18_get_direct_file_access_caller()
 {
     # Backtracer analysis for functions known to be used in jailbreak gadgets (e.g., chown and chmod).
-    echo 'getting file paths to processes that use chmod or chown.'
-    echoerr 'getting file paths to processes that use chmod or chown.'
+    echo 'step 18: getting file paths to processes that use chmod or chown.'
+    echoerr 'step 18: getting file paths to processes that use chmod or chown.'
     cat $extractionDirectory/prologFacts/apple_executable_files_symbols.pl ./scriptsToAutomate/queries.pl > $temporaryFiles/relevantFacts.pl
     time ./scriptsToAutomate/runProlog.sh getDirectFileAccessCallersWithSymbols $temporaryFiles > $extractionDirectory/ida_base_analysis/pathsToDirectFileAccessCallers.out
     rm $temporaryFiles/relevantFacts.pl
@@ -199,7 +200,8 @@ step_18_get_direct_file_access_caller()
 
 step_19_run_ida_batch_direct_file_access()
 {
-    echoerr 'running batch ida analysis on direct file access call executables'
+    echo 'step 19: running batch ida analysis on direct file access call executables'
+    echoerr 'step 19: running batch ida analysis on direct file access call executables'
     time ./scriptsToAutomate/idaBatchAnalysis.sh $extractionDirectory/fileSystem/ $extractionDirectory/ida_base_analysis/pathsToDirectFileAccessCallers.out $extractionDirectory/ida_base_analysis/
 
     time ./scriptsToAutomate/mapIdaScriptToTargets.sh $extractionDirectory/ida_base_analysis/hashedPathToFilePathMapping.csv ./scriptsToAutomate/strider.py  $extractionDirectory/ida_base_analysis/ $extractionDirectory/prologFacts/chown_backtrace.pl ./configurationFiles/chown.config
@@ -236,7 +238,7 @@ elif test $2 -eq -3; then
     step_1_create_directories
     step_2_unpack
     echo ""
-    echo "step 3 excluded (get file types), unsanitized_file_types.pl might be populated"
+    echo "step 3 (get file types) is excluded; unsanitized_file_types.pl might be populated"
     echo ""
     step_4_get_user_data
     step_5_get_group_data
