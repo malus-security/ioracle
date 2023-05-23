@@ -11,9 +11,11 @@ fi
 
 step=""
 if test $# -eq 2; then
-    if test $2 -lt 1 -o $2 -gt 19; then
-        echo "Step must be between 1 and 19" 1>&2
-        exit 1
+    if test $2 -ne -3; then
+        if test $2 -lt 1 -o $2 -gt 19; then
+            echo "Step number should be between 1 and 19"
+            echo "To exclude step 3, use -3 flag"
+        fi
     fi
     step="$2"
 fi
@@ -42,7 +44,7 @@ step_2_unpack()
     echo 'extracting archived file system'
     echoerr 'extracting archived file system'
     #TODO I need to put this line back in after testing
-    # time sudo tar -xzf $extractionDirectory/fileSystem.tar.gz -C $extractionDirectory/fileSystem
+    time sudo tar -xzf $extractionDirectory/fileSystem.tar.gz -C $extractionDirectory/fileSystem
     sudo chown -R $USER $extractionDirectory
     chmod -R 777 $extractionDirectory
 }
@@ -52,10 +54,8 @@ step_3_get_file_types()
 {
     echo 'getting file types'
     echoerr 'getting file types'
-
     # Get file types from the file system extracted to the local system.
     time ./scriptsToAutomate/fileTypeExtractor.sh $extractionDirectory/fileSystem > $extractionDirectory/prologFacts/unsanitized_file_types.pl
-    echo 'unsanitized_file_types.pl is populated'
     time ./scriptsToAutomate/sanitizeFilePaths.py $extractionDirectory/prologFacts/unsanitized_file_types.pl > $extractionDirectory/prologFacts/file_types.pl
 }
 
@@ -216,6 +216,28 @@ if test -z "$step"; then
     step_1_create_directories
     step_2_unpack
     step_3_get_file_types
+    step_4_get_user_data
+    step_5_get_group_data
+    step_6_get_paths_execs
+    step_7_get_signatures_apple_execs
+    step_8_get_paths_apple_execs
+    step_9_get_entitlements_apple_execs
+    step_10_get_strings_apple_execs
+    step_11_get_symbols_apple_execs
+    step_12_get_sandbox_profiles
+    step_13_get_paths_self_assigned_sandbox
+    step_14_run_ida_batch
+    step_15_run_id_backtrace
+    step_16_consolidate_ida
+    step_17_get_vnode_types
+    step_18_get_direct_file_access_caller
+    step_19_run_ida_batch_direct_file_access
+elif test $2 -eq -3; then
+    step_1_create_directories
+    step_2_unpack
+    echo ""
+    echo "step 3 excluded (get file types), unsanitized_file_types.pl might be populated"
+    echo ""
     step_4_get_user_data
     step_5_get_group_data
     step_6_get_paths_execs
