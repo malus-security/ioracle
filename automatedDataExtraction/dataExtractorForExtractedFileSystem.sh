@@ -12,7 +12,7 @@ fi
 step=""
 if test $# -eq 2; then
     if test $2 -lt 1 -o $2 -gt 19; then
-        echo "Step must be between 1 and 12" 1>&2
+        echo "Step must be between 1 and 19" 1>&2
         exit 1
     fi
     step="$2"
