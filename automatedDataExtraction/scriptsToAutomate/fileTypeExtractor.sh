@@ -1,5 +1,9 @@
 #!/bin/bash
 
+#use LC_CTYPE=C and LC_LANG=C (this does not work if LC_ALL is set)
+#so it is better to use LC_ALL=C to solve sed problem
+LC_ALL=C
+
 if test $# -ne 1; then
 	echo "Usage: $0 /path/to/root/filesystem/" 1>&2
 	exit 1

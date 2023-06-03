@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 import sys
 
 input_path = sys.argv[1]
@@ -27,7 +27,7 @@ for g_line in group_lines:
 
   members = columns[3].split(",")
   for user_name in members:
-    print "groupMembership(user(\"" + user_name + "\"),group(\"" + group_name +  "\"),groupIDNumber(\"" + group_id_number + "\"))."
+    print("groupMembership(user(\"" + user_name + "\"),group(\"" + group_name +  "\"),groupIDNumber(\"" + group_id_number + "\")).")
 
 for u_line in user_lines:
   #ignore comments
@@ -42,8 +42,8 @@ for u_line in user_lines:
 
   #if id of user and group match then the group name is same as user name
   if user_id_number == group_id_number:	
-    print "groupMembership(user(\"" + user_name + "\"),group(\"" + user_name +  "\"),groupIDNumber(\"" + group_id_number + "\"))."
+    print ("groupMembership(user(\"" + user_name + "\"),group(\"" + user_name +  "\"),groupIDNumber(\"" + group_id_number + "\")).")
   #otherwise we need to know what the group name is for a given gid number (e.g., user _ftp has gid for "nobody" by default instead of "_ftp")
   else:
-    print "groupMembership(user(\"" + user_name + "\"),group(\"" + group_number_to_name_dict[group_id_number] +  "\"),groupIDNumber(\"" + group_id_number + "\"))."
+    print ("groupMembership(user(\"" + user_name + "\"),group(\"" + group_number_to_name_dict[group_id_number] +  "\"),groupIDNumber(\"" + group_id_number + "\")).")
 
